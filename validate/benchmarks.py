@@ -27,6 +27,30 @@ BENCHMARKS = [
         'tolerance': 0.08,
         'citation': 'Expected strong negative by construction',
     },
+    {
+        'name': 'Unemployment × Poverty',
+        'dataset_x': 'unemployment',
+        'dataset_y': 'poverty',
+        'expected_r': 0.65,
+        'tolerance': 0.10,
+        'citation': 'Well established labor economics relationship',
+    },
+    {
+        'name': 'Obesity × Poverty',
+        'dataset_x': 'obesity',
+        'dataset_y': 'poverty',
+        'expected_r': 0.50,
+        'tolerance': 0.15,
+        'citation': 'CDC health disparities — poverty associated with higher obesity',
+    },
+    {
+        'name': 'Per Capita Income × Median Income',
+        'dataset_x': 'bea_income',
+        'dataset_y': 'median_income',
+        'expected_r': 0.90,
+        'tolerance': 0.08,
+        'citation': 'Near-tautological — both measure income',
+    },
 ]
 
 
@@ -47,13 +71,23 @@ def run_benchmarks(load_dataset_fn) -> list[dict]:
     """
     # Dataset registry (duplicated here to keep module self-contained)
     registry = {
-        'library':       'library_spend_per_capita',
-        'mobility':      'mobility_rank_p25',
-        'air':           'air_quality_inv',
-        'broadband':     'broadband_rate',
-        'eitc':          'eitc_rate',
-        'poverty':       'poverty_rate',
-        'median_income': 'median_hh_income',
+        'library':        'library_spend_per_capita',
+        'mobility':       'mobility_rank_p25',
+        'air':            'air_quality_inv',
+        'broadband':      'broadband_rate',
+        'eitc':           'eitc_rate',
+        'poverty':        'poverty_rate',
+        'median_income':  'median_hh_income',
+        'bea_income':     'per_capita_income',
+        'food_access':    'snap_rate',
+        'obesity':        'obesity_rate',
+        'diabetes':       'diabetes_rate',
+        'mental_health':  'mental_health_rate',
+        'hypertension':   'hypertension_rate',
+        'unemployment':   'unemployment_rate',
+        'rural_urban':    'rural_urban_code',
+        'housing_burden': 'housing_burden_rate',
+        'voter_turnout':  'total_votes_2020',
     }
 
     results = []

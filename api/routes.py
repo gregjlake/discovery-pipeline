@@ -40,13 +40,23 @@ def _region_from_fips(fips: str) -> str:
 
 # Dataset registry: dataset_id -> (value_column, description)
 DATASET_REGISTRY = {
-    'library':       ('library_spend_per_capita', 'Library spending per capita ($)'),
-    'mobility':      ('mobility_rank_p25',        'Upward mobility rank (p25)'),
-    'air':           ('air_quality_inv',          'Air quality index (inverted, higher=better)'),
-    'broadband':     ('broadband_rate',           'Broadband subscription rate'),
-    'eitc':          ('eitc_rate',                'EITC filing rate (poverty proxy)'),
-    'poverty':       ('poverty_rate',             'Poverty rate (%)'),
-    'median_income': ('median_hh_income',         'Median household income ($)'),
+    'library':        ('library_spend_per_capita', 'Library spending per capita ($)'),
+    'mobility':       ('mobility_rank_p25',        'Upward mobility rank (p25)'),
+    'air':            ('air_quality_inv',          'Air quality index (inverted, higher=better)'),
+    'broadband':      ('broadband_rate',           'Broadband subscription rate'),
+    'eitc':           ('eitc_rate',                'EITC filing rate (poverty proxy)'),
+    'poverty':        ('poverty_rate',             'Poverty rate (%)'),
+    'median_income':  ('median_hh_income',         'Median household income ($)'),
+    'bea_income':     ('per_capita_income',        'Per capita personal income ($/year)'),
+    'food_access':    ('snap_rate',                'SNAP/food stamp receipt rate'),
+    'obesity':        ('obesity_rate',             'Adult obesity prevalence (%)'),
+    'diabetes':       ('diabetes_rate',            'Adult diabetes prevalence (%)'),
+    'mental_health':  ('mental_health_rate',       'Poor mental health days (%)'),
+    'hypertension':   ('hypertension_rate',        'High blood pressure prevalence (%)'),
+    'unemployment':   ('unemployment_rate',        'Unemployment rate'),
+    'rural_urban':    ('rural_urban_code',         'Rural-urban continuum code (1-9)'),
+    'housing_burden': ('housing_burden_rate',      'Cost-burdened renters (30%+ income)'),
+    'voter_turnout':  ('total_votes_2020',         'Total votes cast 2020 presidential'),
 }
 
 

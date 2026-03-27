@@ -10,30 +10,53 @@ from validate.checks import validate_dataset
 load_dotenv(Path(__file__).resolve().parent.parent / '.env', override=False)
 
 DATASETS = [
-    ('library',        'ingest.imls',        'IMLS Public Libraries Survey'),
-    ('mobility',       'ingest.opportunity',  'Opportunity Atlas'),
-    ('air',            'ingest.epa',          'EPA Air Quality Index'),
-    ('broadband',      'ingest.fcc',          'Census ACS Broadband'),
-    ('eitc',           'ingest.irs',          'IRS Statistics of Income — EITC'),
-    ('saipe',          'ingest.saipe',        'Census SAIPE Poverty Estimates'),
+    ('library',        'ingest.imls',           'IMLS Public Libraries Survey'),
+    ('mobility',       'ingest.opportunity',     'Opportunity Atlas'),
+    ('air',            'ingest.epa',             'EPA Air Quality Index'),
+    ('broadband',      'ingest.fcc',             'Census ACS Broadband'),
+    ('eitc',           'ingest.irs',             'IRS Statistics of Income — EITC'),
+    ('saipe',          'ingest.saipe',           'Census SAIPE Poverty Estimates'),
+    ('bea_income',     'ingest.bea_income',      'Census ACS Per Capita Income'),
+    ('food_access',    'ingest.food_access',     'Census ACS SNAP Receipt'),
+    ('cdc_places',     'ingest.cdc_places',      'CDC PLACES Health Outcomes'),
+    ('unemployment',   'ingest.unemployment',    'Census ACS Unemployment'),
+    ('rural_urban',    'ingest.rural_urban',     'USDA Rural-Urban Continuum'),
+    ('housing_burden', 'ingest.housing',         'Census ACS Housing Burden'),
+    ('voter_turnout',  'ingest.voter_turnout',   'MIT Election Lab Voter Turnout'),
 ]
 
 # Columns to upload per dataset (excluding fips and year)
 VALUE_COLUMNS = {
-    'library':       ['library_spend_per_capita', 'n_libraries'],
-    'mobility':      ['mobility_rank_p25'],
-    'air':           ['air_clean_score', 'air_quality_inv'],
-    'broadband':     ['broadband_rate'],
-    'eitc':          ['eitc_rate'],
-    'poverty':       ['poverty_rate'],
-    'median_income': ['median_hh_income'],
+    'library':         ['library_spend_per_capita', 'n_libraries'],
+    'mobility':        ['mobility_rank_p25'],
+    'air':             ['air_clean_score', 'air_quality_inv'],
+    'broadband':       ['broadband_rate'],
+    'eitc':            ['eitc_rate'],
+    'poverty':         ['poverty_rate'],
+    'median_income':   ['median_hh_income'],
+    'bea_income':      ['per_capita_income'],
+    'food_access':     ['snap_rate'],
+    'obesity':         ['obesity_rate'],
+    'diabetes':        ['diabetes_rate'],
+    'mental_health':   ['mental_health_rate'],
+    'hypertension':    ['hypertension_rate'],
+    'unemployment':    ['unemployment_rate'],
+    'rural_urban':     ['rural_urban_code'],
+    'housing_burden':  ['housing_burden_rate'],
+    'voter_turnout':   ['total_votes_2020'],
 }
 
-# SAIPE produces one dataframe with two metrics that map to separate dataset_ids
+# Modules that produce one dataframe with multiple dataset_ids
 MULTI_DATASET_MAP = {
     'saipe': [
         ('poverty',       'poverty_rate'),
         ('median_income', 'median_hh_income'),
+    ],
+    'cdc_places': [
+        ('obesity',       'obesity_rate'),
+        ('diabetes',      'diabetes_rate'),
+        ('mental_health', 'mental_health_rate'),
+        ('hypertension',  'hypertension_rate'),
     ],
 }
 
