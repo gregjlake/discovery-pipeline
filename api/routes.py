@@ -13,8 +13,9 @@ from api.schemas import ScatterRequest, ScatterResponse, AskRequest, AskResponse
 from normalize.methods import NORM_FUNCTIONS
 from normalize.outliers import OUTLIER_FUNCTIONS
 
-load_dotenv(Path(__file__).resolve().parent.parent / '.env')
+load_dotenv(Path(__file__).resolve().parent.parent / '.env', override=False)
 
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("api.routes")
 
 router = APIRouter()
@@ -135,17 +136,24 @@ def _load_provenance(dataset_id: str) -> dict:
 @router.get('/health')
 def health():
     supabase_url = os.environ.get('SUPABASE_URL', '')
-    supabase_key_set = bool(os.environ.get('SUPABASE_SERVICE_KEY'))
+    supabase_key = os.environ.get('SUPABASE_SERVICE_KEY', '')
     masked_url = supabase_url[:20] + '...' if len(supabase_url) > 20 else supabase_url or '(not set)'
+    masked_key = supabase_key[:20] + '...' if len(supabase_key) > 20 else ('(not set)' if not supabase_key else '(short)')
 
     result = {
         'status': 'ok',
         'supabase_url': masked_url,
-        'supabase_key_set': supabase_key_set,
+        'supabase_url_length': len(supabase_url),
+        'supabase_key_preview': masked_key,
+        'supabase_key_length': len(supabase_key),
         'supabase_client': False,
         'raw_values_count': None,
         'parquet_fallback_available': {},
-        'error': None,
+        'dotenv_path': str(Path(__file__).resolve().parent.parent / '.env'),
+        'dotenv_exists': (Path(__file__).resolve().parent.parent / '.env').exists(),
+        'data_dir': str(DATA_DIR),
+        'data_dir_exists': DATA_DIR.exists(),
+        'errors': [],
     }
 
     # Check parquet files
@@ -157,13 +165,16 @@ def health():
     try:
         sb = _get_supabase()
         if sb is None:
-            result['error'] = 'Supabase client failed to initialize (URL or KEY missing/invalid)'
+            result['errors'].append(f'Supabase client returned None (url_set={bool(supabase_url)}, key_set={bool(supabase_key)})')
         else:
             result['supabase_client'] = True
-            resp = sb.table('raw_values').select('id', count='exact').limit(1).execute()
-            result['raw_values_count'] = resp.count
+            try:
+                resp = sb.table('raw_values').select('id', count='exact').limit(1).execute()
+                result['raw_values_count'] = resp.count
+            except Exception as e:
+                result['errors'].append(f'raw_values query failed: {e}')
     except Exception as e:
-        result['error'] = str(e)
+        result['errors'].append(f'Supabase init error: {e}')
 
     return result
 
@@ -172,6 +183,7 @@ def health():
 @router.get('/datasets')
 def list_datasets():
     results = []
+    errors = []
     for ds_id, (col, desc) in DATASET_REGISTRY.items():
         try:
             df = _load_dataset(ds_id)
@@ -182,8 +194,11 @@ def list_datasets():
                 'county_count': int(df['fips'].nunique()),
                 'row_count': len(df),
             })
-        except Exception:
-            pass
+        except Exception as e:
+            logger.error(f"Failed to load dataset {ds_id}: {e}")
+            errors.append(f"{ds_id}: {e}")
+    if not results and errors:
+        logger.error(f"All datasets failed: {errors}")
     return results
 
 
