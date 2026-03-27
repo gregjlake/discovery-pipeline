@@ -7,21 +7,34 @@ from dotenv import load_dotenv
 
 from validate.checks import validate_dataset
 
-load_dotenv(Path(__file__).resolve().parent.parent / '.env')
+load_dotenv(Path(__file__).resolve().parent.parent / '.env', override=False)
 
 DATASETS = [
-    ('library',   'ingest.imls',        'IMLS Public Libraries Survey'),
-    ('mobility',  'ingest.opportunity',  'Opportunity Atlas'),
-    ('air',       'ingest.epa',          'EPA Air Quality Index'),
-    ('broadband', 'ingest.fcc',          'Census ACS Broadband'),
+    ('library',        'ingest.imls',        'IMLS Public Libraries Survey'),
+    ('mobility',       'ingest.opportunity',  'Opportunity Atlas'),
+    ('air',            'ingest.epa',          'EPA Air Quality Index'),
+    ('broadband',      'ingest.fcc',          'Census ACS Broadband'),
+    ('eitc',           'ingest.irs',          'IRS Statistics of Income — EITC'),
+    ('saipe',          'ingest.saipe',        'Census SAIPE Poverty Estimates'),
 ]
 
 # Columns to upload per dataset (excluding fips and year)
 VALUE_COLUMNS = {
-    'library':   ['library_spend_per_capita', 'n_libraries'],
-    'mobility':  ['mobility_rank_p25'],
-    'air':       ['air_clean_score', 'air_quality_inv'],
-    'broadband': ['broadband_rate'],
+    'library':       ['library_spend_per_capita', 'n_libraries'],
+    'mobility':      ['mobility_rank_p25'],
+    'air':           ['air_clean_score', 'air_quality_inv'],
+    'broadband':     ['broadband_rate'],
+    'eitc':          ['eitc_rate'],
+    'poverty':       ['poverty_rate'],
+    'median_income': ['median_hh_income'],
+}
+
+# SAIPE produces one dataframe with two metrics that map to separate dataset_ids
+MULTI_DATASET_MAP = {
+    'saipe': [
+        ('poverty',       'poverty_rate'),
+        ('median_income', 'median_hh_income'),
+    ],
 }
 
 
@@ -141,10 +154,24 @@ def main():
 
             # Upload to Supabase
             if sb:
-                try:
-                    _upload_to_supabase(sb, dataset_id, df, provenance)
-                except Exception as e:
-                    print(f"  Supabase ERROR: {e}")
+                if dataset_id in MULTI_DATASET_MAP:
+                    # Split one dataframe into multiple dataset_ids
+                    for sub_ds_id, sub_col in MULTI_DATASET_MAP[dataset_id]:
+                        try:
+                            sub_df = df[['fips', sub_col, 'year']].copy()
+                            sub_prov = {**provenance, 'dataset_id': sub_ds_id}
+                            # Also save sub-dataset parquet
+                            sub_df.to_parquet(data_dir / f'{sub_ds_id}.parquet', index=False)
+                            with open(data_dir / f'{sub_ds_id}_provenance.json', 'w') as f:
+                                json.dump(sub_prov, f, indent=2)
+                            _upload_to_supabase(sb, sub_ds_id, sub_df, sub_prov)
+                        except Exception as e:
+                            print(f"  Supabase ERROR ({sub_ds_id}): {e}")
+                else:
+                    try:
+                        _upload_to_supabase(sb, dataset_id, df, provenance)
+                    except Exception as e:
+                        print(f"  Supabase ERROR: {e}")
 
             results.append((dataset_id, name, df['fips'].nunique(), issues))
         except Exception as e:

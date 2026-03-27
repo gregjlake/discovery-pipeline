@@ -22,12 +22,31 @@ router = APIRouter()
 
 DATA_DIR = Path(__file__).resolve().parent.parent / 'data'
 
+# State FIPS -> region lookup
+_REGION_BY_STATE_FIPS = {}
+for _fips_list, _region in [
+    ('09,23,25,33,34,36,42,44,50', 'Northeast'),
+    ('01,05,10,11,12,13,21,22,24,28,37,40,45,47,48,51,54', 'South'),
+    ('17,18,19,20,26,27,29,31,38,39,46,55', 'Midwest'),
+    ('02,04,06,08,15,16,30,32,35,41,49,53,56', 'West'),
+]:
+    for _f in _fips_list.split(','):
+        _REGION_BY_STATE_FIPS[_f] = _region
+
+
+def _region_from_fips(fips: str) -> str:
+    return _REGION_BY_STATE_FIPS.get(fips[:2], '')
+
+
 # Dataset registry: dataset_id -> (value_column, description)
 DATASET_REGISTRY = {
-    'library':   ('library_spend_per_capita', 'Library spending per capita ($)'),
-    'mobility':  ('mobility_rank_p25',        'Upward mobility rank (p25)'),
-    'air':       ('air_quality_inv',          'Air quality index (inverted, higher=better)'),
-    'broadband': ('broadband_rate',           'Broadband subscription rate'),
+    'library':       ('library_spend_per_capita', 'Library spending per capita ($)'),
+    'mobility':      ('mobility_rank_p25',        'Upward mobility rank (p25)'),
+    'air':           ('air_quality_inv',          'Air quality index (inverted, higher=better)'),
+    'broadband':     ('broadband_rate',           'Broadband subscription rate'),
+    'eitc':          ('eitc_rate',                'EITC filing rate (poverty proxy)'),
+    'poverty':       ('poverty_rate',             'Poverty rate (%)'),
+    'median_income': ('median_hh_income',         'Median household income ($)'),
 }
 
 
@@ -272,10 +291,11 @@ def scatter(req: ScatterRequest):
     # Build points
     points = []
     for _, row in merged.iterrows():
+        fips = row['fips']
         points.append({
-            'fips': row['fips'],
+            'fips': fips,
             'name': '',
-            'region': '',
+            'region': _region_from_fips(fips),
             'x': round(float(row['x']), 6),
             'y': round(float(row['y']), 6),
             'raw_x': round(float(row['raw_x']), 6),
