@@ -131,14 +131,50 @@ def _load_provenance(dataset_id: str) -> dict:
         return json.load(f)
 
 
+# ── GET /health ───────────────────────────────────────────────
+@router.get('/health')
+def health():
+    supabase_url = os.environ.get('SUPABASE_URL', '')
+    supabase_key_set = bool(os.environ.get('SUPABASE_SERVICE_KEY'))
+    masked_url = supabase_url[:20] + '...' if len(supabase_url) > 20 else supabase_url or '(not set)'
+
+    result = {
+        'status': 'ok',
+        'supabase_url': masked_url,
+        'supabase_key_set': supabase_key_set,
+        'supabase_client': False,
+        'raw_values_count': None,
+        'parquet_fallback_available': {},
+        'error': None,
+    }
+
+    # Check parquet files
+    for ds_id in DATASET_REGISTRY:
+        path = DATA_DIR / f'{ds_id}.parquet'
+        result['parquet_fallback_available'][ds_id] = path.exists()
+
+    # Try Supabase connection
+    try:
+        sb = _get_supabase()
+        if sb is None:
+            result['error'] = 'Supabase client failed to initialize (URL or KEY missing/invalid)'
+        else:
+            result['supabase_client'] = True
+            resp = sb.table('raw_values').select('id', count='exact').limit(1).execute()
+            result['raw_values_count'] = resp.count
+    except Exception as e:
+        result['error'] = str(e)
+
+    return result
+
+
 # ── GET /datasets ──────────────────────────────────────────────
 @router.get('/datasets')
 def list_datasets():
     results = []
     for ds_id, (col, desc) in DATASET_REGISTRY.items():
-        path = DATA_DIR / f'{ds_id}.parquet'
-        if path.exists():
-            df = pd.read_parquet(path)
+        try:
+            df = _load_dataset(ds_id)
             results.append({
                 'dataset_id': ds_id,
                 'value_column': col,
@@ -146,6 +182,8 @@ def list_datasets():
                 'county_count': int(df['fips'].nunique()),
                 'row_count': len(df),
             })
+        except Exception:
+            pass
     return results
 
 
