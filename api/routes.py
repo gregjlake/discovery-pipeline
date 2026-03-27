@@ -215,6 +215,243 @@ def benchmarks():
     return run_benchmarks(_load_dataset)
 
 
+# ── Unit labels per dataset ───────────────────────────────────
+_DATASET_UNITS = {
+    'library':        '$/capita/yr',
+    'mobility':       'rank (0–1)',
+    'air':            'AQI inv.',
+    'broadband':      'rate (0–1)',
+    'eitc':           'rate (0–1)',
+    'poverty':        '%',
+    'median_income':  '$',
+    'bea_income':     '$/person/yr',
+    'food_access':    '% households',
+    'obesity':        '% adults',
+    'diabetes':       '% adults',
+    'mental_health':  '% adults',
+    'hypertension':   '% adults',
+    'unemployment':   '% unemployed',
+    'rural_urban':    'code 1–9',
+    'housing_burden': '% cost-burdened',
+    'voter_turnout':  'total votes',
+}
+
+
+def _load_all_datasets_cached() -> dict[str, pd.DataFrame]:
+    """Load every registered dataset. Returns {dataset_id: DataFrame}."""
+    cache: dict[str, pd.DataFrame] = {}
+    for ds_id in DATASET_REGISTRY:
+        try:
+            cache[ds_id] = _load_dataset(ds_id)
+        except Exception:
+            pass
+    return cache
+
+
+# ── GET /county/{fips} ────────────────────────────────────────
+@router.get('/county/{fips}')
+def county_detail(fips: str):
+    if not fips or len(fips) != 5 or not fips.isdigit():
+        raise HTTPException(400, "FIPS must be a 5-digit string")
+
+    all_data = _load_all_datasets_cached()
+    region = _region_from_fips(fips)
+
+    # Build per-dataset stats for this county
+    datasets_out: dict[str, dict] = {}
+    county_zscores: dict[str, float] = {}  # for similarity calc
+
+    for ds_id, (col, _desc) in DATASET_REGISTRY.items():
+        df = all_data.get(ds_id)
+        if df is None or col not in df.columns:
+            continue
+
+        vals = df[col].dropna()
+        row = df[df['fips'] == fips]
+        if row.empty:
+            continue
+
+        raw_value = float(row.iloc[0][col])
+        mean = float(vals.mean())
+        std = float(vals.std())
+        z = (raw_value - mean) / std if std > 0 else 0.0
+        pct = float((vals < raw_value).sum() + (vals == raw_value).sum() * 0.5) / len(vals) * 100
+
+        datasets_out[ds_id] = {
+            'raw_value': round(raw_value, 4),
+            'unit': _DATASET_UNITS.get(ds_id, ''),
+            'national_percentile': round(pct, 1),
+            'national_mean': round(mean, 4),
+            'national_std': round(std, 4),
+            'z_score': round(z, 4),
+        }
+        county_zscores[ds_id] = z
+
+    if not datasets_out:
+        raise HTTPException(404, f"No data found for FIPS {fips}")
+
+    # ── Similar counties ──────────────────────────────────────
+    # Build z-score matrix for all counties across shared datasets
+    shared_ds = list(county_zscores.keys())
+    min_shared = min(4, len(shared_ds))
+
+    # Pivot: fips -> {ds_id: z_score}
+    county_vectors: dict[str, dict[str, float]] = {}
+    for ds_id in shared_ds:
+        df = all_data.get(ds_id)
+        if df is None:
+            continue
+        col = DATASET_REGISTRY[ds_id][0]
+        vals = df[col].dropna()
+        mean = float(vals.mean())
+        std = float(vals.std())
+        if std == 0:
+            continue
+        for _, r in df[['fips', col]].dropna().iterrows():
+            f = r['fips']
+            if f == fips:
+                continue
+            if f not in county_vectors:
+                county_vectors[f] = {}
+            county_vectors[f][ds_id] = (float(r[col]) - mean) / std
+
+    # Filter to counties with enough shared datasets, compute distance
+    distances: list[tuple[str, float]] = []
+    for other_fips, other_z in county_vectors.items():
+        common = [d for d in shared_ds if d in other_z]
+        if len(common) < min_shared:
+            continue
+        dist_sq = sum((county_zscores[d] - other_z[d]) ** 2 for d in common)
+        distances.append((other_fips, dist_sq ** 0.5))
+
+    distances.sort(key=lambda x: x[1])
+    top5 = distances[:5]
+    max_dist = max(d for _, d in top5) if top5 else 1.0
+    max_dist = max(max_dist, 0.001)
+
+    similar_counties = []
+    for other_fips, dist in top5:
+        score = round(max(0, 100 - (dist / (max_dist * 1.2) * 100)))
+        similar_counties.append({
+            'fips': other_fips,
+            'name': '',
+            'state': other_fips[:2],
+            'similarity_score': score,
+            'region': _region_from_fips(other_fips),
+        })
+
+    return {
+        'fips': fips,
+        'name': '',
+        'state': fips[:2],
+        'region': region,
+        'datasets': datasets_out,
+        'similar_counties': similar_counties,
+    }
+
+
+# ── GET /county/{fips}/flags ──────────────────────────────────
+@router.get('/county/{fips}/flags')
+def county_flags(
+    fips: str,
+    x: str,
+    y: str,
+    slope: float,
+    intercept: float,
+    residual_std: float,
+    residual: float,
+):
+    # Load county detail (reuse the endpoint logic)
+    county_data = county_detail(fips)
+
+    flags = []
+    px = county_data['datasets'].get(x, {}).get('national_percentile', 50)
+    py = county_data['datasets'].get(y, {}).get('national_percentile', 50)
+
+    x_label = DATASET_REGISTRY.get(x, (x, x))[1]
+    y_label = DATASET_REGISTRY.get(y, (y, y))[1]
+
+    # Rule 1 — Strong outlier
+    if residual_std > 0 and abs(residual) > 2.0 * residual_std:
+        sigma = round(abs(residual) / residual_std, 1)
+        direction = 'above' if residual > 0 else 'below'
+        flags.append({
+            'headline': f'Strong outlier — {sigma}σ {direction} trend',
+            'description': f'This county breaks the {x_label} vs {y_label} pattern more than 95% of counties. Something unusual is happening here.',
+            'type': 'outlier',
+            'datasets_involved': [x, y],
+            'generated_by': 'rules_engine',
+        })
+
+    # Rule 2 — High on both
+    if px > 75 and py > 75:
+        flags.append({
+            'headline': 'Top quartile on both dimensions',
+            'description': f'Ranks above 75th percentile for both {x_label} and {y_label} — part of a high-performing cluster.',
+            'type': 'pattern',
+            'datasets_involved': [x, y],
+            'generated_by': 'rules_engine',
+        })
+
+    # Rule 3 — Low on both
+    if px < 25 and py < 25:
+        flags.append({
+            'headline': 'Bottom quartile on both dimensions',
+            'description': f'Ranks below 25th percentile for both {x_label} and {y_label} — part of a cluster worth studying.',
+            'type': 'pattern',
+            'datasets_involved': [x, y],
+            'generated_by': 'rules_engine',
+        })
+
+    # Rule 4 — High X but unexpectedly low Y
+    if px > 70 and residual_std > 0 and residual < -1.5 * residual_std:
+        flags.append({
+            'headline': f'High {x_label} but lower {y_label} than expected',
+            'description': f'Despite ranking in the top 30% for {x_label}, this county underperforms on {y_label}. A confounding variable may explain this gap.',
+            'type': 'pattern',
+            'datasets_involved': [x, y],
+            'generated_by': 'rules_engine',
+        })
+
+    # Rule 5 — Low X but high Y
+    if px < 30 and residual_std > 0 and residual > 1.5 * residual_std:
+        flags.append({
+            'headline': f'Outperforms despite low {x_label}',
+            'description': f'Achieves above-expected {y_label} despite low {x_label}. What distinguishes this county from similar ones?',
+            'type': 'outlier',
+            'datasets_involved': [x, y],
+            'generated_by': 'rules_engine',
+        })
+
+    # Rule 6 — Extreme values across any dataset
+    for ds_id, ds_data in county_data['datasets'].items():
+        p = ds_data.get('national_percentile', 50)
+        if p > 95:
+            flags.append({
+                'headline': f'Extreme value: top 5% for {ds_id}',
+                'description': f'Ranks in the top 5% nationally for {ds_id} — raw value: {ds_data["raw_value"]} {ds_data["unit"]}',
+                'type': 'extreme',
+                'datasets_involved': [ds_id],
+                'generated_by': 'rules_engine',
+            })
+        elif p < 5:
+            flags.append({
+                'headline': f'Extreme value: bottom 5% for {ds_id}',
+                'description': f'Ranks in the bottom 5% nationally for {ds_id} — raw value: {ds_data["raw_value"]} {ds_data["unit"]}',
+                'type': 'extreme',
+                'datasets_involved': [ds_id],
+                'generated_by': 'rules_engine',
+            })
+
+    return {
+        'fips': fips,
+        'flags': flags,
+        'flag_count': len(flags),
+        'generated_by': 'rules_engine',
+        'note': 'All flags generated from statistical thresholds — no AI involved',
+    }
+
+
 # ── GET /datasets ──────────────────────────────────────────────
 @router.get('/datasets')
 def list_datasets():
