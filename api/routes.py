@@ -198,6 +198,13 @@ def health():
     return result
 
 
+# ── GET /benchmarks ────────────────────────────────────────────
+@router.get('/benchmarks')
+def benchmarks():
+    from validate.benchmarks import run_benchmarks
+    return run_benchmarks(_load_dataset)
+
+
 # ── GET /datasets ──────────────────────────────────────────────
 @router.get('/datasets')
 def list_datasets():

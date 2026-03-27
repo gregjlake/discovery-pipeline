@@ -187,6 +187,22 @@ def main():
         issue_str = '; '.join(issues) if issues else 'OK'
         print(f"{dataset_id:<12} {county_count:>8}  {issue_str}")
 
+    # Run benchmarks against loaded data
+    try:
+        import pandas as pd
+        from validate.benchmarks import run_benchmarks, print_benchmarks
+
+        def _load_from_parquet(dataset_id):
+            path = data_dir / f'{dataset_id}.parquet'
+            if path.exists():
+                return pd.read_parquet(path)
+            raise FileNotFoundError(f"No parquet for {dataset_id}")
+
+        bench_results = run_benchmarks(_load_from_parquet)
+        print_benchmarks(bench_results)
+    except Exception as e:
+        print(f"\nBenchmark error: {e}")
+
 
 if __name__ == '__main__':
     main()
