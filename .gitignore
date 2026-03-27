@@ -1,0 +1,9 @@
+venv/
+data/
+__pycache__/
+.env
+*.parquet
+*.pyc
+.DS_Store
+frontend/node_modules/
+frontend/dist/
