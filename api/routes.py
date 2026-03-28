@@ -736,6 +736,115 @@ def dataset_metadata():
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
+# ── GET /correlation-matrix ───────────────────────────────────
+TAUTOLOGICAL_PAIRS = {
+    frozenset(('poverty', 'eitc')): "Both measure economic hardship. EITC filing rate and poverty rate are alternative measures of the same low-income population.",
+    frozenset(('poverty', 'median_income')): "Income and poverty are inverse measures of the same economic construct.",
+    frozenset(('poverty', 'bea_income')): "Both measure county-level economic conditions — poverty rate and per-capita income are different expressions of the same phenomenon.",
+    frozenset(('median_income', 'bea_income')): "Two income measures from different surveys (SAIPE and ACS) measuring the same underlying construct.",
+    frozenset(('obesity', 'diabetes')): "Clinical comorbidity — obesity is the primary risk factor for Type 2 diabetes. ~85% of Type 2 diabetics are overweight or obese.",
+    frozenset(('obesity', 'hypertension')): "Clinical comorbidity — obesity is a primary risk factor for hypertension.",
+    frozenset(('diabetes', 'hypertension')): "Clinical comorbidity — both are components of metabolic syndrome and share common risk factors.",
+    frozenset(('broadband', 'broadband_avail')): "Two measures of the same phenomenon (internet access) from different sources — subscription rate vs any-internet adoption.",
+    frozenset(('rural_urban', 'pop_density')): "Two measures of the same urbanization construct — ordinal USDA codes vs continuous population density.",
+}
+
+_corr_cache = None
+
+
+@router.get('/correlation-matrix')
+def correlation_matrix():
+    from fastapi.responses import JSONResponse
+    global _corr_cache
+    if _corr_cache is not None:
+        return JSONResponse(content=_corr_cache, headers={"Cache-Control": "max-age=3600"})
+
+    # Load all datasets
+    frames = {}
+    for ds_id, (col, _) in DATASET_REGISTRY.items():
+        try:
+            df = _load_dataset(ds_id)
+            if col in df.columns:
+                series = df[['fips', col]].dropna().rename(columns={col: ds_id})
+                frames[ds_id] = series
+        except Exception:
+            pass
+
+    if len(frames) < 2:
+        return JSONResponse(status_code=503, content={"error": "Not enough datasets loaded"})
+
+    # Merge all on FIPS
+    merged = None
+    for ds_id, df in frames.items():
+        if merged is None:
+            merged = df
+        else:
+            merged = merged.merge(df, on='fips', how='outer')
+
+    ds_cols = [c for c in merged.columns if c != 'fips']
+
+    # Min-max normalize
+    for c in ds_cols:
+        s = merged[c].astype(float)
+        mn, mx = s.min(), s.max()
+        merged[c] = (s - mn) / (mx - mn) if mx > mn else 0.5
+
+    # Correlation matrix
+    corr = merged[ds_cols].corr()
+    matrix = {}
+    for d1 in ds_cols:
+        matrix[d1] = {}
+        for d2 in ds_cols:
+            v = corr.loc[d1, d2]
+            matrix[d1][d2] = round(float(v), 4) if not pd.isna(v) else None
+
+    # Find high pairs
+    high_pairs = []
+    seen = set()
+    for d1 in ds_cols:
+        for d2 in ds_cols:
+            if d1 >= d2:
+                continue
+            pair = frozenset((d1, d2))
+            if pair in seen:
+                continue
+            seen.add(pair)
+            r_val = matrix[d1].get(d2)
+            if r_val is None:
+                continue
+            if abs(r_val) < 0.6:
+                continue
+
+            severity = "very_high" if abs(r_val) > 0.85 else "high" if abs(r_val) > 0.70 else "moderate"
+
+            if pair in TAUTOLOGICAL_PAIRS:
+                high_pairs.append({
+                    "d1": d1, "d2": d2, "r": r_val,
+                    "type": "tautological",
+                    "reason": TAUTOLOGICAL_PAIRS[pair],
+                    "interpretation": "High correlation here is expected by construction, not a discovery.",
+                    "severity": severity,
+                })
+            else:
+                high_pairs.append({
+                    "d1": d1, "d2": d2, "r": r_val,
+                    "type": "collinear",
+                    "reason": f"Empirically correlated (r={r_val:.3f}). These datasets tend to move together across counties, possibly due to shared underlying drivers.",
+                    "interpretation": "This correlation may reflect genuine co-occurrence or shared confounders.",
+                    "severity": severity,
+                })
+
+    high_pairs.sort(key=lambda x: -abs(x["r"]))
+
+    taut_count = sum(1 for p in high_pairs if p["type"] == "tautological")
+    coll_count = sum(1 for p in high_pairs if p["type"] == "collinear")
+    logger.info(f"Correlation matrix: {len(high_pairs)} high pairs ({taut_count} tautological, {coll_count} collinear)")
+
+    result = {"matrix": matrix, "high_pairs": high_pairs}
+    _corr_cache = result
+    return JSONResponse(content=result, headers={"Cache-Control": "max-age=3600"})
+
+
 # ── GET /gravity-map/validation ────────────────────────────────
 VALIDATION_PATH = DATA_DIR / 'validation_results.json'
 
