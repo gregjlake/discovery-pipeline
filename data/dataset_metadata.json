@@ -1,0 +1,172 @@
+{
+  "library": {
+    "label": "Library Access",
+    "source": "IMLS Public Libraries Survey",
+    "source_url": "https://www.imls.gov/research-evaluation/data-collection/public-libraries-survey",
+    "data_year": "FY 2022",
+    "year_type": "precise",
+    "unit": "$/capita operating expenditure",
+    "maup_sensitivity": "low",
+    "notes": "Annual survey of all US public library administrative entities. County totals aggregated from library-level data using Census tract FIPS mapping."
+  },
+  "mobility": {
+    "label": "Economic Mobility",
+    "source": "Opportunity Atlas (Chetty et al.)",
+    "source_url": "https://opportunityinsights.org",
+    "data_year": "1978\u20132015",
+    "year_type": "historical",
+    "unit": "mean household income rank at age 35 (percentile)",
+    "maup_sensitivity": "medium",
+    "notes": "Tracks income outcomes of children born 1978\u20131983, measured at age ~35 (through 2015). Reflects historical structural conditions, not current mobility. Significant temporal mismatch when compared to 2022 datasets. Based on linked Census\u2013IRS administrative records."
+  },
+  "air": {
+    "label": "Air Quality",
+    "source": "EPA Air Quality System (AQS)",
+    "source_url": "https://aqs.epa.gov/aqsweb/airdata/download_data.html",
+    "data_year": "2022",
+    "year_type": "precise",
+    "unit": "inverted Median AQI (higher = cleaner)",
+    "maup_sensitivity": "high",
+    "notes": "Annual county AQI summary from EPA monitoring stations. Only 973 counties with 50+ monitoring days included. Counties without monitors are absent, not zero. Monitor placement is non-random."
+  },
+  "broadband": {
+    "label": "Broadband Access",
+    "source": "Census ACS 5-Year, Table B28002",
+    "source_url": "https://data.census.gov",
+    "data_year": "2018\u20132022",
+    "year_type": "range",
+    "unit": "household broadband subscription rate",
+    "maup_sensitivity": "low",
+    "notes": "ACS 5-year estimates represent a 2018\u20132022 average, not a single point in time. Broadband subscription rate = B28002_004E / B28002_001E."
+  },
+  "eitc": {
+    "label": "EITC Uptake",
+    "source": "IRS Statistics of Income",
+    "source_url": "https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-zip-code-data-soi",
+    "data_year": "Tax Year 2022",
+    "year_type": "precise",
+    "unit": "EITC returns / total returns filed",
+    "maup_sensitivity": "medium",
+    "notes": "ZIP-code level tax filing data aggregated to county via Census ZCTA-county area-weighted crosswalk. Area weighting assumes uniform population density within ZCTAs."
+  },
+  "poverty": {
+    "label": "Poverty Rate",
+    "source": "Census SAIPE (Small Area Income and Poverty Estimates)",
+    "source_url": "https://www.census.gov/programs-surveys/saipe.html",
+    "data_year": "2022",
+    "year_type": "precise",
+    "unit": "% of population below poverty line",
+    "maup_sensitivity": "low",
+    "notes": "Model-based estimates combining ACS survey data, IRS tax returns, and SNAP administrative records. Designed specifically for county-level estimates."
+  },
+  "median_income": {
+    "label": "Median Income",
+    "source": "Census SAIPE",
+    "source_url": "https://www.census.gov/programs-surveys/saipe.html",
+    "data_year": "2022",
+    "year_type": "precise",
+    "unit": "median household income ($)",
+    "maup_sensitivity": "low",
+    "notes": "Model-based county estimates from Census SAIPE program. Same source as poverty rate."
+  },
+  "bea_income": {
+    "label": "Per Capita Income",
+    "source": "Census ACS 5-Year, Table B19301",
+    "source_url": "https://data.census.gov",
+    "data_year": "2018\u20132022",
+    "year_type": "range",
+    "unit": "per capita personal income ($/year)",
+    "maup_sensitivity": "low",
+    "notes": "ACS 5-year estimate (2018\u20132022 average). Labeled 'BEA Income' in the UI but sourced from Census ACS, not BEA CAINC tables, because BEA API requires registration."
+  },
+  "food_access": {
+    "label": "Food Access (SNAP Proxy)",
+    "source": "Census ACS 5-Year, Table B22010",
+    "source_url": "https://data.census.gov",
+    "data_year": "2018\u20132022",
+    "year_type": "range",
+    "unit": "% of households receiving SNAP/food stamps",
+    "maup_sensitivity": "low",
+    "notes": "SNAP receipt rate used as food access proxy. The original USDA Food Access Research Atlas (which measures physical proximity to grocery stores) was unavailable (URLs returned 404). SNAP receipt measures food insecurity, not food desert geography."
+  },
+  "obesity": {
+    "label": "Obesity Rate",
+    "source": "CDC PLACES (BRFSS-based)",
+    "source_url": "https://www.cdc.gov/places/",
+    "data_year": "2022",
+    "year_type": "approximate",
+    "unit": "% of adults with BMI \u2265 30",
+    "maup_sensitivity": "medium",
+    "notes": "Crude prevalence from CDC PLACES, derived from BRFSS survey data with small-area estimation. 2,957 counties covered. Year is the release year; underlying BRFSS data may span 2020\u20132022."
+  },
+  "diabetes": {
+    "label": "Diabetes Rate",
+    "source": "CDC PLACES (BRFSS-based)",
+    "source_url": "https://www.cdc.gov/places/",
+    "data_year": "2022",
+    "year_type": "approximate",
+    "unit": "% of adults with diagnosed diabetes",
+    "maup_sensitivity": "medium",
+    "notes": "Crude prevalence from CDC PLACES. Same methodology and coverage as obesity. Small-area estimates from BRFSS telephone survey."
+  },
+  "mental_health": {
+    "label": "Mental Health",
+    "source": "CDC PLACES (BRFSS-based)",
+    "source_url": "https://www.cdc.gov/places/",
+    "data_year": "2022",
+    "year_type": "approximate",
+    "unit": "% of adults with frequent mental distress",
+    "maup_sensitivity": "medium",
+    "notes": "Crude prevalence from CDC PLACES. Measures \u226514 poor mental health days in past 30 days. Self-reported via telephone survey."
+  },
+  "hypertension": {
+    "label": "Hypertension Rate",
+    "source": "CDC PLACES (BRFSS-based)",
+    "source_url": "https://www.cdc.gov/places/",
+    "data_year": "2022",
+    "year_type": "approximate",
+    "unit": "% of adults with high blood pressure",
+    "maup_sensitivity": "medium",
+    "notes": "Crude prevalence from CDC PLACES. Same methodology as other health measures."
+  },
+  "unemployment": {
+    "label": "Unemployment Rate",
+    "source": "Census ACS 5-Year, Table B23025",
+    "source_url": "https://data.census.gov",
+    "data_year": "2018\u20132022",
+    "year_type": "range",
+    "unit": "% of labor force unemployed",
+    "maup_sensitivity": "low",
+    "notes": "ACS 5-year estimate (2018\u20132022 average). BLS Local Area Unemployment Statistics (which provide monthly point-in-time data) were unavailable due to automated access restrictions."
+  },
+  "rural_urban": {
+    "label": "Rural/Urban Classification",
+    "source": "USDA Economic Research Service",
+    "source_url": "https://www.ers.usda.gov/data-products/rural-urban-continuum-codes/",
+    "data_year": "2023",
+    "year_type": "precise",
+    "unit": "Rural-Urban Continuum Code (1=most urban, 9=most rural)",
+    "maup_sensitivity": "low",
+    "notes": "2023 vintage (latest available). USDA updates these codes roughly every 10 years following each Census. Based on 2020 Census population and OMB metro area definitions."
+  },
+  "housing_burden": {
+    "label": "Housing Burden",
+    "source": "Census ACS 5-Year, Table B25070",
+    "source_url": "https://data.census.gov",
+    "data_year": "2018\u20132022",
+    "year_type": "range",
+    "unit": "% of renters paying 30%+ of income on rent",
+    "maup_sensitivity": "medium",
+    "notes": "ACS 5-year estimate. Covers renters only, not homeowners. Housing cost burden threshold (30%) is the HUD standard definition."
+  },
+  "voter_turnout": {
+    "label": "Voter Turnout",
+    "source": "MIT Election Data + Science Lab",
+    "source_url": "https://electionlab.mit.edu/data",
+    "data_year": "2020",
+    "year_type": "precise",
+    "unit": "total votes cast (presidential election)",
+    "maup_sensitivity": "low",
+    "notes": "2020 presidential election county returns. Raw vote count, not turnout rate (eligible voter denominator not available at county level in this source). 3,152 counties covered."
+  }
+}

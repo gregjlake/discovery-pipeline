@@ -718,6 +718,20 @@ User question: {req.question}"""
         )
 
 
+# ── GET /dataset-metadata ──────────────────────────────────────
+DATASET_META_PATH = DATA_DIR / 'dataset_metadata.json'
+
+
+@router.get('/dataset-metadata')
+def dataset_metadata():
+    from fastapi.responses import JSONResponse
+    if not DATASET_META_PATH.exists():
+        return JSONResponse(status_code=503, content={"error": "dataset_metadata.json not found"})
+    with open(DATASET_META_PATH) as f:
+        data = json.load(f)
+    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
+
+
 # ── GET /gravity-map ──────────────────────────────────────────
 GRAVITY_CACHE = DATA_DIR / 'gravity_map_cache.json'
 _gravity_cache_data = None

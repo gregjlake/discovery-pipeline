@@ -1,6 +1,7 @@
 venv/
 data/
 !data/gravity_map_cache.json
+!data/dataset_metadata.json
 __pycache__/
 .env
 *.parquet
