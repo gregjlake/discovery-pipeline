@@ -716,3 +716,51 @@ User question: {req.question}"""
             params={},
             error=str(e),
         )
+
+
+# ── GET /gravity-map ──────────────────────────────────────────
+GRAVITY_CACHE = DATA_DIR / 'gravity_map_cache.json'
+_gravity_cache_data = None
+_gravity_cache_mtime = 0
+
+
+def _load_gravity_cache():
+    global _gravity_cache_data, _gravity_cache_mtime
+    if not GRAVITY_CACHE.exists():
+        return None
+    mtime = GRAVITY_CACHE.stat().st_mtime
+    if _gravity_cache_data is None or mtime != _gravity_cache_mtime:
+        with open(GRAVITY_CACHE) as f:
+            _gravity_cache_data = json.load(f)
+        _gravity_cache_mtime = mtime
+    return _gravity_cache_data
+
+
+@router.get('/gravity-map')
+def gravity_map():
+    from fastapi.responses import JSONResponse
+    data = _load_gravity_cache()
+    if data is None:
+        return JSONResponse(
+            status_code=503,
+            content={"error": "Gravity map cache not built. Run data_pipeline/gravity/run_gravity_pipeline.py first."},
+        )
+    return JSONResponse(
+        content=data,
+        headers={"Cache-Control": "max-age=3600"},
+    )
+
+
+@router.get('/gravity-map/metadata')
+def gravity_map_metadata():
+    from fastapi.responses import JSONResponse
+    data = _load_gravity_cache()
+    if data is None:
+        return JSONResponse(
+            status_code=503,
+            content={"error": "Gravity map cache not built. Run data_pipeline/gravity/run_gravity_pipeline.py first."},
+        )
+    return JSONResponse(
+        content=data.get("metadata", {}),
+        headers={"Cache-Control": "max-age=3600"},
+    )
