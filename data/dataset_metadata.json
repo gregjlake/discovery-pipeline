@@ -7,7 +7,9 @@
     "year_type": "precise",
     "unit": "$/capita operating expenditure",
     "maup_sensitivity": "low",
-    "notes": "Annual survey of all US public library administrative entities. County totals aggregated from library-level data using Census tract FIPS mapping."
+    "notes": "Library operating expenditure per capita from IMLS FY2022. Does not capture library quality, hours, collection size, or digital services. County totals aggregated from library-level data using Census tract FIPS mapping.",
+    "higher_is_better": true,
+    "data_type": "continuous"
   },
   "mobility": {
     "label": "Economic Mobility",
@@ -17,7 +19,9 @@
     "year_type": "historical",
     "unit": "mean household income rank at age 35 (percentile)",
     "maup_sensitivity": "medium",
-    "notes": "Tracks income outcomes of children born 1978–1983, measured at age ~35 (through 2015). Reflects historical structural conditions, not current mobility. Significant temporal mismatch when compared to 2022 datasets. Based on linked Census–IRS administrative records."
+    "notes": "Tracks income outcomes of children born 1978–1983, measured at age ~35 (through 2015). Reflects historical structural conditions, not current mobility. Significant temporal mismatch when compared to 2022 datasets. Based on linked Census–IRS administrative records.",
+    "higher_is_better": true,
+    "data_type": "continuous"
   },
   "air": {
     "label": "Air Quality",
@@ -27,18 +31,25 @@
     "year_type": "precise",
     "unit": "inverted Median AQI (higher = cleaner)",
     "maup_sensitivity": "low",
-    "notes": "Annual county AQI summary from EPA monitoring stations. Only 973 counties (~31%) have direct measurements with 50+ monitoring days. Values for remaining ~2,170 counties are absent (not modeled). This is a data coverage issue distinct from MAUP. Air quality is spatially smooth, making county-level aggregation appropriate (low MAUP), but counties without direct monitoring should be treated with additional caution. Monitor placement is non-random.",
-    "data_coverage_flag": true
+    "notes": "Inverted Median AQI: computed as 200 − Median AQI, so higher value = cleaner air. Annual county AQI summary from EPA monitoring stations. Only 973 counties (~31%) have direct measurements with 50+ monitoring days. Counties without monitors are absent (not modeled/interpolated). Monitor placement is non-random. Air quality is spatially smooth, making county-level aggregation appropriate (low MAUP).",
+    "data_coverage_flag": true,
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "direction_note": "Inverted Median AQI: higher value = cleaner air (200 - Median AQI)"
   },
   "broadband": {
-    "label": "Broadband Access",
+    "label": "Broadband Subscription Rate",
     "source": "Census ACS 5-Year, Table B28002",
     "source_url": "https://data.census.gov",
     "data_year": "2018–2022",
     "year_type": "range",
     "unit": "household broadband subscription rate",
     "maup_sensitivity": "low",
-    "notes": "ACS 5-year estimates represent a 2018–2022 average, not a single point in time. Broadband subscription rate = B28002_004E / B28002_001E."
+    "notes": "Measures household broadband subscription rate from ACS (table B28002), NOT physical infrastructure availability. Low subscription rates may reflect unaffordability or lack of infrastructure — this data cannot distinguish between them. FCC availability maps would be needed to separate these causes. ACS 5-year estimate (2018–2022 average).",
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "direction_note": "Higher subscription = more connected",
+    "proxy_warning": "Subscription rate, not infrastructure availability"
   },
   "eitc": {
     "label": "EITC Uptake",
@@ -48,7 +59,10 @@
     "year_type": "precise",
     "unit": "EITC returns / total returns filed",
     "maup_sensitivity": "medium",
-    "notes": "ZIP-code level tax filing data aggregated to county via Census ZCTA-county area-weighted crosswalk. Area weighting assumes uniform population density within ZCTAs."
+    "notes": "EITC filing rate as share of total tax filers. ~20% of eligible households nationally do not claim EITC. Non-take-up is systematically higher in immigrant communities and areas with tax filing barriers. Low EITC rates may indicate: lower poverty, OR filing barriers, OR higher undocumented population — this data cannot distinguish between these causes. ZIP-to-county aggregation via Census ZCTA area-weighted crosswalk.",
+    "higher_is_better": null,
+    "data_type": "continuous",
+    "direction_note": "Ambiguous: higher rate may indicate more poverty OR better program access."
   },
   "poverty": {
     "label": "Poverty Rate",
@@ -58,7 +72,9 @@
     "year_type": "precise",
     "unit": "% of population below poverty line",
     "maup_sensitivity": "low",
-    "notes": "Model-based estimates combining ACS survey data, IRS tax returns, and SNAP administrative records. Designed specifically for county-level estimates."
+    "notes": "Census Official Poverty Measure (OPM) from SAIPE with fixed national thresholds, NOT adjusted for geographic cost of living. $30K income means very different conditions in rural Mississippi vs urban California. The Supplemental Poverty Measure (SPM) adjusts for this but is only available at state level. Model-based estimates combining ACS, IRS, and SNAP administrative records.",
+    "higher_is_better": false,
+    "data_type": "continuous"
   },
   "median_income": {
     "label": "Median Income",
@@ -68,7 +84,10 @@
     "year_type": "precise",
     "unit": "median household income ($)",
     "maup_sensitivity": "low",
-    "notes": "Model-based county estimates from Census SAIPE program. Same source as poverty rate."
+    "notes": "Nominal dollar income without geographic cost-of-living adjustment. $50K in rural Alabama = substantially higher purchasing power than $50K in coastal suburbs. Model-based county estimates from Census SAIPE program.",
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "direction_note": "Nominal dollars, not cost-of-living adjusted"
   },
   "bea_income": {
     "label": "ACS Per Capita Income",
@@ -78,7 +97,10 @@
     "year_type": "range",
     "unit": "per capita personal income ($/year)",
     "maup_sensitivity": "low",
-    "notes": "Per capita income from ACS 5-Year estimates (table B19301). Previously mislabeled as BEA data. ACS measures household survey income; BEA personal income (which includes transfer payments) would differ. Note: Originally ingested with the intent to use BEA Regional Economic Accounts data. Actual data is Census ACS B19301. A future update should compare both sources."
+    "notes": "Per capita income from Census ACS 5-Year (table B19301). Nominal dollars without cost-of-living adjustment. Previously mislabeled as BEA data. ACS measures household survey income; BEA personal income (includes transfer payments) would differ.",
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "direction_note": "Nominal dollars, not cost-of-living adjusted"
   },
   "food_access": {
     "label": "SNAP Participation Rate",
@@ -89,7 +111,10 @@
     "unit": "% of households receiving SNAP/food stamps",
     "maup_sensitivity": "low",
     "notes": "This dataset measures SNAP participation rate, which reflects economic need and program enrollment, not physical proximity to grocery stores. The USDA Food Access Research Atlas (the standard measure of food deserts) was not available at ingest time. SNAP participation correlates with food insecurity but is not identical to food access. Interpret accordingly.",
-    "proxy_warning": "Proxy measure: SNAP participation rate, not physical food access"
+    "proxy_warning": "Proxy measure: SNAP participation rate, not physical food access",
+    "higher_is_better": null,
+    "data_type": "continuous",
+    "direction_note": "Ambiguous: higher SNAP rate = more food assistance enrollment, correlates with food insecurity but also program access."
   },
   "obesity": {
     "label": "Obesity Rate",
@@ -99,7 +124,9 @@
     "year_type": "approximate",
     "unit": "% of adults with BMI ≥ 30",
     "maup_sensitivity": "medium",
-    "notes": "Crude prevalence from CDC PLACES, derived from BRFSS survey data with small-area estimation. 2,957 counties covered. Year is the release year; underlying BRFSS data may span 2020–2022."
+    "notes": "Crude prevalence from CDC PLACES, based on self-reported height/weight (BRFSS). Self-reporting systematically underestimates BMI — people underreport weight and overreport height. Bias varies by region, education, gender. Model-based small area estimates partially smooth this but underlying survey bias propagates.",
+    "higher_is_better": false,
+    "data_type": "continuous"
   },
   "diabetes": {
     "label": "Diabetes Rate",
@@ -109,7 +136,10 @@
     "year_type": "approximate",
     "unit": "% of adults with diagnosed diabetes",
     "maup_sensitivity": "medium",
-    "notes": "Crude prevalence from CDC PLACES. Same methodology and coverage as obesity. Small-area estimates from BRFSS telephone survey."
+    "notes": "Crude prevalence of DIAGNOSED diabetes from CDC PLACES (BRFSS-based). Areas with limited healthcare access show lower measured rates even if true prevalence is identical or higher. Poverty correlations likely understate the true relationship due to diagnosis bias. Small-area estimates from BRFSS telephone survey.",
+    "higher_is_better": false,
+    "data_type": "continuous",
+    "diagnosis_bias": true
   },
   "mental_health": {
     "label": "Mental Health",
@@ -119,7 +149,10 @@
     "year_type": "approximate",
     "unit": "% of adults with frequent mental distress",
     "maup_sensitivity": "medium",
-    "notes": "Crude prevalence from CDC PLACES. Measures ≥14 poor mental health days in past 30 days. Self-reported via telephone survey."
+    "notes": "Self-reported frequent mental distress (≥14 poor mental health days/month) from CDC PLACES (BRFSS). Systematically underreported in communities with higher mental health stigma. Geographic patterns may partly reflect stigma rather than actual prevalence. Diagnosis bias: areas with less mental healthcare access have lower reported rates.",
+    "higher_is_better": false,
+    "data_type": "continuous",
+    "diagnosis_bias": true
   },
   "hypertension": {
     "label": "Hypertension Rate",
@@ -129,7 +162,10 @@
     "year_type": "approximate",
     "unit": "% of adults with high blood pressure",
     "maup_sensitivity": "medium",
-    "notes": "Crude prevalence from CDC PLACES. Same methodology as other health measures."
+    "notes": "Crude prevalence of DIAGNOSED high blood pressure from CDC PLACES (BRFSS-based). Areas with limited healthcare access show lower measured rates even if true prevalence is identical or higher. Poverty correlations likely understate the true relationship due to diagnosis bias. Small-area estimates from BRFSS telephone survey.",
+    "higher_is_better": false,
+    "data_type": "continuous",
+    "diagnosis_bias": true
   },
   "unemployment": {
     "label": "Unemployment Rate",
@@ -139,7 +175,9 @@
     "year_type": "range",
     "unit": "% of labor force unemployed",
     "maup_sensitivity": "low",
-    "notes": "ACS 5-year estimate (2018–2022 average). BLS Local Area Unemployment Statistics (which provide monthly point-in-time data) were unavailable due to automated access restrictions."
+    "notes": "ACS 5-year estimate (2018–2022) of U-3 unemployment rate. Includes 2020 pandemic spike (national peak 14.7% in April 2020) and recovery, which inflates the average for volatile counties. U-3 counts only those actively seeking work. Does not include discouraged workers, underemployed, or informal economy. In distressed counties, U-3 may understate true hardship because many have left the labor force.",
+    "higher_is_better": false,
+    "data_type": "continuous"
   },
   "rural_urban": {
     "label": "Rural/Urban Classification",
@@ -149,7 +187,10 @@
     "year_type": "precise",
     "unit": "Rural-Urban Continuum Code (1=most urban, 9=most rural)",
     "maup_sensitivity": "low",
-    "notes": "2023 vintage (latest available). USDA updates these codes roughly every 10 years following each Census. Based on 2020 Census population and OMB metro area definitions."
+    "notes": "USDA ordinal codes 1–9 where 1=large metro core, 9=completely rural (<2,500 pop, not adjacent to metro). Treated as continuous for correlation and distance calculations. This is a simplification — intervals between codes are not equal in real-world terms. Interpret correlations involving rural_urban as indicating direction (urban vs rural) rather than precise magnitude. Population density would be a truly continuous alternative. Based on 2020 Census population and OMB metro definitions.",
+    "higher_is_better": null,
+    "data_type": "ordinal",
+    "direction_note": "Ordinal 1-9. Higher code = more rural. Whether rural is 'better' depends on the outcome being studied."
   },
   "housing_burden": {
     "label": "Housing Burden",
@@ -159,7 +200,9 @@
     "year_type": "range",
     "unit": "% of renters paying 30%+ of income on rent",
     "maup_sensitivity": "medium",
-    "notes": "ACS 5-year estimate. Covers renters only, not homeowners. Housing cost burden threshold (30%) is the HUD standard definition."
+    "notes": "Share of renters paying 30%+ of income on rent (HUD threshold). Excludes homeowners. Selection bias: when housing becomes unaffordable, price-sensitive households leave, so remaining renters can afford current prices. Housing_burden may appear LOWER in the most expensive markets because the poorest residents have been displaced. ACS 5-year estimate (2018–2022).",
+    "higher_is_better": false,
+    "data_type": "continuous"
   },
   "voter_turnout": {
     "label": "Voter Turnout",
@@ -169,6 +212,9 @@
     "year_type": "precise",
     "unit": "total votes cast (presidential election)",
     "maup_sensitivity": "low",
-    "notes": "2020 presidential election county returns. Raw vote count, not turnout rate (eligible voter denominator not available at county level in this source). 3,152 counties covered."
+    "notes": "Raw vote count (total votes cast) in 2020 presidential election, NOT a turnout rate. No denominator (eligible voter population unavailable at county level). Confounded by county population — large counties show higher values regardless of civic engagement. 2020 had highest national turnout since 1900 (66.9%), driven by pandemic mail-in voting. Patterns may not reflect structural engagement.",
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "direction_note": "Raw vote count (not a rate). Strongly confounded by county population size."
   }
 }
