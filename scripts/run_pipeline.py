@@ -44,6 +44,8 @@ VALUE_COLUMNS = {
     'rural_urban':     ['rural_urban_code'],
     'housing_burden':  ['housing_burden_rate'],
     'voter_turnout':   ['total_votes_2020'],
+    'broadband_avail': ['internet_access_rate'],
+    'pop_density':     ['pop_density'],
 }
 
 # Modules that produce one dataframe with multiple dataset_ids

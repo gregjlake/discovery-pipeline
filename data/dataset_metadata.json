@@ -110,11 +110,11 @@
     "year_type": "range",
     "unit": "% of households receiving SNAP/food stamps",
     "maup_sensitivity": "low",
-    "notes": "This dataset measures SNAP participation rate, which reflects economic need and program enrollment, not physical proximity to grocery stores. The USDA Food Access Research Atlas (the standard measure of food deserts) was not available at ingest time. SNAP participation correlates with food insecurity but is not identical to food access. Interpret accordingly.",
+    "notes": "SNAP (food stamp) participation rate from Census ACS B22010. Measures economic need and program enrollment, NOT physical proximity to grocery stores. The USDA Food Access Research Atlas (standard food desert measure) was unavailable at ingest time and remains inaccessible (URLs return 404 as of March 2026). SNAP participation correlates with food insecurity (r~0.7 with poverty) but is distinct from physical food access. A county can have good physical access but high SNAP rates (low income), or poor physical access but low SNAP rates (rural, less enrollment). Interpret as economic food insecurity proxy.",
     "proxy_warning": "Proxy measure: SNAP participation rate, not physical food access",
-    "higher_is_better": null,
+    "higher_is_better": false,
     "data_type": "continuous",
-    "direction_note": "Ambiguous: higher SNAP rate = more food assistance enrollment, correlates with food insecurity but also program access."
+    "direction_note": "Higher SNAP rate = more food insecurity. Not a direct measure of physical food access."
   },
   "obesity": {
     "label": "Obesity Rate",
@@ -175,7 +175,7 @@
     "year_type": "range",
     "unit": "% of labor force unemployed",
     "maup_sensitivity": "low",
-    "notes": "ACS 5-year estimate (2018–2022) of U-3 unemployment rate. Includes 2020 pandemic spike (national peak 14.7% in April 2020) and recovery, which inflates the average for volatile counties. U-3 counts only those actively seeking work. Does not include discouraged workers, underemployed, or informal economy. In distressed counties, U-3 may understate true hardship because many have left the labor force.",
+    "notes": "ACS 5-year estimate (2018-2022) of U-3 unemployment rate. Includes 2020 pandemic spike (national peak 14.7%). BLS Local Area Unemployment Statistics (single-year county data) blocked programmatic access; ACS 1-year only covers 848 large counties. This 5-year average is the most complete county-level source available. U-3 counts only active job seekers; does not include discouraged workers or underemployed.",
     "higher_is_better": false,
     "data_type": "continuous"
   },
@@ -216,5 +216,30 @@
     "higher_is_better": true,
     "data_type": "continuous",
     "direction_note": "Raw vote count (not a rate). Strongly confounded by county population size."
+  },
+  "broadband_avail": {
+    "label": "Internet Access Rate",
+    "source": "Census ACS 5-Year, Table B28002 (any internet subscription)",
+    "source_url": "https://data.census.gov",
+    "data_year": "2018-2022",
+    "year_type": "range",
+    "unit": "% households with any internet subscription",
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "maup_sensitivity": "low",
+    "notes": "Share of households with any internet subscription from ACS B28002. Includes broadband, dial-up, satellite, cellular. More inclusive than the existing broadband subscription rate (B28002_004E). FCC Form 477 county-level availability data was not used due to census-block granularity (millions of rows). This ACS measure captures internet adoption broadly, combining availability and affordability effects."
+  },
+  "pop_density": {
+    "label": "Population Density",
+    "source": "Census ACS 2022 population + Census Gazetteer land area",
+    "source_url": "https://data.census.gov",
+    "data_year": "2022",
+    "year_type": "precise",
+    "unit": "people per square mile",
+    "higher_is_better": null,
+    "data_type": "continuous",
+    "maup_sensitivity": "low",
+    "direction_note": "Higher = more urban. Neither high nor low is inherently better.",
+    "notes": "Continuous alternative to USDA Rural-Urban Continuum Codes. Highly right-skewed (Manhattan ~70K/sq mi vs rural Alaska <1/sq mi). Consider log scale for visualization. Computed as Census ACS population / Gazetteer land area in square miles."
   }
 }

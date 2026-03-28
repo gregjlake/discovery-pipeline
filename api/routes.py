@@ -57,6 +57,8 @@ DATASET_REGISTRY = {
     'rural_urban':    ('rural_urban_code',         'Rural-urban continuum code (1-9)'),
     'housing_burden': ('housing_burden_rate',      'Cost-burdened renters (30%+ income)'),
     'voter_turnout':  ('total_votes_2020',         'Total votes cast 2020 presidential'),
+    'broadband_avail': ('internet_access_rate',     'Internet access rate (any type)'),
+    'pop_density':    ('pop_density',               'Population density (people/sq mi)'),
 }
 
 
@@ -234,6 +236,8 @@ _DATASET_UNITS = {
     'rural_urban':    'code 1–9',
     'housing_burden': '% cost-burdened',
     'voter_turnout':  'total votes',
+    'broadband_avail': '% with internet',
+    'pop_density':    'people/sq mi',
 }
 
 
