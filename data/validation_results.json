@@ -1,0 +1,16 @@
+{
+  "spearman_rho": 0.1622,
+  "spearman_p": 3.2654856309940707e-300,
+  "pearson_r_log": 0.2595,
+  "n_pairs_total": 51445,
+  "n_pairs_in_top_links": 12397,
+  "n_pairs_not_in_links": 39048,
+  "model_a_rho": 0.0405,
+  "model_b_rho": 0.0514,
+  "model_c_rho": 0.1622,
+  "improvement_b_to_c": 0.1108,
+  "monotonic_by_bin": true,
+  "interpretation": "Weak -- model captures some signal",
+  "validation_data": "IRS SOI county-to-county migration inflows 2019-2020",
+  "validation_note": "Out-of-sample validation. IRS migration data was not used in beta calibration. Any correlation with migration flows reflects genuine predictive validity."
+}

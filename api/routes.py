@@ -732,6 +732,20 @@ def dataset_metadata():
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
+# ── GET /gravity-map/validation ────────────────────────────────
+VALIDATION_PATH = DATA_DIR / 'validation_results.json'
+
+
+@router.get('/gravity-map/validation')
+def gravity_validation():
+    from fastapi.responses import JSONResponse
+    if not VALIDATION_PATH.exists():
+        return JSONResponse(status_code=503, content={"error": "validation_results.json not found"})
+    with open(VALIDATION_PATH) as f:
+        data = json.load(f)
+    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
+
+
 # ── GET /gravity-map ──────────────────────────────────────────
 GRAVITY_CACHE = DATA_DIR / 'gravity_map_cache.json'
 _gravity_cache_data = None
