@@ -13,11 +13,11 @@
     "label": "Economic Mobility",
     "source": "Opportunity Atlas (Chetty et al.)",
     "source_url": "https://opportunityinsights.org",
-    "data_year": "1978\u20132015",
+    "data_year": "1978–2015",
     "year_type": "historical",
     "unit": "mean household income rank at age 35 (percentile)",
     "maup_sensitivity": "medium",
-    "notes": "Tracks income outcomes of children born 1978\u20131983, measured at age ~35 (through 2015). Reflects historical structural conditions, not current mobility. Significant temporal mismatch when compared to 2022 datasets. Based on linked Census\u2013IRS administrative records."
+    "notes": "Tracks income outcomes of children born 1978–1983, measured at age ~35 (through 2015). Reflects historical structural conditions, not current mobility. Significant temporal mismatch when compared to 2022 datasets. Based on linked Census–IRS administrative records."
   },
   "air": {
     "label": "Air Quality",
@@ -26,18 +26,19 @@
     "data_year": "2022",
     "year_type": "precise",
     "unit": "inverted Median AQI (higher = cleaner)",
-    "maup_sensitivity": "high",
-    "notes": "Annual county AQI summary from EPA monitoring stations. Only 973 counties with 50+ monitoring days included. Counties without monitors are absent, not zero. Monitor placement is non-random."
+    "maup_sensitivity": "low",
+    "notes": "Annual county AQI summary from EPA monitoring stations. Only 973 counties (~31%) have direct measurements with 50+ monitoring days. Values for remaining ~2,170 counties are absent (not modeled). This is a data coverage issue distinct from MAUP. Air quality is spatially smooth, making county-level aggregation appropriate (low MAUP), but counties without direct monitoring should be treated with additional caution. Monitor placement is non-random.",
+    "data_coverage_flag": true
   },
   "broadband": {
     "label": "Broadband Access",
     "source": "Census ACS 5-Year, Table B28002",
     "source_url": "https://data.census.gov",
-    "data_year": "2018\u20132022",
+    "data_year": "2018–2022",
     "year_type": "range",
     "unit": "household broadband subscription rate",
     "maup_sensitivity": "low",
-    "notes": "ACS 5-year estimates represent a 2018\u20132022 average, not a single point in time. Broadband subscription rate = B28002_004E / B28002_001E."
+    "notes": "ACS 5-year estimates represent a 2018–2022 average, not a single point in time. Broadband subscription rate = B28002_004E / B28002_001E."
   },
   "eitc": {
     "label": "EITC Uptake",
@@ -70,24 +71,25 @@
     "notes": "Model-based county estimates from Census SAIPE program. Same source as poverty rate."
   },
   "bea_income": {
-    "label": "Per Capita Income",
-    "source": "Census ACS 5-Year, Table B19301",
+    "label": "ACS Per Capita Income",
+    "source": "US Census Bureau, American Community Survey 5-Year",
     "source_url": "https://data.census.gov",
-    "data_year": "2018\u20132022",
+    "data_year": "2018–2022",
     "year_type": "range",
     "unit": "per capita personal income ($/year)",
     "maup_sensitivity": "low",
-    "notes": "ACS 5-year estimate (2018\u20132022 average). Labeled 'BEA Income' in the UI but sourced from Census ACS, not BEA CAINC tables, because BEA API requires registration."
+    "notes": "Per capita income from ACS 5-Year estimates (table B19301). Previously mislabeled as BEA data. ACS measures household survey income; BEA personal income (which includes transfer payments) would differ. Note: Originally ingested with the intent to use BEA Regional Economic Accounts data. Actual data is Census ACS B19301. A future update should compare both sources."
   },
   "food_access": {
-    "label": "Food Access (SNAP Proxy)",
-    "source": "Census ACS 5-Year, Table B22010",
+    "label": "SNAP Participation Rate",
+    "source": "Census ACS 5-Year, Table B22010 (SNAP proxy — not USDA Food Access Atlas)",
     "source_url": "https://data.census.gov",
-    "data_year": "2018\u20132022",
+    "data_year": "2018–2022",
     "year_type": "range",
     "unit": "% of households receiving SNAP/food stamps",
     "maup_sensitivity": "low",
-    "notes": "SNAP receipt rate used as food access proxy. The original USDA Food Access Research Atlas (which measures physical proximity to grocery stores) was unavailable (URLs returned 404). SNAP receipt measures food insecurity, not food desert geography."
+    "notes": "This dataset measures SNAP participation rate, which reflects economic need and program enrollment, not physical proximity to grocery stores. The USDA Food Access Research Atlas (the standard measure of food deserts) was not available at ingest time. SNAP participation correlates with food insecurity but is not identical to food access. Interpret accordingly.",
+    "proxy_warning": "Proxy measure: SNAP participation rate, not physical food access"
   },
   "obesity": {
     "label": "Obesity Rate",
@@ -95,9 +97,9 @@
     "source_url": "https://www.cdc.gov/places/",
     "data_year": "2022",
     "year_type": "approximate",
-    "unit": "% of adults with BMI \u2265 30",
+    "unit": "% of adults with BMI ≥ 30",
     "maup_sensitivity": "medium",
-    "notes": "Crude prevalence from CDC PLACES, derived from BRFSS survey data with small-area estimation. 2,957 counties covered. Year is the release year; underlying BRFSS data may span 2020\u20132022."
+    "notes": "Crude prevalence from CDC PLACES, derived from BRFSS survey data with small-area estimation. 2,957 counties covered. Year is the release year; underlying BRFSS data may span 2020–2022."
   },
   "diabetes": {
     "label": "Diabetes Rate",
@@ -117,7 +119,7 @@
     "year_type": "approximate",
     "unit": "% of adults with frequent mental distress",
     "maup_sensitivity": "medium",
-    "notes": "Crude prevalence from CDC PLACES. Measures \u226514 poor mental health days in past 30 days. Self-reported via telephone survey."
+    "notes": "Crude prevalence from CDC PLACES. Measures ≥14 poor mental health days in past 30 days. Self-reported via telephone survey."
   },
   "hypertension": {
     "label": "Hypertension Rate",
@@ -133,11 +135,11 @@
     "label": "Unemployment Rate",
     "source": "Census ACS 5-Year, Table B23025",
     "source_url": "https://data.census.gov",
-    "data_year": "2018\u20132022",
+    "data_year": "2018–2022",
     "year_type": "range",
     "unit": "% of labor force unemployed",
     "maup_sensitivity": "low",
-    "notes": "ACS 5-year estimate (2018\u20132022 average). BLS Local Area Unemployment Statistics (which provide monthly point-in-time data) were unavailable due to automated access restrictions."
+    "notes": "ACS 5-year estimate (2018–2022 average). BLS Local Area Unemployment Statistics (which provide monthly point-in-time data) were unavailable due to automated access restrictions."
   },
   "rural_urban": {
     "label": "Rural/Urban Classification",
@@ -153,7 +155,7 @@
     "label": "Housing Burden",
     "source": "Census ACS 5-Year, Table B25070",
     "source_url": "https://data.census.gov",
-    "data_year": "2018\u20132022",
+    "data_year": "2018–2022",
     "year_type": "range",
     "unit": "% of renters paying 30%+ of income on rent",
     "maup_sensitivity": "medium",
