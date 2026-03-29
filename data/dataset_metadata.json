@@ -110,7 +110,7 @@
     "year_type": "range",
     "unit": "% of households receiving SNAP/food stamps",
     "maup_sensitivity": "low",
-    "notes": "SNAP (food stamp) participation rate from Census ACS B22010. Measures economic need and program enrollment, NOT physical proximity to grocery stores. The USDA Food Access Research Atlas (standard food desert measure) was unavailable at ingest time and remains inaccessible (URLs return 404 as of March 2026). SNAP participation correlates with food insecurity (r~0.7 with poverty) but is distinct from physical food access. A county can have good physical access but high SNAP rates (low income), or poor physical access but low SNAP rates (rural, less enrollment). Interpret as economic food insecurity proxy.",
+    "notes": "SNAP (food stamp) participation rate from Census ACS B22010. Measures economic need and program enrollment, NOT physical proximity to grocery stores. The USDA Food Access Research Atlas (standard food desert measure) was unavailable at ingest time and remains inaccessible (URLs return 404 as of March 2026). SNAP participation correlates with food insecurity (r~0.7 with poverty) but is distinct from physical food access. A county can have good physical access but high SNAP rates (low income), or poor physical access but low SNAP rates (rural, less enrollment). Interpret as economic food insecurity proxy. High empirical correlation with poverty rate (r=0.784) confirms this SNAP proxy is primarily measuring economic hardship rather than physical food access. The USDA Food Access Research Atlas would be a more independent measure. Flag for replacement.",
     "proxy_warning": "Proxy measure: SNAP participation rate, not physical food access",
     "higher_is_better": false,
     "data_type": "continuous",
@@ -227,7 +227,8 @@
     "higher_is_better": true,
     "data_type": "continuous",
     "maup_sensitivity": "low",
-    "notes": "Share of households with any internet subscription from ACS B28002. Includes broadband, dial-up, satellite, cellular. More inclusive than the existing broadband subscription rate (B28002_004E). FCC Form 477 county-level availability data was not used due to census-block granularity (millions of rows). This ACS measure captures internet adoption broadly, combining availability and affordability effects."
+    "notes": "Excluded from gravity model distance calculation due to r=0.993 collinearity with broadband (ACS B28002_004E). Both are from the same ACS table B28002 — broadband_avail uses B28002_002E (any internet, including dial-up) while broadband uses B28002_004E (broadband specifically). Including both would double-weight internet access relative to all other dimensions. Available for scatter plot exploration. Original source: Census ACS 5-Year B28002.",
+    "excluded_from_gravity": true
   },
   "pop_density": {
     "label": "Population Density",

@@ -22,7 +22,7 @@ DATASETS = {
     "hypertension": "hypertension_rate", "unemployment": "unemployment_rate",
     "rural_urban": "rural_urban_code", "housing_burden": "housing_burden_rate",
     "voter_turnout": "total_votes_2020",
-    "broadband_avail": "internet_access_rate",
+    # broadband_avail excluded: r=0.993 with broadband (same ACS B28002 table)
     "pop_density": "pop_density",
 }
 

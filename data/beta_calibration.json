@@ -1,18 +1,17 @@
 {
-  "beta_geo": 0.049118,
-  "beta_combined": 0.140373,
-  "beta_operative": 0.140373,
-  "r_squared_geo": 0.037924,
+  "beta_geo": 0.050423,
+  "beta_combined": 0.142157,
+  "beta_operative": 0.142157,
+  "r_squared_geo": 0.039063,
   "n_pairs": 249922,
-  "std_err": 0.000495,
-  "intercept": -0.061305,
+  "std_err": 0.0005,
+  "intercept": -0.057907,
   "p_value": 0.0,
   "normalization_type": "min-max (fallback, no pre-normalized columns in Supabase)",
   "datasets_used": [
     "air",
     "bea_income",
     "broadband",
-    "broadband_avail",
     "diabetes",
     "eitc",
     "food_access",
@@ -30,5 +29,5 @@
     "voter_turnout"
   ],
   "note": "beta_combined will be filled by run_gravity_pipeline.py after combined distance matrix is computed",
-  "r_squared_combined": 0.310427
+  "r_squared_combined": 0.313088
 }

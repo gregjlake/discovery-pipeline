@@ -840,7 +840,11 @@ def correlation_matrix():
     coll_count = sum(1 for p in high_pairs if p["type"] == "collinear")
     logger.info(f"Correlation matrix: {len(high_pairs)} high pairs ({taut_count} tautological, {coll_count} collinear)")
 
-    result = {"matrix": matrix, "high_pairs": high_pairs}
+    # Mark which datasets are in gravity model (18 active, broadband_avail excluded)
+    GRAVITY_EXCLUDED = {"broadband_avail"}
+    datasets_info = {ds: {"in_gravity_model": ds not in GRAVITY_EXCLUDED} for ds in ds_cols}
+
+    result = {"matrix": matrix, "high_pairs": high_pairs, "datasets": datasets_info}
     _corr_cache = result
     return JSONResponse(content=result, headers={"Cache-Control": "max-age=3600"})
 
