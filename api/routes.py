@@ -931,6 +931,12 @@ def correlation_stats(x: str, y: str):
 
     bonf = 0.05 / 171
     bonf_sig = bool(p < bonf)
+    # Bonferroni r threshold
+    t_thresh = sp_stats.t.ppf(1 - bonf / 2, df=n - 2)
+    r_bonf_threshold = float(t_thresh / np.sqrt(t_thresh ** 2 + n - 2))
+
+    # Effect color
+    effect_color = "gray" if abs_r < 0.1 else "yellow" if abs_r < 0.3 else "blue" if abs_r < 0.5 else "green"
 
     if p < 0.001:
         p_disp = "p<0.001"
@@ -957,8 +963,11 @@ def correlation_stats(x: str, y: str):
         "p_display": p_disp,
         "effect_size": effect,
         "practical_significance": practical,
+        "effect_color": effect_color,
         "bonferroni_significant": bonf_sig,
         "bonferroni_threshold": bonf,
+        "bonferroni_threshold_r": round(r_bonf_threshold, 4),
+        "n_comparisons": 171,
         "interpretation": interpretation,
         "direction": direction,
     }, headers={"Cache-Control": "max-age=3600"})

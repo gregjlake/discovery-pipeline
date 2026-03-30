@@ -9,3 +9,4 @@ pydantic==2.12.5
 anthropic==0.86.0
 pyarrow==23.0.1
 httpx==0.28.1
+scipy==1.15.3
