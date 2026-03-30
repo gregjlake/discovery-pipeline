@@ -964,32 +964,81 @@ def gravity_validation():
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
+# ── Gravity combinations ──────────────────────────────────────
+GRAVITY_COMBINATIONS = [
+    {"id": "all", "label": "All datasets (18)", "n_datasets": 18,
+     "description": "All 18 active datasets weighted equally. Primarily clusters by economic deprivation (PC1=41.8%). Best for: overall socioeconomic similarity.",
+     "datasets": list(DATASET_REGISTRY.keys()),
+     "cache_file": str(DATA_DIR / "gravity_map_cache.json")},
+    {"id": "economic", "label": "Economic conditions", "n_datasets": 6,
+     "description": "Clusters by poverty, income, economic mobility, and labor market. Isolates the dominant axis of American inequality.",
+     "datasets": ["poverty", "eitc", "median_income", "bea_income", "unemployment", "mobility"],
+     "cache_file": str(DATA_DIR / "gravity_cache_economic.json")},
+    {"id": "health", "label": "Health outcomes", "n_datasets": 4,
+     "description": "Clusters by chronic disease burden independent of economic conditions.",
+     "datasets": ["obesity", "diabetes", "hypertension", "mental_health"],
+     "cache_file": str(DATA_DIR / "gravity_cache_health.json")},
+    {"id": "infrastructure", "label": "Infrastructure & environment", "n_datasets": 4,
+     "description": "Clusters by access to services and environmental quality.",
+     "datasets": ["broadband", "library", "air", "food_access"],
+     "cache_file": str(DATA_DIR / "gravity_cache_infrastructure.json")},
+    {"id": "civic", "label": "Civic & demographic", "n_datasets": 4,
+     "description": "Clusters by political participation, urban character, and housing stress.",
+     "datasets": ["voter_turnout", "rural_urban", "pop_density", "housing_burden"],
+     "cache_file": str(DATA_DIR / "gravity_cache_civic.json")},
+]
+
+
+@router.get('/gravity-combinations')
+def gravity_combinations():
+    from fastapi.responses import JSONResponse
+    result = []
+    for c in GRAVITY_COMBINATIONS:
+        result.append({
+            "id": c["id"], "label": c["label"], "description": c["description"],
+            "n_datasets": c["n_datasets"], "datasets": c["datasets"],
+            "available": Path(c["cache_file"]).exists(),
+        })
+    return JSONResponse(content=result)
+
+
 # ── GET /gravity-map ──────────────────────────────────────────
-GRAVITY_CACHE = DATA_DIR / 'gravity_map_cache.json'
-_gravity_cache_data = None
-_gravity_cache_mtime = 0
+_gravity_caches = {}
 
 
-def _load_gravity_cache():
-    global _gravity_cache_data, _gravity_cache_mtime
-    if not GRAVITY_CACHE.exists():
+def _load_gravity_cache(combo_id="all"):
+    cache_file = None
+    for c in GRAVITY_COMBINATIONS:
+        if c["id"] == combo_id:
+            cache_file = c["cache_file"]
+            break
+    if cache_file is None or not Path(cache_file).exists():
         return None
-    mtime = GRAVITY_CACHE.stat().st_mtime
-    if _gravity_cache_data is None or mtime != _gravity_cache_mtime:
-        with open(GRAVITY_CACHE) as f:
-            _gravity_cache_data = json.load(f)
-        _gravity_cache_mtime = mtime
-    return _gravity_cache_data
+    # Check if cached in memory
+    mtime = Path(cache_file).stat().st_mtime
+    if combo_id in _gravity_caches and _gravity_caches[combo_id][1] == mtime:
+        return _gravity_caches[combo_id][0]
+    with open(cache_file) as f:
+        data = json.load(f)
+    # For non-all caches, merge nodes from main cache
+    if combo_id != "all" and "nodes" not in data:
+        main = _load_gravity_cache("all")
+        if main:
+            data["nodes"] = main["nodes"]
+            data["metadata"] = main.get("metadata", {})
+    _gravity_caches[combo_id] = (data, mtime)
+    return data
 
 
 @router.get('/gravity-map')
-def gravity_map():
+def gravity_map(combination: str = "all"):
     from fastapi.responses import JSONResponse
-    data = _load_gravity_cache()
+    data = _load_gravity_cache(combination)
     if data is None:
+        available = [c["id"] for c in GRAVITY_COMBINATIONS if Path(c["cache_file"]).exists()]
         return JSONResponse(
-            status_code=503,
-            content={"error": "Gravity map cache not built. Run data_pipeline/gravity/run_gravity_pipeline.py first."},
+            status_code=404 if combination != "all" else 503,
+            content={"error": f"Combination '{combination}' not found", "available": available},
         )
     return JSONResponse(
         content=data,
