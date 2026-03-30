@@ -863,6 +863,20 @@ def pca_analysis():
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
+# ── GET /gravity-terrain ──────────────────────────────────────
+TERRAIN_PATH = DATA_DIR / 'gravity_terrain.json'
+
+
+@router.get('/gravity-terrain')
+def gravity_terrain():
+    from fastapi.responses import JSONResponse
+    if not TERRAIN_PATH.exists():
+        return JSONResponse(status_code=503, content={"error": "Terrain data not built."})
+    with open(TERRAIN_PATH) as f:
+        data = json.load(f)
+    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
+
+
 # ── GET /correlation-stats ─────────────────────────────────────
 @router.get('/correlation-stats')
 def correlation_stats(x: str, y: str):
