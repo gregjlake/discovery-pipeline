@@ -849,6 +849,93 @@ def correlation_matrix():
     return JSONResponse(content=result, headers={"Cache-Control": "max-age=3600"})
 
 
+# ── GET /correlation-stats ─────────────────────────────────────
+@router.get('/correlation-stats')
+def correlation_stats(x: str, y: str):
+    from fastapi.responses import JSONResponse
+    from scipy import stats as sp_stats
+
+    if x not in DATASET_REGISTRY or y not in DATASET_REGISTRY:
+        raise HTTPException(400, f"Unknown dataset: {x if x not in DATASET_REGISTRY else y}")
+    if x == y:
+        raise HTTPException(400, "X and Y must be different datasets")
+
+    col_x = DATASET_REGISTRY[x][0]
+    col_y = DATASET_REGISTRY[y][0]
+
+    try:
+        df_x = _load_dataset(x)[['fips', col_x]].rename(columns={col_x: 'xv'})
+        df_y = _load_dataset(y)[['fips', col_y]].rename(columns={col_y: 'yv'})
+    except Exception as e:
+        raise HTTPException(503, str(e))
+
+    merged = df_x.merge(df_y, on='fips', how='inner').dropna(subset=['xv', 'yv'])
+    x_vals = merged['xv'].values.astype(float)
+    y_vals = merged['yv'].values.astype(float)
+    n = len(x_vals)
+
+    if n < 3:
+        raise HTTPException(400, "Too few data points")
+
+    r, p = sp_stats.pearsonr(x_vals, y_vals)
+    r_squared = r ** 2
+    variance_pct = round(r_squared * 100, 1)
+    t_stat = r * np.sqrt(n - 2) / np.sqrt(max(1 - r ** 2, 1e-10))
+
+    abs_r = abs(r)
+    if abs_r >= 0.5:
+        effect = "Strong"
+    elif abs_r >= 0.3:
+        effect = "Moderate"
+    elif abs_r >= 0.1:
+        effect = "Weak"
+    else:
+        effect = "Negligible"
+
+    if variance_pct >= 25:
+        practical = "Large — explains substantial county variance"
+    elif variance_pct >= 9:
+        practical = "Moderate — meaningful county-level pattern"
+    elif variance_pct >= 1:
+        practical = "Small — real but limited explanatory value"
+    else:
+        practical = "Negligible — statistically real but trivial"
+
+    bonf = 0.05 / 171
+    bonf_sig = bool(p < bonf)
+
+    if p < 0.001:
+        p_disp = "p<0.001"
+    elif p < 0.01:
+        p_disp = "p<0.01"
+    elif p < 0.05:
+        p_disp = "p<0.05"
+    else:
+        p_disp = f"p={p:.3f}"
+
+    direction = "positive" if r > 0 else "negative"
+    interpretation = (
+        f"{effect} {direction} correlation explaining "
+        f"{variance_pct}% of county-level variance. {practical}."
+    )
+
+    return JSONResponse(content={
+        "x": x, "y": y, "n": n,
+        "r": round(float(r), 4),
+        "r_squared": round(float(r_squared), 4),
+        "variance_explained_pct": variance_pct,
+        "t_stat": round(float(t_stat), 4),
+        "p_value": float(p),
+        "p_display": p_disp,
+        "effect_size": effect,
+        "practical_significance": practical,
+        "bonferroni_significant": bonf_sig,
+        "bonferroni_threshold": bonf,
+        "interpretation": interpretation,
+        "direction": direction,
+    }, headers={"Cache-Control": "max-age=3600"})
+
+
 # ── GET /gravity-map/validation ────────────────────────────────
 VALIDATION_PATH = DATA_DIR / 'validation_results.json'
 
