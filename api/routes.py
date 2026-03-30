@@ -849,6 +849,20 @@ def correlation_matrix():
     return JSONResponse(content=result, headers={"Cache-Control": "max-age=3600"})
 
 
+# ── GET /pca-analysis ─────────────────────────────────────────
+PCA_PATH = DATA_DIR / 'pca_results.json'
+
+
+@router.get('/pca-analysis')
+def pca_analysis():
+    from fastapi.responses import JSONResponse
+    if not PCA_PATH.exists():
+        return JSONResponse(status_code=503, content={"error": "pca_results.json not found"})
+    with open(PCA_PATH) as f:
+        data = json.load(f)
+    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
+
+
 # ── GET /correlation-stats ─────────────────────────────────────
 @router.get('/correlation-stats')
 def correlation_stats(x: str, y: str):
