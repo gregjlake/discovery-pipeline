@@ -986,6 +986,10 @@ GRAVITY_COMBINATIONS = [
      "description": "Clusters by political participation, urban character, and housing stress.",
      "datasets": ["voter_turnout", "rural_urban", "pop_density", "housing_burden"],
      "cache_file": str(DATA_DIR / "gravity_cache_civic.json")},
+    {"id": "pca", "label": "PCA balanced (7 axes)", "n_datasets": 7,
+     "description": "Equal weight to each independent axis of county variation (7 PCA components, 80% of variance). Economic deprivation drops from 41.8% to 14.3% influence. Best for: finding counties similar across ALL dimensions equally.",
+     "datasets": list(DATASET_REGISTRY.keys()),
+     "cache_file": str(DATA_DIR / "gravity_cache_pca.json")},
 ]
 
 
