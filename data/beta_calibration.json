@@ -1,11 +1,11 @@
 {
-  "beta_geo": 0.050423,
-  "beta_combined": 0.142157,
-  "beta_operative": 0.142157,
-  "r_squared_geo": 0.039063,
+  "beta_geo": 0.054964,
+  "beta_combined": 0.154985,
+  "beta_operative": 0.154985,
+  "r_squared_geo": 0.038172,
   "n_pairs": 249922,
-  "std_err": 0.0005,
-  "intercept": -0.057907,
+  "std_err": 0.000552,
+  "intercept": -0.063409,
   "p_value": 0.0,
   "normalization_type": "min-max (fallback, no pre-normalized columns in Supabase)",
   "datasets_used": [
@@ -20,7 +20,6 @@
     "library",
     "median_income",
     "mental_health",
-    "mobility",
     "obesity",
     "pop_density",
     "poverty",
@@ -29,5 +28,5 @@
     "voter_turnout"
   ],
   "note": "beta_combined will be filled by run_gravity_pipeline.py after combined distance matrix is computed",
-  "r_squared_combined": 0.313088
+  "r_squared_combined": 0.313012
 }

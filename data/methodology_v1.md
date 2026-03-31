@@ -2,7 +2,7 @@
 ## Version 1.0 -- 2026-03-31
 
 ### Overview
-DiscoSights is a spatial interaction model for exploring socioeconomic similarity among US counties. It applies a gravity model analogy: counties with similar profiles across 18 socioeconomic datasets and smaller geographic distance exert stronger "gravitational attraction" toward each other.
+DiscoSights is a spatial interaction model for exploring socioeconomic similarity among US counties. It applies a gravity model analogy: counties with similar profiles across 17 socioeconomic datasets and smaller geographic distance exert stronger "gravitational attraction" toward each other.
 
 ### Data Sources
 | Dataset | Label | Source | Data Year | Unit | MAUP Sensitivity |
@@ -12,13 +12,12 @@ DiscoSights is a spatial interaction model for exploring socioeconomic similarit
 | broadband | Broadband Subscription Rate | Census ACS 5-Year, Table B28002 | 2018â€“2022 | household broadband subscription rate | low [proxy] |
 | diabetes | Diabetes Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with diagnosed diabetes | medium [diagnosis bias] |
 | eitc | EITC Uptake | IRS Statistics of Income | Tax Year 2022 | EITC returns / total returns filed | medium |
-| food_access | SNAP Participation Rate | Census ACS 5-Year, Table B22010 (SNAP proxy â€” not USDA Food Access Atlas) | 2018â€“2022 | % of households receiving SNAP/food stamps | low [proxy] |
+| food_access | Low Food Access | USDA Economic Research Service Food Access Research Atlas 2019 | 2019 | % population with low food access | low |
 | housing_burden | Housing Burden | Census ACS 5-Year, Table B25070 | 2018â€“2022 | % of renters paying 30%+ of income on rent | medium |
 | hypertension | Hypertension Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with high blood pressure | medium [diagnosis bias] |
 | library | Library Access | IMLS Public Libraries Survey | FY 2022 | $/capita operating expenditure | low |
 | median_income | Median Income | Census SAIPE | 2022 | median household income ($) | low |
 | mental_health | Mental Health | CDC PLACES (BRFSS-based) | 2022 | % of adults with frequent mental distress | medium [diagnosis bias] |
-| mobility | Economic Mobility | Opportunity Atlas (Chetty et al.) | 1978â€“2015 | mean household income rank at age 35 (percentile) | medium |
 | obesity | Obesity Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with BMI â‰¥ 30 | medium |
 | pop_density | Population Density | Census ACS 2022 population + Census Gazetteer land area | 2022 | people per square mile | low |
 | poverty | Poverty Rate | Census SAIPE (Small Area Income and Poverty Estimates) | 2022 | % of population below poverty line | low |
@@ -34,35 +33,35 @@ Force(i,j) = Pop(i) x Pop(j) / dist(i,j)^beta
 ```
 
 where:
-- beta = 0.142157 (empirically calibrated)
+- beta = 0.154985 (empirically calibrated)
 - dist(i,j) = geo_norm(i,j) x data_dissimilarity(i,j)
 - geo_norm = Haversine distance / max US distance (5,251 mi)
-- data_dissimilarity = normalized Euclidean distance across 18 datasets
+- data_dissimilarity = normalized Euclidean distance across 17 datasets
 
 ### beta Calibration
 Two-pass calibration procedure:
 
 **Pass 1 (geographic only):**
-- beta_geo = 0.050423
-- R-squared = 0.039063
+- beta_geo = 0.054964
+- R-squared = 0.038172
 - Method: OLS log-linear regression of socioeconomic similarity on geographic distance across 249,922 randomly sampled county pairs
 
 **Pass 2 (combined distance):**
-- beta_operative = 0.142157
-- R-squared = 0.313088
+- beta_operative = 0.154985
+- R-squared = 0.313012
 - Method: Same regression using combined distance (geo x data dissimilarity)
 
-The 8x improvement in R-squared from pass 1 to pass 2 (0.0391 -> 0.3131) confirms that socioeconomic distance adds predictive power beyond geography alone.
+The 8x improvement in R-squared from pass 1 to pass 2 (0.0382 -> 0.3130) confirms that socioeconomic distance adds predictive power beyond geography alone.
 
 ### Out-of-Sample Validation
 The model was validated against IRS Statistics of Income county-to-county migration flows (tax year 2019-2020, 51,445 county pairs). This data was not used in model calibration.
 
 Spearman rho (predicted force vs observed migration):
 - Population only:     0.0405
-- + Geographic dist:   0.0515
-- + Data similarity:   0.1630
+- + Geographic dist:   0.0525
+- + Data similarity:   0.1650
 
-Adding socioeconomic similarity improved migration prediction by +0.112 rho over geography alone -- validating the model's core premise that data similarity carries predictive information beyond physical proximity.
+Adding socioeconomic similarity improved migration prediction by +0.113 rho over geography alone -- validating the model's core premise that data similarity carries predictive information beyond physical proximity.
 
 ### Weighting Robustness Analysis
 Three weighting schemes were tested against IRS migration:
@@ -78,7 +77,7 @@ Maximum difference: 0.0009 rho
 All schemes produce equivalent predictions and identical county peer-finding results. The model is robust to weighting choice.
 
 ### Dataset Structure
-PCA analysis of the 18 active datasets:
+PCA analysis of the 17 active datasets:
 - Effective dimensions: 4.65 / 18
 - Components for 80% variance: 7
 - Components for 90% variance: 10
@@ -122,13 +121,13 @@ Note: Low effective dimensions reflect genuine structure in US county data -- ec
 
 1. **Ecological fallacy:** All analysis is at the county (FIPS) level. Correlations describe county averages, not individual-level relationships.
 
-2. **Temporal inconsistency:** Datasets span 1978 to 2023. The Opportunity Atlas mobility data reflects 1978-2015 historical conditions. Cross-dataset correlations involving datasets from different eras should be interpreted with caution.
+2. **Temporal inconsistency:** Datasets span 2018 to 2023. The Opportunity Atlas mobility data reflects 1978-2015 historical conditions. Cross-dataset correlations involving datasets from different eras should be interpreted with caution.
 
 3. **Modifiable Areal Unit Problem (MAUP):** Results would differ at census tract or ZIP code level. Datasets rated High MAUP sensitivity (poverty, income, health outcomes) show particularly large within-county variation in urban areas.
 
 4. **Diagnosis bias:** Health outcome datasets (diabetes, hypertension, mental health) measure diagnosed prevalence. Areas with limited healthcare access show lower measured rates even if true prevalence is identical or higher.
 
-5. **Equal weighting assumption:** All 18 datasets contribute equally to socioeconomic distance. Weighting robustness analysis confirms this does not affect findings, but researchers with domain-specific questions may prefer the filter chip views.
+5. **Equal weighting assumption:** All 17 datasets contribute equally to socioeconomic distance. Weighting robustness analysis confirms this does not affect findings, but researchers with domain-specific questions may prefer the filter chip views.
 
 6. **Non-migration validation:** The IRS migration validation tests whether the model predicts human movement, which is related but not identical to socioeconomic similarity. The model is optimized for similarity discovery, not migration prediction.
 

@@ -19,9 +19,10 @@
     "year_type": "historical",
     "unit": "mean household income rank at age 35 (percentile)",
     "maup_sensitivity": "medium",
-    "notes": "Tracks income outcomes of children born 1978–1983, measured at age ~35 (through 2015). Reflects historical structural conditions, not current mobility. Significant temporal mismatch when compared to 2022 datasets. Based on linked Census–IRS administrative records.",
+    "notes": "Excluded from gravity model distance calculation due to temporal mismatch — reflects outcomes of children born 1978-1983 (measured through 2015). Using alongside 2022 current-conditions datasets would conflate different eras of American economic geography. Available for scatter plot exploration as a historical structural indicator.",
     "higher_is_better": true,
-    "data_type": "continuous"
+    "data_type": "continuous",
+    "excluded_from_gravity": true
   },
   "air": {
     "label": "Air Quality",
@@ -103,18 +104,17 @@
     "direction_note": "Nominal dollars, not cost-of-living adjusted"
   },
   "food_access": {
-    "label": "SNAP Participation Rate",
-    "source": "Census ACS 5-Year, Table B22010 (SNAP proxy — not USDA Food Access Atlas)",
-    "source_url": "https://data.census.gov",
-    "data_year": "2018–2022",
-    "year_type": "range",
-    "unit": "% of households receiving SNAP/food stamps",
+    "label": "Low Food Access",
+    "source": "USDA Economic Research Service Food Access Research Atlas 2019",
+    "source_url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/",
+    "data_year": "2019",
+    "year_type": "precise",
+    "unit": "% population with low food access",
     "maup_sensitivity": "low",
-    "notes": "SNAP (food stamp) participation rate from Census ACS B22010. Measures economic need and program enrollment, NOT physical proximity to grocery stores. The USDA Food Access Research Atlas (standard food desert measure) was unavailable at ingest time and remains inaccessible (URLs return 404 as of March 2026). SNAP participation correlates with food insecurity (r~0.7 with poverty) but is distinct from physical food access. A county can have good physical access but high SNAP rates (low income), or poor physical access but low SNAP rates (rural, less enrollment). Interpret as economic food insecurity proxy. High empirical correlation with poverty rate (r=0.784) confirms this SNAP proxy is primarily measuring economic hardship rather than physical food access. The USDA Food Access Research Atlas would be a more independent measure. Flag for replacement.",
-    "proxy_warning": "Proxy measure: SNAP participation rate, not physical food access",
+    "notes": "Physical proximity to grocery stores. Defined as living >1 mile (urban) or >10 miles (rural) from a supermarket. Measures geographic access, not affordability. 2019 Atlas — pre-pandemic baseline. County values aggregated from census tract-level data using population weighting.",
     "higher_is_better": false,
     "data_type": "continuous",
-    "direction_note": "Higher SNAP rate = more food insecurity. Not a direct measure of physical food access."
+    "direction_note": "Higher = more population lives far from a supermarket — worse food access"
   },
   "obesity": {
     "label": "Obesity Rate",

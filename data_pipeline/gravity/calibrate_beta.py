@@ -15,14 +15,14 @@ DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 # The 17 datasets and their primary value columns
 DATASETS = {
     "library":        "library_spend_per_capita",
-    "mobility":       "mobility_rank_p25",
+    # mobility excluded: temporal mismatch (1978-2015 vs 2022 datasets)
     "air":            "air_quality_inv",
     "broadband":      "broadband_rate",
     "eitc":           "eitc_rate",
     "poverty":        "poverty_rate",
     "median_income":  "median_hh_income",
     "bea_income":     "per_capita_income",
-    "food_access":    "snap_rate",
+    "food_access":    "pct_low_food_access",
     "obesity":        "obesity_rate",
     "diabetes":       "diabetes_rate",
     "mental_health":  "mental_health_rate",
