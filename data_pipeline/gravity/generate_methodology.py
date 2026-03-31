@@ -8,6 +8,11 @@ with open('data/validation_results.json') as f:
     val = json.load(f)
 with open('data/weighting_comparison.json') as f:
     wc = json.load(f)
+try:
+    with open('data/peer_stability_analysis.json') as f:
+        ps = json.load(f)
+except FileNotFoundError:
+    ps = None
 with open('data/pca_results.json') as f:
     pca = json.load(f)
 with open('data/dataset_metadata.json') as f:
@@ -132,7 +137,23 @@ Three weighting schemes were tested against IRS migration:
 
 Maximum difference: {max_diff:.4f} rho
 
-All schemes produce equivalent predictions and identical county peer-finding results. The model is robust to weighting choice.
+All schemes produce equivalent aggregate predictions. The model is robust to weighting choice at the IRS migration level.
+
+### Peer Stability Analysis
+{f"""Peer-level stability was tested for 5 median-profile counties (P45-P55) across the three weighting schemes:
+
+- Equal vs Domain balanced: mean Jaccard similarity = {ps['mean_jaccard_equal_vs_domain']:.3f} (91% top-10 peer overlap)
+- Equal vs PCA 7 components: mean Jaccard similarity = {ps['mean_jaccard_equal_vs_pca7']:.3f} (9% overlap)
+
+Domain-balanced weighting preserves peer rankings. Reducing to 7 datasets produces substantially different peer lists. The 7-dataset view should be understood as a different analytical lens, not a cleaner version of the full model.""" if ps else "Peer stability analysis not yet run."}
+
+### External Validation -- FEMA Disaster Risk
+FEMA National Risk Index (2023) scores for 9 natural hazard variables were compared against the 17 socioeconomic datasets:
+
+- Overall disaster risk x poverty: r = 0.151 (weak -- largely independent)
+- Social vulnerability x poverty: r = 0.515 (moderate)
+
+Disaster risk adds a genuinely independent dimension to county analysis. Two counties can be socioeconomic peers while facing completely different natural hazard futures. FEMA disaster variables are available in the scatter plot but excluded from the gravity model to avoid conflating geographic hazard exposure with socioeconomic structure.
 
 ### Dataset Structure
 PCA analysis of the {len(datasets_used)} active datasets:

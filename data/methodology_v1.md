@@ -74,7 +74,23 @@ Three weighting schemes were tested against IRS migration:
 
 Maximum difference: 0.0009 rho
 
-All schemes produce equivalent predictions and identical county peer-finding results. The model is robust to weighting choice.
+All schemes produce equivalent aggregate predictions. The model is robust to weighting choice at the IRS migration level.
+
+### Peer Stability Analysis
+Peer-level stability was tested for 5 median-profile counties (P45-P55) across the three weighting schemes:
+
+- Equal vs Domain balanced: mean Jaccard similarity = 0.891 (91% top-10 peer overlap)
+- Equal vs PCA 7 components: mean Jaccard similarity = 0.090 (9% overlap)
+
+Domain-balanced weighting preserves peer rankings. Reducing to 7 datasets produces substantially different peer lists. The 7-dataset view should be understood as a different analytical lens, not a cleaner version of the full model.
+
+### External Validation -- FEMA Disaster Risk
+FEMA National Risk Index (2023) scores for 9 natural hazard variables were compared against the 17 socioeconomic datasets:
+
+- Overall disaster risk x poverty: r = 0.151 (weak -- largely independent)
+- Social vulnerability x poverty: r = 0.515 (moderate)
+
+Disaster risk adds a genuinely independent dimension to county analysis. Two counties can be socioeconomic peers while facing completely different natural hazard futures. FEMA disaster variables are available in the scatter plot but excluded from the gravity model to avoid conflating geographic hazard exposure with socioeconomic structure.
 
 ### Dataset Structure
 PCA analysis of the 17 active datasets:
