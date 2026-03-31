@@ -1,0 +1,88 @@
+{
+  "boundary_counties": [
+    {
+      "fips": "26115",
+      "name": "Monroe",
+      "region": "Midwest",
+      "type": "Typical",
+      "percentile": 50.0,
+      "jaccard_equal_vs_domain": 0.818,
+      "jaccard_equal_vs_pca7": 0.0,
+      "top1_stable": false,
+      "top3_stable": false
+    },
+    {
+      "fips": "13207",
+      "name": "Monroe",
+      "region": "South",
+      "type": "Typical",
+      "percentile": 50.0,
+      "jaccard_equal_vs_domain": 0.818,
+      "jaccard_equal_vs_pca7": 0.111,
+      "top1_stable": false,
+      "top3_stable": false
+    },
+    {
+      "fips": "23007",
+      "name": "Franklin",
+      "region": "Northeast",
+      "type": "Typical",
+      "percentile": 49.9,
+      "jaccard_equal_vs_domain": 1.0,
+      "jaccard_equal_vs_pca7": 0.176,
+      "top1_stable": false,
+      "top3_stable": false
+    },
+    {
+      "fips": "35039",
+      "name": "Rio Arriba",
+      "region": "West",
+      "type": "Typical",
+      "percentile": 50.0,
+      "jaccard_equal_vs_domain": 0.818,
+      "jaccard_equal_vs_pca7": 0.053,
+      "top1_stable": false,
+      "top3_stable": false
+    },
+    {
+      "fips": "21181",
+      "name": "Nicholas",
+      "region": "South",
+      "type": "Typical",
+      "percentile": 50.0,
+      "jaccard_equal_vs_domain": 1.0,
+      "jaccard_equal_vs_pca7": 0.111,
+      "top1_stable": false,
+      "top3_stable": false
+    }
+  ],
+  "extreme_counties": [
+    {
+      "fips": "54047",
+      "name": "McDowell",
+      "region": "South",
+      "type": "Extreme",
+      "percentile": 99.2,
+      "jaccard_equal_vs_domain": 1.0,
+      "jaccard_equal_vs_pca7": 0.176,
+      "top1_stable": false,
+      "top3_stable": false
+    },
+    {
+      "fips": "06085",
+      "name": "Santa Clara",
+      "region": "West",
+      "type": "Extreme",
+      "percentile": 11.1,
+      "jaccard_equal_vs_domain": 0.818,
+      "jaccard_equal_vs_pca7": 0.429,
+      "top1_stable": false,
+      "top3_stable": false
+    }
+  ],
+  "mean_jaccard_equal_vs_domain": 0.891,
+  "mean_jaccard_equal_vs_pca7": 0.09,
+  "top1_stable_count": 0,
+  "verdict": "unstable",
+  "verdict_text": "WEIGHTING SENSITIVE: Peer discovery for typical counties depends meaningfully on weighting choice. This must be disclosed prominently. The robustness claim should be qualified to extreme counties only."
+}

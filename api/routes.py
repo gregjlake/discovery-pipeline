@@ -48,7 +48,7 @@ DATASET_REGISTRY = {
     'poverty':        ('poverty_rate',             'Poverty rate (%)'),
     'median_income':  ('median_hh_income',         'Median household income ($)'),
     'bea_income':     ('per_capita_income',        'ACS per capita income ($/year)'),
-    'food_access':    ('snap_rate',                'SNAP participation rate (proxy)'),
+    'food_access':    ('pct_low_food_access',      'Low food access (% pop >1mi urban / >10mi rural)'),
     'obesity':        ('obesity_rate',             'Adult obesity prevalence (%)'),
     'diabetes':       ('diabetes_rate',            'Adult diabetes prevalence (%)'),
     'mental_health':  ('mental_health_rate',       'Poor mental health days (%)'),
@@ -59,6 +59,16 @@ DATASET_REGISTRY = {
     'voter_turnout':  ('total_votes_2020',         'Total votes cast 2020 presidential'),
     'broadband_avail': ('internet_access_rate',     'Internet access rate (any type)'),
     'pop_density':    ('pop_density',               'Population density (people/sq mi)'),
+    # FEMA National Risk Index (scatter only — excluded from gravity)
+    'overall_disaster_risk': ('risk_score',              'FEMA overall disaster risk score'),
+    'wildfire_risk':         ('wildfire_risk_score',     'FEMA wildfire risk score'),
+    'coastal_flood_risk':    ('coastal_flood_risk_score','FEMA coastal flood risk score'),
+    'riverine_flood_risk':   ('riverine_flood_risk_score','FEMA riverine flood risk score'),
+    'hurricane_risk':        ('hurricane_risk_score',    'FEMA hurricane risk score'),
+    'tornado_risk':          ('tornado_risk_score',      'FEMA tornado risk score'),
+    'earthquake_risk':       ('earthquake_risk_score',   'FEMA earthquake risk score'),
+    'social_vulnerability':  ('social_vulnerability_score','FEMA social vulnerability score'),
+    'community_resilience':  ('community_resilience_score','FEMA community resilience score'),
 }
 
 
