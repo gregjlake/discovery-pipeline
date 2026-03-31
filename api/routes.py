@@ -849,6 +849,20 @@ def correlation_matrix():
     return JSONResponse(content=result, headers={"Cache-Control": "max-age=3600"})
 
 
+# ── GET /methodology ──────────────────────────────────────────
+METHODOLOGY_PATH = DATA_DIR / 'methodology_v1.md'
+
+
+@router.get('/methodology')
+def methodology():
+    from fastapi.responses import PlainTextResponse
+    if not METHODOLOGY_PATH.exists():
+        return PlainTextResponse(status_code=503, content="methodology_v1.md not found. Run generate_methodology.py first.")
+    with open(METHODOLOGY_PATH, encoding='utf-8') as f:
+        content = f.read()
+    return PlainTextResponse(content=content, media_type="text/markdown", headers={"Cache-Control": "max-age=3600"})
+
+
 # ── GET /pca-analysis ─────────────────────────────────────────
 PCA_PATH = DATA_DIR / 'pca_results.json'
 
