@@ -147,6 +147,10 @@ Note: Low effective dimensions reflect genuine structure in US county data -- ec
 
 6. **Non-migration validation:** The IRS migration validation tests whether the model predicts human movement, which is related but not identical to socioeconomic similarity. The model is optimized for similarity discovery, not migration prediction.
 
+7. **Peer stability:** Peer discovery is robust for the full 17-dataset model (domain-balanced Jaccard = 0.891). Reducing to 7 datasets produces different peer lists (Jaccard = 0.090) -- this is a different analytical question, not a robustness check.
+
+8. **Small county uncertainty:** 123 counties (population < 5,000 or ACS coefficient of variation > 30%) have unreliable Census estimates. These are flagged in the UI with a warning badge and can be filtered from scatter plot analysis. The gravity model includes all counties but researchers should treat flagged county findings with additional caution.
+
 ### Reproducibility
 - Layout algorithm: Fruchterman-Reingold (NetworkX spring_layout, seed=42, 300 iterations)
 - All users see identical county positions
