@@ -18,11 +18,12 @@ if hasattr(sys.stdout, "reconfigure"):
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 
 ALL_DATASETS = {
-    "library": "library_spend_per_capita", "mobility": "mobility_rank_p25",
+    "library": "library_spend_per_capita",
+    # mobility excluded: temporal mismatch (1978-2015 vs 2022)
     "air": "air_quality_inv", "broadband": "broadband_rate",
     "eitc": "eitc_rate", "poverty": "poverty_rate",
     "median_income": "median_hh_income", "bea_income": "per_capita_income",
-    "food_access": "snap_rate", "obesity": "obesity_rate",
+    "food_access": "pct_low_food_access", "obesity": "obesity_rate",
     "diabetes": "diabetes_rate", "mental_health": "mental_health_rate",
     "hypertension": "hypertension_rate", "unemployment": "unemployment_rate",
     "rural_urban": "rural_urban_code", "housing_burden": "housing_burden_rate",
@@ -134,6 +135,42 @@ def main():
     potential_log = np.log1p(potential_norm * 10) / np.log1p(10)
     print(f"Log range: [{potential_log.min():.4f}, {potential_log.max():.4f}]")
 
+    # Compute mean PC1 and PC2 per grid cell for representational color
+    pc1_grid = np.zeros((GRID, GRID))
+    pc2_grid = np.zeros((GRID, GRID))
+    pc1_vals = coords_2d[:, 0]
+    pc2_vals = coords_2d[:, 1]
+
+    # Map each county to its grid cell
+    col_idx = np.clip(((pc1_vals - x_min) / (x_max - x_min) * (GRID - 1)).astype(int), 0, GRID - 1)
+    row_idx = np.clip(((pc2_vals - y_min) / (y_max - y_min) * (GRID - 1)).astype(int), 0, GRID - 1)
+
+    cell_pc1_sum = np.zeros((GRID, GRID))
+    cell_pc2_sum = np.zeros((GRID, GRID))
+    cell_count = np.zeros((GRID, GRID))
+    for k in range(len(fips_list)):
+        r, c = row_idx[k], col_idx[k]
+        cell_pc1_sum[r, c] += pc1_vals[k]
+        cell_pc2_sum[r, c] += pc2_vals[k]
+        cell_count[r, c] += 1
+
+    # For cells with counties: use mean
+    mask = cell_count > 0
+    pc1_grid[mask] = cell_pc1_sum[mask] / cell_count[mask]
+    pc2_grid[mask] = cell_pc2_sum[mask] / cell_count[mask]
+    # For empty cells: use implied PC value from grid position
+    for ri in range(GRID):
+        for ci in range(GRID):
+            if cell_count[ri, ci] == 0:
+                pc1_grid[ri, ci] = x_min + (ci / (GRID - 1)) * (x_max - x_min)
+                pc2_grid[ri, ci] = y_min + (ri / (GRID - 1)) * (y_max - y_min)
+
+    pc1_range = [float(pc1_vals.min()), float(pc1_vals.max())]
+    pc2_range = [float(pc2_vals.min()), float(pc2_vals.max())]
+    print(f"PC1 range: [{pc1_range[0]:.2f}, {pc1_range[1]:.2f}]")
+    print(f"PC2 range: [{pc2_range[0]:.2f}, {pc2_range[1]:.2f}]")
+    print(f"Sample cell (40,40): potential={potential_log[40,40]:.4f}, pc1={pc1_grid[40,40]:.3f}, pc2={pc2_grid[40,40]:.3f}")
+
     # Find wells
     local_max = (potential_log == maximum_filter(potential_log, size=8))
     maxima = sorted(
@@ -152,8 +189,17 @@ def main():
         "x_grid": x_grid.tolist(),
         "y_grid": y_grid.tolist(),
         "potential": potential_log.tolist(),
+        "pc1_grid": pc1_grid.tolist(),
+        "pc2_grid": pc2_grid.tolist(),
+        "pc1_range": pc1_range,
+        "pc2_range": pc2_range,
         "pc1_label": f"Economic Deprivation (PC1, {pca.explained_variance_ratio_[0]*100:.1f}%)",
         "pc2_label": f"Urbanization (PC2, {pca.explained_variance_ratio_[1]*100:.1f}%)",
+        "color_encoding": {
+            "hue": "PC1 economic character - blue=prosperous, amber=disadvantaged",
+            "brightness": "PC2 urbanization - bright=urban, dim=rural",
+            "height": "County density - tall=many similar counties"
+        },
         "beta": float(beta),
         "n_counties": len(fips_list),
         "county_positions": county_positions,
