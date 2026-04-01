@@ -1177,18 +1177,13 @@ def admin_invalidate_cache(filename: str = None):
 
 # ── POST /admin/run-pipeline ─────────────────────────────────
 @router.post('/admin/run-pipeline')
-def admin_run_pipeline(request=None, body: dict = None):
-    from fastapi import Request
+def admin_run_pipeline(body: dict = None):
     from fastapi.responses import JSONResponse
-    from supabase import create_client
-
     steps = body.get('steps') if body else None
-
+    client = _get_supabase()
+    if not client:
+        return JSONResponse(status_code=503, content={"error": "Supabase not configured"})
     try:
-        client = create_client(
-            os.environ.get('SUPABASE_URL', ''),
-            os.environ.get('SUPABASE_SERVICE_KEY', '')
-        )
         result = client.table('pipeline_jobs').insert({
             'status': 'pending',
             'steps': steps,
@@ -1209,12 +1204,10 @@ def admin_run_pipeline(request=None, body: dict = None):
 @router.get('/admin/job-status/{job_id}')
 def admin_job_status(job_id: int):
     from fastapi.responses import JSONResponse
-    from supabase import create_client
+    client = _get_supabase()
+    if not client:
+        return JSONResponse(status_code=503, content={"error": "Supabase not configured"})
     try:
-        client = create_client(
-            os.environ.get('SUPABASE_URL', ''),
-            os.environ.get('SUPABASE_SERVICE_KEY', '')
-        )
         result = client.table('pipeline_jobs').select('*').eq('id', job_id).execute()
         if not result.data:
             return JSONResponse(status_code=404, content={"error": "Job not found"})
@@ -1227,12 +1220,10 @@ def admin_job_status(job_id: int):
 @router.get('/admin/recent-jobs')
 def admin_recent_jobs():
     from fastapi.responses import JSONResponse
-    from supabase import create_client
+    client = _get_supabase()
+    if not client:
+        return JSONResponse(content=[])
     try:
-        client = create_client(
-            os.environ.get('SUPABASE_URL', ''),
-            os.environ.get('SUPABASE_SERVICE_KEY', '')
-        )
         result = client.table('pipeline_jobs').select('*').order('created_at', desc=True).limit(10).execute()
         return JSONResponse(content=result.data)
     except Exception as e:
