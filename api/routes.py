@@ -117,8 +117,12 @@ DATASET_REGISTRY = {
 def _get_supabase():
     """Return Supabase client or None."""
     url = os.environ.get('SUPABASE_URL')
-    key = os.environ.get('SUPABASE_SERVICE_KEY') or os.environ.get('SUPABASE_KEY')
+    key = os.environ.get('SUPABASE_SERVICE_KEY') or os.environ.get('SUPABASE_KEY') or os.environ.get('SUPABASE_ANON_KEY')
     if not url or not key:
+        logger.warning(f"Supabase not configured: URL={'set' if url else 'missing'}, "
+                       f"SERVICE_KEY={'set' if os.environ.get('SUPABASE_SERVICE_KEY') else 'missing'}, "
+                       f"KEY={'set' if os.environ.get('SUPABASE_KEY') else 'missing'}, "
+                       f"ANON_KEY={'set' if os.environ.get('SUPABASE_ANON_KEY') else 'missing'}")
         return None
     try:
         from supabase import create_client
@@ -1164,6 +1168,22 @@ def _check_admin(request):
     from fastapi import Request
     provided = request.headers.get('X-Admin-Key', '')
     return provided == admin_key
+
+
+# ── GET /admin/health ─────────────────────────────────────────
+@router.get('/admin/health')
+def admin_health():
+    from fastapi.responses import JSONResponse
+    sb_vars = {v: bool(os.environ.get(v)) for v in [
+        'SUPABASE_URL', 'SUPABASE_SERVICE_KEY', 'SUPABASE_KEY',
+        'SUPABASE_ANON_KEY', 'ADMIN_KEY', 'DATABASE_URL'
+    ]}
+    client = _get_supabase()
+    return JSONResponse(content={
+        "env_vars": sb_vars,
+        "supabase_client": "available" if client else "unavailable",
+        "storage_base": STORAGE_BASE[:50] + "..." if STORAGE_BASE else "not set",
+    })
 
 
 # ── POST /admin/invalidate-cache ─────────────────────────────
