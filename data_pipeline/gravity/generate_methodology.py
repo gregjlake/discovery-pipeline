@@ -206,6 +206,13 @@ with open('data/methodology_v1.md', 'w', encoding='utf-8') as f:
     f.write(doc)
 
 print(f"Generated data/methodology_v1.md ({len(doc)} chars)")
+
+try:
+    from data_pipeline.utils.storage import upload_to_storage
+    upload_to_storage('data/methodology_v1.md')
+except Exception as e:
+    print(f"  Storage upload skipped: {e}")
+
 # Print first 50 lines
 for i, line in enumerate(doc.split('\n')[:50]):
     print(line)

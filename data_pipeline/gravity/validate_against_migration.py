@@ -315,6 +315,12 @@ def main():
     print("=" * 60)
     print(json.dumps(result, indent=2))
 
+    try:
+        from data_pipeline.utils.storage import upload_to_storage
+        upload_to_storage(str(DATA_DIR / "validation_results.json"))
+    except Exception as e:
+        print(f"  Storage upload skipped: {e}")
+
 
 if __name__ == "__main__":
     main()

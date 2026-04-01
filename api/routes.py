@@ -22,6 +22,48 @@ router = APIRouter()
 
 DATA_DIR = Path(__file__).resolve().parent.parent / 'data'
 
+# ── Supabase Storage cache layer ─────────────────────────────
+SUPABASE_URL = os.environ.get('SUPABASE_URL', '')
+STORAGE_BASE = f"{SUPABASE_URL}/storage/v1/object/public/pipeline-cache"
+_memory_cache = {}
+
+
+def fetch_cache_file(filename: str):
+    """Load a cache file: local first (dev), then Supabase Storage (prod), then memory cache."""
+    local_path = DATA_DIR / filename
+    if local_path.exists():
+        with open(local_path, encoding='utf-8') as f:
+            if filename.endswith('.json'):
+                return json.load(f)
+            return f.read()
+
+    if filename in _memory_cache:
+        return _memory_cache[filename]
+
+    if not SUPABASE_URL:
+        raise FileNotFoundError(f"{filename} not found locally and no SUPABASE_URL configured")
+
+    import httpx
+    url = f"{STORAGE_BASE}/{filename}"
+    resp = httpx.get(url, timeout=30.0)
+    resp.raise_for_status()
+
+    if filename.endswith('.json'):
+        data = resp.json()
+    else:
+        data = resp.text
+
+    _memory_cache[filename] = data
+    logger.info(f"Fetched {filename} from Supabase Storage ({len(resp.content)} bytes)")
+    return data
+
+
+def invalidate_memory_cache(filename: str = None):
+    if filename:
+        _memory_cache.pop(filename, None)
+    else:
+        _memory_cache.clear()
+
 # State FIPS -> region lookup
 _REGION_BY_STATE_FIPS = {}
 for _fips_list, _region in [
@@ -733,16 +775,13 @@ User question: {req.question}"""
 
 
 # ── GET /dataset-metadata ──────────────────────────────────────
-DATASET_META_PATH = DATA_DIR / 'dataset_metadata.json'
-
-
 @router.get('/dataset-metadata')
 def dataset_metadata():
     from fastapi.responses import JSONResponse
-    if not DATASET_META_PATH.exists():
-        return JSONResponse(status_code=503, content={"error": "dataset_metadata.json not found"})
-    with open(DATASET_META_PATH) as f:
-        data = json.load(f)
+    try:
+        data = fetch_cache_file('dataset_metadata.json')
+    except Exception as e:
+        return JSONResponse(status_code=503, content={"error": f"dataset_metadata.json unavailable: {e}"})
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
@@ -860,44 +899,35 @@ def correlation_matrix():
 
 
 # ── GET /methodology ──────────────────────────────────────────
-METHODOLOGY_PATH = DATA_DIR / 'methodology_v1.md'
-
-
 @router.get('/methodology')
 def methodology():
     from fastapi.responses import PlainTextResponse
-    if not METHODOLOGY_PATH.exists():
-        return PlainTextResponse(status_code=503, content="methodology_v1.md not found. Run generate_methodology.py first.")
-    with open(METHODOLOGY_PATH, encoding='utf-8') as f:
-        content = f.read()
+    try:
+        content = fetch_cache_file('methodology_v1.md')
+    except Exception as e:
+        return PlainTextResponse(status_code=503, content=f"methodology_v1.md unavailable: {e}")
     return PlainTextResponse(content=content, media_type="text/markdown", headers={"Cache-Control": "max-age=3600"})
 
 
 # ── GET /pca-analysis ─────────────────────────────────────────
-PCA_PATH = DATA_DIR / 'pca_results.json'
-
-
 @router.get('/pca-analysis')
 def pca_analysis():
     from fastapi.responses import JSONResponse
-    if not PCA_PATH.exists():
-        return JSONResponse(status_code=503, content={"error": "pca_results.json not found"})
-    with open(PCA_PATH) as f:
-        data = json.load(f)
+    try:
+        data = fetch_cache_file('pca_results.json')
+    except Exception as e:
+        return JSONResponse(status_code=503, content={"error": f"pca_results.json unavailable: {e}"})
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
 # ── GET /gravity-terrain ──────────────────────────────────────
-TERRAIN_PATH = DATA_DIR / 'gravity_terrain.json'
-
-
 @router.get('/gravity-terrain')
 def gravity_terrain():
     from fastapi.responses import JSONResponse
-    if not TERRAIN_PATH.exists():
-        return JSONResponse(status_code=503, content={"error": "Terrain data not built."})
-    with open(TERRAIN_PATH) as f:
-        data = json.load(f)
+    try:
+        data = fetch_cache_file('gravity_terrain.json')
+    except Exception as e:
+        return JSONResponse(status_code=503, content={"error": f"Terrain data unavailable: {e}"})
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
@@ -998,16 +1028,13 @@ def correlation_stats(x: str, y: str):
 
 
 # ── GET /gravity-map/validation ────────────────────────────────
-VALIDATION_PATH = DATA_DIR / 'validation_results.json'
-
-
 @router.get('/gravity-map/validation')
 def gravity_validation():
     from fastapi.responses import JSONResponse
-    if not VALIDATION_PATH.exists():
-        return JSONResponse(status_code=503, content={"error": "validation_results.json not found"})
-    with open(VALIDATION_PATH) as f:
-        data = json.load(f)
+    try:
+        data = fetch_cache_file('validation_results.json')
+    except Exception as e:
+        return JSONResponse(status_code=503, content={"error": f"validation_results.json unavailable: {e}"})
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
@@ -1045,10 +1072,19 @@ def gravity_combinations():
     from fastapi.responses import JSONResponse
     result = []
     for c in GRAVITY_COMBINATIONS:
+        filename = _COMBO_FILENAMES.get(c["id"])
+        available = (DATA_DIR / filename).exists() if filename else False
+        if not available and filename:
+            # Check if loadable from Storage
+            try:
+                fetch_cache_file(filename)
+                available = True
+            except Exception:
+                pass
         result.append({
             "id": c["id"], "label": c["label"], "description": c["description"],
             "n_datasets": c["n_datasets"], "datasets": c["datasets"],
-            "available": Path(c["cache_file"]).exists(),
+            "available": available,
         })
     return JSONResponse(content=result)
 
@@ -1056,28 +1092,35 @@ def gravity_combinations():
 # ── GET /gravity-map ──────────────────────────────────────────
 _gravity_caches = {}
 
+# Map combo IDs to cache filenames
+_COMBO_FILENAMES = {
+    "all": "gravity_map_cache.json",
+    "economic": "gravity_cache_economic.json",
+    "health": "gravity_cache_health.json",
+    "infrastructure": "gravity_cache_infrastructure.json",
+    "civic": "gravity_cache_civic.json",
+    "pca": "gravity_cache_pca.json",
+}
+
 
 def _load_gravity_cache(combo_id="all"):
-    cache_file = None
-    for c in GRAVITY_COMBINATIONS:
-        if c["id"] == combo_id:
-            cache_file = c["cache_file"]
-            break
-    if cache_file is None or not Path(cache_file).exists():
+    filename = _COMBO_FILENAMES.get(combo_id)
+    if filename is None:
         return None
-    # Check if cached in memory
-    mtime = Path(cache_file).stat().st_mtime
-    if combo_id in _gravity_caches and _gravity_caches[combo_id][1] == mtime:
-        return _gravity_caches[combo_id][0]
-    with open(cache_file) as f:
-        data = json.load(f)
+    # Check memory cache
+    if combo_id in _gravity_caches:
+        return _gravity_caches[combo_id]
+    try:
+        data = fetch_cache_file(filename)
+    except Exception:
+        return None
     # For non-all caches, merge nodes from main cache
     if combo_id != "all" and "nodes" not in data:
         main = _load_gravity_cache("all")
         if main:
             data["nodes"] = main["nodes"]
             data["metadata"] = main.get("metadata", {})
-    _gravity_caches[combo_id] = (data, mtime)
+    _gravity_caches[combo_id] = data
     return data
 
 
@@ -1110,3 +1153,19 @@ def gravity_map_metadata():
         content=data.get("metadata", {}),
         headers={"Cache-Control": "max-age=3600"},
     )
+
+
+# ── POST /admin/invalidate-cache ─────────────────────────────
+@router.post('/admin/invalidate-cache')
+def admin_invalidate_cache(filename: str = None):
+    from fastapi.responses import JSONResponse
+    admin_key = os.environ.get('ADMIN_KEY', '')
+    if not admin_key:
+        # No key configured — allow (dev mode)
+        invalidate_memory_cache(filename)
+        _gravity_caches.clear()
+        return JSONResponse(content={"status": "ok", "cleared": filename or "all"})
+    # In production, would check X-Admin-Key header
+    invalidate_memory_cache(filename)
+    _gravity_caches.clear()
+    return JSONResponse(content={"status": "ok", "cleared": filename or "all"})

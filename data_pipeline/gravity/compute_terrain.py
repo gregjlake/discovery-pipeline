@@ -244,6 +244,12 @@ def main():
     else:
         print("Negative PC1 = prosperous side. Wealthy counties cluster more tightly.")
 
+    try:
+        from data_pipeline.utils.storage import upload_to_storage
+        upload_to_storage(str(out))
+    except Exception as e:
+        print(f"  Storage upload skipped: {e}")
+
 
 if __name__ == "__main__":
     main()
