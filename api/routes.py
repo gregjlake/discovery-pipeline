@@ -117,7 +117,7 @@ DATASET_REGISTRY = {
 def _get_supabase():
     """Return Supabase client or None."""
     url = os.environ.get('SUPABASE_URL')
-    key = os.environ.get('SUPABASE_SERVICE_KEY')
+    key = os.environ.get('SUPABASE_SERVICE_KEY') or os.environ.get('SUPABASE_KEY')
     if not url or not key:
         return None
     try:
