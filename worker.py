@@ -77,10 +77,23 @@ def run_worker():
 
             try:
                 from data_pipeline.run_full_pipeline import run_pipeline
+                import io, contextlib
 
-                success = run_pipeline(steps=job.get("steps"))
-                complete_job(client, job["id"], success)
+                # Capture stdout/stderr for error reporting
+                buf = io.StringIO()
+                try:
+                    with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+                        success = run_pipeline(steps=job.get("steps"))
+                except Exception as inner_e:
+                    success = False
+                    buf.write(f"\nException: {inner_e}")
+
+                output = buf.getvalue()
+                error_msg = output[-1000:] if not success else None  # last 1000 chars
+                complete_job(client, job["id"], success, error_msg)
                 print(f"Job {job['id']}: {'SUCCESS' if success else 'FAILED'}")
+                if not success:
+                    print(f"Output: {output[-500:]}")
 
                 # Invalidate API memory cache after pipeline completes
                 if success:
