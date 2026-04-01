@@ -122,6 +122,10 @@ df_out.to_csv("data/county_reliability.csv", index=False)
 print(f"\nSaved data/county_reliability.csv: {len(df_out)} counties")
 
 # Distribution
+if len(df_out) == 0:
+    print("No counties processed — Census API may be unavailable. Using existing reliability data if present.")
+    import sys
+    sys.exit(0)
 high = (df_out["county_reliability"] >= 0.8).sum()
 mod = ((df_out["county_reliability"] >= 0.5) & (df_out["county_reliability"] < 0.8)).sum()
 low = (df_out["county_reliability"] < 0.5).sum()
