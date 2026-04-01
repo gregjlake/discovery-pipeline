@@ -1,0 +1,47 @@
+{
+  "variants": {
+    "A_equal": {
+      "rho": 0.0728,
+      "p": 0.00016516393783496463,
+      "eff_dims": 4.9,
+      "econ_share_pct": 33.3
+    },
+    "B_cluster": {
+      "rho": 0.0729,
+      "p": 0.00016281134288421257,
+      "eff_dims": 4.9,
+      "econ_share_pct": 25.0
+    },
+    "C_pca7": {
+      "rho": 0.072,
+      "p": 0.00019425127635510405,
+      "eff_dims": 3.11,
+      "econ_share_pct": 57.1
+    }
+  },
+  "cluster_weights": {
+    "poverty": 0.0417,
+    "eitc": 0.0417,
+    "median_income": 0.0417,
+    "bea_income": 0.0417,
+    "unemployment": 0.0417,
+    "mobility": 0.0417,
+    "obesity": 0.0625,
+    "diabetes": 0.0625,
+    "hypertension": 0.0625,
+    "mental_health": 0.0625,
+    "broadband": 0.0625,
+    "food_access": 0.0625,
+    "housing_burden": 0.0625,
+    "air": 0.0625,
+    "voter_turnout": 0.0625,
+    "library": 0.0625,
+    "rural_urban": 0.0625,
+    "pop_density": 0.0625
+  },
+  "irs_pairs_matched": 2671,
+  "n_sampled_pairs": 250000,
+  "beta_used": 0.142157,
+  "decision_B_vs_A": "equivalent",
+  "decision_C_vs_A": "equivalent"
+}
