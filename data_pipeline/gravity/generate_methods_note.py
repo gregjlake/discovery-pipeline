@@ -122,7 +122,7 @@ where:
 
     dist(i,j) = geo_norm(i,j) x data_dissim(i,j)
 
-Geographic distance is Haversine distance normalized by maximum US county-pair distance (5,251 miles). Socioeconomic dissimilarity is normalized Euclidean distance across {len(ds_used)} min-max scaled datasets.
+Geographic distance is Haversine distance normalized by maximum US county-pair distance (5,251 miles). Socioeconomic dissimilarity is Euclidean distance across {len(ds_used)} min-max scaled datasets, normalized by the empirical maximum across all county pairs. Missing values in normalized dataset vectors are imputed with 0.5 (the midpoint of the [0,1] scale), treating counties with missing data as having typical values. County pairs with geographic distance < 10 miles are excluded from beta calibration to avoid noise from adjacent county boundary effects.
 
 **Why multiplicative rather than additive:** Combined distance = geo_norm x data_dissim rather than geo_norm + data_dissim for three reasons:
 
@@ -154,7 +154,9 @@ Same regression using multiplicative combined distance (geographic x socioeconom
 
 Result: beta_operative = {beta['beta_operative']:.4f}, R-squared = {beta['r_squared_combined']:.4f}
 
-The {r2_improvement_pct}% improvement in R-squared ({beta['r_squared_geo']:.4f} to {beta['r_squared_combined']:.4f}) from pass 1 to pass 2 confirms that socioeconomic distance adds substantial explanatory power beyond geography alone. The operative beta = {beta['beta_operative']:.3f} is low compared to typical gravity models for physical flows (beta = 1-2), reflecting that county socioeconomic clustering is primarily driven by data-space similarity rather than geographic proximity.
+Model fit improved from R-squared = {beta['r_squared_geo']:.4f} to R-squared = {beta['r_squared_combined']:.4f} ({r2_improvement_pct}% improvement). Note on R-squared interpretation: In Pass 2, the combined distance measure (geo_norm x data_dissim) contains data_dissim, which also determines the similarity measure used as the dependent variable. This shared component mechanically inflates R-squared relative to a fully independent validation. The R-squared = {beta['r_squared_combined']:.3f} should be interpreted as a measure of model fit rather than predictive validity -- the out-of-sample IRS migration validation (Section 5.1) provides the appropriate measure of predictive validity.
+
+The operative beta = {beta['beta_operative']:.3f} is low compared to typical gravity models for physical flows (beta = 1-2), reflecting that county socioeconomic clustering is primarily driven by data-space similarity rather than geographic proximity.
 
 **Beta stability:** The two-pass calibration provides an implicit stability check -- beta_geo (0.055, geographic distance only) and beta_operative (0.155, combined distance) differ by design, not instability. The weighting robustness analysis (Section 5.2) confirms that substituting three fundamentally different distance metrics produces IRS migration rho values within 0.001 of each other, suggesting the operative beta is stable to the distance specification chosen. Formal k-fold cross-validation of beta is a direction for future work.
 
@@ -271,6 +273,10 @@ The low effective dimensionality ({pca['effective_dimensions']:.2f} of {len(ds_u
 10. **Normalization sensitivity.** Min-max normalization is sensitive to outliers -- extreme counties (e.g., Loving County TX, population 96) can compress the scale for all other counties. The terrain visualization uses 2nd-98th percentile clipping for color ranges, but the distance calculation uses full-range normalization.
 
 11. **Ordinal variable treatment.** The USDA Rural-Urban Continuum Code (rural_urban, 1-9) is treated as continuous in the Euclidean distance calculation. The intervals between ordinal codes are not necessarily equal in real-world terms, introducing a known approximation.
+
+12. **Population dominance.** With beta = {beta['beta_operative']:.3f}, population product explains 95.6% of raw force variance. The gravity model's force values are population-dominated for large counties. The peer discovery feature uses data-space Euclidean distance directly, which is population-independent, to find similar counties regardless of size.
+
+13. **Validation zero-inflation.** Of the {val['n_pairs_total']:,} IRS migration pairs, only those appearing in the gravity model's top-10,000 pre-computed links receive nonzero predicted force; remaining pairs receive force = 0. The Spearman rho = {val['model_c_rho']:.3f} reflects both ranking accuracy and binary link discrimination. The monotonic bin analysis provides a complementary assessment less sensitive to zero-inflation.
 
 ## 8. Software and Reproducibility
 
