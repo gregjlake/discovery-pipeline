@@ -96,6 +96,27 @@ def main():
     print(f"PC1: {pca.explained_variance_ratio_[0]*100:.1f}%")
     print(f"PC2: {pca.explained_variance_ratio_[1]*100:.1f}%")
 
+    # Check PC1 sign: poverty should load POSITIVE (disadvantaged = positive PC1)
+    # Find poverty column index and check its loading
+    if "poverty" in ds_cols:
+        pov_idx = ds_cols.index("poverty")
+        pov_loading = pca.components_[0, pov_idx]
+        if pov_loading < 0:
+            print(f"  Flipping PC1 (poverty loading = {pov_loading:.3f}, need positive)")
+            coords_2d[:, 0] = -coords_2d[:, 0]
+        else:
+            print(f"  PC1 orientation correct (poverty loading = {pov_loading:.3f})")
+
+    # Clip PC1/PC2 color ranges to 2nd-98th percentile for contrast
+    pc1_vals = coords_2d[:, 0]
+    pc2_vals = coords_2d[:, 1]
+    pc1_color_min = float(np.percentile(pc1_vals, 2))
+    pc1_color_max = float(np.percentile(pc1_vals, 98))
+    pc2_color_min = float(np.percentile(pc2_vals, 2))
+    pc2_color_max = float(np.percentile(pc2_vals, 98))
+    print(f"  PC1 color range (p2-p98): [{pc1_color_min:.2f}, {pc1_color_max:.2f}]")
+    print(f"  PC2 color range (p2-p98): [{pc2_color_min:.2f}, {pc2_color_max:.2f}]")
+
     county_positions = [
         {"fips": fips_list[i], "pc1": float(coords_2d[i,0]), "pc2": float(coords_2d[i,1]),
          "population": int(populations[i]), "pop_norm": float(pop_norm[i]),
@@ -167,8 +188,8 @@ def main():
 
     pc1_range = [float(pc1_vals.min()), float(pc1_vals.max())]
     pc2_range = [float(pc2_vals.min()), float(pc2_vals.max())]
-    print(f"PC1 range: [{pc1_range[0]:.2f}, {pc1_range[1]:.2f}]")
-    print(f"PC2 range: [{pc2_range[0]:.2f}, {pc2_range[1]:.2f}]")
+    print(f"PC1 full range: [{pc1_range[0]:.2f}, {pc1_range[1]:.2f}]")
+    print(f"PC2 full range: [{pc2_range[0]:.2f}, {pc2_range[1]:.2f}]")
     print(f"Sample cell (40,40): potential={potential_log[40,40]:.4f}, pc1={pc1_grid[40,40]:.3f}, pc2={pc2_grid[40,40]:.3f}")
 
     # Find wells
@@ -193,6 +214,8 @@ def main():
         "pc2_grid": pc2_grid.tolist(),
         "pc1_range": pc1_range,
         "pc2_range": pc2_range,
+        "pc1_color_range": [pc1_color_min, pc1_color_max],
+        "pc2_color_range": [pc2_color_min, pc2_color_max],
         "pc1_label": f"Economic Deprivation (PC1, {pca.explained_variance_ratio_[0]*100:.1f}%)",
         "pc2_label": f"Urbanization (PC2, {pca.explained_variance_ratio_[1]*100:.1f}%)",
         "color_encoding": {
