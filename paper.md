@@ -10,6 +10,7 @@ tags:
   - United States
 authors:
   - name: Greg Lake
+    orcid: 0000-0000-0000-0000
     affiliation: 1
 affiliations:
   - name: Independent Researcher
