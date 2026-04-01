@@ -1,5 +1,5 @@
 {
-  "n_datasets": 18,
+  "n_datasets": 17,
   "n_counties": 2944,
   "datasets": [
     "air",
@@ -13,7 +13,6 @@
     "library",
     "median_income",
     "mental_health",
-    "mobility",
     "obesity",
     "pop_density",
     "poverty",
@@ -22,93 +21,91 @@
     "voter_turnout"
   ],
   "variance_explained": [
-    0.4185,
-    0.1504,
-    0.0663,
-    0.0617,
-    0.0469,
-    0.0436,
-    0.0343,
-    0.0313,
-    0.0294,
-    0.025,
-    0.0195,
-    0.017,
-    0.0146,
-    0.0128,
-    0.0117,
-    0.0085,
-    0.005,
-    0.0034
+    0.3954,
+    0.1346,
+    0.0711,
+    0.0621,
+    0.0552,
+    0.0487,
+    0.0432,
+    0.0356,
+    0.0326,
+    0.0309,
+    0.0235,
+    0.0173,
+    0.0171,
+    0.0139,
+    0.0094,
+    0.0058,
+    0.0037
   ],
   "cumulative_variance": [
-    0.4185,
-    0.5689,
-    0.6352,
-    0.697,
-    0.7438,
-    0.7874,
-    0.8217,
-    0.853,
-    0.8823,
-    0.9074,
-    0.9269,
-    0.944,
-    0.9586,
-    0.9714,
-    0.9832,
-    0.9917,
-    0.9966,
+    0.3954,
+    0.5299,
+    0.6011,
+    0.6632,
+    0.7183,
+    0.767,
+    0.8103,
+    0.8459,
+    0.8785,
+    0.9094,
+    0.9328,
+    0.9502,
+    0.9672,
+    0.9812,
+    0.9906,
+    0.9963,
     1.0
   ],
   "n_components_80pct": 7,
   "n_components_90pct": 10,
-  "n_components_95pct": 13,
-  "effective_dimensions": 4.65,
+  "n_components_95pct": 12,
+  "effective_dimensions": 5.12,
   "component_details": {
     "PC1": {
-      "variance_pct": 41.8,
+      "variance_pct": 39.5,
       "top_datasets": [
+        "median_income",
         "diabetes",
-        "poverty",
-        "eitc",
-        "median_income"
+        "bea_income",
+        "poverty"
       ],
       "loadings": {
-        "diabetes": 0.322,
-        "poverty": 0.321,
-        "eitc": 0.318,
-        "median_income": -0.314
+        "median_income": 0.341,
+        "diabetes": -0.341,
+        "bea_income": 0.332,
+        "poverty": -0.331
       }
     },
     "PC2": {
-      "variance_pct": 15.0,
+      "variance_pct": 13.5,
       "top_datasets": [
         "housing_burden",
         "rural_urban",
-        "mobility",
-        "voter_turnout"
+        "voter_turnout",
+        "unemployment"
       ],
       "loadings": {
-        "housing_burden": 0.447,
-        "rural_urban": -0.438,
-        "mobility": -0.381,
-        "voter_turnout": 0.346
+        "housing_burden": 0.471,
+        "rural_urban": -0.429,
+        "voter_turnout": 0.374,
+        "unemployment": 0.31
       }
     },
     "PC3": {
-      "variance_pct": 6.6,
+      "variance_pct": 7.1,
       "top_datasets": [
         "pop_density",
         "library",
         "voter_turnout",
-        "rural_urban"
+        "food_access"
       ],
       "loadings": {
-        "pop_density": 0.551,
-        "library": 0.452,
-        "voter_turnout": 0.363,
-        "rural_urban": 0.254
+        "pop_density": 0.486,
+        "library": 0.426,
+        "voter_turnout": 0.377,
+        "food_access": 0.321
       }
     },
     "PC4": {
@@ -116,62 +113,52 @@
       "top_datasets": [
         "air",
         "library",
-        "voter_turnout",
+        "food_access",
         "unemployment"
       ],
       "loadings": {
-        "air": 0.729,
-        "library": 0.454,
-        "voter_turnout": -0.29,
-        "unemployment": 0.232
+        "air": 0.686,
+        "library": 0.42,
+        "food_access": -0.32,
+        "unemployment": 0.269
       }
     },
     "PC5": {
-      "variance_pct": 4.7,
+      "variance_pct": 5.5,
       "top_datasets": [
+        "food_access",
+        "unemployment",
         "pop_density",
-        "library",
-        "air",
-        "unemployment"
+        "air"
       ],
       "loadings": {
-        "pop_density": 0.669,
-        "library": -0.593,
-        "air": 0.391,
-        "unemployment": -0.155
+        "food_access": 0.783,
+        "unemployment": 0.296,
+        "pop_density": -0.28,
+        "air": 0.219
       }
     },
     "PC6": {
-      "variance_pct": 4.4,
+      "variance_pct": 4.9,
       "top_datasets": [
-        "hypertension",
-        "diabetes",
-        "obesity",
-        "bea_income"
+        "library",
+        "pop_density",
+        "air",
+        "food_access"
       ],
       "loadings": {
-        "hypertension": 0.529,
-        "diabetes": 0.357,
-        "obesity": 0.332,
-        "bea_income": 0.298
+        "library": 0.63,
+        "pop_density": -0.602,
+        "air": -0.363,
+        "food_access": -0.227
       }
     }
   },
   "unexpected_collinear_pairs": [
     {
-      "d1": "food_access",
-      "d2": "poverty",
-      "r": 0.78
-    },
-    {
       "d1": "diabetes",
       "d2": "eitc",
       "r": 0.765
-    },
-    {
-      "d1": "eitc",
-      "d2": "food_access",
-      "r": 0.753
     },
     {
       "d1": "diabetes",
@@ -197,11 +184,6 @@
       "d1": "eitc",
       "d2": "median_income",
       "r": -0.683
-    },
-    {
-      "d1": "diabetes",
-      "d2": "food_access",
-      "r": 0.673
     },
     {
       "d1": "broadband",
@@ -239,11 +221,6 @@
       "r": -0.635
     },
     {
-      "d1": "food_access",
-      "d2": "mental_health",
-      "r": 0.631
-    },
-    {
       "d1": "eitc",
       "d2": "hypertension",
       "r": 0.629
@@ -262,18 +239,8 @@
       "d1": "bea_income",
       "d2": "broadband",
       "r": 0.619
-    },
-    {
-      "d1": "food_access",
-      "d2": "unemployment",
-      "r": 0.614
-    },
-    {
-      "d1": "food_access",
-      "d2": "median_income",
-      "r": -0.609
     }
   ],
   "equal_weighting_assessment": "problematic",
-  "equal_weighting_note": "With 4.7 effective dimensions out of 18, equal weighting is problematic -- variance is concentrated in a few dimensions."
+  "equal_weighting_note": "With 5.1 effective dimensions out of 17, equal weighting is problematic -- variance is concentrated in a few dimensions."
 }

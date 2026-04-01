@@ -152,6 +152,11 @@ If you use DiscoSights in research, please cite:
 
 > Lake, G. (2026). DiscoSights: A Validated Spatial Interaction Model for US County Socioeconomic Similarity. *Journal of Open Source Software* (submitted).
 
+## Authors
+
+**Greg Lake** — Independent Researcher
+GitHub: [@gregjlake](https://github.com/gregjlake)
+
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE)

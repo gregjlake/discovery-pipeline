@@ -1,5 +1,5 @@
 # DiscoSights Methodology and Validation
-## Version 1.0 -- 2026-03-31
+## Version 1.0 -- 2026-04-01
 
 ### Overview
 DiscoSights is a spatial interaction model for exploring socioeconomic similarity among US counties. It applies a gravity model analogy: counties with similar profiles across 17 socioeconomic datasets and smaller geographic distance exert stronger "gravitational attraction" toward each other.
@@ -94,28 +94,25 @@ Disaster risk adds a genuinely independent dimension to county analysis. Two cou
 
 ### Dataset Structure
 PCA analysis of the 17 active datasets:
-- Effective dimensions: 4.65 / 18
+- Effective dimensions: 5.12 / 17
 - Components for 80% variance: 7
 - Components for 90% variance: 10
 
-**PC1 (41.8% of variance):**
-- Top drivers: diabetes, poverty, eitc, median_income
+**PC1 (39.5% of variance):**
+- Top drivers: median_income, diabetes, bea_income, poverty
 - Interpretation: Economic deprivation axis
 
-**PC2 (15.0% of variance):**
-- Top drivers: housing_burden, rural_urban, mobility, voter_turnout
+**PC2 (13.5% of variance):**
+- Top drivers: housing_burden, rural_urban, voter_turnout, unemployment
 - Interpretation: Urbanization axis
 
 **High collinearity pairs (|r| > 0.6):**
-  - food_access x poverty: r=0.780
   - diabetes x eitc: r=0.765
-  - eitc x food_access: r=0.753
   - diabetes x poverty: r=0.737
   - broadband x diabetes: r=-0.701
   - diabetes x median_income: r=-0.700
   - bea_income x eitc: r=-0.684
   - eitc x median_income: r=-0.683
-  - diabetes x food_access: r=0.673
   - broadband x median_income: r=0.671
   - hypertension x median_income: r=-0.659
   - broadband x poverty: r=-0.650
@@ -123,13 +120,10 @@ PCA analysis of the 17 active datasets:
   - bea_income x diabetes: r=-0.638
   - bea_income x mental_health: r=-0.638
   - broadband x hypertension: r=-0.635
-  - food_access x mental_health: r=0.631
   - eitc x hypertension: r=0.629
   - eitc x mental_health: r=0.629
   - mental_health x poverty: r=0.622
   - bea_income x broadband: r=0.619
-  - food_access x unemployment: r=0.614
-  - food_access x median_income: r=-0.609
 
 Note: Low effective dimensions reflect genuine structure in US county data -- economic, health, and social outcomes are deeply correlated. This is not a measurement artifact. Weighting robustness analysis confirms it does not distort findings.
 
@@ -158,4 +152,4 @@ Note: Low effective dimensions reflect genuine structure in US county data -- ec
 - Source code: github.com/gregjlake/discovery-pipeline / github.com/gregjlake/discovery-insights
 
 ---
-*Generated automatically from DiscoSights model outputs. Values reflect model state as of 2026-03-31.*
+*Generated automatically from DiscoSights model outputs. Values reflect model state as of 2026-04-01.*

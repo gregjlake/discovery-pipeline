@@ -3,7 +3,7 @@
 **Authors:** Greg Lake
 **Repository:** github.com/gregjlake/discovery-pipeline
 **Live tool:** https://discovery-surface-spark.lovable.app
-**Date:** 2026-03-31
+**Date:** 2026-04-01
 
 ---
 
@@ -60,7 +60,7 @@ DiscoSights combines three related but distinct analytical objects that should n
 
 **Gravity Model (force_strength):** The core spatial interaction model computing attraction between all county pairs. Force(i,j) = Pop(i) x Pop(j) / dist(i,j)^beta. This is what the IRS migration validation tests. Output: a 3,135 x 3,135 sparse matrix of force values (top 10,000 pairs stored).
 
-**Terrain Visualization (PCA projection):** An independent visualization of the 17-dataset data structure using Principal Component Analysis. Counties are projected to 2D (PC1 = economic deprivation 41.8%, PC2 = urbanization 15.0%). Gravitational potential height represents county density in this 2D space -- how many counties share a similar profile. This visualization is derived entirely from the dataset vectors, not from the gravity model formula.
+**Terrain Visualization (PCA projection):** An independent visualization of the 17-dataset data structure using Principal Component Analysis. Counties are projected to 2D (PC1 = economic deprivation 39.5%, PC2 = urbanization 13.5%). Gravitational potential height represents county density in this 2D space -- how many counties share a similar profile. This visualization is derived entirely from the dataset vectors, not from the gravity model formula.
 
 **Dot Layout (spring layout):** The Map/Dots view uses Fruchterman-Reingold spring layout (NetworkX, seed=42, 300 iterations) with force_strength values as edge weights. This places similar counties near each other visually. The equilibrium positions are graph layout artifacts, not gravitational minima. Layout is deterministic and reproducible but should not be interpreted as a physical simulation.
 
@@ -144,6 +144,8 @@ Three weighting schemes were tested against IRS migration flows:
 
 Maximum rho difference: 0.0009. All schemes produce equivalent aggregate predictions.
 
+The weighting comparison rho values (0.0728-0.0729) differ from the primary validation rho (0.165) because they use different pair sampling approaches. The primary validation uses the pre-computed top-10,000 force links from the gravity model cache -- the pairs where the model predicts strongest interaction, which naturally correlate better with observed migration. The weighting comparison uses 250,000 randomly sampled county pairs, most of which have near-zero force and near-zero observed migration. This dilutes the correlation signal but is the correct approach for comparing relative performance across weighting schemes, where the absolute rho is less important than the differences between schemes (max 0.0009).
+
 **Individual county peer stability** was tested for five median-profile counties (P45-P55 overall score) across four US Census regions, using Jaccard similarity of top-10 peer lists:
 
 - Equal vs Domain-balanced: mean Jaccard = 0.891. Peer lists overlap 89% on average. The model is robust to domain reweighting.
@@ -185,22 +187,22 @@ Both factors predict the observed gap and are consistent with the county-commuti
 
 PCA analysis of the 17 active datasets reveals:
 
-- Effective dimensions (participation ratio): 4.65 / 17
+- Effective dimensions (participation ratio): 5.12 / 17
 - Components for 80% cumulative variance: 7
 - Components for 90% cumulative variance: 10
 
-**PC1 (41.8% of variance):** Economic deprivation axis. Top loadings: diabetes, poverty, eitc, median_income. Poverty, income, EITC uptake, and health outcomes load together as a single structural factor -- consistent with the concentrated disadvantage literature.
+**PC1 (39.5% of variance):** Economic deprivation axis. Top loadings: median_income, diabetes, bea_income, poverty. Poverty, income, EITC uptake, and health outcomes load together as a single structural factor -- consistent with the concentrated disadvantage literature.
 
-**PC2 (15.0% of variance):** Urbanization axis. Top loadings: housing_burden, rural_urban, mobility, voter_turnout.
+**PC2 (13.5% of variance):** Urbanization axis. Top loadings: housing_burden, rural_urban, voter_turnout, unemployment.
 
-The low effective dimensionality (4.65 of 17) reflects genuine covariation in US county data rather than measurement redundancy. Weighting robustness analysis (Section 5.2) confirms this concentration does not distort peer-finding results.
+The low effective dimensionality (5.12 of 17) reflects genuine covariation in US county data rather than measurement redundancy. Weighting robustness analysis (Section 5.2) confirms this concentration does not distort peer-finding results.
 
 **High collinearity pairs (|r| > 0.6):**
-  - food_access x poverty: r = 0.780
   - diabetes x eitc: r = 0.765
-  - eitc x food_access: r = 0.753
   - diabetes x poverty: r = 0.737
   - broadband x diabetes: r = -0.701
+  - diabetes x median_income: r = -0.700
+  - bea_income x eitc: r = -0.684
 
 ## 7. Known Limitations
 
@@ -247,4 +249,4 @@ DiscoSights provides a validated, transparent instrument for county socioeconomi
 6. **Clear separation** of three analytical objects: gravity model (validated), terrain visualization (PCA-derived), and dot layout (spring layout). Validation claims apply to force values, not visualizations.
 
 ---
-*Methods note generated 2026-03-31. All numerical values derived programmatically from model outputs.*
+*Methods note generated 2026-04-01. All numerical values derived programmatically from model outputs.*

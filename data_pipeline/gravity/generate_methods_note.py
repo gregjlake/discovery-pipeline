@@ -190,6 +190,8 @@ Three weighting schemes were tested against IRS migration flows:
 
 Maximum rho difference: {max_diff:.4f}. All schemes produce equivalent aggregate predictions.
 
+The weighting comparison rho values (0.0728-0.0729) differ from the primary validation rho (0.165) because they use different pair sampling approaches. The primary validation uses the pre-computed top-10,000 force links from the gravity model cache -- the pairs where the model predicts strongest interaction, which naturally correlate better with observed migration. The weighting comparison uses 250,000 randomly sampled county pairs, most of which have near-zero force and near-zero observed migration. This dilutes the correlation signal but is the correct approach for comparing relative performance across weighting schemes, where the absolute rho is less important than the differences between schemes (max {max_diff:.4f}).
+
 **Individual county peer stability** was tested for five median-profile counties (P45-P55 overall score) across four US Census regions, using Jaccard similarity of top-10 peer lists:
 
 - Equal vs Domain-balanced: mean Jaccard = {ps['mean_jaccard_equal_vs_domain']:.3f}. Peer lists overlap {ps['mean_jaccard_equal_vs_domain']*100:.0f}% on average. The model is robust to domain reweighting.

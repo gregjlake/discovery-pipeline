@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use DiscoSights in research, please cite it as below."
+type: software
+title: DiscoSights
+abstract: "A validated spatial interaction model for US county socioeconomic similarity with empirically calibrated distance decay and out-of-sample IRS migration validation."
+authors:
+  - family-names: Lake
+    given-names: Greg
+    alias: gregjlake
+repository-code: https://github.com/gregjlake/discovery-pipeline
+url: https://discovery-surface-spark.lovable.app
+license: MIT
+date-released: "2026-04-01"
+keywords:
+  - gravity model
+  - socioeconomic similarity
+  - county data
+  - spatial analysis
+  - policy research
+  - United States

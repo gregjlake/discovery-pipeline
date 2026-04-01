@@ -16,13 +16,15 @@ if hasattr(sys.stdout, "reconfigure"):
 
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 
-# The 18 active gravity model datasets (broadband_avail excluded)
+# The 17 active gravity model datasets
+# mobility excluded: temporal mismatch (1978-2015 vs 2022)
+# broadband_avail excluded: r=0.993 collinearity with broadband
 DATASETS = {
-    "library": "library_spend_per_capita", "mobility": "mobility_rank_p25",
+    "library": "library_spend_per_capita",
     "air": "air_quality_inv", "broadband": "broadband_rate",
     "eitc": "eitc_rate", "poverty": "poverty_rate",
     "median_income": "median_hh_income", "bea_income": "per_capita_income",
-    "food_access": "snap_rate", "obesity": "obesity_rate",
+    "food_access": "pct_low_food_access", "obesity": "obesity_rate",
     "diabetes": "diabetes_rate", "mental_health": "mental_health_rate",
     "hypertension": "hypertension_rate", "unemployment": "unemployment_rate",
     "rural_urban": "rural_urban_code", "housing_burden": "housing_burden_rate",
@@ -190,6 +192,12 @@ def main():
     print(f"\nSaved to data/pca_results.json")
     print(f"\nEqual weighting assessment: {assessment.upper()}")
     print(note)
+
+    try:
+        from data_pipeline.utils.storage import upload_to_storage
+        upload_to_storage(str(DATA_DIR / "pca_results.json"))
+    except Exception as e:
+        print(f"  Storage upload skipped: {e}")
 
 
 if __name__ == "__main__":
