@@ -127,7 +127,7 @@ Unit tests cover core scientific functions (haversine, dissimilarity, gravity fo
 
 - **17 active datasets** from Census, CDC, EPA, USDA, IRS, FEMA
 - **beta = 0.155** (empirically calibrated, R-squared = 0.313)
-- **IRS validation**: +0.112 rho improvement over geography alone
+- **IRS validation**: +0.113 rho improvement beyond population and geography
 - **Weighting robustness**: domain-balanced Jaccard = 0.891
 - **3,135 counties** with pre-computed equilibrium positions
 - **9 FEMA disaster datasets** available for scatter exploration
@@ -145,6 +145,35 @@ See `data/dataset_metadata.json` for full provenance. Key sources:
 - EPA Air Quality System (2022)
 - IMLS Public Libraries Survey (FY 2022)
 - MIT Election Data + Science Lab (2020)
+
+## Reproducing Key Results
+
+The key validation results can be verified two ways:
+
+**1. Via the live API (no credentials needed):**
+
+```bash
+# Beta and R-squared
+curl https://web-production-a68ad.up.railway.app/api/gravity-map/metadata
+
+# IRS validation rho
+curl https://web-production-a68ad.up.railway.app/api/gravity-map/validation
+
+# PCA effective dimensions
+curl https://web-production-a68ad.up.railway.app/api/pca-analysis
+```
+
+**2. Full reproduction (requires Supabase credentials):**
+
+Set up `.env` with `SUPABASE_URL` and `SUPABASE_SERVICE_KEY`, then run:
+
+```bash
+python data_pipeline/gravity/calibrate_beta.py
+python data_pipeline/gravity/run_gravity_pipeline.py
+python data_pipeline/gravity/validate_against_migration.py
+```
+
+See `data/beta_calibration.json` and `data/validation_results.json` for expected output values.
 
 ## Citation
 

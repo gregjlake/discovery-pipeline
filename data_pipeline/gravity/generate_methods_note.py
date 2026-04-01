@@ -156,6 +156,8 @@ Result: beta_operative = {beta['beta_operative']:.4f}, R-squared = {beta['r_squa
 
 The {r2_improvement_pct}% improvement in R-squared ({beta['r_squared_geo']:.4f} to {beta['r_squared_combined']:.4f}) from pass 1 to pass 2 confirms that socioeconomic distance adds substantial explanatory power beyond geography alone. The operative beta = {beta['beta_operative']:.3f} is low compared to typical gravity models for physical flows (beta = 1-2), reflecting that county socioeconomic clustering is primarily driven by data-space similarity rather than geographic proximity.
 
+**Beta stability:** The two-pass calibration provides an implicit stability check -- beta_geo (0.055, geographic distance only) and beta_operative (0.155, combined distance) differ by design, not instability. The weighting robustness analysis (Section 5.2) confirms that substituting three fundamentally different distance metrics produces IRS migration rho values within 0.001 of each other, suggesting the operative beta is stable to the distance specification chosen. Formal k-fold cross-validation of beta is a direction for future work.
+
 ## 5. Validation
 
 ### 5.1 Out-of-Sample IRS Migration Validation
@@ -265,6 +267,10 @@ The low effective dimensionality ({pca['effective_dimensions']:.2f} of {len(ds_u
 8. **Small county uncertainty.** 123 counties (population < 5,000 or ACS CV > 30%) have unreliable Census estimates. Flagged in the UI.
 
 9. **Validation scope.** IRS migration validates the gravity model force values. It does not validate the terrain visualization (PCA projection) or dot layout (spring layout), which are visualization tools.
+
+10. **Normalization sensitivity.** Min-max normalization is sensitive to outliers -- extreme counties (e.g., Loving County TX, population 96) can compress the scale for all other counties. The terrain visualization uses 2nd-98th percentile clipping for color ranges, but the distance calculation uses full-range normalization.
+
+11. **Ordinal variable treatment.** The USDA Rural-Urban Continuum Code (rural_urban, 1-9) is treated as continuous in the Euclidean distance calculation. The intervals between ordinal codes are not necessarily equal in real-world terms, introducing a known approximation.
 
 ## 8. Software and Reproducibility
 
