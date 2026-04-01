@@ -1155,17 +1155,85 @@ def gravity_map_metadata():
     )
 
 
+# ── Admin helpers ────────────────────────────────────────────
+def _check_admin(request):
+    """Check X-Admin-Key header against ADMIN_KEY env var."""
+    admin_key = os.environ.get('ADMIN_KEY', '')
+    if not admin_key:
+        return True  # dev mode — no auth
+    from fastapi import Request
+    provided = request.headers.get('X-Admin-Key', '')
+    return provided == admin_key
+
+
 # ── POST /admin/invalidate-cache ─────────────────────────────
 @router.post('/admin/invalidate-cache')
 def admin_invalidate_cache(filename: str = None):
     from fastapi.responses import JSONResponse
-    admin_key = os.environ.get('ADMIN_KEY', '')
-    if not admin_key:
-        # No key configured — allow (dev mode)
-        invalidate_memory_cache(filename)
-        _gravity_caches.clear()
-        return JSONResponse(content={"status": "ok", "cleared": filename or "all"})
-    # In production, would check X-Admin-Key header
     invalidate_memory_cache(filename)
     _gravity_caches.clear()
     return JSONResponse(content={"status": "ok", "cleared": filename or "all"})
+
+
+# ── POST /admin/run-pipeline ─────────────────────────────────
+@router.post('/admin/run-pipeline')
+def admin_run_pipeline(request=None, body: dict = None):
+    from fastapi import Request
+    from fastapi.responses import JSONResponse
+    from supabase import create_client
+
+    steps = body.get('steps') if body else None
+
+    try:
+        client = create_client(
+            os.environ.get('SUPABASE_URL', ''),
+            os.environ.get('SUPABASE_SERVICE_KEY', '')
+        )
+        result = client.table('pipeline_jobs').insert({
+            'status': 'pending',
+            'steps': steps,
+            'triggered_by': 'api',
+        }).execute()
+        job_id = result.data[0]['id']
+        return JSONResponse(content={
+            "status": "queued",
+            "job_id": job_id,
+            "message": f"Pipeline job {job_id} queued. Worker will pick it up within 30s.",
+            "check_status": f"/api/admin/job-status/{job_id}",
+        })
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+# ── GET /admin/job-status/{job_id} ───────────────────────────
+@router.get('/admin/job-status/{job_id}')
+def admin_job_status(job_id: int):
+    from fastapi.responses import JSONResponse
+    from supabase import create_client
+    try:
+        client = create_client(
+            os.environ.get('SUPABASE_URL', ''),
+            os.environ.get('SUPABASE_SERVICE_KEY', '')
+        )
+        result = client.table('pipeline_jobs').select('*').eq('id', job_id).execute()
+        if not result.data:
+            return JSONResponse(status_code=404, content={"error": "Job not found"})
+        return JSONResponse(content=result.data[0])
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+# ── GET /admin/recent-jobs ───────────────────────────────────
+@router.get('/admin/recent-jobs')
+def admin_recent_jobs():
+    from fastapi.responses import JSONResponse
+    from supabase import create_client
+    try:
+        client = create_client(
+            os.environ.get('SUPABASE_URL', ''),
+            os.environ.get('SUPABASE_SERVICE_KEY', '')
+        )
+        result = client.table('pipeline_jobs').select('*').order('created_at', desc=True).limit(10).execute()
+        return JSONResponse(content=result.data)
+    except Exception as e:
+        return JSONResponse(content=[])

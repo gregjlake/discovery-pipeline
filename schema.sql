@@ -100,3 +100,28 @@ CREATE TABLE IF NOT EXISTS counties (
     state VARCHAR(2),
     county_name VARCHAR(100)
 );
+
+-- ============================================================
+-- pipeline_jobs: Queue for pipeline run requests
+-- Worker service polls for pending jobs
+-- ============================================================
+CREATE TABLE IF NOT EXISTS pipeline_jobs (
+    id SERIAL PRIMARY KEY,
+    status TEXT DEFAULT 'pending'
+        CHECK (status IN ('pending', 'running', 'completed', 'failed')),
+    steps TEXT[],
+    triggered_by TEXT DEFAULT 'manual',
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    started_at TIMESTAMPTZ,
+    completed_at TIMESTAMPTZ,
+    result TEXT,
+    error TEXT
+);
+
+ALTER TABLE pipeline_jobs ENABLE ROW LEVEL SECURITY;
+
+CREATE INDEX IF NOT EXISTS pipeline_jobs_status_idx
+    ON pipeline_jobs(status, created_at)
+    WHERE status = 'pending';
+
+COMMENT ON TABLE pipeline_jobs IS 'Pipeline job queue. Worker polls for pending jobs and executes them.';
