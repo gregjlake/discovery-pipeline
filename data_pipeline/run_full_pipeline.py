@@ -21,11 +21,17 @@ def run_step(name: str, script: str):
     start = time.time()
     result = subprocess.run(
         [sys.executable, script],
-        capture_output=False,
+        capture_output=True,
         text=True,
         env=os.environ.copy(),
     )
     elapsed = time.time() - start
+
+    # Print captured output
+    if result.stdout:
+        print(result.stdout[-2000:])
+    if result.stderr:
+        print("STDERR:", result.stderr[-2000:])
 
     status = "PASS" if result.returncode == 0 else "FAIL"
     print(f"\n{status} -- {name} ({elapsed:.1f}s)")

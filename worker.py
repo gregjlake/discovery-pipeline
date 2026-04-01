@@ -77,23 +77,24 @@ def run_worker():
 
             try:
                 from data_pipeline.run_full_pipeline import run_pipeline
-                import io, contextlib
+                import io, sys as _sys
 
-                # Capture stdout/stderr for error reporting
+                # Capture all output for error reporting
+                old_stdout, old_stderr = _sys.stdout, _sys.stderr
                 buf = io.StringIO()
+                _sys.stdout = io.TextIOWrapper(io.BytesIO(), encoding='utf-8', errors='replace', write_through=True) if False else buf
+                _sys.stderr = buf
                 try:
-                    with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
-                        success = run_pipeline(steps=job.get("steps"))
-                except Exception as inner_e:
-                    success = False
-                    buf.write(f"\nException: {inner_e}")
+                    success = run_pipeline(steps=job.get("steps"))
+                finally:
+                    _sys.stdout, _sys.stderr = old_stdout, old_stderr
 
                 output = buf.getvalue()
-                error_msg = output[-1000:] if not success else None  # last 1000 chars
+                error_msg = output[-2000:] if not success else None
                 complete_job(client, job["id"], success, error_msg)
-                print(f"Job {job['id']}: {'SUCCESS' if success else 'FAILED'}")
+                old_stdout.write(f"Job {job['id']}: {'SUCCESS' if success else 'FAILED'}\n")
                 if not success:
-                    print(f"Output: {output[-500:]}")
+                    old_stdout.write(f"Output:\n{output[-1000:]}\n")
 
                 # Invalidate API memory cache after pipeline completes
                 if success:
