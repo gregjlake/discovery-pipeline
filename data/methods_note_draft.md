@@ -232,11 +232,15 @@ The low effective dimensionality (5.33 of 17) reflects genuine covariation in US
 
 11. **Ordinal variable treatment.** The USDA Rural-Urban Continuum Code (rural_urban, 1-9) is treated as continuous in the Euclidean distance calculation. The intervals between ordinal codes are not necessarily equal in real-world terms, introducing a known approximation.
 
-12. **Population dominance.** With beta = 0.152, population product explains 95.6% of raw force variance. The gravity model's force values are population-dominated for large counties. The peer discovery feature uses data-space Euclidean distance directly, which is population-independent, to find similar counties regardless of size.
+12. **Population dominance.** With beta = 0.152, population product explains 96.2% of raw force variance. The gravity model's force values are population-dominated for large counties. The peer discovery feature uses data-space Euclidean distance directly, which is population-independent, to find similar counties regardless of size.
 
 13. **Validation zero-inflation.** Of the 51,445 IRS migration pairs, only those appearing in the gravity model's top-10,000 pre-computed links receive nonzero predicted force; remaining pairs receive force = 0. The Spearman rho = 0.164 reflects both ranking accuracy and binary link discrimination. The monotonic bin analysis provides a complementary assessment less sensitive to zero-inflation.
 
 14. **Spatial autocorrelation.** Formal Moran's I analysis of model residuals was not completed. Counties with similar socioeconomic profiles are geographically clustered (e.g., Appalachian counties, Mississippi Delta), meaning IRS validation residuals may be spatially autocorrelated. This would not invalidate the rho = 0.164 result but would mean the effective sample size is smaller than n = 51,445 pairs. Spatial autocorrelation analysis is a direction for future work.
+
+15. **Voter turnout denominator.** The voter_turnout_rate variable uses total county population as the denominator rather than voting-age population (VAP) or citizen voting-age population (CVAP). Counties with large youth or non-citizen populations show mechanically lower apparent turnout rates. This variable should be interpreted as a civic engagement proxy that partially reflects demographic structure rather than a pure behavioral turnout measure.
+
+16. **Air quality coverage.** EPA AQS air quality data is available for approximately 31% of counties (n approximately 970); the remaining 69% (n approximately 2,165) receive 0.5 midpoint imputation. Sensitivity analysis confirms r = 0.991 between distance matrices computed with vs without air quality on counties with real data, indicating negligible impact on results.
 
 ## 8. Software and Reproducibility
 

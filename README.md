@@ -10,7 +10,7 @@ The frontend repository is at [github.com/gregjlake/discovery-insights](https://
 
 Identifying socioeconomic peer counties — places that share structural conditions despite geographic distance — is a common but methodologically inconsistent task in policy research, public health, and economic geography. Researchers typically select variables ad hoc and weight them arbitrarily.
 
-DiscoSights provides a gravity model with empirically calibrated distance decay (beta = 0.155), out-of-sample IRS migration validation (+0.113 rho improvement beyond population and geography), and documented weighting robustness (Jaccard = 0.891 across schemes). Example: McDowell County WV and Starr County TX share economic profiles across 17 datasets despite being 1,247 miles apart.
+DiscoSights provides a gravity model with empirically calibrated distance decay (beta = 0.152), out-of-sample IRS migration validation (+0.112 rho improvement beyond population and geography), and documented weighting robustness (Jaccard = 0.891 across schemes). Example: McDowell County WV and Starr County TX share economic profiles across 17 datasets despite being 1,247 miles apart.
 
 ## Installation
 
@@ -126,8 +126,8 @@ Unit tests cover core scientific functions (haversine, dissimilarity, gravity fo
 ## Model Summary
 
 - **17 active datasets** from Census, CDC, EPA, USDA, IRS, FEMA
-- **beta = 0.155** (empirically calibrated, R-squared = 0.313)
-- **IRS validation**: +0.113 rho improvement beyond population and geography
+- **beta = 0.152** (empirically calibrated, R-squared = 0.306)
+- **IRS validation**: +0.112 rho improvement beyond population and geography
 - **Weighting robustness**: domain-balanced Jaccard = 0.891
 - **3,135 counties** with pre-computed equilibrium positions
 - **9 FEMA disaster datasets** available for scatter exploration
