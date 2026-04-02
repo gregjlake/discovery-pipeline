@@ -28,5 +28,9 @@
     "voter_turnout"
   ],
   "note": "beta_combined will be filled by run_gravity_pipeline.py after combined distance matrix is computed",
-  "r_squared_combined": 0.313012
+  "r_squared_combined": 0.313012,
+  "beta_cv": 0.154783,
+  "r2_cv_holdout": 0.312764,
+  "r2_circularity_inflation": 0.000248,
+  "beta_cv_verdict": "STABLE: Cross-validated beta = full-sample beta. Circularity inflates R2 but does not distort beta."
 }

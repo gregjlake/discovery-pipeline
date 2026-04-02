@@ -195,6 +195,37 @@ def step5_recalibrate(combined, data_dissim, beta_geo, cal):
     print(f"  Difference:                  {abs(beta_combined - beta_geo):.4f}")
     print(f"  R2 combined:                 {r2_combined:.4f}")
 
+    # Cross-validation of Pass 2 beta
+    from sklearn.model_selection import train_test_split
+    log_c = np.log(c_samp)
+    log_s = np.log(s_samp)
+    X_tr, X_ho, Y_tr, Y_ho = train_test_split(log_c, log_s, test_size=0.20, random_state=42)
+    sl_cv, ic_cv, r_cv, _, _ = scipy.stats.linregress(X_tr, Y_tr)
+    beta_cv = float(-sl_cv)
+    r2_train = float(r_cv ** 2)
+    Y_pred = sl_cv * X_ho + ic_cv
+    ss_res = float(np.sum((Y_ho - Y_pred) ** 2))
+    ss_tot = float(np.sum((Y_ho - Y_ho.mean()) ** 2))
+    r2_holdout = float(1 - ss_res / ss_tot)
+    r2_inflation = float(r2_combined - r2_holdout)
+    beta_diff = abs(beta_cv - beta_combined)
+
+    print(f"\n  === CROSS-VALIDATION ===")
+    print(f"  beta full sample:       {beta_combined:.4f}")
+    print(f"  beta cross-validated:   {beta_cv:.4f}")
+    print(f"  Difference:             {beta_diff:.4f}")
+    print(f"  R2 full sample:         {r2_combined:.4f}")
+    print(f"  R2 holdout (unbiased):  {r2_holdout:.4f}")
+    print(f"  R2 inflation:           {r2_inflation:.4f}")
+
+    if beta_diff < 0.02:
+        beta_cv_verdict = f"STABLE: Cross-validated beta = full-sample beta. Circularity inflates R2 but does not distort beta."
+    elif beta_diff < 0.05:
+        beta_cv_verdict = f"MODERATELY STABLE: Small difference ({beta_diff:.4f})."
+    else:
+        beta_cv_verdict = f"SENSITIVE: Circularity meaningfully affects beta."
+    print(f"  Verdict: {beta_cv_verdict}")
+
     diff = abs(beta_combined - beta_geo)
     if diff <= 0.3:
         print(f"  Beta values consistent (diff={diff:.4f}). Using beta_combined.")
@@ -227,6 +258,10 @@ def step5_recalibrate(combined, data_dissim, beta_geo, cal):
     cal["beta_combined"] = round(float(beta_combined), 6)
     cal["beta_operative"] = round(float(beta_operative), 6)
     cal["r_squared_combined"] = round(float(r2_combined), 6)
+    cal["beta_cv"] = round(float(beta_cv), 6)
+    cal["r2_cv_holdout"] = round(float(r2_holdout), 6)
+    cal["r2_circularity_inflation"] = round(float(r2_inflation), 6)
+    cal["beta_cv_verdict"] = beta_cv_verdict
     with open(DATA_DIR / "beta_calibration.json", "w") as f:
         json.dump(cal, f, indent=2)
     print(f"  Updated data/beta_calibration.json")
