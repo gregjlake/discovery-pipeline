@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env", override=False)
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 
-# The 17 datasets and their primary value columns
+# The 20 active gravity model datasets and their primary value columns
 DATASETS = {
     "library":        "library_spend_per_capita",
     # mobility excluded: temporal mismatch (1978-2015 vs 2022 datasets)
@@ -76,7 +76,7 @@ def load_data():
 
     rv = pd.DataFrame(all_rows)
 
-    # Filter to our 17 primary columns
+    # Filter to our 20 primary columns
     target_pairs = set(DATASETS.items())
     rv = rv[rv.apply(lambda r: (r["dataset_id"], r["column_name"]) in target_pairs, axis=1)]
     print(f"  Filtered to 17 primary columns: {len(rv)} rows")

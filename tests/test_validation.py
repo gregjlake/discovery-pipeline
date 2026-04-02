@@ -16,10 +16,10 @@ To run integration tests against the live pipeline, use the admin
 API endpoint: POST /api/admin/run-pipeline and verify results
 against data/beta_calibration.json and data/validation_results.json.
 
-Current model values (voter_turnout_rate fix, 2026):
-    beta_operative = 0.152
-    R2_combined = 0.306
-    rho_validation = 0.164 (95% CI: 0.155-0.173)
+Current model values (20 variables, 2026-04-02):
+    beta_operative = 0.150
+    R2_combined = 0.299
+    rho_validation = 0.165 (95% CI: 0.155-0.173)
 """
 import pytest
 import numpy as np
@@ -40,7 +40,7 @@ def test_decomposition_monotonic():
     Uses known values from DiscoSights validation."""
     rho_population = 0.041
     rho_geography = 0.052
-    rho_full = 0.164
+    rho_full = 0.165
 
     assert rho_geography >= rho_population, "Adding geography should not decrease rho"
     assert rho_full >= rho_geography, "Adding data similarity should not decrease rho"
@@ -49,14 +49,14 @@ def test_decomposition_monotonic():
 
 def test_beta_range():
     """Operative beta should be in defensible range."""
-    beta_operative = 0.152
+    beta_operative = 0.150
     assert 0.05 <= beta_operative <= 2.0, f"beta={beta_operative} outside expected range [0.05, 2.0]"
 
 
 def test_r_squared_improvement():
     """Combined distance R-squared should far exceed geo-only R-squared."""
     r2_geo = 0.035
-    r2_combined = 0.306
+    r2_combined = 0.299
     improvement = (r2_combined - r2_geo) / r2_geo
     assert improvement > 5.0, f"Expected >500% R-squared improvement, got {improvement * 100:.0f}%"
 
