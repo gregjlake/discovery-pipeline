@@ -76,7 +76,11 @@ def main():
     pop = pd.read_csv(DATA_DIR / "county_population.csv", dtype={"fips": str})
     pop["fips"] = pop["fips"].str.zfill(5)
 
-    merged = pop[["fips", "population"]].merge(pivot, on="fips", how="inner")
+    # Filter to gravity model counties: centroids ∩ population (excludes CT planning regions)
+    centroids_csv = pd.read_csv(DATA_DIR / "county_centroids.csv", dtype={"fips": str})
+    centroids_csv["fips"] = centroids_csv["fips"].str.zfill(5)
+    gravity_fips = set(centroids_csv["fips"]) & set(pop["fips"])
+    merged = pop[pop["fips"].isin(gravity_fips)][["fips", "population"]].merge(pivot, on="fips", how="inner")
     # Use 0.5 imputation (matches gravity model) — no county exclusion
     for c in ds_cols:
         merged[c] = merged[c].astype(float).fillna(0.5)
