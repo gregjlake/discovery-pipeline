@@ -98,7 +98,7 @@ DATASET_REGISTRY = {
     'unemployment':   ('unemployment_rate',        'Unemployment rate'),
     'rural_urban':    ('rural_urban_code',         'Rural-urban continuum code (1-9)'),
     'housing_burden': ('housing_burden_rate',      'Cost-burdened renters (30%+ income)'),
-    'voter_turnout':  ('total_votes_2020',         'Total votes cast 2020 presidential'),
+    'voter_turnout':  ('voter_turnout_rate',     'Voter turnout rate (votes cast / population)'),
     'broadband_avail': ('internet_access_rate',     'Internet access rate (any type)'),
     'pop_density':    ('pop_density',               'Population density (people/sq mi)'),
     # FEMA National Risk Index (scatter only — excluded from gravity)

@@ -23,7 +23,7 @@ DiscoSights is a spatial interaction model for exploring socioeconomic similarit
 | poverty | Poverty Rate | Census SAIPE (Small Area Income and Poverty Estimates) | 2022 | % of population below poverty line | low |
 | rural_urban | Rural/Urban Classification | USDA Economic Research Service | 2023 | Rural-Urban Continuum Code (1=most urban, 9=most rural) | low |
 | unemployment | Unemployment Rate | Census ACS 5-Year, Table B23025 | 2018â€“2022 | % of labor force unemployed | low |
-| voter_turnout | Voter Turnout | MIT Election Data + Science Lab | 2020 | total votes cast (presidential election) | low |
+| voter_turnout | Voter Turnout Rate | MIT Election Data + Science Lab / Census ACS population | 2020 | votes cast / county population | low |
 
 Datasets flagged with [proxy] use indirect measurements. Datasets flagged with [diagnosis bias] measure diagnosed prevalence, which underestimates true prevalence in areas with limited healthcare access.
 
@@ -33,7 +33,7 @@ Force(i,j) = Pop(i) x Pop(j) / dist(i,j)^beta
 ```
 
 where:
-- beta = 0.154985 (empirically calibrated)
+- beta = 0.152249 (empirically calibrated)
 - dist(i,j) = geo_norm(i,j) x data_dissimilarity(i,j)
 - geo_norm = Haversine distance / max US distance (5,251 mi)
 - data_dissimilarity = normalized Euclidean distance across 17 datasets
@@ -42,26 +42,26 @@ where:
 Two-pass calibration procedure:
 
 **Pass 1 (geographic only):**
-- beta_geo = 0.054964
-- R-squared = 0.038172
+- beta_geo = 0.052357
+- R-squared = 0.035459
 - Method: OLS log-linear regression of socioeconomic similarity on geographic distance across 249,922 randomly sampled county pairs
 
 **Pass 2 (combined distance):**
-- beta_operative = 0.154985
-- R-squared = 0.313012
+- beta_operative = 0.152249
+- R-squared = 0.306163
 - Method: Same regression using combined distance (geo x data dissimilarity)
 
-The 8x improvement in R-squared from pass 1 to pass 2 (0.0382 -> 0.3130) confirms that socioeconomic distance adds predictive power beyond geography alone.
+The 8x improvement in R-squared from pass 1 to pass 2 (0.0355 -> 0.3062) confirms that socioeconomic distance adds predictive power beyond geography alone.
 
 ### Out-of-Sample Validation
 The model was validated against IRS Statistics of Income county-to-county migration flows (tax year 2019-2020, 51,445 county pairs). This data was not used in model calibration.
 
 Spearman rho (predicted force vs observed migration):
 - Population only:     0.0405
-- + Geographic dist:   0.0525
-- + Data similarity:   0.1650
+- + Geographic dist:   0.0519
+- + Data similarity:   0.1642
 
-Adding socioeconomic similarity improved migration prediction by +0.113 rho over geography alone -- validating the model's core premise that data similarity carries predictive information beyond physical proximity.
+Adding socioeconomic similarity improved migration prediction by +0.112 rho over geography alone -- validating the model's core premise that data similarity carries predictive information beyond physical proximity.
 
 ### Weighting Robustness Analysis
 Three weighting schemes were tested against IRS migration:
@@ -94,16 +94,16 @@ Disaster risk adds a genuinely independent dimension to county analysis. Two cou
 
 ### Dataset Structure
 PCA analysis of the 17 active datasets:
-- Effective dimensions: 5.43 / 17
-- Components for 80% variance: 8
+- Effective dimensions: 5.33 / 17
+- Components for 80% variance: 7
 - Components for 90% variance: 10
 
-**PC1 (38.3% of variance):**
-- Top drivers: median_income, diabetes, poverty, bea_income
+**PC1 (38.6% of variance):**
+- Top drivers: median_income, poverty, diabetes, bea_income
 - Interpretation: Economic deprivation axis
 
-**PC2 (12.1% of variance):**
-- Top drivers: housing_burden, rural_urban, unemployment, mental_health
+**PC2 (12.7% of variance):**
+- Top drivers: housing_burden, rural_urban, voter_turnout, mental_health
 - Interpretation: Urbanization axis
 
 **High collinearity pairs (|r| > 0.6):**

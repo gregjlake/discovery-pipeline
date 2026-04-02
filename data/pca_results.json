@@ -21,106 +21,106 @@
     "voter_turnout"
   ],
   "variance_explained": [
-    0.3831,
-    0.1208,
-    0.0737,
-    0.0593,
-    0.0548,
-    0.0532,
-    0.0479,
-    0.045,
-    0.0356,
-    0.0307,
-    0.0243,
-    0.0193,
-    0.0182,
-    0.014,
+    0.3864,
+    0.1272,
+    0.0706,
+    0.0587,
+    0.0547,
+    0.0535,
+    0.0502,
+    0.0449,
+    0.0333,
+    0.0257,
+    0.0237,
+    0.0192,
+    0.0178,
+    0.0142,
     0.0091,
-    0.0067,
+    0.0066,
     0.0042
   ],
   "cumulative_variance": [
-    0.3831,
-    0.5039,
-    0.5776,
-    0.6369,
-    0.6917,
-    0.7449,
-    0.7928,
-    0.8378,
-    0.8734,
-    0.9042,
-    0.9284,
-    0.9478,
+    0.3864,
+    0.5136,
+    0.5842,
+    0.6429,
+    0.6976,
+    0.7511,
+    0.8013,
+    0.8461,
+    0.8795,
+    0.9052,
+    0.9289,
+    0.9481,
     0.966,
-    0.98,
-    0.9891,
+    0.9802,
+    0.9892,
     0.9958,
     1.0
   ],
-  "n_components_80pct": 8,
+  "n_components_80pct": 7,
   "n_components_90pct": 10,
   "n_components_95pct": 13,
-  "effective_dimensions": 5.43,
+  "effective_dimensions": 5.33,
   "component_details": {
     "PC1": {
-      "variance_pct": 38.3,
+      "variance_pct": 38.6,
       "top_datasets": [
         "median_income",
-        "diabetes",
         "poverty",
+        "diabetes",
         "bea_income"
       ],
       "loadings": {
-        "median_income": 0.346,
-        "diabetes": -0.341,
-        "poverty": -0.336,
+        "median_income": 0.343,
+        "poverty": -0.338,
+        "diabetes": -0.338,
         "bea_income": 0.336
       }
     },
     "PC2": {
-      "variance_pct": 12.1,
+      "variance_pct": 12.7,
       "top_datasets": [
         "housing_burden",
         "rural_urban",
-        "unemployment",
+        "voter_turnout",
         "mental_health"
       ],
       "loadings": {
-        "housing_burden": 0.504,
-        "rural_urban": -0.443,
-        "unemployment": 0.36,
-        "mental_health": 0.285
+        "housing_burden": 0.496,
+        "rural_urban": -0.45,
+        "voter_turnout": -0.349,
+        "mental_health": 0.288
       }
     },
     "PC3": {
-      "variance_pct": 7.4,
+      "variance_pct": 7.1,
       "top_datasets": [
-        "voter_turnout",
         "library",
         "pop_density",
-        "food_access"
+        "voter_turnout",
+        "unemployment"
       ],
       "loadings": {
-        "voter_turnout": 0.53,
-        "library": 0.455,
-        "pop_density": 0.403,
-        "food_access": 0.322
+        "library": 0.541,
+        "pop_density": 0.456,
+        "voter_turnout": 0.389,
+        "unemployment": 0.344
       }
     },
     "PC4": {
       "variance_pct": 5.9,
       "top_datasets": [
         "air",
-        "library",
         "food_access",
-        "voter_turnout"
+        "pop_density",
+        "housing_burden"
       ],
       "loadings": {
-        "air": 0.756,
-        "library": 0.45,
-        "food_access": -0.299,
-        "voter_turnout": -0.219
+        "air": 0.776,
+        "food_access": -0.473,
+        "pop_density": -0.269,
+        "housing_burden": 0.205
       }
     },
     "PC5": {
@@ -132,25 +132,25 @@
         "unemployment"
       ],
       "loadings": {
-        "food_access": 0.684,
-        "pop_density": -0.443,
-        "air": 0.33,
-        "unemployment": 0.27
+        "food_access": 0.753,
+        "pop_density": -0.338,
+        "air": 0.293,
+        "unemployment": 0.236
       }
     },
     "PC6": {
-      "variance_pct": 5.3,
+      "variance_pct": 5.4,
       "top_datasets": [
-        "library",
-        "air",
         "pop_density",
+        "air",
+        "hypertension",
         "rural_urban"
       ],
       "loadings": {
-        "library": 0.653,
-        "air": -0.371,
-        "pop_density": -0.353,
-        "rural_urban": -0.309
+        "pop_density": 0.619,
+        "air": 0.386,
+        "hypertension": -0.282,
+        "rural_urban": 0.281
       }
     }
   },
@@ -237,5 +237,5 @@
     }
   ],
   "equal_weighting_assessment": "problematic",
-  "equal_weighting_note": "With 5.4 effective dimensions out of 17, equal weighting is problematic -- variance is concentrated in a few dimensions."
+  "equal_weighting_note": "With 5.3 effective dimensions out of 17, equal weighting is problematic -- variance is concentrated in a few dimensions."
 }

@@ -28,7 +28,7 @@ DATASETS = {
     "diabetes": "diabetes_rate", "mental_health": "mental_health_rate",
     "hypertension": "hypertension_rate", "unemployment": "unemployment_rate",
     "rural_urban": "rural_urban_code", "housing_burden": "housing_burden_rate",
-    "voter_turnout": "total_votes_2020", "pop_density": "pop_density",
+    "voter_turnout": "voter_turnout_rate", "pop_density": "pop_density",
 }
 
 KNOWN_TAUTOLOGICAL = {

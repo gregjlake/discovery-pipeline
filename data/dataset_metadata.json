@@ -205,17 +205,17 @@
     "data_type": "continuous"
   },
   "voter_turnout": {
-    "label": "Voter Turnout",
-    "source": "MIT Election Data + Science Lab",
+    "label": "Voter Turnout Rate",
+    "source": "MIT Election Data + Science Lab / Census ACS population",
     "source_url": "https://electionlab.mit.edu/data",
     "data_year": "2020",
     "year_type": "precise",
-    "unit": "total votes cast (presidential election)",
+    "unit": "votes cast / county population",
     "maup_sensitivity": "low",
-    "notes": "Raw vote count (total votes cast) in 2020 presidential election, NOT a turnout rate. No denominator (eligible voter population unavailable at county level). Confounded by county population — large counties show higher values regardless of civic engagement. 2020 had highest national turnout since 1900 (66.9%), driven by pandemic mail-in voting. Patterns may not reflect structural engagement.",
+    "notes": "Voter turnout rate computed as total votes cast in 2020 presidential election divided by county population. Uses total population as denominator (voting-age population unavailable at county level), so rates slightly underestimate true turnout. Correlation with population: r = -0.07 (population-independent). 2020 had highest national turnout since 1900 (66.9%).",
     "higher_is_better": true,
     "data_type": "continuous",
-    "direction_note": "Raw vote count (not a rate). Strongly confounded by county population size."
+    "direction_note": "Higher = more votes cast per capita."
   },
   "broadband_avail": {
     "label": "Internet Access Rate",
