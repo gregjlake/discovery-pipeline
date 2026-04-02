@@ -12,5 +12,8 @@
   "monotonic_by_bin": true,
   "interpretation": "Weak -- model captures some signal",
   "validation_data": "IRS SOI county-to-county migration inflows 2019-2020",
-  "validation_note": "Out-of-sample validation. IRS migration data was not used in beta calibration. Any correlation with migration flows reflects genuine predictive validity."
+  "validation_note": "Out-of-sample validation. IRS migration data was not used in beta calibration. Any correlation with migration flows reflects genuine predictive validity.",
+  "rho_ci_low": 0.1557,
+  "rho_ci_high": 0.1737,
+  "rho_ci_note": "Bootstrap 95% CI, 1000 iterations, seed=42"
 }

@@ -180,7 +180,20 @@ def step4_metrics(observed, predicted):
         interp = "ERROR: inverted relationship -- investigate immediately"
     print(f"  Interpretation: {interp}")
 
-    return rho, p_sp, r_log, p_log, monotonic, interp
+    # Bootstrap 95% CI on Spearman rho
+    print("\n  Bootstrap 95% CI (n=1000, seed=42):")
+    rng = np.random.default_rng(42)
+    n_obs = len(observed)
+    boot_rhos = []
+    for _ in range(1000):
+        idx = rng.integers(0, n_obs, n_obs)
+        rho_b, _ = stats.spearmanr(observed[idx], predicted[idx])
+        boot_rhos.append(rho_b)
+    ci_low = float(np.percentile(boot_rhos, 2.5))
+    ci_high = float(np.percentile(boot_rhos, 97.5))
+    print(f"  rho = {rho:.3f} (95% CI: {ci_low:.3f}-{ci_high:.3f})")
+
+    return rho, p_sp, r_log, p_log, monotonic, interp, ci_low, ci_high
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -254,7 +267,7 @@ def step5_decompose(observed, origins, dests, fips_to_pop, fips_to_lat, fips_to_
 # ═══════════════════════════════════════════════════════════════
 # STEP 6: STORE RESULTS
 # ═══════════════════════════════════════════════════════════════
-def step6_store(rho, p_sp, r_log, n_total, n_in_links, monotonic, interp, rho_a, rho_b, rho_c):
+def step6_store(rho, p_sp, r_log, n_total, n_in_links, monotonic, interp, rho_a, rho_b, rho_c, ci_low=None, ci_high=None):
     print("\n" + "=" * 60)
     print("STEP 6: STORE RESULTS")
     print("=" * 60)
@@ -277,6 +290,9 @@ def step6_store(rho, p_sp, r_log, n_total, n_in_links, monotonic, interp, rho_a,
             "Out-of-sample validation. IRS migration data was not used in beta calibration. "
             "Any correlation with migration flows reflects genuine predictive validity."
         ),
+        "rho_ci_low": round(ci_low, 4) if ci_low is not None else None,
+        "rho_ci_high": round(ci_high, 4) if ci_high is not None else None,
+        "rho_ci_note": "Bootstrap 95% CI, 1000 iterations, seed=42",
     }
 
     out = DATA_DIR / "validation_results.json"
@@ -305,10 +321,10 @@ def main():
     migration = step1_download()
     links_by_pair, fips_to_pop, fips_to_lat, fips_to_lon, beta_op, beta_geo = step2_load_model()
     observed, predicted, origins, dests = step3_align(migration, links_by_pair)
-    rho, p_sp, r_log, p_log, monotonic, interp = step4_metrics(observed, predicted)
+    rho, p_sp, r_log, p_log, monotonic, interp, ci_low, ci_high = step4_metrics(observed, predicted)
     n_in = int((predicted > 0).sum())
     rho_a, rho_b, rho_c = step5_decompose(observed, origins, dests, fips_to_pop, fips_to_lat, fips_to_lon, predicted, beta_geo)
-    result = step6_store(rho, p_sp, r_log, len(observed), n_in, monotonic, interp, rho_a, rho_b, rho_c)
+    result = step6_store(rho, p_sp, r_log, len(observed), n_in, monotonic, interp, rho_a, rho_b, rho_c, ci_low, ci_high)
 
     print("\n" + "=" * 60)
     print("VALIDATION RESULTS")

@@ -25,23 +25,23 @@ The model uses 17 county-level datasets from US government sources spanning 2018
 
 | Dataset | Source | Year | Unit | Domain |
 |---------|--------|------|------|--------|
-| Air Quality | EPA Air Quality System (AQS) | 2022 | inverted Median AQI (higher =  | Infrastructure |
-| ACS Per Capita Income | US Census Bureau, American Community Survey 5 | 2018â€“2022 | per capita personal income ($/ | Economic |
-| Broadband Subscription Rate | Census ACS 5-Year, Table B28002 | 2018â€“2022 | household broadband subscripti | Infrastructure |
-| Diabetes Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with diagnosed dia | Health |
-| EITC Uptake | IRS Statistics of Income | Tax Year 2022 | EITC returns / total returns f | Economic |
-| Low Food Access | USDA Economic Research Service Food Access Re | 2019 | % population with low food acc | Infrastructure |
-| Housing Burden | Census ACS 5-Year, Table B25070 | 2018â€“2022 | % of renters paying 30%+ of in | Infrastructure |
-| Hypertension Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with high blood pr | Health |
+| Air Quality | EPA Air Quality System (AQS) | 2022 | inverted Median AQI (higher = clean | Infrastructure |
+| ACS Per Capita Income | US Census Bureau, American Community Survey 5 | 2018â€“2022 | per capita personal income ($/year) | Economic |
+| Broadband Subscription Rate | Census ACS 5-Year, Table B28002 | 2018â€“2022 | household broadband subscription ra | Infrastructure |
+| Diabetes Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with diagnosed diabetes | Health |
+| EITC Uptake | IRS Statistics of Income | Tax Year 2022 | EITC returns / total returns filed | Economic |
+| Low Food Access | USDA Economic Research Service Food Access Re | 2019 | % population with low food access | Infrastructure |
+| Housing Burden | Census ACS 5-Year, Table B25070 | 2018â€“2022 | % of renters paying 30%+ of income  | Infrastructure |
+| Hypertension Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with high blood pressur | Health |
 | Library Access | IMLS Public Libraries Survey | FY 2022 | $/capita operating expenditure | Civic |
 | Median Income | Census SAIPE | 2022 | median household income ($) | Economic |
-| Mental Health | CDC PLACES (BRFSS-based) | 2022 | % of adults with frequent ment | Health |
+| Mental Health | CDC PLACES (BRFSS-based) | 2022 | % of adults with frequent mental di | Health |
 | Obesity Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with BMI â‰¥ 30 | Health |
 | Population Density | Census ACS 2022 population + Census Gazetteer | 2022 | people per square mile | Civic |
-| Poverty Rate | Census SAIPE (Small Area Income and Poverty E | 2022 | % of population below poverty  | Economic |
-| Rural/Urban Classification | USDA Economic Research Service | 2023 | Rural-Urban Continuum Code (1= | Civic |
+| Poverty Rate | Census SAIPE (Small Area Income and Poverty E | 2022 | % of population below poverty line | Economic |
+| Rural/Urban Classification | USDA Economic Research Service | 2023 | Rural-Urban Continuum Code (1=most  | Civic |
 | Unemployment Rate | Census ACS 5-Year, Table B23025 | 2018â€“2022 | % of labor force unemployed | Economic |
-| Voter Turnout | MIT Election Data + Science Lab | 2020 | total votes cast (presidential | Civic |
+| Voter Turnout | MIT Election Data + Science Lab | 2020 | total votes cast (presidential elec | Civic |
 
 Two additional datasets are available for scatter plot exploration but excluded from the gravity distance calculation:
 
@@ -130,7 +130,7 @@ Spearman rank correlations (rho) for progressively complex models:
 |-------|-----|-------|
 | Population only | 0.0405 | -- |
 | + Geographic distance | 0.0525 | +0.0120 |
-| + Data similarity (full model) | 0.1650 | +0.1125 |
+| + Data similarity (full model) | 0.1650 (95% CI: 0.1557-0.1737) | +0.1125 |
 
 Adding socioeconomic similarity improved prediction by +0.113 rho -- a 214% relative improvement over population plus geography alone. The monotonicity check (mean predicted force increases with observed migration volume across all five bins) passes, confirming the model captures real directional signal.
 
@@ -235,6 +235,8 @@ The low effective dimensionality (5.43 of 17) reflects genuine covariation in US
 12. **Population dominance.** With beta = 0.155, population product explains 95.6% of raw force variance. The gravity model's force values are population-dominated for large counties. The peer discovery feature uses data-space Euclidean distance directly, which is population-independent, to find similar counties regardless of size.
 
 13. **Validation zero-inflation.** Of the 51,445 IRS migration pairs, only those appearing in the gravity model's top-10,000 pre-computed links receive nonzero predicted force; remaining pairs receive force = 0. The Spearman rho = 0.165 reflects both ranking accuracy and binary link discrimination. The monotonic bin analysis provides a complementary assessment less sensitive to zero-inflation.
+
+14. **Spatial autocorrelation.** Formal Moran's I analysis of model residuals was not completed. Counties with similar socioeconomic profiles are geographically clustered (e.g., Appalachian counties, Mississippi Delta), meaning IRS validation residuals may be spatially autocorrelated. This would not invalidate the rho = 0.165 result but would mean the effective sample size is smaller than n = 51,445 pairs. Spatial autocorrelation analysis is a direction for future work.
 
 ## 8. Software and Reproducibility
 

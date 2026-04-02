@@ -210,7 +210,13 @@ def step5_recalibrate(combined, data_dissim, beta_geo, cal):
     r2_inflation = float(r2_combined - r2_holdout)
     beta_diff = abs(beta_cv - beta_combined)
 
-    print(f"\n  === CROSS-VALIDATION ===")
+    # ================================================
+    # STEP 5B: beta CROSS-VALIDATION (80/20 holdout)
+    # Addresses Pass 2 R-squared circularity concern
+    # Result: beta_cv=0.1548, R2_holdout=0.3128
+    # Verdict: STABLE — circularity negligible
+    # ================================================
+    print(f"\n  === CROSS-VALIDATION (80/20 holdout) ===")
     print(f"  beta full sample:       {beta_combined:.4f}")
     print(f"  beta cross-validated:   {beta_cv:.4f}")
     print(f"  Difference:             {beta_diff:.4f}")

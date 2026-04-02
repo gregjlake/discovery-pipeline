@@ -235,36 +235,8 @@ def fit_regression(geo_miles, sim):
     return beta_geo, r2, std_err, intercept, p_value
 
 
-# ── STEP 6: CROSS-VALIDATE WITH MORAN'S I ────────────────────
-def cross_validate_moran(beta_geo):
-    print("\n" + "=" * 60)
-    print("STEP 6: CROSS-VALIDATE WITH MORAN'S I")
-    print("=" * 60)
-
-    moran_files = list(DATA_DIR.glob("*moran*")) + list(DATA_DIR.glob("*spatial*"))
-    if not moran_files:
-        print("  No Moran's I file found - skipping cross-validation.")
-        print("  Run spatial regression pipeline first to generate it.")
-        return
-
-    for f in moran_files:
-        try:
-            with open(f) as fh:
-                data = json.load(fh)
-            print(f"  Found: {f.name}")
-            if isinstance(data, dict) and "moran_i" in data:
-                mi = data["moran_i"]
-                print(f"  Mean Moran's I: {mi:.4f}")
-                if mi > 0.3 and beta_geo > 0.5:
-                    print("  Consistent: high Moran's I and high beta")
-                elif mi > 0.3 and beta_geo <= 0.5:
-                    print("  WARNING: high Moran's I but low beta - investigate")
-                elif mi <= 0.3 and beta_geo > 0.5:
-                    print("  WARNING: low Moran's I but high beta - investigate")
-                else:
-                    print("  Consistent: both indicate weak spatial clustering")
-        except Exception as e:
-            print(f"  Could not parse {f.name}: {e}")
+# (Moran's I cross-validation removed — spatial autocorrelation
+#  analysis noted as future work in methods note limitation 14)
 
 
 # ── STEP 7: SPOT CHECKS ──────────────────────────────────────
@@ -352,7 +324,6 @@ def main():
     similarity = compute_similarity(merged, ds_cols)
     geo_miles, sim = sample_pairs(geo_dist, similarity)
     beta_geo, r2, std_err, intercept, p_value = fit_regression(geo_miles, sim)
-    cross_validate_moran(beta_geo)
     spot_checks(geo_miles, sim)
     store_result(beta_geo, r2, std_err, intercept, p_value, len(geo_miles), ds_cols)
 

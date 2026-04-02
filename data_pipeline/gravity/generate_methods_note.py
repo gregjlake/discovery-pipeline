@@ -43,7 +43,9 @@ ds_domain = {
 ds_rows = []
 for ds_id in sorted(ds_used):
     m = meta.get(ds_id, {})
-    ds_rows.append(f"| {m.get('label', ds_id)} | {m.get('source', 'N/A')[:45]} | {m.get('data_year', 'N/A')} | {m.get('unit', 'N/A')[:30]} | {ds_domain.get(ds_id, '?')} |")
+    def ascii_safe(s):
+        return s.replace('\u2013', '-').replace('\u2014', '-').replace('\u2265', '>=').replace('\u2019', "'")
+    ds_rows.append(f"| {ascii_safe(m.get('label', ds_id))} | {ascii_safe(m.get('source', 'N/A'))[:45]} | {ascii_safe(m.get('data_year', 'N/A'))} | {ascii_safe(m.get('unit', 'N/A'))[:35]} | {ds_domain.get(ds_id, '?')} |")
 ds_table = "| Dataset | Source | Year | Unit | Domain |\n|---------|--------|------|------|--------|\n" + "\n".join(ds_rows)
 
 top_collinear = pca.get('unexpected_collinear_pairs', [])[:5]
@@ -176,7 +178,7 @@ Spearman rank correlations (rho) for progressively complex models:
 |-------|-----|-------|
 | Population only | {val['model_a_rho']:.4f} | -- |
 | + Geographic distance | {val['model_b_rho']:.4f} | +{val['model_b_rho'] - val['model_a_rho']:.4f} |
-| + Data similarity (full model) | {val['model_c_rho']:.4f} | +{val['improvement_b_to_c']:.4f} |
+| + Data similarity (full model) | {val['model_c_rho']:.4f} (95% CI: {val.get('rho_ci_low', 'N/A')}-{val.get('rho_ci_high', 'N/A')}) | +{val['improvement_b_to_c']:.4f} |
 
 Adding socioeconomic similarity improved prediction by +{val['improvement_b_to_c']:.3f} rho -- a {rho_relative_improvement}% relative improvement over population plus geography alone. The monotonicity check (mean predicted force increases with observed migration volume across all five bins) passes, confirming the model captures real directional signal.
 
@@ -277,6 +279,8 @@ The low effective dimensionality ({pca['effective_dimensions']:.2f} of {len(ds_u
 12. **Population dominance.** With beta = {beta['beta_operative']:.3f}, population product explains 95.6% of raw force variance. The gravity model's force values are population-dominated for large counties. The peer discovery feature uses data-space Euclidean distance directly, which is population-independent, to find similar counties regardless of size.
 
 13. **Validation zero-inflation.** Of the {val['n_pairs_total']:,} IRS migration pairs, only those appearing in the gravity model's top-10,000 pre-computed links receive nonzero predicted force; remaining pairs receive force = 0. The Spearman rho = {val['model_c_rho']:.3f} reflects both ranking accuracy and binary link discrimination. The monotonic bin analysis provides a complementary assessment less sensitive to zero-inflation.
+
+14. **Spatial autocorrelation.** Formal Moran's I analysis of model residuals was not completed. Counties with similar socioeconomic profiles are geographically clustered (e.g., Appalachian counties, Mississippi Delta), meaning IRS validation residuals may be spatially autocorrelated. This would not invalidate the rho = {val['model_c_rho']:.3f} result but would mean the effective sample size is smaller than n = {val['n_pairs_total']:,} pairs. Spatial autocorrelation analysis is a direction for future work.
 
 ## 8. Software and Reproducibility
 
