@@ -1,0 +1,63 @@
+{
+  "mean_jaccard_gravity_vs_knn": 0.01,
+  "median_jaccard_gravity_vs_knn": 0.0,
+  "pct_counties_j_above_50": 0.0,
+  "pct_counties_j_above_75": 0.0,
+  "n_counties_compared": 729,
+  "k_neighbors": 20,
+  "distance_metric": "euclidean",
+  "interpretation": "LOW OVERLAP (J=0.010): The gravity cache stores only the top 10,000 county pairs by force, which are population-dominated (96.2% of force variance). KNN finds the most data-similar counties regardless of population. For small counties, gravity peers are large distant counties while KNN peers are small similar ones. The Residual and Affinity force views in DiscoSights address this by removing population effects. The peer discovery search feature uses data-space Euclidean distance directly (equivalent to KNN), not the population-weighted force values.",
+  "top_diverging_counties": [
+    {
+      "fips": "01003",
+      "name": "Baldwin",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01015",
+      "name": "Calhoun",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01043",
+      "name": "Cullman",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01051",
+      "name": "Elmore",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01055",
+      "name": "Etowah",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01069",
+      "name": "Houston",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01073",
+      "name": "Jefferson",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01077",
+      "name": "Lauderdale",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01081",
+      "name": "Lee",
+      "jaccard": 0.0
+    },
+    {
+      "fips": "01083",
+      "name": "Limestone",
+      "jaccard": 0.0
+    }
+  ],
+  "note": "Low Jaccard reflects gravity link selection bias (top 10k by force), not peer-finding quality. County search uses KNN-equivalent distance."
+}

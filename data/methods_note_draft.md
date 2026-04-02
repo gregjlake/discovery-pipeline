@@ -175,7 +175,11 @@ The near-orthogonality of overall disaster risk and economic disadvantage (r = 0
 
 **Food Access Variable Replacement.** The original food_access variable (SNAP participation rate, r = 0.784 with poverty) was replaced with the USDA Food Access Research Atlas 2019 measure of physical proximity to grocery stores. The USDA measure correlates at r = -0.048 with poverty, confirming it captures a fundamentally different dimension -- physical geographic access rather than economic need. This replacement transforms food_access from a near-redundant poverty proxy into a genuinely independent infrastructure measure.
 
-### 5.5 Benchmark Comparison
+### 5.5 KNN Baseline Comparison
+
+To evaluate what the gravity formulation adds beyond simple nearest-neighbor search in data space, we compared gravity model peer lists (top 20 by force_strength) to k-nearest-neighbors (KNN, k=20) using Euclidean distance on the same 17 normalized variables. Mean Jaccard similarity: 0.010. This low overlap reflects that the gravity cache stores only the top 10,000 county pairs by force, which are population-dominated (96.2% of force variance). KNN finds the most data-similar counties regardless of population. For small counties, gravity peers are large distant counties while KNN peers are small similar ones. The county search feature in DiscoSights uses data-space Euclidean distance directly (equivalent to KNN), ensuring peer discovery is population-independent. The Residual force view addresses population dominance by removing the population prediction from force values.
+
+### 5.6 Benchmark Comparison
 
 The correlation between county poverty rate and economic mobility (Opportunity Atlas) provides a benchmark against published estimates. Chetty et al. (2014) reported r approximately -0.60 at the commuting zone level.
 

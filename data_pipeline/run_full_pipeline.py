@@ -50,6 +50,7 @@ def run_pipeline(steps: list = None):
         ("Terrain Generation", "data_pipeline/gravity/compute_terrain.py"),
         ("Pre-computed Layout", "data_pipeline/gravity/compute_layout.py"),
         ("Margins of Error", "data_pipeline/gravity/fetch_margins_of_error.py"),
+        ("KNN Baseline Comparison", "data_pipeline/gravity/compute_knn_baseline.py"),
         ("Methodology Document", "data_pipeline/gravity/generate_methodology.py"),
     ]
 
