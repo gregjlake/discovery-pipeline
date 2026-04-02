@@ -94,36 +94,35 @@ Disaster risk adds a genuinely independent dimension to county analysis. Two cou
 
 ### Dataset Structure
 PCA analysis of the 17 active datasets:
-- Effective dimensions: 5.12 / 17
-- Components for 80% variance: 7
+- Effective dimensions: 5.43 / 17
+- Components for 80% variance: 8
 - Components for 90% variance: 10
 
-**PC1 (39.5% of variance):**
-- Top drivers: median_income, diabetes, bea_income, poverty
+**PC1 (38.3% of variance):**
+- Top drivers: median_income, diabetes, poverty, bea_income
 - Interpretation: Economic deprivation axis
 
-**PC2 (13.5% of variance):**
-- Top drivers: housing_burden, rural_urban, voter_turnout, unemployment
+**PC2 (12.1% of variance):**
+- Top drivers: housing_burden, rural_urban, unemployment, mental_health
 - Interpretation: Urbanization axis
 
 **High collinearity pairs (|r| > 0.6):**
-  - diabetes x eitc: r=0.765
-  - diabetes x poverty: r=0.737
-  - broadband x diabetes: r=-0.701
-  - diabetes x median_income: r=-0.700
-  - bea_income x eitc: r=-0.684
+  - diabetes x eitc: r=0.737
+  - diabetes x poverty: r=0.705
+  - bea_income x eitc: r=-0.683
   - eitc x median_income: r=-0.683
-  - broadband x median_income: r=0.671
-  - hypertension x median_income: r=-0.659
-  - broadband x poverty: r=-0.650
-  - bea_income x obesity: r=-0.646
-  - bea_income x diabetes: r=-0.638
-  - bea_income x mental_health: r=-0.638
-  - broadband x hypertension: r=-0.635
-  - eitc x hypertension: r=0.629
-  - eitc x mental_health: r=0.629
-  - mental_health x poverty: r=0.622
-  - bea_income x broadband: r=0.619
+  - diabetes x median_income: r=-0.678
+  - broadband x diabetes: r=-0.674
+  - broadband x median_income: r=0.670
+  - broadband x poverty: r=-0.641
+  - hypertension x median_income: r=-0.638
+  - bea_income x mental_health: r=-0.626
+  - bea_income x broadband: r=0.623
+  - broadband x hypertension: r=-0.623
+  - bea_income x diabetes: r=-0.619
+  - bea_income x obesity: r=-0.612
+  - eitc x hypertension: r=0.610
+  - eitc x mental_health: r=0.607
 
 Note: Low effective dimensions reflect genuine structure in US county data -- economic, health, and social outcomes are deeply correlated. This is not a measurement artifact. Weighting robustness analysis confirms it does not distort findings.
 

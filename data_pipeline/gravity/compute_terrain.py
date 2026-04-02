@@ -77,9 +77,9 @@ def main():
     pop["fips"] = pop["fips"].str.zfill(5)
 
     merged = pop[["fips", "population"]].merge(pivot, on="fips", how="inner")
-    merged = merged.dropna(subset=ds_cols, thresh=len(ds_cols)-2)
+    # Use 0.5 imputation (matches gravity model) — no county exclusion
     for c in ds_cols:
-        merged[c] = merged[c].astype(float).fillna(merged[c].median())
+        merged[c] = merged[c].astype(float).fillna(0.5)
 
     fips_list = merged["fips"].values
     populations = merged["population"].values.astype(float)

@@ -60,7 +60,7 @@ DiscoSights combines three related but distinct analytical objects that should n
 
 **Gravity Model (force_strength):** The core spatial interaction model computing attraction between all county pairs. Force(i,j) = Pop(i) x Pop(j) / dist(i,j)^beta. This is what the IRS migration validation tests. Output: a 3,135 x 3,135 sparse matrix of force values (top 10,000 pairs stored).
 
-**Terrain Visualization (PCA projection):** An independent visualization of the 17-dataset data structure using Principal Component Analysis. Counties are projected to 2D (PC1 = economic deprivation 39.5%, PC2 = urbanization 13.5%). Gravitational potential height represents county density in this 2D space -- how many counties share a similar profile. This visualization is derived entirely from the dataset vectors, not from the gravity model formula.
+**Terrain Visualization (PCA projection):** An independent visualization of the 17-dataset data structure using Principal Component Analysis. Counties are projected to 2D (PC1 = economic deprivation 38.3%, PC2 = urbanization 12.1%). Gravitational potential height represents county density in this 2D space -- how many counties share a similar profile. This visualization is derived entirely from the dataset vectors, not from the gravity model formula.
 
 **Dot Layout (spring layout):** The Map/Dots view uses Fruchterman-Reingold spring layout (NetworkX, seed=42, 300 iterations) with force_strength values as edge weights. This places similar counties near each other visually. The equilibrium positions are graph layout artifacts, not gravitational minima. Layout is deterministic and reproducible but should not be interpreted as a physical simulation.
 
@@ -191,22 +191,22 @@ Both factors predict the observed gap and are consistent with the county-commuti
 
 PCA analysis of the 17 active datasets reveals:
 
-- Effective dimensions (participation ratio): 5.12 / 17
-- Components for 80% cumulative variance: 7
+- Effective dimensions (participation ratio): 5.43 / 17
+- Components for 80% cumulative variance: 8
 - Components for 90% cumulative variance: 10
 
-**PC1 (39.5% of variance):** Economic deprivation axis. Top loadings: median_income, diabetes, bea_income, poverty. Poverty, income, EITC uptake, and health outcomes load together as a single structural factor -- consistent with the concentrated disadvantage literature.
+**PC1 (38.3% of variance):** Economic deprivation axis. Top loadings: median_income, diabetes, poverty, bea_income. Poverty, income, EITC uptake, and health outcomes load together as a single structural factor -- consistent with the concentrated disadvantage literature.
 
-**PC2 (13.5% of variance):** Urbanization axis. Top loadings: housing_burden, rural_urban, voter_turnout, unemployment.
+**PC2 (12.1% of variance):** Urbanization axis. Top loadings: housing_burden, rural_urban, unemployment, mental_health.
 
-The low effective dimensionality (5.12 of 17) reflects genuine covariation in US county data rather than measurement redundancy. Weighting robustness analysis (Section 5.2) confirms this concentration does not distort peer-finding results.
+The low effective dimensionality (5.43 of 17) reflects genuine covariation in US county data rather than measurement redundancy. Weighting robustness analysis (Section 5.2) confirms this concentration does not distort peer-finding results.
 
 **High collinearity pairs (|r| > 0.6):**
-  - diabetes x eitc: r = 0.765
-  - diabetes x poverty: r = 0.737
-  - broadband x diabetes: r = -0.701
-  - diabetes x median_income: r = -0.700
-  - bea_income x eitc: r = -0.684
+  - diabetes x eitc: r = 0.737
+  - diabetes x poverty: r = 0.705
+  - bea_income x eitc: r = -0.683
+  - eitc x median_income: r = -0.683
+  - diabetes x median_income: r = -0.678
 
 ## 7. Known Limitations
 

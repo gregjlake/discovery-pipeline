@@ -68,17 +68,31 @@ def main():
     rv = rv[rv.apply(lambda r: (r["dataset_id"], r["column_name"]) in target, axis=1)]
     pivot = rv.pivot_table(index="fips", columns="dataset_id", values="value", aggfunc="first").reset_index()
 
-    # Keep only counties with data for most datasets
+    # Filter to gravity model counties (same as calibrate_beta: inner join with centroids)
+    centroids = pd.read_csv(DATA_DIR / "county_centroids.csv", dtype={"fips": str})
+    centroids["fips"] = centroids["fips"].str.zfill(5)
+    pop = pd.read_csv(DATA_DIR / "county_population.csv", dtype={"fips": str})
+    pop["fips"] = pop["fips"].str.zfill(5)
+    gravity_fips = set(centroids["fips"]) & set(pop["fips"])
+
     available = [c for c in dataset_cols if c in pivot.columns]
-    df = pivot[["fips"] + available].dropna(thresh=len(available) - 2)
-    print(f"Counties with near-complete data: {len(df)}")
+    df = pivot[["fips"] + available].copy()
+    df = df[df["fips"].isin(gravity_fips)]
+    print(f"Counties (matching gravity model): {len(df)}")
     print(f"Available datasets: {len(available)}")
 
-    # Fill remaining NaN with column median
+    # Min-max normalize then fill NaN with 0.5 (matches gravity model)
     for c in available:
         df[c] = pd.to_numeric(df[c], errors="coerce")
-        median = df[c].median()
-        df[c] = df[c].fillna(median)
+        cmin, cmax = df[c].min(), df[c].max()
+        if cmax > cmin:
+            df[c] = (df[c] - cmin) / (cmax - cmin)
+        else:
+            df[c] = 0.5
+        missing = df[c].isna().sum()
+        if missing > 0:
+            print(f"  Imputing {missing} missing values in {c} with 0.5")
+            df[c] = df[c].fillna(0.5)
 
     vectors = df[available].values.astype(float)
 
