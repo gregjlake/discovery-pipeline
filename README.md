@@ -2,7 +2,7 @@
 
 ## Overview
 
-DiscoSights is a spatial interaction model for US county socioeconomic similarity. This repository contains the data ingestion pipeline, gravity model calibration, validation scripts, and FastAPI backend serving the live tool at https://discovery-surface-spark.lovable.app.
+DiscoSights is a configurable county similarity and correlation explorer for US policy research. It identifies structural peer counties — places that share similar socioeconomic profiles despite geographic distance — using Euclidean distance in a normalized 20-variable space. A module system lets researchers define what "similar" means for their research question: economic mobility, health equity, infrastructure, community vitality, or any custom variable combination. A gravity model (beta = 0.150, IRS validation rho = 0.165) provides the visualization framework and validates that the similarity space captures real-world county affinity. This repository contains the data pipeline, model calibration, validation scripts, and FastAPI backend serving the live tool at https://discovery-surface-spark.lovable.app.
 
 The frontend repository is at [github.com/gregjlake/discovery-insights](https://github.com/gregjlake/discovery-insights).
 
