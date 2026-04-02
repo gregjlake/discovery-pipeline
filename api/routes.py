@@ -1170,6 +1170,17 @@ def _check_admin(request):
     return provided == admin_key
 
 
+# ── GET /correlation-insights ─────────────────────────────────
+@router.get('/correlation-insights')
+def correlation_insights():
+    from fastapi.responses import JSONResponse
+    try:
+        data = fetch_cache_file('correlation_insights.json')
+    except Exception as e:
+        return JSONResponse(status_code=503, content={"error": f"correlation_insights.json unavailable: {e}"})
+    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
+
+
 # ── GET /knn-comparison ───────────────────────────────────────
 @router.get('/knn-comparison')
 def knn_comparison():
