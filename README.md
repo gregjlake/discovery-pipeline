@@ -146,6 +146,10 @@ See `data/dataset_metadata.json` for full provenance. Key sources:
 - IMLS Public Libraries Survey (FY 2022)
 - MIT Election Data + Science Lab (2020)
 
+## Static Data Export
+
+The normalized county data matrix (3,135 counties x 17 variables) is available at `data/county_data_matrix.csv`. This allows inspection and reproduction of distance calculations without database credentials. Each row is a county (FIPS code), each column is a min-max normalized dataset value (0-1 scale, 0.5 = imputed missing).
+
 ## Reproducing Key Results
 
 The key validation results can be verified two ways:
