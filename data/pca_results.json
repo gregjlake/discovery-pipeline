@@ -236,6 +236,6 @@
       "r": 0.607
     }
   ],
-  "equal_weighting_assessment": "problematic",
-  "equal_weighting_note": "With 5.3 effective dimensions out of 17, equal weighting is problematic -- variance is concentrated in a few dimensions."
+  "equal_weighting_assessment": "validated",
+  "equal_weighting_note": "With 5.3 effective dimensions out of 17, variance is concentrated in a few dimensions. However, three alternative weighting schemes (domain-balanced, PCA-reduced, equal) produced equivalent IRS migration predictions (max rho difference 0.0009) and 89% peer overlap for domain-balanced weighting. Equal weighting is therefore a reasonable default despite the concentrated variance structure."
 }

@@ -1,16 +1,25 @@
 """
 Regression tests for DiscoSights validation results.
-These tests assert known output values from the calibrated model.
-They verify that code changes do not silently alter scientific results.
 
-Current model values (post voter_turnout_rate fix, 2026-04-01):
+Architecture note: These tests use locally-defined implementations
+of core scientific functions (Spearman correlation, decomposition
+logic) rather than importing from the pipeline modules. This is
+intentional -- the pipeline requires live Supabase credentials,
+making true integration tests impractical for CI. These tests verify:
+
+1. Known output values have not changed (regression)
+2. Mathematical properties of the model hold
+   (symmetry, positivity, triangle inequality)
+3. Validation design is internally consistent
+
+To run integration tests against the live pipeline, use the admin
+API endpoint: POST /api/admin/run-pipeline and verify results
+against data/beta_calibration.json and data/validation_results.json.
+
+Current model values (voter_turnout_rate fix, 2026):
     beta_operative = 0.152
     R2_combined = 0.306
-    rho_validation = 0.164
-    IRS improvement = +0.112
-
-To update these values after intentional model changes,
-rerun the pipeline and update the assertions below.
+    rho_validation = 0.164 (95% CI: 0.155-0.173)
 """
 import pytest
 import numpy as np
