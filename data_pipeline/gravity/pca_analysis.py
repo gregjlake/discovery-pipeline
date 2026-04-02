@@ -29,6 +29,8 @@ DATASETS = {
     "hypertension": "hypertension_rate", "unemployment": "unemployment_rate",
     "rural_urban": "rural_urban_code", "housing_burden": "housing_burden_rate",
     "voter_turnout": "voter_turnout_rate", "pop_density": "pop_density",
+    "bachelors_rate": "bachelors_rate", "median_age": "median_age",
+    "homeownership_rate": "homeownership_rate",
 }
 
 KNOWN_TAUTOLOGICAL = {

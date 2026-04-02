@@ -1,12 +1,12 @@
 {
-  "mean_jaccard_gravity_vs_knn": 0.01,
+  "mean_jaccard_gravity_vs_knn": 0.011,
   "median_jaccard_gravity_vs_knn": 0.0,
   "pct_counties_j_above_50": 0.0,
   "pct_counties_j_above_75": 0.0,
-  "n_counties_compared": 729,
+  "n_counties_compared": 730,
   "k_neighbors": 20,
   "distance_metric": "euclidean",
-  "interpretation": "Peer discovery (Euclidean distance) matches KNN exactly (J=1.000). Gravity force links (J=0.010) diverge because force is 96.2% population-dominated. DiscoSights separates these: force powers the visualization, Euclidean distance powers peer discovery.",
+  "interpretation": "LOW OVERLAP: Population weighting drives gravity divergence from pure data-space KNN.",
   "top_diverging_counties": [
     {
       "fips": "01003",
@@ -39,11 +39,6 @@
       "jaccard": 0.0
     },
     {
-      "fips": "01073",
-      "name": "Jefferson",
-      "jaccard": 0.0
-    },
-    {
       "fips": "01077",
       "name": "Lauderdale",
       "jaccard": 0.0
@@ -57,9 +52,11 @@
       "fips": "01083",
       "name": "Limestone",
       "jaccard": 0.0
+    },
+    {
+      "fips": "01089",
+      "name": "Madison",
+      "jaccard": 0.0
     }
-  ],
-  "note": "Low Jaccard reflects gravity link selection bias (top 10k by force), not peer-finding quality. County search uses KNN-equivalent distance.",
-  "peer_discovery_vs_knn_jaccard": 1.0,
-  "force_links_vs_knn_jaccard": 0.01
+  ]
 }

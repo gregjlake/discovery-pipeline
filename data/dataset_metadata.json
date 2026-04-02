@@ -15,11 +15,11 @@
     "label": "Economic Mobility",
     "source": "Opportunity Atlas (Chetty et al.)",
     "source_url": "https://opportunityinsights.org",
-    "data_year": "1978–2015",
+    "data_year": "1978\u00e2\u20ac\u201c2015",
     "year_type": "historical",
     "unit": "mean household income rank at age 35 (percentile)",
     "maup_sensitivity": "medium",
-    "notes": "Excluded from gravity model distance calculation due to temporal mismatch — reflects outcomes of children born 1978-1983 (measured through 2015). Using alongside 2022 current-conditions datasets would conflate different eras of American economic geography. Available for scatter plot exploration as a historical structural indicator.",
+    "notes": "Excluded from gravity model distance calculation due to temporal mismatch \u00e2\u20ac\u201d reflects outcomes of children born 1978-1983 (measured through 2015). Using alongside 2022 current-conditions datasets would conflate different eras of American economic geography. Available for scatter plot exploration as a historical structural indicator.",
     "higher_is_better": true,
     "data_type": "continuous",
     "excluded_from_gravity": true
@@ -32,7 +32,7 @@
     "year_type": "precise",
     "unit": "inverted Median AQI (higher = cleaner)",
     "maup_sensitivity": "low",
-    "notes": "Inverted Median AQI: computed as 200 − Median AQI, so higher value = cleaner air. Annual county AQI summary from EPA monitoring stations. Only 973 counties (~31%) have direct measurements with 50+ monitoring days. Counties without monitors are absent (not modeled/interpolated). Monitor placement is non-random. Air quality is spatially smooth, making county-level aggregation appropriate (low MAUP).",
+    "notes": "Inverted Median AQI: computed as 200 \u00e2\u02c6\u2019 Median AQI, so higher value = cleaner air. Annual county AQI summary from EPA monitoring stations. Only 973 counties (~31%) have direct measurements with 50+ monitoring days. Counties without monitors are absent (not modeled/interpolated). Monitor placement is non-random. Air quality is spatially smooth, making county-level aggregation appropriate (low MAUP).",
     "data_coverage_flag": true,
     "higher_is_better": true,
     "data_type": "continuous",
@@ -42,11 +42,11 @@
     "label": "Broadband Subscription Rate",
     "source": "Census ACS 5-Year, Table B28002",
     "source_url": "https://data.census.gov",
-    "data_year": "2018–2022",
+    "data_year": "2018\u00e2\u20ac\u201c2022",
     "year_type": "range",
     "unit": "household broadband subscription rate",
     "maup_sensitivity": "low",
-    "notes": "Measures household broadband subscription rate from ACS (table B28002), NOT physical infrastructure availability. Low subscription rates may reflect unaffordability or lack of infrastructure — this data cannot distinguish between them. FCC availability maps would be needed to separate these causes. ACS 5-year estimate (2018–2022 average).",
+    "notes": "Measures household broadband subscription rate from ACS (table B28002), NOT physical infrastructure availability. Low subscription rates may reflect unaffordability or lack of infrastructure \u00e2\u20ac\u201d this data cannot distinguish between them. FCC availability maps would be needed to separate these causes. ACS 5-year estimate (2018\u00e2\u20ac\u201c2022 average).",
     "higher_is_better": true,
     "data_type": "continuous",
     "direction_note": "Higher subscription = more connected",
@@ -60,7 +60,7 @@
     "year_type": "precise",
     "unit": "EITC returns / total returns filed",
     "maup_sensitivity": "medium",
-    "notes": "EITC filing rate as share of total tax filers. ~20% of eligible households nationally do not claim EITC. Non-take-up is systematically higher in immigrant communities and areas with tax filing barriers. Low EITC rates may indicate: lower poverty, OR filing barriers, OR higher undocumented population — this data cannot distinguish between these causes. ZIP-to-county aggregation via Census ZCTA area-weighted crosswalk.",
+    "notes": "EITC filing rate as share of total tax filers. ~20% of eligible households nationally do not claim EITC. Non-take-up is systematically higher in immigrant communities and areas with tax filing barriers. Low EITC rates may indicate: lower poverty, OR filing barriers, OR higher undocumented population \u00e2\u20ac\u201d this data cannot distinguish between these causes. ZIP-to-county aggregation via Census ZCTA area-weighted crosswalk.",
     "higher_is_better": null,
     "data_type": "continuous",
     "direction_note": "Ambiguous: higher rate may indicate more poverty OR better program access."
@@ -94,7 +94,7 @@
     "label": "ACS Per Capita Income",
     "source": "US Census Bureau, American Community Survey 5-Year",
     "source_url": "https://data.census.gov",
-    "data_year": "2018–2022",
+    "data_year": "2018\u00e2\u20ac\u201c2022",
     "year_type": "range",
     "unit": "per capita personal income ($/year)",
     "maup_sensitivity": "low",
@@ -111,10 +111,10 @@
     "year_type": "precise",
     "unit": "% population with low food access",
     "maup_sensitivity": "low",
-    "notes": "Physical proximity to grocery stores. Defined as living >1 mile (urban) or >10 miles (rural) from a supermarket. Measures geographic access, not affordability. 2019 Atlas — pre-pandemic baseline. County values aggregated from census tract-level data using population weighting.",
+    "notes": "Physical proximity to grocery stores. Defined as living >1 mile (urban) or >10 miles (rural) from a supermarket. Measures geographic access, not affordability. 2019 Atlas \u00e2\u20ac\u201d pre-pandemic baseline. County values aggregated from census tract-level data using population weighting.",
     "higher_is_better": false,
     "data_type": "continuous",
-    "direction_note": "Higher = more population lives far from a supermarket — worse food access"
+    "direction_note": "Higher = more population lives far from a supermarket \u00e2\u20ac\u201d worse food access"
   },
   "obesity": {
     "label": "Obesity Rate",
@@ -122,9 +122,9 @@
     "source_url": "https://www.cdc.gov/places/",
     "data_year": "2022",
     "year_type": "approximate",
-    "unit": "% of adults with BMI ≥ 30",
+    "unit": "% of adults with BMI \u00e2\u2030\u00a5 30",
     "maup_sensitivity": "medium",
-    "notes": "Crude prevalence from CDC PLACES, based on self-reported height/weight (BRFSS). Self-reporting systematically underestimates BMI — people underreport weight and overreport height. Bias varies by region, education, gender. Model-based small area estimates partially smooth this but underlying survey bias propagates.",
+    "notes": "Crude prevalence from CDC PLACES, based on self-reported height/weight (BRFSS). Self-reporting systematically underestimates BMI \u00e2\u20ac\u201d people underreport weight and overreport height. Bias varies by region, education, gender. Model-based small area estimates partially smooth this but underlying survey bias propagates.",
     "higher_is_better": false,
     "data_type": "continuous"
   },
@@ -149,7 +149,7 @@
     "year_type": "approximate",
     "unit": "% of adults with frequent mental distress",
     "maup_sensitivity": "medium",
-    "notes": "Self-reported frequent mental distress (≥14 poor mental health days/month) from CDC PLACES (BRFSS). Systematically underreported in communities with higher mental health stigma. Geographic patterns may partly reflect stigma rather than actual prevalence. Diagnosis bias: areas with less mental healthcare access have lower reported rates.",
+    "notes": "Self-reported frequent mental distress (\u00e2\u2030\u00a514 poor mental health days/month) from CDC PLACES (BRFSS). Systematically underreported in communities with higher mental health stigma. Geographic patterns may partly reflect stigma rather than actual prevalence. Diagnosis bias: areas with less mental healthcare access have lower reported rates.",
     "higher_is_better": false,
     "data_type": "continuous",
     "diagnosis_bias": true
@@ -171,7 +171,7 @@
     "label": "Unemployment Rate",
     "source": "Census ACS 5-Year, Table B23025",
     "source_url": "https://data.census.gov",
-    "data_year": "2018–2022",
+    "data_year": "2018\u00e2\u20ac\u201c2022",
     "year_type": "range",
     "unit": "% of labor force unemployed",
     "maup_sensitivity": "low",
@@ -187,7 +187,7 @@
     "year_type": "precise",
     "unit": "Rural-Urban Continuum Code (1=most urban, 9=most rural)",
     "maup_sensitivity": "low",
-    "notes": "USDA ordinal codes 1–9 where 1=large metro core, 9=completely rural (<2,500 pop, not adjacent to metro). Treated as continuous for correlation and distance calculations. This is a simplification — intervals between codes are not equal in real-world terms. Interpret correlations involving rural_urban as indicating direction (urban vs rural) rather than precise magnitude. Population density would be a truly continuous alternative. Based on 2020 Census population and OMB metro definitions.",
+    "notes": "USDA ordinal codes 1\u00e2\u20ac\u201c9 where 1=large metro core, 9=completely rural (<2,500 pop, not adjacent to metro). Treated as continuous for correlation and distance calculations. This is a simplification \u00e2\u20ac\u201d intervals between codes are not equal in real-world terms. Interpret correlations involving rural_urban as indicating direction (urban vs rural) rather than precise magnitude. Population density would be a truly continuous alternative. Based on 2020 Census population and OMB metro definitions.",
     "higher_is_better": null,
     "data_type": "ordinal",
     "direction_note": "Ordinal 1-9. Higher code = more rural. Whether rural is 'better' depends on the outcome being studied."
@@ -196,11 +196,11 @@
     "label": "Housing Burden",
     "source": "Census ACS 5-Year, Table B25070",
     "source_url": "https://data.census.gov",
-    "data_year": "2018–2022",
+    "data_year": "2018\u00e2\u20ac\u201c2022",
     "year_type": "range",
     "unit": "% of renters paying 30%+ of income on rent",
     "maup_sensitivity": "medium",
-    "notes": "Share of renters paying 30%+ of income on rent (HUD threshold). Excludes homeowners. Selection bias: when housing becomes unaffordable, price-sensitive households leave, so remaining renters can afford current prices. Housing_burden may appear LOWER in the most expensive markets because the poorest residents have been displaced. ACS 5-year estimate (2018–2022).",
+    "notes": "Share of renters paying 30%+ of income on rent (HUD threshold). Excludes homeowners. Selection bias: when housing becomes unaffordable, price-sensitive households leave, so remaining renters can afford current prices. Housing_burden may appear LOWER in the most expensive markets because the poorest residents have been displaced. ACS 5-year estimate (2018\u00e2\u20ac\u201c2022).",
     "higher_is_better": false,
     "data_type": "continuous"
   },
@@ -227,7 +227,7 @@
     "higher_is_better": true,
     "data_type": "continuous",
     "maup_sensitivity": "low",
-    "notes": "Excluded from gravity model distance calculation due to r=0.993 collinearity with broadband (ACS B28002_004E). Both are from the same ACS table B28002 — broadband_avail uses B28002_002E (any internet, including dial-up) while broadband uses B28002_004E (broadband specifically). Including both would double-weight internet access relative to all other dimensions. Available for scatter plot exploration. Original source: Census ACS 5-Year B28002.",
+    "notes": "Excluded from gravity model distance calculation due to r=0.993 collinearity with broadband (ACS B28002_004E). Both are from the same ACS table B28002 \u00e2\u20ac\u201d broadband_avail uses B28002_002E (any internet, including dial-up) while broadband uses B28002_004E (broadband specifically). Including both would double-weight internet access relative to all other dimensions. Available for scatter plot exploration. Original source: Census ACS 5-Year B28002.",
     "excluded_from_gravity": true
   },
   "pop_density": {
@@ -254,7 +254,7 @@
     "data_type": "continuous",
     "excluded_from_gravity": true,
     "maup_sensitivity": "low",
-    "notes": "FEMA composite score across 18 natural hazard types. Excluded from gravity model to avoid conflating geographic disaster exposure with socioeconomic structure — wildfire risk would cluster Western counties regardless of economic similarity. Weakly correlated with poverty (r=0.15), adding genuine new dimension."
+    "notes": "FEMA composite score across 18 natural hazard types. Excluded from gravity model to avoid conflating geographic disaster exposure with socioeconomic structure \u00e2\u20ac\u201d wildfire risk would cluster Western counties regardless of economic similarity. Weakly correlated with poverty (r=0.15), adding genuine new dimension."
   },
   "wildfire_risk": {
     "label": "Wildfire Risk",
@@ -282,7 +282,7 @@
     "excluded_from_gravity": true,
     "maup_sensitivity": "low",
     "data_coverage_flag": true,
-    "notes": "FEMA coastal flooding risk score. Only ~488 coastal counties have data. Strongly geographic — measures proximity to coastline, not socioeconomic character."
+    "notes": "FEMA coastal flooding risk score. Only ~488 coastal counties have data. Strongly geographic \u00e2\u20ac\u201d measures proximity to coastline, not socioeconomic character."
   },
   "riverine_flood_risk": {
     "label": "Riverine Flood Risk",
@@ -348,7 +348,7 @@
     "data_type": "continuous",
     "excluded_from_gravity": true,
     "maup_sensitivity": "low",
-    "notes": "FEMA Social Vulnerability Index — community capacity to prepare for, respond to, and recover from disasters. Moderately correlated with poverty (r=0.52) and unemployment (r=0.31). Provides independent validation of socioeconomic disadvantage measures."
+    "notes": "FEMA Social Vulnerability Index \u00e2\u20ac\u201d community capacity to prepare for, respond to, and recover from disasters. Moderately correlated with poverty (r=0.52) and unemployment (r=0.31). Provides independent validation of socioeconomic disadvantage measures."
   },
   "community_resilience": {
     "label": "Community Resilience",
@@ -361,6 +361,43 @@
     "data_type": "continuous",
     "excluded_from_gravity": true,
     "maup_sensitivity": "low",
-    "notes": "FEMA Community Resilience score — ability to recover from disasters. Moderately correlated with median income (r=0.34). Higher scores indicate more resilient communities."
+    "notes": "FEMA Community Resilience score \u00e2\u20ac\u201d ability to recover from disasters. Moderately correlated with median income (r=0.34). Higher scores indicate more resilient communities."
+  },
+  "bachelors_rate": {
+    "label": "Bachelor's Degree Rate",
+    "source": "Census ACS 5-Year, Table B15003",
+    "source_url": "https://data.census.gov",
+    "data_year": "2022",
+    "year_type": "precise",
+    "unit": "% of population 25+ with bachelor's degree",
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "maup_sensitivity": "low",
+    "notes": "Population 25+ with bachelor's degree or higher divided by total population 25+. Moderate correlation with median income (r=0.73)."
+  },
+  "median_age": {
+    "label": "Median Age",
+    "source": "Census ACS 5-Year, Table B01002",
+    "source_url": "https://data.census.gov",
+    "data_year": "2022",
+    "year_type": "precise",
+    "unit": "years",
+    "higher_is_better": null,
+    "data_type": "continuous",
+    "maup_sensitivity": "low",
+    "direction_note": "Neither high nor low is inherently better.",
+    "notes": "Median age in years. Low max correlation with existing variables (r=0.29 with rural_urban). Adds genuine age-structure dimension."
+  },
+  "homeownership_rate": {
+    "label": "Homeownership Rate",
+    "source": "Census ACS 5-Year, Table B25003",
+    "source_url": "https://data.census.gov",
+    "data_year": "2022",
+    "year_type": "precise",
+    "unit": "% of occupied housing units that are owner-occupied",
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "maup_sensitivity": "low",
+    "notes": "Owner-occupied housing units divided by total occupied housing units. Complements housing_burden (renter cost). Low correlation with existing variables (max r=0.30 with poverty)."
   }
 }

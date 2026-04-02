@@ -101,6 +101,9 @@ DATASET_REGISTRY = {
     'voter_turnout':  ('voter_turnout_rate',     'Voter turnout rate (votes cast / population)'),
     'broadband_avail': ('internet_access_rate',     'Internet access rate (any type)'),
     'pop_density':    ('pop_density',               'Population density (people/sq mi)'),
+    'bachelors_rate':  ('bachelors_rate',            'Bachelor degree rate (25+ pop)'),
+    'median_age':      ('median_age',                'Median age (years)'),
+    'homeownership_rate': ('homeownership_rate',     'Homeownership rate'),
     # FEMA National Risk Index (scatter only — excluded from gravity)
     'overall_disaster_risk': ('risk_score',              'FEMA overall disaster risk score'),
     'wildfire_risk':         ('wildfire_risk_score',     'FEMA wildfire risk score'),

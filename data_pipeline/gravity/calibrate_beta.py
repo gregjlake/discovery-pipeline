@@ -33,6 +33,9 @@ DATASETS = {
     "voter_turnout":  "voter_turnout_rate",
     # broadband_avail excluded: r=0.993 with broadband (same ACS B28002 table)
     "pop_density":    "pop_density",
+    "bachelors_rate": "bachelors_rate",
+    "median_age":     "median_age",
+    "homeownership_rate": "homeownership_rate",
 }
 
 

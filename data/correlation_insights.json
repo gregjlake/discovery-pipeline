@@ -1,9 +1,9 @@
 {
-  "n_pairs": 136,
-  "mean_abs_r": 0.28,
-  "median_abs_r": 0.187,
-  "pct_large_effect": 23.5,
-  "pct_negligible": 33.8,
+  "n_pairs": 190,
+  "mean_abs_r": 0.273,
+  "median_abs_r": 0.19,
+  "pct_large_effect": 22.1,
+  "pct_negligible": 31.6,
   "strongest_correlations": [
     {
       "var_a": "diabetes",
@@ -42,6 +42,18 @@
       "effect_size": "large"
     },
     {
+      "var_a": "bachelors_rate",
+      "var_b": "bea_income",
+      "label_a": "bachelors_rate",
+      "label_b": "Per Capita Income",
+      "r": 0.7927,
+      "abs_r": 0.7927,
+      "domain_a": "?",
+      "domain_b": "economic",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
       "var_a": "median_income",
       "var_b": "poverty",
       "label_a": "Median Income",
@@ -61,6 +73,18 @@
       "r": 0.7371,
       "abs_r": 0.7371,
       "domain_a": "health",
+      "domain_b": "economic",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
+      "var_a": "bachelors_rate",
+      "var_b": "median_income",
+      "label_a": "bachelors_rate",
+      "label_b": "Median Income",
+      "r": 0.729,
+      "abs_r": 0.729,
+      "domain_a": "?",
       "domain_b": "economic",
       "same_domain": false,
       "effect_size": "large"
@@ -150,38 +174,14 @@
       "effect_size": "large"
     },
     {
-      "var_a": "hypertension",
-      "var_b": "obesity",
-      "label_a": "Hypertension",
-      "label_b": "Obesity",
-      "r": 0.6526,
-      "abs_r": 0.6526,
-      "domain_a": "health",
+      "var_a": "bachelors_rate",
+      "var_b": "diabetes",
+      "label_a": "bachelors_rate",
+      "label_b": "Diabetes",
+      "r": -0.6664,
+      "abs_r": 0.6664,
+      "domain_a": "?",
       "domain_b": "health",
-      "same_domain": true,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "broadband",
-      "var_b": "poverty",
-      "label_a": "Broadband Access",
-      "label_b": "Poverty Rate",
-      "r": -0.6414,
-      "abs_r": 0.6414,
-      "domain_a": "infrastructure",
-      "domain_b": "economic",
-      "same_domain": false,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "hypertension",
-      "var_b": "median_income",
-      "label_a": "Hypertension",
-      "label_b": "Median Income",
-      "r": -0.6377,
-      "abs_r": 0.6377,
-      "domain_a": "health",
-      "domain_b": "economic",
       "same_domain": false,
       "effect_size": "large"
     }
@@ -208,6 +208,18 @@
       "abs_r": 0.0007,
       "domain_a": "infrastructure",
       "domain_b": "health",
+      "same_domain": false,
+      "effect_size": "negligible"
+    },
+    {
+      "var_a": "food_access",
+      "var_b": "median_age",
+      "label_a": "Low Food Access",
+      "label_b": "median_age",
+      "r": 0.0021,
+      "abs_r": 0.0021,
+      "domain_a": "infrastructure",
+      "domain_b": "?",
       "same_domain": false,
       "effect_size": "negligible"
     },
@@ -308,6 +320,18 @@
       "effect_size": "negligible"
     },
     {
+      "var_a": "bea_income",
+      "var_b": "homeownership_rate",
+      "label_a": "Per Capita Income",
+      "label_b": "homeownership_rate",
+      "r": 0.0163,
+      "abs_r": 0.0163,
+      "domain_a": "economic",
+      "domain_b": "?",
+      "same_domain": false,
+      "effect_size": "negligible"
+    },
+    {
       "var_a": "air",
       "var_b": "bea_income",
       "label_a": "Air Quality",
@@ -320,55 +344,43 @@
       "effect_size": "negligible"
     },
     {
-      "var_a": "eitc",
-      "var_b": "pop_density",
-      "label_a": "EITC Uptake",
-      "label_b": "Population Density",
-      "r": -0.0331,
-      "abs_r": 0.0331,
-      "domain_a": "economic",
+      "var_a": "air",
+      "var_b": "bachelors_rate",
+      "label_a": "Air Quality",
+      "label_b": "bachelors_rate",
+      "r": -0.0206,
+      "abs_r": 0.0206,
+      "domain_a": "infrastructure",
+      "domain_b": "?",
+      "same_domain": false,
+      "effect_size": "negligible"
+    },
+    {
+      "var_a": "homeownership_rate",
+      "var_b": "library",
+      "label_a": "homeownership_rate",
+      "label_b": "Library Access",
+      "r": 0.0241,
+      "abs_r": 0.0241,
+      "domain_a": "?",
       "domain_b": "civic",
-      "same_domain": false,
-      "effect_size": "negligible"
-    },
-    {
-      "var_a": "air",
-      "var_b": "poverty",
-      "label_a": "Air Quality",
-      "label_b": "Poverty Rate",
-      "r": -0.0333,
-      "abs_r": 0.0333,
-      "domain_a": "infrastructure",
-      "domain_b": "economic",
-      "same_domain": false,
-      "effect_size": "negligible"
-    },
-    {
-      "var_a": "air",
-      "var_b": "food_access",
-      "label_a": "Air Quality",
-      "label_b": "Low Food Access",
-      "r": 0.0336,
-      "abs_r": 0.0336,
-      "domain_a": "infrastructure",
-      "domain_b": "infrastructure",
-      "same_domain": true,
-      "effect_size": "negligible"
-    },
-    {
-      "var_a": "housing_burden",
-      "var_b": "poverty",
-      "label_a": "Housing Burden",
-      "label_b": "Poverty Rate",
-      "r": -0.0349,
-      "abs_r": 0.0349,
-      "domain_a": "infrastructure",
-      "domain_b": "economic",
       "same_domain": false,
       "effect_size": "negligible"
     }
   ],
   "cross_domain_surprises": [
+    {
+      "var_a": "bachelors_rate",
+      "var_b": "bea_income",
+      "label_a": "bachelors_rate",
+      "label_b": "Per Capita Income",
+      "r": 0.7927,
+      "abs_r": 0.7927,
+      "domain_a": "?",
+      "domain_b": "economic",
+      "same_domain": false,
+      "effect_size": "large"
+    },
     {
       "var_a": "diabetes",
       "var_b": "eitc",
@@ -377,6 +389,18 @@
       "r": 0.7371,
       "abs_r": 0.7371,
       "domain_a": "health",
+      "domain_b": "economic",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
+      "var_a": "bachelors_rate",
+      "var_b": "median_income",
+      "label_a": "bachelors_rate",
+      "label_b": "Median Income",
+      "r": 0.729,
+      "abs_r": 0.729,
+      "domain_a": "?",
       "domain_b": "economic",
       "same_domain": false,
       "effect_size": "large"
@@ -426,6 +450,18 @@
       "abs_r": 0.67,
       "domain_a": "infrastructure",
       "domain_b": "economic",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
+      "var_a": "bachelors_rate",
+      "var_b": "diabetes",
+      "label_a": "bachelors_rate",
+      "label_b": "Diabetes",
+      "r": -0.6664,
+      "abs_r": 0.6664,
+      "domain_a": "?",
+      "domain_b": "health",
       "same_domain": false,
       "effect_size": "large"
     },
@@ -490,6 +526,18 @@
       "effect_size": "large"
     },
     {
+      "var_a": "bachelors_rate",
+      "var_b": "broadband",
+      "label_a": "bachelors_rate",
+      "label_b": "Broadband Access",
+      "r": 0.6197,
+      "abs_r": 0.6197,
+      "domain_a": "?",
+      "domain_b": "infrastructure",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
       "var_a": "bea_income",
       "var_b": "diabetes",
       "label_a": "Per Capita Income",
@@ -498,54 +546,6 @@
       "abs_r": 0.6188,
       "domain_a": "economic",
       "domain_b": "health",
-      "same_domain": false,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "bea_income",
-      "var_b": "obesity",
-      "label_a": "Per Capita Income",
-      "label_b": "Obesity",
-      "r": -0.6122,
-      "abs_r": 0.6122,
-      "domain_a": "economic",
-      "domain_b": "health",
-      "same_domain": false,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "eitc",
-      "var_b": "hypertension",
-      "label_a": "EITC Uptake",
-      "label_b": "Hypertension",
-      "r": 0.6101,
-      "abs_r": 0.6101,
-      "domain_a": "economic",
-      "domain_b": "health",
-      "same_domain": false,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "eitc",
-      "var_b": "mental_health",
-      "label_a": "EITC Uptake",
-      "label_b": "Mental Health",
-      "r": 0.6065,
-      "abs_r": 0.6065,
-      "domain_a": "economic",
-      "domain_b": "health",
-      "same_domain": false,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "mental_health",
-      "var_b": "poverty",
-      "label_a": "Mental Health",
-      "label_b": "Poverty Rate",
-      "r": 0.5986,
-      "abs_r": 0.5986,
-      "domain_a": "health",
-      "domain_b": "economic",
       "same_domain": false,
       "effect_size": "large"
     }
