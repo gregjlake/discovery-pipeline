@@ -1,11 +1,11 @@
 {
-  "beta_geo": 0.054028,
-  "beta_combined": 0.150008,
-  "beta_operative": 0.150008,
-  "r_squared_geo": 0.038027,
+  "beta_geo": 0.059286,
+  "beta_combined": 0.138702,
+  "beta_operative": 0.138702,
+  "r_squared_geo": 0.054221,
   "n_pairs": 249922,
-  "std_err": 0.000544,
-  "intercept": -0.07557,
+  "std_err": 0.000495,
+  "intercept": -0.036526,
   "p_value": 0.0,
   "normalization_type": "min-max (fallback, no pre-normalized columns in Supabase)",
   "datasets_used": [
@@ -40,9 +40,9 @@
     "voter_turnout"
   ],
   "note": "beta_combined will be filled by run_gravity_pipeline.py after combined distance matrix is computed",
-  "r_squared_combined": 0.29877,
-  "beta_cv": 0.150023,
-  "r2_cv_holdout": 0.300226,
-  "r2_circularity_inflation": -0.001456,
+  "r_squared_combined": 0.302591,
+  "beta_cv": 0.13883,
+  "r2_cv_holdout": 0.302131,
+  "r2_circularity_inflation": 0.00046,
   "beta_cv_verdict": "STABLE: Cross-validated beta = full-sample beta. Circularity inflates R2 but does not distort beta."
 }

@@ -1,9 +1,9 @@
 {
-  "mean_jaccard_gravity_vs_knn": 0.011,
+  "mean_jaccard_gravity_vs_knn": 0.015,
   "median_jaccard_gravity_vs_knn": 0.0,
   "pct_counties_j_above_50": 0.0,
   "pct_counties_j_above_75": 0.0,
-  "n_counties_compared": 730,
+  "n_counties_compared": 728,
   "k_neighbors": 20,
   "distance_metric": "euclidean",
   "interpretation": "LOW OVERLAP: Population weighting drives gravity divergence from pure data-space KNN.",
@@ -39,6 +39,11 @@
       "jaccard": 0.0
     },
     {
+      "fips": "01073",
+      "name": "Jefferson",
+      "jaccard": 0.0
+    },
+    {
       "fips": "01077",
       "name": "Lauderdale",
       "jaccard": 0.0
@@ -51,11 +56,6 @@
     {
       "fips": "01083",
       "name": "Limestone",
-      "jaccard": 0.0
-    },
-    {
-      "fips": "01089",
-      "name": "Madison",
       "jaccard": 0.0
     }
   ]
