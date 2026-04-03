@@ -88,10 +88,9 @@ def load_data():
 
     rv = pd.DataFrame(all_rows)
 
-    # Filter to our 20 primary columns
-    target_pairs = set(DATASETS.items())
-    rv = rv[rv.apply(lambda r: (r["dataset_id"], r["column_name"]) in target_pairs, axis=1)]
-    print(f"  Filtered to 20 primary columns: {len(rv)} rows")
+    # Filter to our active primary columns using vectorized isin
+    rv = rv[rv["dataset_id"].isin(DATASETS.keys())]
+    print(f"  Filtered to {len(DATASETS)} primary columns: {len(rv)} rows")
 
     # Pivot: fips × dataset_id -> value
     pivot = rv.pivot_table(index="fips", columns="dataset_id", values="value", aggfunc="first")
@@ -334,10 +333,12 @@ def store_result(beta_geo, r2, std_err, intercept, p_value, n_pairs, ds_cols):
 
 # ── MAIN ──────────────────────────────────────────────────────
 def main():
+    import gc
     merged, ds_cols = load_data()
     geo_dist = compute_geo_dist(merged)
     similarity = compute_similarity(merged, ds_cols)
     geo_miles, sim = sample_pairs(geo_dist, similarity)
+    del geo_dist, similarity; gc.collect()  # free ~150MB after sampling
     beta_geo, r2, std_err, intercept, p_value = fit_regression(geo_miles, sim)
     spot_checks(geo_miles, sim)
     store_result(beta_geo, r2, std_err, intercept, p_value, len(geo_miles), ds_cols)

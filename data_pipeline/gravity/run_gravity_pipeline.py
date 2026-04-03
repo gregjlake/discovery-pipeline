@@ -94,8 +94,8 @@ def step1_load():
         if len(r.data) < 1000: break
         offset += 1000
     rv = pd.DataFrame(all_rows)
-    target_pairs = set(DATASETS.items())
-    rv = rv[rv.apply(lambda r: (r["dataset_id"], r["column_name"]) in target_pairs, axis=1)]
+    # Filter to active datasets using vectorized isin (faster than apply+lambda)
+    rv = rv[rv["dataset_id"].isin(DATASETS.keys())]
     pivot = rv.pivot_table(index="fips", columns="dataset_id", values="value", aggfunc="first").reset_index()
     pivot["fips"] = pivot["fips"].astype(str).str.zfill(5)
 
@@ -108,7 +108,7 @@ def step1_load():
 
     # Also keep raw values for the cache
     rv_raw = pd.DataFrame(all_rows)
-    rv_raw = rv_raw[rv_raw.apply(lambda r: (r["dataset_id"], r["column_name"]) in target_pairs, axis=1)]
+    rv_raw = rv_raw[rv_raw["dataset_id"].isin(DATASETS.keys())]
     raw_pivot = rv_raw.pivot_table(index="fips", columns="dataset_id", values="value", aggfunc="first").reset_index()
     raw_pivot["fips"] = raw_pivot["fips"].astype(str).str.zfill(5)
 
@@ -182,8 +182,8 @@ def step4_combined(geo_norm, data_dissim):
 def step5_recalibrate(combined, data_dissim, beta_geo, cal):
     print("\n" + "=" * 60); print("STEP 5: RECALIBRATE BETA (combined)"); print("=" * 60)
 
-    similarity = 1 - data_dissim
-    np.fill_diagonal(similarity, np.nan)
+    # Sample pairs first, then compute similarity only for samples
+    # (avoids allocating full n×n similarity matrix — saves 75MB)
     n = combined.shape[0]
     rng = np.random.default_rng(42)
     n_sample = 250_000
@@ -193,10 +193,10 @@ def step5_recalibrate(combined, data_dissim, beta_geo, cal):
     ii, jj = ii[mask], jj[mask]
 
     c_samp = combined[ii, jj]
-    s_samp = similarity[ii, jj]
+    s_samp = 1.0 - data_dissim[ii, jj]  # similarity for sampled pairs only
 
     cmax_half = combined.max() * 0.5
-    valid = (c_samp > 0.01) & (c_samp < cmax_half) & (s_samp > 0) & ~np.isnan(s_samp)
+    valid = (c_samp > 0.01) & (c_samp < cmax_half) & (s_samp > 0) & (ii != jj)
     c_samp, s_samp = c_samp[valid], s_samp[valid]
     print(f"  Pairs after filter: {len(c_samp):,}")
 
@@ -471,12 +471,17 @@ def step8_cache(merged, links_df, beta_operative, beta_geo, r2_combined, raw_piv
 
 # ═══════════════════════════════════════════════════════════════
 def main():
+    import gc
     merged, ds_cols, beta_geo, cal, raw_pivot = step1_load()
     geo_dist, geo_norm = step2_geo(merged)
+    del geo_dist; gc.collect()  # free 75MB — only geo_norm needed for combined
     data_dissim = step3_dissim(merged, ds_cols)
     combined = step4_combined(geo_norm, data_dissim)
+    del geo_norm; gc.collect()  # free 75MB — geo_norm no longer needed
     beta_operative, r2_combined = step5_recalibrate(combined, data_dissim, beta_geo, cal)
+    del data_dissim; gc.collect()  # free 75MB — only combined needed for step6
     links_df = step6_neighbors(merged, combined, beta_operative)
+    del combined; gc.collect()  # free 75MB — force computation complete
     step7_store(merged, links_df)
     bo, bg, r2, nc, nl, sz = step8_cache(merged, links_df, beta_operative, beta_geo, r2_combined, raw_pivot)
 
