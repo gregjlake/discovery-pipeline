@@ -174,13 +174,13 @@ The near-orthogonality of overall disaster risk and economic disadvantage (r = 0
 
 ### 5.4 Sensitivity Analysis
 
-**Mobility Exclusion.** The Opportunity Atlas mobility dataset was excluded from the gravity model due to temporal mismatch (1978-2015 outcomes vs 2022 current conditions). To verify this exclusion did not distort results, pairwise distances were computed with and without mobility for 10,000 randomly sampled county pairs. The Pearson correlation between 17-dataset and 18-dataset distances was r = 0.9980, with mean absolute difference 0.0044 (on a [0,1] scale). Mobility removal had negligible effect on distance calculations.
+**Mobility Exclusion.** The Opportunity Atlas mobility dataset was excluded from the gravity model due to temporal mismatch (1978-2015 outcomes vs 2022 current conditions). To verify this exclusion did not distort results, pairwise distances were computed with and without mobility for 10,000 randomly sampled county pairs. The Pearson correlation between 20-dataset and 21-dataset distances was r = 0.9980, with mean absolute difference 0.0044 (on a [0,1] scale). Mobility removal had negligible effect on distance calculations.
 
 **Food Access Variable Replacement.** The original food_access variable (SNAP participation rate, r = 0.784 with poverty) was replaced with the USDA Food Access Research Atlas 2019 measure of physical proximity to grocery stores. The USDA measure correlates at r = -0.048 with poverty, confirming it captures a fundamentally different dimension -- physical geographic access rather than economic need. This replacement transforms food_access from a near-redundant poverty proxy into a genuinely independent infrastructure measure.
 
 ### 5.5 KNN Baseline Comparison
 
-To evaluate what the gravity formulation adds beyond simple nearest-neighbor search in data space, we compared gravity model peer lists (top 20 by force_strength) to k-nearest-neighbors (KNN, k=20) using Euclidean distance on the same 17 normalized variables. Mean Jaccard similarity: 0.010. This low overlap reflects that the gravity cache stores only the top 10,000 county pairs by force, which are population-dominated (96.2% of force variance). KNN finds the most data-similar counties regardless of population. For small counties, gravity peers are large distant counties while KNN peers are small similar ones. The county search feature in DiscoSights uses data-space Euclidean distance directly (equivalent to KNN), ensuring peer discovery is population-independent. The Residual force view addresses population dominance by removing the population prediction from force values.
+To evaluate what the gravity formulation adds beyond simple nearest-neighbor search in data space, we compared gravity model peer lists (top 20 by force_strength) to k-nearest-neighbors (KNN, k=20) using Euclidean distance on the same 20 normalized variables. Mean Jaccard similarity: 0.010. This low overlap reflects that the gravity cache stores only the top 10,000 county pairs by force, which are population-dominated (96.2% of force variance). KNN finds the most data-similar counties regardless of population. For small counties, gravity peers are large distant counties while KNN peers are small similar ones. The county search feature in DiscoSights uses data-space Euclidean distance directly (equivalent to KNN), ensuring peer discovery is population-independent. The Residual force view addresses population dominance by removing the population prediction from force values.
 
 ### 5.6 Benchmark Comparison
 
@@ -248,6 +248,16 @@ The low effective dimensionality (5.80 of 20) reflects genuine covariation in US
 15. **Voter turnout denominator.** The voter_turnout_rate variable uses total county population as denominator. ACS provides Citizen Voting Age Population (CVAP, table B29001) at county level, which would be a more appropriate denominator. Counties with large youth or non-citizen populations show mechanically lower apparent turnout rates under the current measure. Future versions should replace total population with CVAP as the denominator. The current variable should be interpreted as a civic engagement proxy that partially reflects demographic structure.
 
 16. **Air quality coverage.** EPA AQS air quality data is available for approximately 31% of counties (n approximately 970); the remaining 69% (n approximately 2,165) receive 0.5 midpoint imputation. Sensitivity analysis confirms r = 0.991 between distance matrices computed with vs without air quality on counties with real data, indicating negligible impact on results.
+
+17. **Ecological inference.** All correlations and peer comparisons operate at the county level. Relationships observed between county-level aggregates (e.g., poverty rate and diabetes rate) do not necessarily hold for individuals within those counties. This ecological inference limitation [@robinson1950ecological] is inherent to any county-level analysis tool and should inform interpretation of all scatter plot correlations.
+
+18. **Bootstrap independence assumption.** The bootstrap confidence interval on IRS validation rho (95% CI: 0.155-0.173, n = 1,000 resamples) assumes independence of county pairs. In practice, pairs sharing a county are not independent (e.g., pairs involving Los Angeles County are correlated). The true confidence interval may be wider than reported.
+
+19. **IRS migration selection bias.** IRS county-to-county migration data excludes non-filers, undocumented immigrants, and individuals below the filing threshold. The validation therefore tests whether the similarity space predicts migration among tax-filing households, not the full population. Counties with high non-filing rates (often low-income rural counties) are underrepresented in the validation sample.
+
+20. **Frontend platform dependency.** The React frontend is hosted on Lovable, a managed platform. Module-based PCA recomputation runs client-side via ml-pca and may exhibit performance variation across browsers and devices. The terrain visualization requires WebGL-capable browsers for smooth rendering.
+
+21. **Temporal beta stability.** The distance decay parameter beta = 0.150 was calibrated on 2022-vintage data. As socioeconomic conditions evolve, beta may shift. No longitudinal stability analysis has been performed. Users should treat beta as a snapshot calibration, not a time-invariant parameter.
 
 ## 8. Software and Reproducibility
 

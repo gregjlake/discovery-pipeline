@@ -1,4 +1,4 @@
-"""Compute county archetypes via k-means clustering on 17-variable space."""
+"""Compute county archetypes via k-means clustering on the active variable space."""
 import json
 import os
 import sys

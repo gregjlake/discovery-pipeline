@@ -132,7 +132,7 @@ pca7_cols = ['poverty', 'median_income', 'unemployment', 'obesity', 'diabetes', 
 pca7_cols = [c for c in pca7_cols if c in dataset_cols]
 pca7_idx = [dataset_cols.index(c) for c in pca7_cols]
 
-print(f"Scheme A: Equal (17 datasets, each 1/17)")
+print(f"Scheme A: Equal (20 datasets, each 1/20)")
 print(f"Scheme B: Domain balanced (4 domains x 25%)")
 for cname, cvars in clusters.items():
     w = 0.25 / len(cvars)

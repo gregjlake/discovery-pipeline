@@ -42,7 +42,7 @@ const DOMAIN_UNITS = {
   rural_urban: "code 1-9", housing_burden: "% cost-burdened", voter_turnout: "total votes",
 };
 
-// Full metadata for all 17 datasets: icon, label, unit, color, category
+// Full metadata for all 20 datasets: icon, label, unit, color, category
 const DATASET_META = {
   library:        { icon: "\uD83D\uDCDA", label: "Library Spending",   unit: "$/capita/yr",    color: "#6366f1", category: "civic" },
   mobility:       { icon: "\uD83D\uDCC8", label: "Upward Mobility",    unit: "rank (0-1)",     color: "#f59e0b", category: "economic" },

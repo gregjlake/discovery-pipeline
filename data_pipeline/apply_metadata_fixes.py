@@ -7,7 +7,7 @@ META = Path(__file__).resolve().parent.parent / "data" / "dataset_metadata.json"
 with open(META, encoding="utf-8") as f:
     d = json.load(f)
 
-# ── GLOBAL: higher_is_better + data_type for ALL 17 datasets ──
+# ── GLOBAL: higher_is_better + data_type for ALL 20 datasets ──
 HIB = {
     "library": True, "mobility": True, "air": True, "broadband": True,
     "eitc": None, "poverty": False, "median_income": True, "bea_income": True,

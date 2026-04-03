@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env", override=False)
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 
-# The 20 active gravity model datasets and their primary value columns
+# The 29 active gravity model datasets and their primary value columns
 DATASETS = {
     "library":        "library_spend_per_capita",
     # mobility excluded: temporal mismatch (1978-2015 vs 2022 datasets)
@@ -36,6 +36,18 @@ DATASETS = {
     "bachelors_rate": "bachelors_rate",
     "median_age":     "median_age",
     "homeownership_rate": "homeownership_rate",
+    # Wave 2: child, family, immigration
+    "child_poverty_rate":     "child_poverty_rate",
+    "single_parent_rate":     "single_parent_rate",
+    "foreign_born_pct":       "foreign_born_pct",
+    "language_isolation_rate": "language_isolation_rate",
+    # Wave 3: industry
+    "manufacturing_pct":      "manufacturing_pct",
+    "agriculture_pct":        "agriculture_pct",
+    # Wave 4: housing market, vitality
+    "housing_vacancy_rate":   "housing_vacancy_rate",
+    "median_home_value":      "median_home_value",
+    "population_change_pct":  "population_change_pct",
 }
 
 
@@ -59,7 +71,7 @@ def load_data():
     print("Loading raw values from Supabase...")
     print("  No pre-normalized columns found (no county_data table).")
     print("  Using raw values from raw_values table with min-max normalization (fallback).")
-    print("  All 17 datasets use fallback min-max normalization.")
+    print("  All 20 datasets use fallback min-max normalization.")
 
     # Paginate all raw_values
     all_rows = []
@@ -79,7 +91,7 @@ def load_data():
     # Filter to our 20 primary columns
     target_pairs = set(DATASETS.items())
     rv = rv[rv.apply(lambda r: (r["dataset_id"], r["column_name"]) in target_pairs, axis=1)]
-    print(f"  Filtered to 17 primary columns: {len(rv)} rows")
+    print(f"  Filtered to 20 primary columns: {len(rv)} rows")
 
     # Pivot: fips × dataset_id -> value
     pivot = rv.pivot_table(index="fips", columns="dataset_id", values="value", aggfunc="first")
@@ -104,7 +116,7 @@ def load_data():
     missing = [d for d in DATASETS if d not in available]
     if missing:
         print(f"  Missing datasets: {missing}")
-    print(f"  Normalization: min-max (fallback for all 17)")
+    print(f"  Normalization: min-max (fallback for all 20)")
 
     return merged, available
 
@@ -286,7 +298,7 @@ def store_result(beta_geo, r2, std_err, intercept, p_value, n_pairs, ds_cols):
             "calibration_year": "N/A",
             "calibration_source": (
                 "Internal: socioeconomic similarity decay vs geographic distance, "
-                "DiscoSights 17 datasets, first-pass geo-only"
+                "DiscoSights 20 datasets, first-pass geo-only"
             ),
             "model_type": "OLS log-linear: log(similarity) ~ log(geo_miles)",
             "distance_type": (

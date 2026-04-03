@@ -16,7 +16,7 @@ To run integration tests against the live pipeline, use the admin
 API endpoint: POST /api/admin/run-pipeline and verify results
 against data/beta_calibration.json and data/validation_results.json.
 
-Current model values (20 variables, 2026-04-02):
+Current model values (29 variables, 2026-04-02):
     beta_operative = 0.150
     R2_combined = 0.299
     rho_validation = 0.165 (95% CI: 0.155-0.173)

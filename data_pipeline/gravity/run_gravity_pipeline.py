@@ -28,6 +28,18 @@ DATASETS = {
     "bachelors_rate": "bachelors_rate",
     "median_age": "median_age",
     "homeownership_rate": "homeownership_rate",
+    # Wave 2: child, family, immigration
+    "child_poverty_rate": "child_poverty_rate",
+    "single_parent_rate": "single_parent_rate",
+    "foreign_born_pct": "foreign_born_pct",
+    "language_isolation_rate": "language_isolation_rate",
+    # Wave 3: industry
+    "manufacturing_pct": "manufacturing_pct",
+    "agriculture_pct": "agriculture_pct",
+    # Wave 4: housing market, vitality
+    "housing_vacancy_rate": "housing_vacancy_rate",
+    "median_home_value": "median_home_value",
+    "population_change_pct": "population_change_pct",
 }
 
 REGION_MAP = {
@@ -282,7 +294,7 @@ def step5_recalibrate(combined, data_dissim, beta_geo, cal):
         "beta": float(beta_operative),
         "pseudo_r2": float(r2_combined),
         "n_pairs": len(c_samp),
-        "calibration_source": "Internal: socioeconomic similarity decay vs combined distance (geo*data), DiscoSights 17 datasets",
+        "calibration_source": "Internal: socioeconomic similarity decay vs combined distance (geo*data), DiscoSights 20 datasets",
         "model_type": "OLS log-linear: log(similarity) ~ log(combined_dist)",
         "distance_type": "Multiplicative: geo_miles_normalized x data_dissimilarity_normalized",
     }, on_conflict="id").execute()
@@ -399,15 +411,15 @@ def step8_cache(merged, links_df, beta_operative, beta_geo, r2_combined, raw_piv
         f"Force between counties is proportional to population product "
         f"and inversely proportional to combined distance^beta. "
         f"Combined distance = geographic miles (Haversine, normalized) * "
-        f"socioeconomic dissimilarity (Euclidean across 17 normalized datasets). "
-        f"beta={beta_operative:.4f} -- a low value indicating these 17 datasets "
+        f"socioeconomic dissimilarity (Euclidean across 20 normalized datasets). "
+        f"beta={beta_operative:.4f} -- a low value indicating these 20 datasets "
         f"are not strongly geographically determined. Clusters reflect "
         f"socioeconomic similarity more than physical proximity. This is the "
         f"correct empirical result, not a modeling error. beta calibrated by "
         f"measuring decay of socioeconomic similarity with combined distance "
         f"across 250,000 US county pairs. Results at county (FIPS) level. "
         f"Note: Modifiable Areal Unit Problem applies -- results would differ "
-        f"at census tract level. All 17 datasets weighted equally in "
+        f"at census tract level. All 20 datasets weighted equally in "
         f"socioeconomic distance."
     )
 
@@ -438,7 +450,7 @@ def step8_cache(merged, links_df, beta_operative, beta_geo, r2_combined, raw_piv
             "beta_geo": round(float(beta_geo), 6),
             "pseudo_r2": round(float(r2_combined), 6),
             "n_pairs": 250_000,
-            "calibration_source": "Internal: DiscoSights 17 datasets",
+            "calibration_source": "Internal: DiscoSights 20 datasets",
             "methodology_note": methodology_note,
         },
         "nodes": nodes,
