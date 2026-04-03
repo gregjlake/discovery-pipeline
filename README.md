@@ -181,6 +181,16 @@ python data_pipeline/gravity/validate_against_migration.py
 
 See `data/beta_calibration.json` and `data/validation_results.json` for expected output values.
 
+## Reproduction
+
+See `data/REPRODUCTION.md` for a guide to verifying all quantitative claims. Quick start:
+
+```bash
+python reproduce.py
+```
+
+<!-- TODO: Add Zenodo DOI after registering at zenodo.org -->
+
 ## Citation
 
 If you use DiscoSights in research, please cite:

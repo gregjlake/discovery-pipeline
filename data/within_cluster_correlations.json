@@ -1,0 +1,52 @@
+{
+  "overall_r": 0.705,
+  "by_cluster": {
+    "Middle America": {
+      "r": 0.458,
+      "n_counties": 640,
+      "cluster_id": 0,
+      "mean_poverty": 0.269,
+      "mean_rural_urban": 0.204,
+      "mean_income": 0.255
+    },
+    "Rural Disadvantaged": {
+      "r": 0.528,
+      "n_counties": 683,
+      "cluster_id": 1,
+      "mean_poverty": 0.472,
+      "mean_rural_urban": 0.797,
+      "mean_income": 0.131
+    },
+    "Suburban Prosperous": {
+      "r": 0.099,
+      "n_counties": 332,
+      "cluster_id": 2,
+      "mean_poverty": 0.142,
+      "mean_rural_urban": 0.097,
+      "mean_income": 0.473
+    },
+    "Middle America B": {
+      "r": 0.473,
+      "n_counties": 953,
+      "cluster_id": 3,
+      "mean_poverty": 0.24,
+      "mean_rural_urban": 0.873,
+      "mean_income": 0.245
+    },
+    "Urban Core": {
+      "r": 0.393,
+      "n_counties": 535,
+      "cluster_id": 4,
+      "mean_poverty": 0.289,
+      "mean_rural_urban": 0.25,
+      "mean_income": 0.253
+    }
+  },
+  "variable_x": "poverty_rate",
+  "variable_y": "diabetes_rate",
+  "n_clusters": 5,
+  "clustering_method": "k-means (scikit-learn, n_init=10, random_state=42)",
+  "n_variables": 29,
+  "n_counties": 3143,
+  "generated": "2026-04-03"
+}

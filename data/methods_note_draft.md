@@ -3,25 +3,25 @@
 **Authors:** Greg Lake
 **Repository:** github.com/gregjlake/discovery-pipeline
 **Live tool:** https://discovery-surface-spark.lovable.app
-**Date:** 2026-04-02
+**Date:** 2026-04-03
 
 ---
 
 ## Abstract
 
-DiscoSights is a spatial interaction model for identifying socioeconomic peer counties across the United States. The gravity model computes pairwise attraction between county profiles across 20 socioeconomic datasets using empirically calibrated distance decay (beta = 0.150, R-squared = 0.299 vs 0.038 geographic only). Out-of-sample validation against IRS county-to-county migration flows (51,445 pairs, 2019-2020) shows +0.112 Spearman rho improvement when adding data similarity beyond population and geography. The tool provides two independent visualizations: a PCA terrain projection (PC1 = economic deprivation, 36% variance) and a force-directed dot layout. Weighting robustness testing found stable peer lists for domain-balanced weighting (Jaccard = 0.891) but not dataset reduction to 7 variables (Jaccard = 0.090). External validation against FEMA National Risk Index confirmed disaster risk is largely independent of socioeconomic disadvantage (r = 0.151).
+DiscoSights is a spatial interaction model for identifying socioeconomic peer counties across the United States. The gravity model computes pairwise attraction between county profiles across 29 socioeconomic datasets using empirically calibrated distance decay (beta = 0.139, R-squared = 0.303 vs 0.054 geographic only). Out-of-sample validation against IRS county-to-county migration flows (51,445 pairs, 2019-2020) shows +0.110 Spearman rho improvement when adding data similarity beyond population and geography. The tool provides two independent visualizations: a PCA terrain projection (PC1 = economic deprivation, 31% variance) and a force-directed dot layout. Weighting robustness testing found stable peer lists for domain-balanced weighting (Jaccard = 0.891) but not dataset reduction to 7 variables (Jaccard = 0.090). External validation against FEMA National Risk Index confirmed disaster risk is largely independent of socioeconomic disadvantage (r = 0.151).
 
 ## 1. Introduction and Motivation
 
 Identifying socioeconomic peer counties -- places that share structural conditions despite geographic distance -- is a recurring task in policy research, public health planning, and economic geography. Researchers comparing county-level interventions, evaluating natural experiments, or seeking replication sites must identify structurally similar communities. Current practice typically involves ad hoc variable selection and arbitrary weighting, producing peer lists whose sensitivity to methodological choices is rarely tested.
 
-DiscoSights contributes a gravity model with empirically calibrated distance decay, out-of-sample validation, and documented robustness properties. The core innovation is adapting the spatial interaction framework to data-space distance: rather than modeling physical flows between locations, the model quantifies socioeconomic attraction between county profiles across 20 dimensions. The practical application -- discovering that McDowell County WV and Starr County TX share deep structural similarity despite 1,247 miles of geographic separation -- enables hypothesis generation about policy transfer across distant but structurally analogous communities.
+DiscoSights contributes a gravity model with empirically calibrated distance decay, out-of-sample validation, and documented robustness properties. The core innovation is adapting the spatial interaction framework to data-space distance: rather than modeling physical flows between locations, the model quantifies socioeconomic attraction between county profiles across 29 dimensions. The practical application -- discovering that McDowell County WV and Starr County TX share deep structural similarity despite 1,247 miles of geographic separation -- enables hypothesis generation about policy transfer across distant but structurally analogous communities.
 
 The gravity model framework provides theoretical grounding absent from simple distance-based matching. Gravity models are well-established in trade economics (Tinbergen, 1962), migration studies (Zipf, 1946), and regional science. Extending the analogy from geographic distance to combined geographic-socioeconomic distance is the methodological contribution of this work.
 
 ## 2. Data
 
-The model uses 20 county-level datasets from US government sources spanning 2018 to 2023:
+The model uses 29 county-level datasets from US government sources spanning 2018 to 2023. Nine variables were added in April 2026 to improve coverage of child poverty, household structure, immigration, language access, sectoral employment, housing stock, and population dynamics:
 
 | Dataset | Source | Year | Unit | Domain |
 |---------|--------|------|------|--------|
@@ -45,6 +45,15 @@ The model uses 20 county-level datasets from US government sources spanning 2018
 | Rural/Urban Classification | USDA Economic Research Service | 2023 | Rural-Urban Continuum Code (1=most  | Civic |
 | Unemployment Rate | Census ACS 5-Year, Table B23025 | 2018â€“2022 | % of labor force unemployed | Economic |
 | Voter Turnout Rate | MIT Election Data + Science Lab / Census ACS  | 2020 | votes cast / county population | Civic |
+| Child Poverty Rate | Census ACS 5-Year, Subject Table S1701 | 2018-2022 | % children under 18 below poverty | Economics |
+| Single-Parent Households | Census ACS 5-Year, Table B11001 | 2018-2022 | % households with single parent | Demography |
+| Foreign-Born Population | Census ACS 5-Year, Table B05002 | 2018-2022 | % population born outside US | Demography |
+| Language Isolation | Census ACS 5-Year, Table B16002 | 2018-2022 | % households linguistically isolated | Demography |
+| Manufacturing Employment | Census ACS 5-Year, Profile Table DP03 | 2018-2022 | % employed in manufacturing | Economics |
+| Agriculture Employment | Census ACS 5-Year, Profile Table DP03 | 2018-2022 | % in agriculture/forestry/fishing/mining | Economics |
+| Housing Vacancy Rate | Census ACS 5-Year, Table B25002 | 2018-2022 | % housing units vacant | Housing |
+| Median Home Value | Census ACS 5-Year, Table B25077 | 2018-2022 | median owner-occupied housing value ($) | Housing |
+| Population Change | Census ACS (B01003) + 2020 Decennial (P1_001N) | 2020-2022 | % population change | Demography |
 
 Two additional datasets are available for scatter plot exploration but excluded from the gravity distance calculation:
 
@@ -63,7 +72,7 @@ DiscoSights combines three related but distinct analytical objects that should n
 
 **Gravity Model (force_strength):** The core spatial interaction model computing attraction between all county pairs. Force(i,j) = Pop(i) x Pop(j) / dist(i,j)^beta. This is what the IRS migration validation tests. Output: a 3,135 x 3,135 sparse matrix of force values (top 10,000 pairs stored).
 
-**Terrain Visualization (PCA projection):** An independent visualization of the 20-dataset data structure using Principal Component Analysis. Counties are projected to 2D (PC1 = economic deprivation 36.2%, PC2 = urbanization 14.5%). Gravitational potential height represents county density in this 2D space -- how many counties share a similar profile. This visualization is derived entirely from the dataset vectors, not from the gravity model formula.
+**Terrain Visualization (PCA projection):** An independent visualization of the 29-dataset data structure using Principal Component Analysis. Counties are projected to 2D (PC1 = economic deprivation 30.9%, PC2 = urbanization 13.5%). Gravitational potential height represents county density in this 2D space -- how many counties share a similar profile. This visualization is derived entirely from the dataset vectors, not from the gravity model formula.
 
 **Dot Layout (spring layout):** The Map/Dots view uses Fruchterman-Reingold spring layout (NetworkX, seed=42, 300 iterations) with force_strength values as edge weights. This places similar counties near each other visually. The equilibrium positions are graph layout artifacts, not gravitational minima. Layout is deterministic and reproducible but should not be interpreted as a physical simulation.
 
@@ -79,7 +88,7 @@ where:
 
     dist(i,j) = geo_norm(i,j) x data_dissim(i,j)
 
-Geographic distance is Haversine distance normalized by maximum US county-pair distance (5,251 miles). Socioeconomic dissimilarity is Euclidean distance across 20 min-max scaled datasets, normalized by the empirical maximum across all county pairs. Missing values in normalized dataset vectors are imputed with 0.5 (the midpoint of the [0,1] scale), treating counties with missing data as having typical values. County pairs with geographic distance < 10 miles are excluded from beta calibration to avoid noise from adjacent county boundary effects.
+Geographic distance is Haversine distance normalized by maximum US county-pair distance (5,251 miles). Socioeconomic dissimilarity is Euclidean distance across 29 min-max scaled datasets, normalized by the empirical maximum across all county pairs. Missing values in normalized dataset vectors are imputed with 0.5 (the midpoint of the [0,1] scale), treating counties with missing data as having typical values. County pairs with geographic distance < 10 miles are excluded from beta calibration to avoid noise from adjacent county boundary effects.
 
 **Why multiplicative rather than additive:** Combined distance = geo_norm x data_dissim rather than geo_norm + data_dissim for three reasons:
 
@@ -87,7 +96,7 @@ Geographic distance is Haversine distance normalized by maximum US county-pair d
 
 2. *Scale invariance:* Addition requires choosing relative weights for geographic vs data distance. Multiplication avoids this choice -- the two components modulate each other rather than competing. A 2x increase in either component doubles the combined distance regardless of the other's magnitude.
 
-3. *Empirical support:* The multiplicative formulation produced R-squared = 0.299 in combined-distance calibration vs R-squared = 0.038 for geographic distance alone -- a 686% improvement that would not have been possible if the two components were not interacting multiplicatively.
+3. *Empirical support:* The multiplicative formulation produced R-squared = 0.303 in combined-distance calibration vs R-squared = 0.054 for geographic distance alone -- a 458% improvement that would not have been possible if the two components were not interacting multiplicatively.
 
 **The floor at 0.01:** To prevent numerical instability when either component approaches zero, combined distance is floored at 0.01. This affects primarily adjacent counties within the same metropolitan area that share near-identical profiles.
 
@@ -103,19 +112,19 @@ OLS log-linear regression of socioeconomic similarity on geographic distance acr
 
     log(similarity) = alpha - beta x log(geo_distance)
 
-Result: beta_geo = 0.0540, R-squared = 0.0380
+Result: beta_geo = 0.0593, R-squared = 0.0542
 
 **Pass 2 -- Combined distance:**
 
 Same regression using multiplicative combined distance (geographic x socioeconomic):
 
-Result: beta_operative = 0.1500, R-squared = 0.2988
+Result: beta_operative = 0.1387, R-squared = 0.3026
 
-Model fit improved from R-squared = 0.0380 to R-squared = 0.2988 (686% improvement).
+Model fit improved from R-squared = 0.0542 to R-squared = 0.3026 (458% improvement).
 
-The operative beta = 0.150 is low compared to typical gravity models for physical flows (beta = 1-2), reflecting that county socioeconomic clustering is primarily driven by data-space similarity rather than geographic proximity.
+The operative beta = 0.139 is low compared to typical gravity models for physical flows (beta = 1-2), reflecting that county socioeconomic clustering is primarily driven by data-space similarity rather than geographic proximity.
 
-**Cross-validation and R-squared circularity:** In Pass 2, the combined distance measure contains data_dissim, which also determines the similarity dependent variable. To quantify this circularity, beta was estimated on an 80% training split and evaluated on a 20% holdout (seed=42). Beta_cv = 0.1500 (vs beta_op = 0.1500, difference = 0.0000). R-squared_holdout = 0.3002 (vs R-squared_full = 0.2988, inflation = -0.0015). The circularity concern is negligible -- beta and R-squared are stable under cross-validation. STABLE: Cross-validated beta = full-sample beta. Circularity inflates R2 but does not distort beta.
+**Cross-validation and R-squared circularity:** In Pass 2, the combined distance measure contains data_dissim, which also determines the similarity dependent variable. To quantify this circularity, beta was estimated on an 80% training split and evaluated on a 20% holdout (seed=42). Beta_cv = 0.1388 (vs beta_op = 0.1387, difference = 0.0001). R-squared_holdout = 0.3021 (vs R-squared_full = 0.3026, inflation = 0.0005). The circularity concern is negligible -- beta and R-squared are stable under cross-validation. STABLE: Cross-validated beta = full-sample beta. Circularity inflates R2 but does not distort beta.
 
 ## 5. Validation
 
@@ -132,12 +141,12 @@ Spearman rank correlations (rho) for progressively complex models:
 | Model | rho | Delta |
 |-------|-----|-------|
 | Population only | 0.0405 | -- |
-| + Geographic distance | 0.0523 | +0.0118 |
-| + Data similarity (full model) | 0.1645 (95% CI: 0.1552-0.1733) | +0.1122 |
+| + Geographic distance | 0.0534 | +0.0129 |
+| + Data similarity (full model) | 0.1636 (95% CI: 0.1542-0.1723) | +0.1102 |
 
-Adding socioeconomic similarity improved prediction by +0.112 rho -- a 215% relative improvement over population plus geography alone. The monotonicity check (mean predicted force increases with observed migration volume across all five bins) passes, confirming the model captures real directional signal.
+Adding socioeconomic similarity improved prediction by +0.110 rho -- a 206% relative improvement over population plus geography alone. The monotonicity check (mean predicted force increases with observed migration volume across all five bins) passes, confirming the model captures real directional signal.
 
-**Honest limitation:** The absolute rho = 0.165 is weak in isolation. County-to-county migration is influenced by job availability, family ties, housing costs, and state policy environments beyond socioeconomic similarity. The model is calibrated for similarity discovery, not migration prediction. IRS flows serve as an independent validity check confirming the model captures real-world signal, not as an optimization target.
+**Honest limitation:** The absolute rho = 0.164 is weak in isolation. County-to-county migration is influenced by job availability, family ties, housing costs, and state policy environments beyond socioeconomic similarity. The model is calibrated for similarity discovery, not migration prediction. IRS flows serve as an independent validity check confirming the model captures real-world signal, not as an optimization target.
 
 ### 5.2 Weighting Robustness
 
@@ -151,7 +160,7 @@ Three weighting schemes were tested against IRS migration flows:
 
 Maximum rho difference: 0.0009. All schemes produce equivalent aggregate predictions.
 
-The weighting comparison rho values (0.0728-0.0729) differ from the primary validation rho (0.165) because they use different pair sampling approaches. The primary validation uses the pre-computed top-10,000 force links from the gravity model cache -- the pairs where the model predicts strongest interaction, which naturally correlate better with observed migration. The weighting comparison uses 250,000 randomly sampled county pairs, most of which have near-zero force and near-zero observed migration. This dilutes the correlation signal but is the correct approach for comparing relative performance across weighting schemes, where the absolute rho is less important than the differences between schemes (max 0.0009).
+The weighting comparison rho values (0.0728-0.0729) differ from the primary validation rho (0.164) because they use different pair sampling approaches. The primary validation uses the pre-computed top-10,000 force links from the gravity model cache -- the pairs where the model predicts strongest interaction, which naturally correlate better with observed migration. The weighting comparison uses 250,000 randomly sampled county pairs, most of which have near-zero force and near-zero observed migration. This dilutes the correlation signal but is the correct approach for comparing relative performance across weighting schemes, where the absolute rho is less important than the differences between schemes (max 0.0009).
 
 **Individual county peer stability** was tested for five median-profile counties (P45-P55 overall score) across four US Census regions, using Jaccard similarity of top-10 peer lists:
 
@@ -174,13 +183,13 @@ The near-orthogonality of overall disaster risk and economic disadvantage (r = 0
 
 ### 5.4 Sensitivity Analysis
 
-**Mobility Exclusion.** The Opportunity Atlas mobility dataset was excluded from the gravity model due to temporal mismatch (1978-2015 outcomes vs 2022 current conditions). To verify this exclusion did not distort results, pairwise distances were computed with and without mobility for 10,000 randomly sampled county pairs. The Pearson correlation between 20-dataset and 21-dataset distances was r = 0.9980, with mean absolute difference 0.0044 (on a [0,1] scale). Mobility removal had negligible effect on distance calculations.
+**Mobility Exclusion.** The Opportunity Atlas mobility dataset was excluded from the gravity model due to temporal mismatch (1978-2015 outcomes vs 2022 current conditions). To verify this exclusion did not distort results, pairwise distances were computed with and without mobility for 10,000 randomly sampled county pairs. The Pearson correlation between 29-dataset and 30-dataset distances was r = 0.9980, with mean absolute difference 0.0044 (on a [0,1] scale). Mobility removal had negligible effect on distance calculations.
 
 **Food Access Variable Replacement.** The original food_access variable (SNAP participation rate, r = 0.784 with poverty) was replaced with the USDA Food Access Research Atlas 2019 measure of physical proximity to grocery stores. The USDA measure correlates at r = -0.048 with poverty, confirming it captures a fundamentally different dimension -- physical geographic access rather than economic need. This replacement transforms food_access from a near-redundant poverty proxy into a genuinely independent infrastructure measure.
 
 ### 5.5 KNN Baseline Comparison
 
-To evaluate what the gravity formulation adds beyond simple nearest-neighbor search in data space, we compared gravity model peer lists (top 20 by force_strength) to k-nearest-neighbors (KNN, k=20) using Euclidean distance on the same 20 normalized variables. Mean Jaccard similarity: 0.010. This low overlap reflects that the gravity cache stores only the top 10,000 county pairs by force, which are population-dominated (96.2% of force variance). KNN finds the most data-similar counties regardless of population. For small counties, gravity peers are large distant counties while KNN peers are small similar ones. The county search feature in DiscoSights uses data-space Euclidean distance directly (equivalent to KNN), ensuring peer discovery is population-independent. The Residual force view addresses population dominance by removing the population prediction from force values.
+To evaluate what the gravity formulation adds beyond simple nearest-neighbor search in data space, we compared gravity model peer lists (top 20 by force_strength) to k-nearest-neighbors (KNN, k=20) using Euclidean distance on the same 29 normalized variables. Mean Jaccard similarity: 0.010. This low overlap reflects that the gravity cache stores only the top 10,000 county pairs by force, which are population-dominated (96.7% of force variance). KNN finds the most data-similar counties regardless of population. For small counties, gravity peers are large distant counties while KNN peers are small similar ones. The county search feature in DiscoSights uses data-space Euclidean distance directly (equivalent to KNN), ensuring peer discovery is population-independent. The Residual force view addresses population dominance by removing the population prediction from force values.
 
 ### 5.6 Benchmark Comparison
 
@@ -196,17 +205,17 @@ Both factors predict the observed gap and are consistent with the county-commuti
 
 ## 6. Dataset Structure
 
-PCA analysis of the 20 active datasets reveals:
+PCA analysis of the 29 active datasets reveals:
 
-- Effective dimensions (participation ratio): 5.80 / 20
-- Components for 80% cumulative variance: 8
-- Components for 90% cumulative variance: 11
+- Effective dimensions (participation ratio): 7.45 / 29
+- Components for 80% cumulative variance: 11
+- Components for 90% cumulative variance: 16
 
-**PC1 (36.2% of variance):** Economic deprivation axis. Top loadings: median_income, bea_income, diabetes, poverty. Poverty, income, EITC uptake, and health outcomes load together as a single structural factor -- consistent with the concentrated disadvantage literature.
+**PC1 (30.9% of variance):** Economic deprivation axis. Top loadings: median_income, bea_income, diabetes, poverty. Poverty, income, EITC uptake, and health outcomes load together as a single structural factor -- consistent with the concentrated disadvantage literature.
 
-**PC2 (14.5% of variance):** Urbanization axis. Top loadings: median_age, homeownership_rate, housing_burden, rural_urban.
+**PC2 (13.5% of variance):** Urbanization axis. Top loadings: median_age, homeownership_rate, housing_burden, rural_urban.
 
-The low effective dimensionality (5.80 of 20) reflects genuine covariation in US county data rather than measurement redundancy. Weighting robustness analysis (Section 5.2) confirms this concentration does not distort peer-finding results.
+The low effective dimensionality (7.45 of 29) reflects genuine covariation in US county data rather than measurement redundancy. Weighting robustness analysis (Section 5.2) confirms this concentration does not distort peer-finding results.
 
 **High collinearity pairs (|r| > 0.6):**
   - bachelors_rate x bea_income: r = 0.793
@@ -225,11 +234,11 @@ The low effective dimensionality (5.80 of 20) reflects genuine covariation in US
 
 4. **Diagnosis bias.** Health outcome datasets measure diagnosed prevalence. Areas with limited healthcare access show lower measured rates regardless of true prevalence.
 
-5. **Equal weighting.** All 20 datasets contribute equally. Validated as robust to domain reweighting (Jaccard = 0.891) but may not match all research questions.
+5. **Equal weighting.** All 29 datasets contribute equally. Validated as robust to domain reweighting (Jaccard = 0.891) but may not match all research questions.
 
 6. **Dataset reduction sensitivity.** Reducing to 7 datasets produces different peers (Jaccard = 0.090). The reduced view is a different analytical lens, not a robustness check.
 
-7. **Migration validation.** IRS flows are an imperfect proxy. Weak absolute rho = 0.165 reflects migration's multifactorial determinants.
+7. **Migration validation.** IRS flows are an imperfect proxy. Weak absolute rho = 0.164 reflects migration's multifactorial determinants.
 
 8. **Small county uncertainty.** 123 counties (population < 5,000 or ACS CV > 30%) have unreliable Census estimates. Flagged in the UI.
 
@@ -239,11 +248,11 @@ The low effective dimensionality (5.80 of 20) reflects genuine covariation in US
 
 11. **Ordinal variable treatment.** The USDA Rural-Urban Continuum Code (rural_urban, 1-9) is treated as continuous in the Euclidean distance calculation. The intervals between ordinal codes are not necessarily equal in real-world terms, introducing a known approximation.
 
-12. **Population dominance.** With beta = 0.150, population product explains 96.2% of raw force variance. The gravity model's force values are population-dominated for large counties. The peer discovery feature uses data-space Euclidean distance directly, which is population-independent, to find similar counties regardless of size.
+12. **Population dominance.** With beta = 0.139, population product explains 96.7% of raw force variance. The gravity model's force values are population-dominated for large counties. The peer discovery feature uses data-space Euclidean distance directly, which is population-independent, to find similar counties regardless of size.
 
-13. **Validation zero-inflation.** Of the 51,445 IRS migration pairs, only those appearing in the gravity model's top-10,000 pre-computed links receive nonzero predicted force; remaining pairs receive force = 0. The Spearman rho = 0.165 reflects both ranking accuracy and binary link discrimination. The monotonic bin analysis provides a complementary assessment less sensitive to zero-inflation.
+13. **Validation zero-inflation.** Of the 51,445 IRS migration pairs, only those appearing in the gravity model's top-10,000 pre-computed links receive nonzero predicted force; remaining pairs receive force = 0. The Spearman rho = 0.164 reflects both ranking accuracy and binary link discrimination. The monotonic bin analysis provides a complementary assessment less sensitive to zero-inflation.
 
-14. **Spatial autocorrelation.** Formal Moran's I analysis of model residuals was not completed. Counties with similar socioeconomic profiles are geographically clustered (e.g., Appalachian counties, Mississippi Delta), meaning IRS validation residuals may be spatially autocorrelated. This would not invalidate the rho = 0.165 result but would mean the effective sample size is smaller than n = 51,445 pairs. Spatial autocorrelation analysis is a direction for future work.
+14. **Spatial autocorrelation.** Formal Moran's I analysis of model residuals was not completed. Counties with similar socioeconomic profiles are geographically clustered (e.g., Appalachian counties, Mississippi Delta), meaning IRS validation residuals may be spatially autocorrelated. This would not invalidate the rho = 0.164 result but would mean the effective sample size is smaller than n = 51,445 pairs. Spatial autocorrelation analysis is a direction for future work.
 
 15. **Voter turnout denominator.** The voter_turnout_rate variable uses total county population as denominator. ACS provides Citizen Voting Age Population (CVAP, table B29001) at county level, which would be a more appropriate denominator. Counties with large youth or non-citizen populations show mechanically lower apparent turnout rates under the current measure. Future versions should replace total population with CVAP as the denominator. The current variable should be interpreted as a civic engagement proxy that partially reflects demographic structure.
 
@@ -251,13 +260,13 @@ The low effective dimensionality (5.80 of 20) reflects genuine covariation in US
 
 17. **Ecological inference.** All correlations and peer comparisons operate at the county level. Relationships observed between county-level aggregates (e.g., poverty rate and diabetes rate) do not necessarily hold for individuals within those counties. This ecological inference limitation [@robinson1950ecological] is inherent to any county-level analysis tool and should inform interpretation of all scatter plot correlations.
 
-18. **Bootstrap independence assumption.** The bootstrap confidence interval on IRS validation rho (95% CI: 0.155-0.173, n = 1,000 resamples) assumes independence of county pairs. In practice, pairs sharing a county are not independent (e.g., pairs involving Los Angeles County are correlated). The true confidence interval may be wider than reported.
+18. **Bootstrap independence assumption.** The bootstrap confidence interval on IRS validation rho (95% CI: 0.154-0.172, n = 1,000 resamples) assumes independence of county pairs. In practice, pairs sharing a county are not independent (e.g., pairs involving Los Angeles County are correlated). The true confidence interval may be wider than reported.
 
 19. **IRS migration selection bias.** IRS county-to-county migration data excludes non-filers, undocumented immigrants, and individuals below the filing threshold. The validation therefore tests whether the similarity space predicts migration among tax-filing households, not the full population. Counties with high non-filing rates (often low-income rural counties) are underrepresented in the validation sample.
 
 20. **Frontend platform dependency.** The React frontend is hosted on Lovable, a managed platform. Module-based PCA recomputation runs client-side via ml-pca and may exhibit performance variation across browsers and devices. The terrain visualization requires WebGL-capable browsers for smooth rendering.
 
-21. **Temporal beta stability.** The distance decay parameter beta = 0.150 was calibrated on 2022-vintage data. As socioeconomic conditions evolve, beta may shift. No longitudinal stability analysis has been performed. Users should treat beta as a snapshot calibration, not a time-invariant parameter.
+21. **Temporal beta stability.** The distance decay parameter beta = 0.139 was calibrated on 2022-vintage data. As socioeconomic conditions evolve, beta may shift. No longitudinal stability analysis has been performed. Users should treat beta as a snapshot calibration, not a time-invariant parameter.
 
 ## 8. Software and Reproducibility
 
@@ -271,9 +280,9 @@ The low effective dimensionality (5.80 of 20) reflects genuine covariation in US
 
 DiscoSights provides a validated, transparent instrument for county socioeconomic similarity analysis with six documented contributions:
 
-1. **Empirical beta calibration** (beta = 0.150, R-squared = 0.299 combined vs 0.038 geographic only).
+1. **Empirical beta calibration** (beta = 0.139, R-squared = 0.303 combined vs 0.054 geographic only).
 
-2. **Out-of-sample validation** (+0.112 rho improvement, 51,445 IRS county pairs).
+2. **Out-of-sample validation** (+0.110 rho improvement, 51,445 IRS county pairs).
 
 3. **Weighting robustness** (max IRS rho difference 0.0009, domain-balanced peer Jaccard = 0.891).
 
@@ -284,4 +293,4 @@ DiscoSights provides a validated, transparent instrument for county socioeconomi
 6. **Clear separation** of three analytical objects: gravity model (validated), terrain visualization (PCA-derived), and dot layout (spring layout). Validation claims apply to force values, not visualizations.
 
 ---
-*Methods note generated 2026-04-02. All numerical values derived programmatically from model outputs.*
+*Methods note generated 2026-04-03. All numerical values derived programmatically from model outputs.*

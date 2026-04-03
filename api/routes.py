@@ -1206,6 +1206,28 @@ def knn_comparison():
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
+# ── GET /within-cluster-correlations ──────────────────────────
+@router.get('/within-cluster-correlations')
+def within_cluster_correlations():
+    from fastapi.responses import JSONResponse
+    try:
+        data = fetch_cache_file('within_cluster_correlations.json')
+    except Exception as e:
+        return JSONResponse(status_code=503, content={"error": f"within_cluster_correlations.json unavailable: {e}"})
+    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
+
+
+# ── GET /cluster-silhouette-scores ───────────────────────────
+@router.get('/cluster-silhouette-scores')
+def cluster_silhouette_scores():
+    from fastapi.responses import JSONResponse
+    try:
+        data = fetch_cache_file('cluster_silhouette_scores.json')
+    except Exception as e:
+        return JSONResponse(status_code=503, content={"error": f"cluster_silhouette_scores.json unavailable: {e}"})
+    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
+
+
 # ── GET /admin/health ─────────────────────────────────────────
 @router.get('/admin/health')
 def admin_health():
