@@ -2,7 +2,7 @@
 
 ## Overview
 
-DiscoSights is a configurable county similarity and correlation explorer for US policy research. It identifies structural peer counties — places that share similar socioeconomic profiles despite geographic distance — using Euclidean distance in a normalized 20-variable space. A module system lets researchers define what "similar" means for their research question: economic mobility, health equity, infrastructure, community vitality, or any custom variable combination. A gravity model (beta = 0.150, IRS validation rho = 0.165) provides the visualization framework and validates that the similarity space captures real-world county affinity. This repository contains the data pipeline, model calibration, validation scripts, and FastAPI backend serving the live tool at https://discovery-surface-spark.lovable.app.
+DiscoSights is a configurable county similarity and correlation explorer for US policy research. It identifies structural peer counties — places that share similar socioeconomic profiles despite geographic distance — using Euclidean distance in a normalized 29-variable space spanning economic, health, infrastructure, civic, child welfare, immigration, industry, and housing domains. A module system lets researchers define what "similar" means for their research question: economic mobility, health equity, child and family welfare, immigration, infrastructure, community vitality, or any custom variable combination. A gravity model (beta = 0.139, IRS validation rho = 0.164) provides the visualization framework and validates that the similarity space captures real-world county affinity. This repository contains the data pipeline, model calibration, validation scripts, and FastAPI backend serving the live tool at https://discovery-surface-spark.lovable.app.
 
 The frontend repository is at [github.com/gregjlake/discovery-insights](https://github.com/gregjlake/discovery-insights).
 
@@ -10,7 +10,7 @@ The frontend repository is at [github.com/gregjlake/discovery-insights](https://
 
 Identifying socioeconomic peer counties — places that share structural conditions despite geographic distance — is a common but methodologically inconsistent task in policy research, public health, and economic geography. Researchers typically select variables ad hoc and weight them arbitrarily.
 
-DiscoSights provides a gravity model with empirically calibrated distance decay (beta = 0.150), out-of-sample IRS migration validation (+0.112 rho improvement beyond population and geography), and documented weighting robustness (Jaccard = 0.891 across schemes). Example: McDowell County WV and Starr County TX share economic profiles across 20 datasets despite being 1,247 miles apart.
+DiscoSights provides a gravity model with empirically calibrated distance decay (beta = 0.139), out-of-sample IRS migration validation (+0.110 rho improvement beyond population and geography), and documented weighting robustness (Jaccard = 0.891 across schemes). Example: McDowell County WV and Starr County TX share economic profiles across 29 datasets despite being 1,247 miles apart.
 
 ## Installation
 
@@ -125,9 +125,9 @@ Unit tests cover core scientific functions (haversine, dissimilarity, gravity fo
 
 ## Model Summary
 
-- **20 active datasets** from Census, CDC, EPA, USDA, IRS, FEMA
-- **beta = 0.150** (empirically calibrated, R-squared = 0.299)
-- **IRS validation**: +0.112 rho improvement beyond population and geography
+- **29 active datasets** from Census, CDC, EPA, USDA, IRS, FEMA
+- **beta = 0.139** (empirically calibrated, R-squared = 0.303)
+- **IRS validation**: +0.110 rho improvement beyond population and geography
 - **Weighting robustness**: domain-balanced Jaccard = 0.891
 - **3,135 counties** with pre-computed equilibrium positions
 - **9 FEMA disaster datasets** available for scatter exploration
@@ -136,19 +136,21 @@ Unit tests cover core scientific functions (haversine, dissimilarity, gravity fo
 
 See `data/dataset_metadata.json` for full provenance. Key sources:
 
-- Census Bureau ACS 5-Year (2018-2022)
-- Census SAIPE (2022)
-- USDA Food Access Research Atlas (2019)
-- FEMA National Risk Index (2020)
-- IRS Statistics of Income migration data (2019-2020)
-- CDC PLACES / BRFSS (2022)
-- EPA Air Quality System (2022)
-- IMLS Public Libraries Survey (FY 2022)
-- MIT Election Data + Science Lab (2020)
+- Census Bureau ACS 5-Year (2018-2022): income, education, homeownership, housing burden, broadband, unemployment, child poverty, single-parent rate, foreign-born %, language isolation, manufacturing %, agriculture %, housing vacancy, median home value, population density
+- Census SAIPE (2022): poverty rate, median income
+- Census Population Estimates (2020-2022): population change
+- USDA Food Access Research Atlas (2019): low food access
+- FEMA National Risk Index (2020): 9 disaster risk datasets (scatter only)
+- IRS Statistics of Income (2019-2020): migration validation, EITC uptake
+- CDC PLACES / BRFSS (2022): obesity, diabetes, mental health, hypertension
+- EPA Air Quality System (2022): air quality
+- IMLS Public Libraries Survey (FY 2022): library spending
+- USDA Rural-Urban Continuum Codes (2023): rural-urban classification
+- MIT Election Data + Science Lab (2020): voter turnout
 
 ## Static Data Export
 
-The normalized county data matrix (3,135 counties x 20 variables) is available at `data/county_data_matrix.csv`. This allows inspection and reproduction of distance calculations without database credentials. Each row is a county (FIPS code), each column is a min-max normalized dataset value (0-1 scale, 0.5 = imputed missing).
+The normalized county data matrix (3,135 counties x 29 variables) is available at `data/county_data_matrix.csv`. This allows inspection and reproduction of distance calculations without database credentials. Each row is a county (FIPS code), each column is a min-max normalized dataset value (0-1 scale, 0.5 = imputed missing).
 
 ## Reproducing Key Results
 
@@ -183,7 +185,7 @@ See `data/beta_calibration.json` and `data/validation_results.json` for expected
 
 If you use DiscoSights in research, please cite:
 
-> Lake, G. (2026). DiscoSights: A Validated Spatial Interaction Model for US County Socioeconomic Similarity. *Journal of Open Source Software* (submitted).
+> Lake, G. (2026). DiscoSights: A Configurable County Similarity and Correlation Explorer for US Policy Research. *Journal of Open Source Software* (submitted).
 
 ## Authors
 

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use DiscoSights in research, please cite it as below."
 type: software
 title: DiscoSights
-abstract: "A configurable county similarity and correlation explorer for US policy research. Enables module-based peer county discovery using Euclidean distance in user-defined variable subspaces across 20 socioeconomic datasets. Includes gravity model calibration, IRS migration validation, dynamic terrain visualization, and within-group correlation analysis."
+abstract: "A configurable county similarity and correlation explorer for US policy research. Enables module-based peer county discovery using Euclidean distance in user-defined variable subspaces across 29 socioeconomic datasets spanning economic, health, infrastructure, civic, child welfare, immigration, industry, and housing domains. Includes gravity model calibration, IRS migration validation, dynamic terrain visualization, and within-group correlation analysis."
 authors:
   - family-names: Lake
     given-names: Greg
