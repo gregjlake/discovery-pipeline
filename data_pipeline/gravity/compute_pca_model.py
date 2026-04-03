@@ -18,15 +18,22 @@ if hasattr(sys.stdout, "reconfigure"):
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 
 ALL_DATASETS = {
-    "library": "library_spend_per_capita", "mobility": "mobility_rank_p25",
+    "library": "library_spend_per_capita",
     "air": "air_quality_inv", "broadband": "broadband_rate",
     "eitc": "eitc_rate", "poverty": "poverty_rate",
     "median_income": "median_hh_income", "bea_income": "per_capita_income",
-    "food_access": "snap_rate", "obesity": "obesity_rate",
+    "food_access": "pct_low_food_access", "obesity": "obesity_rate",
     "diabetes": "diabetes_rate", "mental_health": "mental_health_rate",
     "hypertension": "hypertension_rate", "unemployment": "unemployment_rate",
     "rural_urban": "rural_urban_code", "housing_burden": "housing_burden_rate",
-    "voter_turnout": "total_votes_2020", "pop_density": "pop_density",
+    "voter_turnout": "voter_turnout_rate", "pop_density": "pop_density",
+    "bachelors_rate": "bachelors_rate", "median_age": "median_age",
+    "homeownership_rate": "homeownership_rate",
+    "child_poverty_rate": "child_poverty_rate", "single_parent_rate": "single_parent_rate",
+    "foreign_born_pct": "foreign_born_pct", "language_isolation_rate": "language_isolation_rate",
+    "manufacturing_pct": "manufacturing_pct", "agriculture_pct": "agriculture_pct",
+    "housing_vacancy_rate": "housing_vacancy_rate", "median_home_value": "median_home_value",
+    "population_change_pct": "population_change_pct",
 }
 
 
@@ -51,8 +58,7 @@ def main():
         offset += 1000
 
     rv = pd.DataFrame(all_rows)
-    target = set(ALL_DATASETS.items())
-    rv = rv[rv.apply(lambda r: (r["dataset_id"], r["column_name"]) in target, axis=1)]
+    rv = rv[rv["dataset_id"].isin(ALL_DATASETS.keys())]
     pivot = rv.pivot_table(index="fips", columns="dataset_id", values="value", aggfunc="first").reset_index()
     pivot["fips"] = pivot["fips"].astype(str).str.zfill(5)
 

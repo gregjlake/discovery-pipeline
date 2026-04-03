@@ -31,6 +31,11 @@ DATASETS = {
     "voter_turnout": "voter_turnout_rate", "pop_density": "pop_density",
     "bachelors_rate": "bachelors_rate", "median_age": "median_age",
     "homeownership_rate": "homeownership_rate",
+    "child_poverty_rate": "child_poverty_rate", "single_parent_rate": "single_parent_rate",
+    "foreign_born_pct": "foreign_born_pct", "language_isolation_rate": "language_isolation_rate",
+    "manufacturing_pct": "manufacturing_pct", "agriculture_pct": "agriculture_pct",
+    "housing_vacancy_rate": "housing_vacancy_rate", "median_home_value": "median_home_value",
+    "population_change_pct": "population_change_pct",
 }
 
 KNOWN_TAUTOLOGICAL = {
@@ -66,8 +71,7 @@ def main():
         offset += 1000
 
     rv = pd.DataFrame(all_rows)
-    target = set(DATASETS.items())
-    rv = rv[rv.apply(lambda r: (r["dataset_id"], r["column_name"]) in target, axis=1)]
+    rv = rv[rv["dataset_id"].isin(DATASETS.keys())]
     pivot = rv.pivot_table(index="fips", columns="dataset_id", values="value", aggfunc="first").reset_index()
 
     # Filter to gravity model counties (same as calibrate_beta: inner join with centroids)
