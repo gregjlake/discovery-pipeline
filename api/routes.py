@@ -1243,13 +1243,15 @@ def admin_run_pipeline(body: dict = None):
         result = client.table('pipeline_jobs').insert({
             'status': 'pending',
             'steps': steps,
+            'phase': 1,
+            'total_phases': 4,
             'triggered_by': 'api',
         }).execute()
         job_id = result.data[0]['id']
         return JSONResponse(content={
             "status": "queued",
             "job_id": job_id,
-            "message": f"Pipeline job {job_id} queued. Worker will pick it up within 30s.",
+            "message": f"Pipeline job {job_id} queued (phase 1/4). Worker will pick it up within 30s.",
             "check_status": f"/api/admin/job-status/{job_id}",
         })
     except Exception as e:

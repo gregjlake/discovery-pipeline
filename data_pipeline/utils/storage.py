@@ -1,5 +1,6 @@
-"""Upload pipeline output files to Supabase Storage."""
+"""Upload pipeline output files to Supabase Storage with retry."""
 import os
+import time
 
 from dotenv import load_dotenv
 
@@ -15,7 +16,7 @@ def get_storage_client():
 
 
 def upload_to_storage(local_path: str, storage_filename: str = None):
-    """Upload a local file to the pipeline-cache bucket in Supabase Storage."""
+    """Upload a local file to the pipeline-cache bucket with exponential backoff retry."""
     if storage_filename is None:
         storage_filename = os.path.basename(local_path)
 
@@ -38,12 +39,23 @@ def upload_to_storage(local_path: str, storage_filename: str = None):
     except Exception:
         pass
 
-    client.storage.from_('pipeline-cache').upload(
-        storage_filename, data,
-        file_options={'content-type': content_type}
-    )
+    # Upload with exponential backoff (handles transient Supabase 502s)
+    last_error = None
+    for attempt in range(5):
+        try:
+            client.storage.from_('pipeline-cache').upload(
+                storage_filename, data,
+                file_options={'content-type': content_type}
+            )
+            url = client.storage.from_('pipeline-cache').get_public_url(storage_filename)
+            size_kb = len(data) / 1024
+            print(f"Uploaded to Storage: {storage_filename} ({size_kb:.1f} KB)")
+            return url
+        except Exception as e:
+            last_error = e
+            if attempt < 4:
+                wait = 30 * (2 ** attempt)
+                print(f"Upload failed attempt {attempt+1}/5, retrying in {wait}s: {e}")
+                time.sleep(wait)
 
-    url = client.storage.from_('pipeline-cache').get_public_url(storage_filename)
-    size_kb = len(data) / 1024
-    print(f"Uploaded to Storage: {storage_filename} ({size_kb:.1f} KB)")
-    return url
+    raise Exception(f"Upload failed after 5 attempts: {last_error}")

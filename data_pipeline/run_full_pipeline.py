@@ -1,14 +1,38 @@
 #!/usr/bin/env python3
 """
 DiscoSights Full Pipeline Orchestrator
-Runs all pipeline steps in sequence.
-Safe to run on Railway worker or locally.
+Runs pipeline steps in phases. Each phase runs as a separate worker job
+to avoid Railway CPU/memory timeouts on the full 10-step pipeline.
 """
 import subprocess
 import sys
 import os
 import time
 from datetime import datetime
+
+
+PIPELINE_PHASES = {
+    1: [
+        ("Beta Calibration", "data_pipeline/gravity/calibrate_beta.py"),
+        ("Gravity Pipeline", "data_pipeline/gravity/run_gravity_pipeline.py"),
+        ("IRS Validation", "data_pipeline/gravity/validate_against_migration.py"),
+    ],
+    2: [
+        ("Force Variants", "data_pipeline/gravity/compute_force_variants.py"),
+        ("PCA Analysis", "data_pipeline/gravity/pca_analysis.py"),
+        ("County Clusters", "data_pipeline/gravity/compute_county_clusters.py"),
+        ("Correlation Insights", "data_pipeline/gravity/compute_correlation_insights.py"),
+    ],
+    3: [
+        ("Terrain", "data_pipeline/gravity/compute_terrain.py"),
+        ("KNN Baseline", "data_pipeline/gravity/compute_knn_baseline.py"),
+    ],
+    4: [
+        ("Layout", "data_pipeline/gravity/compute_layout.py"),
+        ("Margins of Error", "data_pipeline/gravity/fetch_margins_of_error.py"),
+        ("Methodology", "data_pipeline/gravity/generate_methodology.py"),
+    ],
+}
 
 
 def run_step(name: str, script: str):
@@ -27,7 +51,6 @@ def run_step(name: str, script: str):
     )
     elapsed = time.time() - start
 
-    # Print captured output
     if result.stdout:
         print(result.stdout[-2000:])
     if result.stderr:
@@ -39,32 +62,25 @@ def run_step(name: str, script: str):
     return result.returncode == 0
 
 
-def run_pipeline(steps: list = None):
-    """Run the full pipeline or a subset of steps. Returns True if all succeeded."""
-    ALL_STEPS = [
-        ("Beta Calibration (geo-only)", "data_pipeline/gravity/calibrate_beta.py"),
-        ("Gravity Pipeline (full model + cache)", "data_pipeline/gravity/run_gravity_pipeline.py"),
-        ("IRS Migration Validation", "data_pipeline/gravity/validate_against_migration.py"),
-        ("Force Variants", "data_pipeline/gravity/compute_force_variants.py"),
-        ("PCA Analysis", "data_pipeline/gravity/pca_analysis.py"),
-        ("Terrain Generation", "data_pipeline/gravity/compute_terrain.py"),
-        ("Pre-computed Layout", "data_pipeline/gravity/compute_layout.py"),
-        ("Margins of Error", "data_pipeline/gravity/fetch_margins_of_error.py"),
-        ("KNN Baseline Comparison", "data_pipeline/gravity/compute_knn_baseline.py"),
-        ("Methodology Document", "data_pipeline/gravity/generate_methodology.py"),
-    ]
-
-    if steps:
-        run_steps = [(n, s) for n, s in ALL_STEPS if any(step in s for step in steps)]
+def run_pipeline(steps: list = None, phase: int = None):
+    """Run the full pipeline, a single phase, or specific steps. Returns True if all succeeded."""
+    if phase is not None:
+        all_steps = PIPELINE_PHASES.get(phase, [])
+        label = f"Phase {phase}/{len(PIPELINE_PHASES)}"
+    elif steps:
+        flat = [item for p in sorted(PIPELINE_PHASES.keys()) for item in PIPELINE_PHASES[p]]
+        all_steps = [(n, s) for n, s in flat if any(step in s for step in steps)]
+        label = f"Custom steps ({len(all_steps)})"
     else:
-        run_steps = ALL_STEPS
+        all_steps = [item for p in sorted(PIPELINE_PHASES.keys()) for item in PIPELINE_PHASES[p]]
+        label = f"Full pipeline ({len(all_steps)} steps)"
 
     print(f"\nDiscoSights Pipeline Orchestrator")
-    print(f"Running {len(run_steps)} steps")
+    print(f"Running: {label}")
     print(f"Start: {datetime.now().isoformat()}")
 
     results = []
-    for name, script in run_steps:
+    for name, script in all_steps:
         if not os.path.exists(script):
             print(f"SKIP: {script} not found")
             continue
@@ -94,7 +110,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--steps", nargs="+", help="Run specific steps (by script name fragment)")
+    parser.add_argument("--phase", type=int, help="Run a specific phase (1-4)")
     args = parser.parse_args()
 
-    success = run_pipeline(args.steps)
+    success = run_pipeline(args.steps, phase=args.phase)
     sys.exit(0 if success else 1)

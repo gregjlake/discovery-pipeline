@@ -1,7 +1,9 @@
 """Pre-compute deterministic Fruchterman-Reingold layout for gravity map dots view."""
+import json
+import sys
+
 import networkx as nx
 import numpy as np
-import json
 
 print("Loading cache...")
 with open('data/gravity_map_cache.json') as f:
@@ -11,10 +13,24 @@ nodes = cache['nodes']
 links = cache['links']
 fips_list = [n['fips'] for n in nodes]
 
+# Skip if layout already computed and dataset count unchanged
+n_datasets = len(cache.get('metadata', {}).get('calibration_source', '').split(','))
+has_positions = nodes[0].get('x_computed') is not None if nodes else False
+cached_n = cache.get('metadata', {}).get('layout_n_datasets')
+current_n = len(nodes[0].get('datasets', {})) if nodes else 0
+
+if has_positions and cached_n == current_n:
+    print(f"Layout unchanged (n_datasets={current_n}) -- skipping")
+    sys.exit(0)
+
+# Build sparse graph: top 5,000 links by force_strength (not all 159K)
+sorted_links = sorted(links, key=lambda l: l.get('force_strength', 0), reverse=True)
+top_links = sorted_links[:5000]
+
 G = nx.Graph()
 for n in nodes:
     G.add_node(n['fips'], population=n['population'])
-for l in links:
+for l in top_links:
     fs = l.get('force_strength', 0)
     if fs > 0:
         G.add_edge(l['source'], l['target'], weight=fs)
@@ -32,13 +48,13 @@ pos_init = {
 }
 
 print("Computing Fruchterman-Reingold layout...")
-print("(seed=42, 300 iterations — takes 2-5 minutes)")
+print("(seed=42, 50 iterations, 5K links)")
 pos = nx.spring_layout(
     G,
     pos=pos_init,
     k=0.15,
     weight='weight',
-    iterations=300,
+    iterations=50,
     seed=42
 )
 print("Done.")
@@ -58,8 +74,9 @@ for i, n in enumerate(cache['nodes']):
 cache['metadata']['layout_precomputed'] = True
 cache['metadata']['layout_method'] = 'Fruchterman-Reingold (NetworkX spring_layout)'
 cache['metadata']['layout_seed'] = 42
-cache['metadata']['layout_iterations'] = 300
-cache['metadata']['layout_note'] = 'Deterministic layout — identical for all users'
+cache['metadata']['layout_iterations'] = 50
+cache['metadata']['layout_note'] = 'Deterministic layout -- identical for all users'
+cache['metadata']['layout_n_datasets'] = current_n
 
 with open('data/gravity_map_cache.json', 'w') as f:
     json.dump(cache, f)
