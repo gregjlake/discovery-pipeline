@@ -45,7 +45,7 @@ Force(i,j) = Pop(i) x Pop(j) / dist(i,j)^beta
 ```
 
 where:
-- beta = 0.138702 (empirically calibrated)
+- beta = 0.138702 (calibrated via two-pass OLS regression on 249,922 county pairs)
 - dist(i,j) = geo_norm(i,j) x data_dissimilarity(i,j)
 - geo_norm = Haversine distance / max US distance (5,251 mi)
 - data_dissimilarity = normalized Euclidean distance across 29 datasets
@@ -97,7 +97,7 @@ Peer-level stability was tested for 5 median-profile counties (P45-P55) across t
 Domain-balanced weighting preserves peer rankings. Reducing to 7 datasets produces substantially different peer lists. The 7-dataset view should be understood as a different analytical lens, not a cleaner version of the full model.
 
 ### External Validation -- FEMA Disaster Risk
-FEMA National Risk Index (2023) scores for 9 natural hazard variables were compared against the 17 socioeconomic datasets:
+FEMA National Risk Index (2023) scores for 9 natural hazard variables were compared against the 29 socioeconomic datasets:
 
 - Overall disaster risk x poverty: r = 0.151 (weak -- largely independent)
 - Social vulnerability x poverty: r = 0.515 (moderate)
