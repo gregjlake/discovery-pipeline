@@ -1228,6 +1228,182 @@ def cluster_silhouette_scores():
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
+# ── GET /positive-deviance ───────────────────────────────────
+@router.get('/positive-deviance')
+def positive_deviance():
+    """
+    Precomputed OLS residuals for all variables as outcomes
+    using all other variables as inputs.
+    Returns z-scored residuals per county per outcome.
+    Positive z = county outperforms its predicted outcome.
+    """
+    from fastapi.responses import JSONResponse
+    try:
+        data = fetch_cache_file('positive_deviance.json')
+    except Exception as e:
+        return JSONResponse(status_code=503, content={"error": f"positive_deviance.json unavailable: {e}"})
+    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
+
+
+# ── POST /positive-deviance/compute ─────────────────────────
+@router.post('/positive-deviance/compute')
+def compute_positive_deviance(request_body: dict):
+    """
+    Compute OLS residuals for a user-defined input variable subset and outcome.
+
+    Body:
+      input_variables: list of variable names
+      outcome_variable: single variable name
+      county_fips: optional, to get single county result
+
+    Returns residuals_z, r2, predicted, discriminating_factors.
+    """
+    import traceback
+    from fastapi.responses import JSONResponse
+
+    try:
+        input_vars = request_body.get('input_variables', [])
+        outcome_var = request_body.get('outcome_variable')
+        target_fips = request_body.get('county_fips')
+
+        if not input_vars or not outcome_var:
+            return JSONResponse(
+                status_code=400,
+                content={"error": "input_variables and outcome_variable required"}
+            )
+
+        if outcome_var in input_vars:
+            input_vars = [v for v in input_vars if v != outcome_var]
+
+        if len(input_vars) < 2:
+            return JSONResponse(
+                status_code=400,
+                content={"error": "Need at least 2 input variables"}
+            )
+
+        # Load node data from gravity map cache
+        gravity_cache = fetch_cache_file('gravity_map_cache.json')
+        nodes = gravity_cache['nodes']
+
+        # Build matrix
+        X_list = []
+        y_list = []
+        valid_fips = []
+
+        for node in nodes:
+            ds = node.get('datasets', {})
+            row = [ds.get(v, 0.5) or 0.5 for v in input_vars]
+            outcome_val = ds.get(outcome_var, None)
+            if outcome_val is None:
+                outcome_val = 0.5
+            X_list.append(row)
+            y_list.append(float(outcome_val))
+            valid_fips.append(node['fips'])
+
+        X = np.array(X_list)
+        y = np.array(y_list)
+
+        # OLS regression
+        from sklearn.linear_model import LinearRegression
+        model = LinearRegression()
+        model.fit(X, y)
+        predicted = model.predict(X)
+        residuals = y - predicted
+
+        r_std = residuals.std()
+        if r_std > 0:
+            residual_z = (residuals - residuals.mean()) / r_std
+        else:
+            residual_z = np.zeros_like(residuals)
+
+        r2 = float(model.score(X, y))
+
+        # Build result dicts
+        residuals_dict = {
+            fips: float(residual_z[i])
+            for i, fips in enumerate(valid_fips)
+        }
+        predicted_dict = {
+            fips: float(predicted[i])
+            for i, fips in enumerate(valid_fips)
+        }
+
+        # Find discriminating factors:
+        # Compare top 25% vs bottom 25% residuals on variables NOT in the input set
+        sorted_residuals = sorted(residuals_dict.items(), key=lambda x: -x[1])
+        n = len(sorted_residuals)
+        top_fips = set(f for f, _ in sorted_residuals[:n // 4])
+        bot_fips = set(f for f, _ in sorted_residuals[-n // 4:])
+
+        sample_node = nodes[0]
+        all_node_vars = list(sample_node.get('datasets', {}).keys())
+        non_input_vars = [
+            v for v in all_node_vars
+            if v not in input_vars and v != outcome_var
+        ]
+
+        discriminating = []
+        for var in non_input_vars:
+            top_vals = [
+                node['datasets'].get(var, 0.5) or 0.5
+                for node in nodes if node['fips'] in top_fips
+            ]
+            bot_vals = [
+                node['datasets'].get(var, 0.5) or 0.5
+                for node in nodes if node['fips'] in bot_fips
+            ]
+            if top_vals and bot_vals:
+                diff = float(np.mean(top_vals)) - float(np.mean(bot_vals))
+                discriminating.append({
+                    'variable': var,
+                    'diff': diff,
+                    'top_mean': float(np.mean(top_vals)),
+                    'bot_mean': float(np.mean(bot_vals))
+                })
+
+        discriminating.sort(key=lambda x: -abs(x['diff']))
+        top_discriminating = discriminating[:10]
+
+        # Target county result
+        target_result = None
+        if target_fips:
+            target_result = {
+                'fips': target_fips,
+                'residual_z': residuals_dict.get(target_fips, 0),
+                'predicted': predicted_dict.get(target_fips, 0),
+                'actual': next(
+                    (n['datasets'].get(outcome_var, 0.5) for n in nodes if n['fips'] == target_fips),
+                    0.5
+                )
+            }
+
+        return {
+            'r2': r2,
+            'n_counties': len(valid_fips),
+            'input_variables': input_vars,
+            'outcome_variable': outcome_var,
+            'residuals_z': residuals_dict,
+            'predicted': predicted_dict,
+            'discriminating_factors': top_discriminating,
+            'target_county': target_result,
+            'interpretation': (
+                f"R²={r2:.2f}: the {len(input_vars)} input variables explain "
+                f"{r2*100:.0f}% of variation in {outcome_var}. "
+                + (
+                    "Strong predictive model — residuals are meaningful."
+                    if r2 > 0.4 else
+                    "Weak predictive model — outcome is largely independent of these input variables."
+                )
+            )
+        }
+
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={"error": str(e), "trace": traceback.format_exc()}
+        )
+
+
 # ── GET /admin/health ─────────────────────────────────────────
 @router.get('/admin/health')
 def admin_health():

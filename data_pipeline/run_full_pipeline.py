@@ -22,6 +22,7 @@ PIPELINE_PHASES = {
         ("PCA Analysis", "data_pipeline/gravity/pca_analysis.py"),
         ("County Clusters", "data_pipeline/gravity/compute_county_clusters.py"),
         ("Correlation Insights", "data_pipeline/gravity/compute_correlation_insights.py"),
+        ("Positive Deviance", "data_pipeline/gravity/compute_positive_deviance.py"),
     ],
     3: [
         ("Terrain", "data_pipeline/gravity/compute_terrain.py"),
