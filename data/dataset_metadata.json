@@ -512,5 +512,19 @@
     "maup_sensitivity": "low",
     "direction_note": "Positive = growing, negative = shrinking. Neither is inherently better.",
     "notes": "Population change from 2020 Decennial to ACS 2022 estimate, computed as (pop_2022 - pop_2020) / pop_2020. Clamped to [-0.5, 0.5] to handle extreme outliers (very small counties). Low max correlation with existing variables (r=0.16). Captures demographic trajectory dimension."
+  },
+  "life_expectancy": {
+    "label": "Life Expectancy",
+    "source": "County Health Rankings 2024 (Robert Wood Johnson Foundation / University of Wisconsin)",
+    "source_url": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation",
+    "data_year": "2019-2021",
+    "year_type": "range",
+    "unit": "years at birth (min-max normalized)",
+    "maup_sensitivity": "low",
+    "higher_is_better": true,
+    "data_type": "continuous",
+    "proxy": false,
+    "direction_note": "Higher = longer life expectancy at birth",
+    "notes": "Life expectancy at birth in years from County Health Rankings 2024 (v147). Based on NCHS mortality data 2019-2021. Range approximately 56-99 years across US counties. Normalized min-max to [0,1]. Max |r| with existing variables: 0.747 (EITC). Covers 3,122 of 3,143 counties."
   }
 }

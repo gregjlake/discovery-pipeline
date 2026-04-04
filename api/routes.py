@@ -104,6 +104,7 @@ DATASET_REGISTRY = {
     'bachelors_rate':  ('bachelors_rate',            'Bachelor degree rate (25+ pop)'),
     'median_age':      ('median_age',                'Median age (years)'),
     'homeownership_rate': ('homeownership_rate',     'Homeownership rate'),
+    'life_expectancy':    ('life_expectancy',         'Life expectancy at birth (years)'),
     # FEMA National Risk Index (scatter only — excluded from gravity)
     'overall_disaster_risk': ('risk_score',              'FEMA overall disaster risk score'),
     'wildfire_risk':         ('wildfire_risk_score',     'FEMA wildfire risk score'),

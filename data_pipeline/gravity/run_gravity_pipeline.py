@@ -28,6 +28,8 @@ DATASETS = {
     "bachelors_rate": "bachelors_rate",
     "median_age": "median_age",
     "homeownership_rate": "homeownership_rate",
+    # Wave 5: life expectancy
+    "life_expectancy": "life_expectancy",
     # Wave 2: child, family, immigration
     "child_poverty_rate": "child_poverty_rate",
     "single_parent_rate": "single_parent_rate",
