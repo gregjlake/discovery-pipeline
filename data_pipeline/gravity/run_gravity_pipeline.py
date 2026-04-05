@@ -108,6 +108,10 @@ def step1_load():
         cmin, cmax = col.min(), col.max()
         pivot[c] = (col - cmin) / (cmax - cmin) if cmax > cmin else 0.5
 
+    # Export county data matrix for phase 2 analysis scripts
+    pivot.to_csv(DATA_DIR / "county_data_matrix.csv", index=False)
+    print(f"  Exported county_data_matrix.csv: {len(pivot)} counties × {len(ds_cols)} variables")
+
     # Also keep raw values for the cache
     rv_raw = pd.DataFrame(all_rows)
     rv_raw = rv_raw[rv_raw["dataset_id"].isin(DATASETS.keys())]
