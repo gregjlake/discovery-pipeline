@@ -1,8 +1,8 @@
 # DiscoSights Methodology and Validation
-## Version 1.0 -- 2026-04-03
+## Version 1.0 -- 2026-04-05
 
 ### Overview
-DiscoSights is a spatial interaction model for exploring socioeconomic similarity among US counties. It applies a gravity model analogy: counties with similar profiles across 29 socioeconomic datasets and smaller geographic distance exert stronger "gravitational attraction" toward each other.
+DiscoSights is a spatial interaction model for exploring socioeconomic similarity among US counties. It applies a gravity model analogy: counties with similar profiles across 30 socioeconomic datasets and smaller geographic distance exert stronger "gravitational attraction" toward each other.
 
 ### Data Sources
 | Dataset | Label | Source | Data Year | Unit | MAUP Sensitivity |
@@ -23,6 +23,7 @@ DiscoSights is a spatial interaction model for exploring socioeconomic similarit
 | hypertension | Hypertension Rate | CDC PLACES (BRFSS-based) | 2022 | % of adults with high blood pressure | medium [diagnosis bias] |
 | language_isolation_rate | Language Isolation | Census ACS 5-Year, Table B16002 | 2018-2022 | % of households that are linguistically isolated | low |
 | library | Library Access | IMLS Public Libraries Survey | FY 2022 | $/capita operating expenditure | low |
+| life_expectancy | Life Expectancy | County Health Rankings 2024 (Robert Wood Johnson Foundation / University of Wisconsin) | 2019-2021 | years at birth (min-max normalized) | low |
 | manufacturing_pct | Manufacturing Employment | Census ACS 5-Year, Profile Table DP03 | 2018-2022 | % of employed civilian population in manufacturing | low |
 | median_age | Median Age | Census ACS 5-Year, Table B01002 | 2022 | years | low |
 | median_home_value | Median Home Value | Census ACS 5-Year, Table B25077 | 2018-2022 | median value of owner-occupied housing units ($) | low |
@@ -45,10 +46,10 @@ Force(i,j) = Pop(i) x Pop(j) / dist(i,j)^beta
 ```
 
 where:
-- beta = 0.138702 (calibrated via two-pass OLS regression on 249,922 county pairs)
+- beta = 0.138702 (empirically calibrated)
 - dist(i,j) = geo_norm(i,j) x data_dissimilarity(i,j)
 - geo_norm = Haversine distance / max US distance (5,251 mi)
-- data_dissimilarity = normalized Euclidean distance across 29 datasets
+- data_dissimilarity = normalized Euclidean distance across 30 datasets
 
 ### beta Calibration
 Two-pass calibration procedure:
@@ -97,7 +98,7 @@ Peer-level stability was tested for 5 median-profile counties (P45-P55) across t
 Domain-balanced weighting preserves peer rankings. Reducing to 7 datasets produces substantially different peer lists. The 7-dataset view should be understood as a different analytical lens, not a cleaner version of the full model.
 
 ### External Validation -- FEMA Disaster Risk
-FEMA National Risk Index (2023) scores for 9 natural hazard variables were compared against the 29 socioeconomic datasets:
+FEMA National Risk Index (2023) scores for 9 natural hazard variables were compared against the 17 socioeconomic datasets:
 
 - Overall disaster risk x poverty: r = 0.151 (weak -- largely independent)
 - Social vulnerability x poverty: r = 0.515 (moderate)
@@ -105,16 +106,16 @@ FEMA National Risk Index (2023) scores for 9 natural hazard variables were compa
 Disaster risk adds a genuinely independent dimension to county analysis. Two counties can be socioeconomic peers while facing completely different natural hazard futures. FEMA disaster variables are available in the scatter plot but excluded from the gravity model to avoid conflating geographic hazard exposure with socioeconomic structure.
 
 ### Dataset Structure
-PCA analysis of the 29 active datasets:
-- Effective dimensions: 7.45 / 29
+PCA analysis of the 30 active datasets:
+- Effective dimensions: 7.19 / 30
 - Components for 80% variance: 11
 - Components for 90% variance: 16
 
-**PC1 (30.9% of variance):**
+**PC1 (32.0% of variance):**
 - Top drivers: median_income, bea_income, diabetes, poverty
 - Interpretation: Economic deprivation axis
 
-**PC2 (13.5% of variance):**
+**PC2 (13.2% of variance):**
 - Top drivers: homeownership_rate, median_age, housing_burden, rural_urban
 - Interpretation: Urbanization axis
 
@@ -125,21 +126,29 @@ PCA analysis of the 29 active datasets:
   - median_home_value x median_income: r=0.750
   - child_poverty_rate x eitc: r=0.741
   - diabetes x eitc: r=0.737
+  - eitc x life_expectancy: r=-0.734
   - bachelors_rate x median_income: r=0.729
   - child_poverty_rate x diabetes: r=0.705
   - diabetes x poverty: r=0.705
+  - life_expectancy x poverty: r=-0.699
   - bea_income x eitc: r=-0.683
+  - bea_income x life_expectancy: r=0.683
   - eitc x median_income: r=-0.683
+  - life_expectancy x median_income: r=0.681
   - diabetes x median_income: r=-0.678
   - foreign_born_pct x language_isolation_rate: r=0.678
   - broadband x diabetes: r=-0.674
   - broadband x median_income: r=0.670
   - bachelors_rate x median_home_value: r=0.668
   - bachelors_rate x diabetes: r=-0.666
+  - life_expectancy x mental_health: r=-0.666
   - median_home_value x obesity: r=-0.659
+  - diabetes x life_expectancy: r=-0.658
+  - bachelors_rate x life_expectancy: r=0.650
   - child_poverty_rate x median_income: r=-0.646
   - broadband x poverty: r=-0.641
   - hypertension x median_income: r=-0.638
+  - child_poverty_rate x life_expectancy: r=-0.631
   - bea_income x mental_health: r=-0.626
   - bea_income x broadband: r=0.623
   - broadband x hypertension: r=-0.623
@@ -164,11 +173,11 @@ Note: Low effective dimensions reflect genuine structure in US county data -- ec
 
 4. **Diagnosis bias:** Health outcome datasets (diabetes, hypertension, mental health) measure diagnosed prevalence. Areas with limited healthcare access show lower measured rates even if true prevalence is identical or higher.
 
-5. **Equal weighting assumption:** All 29 datasets contribute equally to socioeconomic distance. Weighting robustness analysis confirms this does not affect findings, but researchers with domain-specific questions may prefer the filter chip views.
+5. **Equal weighting assumption:** All 30 datasets contribute equally to socioeconomic distance. Weighting robustness analysis confirms this does not affect findings, but researchers with domain-specific questions may prefer the filter chip views.
 
 6. **Non-migration validation:** The IRS migration validation tests whether the model predicts human movement, which is related but not identical to socioeconomic similarity. The model is optimized for similarity discovery, not migration prediction.
 
-7. **Peer stability:** Peer discovery is robust for the full 29-dataset model (domain-balanced Jaccard = 0.891). Reducing to 7 datasets produces different peer lists (Jaccard = 0.090) -- this is a different analytical question, not a robustness check.
+7. **Peer stability:** Peer discovery is robust for the full 30-dataset model (domain-balanced Jaccard = 0.891). Reducing to 7 datasets produces different peer lists (Jaccard = 0.090) -- this is a different analytical question, not a robustness check.
 
 8. **Small county uncertainty:** 123 counties (population < 5,000 or ACS coefficient of variation > 30%) have unreliable Census estimates. These are flagged in the UI with a warning badge and can be filtered from scatter plot analysis. The gravity model includes all counties but researchers should treat flagged county findings with additional caution.
 
@@ -179,4 +188,4 @@ Note: Low effective dimensions reflect genuine structure in US county data -- ec
 - Source code: github.com/gregjlake/discovery-pipeline / github.com/gregjlake/discovery-insights
 
 ---
-*Generated automatically from DiscoSights model outputs. Values reflect model state as of 2026-04-03.*
+*Generated automatically from DiscoSights model outputs. Values reflect model state as of 2026-04-05.*

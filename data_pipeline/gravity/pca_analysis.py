@@ -36,6 +36,7 @@ DATASETS = {
     "manufacturing_pct": "manufacturing_pct", "agriculture_pct": "agriculture_pct",
     "housing_vacancy_rate": "housing_vacancy_rate", "median_home_value": "median_home_value",
     "population_change_pct": "population_change_pct",
+    "life_expectancy": "life_expectancy",
 }
 
 KNOWN_TAUTOLOGICAL = {

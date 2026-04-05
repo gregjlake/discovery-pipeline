@@ -1,9 +1,9 @@
 {
-  "n_pairs": 406,
-  "mean_abs_r": 0.245,
-  "median_abs_r": 0.188,
-  "pct_large_effect": 16.7,
-  "pct_negligible": 35.7,
+  "n_pairs": 435,
+  "mean_abs_r": 0.254,
+  "median_abs_r": 0.19,
+  "pct_large_effect": 18.4,
+  "pct_negligible": 34.3,
   "strongest_correlations": [
     {
       "var_a": "diabetes",
@@ -126,6 +126,18 @@
       "effect_size": "large"
     },
     {
+      "var_a": "eitc",
+      "var_b": "life_expectancy",
+      "label_a": "EITC Uptake",
+      "label_b": "life_expectancy",
+      "r": -0.7469,
+      "abs_r": 0.7469,
+      "domain_a": "economic",
+      "domain_b": "?",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
       "var_a": "diabetes",
       "var_b": "poverty",
       "label_a": "Diabetes",
@@ -162,25 +174,13 @@
       "effect_size": "large"
     },
     {
-      "var_a": "bea_income",
+      "var_a": "life_expectancy",
       "var_b": "poverty",
-      "label_a": "Per Capita Income",
+      "label_a": "life_expectancy",
       "label_b": "Poverty Rate",
-      "r": -0.7045,
-      "abs_r": 0.7045,
-      "domain_a": "economic",
-      "domain_b": "economic",
-      "same_domain": true,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "diabetes",
-      "var_b": "median_income",
-      "label_a": "Diabetes",
-      "label_b": "Median Income",
-      "r": -0.7,
-      "abs_r": 0.7,
-      "domain_a": "health",
+      "r": -0.706,
+      "abs_r": 0.706,
+      "domain_a": "?",
       "domain_b": "economic",
       "same_domain": false,
       "effect_size": "large"
@@ -442,6 +442,18 @@
       "effect_size": "large"
     },
     {
+      "var_a": "eitc",
+      "var_b": "life_expectancy",
+      "label_a": "EITC Uptake",
+      "label_b": "life_expectancy",
+      "r": -0.7469,
+      "abs_r": 0.7469,
+      "domain_a": "economic",
+      "domain_b": "?",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
       "var_a": "diabetes",
       "var_b": "poverty",
       "label_a": "Diabetes",
@@ -478,6 +490,18 @@
       "effect_size": "large"
     },
     {
+      "var_a": "life_expectancy",
+      "var_b": "poverty",
+      "label_a": "life_expectancy",
+      "label_b": "Poverty Rate",
+      "r": -0.706,
+      "abs_r": 0.706,
+      "domain_a": "?",
+      "domain_b": "economic",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
       "var_a": "diabetes",
       "var_b": "median_income",
       "label_a": "Diabetes",
@@ -502,6 +526,18 @@
       "effect_size": "large"
     },
     {
+      "var_a": "bea_income",
+      "var_b": "life_expectancy",
+      "label_a": "Per Capita Income",
+      "label_b": "life_expectancy",
+      "r": 0.6922,
+      "abs_r": 0.6922,
+      "domain_a": "economic",
+      "domain_b": "?",
+      "same_domain": false,
+      "effect_size": "large"
+    },
+    {
       "var_a": "median_home_value",
       "var_b": "obesity",
       "label_a": "median_home_value",
@@ -510,42 +546,6 @@
       "abs_r": 0.6899,
       "domain_a": "?",
       "domain_b": "health",
-      "same_domain": false,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "bachelors_rate",
-      "var_b": "diabetes",
-      "label_a": "bachelors_rate",
-      "label_b": "Diabetes",
-      "r": -0.6791,
-      "abs_r": 0.6791,
-      "domain_a": "?",
-      "domain_b": "health",
-      "same_domain": false,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "broadband",
-      "var_b": "median_income",
-      "label_a": "Broadband Access",
-      "label_b": "Median Income",
-      "r": 0.67,
-      "abs_r": 0.67,
-      "domain_a": "infrastructure",
-      "domain_b": "economic",
-      "same_domain": false,
-      "effect_size": "large"
-    },
-    {
-      "var_a": "hypertension",
-      "var_b": "median_income",
-      "label_a": "Hypertension",
-      "label_b": "Median Income",
-      "r": -0.6586,
-      "abs_r": 0.6586,
-      "domain_a": "health",
-      "domain_b": "economic",
       "same_domain": false,
       "effect_size": "large"
     }
