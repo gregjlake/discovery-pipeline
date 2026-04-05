@@ -11,7 +11,6 @@ import json
 import os
 
 from sklearn.linear_model import LinearRegression
-from data_pipeline.utils.storage import upload_to_storage
 
 # Load county data
 df = pd.read_csv('data/county_data_matrix.csv')
@@ -93,5 +92,9 @@ print("\nLeast predictable (most independent):")
 for var, r2 in sorted_r2[-5:]:
     print(f"  {var}: R²={r2:.3f}")
 
-upload_to_storage('data/positive_deviance.json')
-print("\nUploaded to Supabase Storage")
+try:
+    from data_pipeline.utils.storage import upload_to_storage
+    upload_to_storage('data/positive_deviance.json')
+    print("\nUploaded to Supabase Storage")
+except Exception as e:
+    print(f"\n  Storage upload skipped: {e}")
