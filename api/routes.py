@@ -29,33 +29,41 @@ _memory_cache = {}
 
 
 def fetch_cache_file(filename: str):
-    """Load a cache file: local first (dev), then Supabase Storage (prod), then memory cache."""
+    """Load a cache file: memory cache first, then Supabase Storage, then local fallback."""
+    if filename in _memory_cache:
+        return _memory_cache[filename]
+
+    # Try Supabase Storage first (always has latest pipeline output)
+    if SUPABASE_URL:
+        try:
+            import httpx
+            url = f"{STORAGE_BASE}/{filename}"
+            resp = httpx.get(url, timeout=30.0)
+            resp.raise_for_status()
+
+            if filename.endswith('.json'):
+                data = resp.json()
+            else:
+                data = resp.text
+
+            _memory_cache[filename] = data
+            logger.info(f"Fetched {filename} from Supabase Storage ({len(resp.content)} bytes)")
+            return data
+        except Exception as e:
+            logger.warning(f"Storage fetch failed for {filename}: {e}, trying local")
+
+    # Fall back to local file (dev or if Storage unavailable)
     local_path = DATA_DIR / filename
     if local_path.exists():
         with open(local_path, encoding='utf-8') as f:
             if filename.endswith('.json'):
-                return json.load(f)
-            return f.read()
+                data = json.load(f)
+            else:
+                data = f.read()
+        _memory_cache[filename] = data
+        return data
 
-    if filename in _memory_cache:
-        return _memory_cache[filename]
-
-    if not SUPABASE_URL:
-        raise FileNotFoundError(f"{filename} not found locally and no SUPABASE_URL configured")
-
-    import httpx
-    url = f"{STORAGE_BASE}/{filename}"
-    resp = httpx.get(url, timeout=30.0)
-    resp.raise_for_status()
-
-    if filename.endswith('.json'):
-        data = resp.json()
-    else:
-        data = resp.text
-
-    _memory_cache[filename] = data
-    logger.info(f"Fetched {filename} from Supabase Storage ({len(resp.content)} bytes)")
-    return data
+    raise FileNotFoundError(f"{filename} not found in Storage or locally")
 
 
 def invalidate_memory_cache(filename: str = None):
