@@ -1286,6 +1286,33 @@ def compute_positive_deviance(request_body: dict):
         gravity_cache = fetch_cache_file('gravity_map_cache.json')
         nodes = gravity_cache['nodes']
 
+        # Validate variable names against actual data columns
+        available_vars = set(nodes[0].get('datasets', {}).keys()) if nodes else set()
+        missing_inputs = [v for v in input_vars if v not in available_vars]
+        valid_inputs = [v for v in input_vars if v in available_vars]
+
+        if len(valid_inputs) < 2:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "error": f"Only {len(valid_inputs)} valid input variable(s) found (need >= 2). "
+                    f"Unrecognized: {missing_inputs}. "
+                    f"Available: {sorted(available_vars)}"
+                }
+            )
+
+        if outcome_var not in available_vars:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "error": f"Outcome variable '{outcome_var}' not found in dataset. "
+                    f"Available: {sorted(available_vars)}"
+                }
+            )
+
+        # Use only valid input variables (skip unrecognized ones)
+        input_vars = valid_inputs
+
         # Build matrix
         X_list = []
         y_list = []
@@ -1293,10 +1320,10 @@ def compute_positive_deviance(request_body: dict):
 
         for node in nodes:
             ds = node.get('datasets', {})
-            row = [ds.get(v, 0.5) or 0.5 for v in input_vars]
-            outcome_val = ds.get(outcome_var, None)
+            row = [float(ds.get(v, 0.5) or 0.5) for v in input_vars]
+            outcome_val = ds.get(outcome_var)
             if outcome_val is None:
-                outcome_val = 0.5
+                continue  # skip counties missing the outcome
             X_list.append(row)
             y_list.append(float(outcome_val))
             valid_fips.append(node['fips'])
