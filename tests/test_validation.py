@@ -1,5 +1,5 @@
 """
-Regression tests for DiscoSights validation results.
+Regression tests for DiscoveryLens validation results.
 
 Architecture note: These tests use locally-defined implementations
 of core scientific functions (Spearman correlation, decomposition
@@ -37,7 +37,7 @@ def test_spearman_correlation_direction():
 
 def test_decomposition_monotonic():
     """Each model component should improve or maintain rho.
-    Uses known values from DiscoSights validation."""
+    Uses known values from DiscoveryLens validation."""
     rho_population = 0.041
     rho_geography = 0.053
     rho_full = 0.164

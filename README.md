@@ -1,8 +1,8 @@
-# DiscoSights — Backend Pipeline
+# DiscoveryLens — Backend Pipeline
 
 ## Overview
 
-DiscoSights is a configurable county similarity and correlation explorer for US policy research. It identifies structural peer counties — places that share similar socioeconomic profiles despite geographic distance — using Euclidean distance in a normalized 29-variable space spanning economic, health, infrastructure, civic, child welfare, immigration, industry, and housing domains. A module system lets researchers define what "similar" means for their research question: economic mobility, health equity, child and family welfare, immigration, infrastructure, community vitality, or any custom variable combination. A gravity model (beta = 0.139, IRS validation rho = 0.164) provides the visualization framework and validates that the similarity space captures real-world county affinity. This repository contains the data pipeline, model calibration, validation scripts, and FastAPI backend serving the live tool at https://discovery-surface-spark.lovable.app.
+DiscoveryLens is a configurable county similarity and correlation explorer for US policy research. It identifies structural peer counties — places that share similar socioeconomic profiles despite geographic distance — using Euclidean distance in a normalized 29-variable space spanning economic, health, infrastructure, civic, child welfare, immigration, industry, and housing domains. A module system lets researchers define what "similar" means for their research question: economic mobility, health equity, child and family welfare, immigration, infrastructure, community vitality, or any custom variable combination. A gravity model (beta = 0.139, IRS validation rho = 0.164) provides the visualization framework and validates that the similarity space captures real-world county affinity. This repository contains the data pipeline, model calibration, validation scripts, and FastAPI backend serving the live tool at https://discoverylens.org.
 
 The frontend repository is at [github.com/gregjlake/discovery-insights](https://github.com/gregjlake/discovery-insights).
 
@@ -10,7 +10,7 @@ The frontend repository is at [github.com/gregjlake/discovery-insights](https://
 
 Identifying socioeconomic peer counties — places that share structural conditions despite geographic distance — is a common but methodologically inconsistent task in policy research, public health, and economic geography. Researchers typically select variables ad hoc and weight them arbitrarily.
 
-DiscoSights provides a gravity model with empirically calibrated distance decay (beta = 0.139), out-of-sample IRS migration validation (+0.110 rho improvement beyond population and geography), and documented weighting robustness (Jaccard = 0.891 across schemes). Example: McDowell County WV and Starr County TX share economic profiles across 29 datasets despite being 1,247 miles apart.
+DiscoveryLens provides a gravity model with empirically calibrated distance decay (beta = 0.139), out-of-sample IRS migration validation (+0.110 rho improvement beyond population and geography), and documented weighting robustness (Jaccard = 0.891 across schemes). Example: McDowell County WV and Starr County TX share economic profiles across 29 datasets despite being 1,247 miles apart.
 
 ## Installation
 
@@ -193,9 +193,9 @@ python reproduce.py
 
 ## Citation
 
-If you use DiscoSights in research, please cite:
+If you use DiscoveryLens in research, please cite:
 
-> Lake, G. (2026). DiscoSights: A Configurable County Similarity and Correlation Explorer for US Policy Research. *Journal of Open Source Software* (submitted).
+> Lake, G. (2026). DiscoveryLens: A Configurable County Similarity and Correlation Explorer for US Policy Research. *Journal of Open Source Software* (submitted).
 
 ## Authors
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DiscoSights Pipeline Worker
+DiscoveryLens Pipeline Worker
 Polls Supabase pipeline_jobs table for pending jobs and executes them.
 Supports phased execution: each phase runs as a separate job to avoid
 Railway CPU/memory timeouts. After each phase completes, the next phase
@@ -108,7 +108,7 @@ def invalidate_api_cache():
 
 
 def run_worker():
-    print(f"DiscoSights Pipeline Worker starting...")
+    print(f"DiscoveryLens Pipeline Worker starting...")
     print(f"Poll interval: {POLL_INTERVAL}s")
     print(f"Time: {datetime.now(timezone.utc).isoformat()}")
 

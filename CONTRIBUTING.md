@@ -1,6 +1,6 @@
-# Contributing to DiscoSights
+# Contributing to DiscoveryLens
 
-Thank you for your interest in contributing to DiscoSights.
+Thank you for your interest in contributing to DiscoveryLens.
 
 ## Reporting Issues
 

@@ -1,5 +1,5 @@
 """
-DiscoSights -- Standalone Reproduction Script
+DiscoveryLens -- Standalone Reproduction Script
 
 Reproduces the two headline quantitative claims without Supabase credentials:
   beta = 0.139 (distance decay parameter)
@@ -178,7 +178,7 @@ def reproduce_validation():
 
 
 def main():
-    print("DiscoSights Reproduction Script")
+    print("DiscoveryLens Reproduction Script")
     print("=" * 50)
     print(f"Data directory: {DATA_DIR}")
     print()

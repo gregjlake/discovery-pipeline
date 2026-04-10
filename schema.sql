@@ -1,4 +1,4 @@
--- DiscoSights Database Schema
+-- DiscoveryLens Database Schema
 -- Generated from production Supabase instance
 -- Run with: psql $DATABASE_URL < schema.sql
 -- Or create tables manually via Supabase dashboard

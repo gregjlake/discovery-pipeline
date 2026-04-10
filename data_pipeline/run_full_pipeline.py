@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DiscoSights Full Pipeline Orchestrator
+DiscoveryLens Full Pipeline Orchestrator
 Runs pipeline steps in phases. Each phase runs as a separate worker job
 to avoid Railway CPU/memory timeouts on the full 10-step pipeline.
 """
@@ -76,7 +76,7 @@ def run_pipeline(steps: list = None, phase: int = None):
         all_steps = [item for p in sorted(PIPELINE_PHASES.keys()) for item in PIPELINE_PHASES[p]]
         label = f"Full pipeline ({len(all_steps)} steps)"
 
-    print(f"\nDiscoSights Pipeline Orchestrator")
+    print(f"\nDiscoveryLens Pipeline Orchestrator")
     print(f"Running: {label}")
     print(f"Start: {datetime.now().isoformat()}")
 
