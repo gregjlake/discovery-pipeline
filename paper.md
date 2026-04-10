@@ -35,7 +35,7 @@ DiscoveryLens separates two analytical operations. Peer discovery uses populatio
 
 $$d(t,c) = \sqrt{\sum_{i=1}^{k} (v_{t,i} - v_{c,i})^2}$$
 
-Missing values (3.9% of county-variable cells, concentrated in air quality at 69% missing) are imputed with 0.5 (midpoint of $[0,1]$). Peers are the $k$ nearest neighbors by this distance (equivalent to KNN; Jaccard = 1.000). The terrain visualization uses client-side PCA, projecting counties to 2D with kernel density as height; axes update when the module changes.
+Missing values (3.7% of county-variable cells, concentrated in air quality at 69% missing) are imputed with 0.5 (midpoint of $[0,1]$). Peers are the $k$ nearest neighbors by this distance (equivalent to KNN; Jaccard = 1.000). The terrain visualization uses client-side PCA, projecting counties to 2D with kernel density as height; axes update when the module changes.
 
 The gravity model [@tinbergen1962shaping] provides the visualization framework and external validation:
 
