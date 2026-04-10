@@ -136,7 +136,7 @@ Unit tests cover core scientific functions (haversine, dissimilarity, gravity fo
 
 See `data/dataset_metadata.json` for full provenance. Key sources:
 
-- Census Bureau ACS 5-Year (2018-2022): income, education, homeownership, housing burden, broadband, unemployment, child poverty, single-parent rate, foreign-born %, language isolation, manufacturing %, agriculture %, housing vacancy, median home value, population density
+- Census Bureau ACS 5-Year (2018-2022): income, education, homeownership, housing burden, fixed broadband (cable/fiber/DSL), unemployment, child poverty, single-parent rate, foreign-born %, language isolation, manufacturing %, agriculture %, housing vacancy, median home value, population density
 - Census SAIPE (2022): poverty rate, median income
 - Census Population Estimates (2020-2022): population change
 - USDA Food Access Research Atlas (2019): low food access

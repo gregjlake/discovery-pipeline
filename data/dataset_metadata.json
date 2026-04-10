@@ -39,18 +39,18 @@
     "direction_note": "Inverted Median AQI: higher value = cleaner air (200 - Median AQI)"
   },
   "broadband": {
-    "label": "Broadband Subscription Rate",
-    "source": "Census ACS 5-Year, Table B28002",
+    "label": "Fixed Broadband Access",
+    "source": "Census ACS 5-Year, Table B28002_007E",
     "source_url": "https://data.census.gov",
     "data_year": "2018–2022",
     "year_type": "range",
-    "unit": "household broadband subscription rate",
+    "unit": "% HH with fixed broadband (cable/fiber/DSL)",
     "maup_sensitivity": "low",
-    "notes": "Measures household broadband subscription rate from ACS (table B28002), NOT physical infrastructure availability. Low subscription rates may reflect unaffordability or lack of infrastructure — this data cannot distinguish between them. FCC availability maps would be needed to separate these causes. ACS 5-year estimate (2018–2022 average).",
+    "notes": "Percentage of households with a fixed broadband subscription (cable, fiber optic, or DSL), excluding cellular-only plans. ACS 5-year estimates, table B28002_007E. NOT physical infrastructure availability — measures subscription, not access. FCC availability maps would be needed to separate these causes. ACS 5-year estimate (2018–2022 average).",
     "higher_is_better": true,
     "data_type": "continuous",
-    "direction_note": "Higher subscription = more connected",
-    "proxy_warning": "Subscription rate, not infrastructure availability"
+    "direction_note": "Higher = more households with fixed broadband",
+    "proxy_warning": "Subscription rate, not infrastructure availability. Excludes cellular-only."
   },
   "eitc": {
     "label": "EITC Uptake",
@@ -227,7 +227,7 @@
     "higher_is_better": true,
     "data_type": "continuous",
     "maup_sensitivity": "low",
-    "notes": "Excluded from gravity model distance calculation due to r=0.993 collinearity with broadband (ACS B28002_004E). Both are from the same ACS table B28002 — broadband_avail uses B28002_002E (any internet, including dial-up) while broadband uses B28002_004E (broadband specifically). Including both would double-weight internet access relative to all other dimensions. Available for scatter plot exploration. Original source: Census ACS 5-Year B28002.",
+    "notes": "Excluded from gravity model distance calculation due to high collinearity with broadband (ACS B28002_007E). Both are from the same ACS table B28002 — broadband_avail uses B28002_002E (any internet, including dial-up) while broadband uses B28002_007E (fixed broadband: cable/fiber/DSL). Including both would double-weight internet access relative to all other dimensions. Available for scatter plot exploration. Original source: Census ACS 5-Year B28002.",
     "excluded_from_gravity": true
   },
   "pop_density": {
