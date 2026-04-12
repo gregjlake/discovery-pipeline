@@ -1,4 +1,4 @@
-"""Upload pipeline output files to Supabase Storage with retry."""
+"""Upload pipeline output files to Supabase Storage with upsert and retry."""
 import os
 import time
 
@@ -16,7 +16,7 @@ def get_storage_client():
 
 
 def upload_to_storage(local_path: str, storage_filename: str = None):
-    """Upload a local file to the pipeline-cache bucket with exponential backoff retry."""
+    """Upload a local file to the pipeline-cache bucket with upsert and exponential backoff."""
     if storage_filename is None:
         storage_filename = os.path.basename(local_path)
 
@@ -34,28 +34,23 @@ def upload_to_storage(local_path: str, storage_filename: str = None):
     else:
         content_type = 'application/octet-stream'
 
-    try:
-        client.storage.from_('pipeline-cache').remove([storage_filename])
-    except Exception:
-        pass
+    size_kb = len(data) / 1024
 
-    # Upload with exponential backoff (handles transient Supabase 502s)
+    # Upload with upsert and exponential backoff
     last_error = None
     for attempt in range(5):
         try:
             client.storage.from_('pipeline-cache').upload(
                 storage_filename, data,
-                file_options={'content-type': content_type}
+                file_options={'content-type': content_type, 'upsert': 'true'}
             )
-            url = client.storage.from_('pipeline-cache').get_public_url(storage_filename)
-            size_kb = len(data) / 1024
-            print(f"Uploaded to Storage: {storage_filename} ({size_kb:.1f} KB)")
-            return url
+            print(f"  Uploaded to Storage: {storage_filename} ({size_kb:.1f} KB)")
+            return
         except Exception as e:
             last_error = e
             if attempt < 4:
-                wait = 30 * (2 ** attempt)
-                print(f"Upload failed attempt {attempt+1}/5, retrying in {wait}s: {e}")
+                wait = 10 * (2 ** attempt)
+                print(f"  Upload attempt {attempt+1}/5 failed for {storage_filename}, retrying in {wait}s: {e}")
                 time.sleep(wait)
 
-    raise Exception(f"Upload failed after 5 attempts: {last_error}")
+    raise Exception(f"Storage upload FAILED for {storage_filename} after 5 attempts: {last_error}")

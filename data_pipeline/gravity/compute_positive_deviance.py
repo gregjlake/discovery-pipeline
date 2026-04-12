@@ -97,4 +97,4 @@ try:
     upload_to_storage('data/positive_deviance.json')
     print("\nUploaded to Supabase Storage")
 except Exception as e:
-    print(f"\n  Storage upload skipped: {e}")
+    print(f"\n  WARNING: Storage upload FAILED: {e}")

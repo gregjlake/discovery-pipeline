@@ -140,7 +140,7 @@ def main():
         from data_pipeline.utils.storage import upload_to_storage
         upload_to_storage(str(DATA_DIR / "knn_comparison.json"))
     except Exception as e:
-        print(f"  Storage upload skipped: {e}")
+        print(f"  WARNING: Storage upload FAILED: {e}")
 
 
 if __name__ == "__main__":

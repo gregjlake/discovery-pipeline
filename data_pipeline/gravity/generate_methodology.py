@@ -211,7 +211,7 @@ try:
     from data_pipeline.utils.storage import upload_to_storage
     upload_to_storage('data/methodology_v1.md')
 except Exception as e:
-    print(f"  Storage upload skipped: {e}")
+    print(f"  WARNING: Storage upload FAILED: {e}")
 
 # Print first 50 lines
 for i, line in enumerate(doc.split('\n')[:50]):
