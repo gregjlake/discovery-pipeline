@@ -11,6 +11,7 @@ authors:
 repository-code: https://github.com/gregjlake/discovery-pipeline
 url: https://discoverylens.org
 license: MIT
+doi: 10.5281/zenodo.19600319
 date-released: "2026-04-01"
 keywords:
   - gravity model

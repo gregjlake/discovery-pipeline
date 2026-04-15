@@ -16,7 +16,7 @@ affiliations:
   - name: Independent Researcher
     index: 1
 date: 2026-04-14
-doi: TBD-ZENODO
+doi: 10.5281/zenodo.19600319
 bibliography: paper.bib
 ---
 
