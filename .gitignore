@@ -16,3 +16,9 @@ __pycache__/
 frontend/node_modules/
 frontend/dist/
 node_modules/
+
+# HistoryLens: keep processed outputs in git, exclude raw source files
+!historylens/data/
+historylens/data/raw/
+!historylens/data/processed/
+!historylens/data/processed/**

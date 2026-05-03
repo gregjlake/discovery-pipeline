@@ -1,0 +1,2876 @@
+country_name,iso3,year,variable,value,source,is_sparse,is_interpolated
+Argentina,ARG,1870,education_years,1.498,CLIO-INFRA,False,False
+Argentina,ARG,1880,education_years,1.642,CLIO-INFRA,False,False
+Argentina,ARG,1890,education_years,1.786,CLIO-INFRA,False,False
+Argentina,ARG,1900,education_years,2.122,CLIO-INFRA,False,False
+Argentina,ARG,1910,education_years,2.526,CLIO-INFRA,False,False
+Argentina,ARG,1920,education_years,3.112,CLIO-INFRA,False,False
+Argentina,ARG,1930,education_years,3.702,CLIO-INFRA,False,False
+Argentina,ARG,1940,education_years,4.492,CLIO-INFRA,False,False
+Argentina,ARG,1950,education_years,5.402,CLIO-INFRA,False,False
+Argentina,ARG,1960,education_years,6.18,CLIO-INFRA,False,False
+Argentina,ARG,1970,education_years,6.82,CLIO-INFRA,False,False
+Argentina,ARG,1980,education_years,7.65,CLIO-INFRA,False,False
+Argentina,ARG,1990,education_years,7.79,CLIO-INFRA,False,False
+Argentina,ARG,2000,education_years,8.37,CLIO-INFRA,False,False
+Argentina,ARG,1820,gdp_per_capita,1591.0,Maddison,False,False
+Argentina,ARG,1850,gdp_per_capita,1994.0,Maddison,False,False
+Argentina,ARG,1860,gdp_per_capita,2160.0,Maddison,False,False
+Argentina,ARG,1870,gdp_per_capita,2340.0,Maddison,False,False
+Argentina,ARG,1880,gdp_per_capita,2557.0,Maddison,False,False
+Argentina,ARG,1890,gdp_per_capita,3851.0,Maddison,False,False
+Argentina,ARG,1900,gdp_per_capita,4583.0,Maddison,False,False
+Argentina,ARG,1910,gdp_per_capita,6092.0,Maddison,False,False
+Argentina,ARG,1920,gdp_per_capita,5536.0,Maddison,False,False
+Argentina,ARG,1930,gdp_per_capita,6503.0,Maddison,False,False
+Argentina,ARG,1940,gdp_per_capita,6633.0,Maddison,False,False
+Argentina,ARG,1950,gdp_per_capita,7949.0,Maddison,False,False
+Argentina,ARG,1960,gdp_per_capita,8861.0,Maddison,False,False
+Argentina,ARG,1970,gdp_per_capita,11639.0,Maddison,False,False
+Argentina,ARG,1980,gdp_per_capita,13080.0,Maddison,False,False
+Argentina,ARG,1990,gdp_per_capita,10254.0,Maddison,False,False
+Argentina,ARG,2000,gdp_per_capita,14368.942737362304,Maddison,False,False
+Argentina,ARG,1820,gini,47.10099,CLIO-INFRA,False,False
+Argentina,ARG,1850,gini,33.68675,CLIO-INFRA,False,False
+Argentina,ARG,1870,gini,52.2,CLIO-INFRA,False,False
+Argentina,ARG,1890,gini,44.59684,CLIO-INFRA,False,False
+Argentina,ARG,1910,gini,50.62016,CLIO-INFRA,False,False
+Argentina,ARG,1950,gini,41.2,CLIO-INFRA,False,False
+Argentina,ARG,1960,gini,42.0,CLIO-INFRA,False,False
+Argentina,ARG,1970,gini,35.3,CLIO-INFRA,False,False
+Argentina,ARG,1980,gini,41.6,CLIO-INFRA,False,False
+Argentina,ARG,1990,gini,43.12,CLIO-INFRA,False,False
+Argentina,ARG,2000,gini,46.66,CLIO-INFRA,False,False
+Argentina,ARG,1880,life_expectancy,33.1,CLIO-INFRA,False,False
+Argentina,ARG,1890,life_expectancy,34.0,CLIO-INFRA,False,False
+Argentina,ARG,1900,life_expectancy,39.0,CLIO-INFRA,False,False
+Argentina,ARG,1910,life_expectancy,44.2,CLIO-INFRA,False,False
+Argentina,ARG,1920,life_expectancy,48.65,CLIO-INFRA,False,False
+Argentina,ARG,1930,life_expectancy,52.55,CLIO-INFRA,False,False
+Argentina,ARG,1940,life_expectancy,56.45,CLIO-INFRA,False,False
+Argentina,ARG,1950,life_expectancy,62.544,CLIO-INFRA,False,False
+Argentina,ARG,1960,life_expectancy,65.267,CLIO-INFRA,False,False
+Argentina,ARG,1970,life_expectancy,67.239,CLIO-INFRA,False,False
+Argentina,ARG,1980,life_expectancy,70.17,CLIO-INFRA,False,False
+Argentina,ARG,1990,life_expectancy,72.149,CLIO-INFRA,False,False
+Argentina,ARG,2000,life_expectancy,74.34,CLIO-INFRA,False,False
+Argentina,ARG,1820,population,534.0,Maddison,False,False
+Argentina,ARG,1830,population,634.0,CLIO-INFRA,False,False
+Argentina,ARG,1840,population,768.0,CLIO-INFRA,False,False
+Argentina,ARG,1850,population,1100.0,Maddison,False,False
+Argentina,ARG,1860,population,1304.0,CLIO-INFRA,False,False
+Argentina,ARG,1870,population,1796.0,Maddison,False,False
+Argentina,ARG,1890,population,3376.0,Maddison,False,False
+Argentina,ARG,1900,population,4693.0,Maddison,False,False
+Argentina,ARG,1910,population,6836.0,Maddison,False,False
+Argentina,ARG,1920,population,8861.0,Maddison,False,False
+Argentina,ARG,1930,population,11896.0,Maddison,False,False
+Argentina,ARG,1940,population,14169.0,Maddison,False,False
+Argentina,ARG,1950,population,17150.336,Maddison,False,False
+Argentina,ARG,1960,population,20616.009,Maddison,False,False
+Argentina,ARG,1970,population,23962.313,Maddison,False,False
+Argentina,ARG,1980,population,28369.799,Maddison,False,False
+Argentina,ARG,1990,population,33036.0,Maddison,False,False
+Argentina,ARG,2000,population,37336.15,Maddison,False,False
+Argentina,ARG,1850,urbanization,0.2487272727,CLIO-INFRA,True,False
+Argentina,ARG,1900,urbanization,0.3548689538,CLIO-INFRA,True,False
+Argentina,ARG,1950,urbanization,0.343690059,CLIO-INFRA,True,False
+Argentina,ARG,2000,urbanization,0.39578423,CLIO-INFRA,True,False
+Australia,AUS,1850,education_years,1.0663258,CLIO-INFRA,False,False
+Australia,AUS,1860,education_years,1.4892467,CLIO-INFRA,False,False
+Australia,AUS,1870,education_years,3.06,CLIO-INFRA,False,False
+Australia,AUS,1880,education_years,4.15,CLIO-INFRA,False,False
+Australia,AUS,1890,education_years,5.28,CLIO-INFRA,False,False
+Australia,AUS,1900,education_years,6.25,CLIO-INFRA,False,False
+Australia,AUS,1910,education_years,7.06,CLIO-INFRA,False,False
+Australia,AUS,1920,education_years,7.71,CLIO-INFRA,False,False
+Australia,AUS,1930,education_years,8.38,CLIO-INFRA,False,False
+Australia,AUS,1940,education_years,8.93,CLIO-INFRA,False,False
+Australia,AUS,1950,education_years,9.45,CLIO-INFRA,False,False
+Australia,AUS,1960,education_years,10.04,CLIO-INFRA,False,False
+Australia,AUS,1970,education_years,10.67,CLIO-INFRA,False,False
+Australia,AUS,1980,education_years,11.95,CLIO-INFRA,False,False
+Australia,AUS,1990,education_years,12.73,CLIO-INFRA,False,False
+Australia,AUS,2000,education_years,12.99,CLIO-INFRA,False,False
+Australia,AUS,1820,gdp_per_capita,826.0,Maddison,False,False
+Australia,AUS,1830,gdp_per_capita,1352.0,Maddison,False,False
+Australia,AUS,1840,gdp_per_capita,2190.0,Maddison,False,False
+Australia,AUS,1850,gdp_per_capita,3148.0,Maddison,False,False
+Australia,AUS,1860,gdp_per_capita,4613.0,Maddison,False,False
+Australia,AUS,1870,gdp_per_capita,5217.0,Maddison,False,False
+Australia,AUS,1880,gdp_per_capita,6830.0,Maddison,False,False
+Australia,AUS,1890,gdp_per_capita,7106.0,Maddison,False,False
+Australia,AUS,1900,gdp_per_capita,6397.0,Maddison,False,False
+Australia,AUS,1910,gdp_per_capita,8305.0,Maddison,False,False
+Australia,AUS,1920,gdp_per_capita,7597.0,Maddison,False,False
+Australia,AUS,1930,gdp_per_capita,7504.0,Maddison,False,False
+Australia,AUS,1940,gdp_per_capita,9828.0,Maddison,False,False
+Australia,AUS,1950,gdp_per_capita,11815.0,Maddison,False,False
+Australia,AUS,1960,gdp_per_capita,14013.0,Maddison,False,False
+Australia,AUS,1970,gdp_per_capita,19166.0,Maddison,False,False
+Australia,AUS,1980,gdp_per_capita,22972.0,Maddison,False,False
+Australia,AUS,1990,gdp_per_capita,27373.0,Maddison,False,False
+Australia,AUS,2000,gdp_per_capita,36603.04499594468,Maddison,False,False
+Australia,AUS,1850,gini,41.30739,CLIO-INFRA,False,False
+Australia,AUS,1870,gini,47.54506,CLIO-INFRA,False,False
+Australia,AUS,1890,gini,39.35404,CLIO-INFRA,False,False
+Australia,AUS,1910,gini,40.72747,CLIO-INFRA,False,False
+Australia,AUS,1950,gini,37.93349,CLIO-INFRA,False,False
+Australia,AUS,1960,gini,35.01661,CLIO-INFRA,False,False
+Australia,AUS,1970,gini,31.81844,CLIO-INFRA,False,False
+Australia,AUS,1980,gini,39.33642,CLIO-INFRA,False,False
+Australia,AUS,1990,gini,41.57151,CLIO-INFRA,False,False
+Australia,AUS,2000,gini,44.21973,CLIO-INFRA,False,False
+Australia,AUS,1930,life_expectancy,64.89,CLIO-INFRA,False,False
+Australia,AUS,1940,life_expectancy,66.23,CLIO-INFRA,False,False
+Australia,AUS,1950,life_expectancy,69.02,CLIO-INFRA,False,False
+Australia,AUS,1960,life_expectancy,70.87,CLIO-INFRA,False,False
+Australia,AUS,1970,life_expectancy,70.74,CLIO-INFRA,False,False
+Australia,AUS,1980,life_expectancy,74.5,CLIO-INFRA,False,False
+Australia,AUS,1990,life_expectancy,76.92,CLIO-INFRA,False,False
+Australia,AUS,2000,life_expectancy,79.78,CLIO-INFRA,False,False
+Australia,AUS,1820,population,334.0,Maddison,False,False
+Australia,AUS,1830,population,330.0,Maddison,False,False
+Australia,AUS,1840,population,420.0,Maddison,False,False
+Australia,AUS,1850,population,605.0,Maddison,False,False
+Australia,AUS,1860,population,1326.0,Maddison,False,False
+Australia,AUS,1870,population,1775.0,Maddison,False,False
+Australia,AUS,1880,population,2197.0,Maddison,False,False
+Australia,AUS,1890,population,3107.0,Maddison,False,False
+Australia,AUS,1900,population,3741.0,Maddison,False,False
+Australia,AUS,1910,population,4375.0,Maddison,False,False
+Australia,AUS,1920,population,5358.0,Maddison,False,False
+Australia,AUS,1930,population,6469.0,Maddison,False,False
+Australia,AUS,1940,population,7042.0,Maddison,False,False
+Australia,AUS,1950,population,8267.337,Maddison,False,False
+Australia,AUS,1960,population,10361.273,Maddison,False,False
+Australia,AUS,1970,population,12660.16,Maddison,False,False
+Australia,AUS,1980,population,14615.9,Maddison,False,False
+Australia,AUS,1990,population,16956.0,Maddison,False,False
+Australia,AUS,2000,population,18907.15,Maddison,False,False
+Australia,AUS,1850,urbanization,0.1937190083,CLIO-INFRA,True,False
+Australia,AUS,1900,urbanization,0.3794172681,CLIO-INFRA,True,False
+Australia,AUS,1950,urbanization,0.486734725,CLIO-INFRA,True,False
+Australia,AUS,2000,urbanization,0.69569097,CLIO-INFRA,True,False
+Belgium,BEL,1850,education_years,3.6507179,CLIO-INFRA,False,False
+Belgium,BEL,1860,education_years,4.0634492,CLIO-INFRA,False,False
+Belgium,BEL,1870,education_years,4.27,CLIO-INFRA,False,False
+Belgium,BEL,1880,education_years,4.79,CLIO-INFRA,False,False
+Belgium,BEL,1890,education_years,5.17,CLIO-INFRA,False,False
+Belgium,BEL,1900,education_years,5.17,CLIO-INFRA,False,False
+Belgium,BEL,1910,education_years,5.33,CLIO-INFRA,False,False
+Belgium,BEL,1920,education_years,5.57,CLIO-INFRA,False,False
+Belgium,BEL,1930,education_years,5.89,CLIO-INFRA,False,False
+Belgium,BEL,1940,education_years,6.16,CLIO-INFRA,False,False
+Belgium,BEL,1950,education_years,6.56,CLIO-INFRA,False,False
+Belgium,BEL,1960,education_years,7.26,CLIO-INFRA,False,False
+Belgium,BEL,1970,education_years,7.91,CLIO-INFRA,False,False
+Belgium,BEL,1980,education_years,8.98,CLIO-INFRA,False,False
+Belgium,BEL,1990,education_years,9.94,CLIO-INFRA,False,False
+Belgium,BEL,2000,education_years,10.73,CLIO-INFRA,False,False
+Belgium,BEL,1820,gdp_per_capita,2358.0,Maddison,False,False
+Belgium,BEL,1850,gdp_per_capita,2944.0,Maddison,False,False
+Belgium,BEL,1860,gdp_per_capita,3655.0,Maddison,False,False
+Belgium,BEL,1870,gdp_per_capita,4291.0,Maddison,False,False
+Belgium,BEL,1880,gdp_per_capita,4886.0,Maddison,False,False
+Belgium,BEL,1890,gdp_per_capita,5464.0,Maddison,False,False
+Belgium,BEL,1900,gdp_per_capita,5947.0,Maddison,False,False
+Belgium,BEL,1910,gdp_per_capita,6478.0,Maddison,False,False
+Belgium,BEL,1920,gdp_per_capita,6315.0,Maddison,False,False
+Belgium,BEL,1930,gdp_per_capita,7936.0,Maddison,False,False
+Belgium,BEL,1940,gdp_per_capita,7272.0,Maddison,False,False
+Belgium,BEL,1950,gdp_per_capita,8706.0,Maddison,False,False
+Belgium,BEL,1960,gdp_per_capita,11081.0,Maddison,False,False
+Belgium,BEL,1970,gdp_per_capita,16914.0,Maddison,False,False
+Belgium,BEL,1980,gdp_per_capita,23060.0,Maddison,False,False
+Belgium,BEL,1990,gdp_per_capita,27412.0,Maddison,False,False
+Belgium,BEL,2000,gdp_per_capita,33719.76983855418,Maddison,False,False
+Belgium,BEL,1820,gini,62.43673,CLIO-INFRA,False,False
+Belgium,BEL,1850,gini,52.76835,CLIO-INFRA,False,False
+Belgium,BEL,1870,gini,52.80577,CLIO-INFRA,False,False
+Belgium,BEL,1890,gini,49.0,CLIO-INFRA,False,False
+Belgium,BEL,1910,gini,50.16337,CLIO-INFRA,False,False
+Belgium,BEL,1950,gini,37.68051,CLIO-INFRA,False,False
+Belgium,BEL,1960,gini,47.11015,CLIO-INFRA,False,False
+Belgium,BEL,1970,gini,37.68051,CLIO-INFRA,False,False
+Belgium,BEL,1980,gini,31.2765,CLIO-INFRA,False,False
+Belgium,BEL,1990,gini,26.74247,CLIO-INFRA,False,False
+Belgium,BEL,2000,gini,32.48205,CLIO-INFRA,False,False
+Belgium,BEL,1850,life_expectancy,42.27,CLIO-INFRA,False,False
+Belgium,BEL,1860,life_expectancy,45.07,CLIO-INFRA,False,False
+Belgium,BEL,1870,life_expectancy,40.9,CLIO-INFRA,False,False
+Belgium,BEL,1880,life_expectancy,42.44,CLIO-INFRA,False,False
+Belgium,BEL,1890,life_expectancy,44.09,CLIO-INFRA,False,False
+Belgium,BEL,1900,life_expectancy,46.52,CLIO-INFRA,False,False
+Belgium,BEL,1910,life_expectancy,51.31,CLIO-INFRA,False,False
+Belgium,BEL,1920,life_expectancy,53.59,CLIO-INFRA,False,False
+Belgium,BEL,1930,life_expectancy,57.1,CLIO-INFRA,False,False
+Belgium,BEL,1940,life_expectancy,55.94,CLIO-INFRA,False,False
+Belgium,BEL,1950,life_expectancy,66.31,CLIO-INFRA,False,False
+Belgium,BEL,1960,life_expectancy,69.63,CLIO-INFRA,False,False
+Belgium,BEL,1970,life_expectancy,70.95,CLIO-INFRA,False,False
+Belgium,BEL,1980,life_expectancy,73.25,CLIO-INFRA,False,False
+Belgium,BEL,1990,life_expectancy,76.07,CLIO-INFRA,False,False
+Belgium,BEL,2000,life_expectancy,77.78,CLIO-INFRA,False,False
+Belgium,BEL,1820,population,3434.0,Maddison,False,False
+Belgium,BEL,1830,population,3750.0,Maddison,False,False
+Belgium,BEL,1840,population,4080.0,Maddison,False,False
+Belgium,BEL,1850,population,4449.0,Maddison,False,False
+Belgium,BEL,1860,population,4740.0,Maddison,False,False
+Belgium,BEL,1870,population,5096.0,Maddison,False,False
+Belgium,BEL,1880,population,5541.0,Maddison,False,False
+Belgium,BEL,1890,population,6096.0,Maddison,False,False
+Belgium,BEL,1900,population,6719.0,Maddison,False,False
+Belgium,BEL,1910,population,7498.0,Maddison,False,False
+Belgium,BEL,1920,population,7552.0,Maddison,False,False
+Belgium,BEL,1930,population,8076.0,Maddison,False,False
+Belgium,BEL,1940,population,8346.0,Maddison,False,False
+Belgium,BEL,1950,population,8639.369,Maddison,False,False
+Belgium,BEL,1960,population,9118.7,Maddison,False,False
+Belgium,BEL,1970,population,9637.8,Maddison,False,False
+Belgium,BEL,1980,population,9846.8,Maddison,False,False
+Belgium,BEL,1990,population,9969.31,Maddison,False,False
+Belgium,BEL,2000,population,10252.35,Maddison,False,False
+Belgium,BEL,1850,urbanization,0.250842886,CLIO-INFRA,True,False
+Belgium,BEL,1900,urbanization,0.2763804138,CLIO-INFRA,True,False
+Belgium,BEL,1950,urbanization,0.255921468,CLIO-INFRA,True,False
+Belgium,BEL,2000,urbanization,0.32698021,CLIO-INFRA,True,False
+Bolivia,BOL,1880,education_years,0.5502904,CLIO-INFRA,False,False
+Bolivia,BOL,1890,education_years,0.7481182,CLIO-INFRA,False,False
+Bolivia,BOL,1900,education_years,1.2476228,CLIO-INFRA,False,False
+Bolivia,BOL,1910,education_years,1.76890787,CLIO-INFRA,False,False
+Bolivia,BOL,1920,education_years,2.4163638,CLIO-INFRA,False,False
+Bolivia,BOL,1930,education_years,2.73618881,CLIO-INFRA,False,False
+Bolivia,BOL,1940,education_years,2.88332163,CLIO-INFRA,False,False
+Bolivia,BOL,1950,education_years,3.2740049,CLIO-INFRA,False,False
+Bolivia,BOL,1960,education_years,3.5680863,CLIO-INFRA,False,False
+Bolivia,BOL,1970,education_years,4.38665358,CLIO-INFRA,False,False
+Bolivia,BOL,1980,education_years,5.5114647,CLIO-INFRA,False,False
+Bolivia,BOL,1990,education_years,7.0391945,CLIO-INFRA,False,False
+Bolivia,BOL,2000,education_years,7.6871754,CLIO-INFRA,False,False
+Bolivia,BOL,1890,gdp_per_capita,1361.0,CLIO-INFRA,False,False
+Bolivia,BOL,1900,gdp_per_capita,1462.0,CLIO-INFRA,False,False
+Bolivia,BOL,1910,gdp_per_capita,1714.0,CLIO-INFRA,False,False
+Bolivia,BOL,1920,gdp_per_capita,1932.0,CLIO-INFRA,False,False
+Bolivia,BOL,1930,gdp_per_capita,2281.0,CLIO-INFRA,False,False
+Bolivia,BOL,1940,gdp_per_capita,2667.0,CLIO-INFRA,False,False
+Bolivia,BOL,1950,gdp_per_capita,3011.0,CLIO-INFRA,False,False
+Bolivia,BOL,1960,gdp_per_capita,2560.0,CLIO-INFRA,False,False
+Bolivia,BOL,1970,gdp_per_capita,3469.0,CLIO-INFRA,False,False
+Bolivia,BOL,1980,gdp_per_capita,4100.0,CLIO-INFRA,False,False
+Bolivia,BOL,1990,gdp_per_capita,3502.0,CLIO-INFRA,False,False
+Bolivia,BOL,2000,gdp_per_capita,4173.5495,CLIO-INFRA,False,False
+Bolivia,BOL,1950,gini,33.82697,CLIO-INFRA,False,False
+Bolivia,BOL,1960,gini,46.95317,CLIO-INFRA,False,False
+Bolivia,BOL,1970,gini,54.86515,CLIO-INFRA,False,False
+Bolivia,BOL,1980,gini,43.13236,CLIO-INFRA,False,False
+Bolivia,BOL,1990,gini,42.84193,CLIO-INFRA,False,False
+Bolivia,BOL,2000,gini,61.9282,CLIO-INFRA,False,False
+Bolivia,BOL,1900,life_expectancy,26.0,CLIO-INFRA,False,False
+Bolivia,BOL,1910,life_expectancy,28.0,CLIO-INFRA,False,False
+Bolivia,BOL,1920,life_expectancy,31.0,CLIO-INFRA,False,False
+Bolivia,BOL,1930,life_expectancy,33.0,CLIO-INFRA,False,False
+Bolivia,BOL,1940,life_expectancy,36.0,CLIO-INFRA,False,False
+Bolivia,BOL,1950,life_expectancy,40.421,CLIO-INFRA,False,False
+Bolivia,BOL,1960,life_expectancy,43.44,CLIO-INFRA,False,False
+Bolivia,BOL,1970,life_expectancy,46.744,CLIO-INFRA,False,False
+Bolivia,BOL,1980,life_expectancy,53.925,CLIO-INFRA,False,False
+Bolivia,BOL,1990,life_expectancy,60.067,CLIO-INFRA,False,False
+Bolivia,BOL,2000,life_expectancy,63.883,CLIO-INFRA,False,False
+Bolivia,BOL,1820,population,1100.0,CLIO-INFRA,False,False
+Bolivia,BOL,1850,population,1374.0,CLIO-INFRA,False,False
+Bolivia,BOL,1870,population,1495.0,CLIO-INFRA,False,False
+Bolivia,BOL,1880,population,1098.0,CLIO-INFRA,False,False
+Bolivia,BOL,1900,population,1696.0,CLIO-INFRA,False,False
+Bolivia,BOL,1910,population,1837.0,CLIO-INFRA,False,False
+Bolivia,BOL,1920,population,2136.0,CLIO-INFRA,False,False
+Bolivia,BOL,1930,population,2397.0,CLIO-INFRA,False,False
+Bolivia,BOL,1940,population,2690.0,CLIO-INFRA,False,False
+Bolivia,BOL,1950,population,2766.028,CLIO-INFRA,False,False
+Bolivia,BOL,1960,population,3434.073,CLIO-INFRA,False,False
+Bolivia,BOL,1970,population,4346.218,CLIO-INFRA,False,False
+Bolivia,BOL,1980,population,5441.298,CLIO-INFRA,False,False
+Bolivia,BOL,1990,population,6573.9,CLIO-INFRA,False,False
+Bolivia,BOL,2000,population,8195.0,CLIO-INFRA,False,False
+Bolivia,BOL,1850,urbanization,0.1368267831,CLIO-INFRA,True,False
+Bolivia,BOL,1900,urbanization,0.0936320755,CLIO-INFRA,True,False
+Bolivia,BOL,1950,urbanization,0.240416944,CLIO-INFRA,True,False
+Bolivia,BOL,2000,urbanization,0.47626602,CLIO-INFRA,True,False
+Brazil,BRA,1870,education_years,0.46,CLIO-INFRA,False,False
+Brazil,BRA,1880,education_years,0.55,CLIO-INFRA,False,False
+Brazil,BRA,1890,education_years,0.64,CLIO-INFRA,False,False
+Brazil,BRA,1900,education_years,0.742,CLIO-INFRA,False,False
+Brazil,BRA,1910,education_years,0.868,CLIO-INFRA,False,False
+Brazil,BRA,1920,education_years,1.04,CLIO-INFRA,False,False
+Brazil,BRA,1930,education_years,1.27,CLIO-INFRA,False,False
+Brazil,BRA,1940,education_years,1.648,CLIO-INFRA,False,False
+Brazil,BRA,1950,education_years,2.354,CLIO-INFRA,False,False
+Brazil,BRA,1960,education_years,3.08,CLIO-INFRA,False,False
+Brazil,BRA,1970,education_years,3.77,CLIO-INFRA,False,False
+Brazil,BRA,1980,education_years,4.68,CLIO-INFRA,False,False
+Brazil,BRA,1990,education_years,6.64,CLIO-INFRA,False,False
+Brazil,BRA,2000,education_years,7.54,CLIO-INFRA,False,False
+Brazil,BRA,1820,gdp_per_capita,867.0,Maddison,False,False
+Brazil,BRA,1850,gdp_per_capita,867.0,Maddison,False,False
+Brazil,BRA,1860,gdp_per_capita,991.0,Maddison,False,False
+Brazil,BRA,1870,gdp_per_capita,1084.0,Maddison,False,False
+Brazil,BRA,1880,gdp_per_capita,1058.0,Maddison,False,False
+Brazil,BRA,1890,gdp_per_capita,1084.0,Maddison,False,False
+Brazil,BRA,1900,gdp_per_capita,874.0,Maddison,False,False
+Brazil,BRA,1910,gdp_per_capita,990.0,Maddison,False,False
+Brazil,BRA,1920,gdp_per_capita,1242.0,Maddison,False,False
+Brazil,BRA,1930,gdp_per_capita,1350.0,Maddison,False,False
+Brazil,BRA,1940,gdp_per_capita,1610.0,Maddison,False,False
+Brazil,BRA,1950,gdp_per_capita,2236.0,Maddison,False,False
+Brazil,BRA,1960,gdp_per_capita,3398.0,Maddison,False,False
+Brazil,BRA,1970,gdp_per_capita,4635.0,Maddison,False,False
+Brazil,BRA,1980,gdp_per_capita,8249.0,Maddison,False,False
+Brazil,BRA,1990,gdp_per_capita,7842.0,Maddison,False,False
+Brazil,BRA,2000,gdp_per_capita,9834.424436663196,Maddison,False,False
+Brazil,BRA,1820,gini,47.10099,CLIO-INFRA,False,False
+Brazil,BRA,1850,gini,36.88876,CLIO-INFRA,False,False
+Brazil,BRA,1870,gini,39.2,CLIO-INFRA,False,False
+Brazil,BRA,1890,gini,35.58564,CLIO-INFRA,False,False
+Brazil,BRA,1910,gini,38.1601,CLIO-INFRA,False,False
+Brazil,BRA,1950,gini,49.33771,CLIO-INFRA,False,False
+Brazil,BRA,1960,gini,55.43252,CLIO-INFRA,False,False
+Brazil,BRA,1970,gini,57.84335,CLIO-INFRA,False,False
+Brazil,BRA,1980,gini,57.15025,CLIO-INFRA,False,False
+Brazil,BRA,1990,gini,58.6,CLIO-INFRA,False,False
+Brazil,BRA,2000,gini,61.2,CLIO-INFRA,False,False
+Brazil,BRA,1900,life_expectancy,29.0,CLIO-INFRA,False,False
+Brazil,BRA,1910,life_expectancy,31.0,CLIO-INFRA,False,False
+Brazil,BRA,1920,life_expectancy,32.0,CLIO-INFRA,False,False
+Brazil,BRA,1930,life_expectancy,34.0,CLIO-INFRA,False,False
+Brazil,BRA,1940,life_expectancy,37.0,CLIO-INFRA,False,False
+Brazil,BRA,1950,life_expectancy,51.008,CLIO-INFRA,False,False
+Brazil,BRA,1960,life_expectancy,55.884,CLIO-INFRA,False,False
+Brazil,BRA,1970,life_expectancy,59.817,CLIO-INFRA,False,False
+Brazil,BRA,1980,life_expectancy,63.499,CLIO-INFRA,False,False
+Brazil,BRA,1990,life_expectancy,67.454,CLIO-INFRA,False,False
+Brazil,BRA,2000,life_expectancy,71.026,CLIO-INFRA,False,False
+Brazil,BRA,1820,population,4507.0,Maddison,False,False
+Brazil,BRA,1850,population,7234.0,Maddison,False,False
+Brazil,BRA,1870,population,9797.0,Maddison,False,False
+Brazil,BRA,1880,population,11794.0,Maddison,False,False
+Brazil,BRA,1890,population,14199.0,Maddison,False,False
+Brazil,BRA,1900,population,17984.0,Maddison,False,False
+Brazil,BRA,1910,population,22216.0,Maddison,False,False
+Brazil,BRA,1920,population,27404.0,Maddison,False,False
+Brazil,BRA,1930,population,33568.0,Maddison,False,False
+Brazil,BRA,1940,population,41114.0,Maddison,False,False
+Brazil,BRA,1950,population,53443.075,Maddison,False,False
+Brazil,BRA,1960,population,71694.81,Maddison,False,False
+Brazil,BRA,1970,population,95684.297,Maddison,False,False
+Brazil,BRA,1980,population,123020.0,Maddison,False,False
+Brazil,BRA,1990,population,151170.0,Maddison,False,False
+Brazil,BRA,2000,population,176901.86,Maddison,False,False
+Brazil,BRA,1850,urbanization,0.1352778546,CLIO-INFRA,True,False
+Brazil,BRA,1900,urbanization,0.1389790925,CLIO-INFRA,True,False
+Brazil,BRA,1950,urbanization,0.228613342,CLIO-INFRA,True,False
+Brazil,BRA,2000,urbanization,0.42973571,CLIO-INFRA,True,False
+Canada,CAN,1870,education_years,5.71,CLIO-INFRA,False,False
+Canada,CAN,1880,education_years,6.2,CLIO-INFRA,False,False
+Canada,CAN,1890,education_years,6.68,CLIO-INFRA,False,False
+Canada,CAN,1900,education_years,7.1,CLIO-INFRA,False,False
+Canada,CAN,1910,education_years,7.63,CLIO-INFRA,False,False
+Canada,CAN,1920,education_years,8.04,CLIO-INFRA,False,False
+Canada,CAN,1930,education_years,8.48,CLIO-INFRA,False,False
+Canada,CAN,1940,education_years,8.83,CLIO-INFRA,False,False
+Canada,CAN,1950,education_years,9.15,CLIO-INFRA,False,False
+Canada,CAN,1960,education_years,9.54,CLIO-INFRA,False,False
+Canada,CAN,1970,education_years,9.9,CLIO-INFRA,False,False
+Canada,CAN,1980,education_years,11.21,CLIO-INFRA,False,False
+Canada,CAN,1990,education_years,12.2,CLIO-INFRA,False,False
+Canada,CAN,2000,education_years,12.84,CLIO-INFRA,False,False
+Canada,CAN,1820,gdp_per_capita,1441.0,Maddison,False,False
+Canada,CAN,1830,gdp_per_capita,1594.0,Maddison,False,False
+Canada,CAN,1840,gdp_per_capita,1852.0,Maddison,False,False
+Canada,CAN,1850,gdp_per_capita,2120.0,Maddison,False,False
+Canada,CAN,1860,gdp_per_capita,2313.0,Maddison,False,False
+Canada,CAN,1870,gdp_per_capita,2702.0,Maddison,False,False
+Canada,CAN,1880,gdp_per_capita,2895.0,Maddison,False,False
+Canada,CAN,1890,gdp_per_capita,3790.0,Maddison,False,False
+Canada,CAN,1900,gdp_per_capita,4640.0,Maddison,False,False
+Canada,CAN,1910,gdp_per_capita,6481.0,Maddison,False,False
+Canada,CAN,1920,gdp_per_capita,6154.0,Maddison,False,False
+Canada,CAN,1930,gdp_per_capita,7669.0,Maddison,False,False
+Canada,CAN,1940,gdp_per_capita,8557.0,Maddison,False,False
+Canada,CAN,1950,gdp_per_capita,11622.0,Maddison,False,False
+Canada,CAN,1960,gdp_per_capita,13952.0,Maddison,False,False
+Canada,CAN,1970,gdp_per_capita,19207.0,Maddison,False,False
+Canada,CAN,1980,gdp_per_capita,25784.0,Maddison,False,False
+Canada,CAN,1990,gdp_per_capita,30082.0,Maddison,False,False
+Canada,CAN,2000,gdp_per_capita,36942.562294285686,Maddison,False,False
+Canada,CAN,1820,gini,45.13605,CLIO-INFRA,False,False
+Canada,CAN,1850,gini,26.73701,CLIO-INFRA,False,False
+Canada,CAN,1870,gini,43.79224,CLIO-INFRA,False,False
+Canada,CAN,1890,gini,41.22997,CLIO-INFRA,False,False
+Canada,CAN,1910,gini,40.66906,CLIO-INFRA,False,False
+Canada,CAN,1950,gini,36.27374,CLIO-INFRA,False,False
+Canada,CAN,1960,gini,34.57147,CLIO-INFRA,False,False
+Canada,CAN,1970,gini,33.78042,CLIO-INFRA,False,False
+Canada,CAN,1980,gini,33.51524,CLIO-INFRA,False,False
+Canada,CAN,1990,gini,31.88074,CLIO-INFRA,False,False
+Canada,CAN,2000,gini,41.06143,CLIO-INFRA,False,False
+Canada,CAN,1930,life_expectancy,58.91,CLIO-INFRA,False,False
+Canada,CAN,1940,life_expectancy,63.96,CLIO-INFRA,False,False
+Canada,CAN,1950,life_expectancy,68.22,CLIO-INFRA,False,False
+Canada,CAN,1960,life_expectancy,70.98,CLIO-INFRA,False,False
+Canada,CAN,1970,life_expectancy,72.61,CLIO-INFRA,False,False
+Canada,CAN,1980,life_expectancy,75.06,CLIO-INFRA,False,False
+Canada,CAN,1990,life_expectancy,77.43,CLIO-INFRA,False,False
+Canada,CAN,2000,life_expectancy,79.28,CLIO-INFRA,False,False
+Canada,CAN,1820,population,816.0,Maddison,False,False
+Canada,CAN,1830,population,1169.0,Maddison,False,False
+Canada,CAN,1840,population,1697.0,Maddison,False,False
+Canada,CAN,1850,population,2485.0,Maddison,False,False
+Canada,CAN,1860,population,3369.0,Maddison,False,False
+Canada,CAN,1870,population,3781.0,Maddison,False,False
+Canada,CAN,1880,population,4384.0,Maddison,False,False
+Canada,CAN,1890,population,4918.0,Maddison,False,False
+Canada,CAN,1900,population,5457.0,Maddison,False,False
+Canada,CAN,1910,population,7188.0,Maddison,False,False
+Canada,CAN,1920,population,8798.0,Maddison,False,False
+Canada,CAN,1930,population,10488.0,Maddison,False,False
+Canada,CAN,1940,population,11688.0,Maddison,False,False
+Canada,CAN,1950,population,14011.422,Maddison,False,False
+Canada,CAN,1960,population,18266.765,Maddison,False,False
+Canada,CAN,1970,population,21749.986,Maddison,False,False
+Canada,CAN,1980,population,24593.3,Maddison,False,False
+Canada,CAN,1990,population,27790.6,Maddison,False,False
+Canada,CAN,2000,population,30795.95,Maddison,False,False
+Canada,CAN,1850,urbanization,0.1126760563,CLIO-INFRA,True,False
+Canada,CAN,1900,urbanization,0.18526663,CLIO-INFRA,True,False
+Canada,CAN,1950,urbanization,0.324735063,CLIO-INFRA,True,False
+Canada,CAN,2000,urbanization,0.31125402,CLIO-INFRA,True,False
+Chile,CHL,1870,education_years,0.9400001,CLIO-INFRA,False,False
+Chile,CHL,1880,education_years,1.045,CLIO-INFRA,False,False
+Chile,CHL,1890,education_years,1.57,CLIO-INFRA,False,False
+Chile,CHL,1900,education_years,1.73,CLIO-INFRA,False,False
+Chile,CHL,1910,education_years,2.04,CLIO-INFRA,False,False
+Chile,CHL,1920,education_years,2.89,CLIO-INFRA,False,False
+Chile,CHL,1930,education_years,3.89,CLIO-INFRA,False,False
+Chile,CHL,1940,education_years,4.75,CLIO-INFRA,False,False
+Chile,CHL,1950,education_years,5.2,CLIO-INFRA,False,False
+Chile,CHL,1960,education_years,5.75,CLIO-INFRA,False,False
+Chile,CHL,1970,education_years,6.45,CLIO-INFRA,False,False
+Chile,CHL,1980,education_years,7.8,CLIO-INFRA,False,False
+Chile,CHL,1990,education_years,8.96,CLIO-INFRA,False,False
+Chile,CHL,2000,education_years,9.950001,CLIO-INFRA,False,False
+Chile,CHL,1820,gdp_per_capita,824.0,Maddison,False,False
+Chile,CHL,1830,gdp_per_capita,925.0,Maddison,False,False
+Chile,CHL,1840,gdp_per_capita,1081.0,Maddison,False,False
+Chile,CHL,1850,gdp_per_capita,1352.0,Maddison,False,False
+Chile,CHL,1860,gdp_per_capita,1588.0,Maddison,False,False
+Chile,CHL,1870,gdp_per_capita,1868.0,Maddison,False,False
+Chile,CHL,1880,gdp_per_capita,2418.0,Maddison,False,False
+Chile,CHL,1890,gdp_per_capita,2907.0,Maddison,False,False
+Chile,CHL,1900,gdp_per_capita,3386.0,Maddison,False,False
+Chile,CHL,1910,gdp_per_capita,4485.0,Maddison,False,False
+Chile,CHL,1920,gdp_per_capita,4248.0,Maddison,False,False
+Chile,CHL,1930,gdp_per_capita,4876.0,Maddison,False,False
+Chile,CHL,1940,gdp_per_capita,5177.0,Maddison,False,False
+Chile,CHL,1950,gdp_per_capita,5880.0,Maddison,False,False
+Chile,CHL,1960,gdp_per_capita,6781.0,Maddison,False,False
+Chile,CHL,1970,gdp_per_capita,8195.0,Maddison,False,False
+Chile,CHL,1980,gdp_per_capita,9024.0,Maddison,False,False
+Chile,CHL,1990,gdp_per_capita,10203.0,Maddison,False,False
+Chile,CHL,2000,gdp_per_capita,15211.623295604437,Maddison,False,False
+Chile,CHL,1820,gini,47.10099,CLIO-INFRA,False,False
+Chile,CHL,1850,gini,63.61,CLIO-INFRA,False,False
+Chile,CHL,1870,gini,59.4,CLIO-INFRA,False,False
+Chile,CHL,1890,gini,55.13148,CLIO-INFRA,False,False
+Chile,CHL,1910,gini,55.23213,CLIO-INFRA,False,False
+Chile,CHL,1950,gini,35.79118,CLIO-INFRA,False,False
+Chile,CHL,1960,gini,70.80186,CLIO-INFRA,False,False
+Chile,CHL,1970,gini,47.44266,CLIO-INFRA,False,False
+Chile,CHL,1980,gini,54.71,CLIO-INFRA,False,False
+Chile,CHL,1990,gini,54.7,CLIO-INFRA,False,False
+Chile,CHL,2000,gini,55.1711,CLIO-INFRA,False,False
+Chile,CHL,1900,life_expectancy,29.0,CLIO-INFRA,False,False
+Chile,CHL,1910,life_expectancy,30.0,CLIO-INFRA,False,False
+Chile,CHL,1920,life_expectancy,31.0,CLIO-INFRA,False,False
+Chile,CHL,1930,life_expectancy,35.0,CLIO-INFRA,False,False
+Chile,CHL,1940,life_expectancy,38.0,CLIO-INFRA,False,False
+Chile,CHL,1950,life_expectancy,54.805,CLIO-INFRA,False,False
+Chile,CHL,1960,life_expectancy,58.049,CLIO-INFRA,False,False
+Chile,CHL,1970,life_expectancy,63.581,CLIO-INFRA,False,False
+Chile,CHL,1980,life_expectancy,70.759,CLIO-INFRA,False,False
+Chile,CHL,1990,life_expectancy,72.9,CLIO-INFRA,False,False
+Chile,CHL,2000,life_expectancy,76.82,CLIO-INFRA,False,False
+Chile,CHL,1820,population,771.0,Maddison,False,False
+Chile,CHL,1830,population,965.0,Maddison,False,False
+Chile,CHL,1840,population,1181.0,Maddison,False,False
+Chile,CHL,1850,population,1410.0,Maddison,False,False
+Chile,CHL,1860,population,1661.0,Maddison,False,False
+Chile,CHL,1870,population,1945.0,Maddison,False,False
+Chile,CHL,1880,population,2264.0,Maddison,False,False
+Chile,CHL,1890,population,2608.0,Maddison,False,False
+Chile,CHL,1900,population,2959.0,Maddison,False,False
+Chile,CHL,1910,population,3317.0,Maddison,False,False
+Chile,CHL,1920,population,3723.0,Maddison,False,False
+Chile,CHL,1930,population,4266.0,Maddison,False,False
+Chile,CHL,1940,population,5056.0,Maddison,False,False
+Chile,CHL,1950,population,6090.833,Maddison,False,False
+Chile,CHL,1960,population,7585.349,Maddison,False,False
+Chile,CHL,1970,population,9368.558,Maddison,False,False
+Chile,CHL,1980,population,11093.718,Maddison,False,False
+Chile,CHL,1990,population,13129.0,Maddison,False,False
+Chile,CHL,2000,population,15339.62,Maddison,False,False
+Chile,CHL,1850,urbanization,0.1852633371,CLIO-INFRA,True,False
+Chile,CHL,1900,urbanization,0.2272400072,CLIO-INFRA,True,False
+Chile,CHL,1950,urbanization,0.334108651,CLIO-INFRA,True,False
+Chile,CHL,2000,urbanization,0.54988124,CLIO-INFRA,True,False
+China,CHN,1850,education_years,0.7989281,CLIO-INFRA,False,False
+China,CHN,1860,education_years,0.8046896,CLIO-INFRA,False,False
+China,CHN,1870,education_years,1.01,CLIO-INFRA,False,False
+China,CHN,1880,education_years,1.06,CLIO-INFRA,False,False
+China,CHN,1890,education_years,1.11,CLIO-INFRA,False,False
+China,CHN,1900,education_years,1.16,CLIO-INFRA,False,False
+China,CHN,1910,education_years,1.21,CLIO-INFRA,False,False
+China,CHN,1920,education_years,1.26,CLIO-INFRA,False,False
+China,CHN,1930,education_years,1.31,CLIO-INFRA,False,False
+China,CHN,1940,education_years,1.46,CLIO-INFRA,False,False
+China,CHN,1950,education_years,1.688357,CLIO-INFRA,False,False
+China,CHN,1960,education_years,2.464643,CLIO-INFRA,False,False
+China,CHN,1970,education_years,3.52334,CLIO-INFRA,False,False
+China,CHN,1980,education_years,4.628614,CLIO-INFRA,False,False
+China,CHN,1990,education_years,5.602205,CLIO-INFRA,False,False
+China,CHN,2000,education_years,6.882662,CLIO-INFRA,False,False
+China,CHN,1820,gdp_per_capita,882.0,Maddison,False,False
+China,CHN,1830,gdp_per_capita,846.0,Maddison,False,False
+China,CHN,1840,gdp_per_capita,849.0,Maddison,False,False
+China,CHN,1850,gdp_per_capita,858.0,Maddison,False,False
+China,CHN,1870,gdp_per_capita,945.0,Maddison,False,False
+China,CHN,1890,gdp_per_capita,964.0,Maddison,False,False
+China,CHN,1900,gdp_per_capita,972.0,Maddison,False,False
+China,CHN,1930,gdp_per_capita,1012.0,Maddison,False,False
+China,CHN,1950,gdp_per_capita,799.0,Maddison,False,False
+China,CHN,1960,gdp_per_capita,1057.0,Maddison,False,False
+China,CHN,1970,gdp_per_capita,1398.0,Maddison,False,False
+China,CHN,1980,gdp_per_capita,1930.0,Maddison,False,False
+China,CHN,1990,gdp_per_capita,2982.0,Maddison,False,False
+China,CHN,2000,gdp_per_capita,4730.354351202304,Maddison,False,False
+China,CHN,1820,gini,44.8543,CLIO-INFRA,False,False
+China,CHN,1850,gini,32.79879,CLIO-INFRA,False,False
+China,CHN,1870,gini,40.88247,CLIO-INFRA,False,False
+China,CHN,1890,gini,30.56169,CLIO-INFRA,False,False
+China,CHN,1910,gini,38.8579,CLIO-INFRA,False,False
+China,CHN,1950,gini,32.24,CLIO-INFRA,False,False
+China,CHN,1960,gini,30.5,CLIO-INFRA,False,False
+China,CHN,1970,gini,27.9,CLIO-INFRA,False,False
+China,CHN,1980,gini,29.51371,CLIO-INFRA,False,False
+China,CHN,1990,gini,33.8562,CLIO-INFRA,False,False
+China,CHN,2000,gini,44.43417,CLIO-INFRA,False,False
+China,CHN,1930,life_expectancy,32.0,CLIO-INFRA,False,False
+China,CHN,1950,life_expectancy,44.589,CLIO-INFRA,False,False
+China,CHN,1960,life_expectancy,43.972,CLIO-INFRA,False,False
+China,CHN,1970,life_expectancy,64.577,CLIO-INFRA,False,False
+China,CHN,1980,life_expectancy,67.711,CLIO-INFRA,False,False
+China,CHN,1990,life_expectancy,69.953,CLIO-INFRA,False,False
+China,CHN,2000,life_expectancy,73.408,CLIO-INFRA,False,False
+China,CHN,1820,population,381000.0,Maddison,False,False
+China,CHN,1830,population,409000.0,Maddison,False,False
+China,CHN,1840,population,412000.0,Maddison,False,False
+China,CHN,1850,population,412000.0,Maddison,False,False
+China,CHN,1860,population,377000.0,Maddison,False,False
+China,CHN,1870,population,358000.0,Maddison,False,False
+China,CHN,1880,population,368000.0,Maddison,False,False
+China,CHN,1890,population,380000.0,Maddison,False,False
+China,CHN,1900,population,400000.0,Maddison,False,False
+China,CHN,1910,population,423000.0,Maddison,False,False
+China,CHN,1920,population,472000.0,Maddison,False,False
+China,CHN,1930,population,489000.0,Maddison,False,False
+China,CHN,1940,population,518770.0,Maddison,False,False
+China,CHN,1950,population,546815.0,Maddison,False,False
+China,CHN,1960,population,667070.0,Maddison,False,False
+China,CHN,1970,population,818315.0,Maddison,False,False
+China,CHN,1980,population,981235.0,Maddison,False,False
+China,CHN,1990,population,1135185.0,Maddison,False,False
+China,CHN,2000,population,1258400.92,Maddison,False,False
+China,CHN,1850,urbanization,0.07,CLIO-INFRA,True,False
+China,CHN,1900,urbanization,0.07,CLIO-INFRA,True,False
+Colombia,COL,1880,education_years,0.8981011,CLIO-INFRA,False,False
+Colombia,COL,1890,education_years,1.0247776,CLIO-INFRA,False,False
+Colombia,COL,1900,education_years,1.29137,CLIO-INFRA,False,False
+Colombia,COL,1910,education_years,1.61471919,CLIO-INFRA,False,False
+Colombia,COL,1920,education_years,2.3151684,CLIO-INFRA,False,False
+Colombia,COL,1930,education_years,2.79874022,CLIO-INFRA,False,False
+Colombia,COL,1940,education_years,3.18231602,CLIO-INFRA,False,False
+Colombia,COL,1950,education_years,3.3897189,CLIO-INFRA,False,False
+Colombia,COL,1960,education_years,3.7928321,CLIO-INFRA,False,False
+Colombia,COL,1970,education_years,4.35730824,CLIO-INFRA,False,False
+Colombia,COL,1980,education_years,4.9059498,CLIO-INFRA,False,False
+Colombia,COL,1990,education_years,5.9841674,CLIO-INFRA,False,False
+Colombia,COL,2000,education_years,6.956415,CLIO-INFRA,False,False
+Colombia,COL,1820,gdp_per_capita,850.0,Maddison,False,False
+Colombia,COL,1850,gdp_per_capita,784.0,Maddison,False,False
+Colombia,COL,1860,gdp_per_capita,913.0,Maddison,False,False
+Colombia,COL,1870,gdp_per_capita,1078.0,Maddison,False,False
+Colombia,COL,1880,gdp_per_capita,1133.0,Maddison,False,False
+Colombia,COL,1890,gdp_per_capita,1144.0,Maddison,False,False
+Colombia,COL,1900,gdp_per_capita,1089.0,Maddison,False,False
+Colombia,COL,1910,gdp_per_capita,1242.0,Maddison,False,False
+Colombia,COL,1920,gdp_per_capita,1707.0,Maddison,False,False
+Colombia,COL,1930,gdp_per_capita,2350.0,Maddison,False,False
+Colombia,COL,1940,gdp_per_capita,3021.0,Maddison,False,False
+Colombia,COL,1950,gdp_per_capita,3432.0,Maddison,False,False
+Colombia,COL,1960,gdp_per_capita,3980.0,Maddison,False,False
+Colombia,COL,1970,gdp_per_capita,4932.0,Maddison,False,False
+Colombia,COL,1980,gdp_per_capita,6786.0,Maddison,False,False
+Colombia,COL,1990,gdp_per_capita,7693.0,Maddison,False,False
+Colombia,COL,2000,gdp_per_capita,8496.791861442363,Maddison,False,False
+Colombia,COL,1870,gini,58.94312,CLIO-INFRA,False,False
+Colombia,COL,1890,gini,42.43406,CLIO-INFRA,False,False
+Colombia,COL,1910,gini,52.94209,CLIO-INFRA,False,False
+Colombia,COL,1950,gini,46.13254,CLIO-INFRA,False,False
+Colombia,COL,1960,gini,64.52618,CLIO-INFRA,False,False
+Colombia,COL,1970,gini,51.93792,CLIO-INFRA,False,False
+Colombia,COL,1980,gini,54.52413,CLIO-INFRA,False,False
+Colombia,COL,1990,gini,49.75765,CLIO-INFRA,False,False
+Colombia,COL,2000,gini,57.4,CLIO-INFRA,False,False
+Colombia,COL,1900,life_expectancy,29.0,CLIO-INFRA,False,False
+Colombia,COL,1910,life_expectancy,31.0,CLIO-INFRA,False,False
+Colombia,COL,1920,life_expectancy,32.0,CLIO-INFRA,False,False
+Colombia,COL,1930,life_expectancy,34.0,CLIO-INFRA,False,False
+Colombia,COL,1940,life_expectancy,38.0,CLIO-INFRA,False,False
+Colombia,COL,1950,life_expectancy,50.642,CLIO-INFRA,False,False
+Colombia,COL,1960,life_expectancy,57.943,CLIO-INFRA,False,False
+Colombia,COL,1970,life_expectancy,61.753,CLIO-INFRA,False,False
+Colombia,COL,1980,life_expectancy,66.851,CLIO-INFRA,False,False
+Colombia,COL,1990,life_expectancy,68.659,CLIO-INFRA,False,False
+Colombia,COL,2000,life_expectancy,71.679,CLIO-INFRA,False,False
+Colombia,COL,1820,population,1206.0,Maddison,False,False
+Colombia,COL,1830,population,1686.0,CLIO-INFRA,False,False
+Colombia,COL,1840,population,1932.0,CLIO-INFRA,False,False
+Colombia,COL,1850,population,2065.0,Maddison,False,False
+Colombia,COL,1860,population,2694.0,CLIO-INFRA,False,False
+Colombia,COL,1870,population,2392.0,Maddison,False,False
+Colombia,COL,1890,population,3369.0,Maddison,False,False
+Colombia,COL,1900,population,3998.0,Maddison,False,False
+Colombia,COL,1910,population,4890.0,Maddison,False,False
+Colombia,COL,1920,population,6213.0,Maddison,False,False
+Colombia,COL,1930,population,7914.0,Maddison,False,False
+Colombia,COL,1940,population,9174.0,Maddison,False,False
+Colombia,COL,1950,population,11591.658,Maddison,False,False
+Colombia,COL,1960,population,15952.727,Maddison,False,False
+Colombia,COL,1970,population,21429.658,Maddison,False,False
+Colombia,COL,1980,population,26631.0,Maddison,False,False
+Colombia,COL,1990,population,32957.0,Maddison,False,False
+Colombia,COL,2000,population,38910.64,Maddison,False,False
+Colombia,COL,1850,urbanization,0.1222760291,CLIO-INFRA,True,False
+Colombia,COL,1900,urbanization,0.1568284142,CLIO-INFRA,True,False
+Colombia,COL,1950,urbanization,0.298749325,CLIO-INFRA,True,False
+Colombia,COL,2000,urbanization,0.60310922,CLIO-INFRA,True,False
+Cuba,CUB,1870,education_years,0.83,CLIO-INFRA,False,False
+Cuba,CUB,1880,education_years,0.94,CLIO-INFRA,False,False
+Cuba,CUB,1890,education_years,1.04,CLIO-INFRA,False,False
+Cuba,CUB,1900,education_years,1.22,CLIO-INFRA,False,False
+Cuba,CUB,1910,education_years,1.51,CLIO-INFRA,False,False
+Cuba,CUB,1920,education_years,2.08,CLIO-INFRA,False,False
+Cuba,CUB,1930,education_years,2.65,CLIO-INFRA,False,False
+Cuba,CUB,1940,education_years,3.18,CLIO-INFRA,False,False
+Cuba,CUB,1950,education_years,3.53,CLIO-INFRA,False,False
+Cuba,CUB,1960,education_years,3.88,CLIO-INFRA,False,False
+Cuba,CUB,1970,education_years,4.36,CLIO-INFRA,False,False
+Cuba,CUB,1980,education_years,5.7,CLIO-INFRA,False,False
+Cuba,CUB,1990,education_years,7.56,CLIO-INFRA,False,False
+Cuba,CUB,2000,education_years,8.95,CLIO-INFRA,False,False
+Cuba,CUB,1850,gdp_per_capita,888.0,Maddison,False,False
+Cuba,CUB,1910,gdp_per_capita,2069.0,Maddison,False,False
+Cuba,CUB,1920,gdp_per_capita,2378.0,Maddison,False,False
+Cuba,CUB,1930,gdp_per_capita,2378.0,Maddison,False,False
+Cuba,CUB,1940,gdp_per_capita,2069.0,Maddison,False,False
+Cuba,CUB,1950,gdp_per_capita,2638.0,Maddison,False,False
+Cuba,CUB,1960,gdp_per_capita,2994.0,Maddison,False,False
+Cuba,CUB,1970,gdp_per_capita,2976.0,Maddison,False,False
+Cuba,CUB,1980,gdp_per_capita,4106.0,Maddison,False,False
+Cuba,CUB,1990,gdp_per_capita,4713.0,Maddison,False,False
+Cuba,CUB,2000,gdp_per_capita,4009.3398762914,Maddison,False,False
+Cuba,CUB,1900,life_expectancy,32.0,CLIO-INFRA,False,False
+Cuba,CUB,1910,life_expectancy,36.0,CLIO-INFRA,False,False
+Cuba,CUB,1920,life_expectancy,39.0,CLIO-INFRA,False,False
+Cuba,CUB,1930,life_expectancy,42.0,CLIO-INFRA,False,False
+Cuba,CUB,1940,life_expectancy,45.0,CLIO-INFRA,False,False
+Cuba,CUB,1950,life_expectancy,59.401,CLIO-INFRA,False,False
+Cuba,CUB,1960,life_expectancy,65.347,CLIO-INFRA,False,False
+Cuba,CUB,1970,life_expectancy,70.976,CLIO-INFRA,False,False
+Cuba,CUB,1980,life_expectancy,74.242,CLIO-INFRA,False,False
+Cuba,CUB,1990,life_expectancy,74.79,CLIO-INFRA,False,False
+Cuba,CUB,2000,life_expectancy,77.159,CLIO-INFRA,False,False
+Cuba,CUB,1820,population,605.0,Maddison,False,False
+Cuba,CUB,1830,population,1008.0,CLIO-INFRA,False,False
+Cuba,CUB,1840,population,1008.0,CLIO-INFRA,False,False
+Cuba,CUB,1850,population,1186.0,Maddison,False,False
+Cuba,CUB,1860,population,1397.0,CLIO-INFRA,False,False
+Cuba,CUB,1870,population,1331.0,Maddison,False,False
+Cuba,CUB,1880,population,1522.0,CLIO-INFRA,False,False
+Cuba,CUB,1890,population,1632.0,CLIO-INFRA,False,False
+Cuba,CUB,1900,population,1658.0,Maddison,False,False
+Cuba,CUB,1910,population,2219.0,Maddison,False,False
+Cuba,CUB,1920,population,2997.0,Maddison,False,False
+Cuba,CUB,1930,population,3837.0,Maddison,False,False
+Cuba,CUB,1940,population,4566.0,Maddison,False,False
+Cuba,CUB,1950,population,5785.0,Maddison,False,False
+Cuba,CUB,1960,population,7027.0,Maddison,False,False
+Cuba,CUB,1970,population,8543.0,Maddison,False,False
+Cuba,CUB,1980,population,9648.0,Maddison,False,False
+Cuba,CUB,1990,population,10597.0,Maddison,False,False
+Cuba,CUB,2000,population,11147.0,Maddison,False,False
+Cuba,CUB,1850,urbanization,0.3640809444,CLIO-INFRA,True,False
+Cuba,CUB,1900,urbanization,0.328106152,CLIO-INFRA,True,False
+Cuba,CUB,1950,urbanization,0.34158502,CLIO-INFRA,True,False
+Cuba,CUB,2000,urbanization,0.41662165,CLIO-INFRA,True,False
+Denmark,DNK,1870,education_years,4.69,CLIO-INFRA,False,False
+Denmark,DNK,1880,education_years,4.94,CLIO-INFRA,False,False
+Denmark,DNK,1890,education_years,5.25,CLIO-INFRA,False,False
+Denmark,DNK,1900,education_years,5.61,CLIO-INFRA,False,False
+Denmark,DNK,1910,education_years,5.96,CLIO-INFRA,False,False
+Denmark,DNK,1920,education_years,6.33,CLIO-INFRA,False,False
+Denmark,DNK,1930,education_years,6.62,CLIO-INFRA,False,False
+Denmark,DNK,1940,education_years,6.93,CLIO-INFRA,False,False
+Denmark,DNK,1950,education_years,7.61,CLIO-INFRA,False,False
+Denmark,DNK,1960,education_years,8.85,CLIO-INFRA,False,False
+Denmark,DNK,1970,education_years,9.84,CLIO-INFRA,False,False
+Denmark,DNK,1980,education_years,10.81,CLIO-INFRA,False,False
+Denmark,DNK,1990,education_years,11.4,CLIO-INFRA,False,False
+Denmark,DNK,2000,education_years,12.02,CLIO-INFRA,False,False
+Denmark,DNK,1820,gdp_per_capita,2031.0,Maddison,False,False
+Denmark,DNK,1830,gdp_per_capita,2120.0,Maddison,False,False
+Denmark,DNK,1840,gdp_per_capita,2276.0,Maddison,False,False
+Denmark,DNK,1850,gdp_per_capita,2817.0,Maddison,False,False
+Denmark,DNK,1860,gdp_per_capita,2775.0,Maddison,False,False
+Denmark,DNK,1870,gdp_per_capita,3193.0,Maddison,False,False
+Denmark,DNK,1880,gdp_per_capita,3476.0,Maddison,False,False
+Denmark,DNK,1890,gdp_per_capita,4022.0,Maddison,False,False
+Denmark,DNK,1900,gdp_per_capita,4809.0,Maddison,False,False
+Denmark,DNK,1910,gdp_per_capita,5906.0,Maddison,False,False
+Denmark,DNK,1920,gdp_per_capita,6363.0,Maddison,False,False
+Denmark,DNK,1930,gdp_per_capita,8513.0,Maddison,False,False
+Denmark,DNK,1940,gdp_per_capita,8155.0,Maddison,False,False
+Denmark,DNK,1950,gdp_per_capita,11067.0,Maddison,False,False
+Denmark,DNK,1960,gdp_per_capita,14046.0,Maddison,False,False
+Denmark,DNK,1970,gdp_per_capita,20221.0,Maddison,False,False
+Denmark,DNK,1980,gdp_per_capita,24272.0,Maddison,False,False
+Denmark,DNK,1990,gdp_per_capita,29412.0,Maddison,False,False
+Denmark,DNK,2000,gdp_per_capita,39021.177552135625,Maddison,False,False
+Denmark,DNK,1820,gini,54.14205,CLIO-INFRA,False,False
+Denmark,DNK,1850,gini,51.47933,CLIO-INFRA,False,False
+Denmark,DNK,1870,gini,48.8166,CLIO-INFRA,False,False
+Denmark,DNK,1890,gini,39.859,CLIO-INFRA,False,False
+Denmark,DNK,1910,gini,41.10374,CLIO-INFRA,False,False
+Denmark,DNK,1950,gini,35.6851,CLIO-INFRA,False,False
+Denmark,DNK,1960,gini,33.28397,CLIO-INFRA,False,False
+Denmark,DNK,1970,gini,29.27774,CLIO-INFRA,False,False
+Denmark,DNK,1980,gini,41.272,CLIO-INFRA,False,False
+Denmark,DNK,1990,gini,31.98086,CLIO-INFRA,False,False
+Denmark,DNK,2000,gini,39.2,CLIO-INFRA,False,False
+Denmark,DNK,1840,life_expectancy,41.05,CLIO-INFRA,False,False
+Denmark,DNK,1850,life_expectancy,43.47,CLIO-INFRA,False,False
+Denmark,DNK,1860,life_expectancy,45.05,CLIO-INFRA,False,False
+Denmark,DNK,1870,life_expectancy,45.97,CLIO-INFRA,False,False
+Denmark,DNK,1880,life_expectancy,44.76,CLIO-INFRA,False,False
+Denmark,DNK,1890,life_expectancy,47.24,CLIO-INFRA,False,False
+Denmark,DNK,1900,life_expectancy,51.87,CLIO-INFRA,False,False
+Denmark,DNK,1910,life_expectancy,58.03,CLIO-INFRA,False,False
+Denmark,DNK,1920,life_expectancy,57.55,CLIO-INFRA,False,False
+Denmark,DNK,1930,life_expectancy,62.27,CLIO-INFRA,False,False
+Denmark,DNK,1940,life_expectancy,66.25,CLIO-INFRA,False,False
+Denmark,DNK,1950,life_expectancy,70.3,CLIO-INFRA,False,False
+Denmark,DNK,1960,life_expectancy,72.2,CLIO-INFRA,False,False
+Denmark,DNK,1970,life_expectancy,73.37,CLIO-INFRA,False,False
+Denmark,DNK,1980,life_expectancy,74.13,CLIO-INFRA,False,False
+Denmark,DNK,1990,life_expectancy,74.86,CLIO-INFRA,False,False
+Denmark,DNK,2000,life_expectancy,76.81,CLIO-INFRA,False,False
+Denmark,DNK,1820,population,1155.0,Maddison,False,False
+Denmark,DNK,1830,population,1273.0,Maddison,False,False
+Denmark,DNK,1840,population,1357.0,Maddison,False,False
+Denmark,DNK,1850,population,1499.0,Maddison,False,False
+Denmark,DNK,1860,population,1696.0,Maddison,False,False
+Denmark,DNK,1870,population,1888.0,Maddison,False,False
+Denmark,DNK,1880,population,2081.0,Maddison,False,False
+Denmark,DNK,1890,population,2294.0,Maddison,False,False
+Denmark,DNK,1900,population,2561.0,Maddison,False,False
+Denmark,DNK,1910,population,2882.0,Maddison,False,False
+Denmark,DNK,1920,population,3242.0,Maddison,False,False
+Denmark,DNK,1930,population,3542.0,Maddison,False,False
+Denmark,DNK,1940,population,3832.0,Maddison,False,False
+Denmark,DNK,1950,population,4271.0,Maddison,False,False
+Denmark,DNK,1960,population,4581.0,Maddison,False,False
+Denmark,DNK,1970,population,4928.757,Maddison,False,False
+Denmark,DNK,1980,population,5123.027,Maddison,False,False
+Denmark,DNK,1990,population,5140.954,Maddison,False,False
+Denmark,DNK,2000,population,5338.99,Maddison,False,False
+Denmark,DNK,1850,urbanization,0.1180787191,CLIO-INFRA,True,False
+Denmark,DNK,1900,urbanization,0.2862163217,CLIO-INFRA,True,False
+Denmark,DNK,1950,urbanization,0.317958324,CLIO-INFRA,True,False
+Denmark,DNK,2000,urbanization,0.31588319,CLIO-INFRA,True,False
+Egypt,EGY,1870,education_years,0.15,CLIO-INFRA,False,False
+Egypt,EGY,1880,education_years,0.17,CLIO-INFRA,False,False
+Egypt,EGY,1890,education_years,0.23,CLIO-INFRA,False,False
+Egypt,EGY,1900,education_years,0.3,CLIO-INFRA,False,False
+Egypt,EGY,1910,education_years,0.42,CLIO-INFRA,False,False
+Egypt,EGY,1920,education_years,0.45,CLIO-INFRA,False,False
+Egypt,EGY,1930,education_years,0.74,CLIO-INFRA,False,False
+Egypt,EGY,1940,education_years,0.95,CLIO-INFRA,False,False
+Egypt,EGY,1950,education_years,1.47,CLIO-INFRA,False,False
+Egypt,EGY,1960,education_years,1.61,CLIO-INFRA,False,False
+Egypt,EGY,1970,education_years,1.76,CLIO-INFRA,False,False
+Egypt,EGY,1980,education_years,3.07,CLIO-INFRA,False,False
+Egypt,EGY,1990,education_years,5.15,CLIO-INFRA,False,False
+Egypt,EGY,2000,education_years,6.83,CLIO-INFRA,False,False
+Egypt,EGY,1820,gdp_per_capita,956.0,Maddison,False,False
+Egypt,EGY,1870,gdp_per_capita,1195.0,Maddison,False,False
+Egypt,EGY,1950,gdp_per_capita,1450.9723756906078,Maddison,False,False
+Egypt,EGY,1960,gdp_per_capita,1580.0,Maddison,False,False
+Egypt,EGY,1970,gdp_per_capita,1999.0,Maddison,False,False
+Egypt,EGY,1980,gdp_per_capita,3298.0,Maddison,False,False
+Egypt,EGY,1990,gdp_per_capita,4022.0,Maddison,False,False
+Egypt,EGY,2000,gdp_per_capita,6593.531793090701,Maddison,False,False
+Egypt,EGY,1820,gini,57.71468,CLIO-INFRA,False,False
+Egypt,EGY,1850,gini,63.09967,CLIO-INFRA,False,False
+Egypt,EGY,1870,gini,44.76133,CLIO-INFRA,False,False
+Egypt,EGY,1890,gini,33.1912,CLIO-INFRA,False,False
+Egypt,EGY,1910,gini,41.69664,CLIO-INFRA,False,False
+Egypt,EGY,1950,gini,38.81282,CLIO-INFRA,False,False
+Egypt,EGY,1960,gini,42.9,CLIO-INFRA,False,False
+Egypt,EGY,1970,gini,43.37,CLIO-INFRA,False,False
+Egypt,EGY,1980,gini,49.85116,CLIO-INFRA,False,False
+Egypt,EGY,1990,gini,54.34827,CLIO-INFRA,False,False
+Egypt,EGY,2000,gini,53.77821,CLIO-INFRA,False,False
+Egypt,EGY,1930,life_expectancy,35.4,CLIO-INFRA,False,False
+Egypt,EGY,1940,life_expectancy,34.4,CLIO-INFRA,False,False
+Egypt,EGY,1950,life_expectancy,41.143,CLIO-INFRA,False,False
+Egypt,EGY,1960,life_expectancy,49.315,CLIO-INFRA,False,False
+Egypt,EGY,1970,life_expectancy,52.982,CLIO-INFRA,False,False
+Egypt,EGY,1980,life_expectancy,59.926,CLIO-INFRA,False,False
+Egypt,EGY,1990,life_expectancy,65.466,CLIO-INFRA,False,False
+Egypt,EGY,2000,life_expectancy,69.02,CLIO-INFRA,False,False
+Egypt,EGY,1820,population,4194.0,Maddison,False,False
+Egypt,EGY,1840,population,4476.0,CLIO-INFRA,False,False
+Egypt,EGY,1850,population,5683.84583,CLIO-INFRA,False,False
+Egypt,EGY,1860,population,6284.78382,CLIO-INFRA,False,False
+Egypt,EGY,1870,population,7049.0,Maddison,False,False
+Egypt,EGY,1880,population,7683.984,CLIO-INFRA,False,False
+Egypt,EGY,1890,population,8799.25388,CLIO-INFRA,False,False
+Egypt,EGY,1900,population,10176.30571,CLIO-INFRA,False,False
+Egypt,EGY,1910,population,11698.5117,CLIO-INFRA,False,False
+Egypt,EGY,1920,population,13139.46451,CLIO-INFRA,False,False
+Egypt,EGY,1930,population,14679.84882,CLIO-INFRA,False,False
+Egypt,EGY,1940,population,16812.18146,CLIO-INFRA,False,False
+Egypt,EGY,1950,population,21197.691,Maddison,False,False
+Egypt,EGY,1960,population,26846.61,Maddison,False,False
+Egypt,EGY,1970,population,33574.026,Maddison,False,False
+Egypt,EGY,1980,population,42634.215,Maddison,False,False
+Egypt,EGY,1990,population,56683.22,Maddison,False,False
+Egypt,EGY,2000,population,67376.68,Maddison,False,False
+Egypt,EGY,1850,urbanization,0.1173149342,CLIO-INFRA,True,False
+Egypt,EGY,1900,urbanization,0.173186621,CLIO-INFRA,True,False
+Egypt,EGY,1950,urbanization,0.236237061,CLIO-INFRA,True,False
+Egypt,EGY,2000,urbanization,0.32968856,CLIO-INFRA,True,False
+Finland,FIN,1870,education_years,1.45,CLIO-INFRA,False,False
+Finland,FIN,1880,education_years,1.53,CLIO-INFRA,False,False
+Finland,FIN,1890,education_years,1.62,CLIO-INFRA,False,False
+Finland,FIN,1900,education_years,1.73,CLIO-INFRA,False,False
+Finland,FIN,1910,education_years,2.0,CLIO-INFRA,False,False
+Finland,FIN,1920,education_years,2.71,CLIO-INFRA,False,False
+Finland,FIN,1930,education_years,3.64,CLIO-INFRA,False,False
+Finland,FIN,1940,education_years,4.96,CLIO-INFRA,False,False
+Finland,FIN,1950,education_years,5.98,CLIO-INFRA,False,False
+Finland,FIN,1960,education_years,6.95,CLIO-INFRA,False,False
+Finland,FIN,1970,education_years,7.64,CLIO-INFRA,False,False
+Finland,FIN,1980,education_years,9.45,CLIO-INFRA,False,False
+Finland,FIN,1990,education_years,10.58,CLIO-INFRA,False,False
+Finland,FIN,2000,education_years,11.47,CLIO-INFRA,False,False
+Finland,FIN,1820,gdp_per_capita,1313.0,Maddison,False,False
+Finland,FIN,1850,gdp_per_capita,1519.0,Maddison,False,False
+Finland,FIN,1860,gdp_per_capita,1522.0,Maddison,False,False
+Finland,FIN,1870,gdp_per_capita,1817.0,Maddison,False,False
+Finland,FIN,1880,gdp_per_capita,1841.0,Maddison,False,False
+Finland,FIN,1890,gdp_per_capita,2201.0,Maddison,False,False
+Finland,FIN,1900,gdp_per_capita,2659.0,Maddison,False,False
+Finland,FIN,1910,gdp_per_capita,3038.0,Maddison,False,False
+Finland,FIN,1920,gdp_per_capita,2942.0,Maddison,False,False
+Finland,FIN,1930,gdp_per_capita,4250.0,Maddison,False,False
+Finland,FIN,1940,gdp_per_capita,5133.0,Maddison,False,False
+Finland,FIN,1950,gdp_per_capita,6779.0,Maddison,False,False
+Finland,FIN,1960,gdp_per_capita,9931.0,Maddison,False,False
+Finland,FIN,1970,gdp_per_capita,15266.0,Maddison,False,False
+Finland,FIN,1980,gdp_per_capita,20640.0,Maddison,False,False
+Finland,FIN,1990,gdp_per_capita,26884.0,Maddison,False,False
+Finland,FIN,2000,gdp_per_capita,32689.768891566226,Maddison,False,False
+Finland,FIN,1870,gini,50.58427,CLIO-INFRA,False,False
+Finland,FIN,1890,gini,35.86799,CLIO-INFRA,False,False
+Finland,FIN,1910,gini,38.40455,CLIO-INFRA,False,False
+Finland,FIN,1950,gini,34.67123,CLIO-INFRA,False,False
+Finland,FIN,1960,gini,47.35047,CLIO-INFRA,False,False
+Finland,FIN,1980,gini,35.75205,CLIO-INFRA,False,False
+Finland,FIN,1990,gini,29.4738,CLIO-INFRA,False,False
+Finland,FIN,2000,gini,27.4,CLIO-INFRA,False,False
+Finland,FIN,1880,life_expectancy,39.64,CLIO-INFRA,False,False
+Finland,FIN,1890,life_expectancy,44.56,CLIO-INFRA,False,False
+Finland,FIN,1900,life_expectancy,41.74,CLIO-INFRA,False,False
+Finland,FIN,1910,life_expectancy,48.49,CLIO-INFRA,False,False
+Finland,FIN,1920,life_expectancy,47.53,CLIO-INFRA,False,False
+Finland,FIN,1930,life_expectancy,54.45,CLIO-INFRA,False,False
+Finland,FIN,1940,life_expectancy,46.6,CLIO-INFRA,False,False
+Finland,FIN,1950,life_expectancy,64.2,CLIO-INFRA,False,False
+Finland,FIN,1960,life_expectancy,68.99,CLIO-INFRA,False,False
+Finland,FIN,1970,life_expectancy,70.32,CLIO-INFRA,False,False
+Finland,FIN,1980,life_expectancy,73.64,CLIO-INFRA,False,False
+Finland,FIN,1990,life_expectancy,74.98,CLIO-INFRA,False,False
+Finland,FIN,2000,life_expectancy,77.67,CLIO-INFRA,False,False
+Finland,FIN,1820,population,1169.0,Maddison,False,False
+Finland,FIN,1830,population,1364.0,Maddison,False,False
+Finland,FIN,1840,population,1441.0,Maddison,False,False
+Finland,FIN,1850,population,1628.0,Maddison,False,False
+Finland,FIN,1860,population,1738.0,Maddison,False,False
+Finland,FIN,1870,population,1754.0,Maddison,False,False
+Finland,FIN,1880,population,2047.0,Maddison,False,False
+Finland,FIN,1890,population,2364.0,Maddison,False,False
+Finland,FIN,1900,population,2646.0,Maddison,False,False
+Finland,FIN,1910,population,2929.0,Maddison,False,False
+Finland,FIN,1920,population,3133.0,Maddison,False,False
+Finland,FIN,1930,population,3449.0,Maddison,False,False
+Finland,FIN,1940,population,3698.0,Maddison,False,False
+Finland,FIN,1950,population,4008.9,Maddison,False,False
+Finland,FIN,1960,population,4429.6,Maddison,False,False
+Finland,FIN,1970,population,4606.307,Maddison,False,False
+Finland,FIN,1980,population,4779.535,Maddison,False,False
+Finland,FIN,1990,population,4986.431,Maddison,False,False
+Finland,FIN,2000,population,5176.23,Maddison,False,False
+Finland,FIN,1850,urbanization,0.0407862408,CLIO-INFRA,True,False
+Finland,FIN,1900,urbanization,0.0816326531,CLIO-INFRA,True,False
+Finland,FIN,1950,urbanization,0.193569308,CLIO-INFRA,True,False
+Finland,FIN,2000,urbanization,0.35483531,CLIO-INFRA,True,False
+France,FRA,1870,education_years,4.119,CLIO-INFRA,False,False
+France,FRA,1880,education_years,4.94,CLIO-INFRA,False,False
+France,FRA,1890,education_years,5.794,CLIO-INFRA,False,False
+France,FRA,1900,education_years,6.31,CLIO-INFRA,False,False
+France,FRA,1910,education_years,6.99,CLIO-INFRA,False,False
+France,FRA,1920,education_years,7.53,CLIO-INFRA,False,False
+France,FRA,1930,education_years,7.72,CLIO-INFRA,False,False
+France,FRA,1940,education_years,8.0,CLIO-INFRA,False,False
+France,FRA,1950,education_years,8.12,CLIO-INFRA,False,False
+France,FRA,1960,education_years,8.45,CLIO-INFRA,False,False
+France,FRA,1970,education_years,10.01,CLIO-INFRA,False,False
+France,FRA,1980,education_years,11.06,CLIO-INFRA,False,False
+France,FRA,1990,education_years,11.47,CLIO-INFRA,False,False
+France,FRA,2000,education_years,11.84,CLIO-INFRA,False,False
+France,FRA,1820,gdp_per_capita,1809.1044968870872,Maddison,False,False
+France,FRA,1830,gdp_per_capita,1898.150727629452,Maddison,False,False
+France,FRA,1840,gdp_per_capita,2275.752370929545,Maddison,False,False
+France,FRA,1850,gdp_per_capita,2545.027508542817,Maddison,False,False
+France,FRA,1860,gdp_per_capita,3016.0,Maddison,False,False
+France,FRA,1870,gdp_per_capita,2990.0,Maddison,False,False
+France,FRA,1880,gdp_per_capita,3379.0,Maddison,False,False
+France,FRA,1890,gdp_per_capita,3787.0,Maddison,False,False
+France,FRA,1900,gdp_per_capita,4584.0,Maddison,False,False
+France,FRA,1910,gdp_per_capita,4726.0,Maddison,False,False
+France,FRA,1920,gdp_per_capita,5144.0,Maddison,False,False
+France,FRA,1930,gdp_per_capita,7224.0,Maddison,False,False
+France,FRA,1940,gdp_per_capita,6443.0,Maddison,False,False
+France,FRA,1950,gdp_per_capita,8266.0,Maddison,False,False
+France,FRA,1960,gdp_per_capita,11792.0,Maddison,False,False
+France,FRA,1970,gdp_per_capita,18187.0,Maddison,False,False
+France,FRA,1980,gdp_per_capita,23537.0,Maddison,False,False
+France,FRA,1990,gdp_per_capita,28129.0,Maddison,False,False
+France,FRA,2000,gdp_per_capita,33409.68148293087,Maddison,False,False
+France,FRA,1820,gini,59.0,CLIO-INFRA,False,False
+France,FRA,1850,gini,54.3298,CLIO-INFRA,False,False
+France,FRA,1870,gini,58.0,CLIO-INFRA,False,False
+France,FRA,1890,gini,48.0,CLIO-INFRA,False,False
+France,FRA,1910,gini,54.79129,CLIO-INFRA,False,False
+France,FRA,1950,gini,57.90601,CLIO-INFRA,False,False
+France,FRA,1960,gini,52.01328,CLIO-INFRA,False,False
+France,FRA,1970,gini,44.65829,CLIO-INFRA,False,False
+France,FRA,1980,gini,34.50284,CLIO-INFRA,False,False
+France,FRA,1990,gini,37.39527,CLIO-INFRA,False,False
+France,FRA,2000,gini,37.23963,CLIO-INFRA,False,False
+France,FRA,1820,life_expectancy,39.23,CLIO-INFRA,False,False
+France,FRA,1830,life_expectancy,39.59,CLIO-INFRA,False,False
+France,FRA,1840,life_expectancy,40.38,CLIO-INFRA,False,False
+France,FRA,1850,life_expectancy,43.28,CLIO-INFRA,False,False
+France,FRA,1860,life_expectancy,43.32,CLIO-INFRA,False,False
+France,FRA,1870,life_expectancy,36.39,CLIO-INFRA,False,False
+France,FRA,1880,life_expectancy,42.69,CLIO-INFRA,False,False
+France,FRA,1890,life_expectancy,43.32,CLIO-INFRA,False,False
+France,FRA,1900,life_expectancy,45.01,CLIO-INFRA,False,False
+France,FRA,1910,life_expectancy,51.33,CLIO-INFRA,False,False
+France,FRA,1920,life_expectancy,51.53,CLIO-INFRA,False,False
+France,FRA,1930,life_expectancy,56.83,CLIO-INFRA,False,False
+France,FRA,1940,life_expectancy,49.55,CLIO-INFRA,False,False
+France,FRA,1950,life_expectancy,66.37,CLIO-INFRA,False,False
+France,FRA,1960,life_expectancy,70.37,CLIO-INFRA,False,False
+France,FRA,1970,life_expectancy,72.1,CLIO-INFRA,False,False
+France,FRA,1980,life_expectancy,74.24,CLIO-INFRA,False,False
+France,FRA,1990,life_expectancy,76.84,CLIO-INFRA,False,False
+France,FRA,2000,life_expectancy,79.05,CLIO-INFRA,False,False
+France,FRA,1820,population,31250.0,Maddison,False,False
+France,FRA,1830,population,33300.0,Maddison,False,False
+France,FRA,1840,population,34900.0,Maddison,False,False
+France,FRA,1850,population,36350.0,Maddison,False,False
+France,FRA,1860,population,37300.0,Maddison,False,False
+France,FRA,1870,population,38440.0,Maddison,False,False
+France,FRA,1880,population,39045.0,Maddison,False,False
+France,FRA,1890,population,40014.0,Maddison,False,False
+France,FRA,1900,population,40598.0,Maddison,False,False
+France,FRA,1910,population,41224.0,Maddison,False,False
+France,FRA,1920,population,39000.0,Maddison,False,False
+France,FRA,1930,population,41610.0,Maddison,False,False
+France,FRA,1940,population,41000.0,Maddison,False,False
+France,FRA,1950,population,42518.0,Maddison,False,False
+France,FRA,1960,population,46584.0,Maddison,False,False
+France,FRA,1970,population,51918.0,Maddison,False,False
+France,FRA,1980,population,55110.0,Maddison,False,False
+France,FRA,1990,population,58168.0,Maddison,False,False
+France,FRA,2000,population,60811.0,Maddison,False,False
+France,FRA,1850,urbanization,0.1628610729,CLIO-INFRA,True,False
+France,FRA,1900,urbanization,0.2719099463,CLIO-INFRA,True,False
+France,FRA,1950,urbanization,0.316195494,CLIO-INFRA,True,False
+France,FRA,2000,urbanization,0.2639809,CLIO-INFRA,True,False
+Germany,DEU,1870,education_years,5.44,CLIO-INFRA,False,False
+Germany,DEU,1880,education_years,5.7,CLIO-INFRA,False,False
+Germany,DEU,1890,education_years,6.1,CLIO-INFRA,False,False
+Germany,DEU,1900,education_years,6.47,CLIO-INFRA,False,False
+Germany,DEU,1910,education_years,6.99,CLIO-INFRA,False,False
+Germany,DEU,1920,education_years,7.45,CLIO-INFRA,False,False
+Germany,DEU,1930,education_years,7.73,CLIO-INFRA,False,False
+Germany,DEU,1940,education_years,8.25,CLIO-INFRA,False,False
+Germany,DEU,1950,education_years,8.530001,CLIO-INFRA,False,False
+Germany,DEU,1960,education_years,9.68,CLIO-INFRA,False,False
+Germany,DEU,1970,education_years,11.06,CLIO-INFRA,False,False
+Germany,DEU,1980,education_years,12.35,CLIO-INFRA,False,False
+Germany,DEU,1990,education_years,13.05,CLIO-INFRA,False,False
+Germany,DEU,2000,education_years,12.89,CLIO-INFRA,False,False
+Germany,DEU,1820,gdp_per_capita,2041.1140949860196,Maddison,False,False
+Germany,DEU,1830,gdp_per_capita,2044.5804429799675,Maddison,False,False
+Germany,DEU,1840,gdp_per_capita,2163.846067239809,Maddison,False,False
+Germany,DEU,1850,gdp_per_capita,2276.0,Maddison,False,False
+Germany,DEU,1860,gdp_per_capita,2613.0,Maddison,False,False
+Germany,DEU,1870,gdp_per_capita,2931.0,Maddison,False,False
+Germany,DEU,1880,gdp_per_capita,3174.0,Maddison,False,False
+Germany,DEU,1890,gdp_per_capita,3870.0,Maddison,False,False
+Germany,DEU,1900,gdp_per_capita,4758.0,Maddison,False,False
+Germany,DEU,1910,gdp_per_capita,5337.0,Maddison,False,False
+Germany,DEU,1920,gdp_per_capita,4457.0,Maddison,False,False
+Germany,DEU,1930,gdp_per_capita,6333.0,Maddison,False,False
+Germany,DEU,1940,gdp_per_capita,8612.0,Maddison,False,False
+Germany,DEU,1950,gdp_per_capita,6186.0,Maddison,False,False
+Germany,DEU,1960,gdp_per_capita,12282.0,Maddison,False,False
+Germany,DEU,1970,gdp_per_capita,17277.0,Maddison,False,False
+Germany,DEU,1980,gdp_per_capita,22497.0,Maddison,False,False
+Germany,DEU,1990,gdp_per_capita,25391.0,Maddison,False,False
+Germany,DEU,2000,gdp_per_capita,33367.28380906572,Maddison,False,False
+Germany,DEU,1950,life_expectancy,67.53,CLIO-INFRA,False,False
+Germany,DEU,1960,life_expectancy,69.1,CLIO-INFRA,False,False
+Germany,DEU,1970,life_expectancy,70.6,CLIO-INFRA,False,False
+Germany,DEU,1980,life_expectancy,72.9,CLIO-INFRA,False,False
+Germany,DEU,1990,life_expectancy,75.36,CLIO-INFRA,False,False
+Germany,DEU,2000,life_expectancy,78.13,CLIO-INFRA,False,False
+Germany,DEU,1820,population,24905.0,Maddison,False,False
+Germany,DEU,1830,population,28045.0,Maddison,False,False
+Germany,DEU,1840,population,31126.0,Maddison,False,False
+Germany,DEU,1850,population,33746.0,Maddison,False,False
+Germany,DEU,1860,population,36049.0,Maddison,False,False
+Germany,DEU,1870,population,39231.0,Maddison,False,False
+Germany,DEU,1880,population,43500.0,Maddison,False,False
+Germany,DEU,1890,population,47607.0,Maddison,False,False
+Germany,DEU,1900,population,54388.0,Maddison,False,False
+Germany,DEU,1910,population,62884.0,Maddison,False,False
+Germany,DEU,1920,population,60894.0,Maddison,False,False
+Germany,DEU,1930,population,65084.0,Maddison,False,False
+Germany,DEU,1940,population,69835.0,Maddison,False,False
+Germany,DEU,1950,population,68374.572,Maddison,False,False
+Germany,DEU,1960,population,72480.869,Maddison,False,False
+Germany,DEU,1970,population,77783.164,Maddison,False,False
+Germany,DEU,1980,population,78297.904,Maddison,False,False
+Germany,DEU,1990,population,79380.394,Maddison,False,False
+Germany,DEU,2000,population,81473.83,Maddison,False,False
+Germany,DEU,1850,urbanization,0.1161915486,CLIO-INFRA,True,False
+Germany,DEU,1900,urbanization,0.2458998308,CLIO-INFRA,True,False
+Germany,DEU,1950,urbanization,0.378649537,CLIO-INFRA,True,False
+Germany,DEU,2000,urbanization,0.39075091,CLIO-INFRA,True,False
+Greece,GRC,1870,education_years,1.41,CLIO-INFRA,False,False
+Greece,GRC,1880,education_years,1.76,CLIO-INFRA,False,False
+Greece,GRC,1890,education_years,2.07,CLIO-INFRA,False,False
+Greece,GRC,1900,education_years,2.37,CLIO-INFRA,False,False
+Greece,GRC,1910,education_years,2.71,CLIO-INFRA,False,False
+Greece,GRC,1920,education_years,3.07,CLIO-INFRA,False,False
+Greece,GRC,1930,education_years,3.9,CLIO-INFRA,False,False
+Greece,GRC,1940,education_years,4.53,CLIO-INFRA,False,False
+Greece,GRC,1950,education_years,5.12,CLIO-INFRA,False,False
+Greece,GRC,1960,education_years,5.91,CLIO-INFRA,False,False
+Greece,GRC,1970,education_years,6.72,CLIO-INFRA,False,False
+Greece,GRC,1980,education_years,7.45,CLIO-INFRA,False,False
+Greece,GRC,1990,education_years,8.6,CLIO-INFRA,False,False
+Greece,GRC,2000,education_years,9.87,CLIO-INFRA,False,False
+Greece,GRC,1840,gdp_per_capita,1932.0,Maddison,False,False
+Greece,GRC,1850,gdp_per_capita,1607.0,Maddison,False,False
+Greece,GRC,1860,gdp_per_capita,2125.0,Maddison,False,False
+Greece,GRC,1870,gdp_per_capita,1938.0,Maddison,False,False
+Greece,GRC,1880,gdp_per_capita,2028.0,Maddison,False,False
+Greece,GRC,1890,gdp_per_capita,2257.0,Maddison,False,False
+Greece,GRC,1900,gdp_per_capita,1972.0,Maddison,False,False
+Greece,GRC,1910,gdp_per_capita,2592.0,Maddison,False,False
+Greece,GRC,1920,gdp_per_capita,2284.0,Maddison,False,False
+Greece,GRC,1930,gdp_per_capita,3599.0,Maddison,False,False
+Greece,GRC,1940,gdp_per_capita,3543.0,Maddison,False,False
+Greece,GRC,1950,gdp_per_capita,3052.0,Maddison,False,False
+Greece,GRC,1960,gdp_per_capita,5015.0,Maddison,False,False
+Greece,GRC,1970,gdp_per_capita,9900.0,Maddison,False,False
+Greece,GRC,1980,gdp_per_capita,14300.0,Maddison,False,False
+Greece,GRC,1990,gdp_per_capita,15964.0,Maddison,False,False
+Greece,GRC,2000,gdp_per_capita,20965.331806698097,Maddison,False,False
+Greece,GRC,1870,gini,49.93078,CLIO-INFRA,False,False
+Greece,GRC,1890,gini,33.72567,CLIO-INFRA,False,False
+Greece,GRC,1950,gini,34.09489,CLIO-INFRA,False,False
+Greece,GRC,1960,gini,46.85989,CLIO-INFRA,False,False
+Greece,GRC,1970,gini,41.76017,CLIO-INFRA,False,False
+Greece,GRC,1980,gini,36.06993,CLIO-INFRA,False,False
+Greece,GRC,1990,gini,34.44603,CLIO-INFRA,False,False
+Greece,GRC,1920,life_expectancy,44.65192,CLIO-INFRA,False,False
+Greece,GRC,1940,life_expectancy,54.33568,CLIO-INFRA,False,False
+Greece,GRC,1950,life_expectancy,65.748,CLIO-INFRA,False,False
+Greece,GRC,1960,life_expectancy,69.24,CLIO-INFRA,False,False
+Greece,GRC,1970,life_expectancy,73.8,CLIO-INFRA,False,False
+Greece,GRC,1980,life_expectancy,75.3,CLIO-INFRA,False,False
+Greece,GRC,1990,life_expectancy,77.1,CLIO-INFRA,False,False
+Greece,GRC,2000,life_expectancy,78.1,CLIO-INFRA,False,False
+Greece,GRC,1820,population,2312.0,Maddison,False,False
+Greece,GRC,1830,population,2534.0,Maddison,False,False
+Greece,GRC,1840,population,2777.0,Maddison,False,False
+Greece,GRC,1850,population,3044.0,Maddison,False,False
+Greece,GRC,1860,population,3336.0,Maddison,False,False
+Greece,GRC,1870,population,3657.0,Maddison,False,False
+Greece,GRC,1880,population,4049.0,Maddison,False,False
+Greece,GRC,1890,population,4482.0,Maddison,False,False
+Greece,GRC,1900,population,4962.0,Maddison,False,False
+Greece,GRC,1910,population,5320.0,Maddison,False,False
+Greece,GRC,1920,population,5700.0,Maddison,False,False
+Greece,GRC,1930,population,6351.0,Maddison,False,False
+Greece,GRC,1940,population,7280.0,Maddison,False,False
+Greece,GRC,1950,population,7566.028,Maddison,False,False
+Greece,GRC,1960,population,8327.405,Maddison,False,False
+Greece,GRC,1970,population,8792.806,Maddison,False,False
+Greece,GRC,1980,population,9642.505,Maddison,False,False
+Greece,GRC,1990,population,10129.603,Maddison,False,False
+Greece,GRC,2000,population,10661.93,Maddison,False,False
+Greece,GRC,1850,urbanization,0.1103153745,CLIO-INFRA,True,False
+Greece,GRC,1900,urbanization,0.1332124143,CLIO-INFRA,True,False
+Greece,GRC,1950,urbanization,0.247553935,CLIO-INFRA,True,False
+Greece,GRC,2000,urbanization,0.29633179,CLIO-INFRA,True,False
+Hungary,HUN,1870,education_years,2.578,CLIO-INFRA,False,False
+Hungary,HUN,1880,education_years,2.966,CLIO-INFRA,False,False
+Hungary,HUN,1890,education_years,3.59,CLIO-INFRA,False,False
+Hungary,HUN,1900,education_years,4.05,CLIO-INFRA,False,False
+Hungary,HUN,1910,education_years,4.59,CLIO-INFRA,False,False
+Hungary,HUN,1920,education_years,4.798,CLIO-INFRA,False,False
+Hungary,HUN,1930,education_years,5.11,CLIO-INFRA,False,False
+Hungary,HUN,1940,education_years,5.54,CLIO-INFRA,False,False
+Hungary,HUN,1950,education_years,6.11,CLIO-INFRA,False,False
+Hungary,HUN,1960,education_years,6.92,CLIO-INFRA,False,False
+Hungary,HUN,1970,education_years,7.9,CLIO-INFRA,False,False
+Hungary,HUN,1980,education_years,9.01,CLIO-INFRA,False,False
+Hungary,HUN,1990,education_years,9.87,CLIO-INFRA,False,False
+Hungary,HUN,2000,education_years,10.75,CLIO-INFRA,False,False
+Hungary,HUN,1870,gdp_per_capita,1741.0,Maddison,False,False
+Hungary,HUN,1890,gdp_per_capita,2348.0,Maddison,False,False
+Hungary,HUN,1900,gdp_per_capita,2681.0,Maddison,False,False
+Hungary,HUN,1910,gdp_per_capita,3188.0,Maddison,False,False
+Hungary,HUN,1920,gdp_per_capita,2724.0,Maddison,False,False
+Hungary,HUN,1930,gdp_per_capita,3832.0,Maddison,False,False
+Hungary,HUN,1940,gdp_per_capita,4186.0,Maddison,False,False
+Hungary,HUN,1950,gdp_per_capita,3953.0,Maddison,False,False
+Hungary,HUN,1960,gdp_per_capita,5816.0,Maddison,False,False
+Hungary,HUN,1970,gdp_per_capita,8015.0,Maddison,False,False
+Hungary,HUN,1980,gdp_per_capita,10052.0,Maddison,False,False
+Hungary,HUN,1990,gdp_per_capita,10296.0,Maddison,False,False
+Hungary,HUN,2000,gdp_per_capita,13129.273107833118,Maddison,False,False
+Hungary,HUN,1820,gini,47.41291,CLIO-INFRA,False,False
+Hungary,HUN,1850,gini,33.10527,CLIO-INFRA,False,False
+Hungary,HUN,1870,gini,45.10877,CLIO-INFRA,False,False
+Hungary,HUN,1960,gini,28.29417,CLIO-INFRA,False,False
+Hungary,HUN,1970,gini,27.04313,CLIO-INFRA,False,False
+Hungary,HUN,1980,gini,25.55691,CLIO-INFRA,False,False
+Hungary,HUN,1990,gini,26.9,CLIO-INFRA,False,False
+Hungary,HUN,2000,gini,29.2208,CLIO-INFRA,False,False
+Hungary,HUN,1900,life_expectancy,37.33592,CLIO-INFRA,False,False
+Hungary,HUN,1910,life_expectancy,39.75808,CLIO-INFRA,False,False
+Hungary,HUN,1920,life_expectancy,42.05504,CLIO-INFRA,False,False
+Hungary,HUN,1930,life_expectancy,50.2128,CLIO-INFRA,False,False
+Hungary,HUN,1950,life_expectancy,62.07,CLIO-INFRA,False,False
+Hungary,HUN,1960,life_expectancy,68.08,CLIO-INFRA,False,False
+Hungary,HUN,1970,life_expectancy,69.21,CLIO-INFRA,False,False
+Hungary,HUN,1980,life_expectancy,69.09,CLIO-INFRA,False,False
+Hungary,HUN,1990,life_expectancy,69.38,CLIO-INFRA,False,False
+Hungary,HUN,2000,life_expectancy,71.8,CLIO-INFRA,False,False
+Hungary,HUN,1820,population,4146.0,Maddison,False,False
+Hungary,HUN,1850,population,5161.0,Maddison,False,False
+Hungary,HUN,1870,population,5917.0,Maddison,False,False
+Hungary,HUN,1890,population,6622.0,Maddison,False,False
+Hungary,HUN,1900,population,7127.0,Maddison,False,False
+Hungary,HUN,1910,population,7644.0,Maddison,False,False
+Hungary,HUN,1920,population,7950.0,Maddison,False,False
+Hungary,HUN,1930,population,8649.0,Maddison,False,False
+Hungary,HUN,1940,population,9287.0,Maddison,False,False
+Hungary,HUN,1950,population,9338.0,Maddison,False,False
+Hungary,HUN,1960,population,9983.512,Maddison,False,False
+Hungary,HUN,1970,population,10337.004,Maddison,False,False
+Hungary,HUN,1980,population,10711.122,Maddison,False,False
+Hungary,HUN,1990,population,10371.878,Maddison,False,False
+Hungary,HUN,2000,population,10217.74,Maddison,False,False
+Hungary,HUN,1850,urbanization,0.1699283085,CLIO-INFRA,True,False
+Hungary,HUN,1900,urbanization,0.280622983,CLIO-INFRA,True,False
+Hungary,HUN,1950,urbanization,0.333690298,CLIO-INFRA,True,False
+Hungary,HUN,2000,urbanization,0.4026654,CLIO-INFRA,True,False
+India,IND,1870,education_years,0.08,CLIO-INFRA,False,False
+India,IND,1880,education_years,0.11,CLIO-INFRA,False,False
+India,IND,1890,education_years,0.15,CLIO-INFRA,False,False
+India,IND,1900,education_years,0.29,CLIO-INFRA,False,False
+India,IND,1910,education_years,0.37,CLIO-INFRA,False,False
+India,IND,1920,education_years,0.51,CLIO-INFRA,False,False
+India,IND,1930,education_years,0.7,CLIO-INFRA,False,False
+India,IND,1940,education_years,0.9299999,CLIO-INFRA,False,False
+India,IND,1950,education_years,1.16,CLIO-INFRA,False,False
+India,IND,1960,education_years,1.46,CLIO-INFRA,False,False
+India,IND,1970,education_years,2.01,CLIO-INFRA,False,False
+India,IND,1980,education_years,2.69,CLIO-INFRA,False,False
+India,IND,1990,education_years,3.33,CLIO-INFRA,False,False
+India,IND,2000,education_years,4.51,CLIO-INFRA,False,False
+India,IND,1850,gdp_per_capita,947.0,Maddison,False,False
+India,IND,1870,gdp_per_capita,850.0,Maddison,False,False
+India,IND,1890,gdp_per_capita,931.0,Maddison,False,False
+India,IND,1900,gdp_per_capita,955.0,Maddison,False,False
+India,IND,1910,gdp_per_capita,1111.0,Maddison,False,False
+India,IND,1920,gdp_per_capita,1012.0,Maddison,False,False
+India,IND,1930,gdp_per_capita,1157.0,Maddison,False,False
+India,IND,1940,gdp_per_capita,1093.0,Maddison,False,False
+India,IND,1950,gdp_per_capita,987.0,Maddison,False,False
+India,IND,1960,gdp_per_capita,1200.0,Maddison,False,False
+India,IND,1970,gdp_per_capita,1384.0,Maddison,False,False
+India,IND,1980,gdp_per_capita,1495.0,Maddison,False,False
+India,IND,1990,gdp_per_capita,2087.0,Maddison,False,False
+India,IND,2000,gdp_per_capita,2753.08550705882,Maddison,False,False
+India,IND,1820,gini,32.8,CLIO-INFRA,False,False
+India,IND,1850,gini,38.72911,CLIO-INFRA,False,False
+India,IND,1870,gini,39.84651,CLIO-INFRA,False,False
+India,IND,1890,gini,32.0104,CLIO-INFRA,False,False
+India,IND,1910,gini,31.0778,CLIO-INFRA,False,False
+India,IND,1950,gini,35.24668,CLIO-INFRA,False,False
+India,IND,1960,gini,37.26116,CLIO-INFRA,False,False
+India,IND,1970,gini,39.82518,CLIO-INFRA,False,False
+India,IND,1980,gini,31.24316,CLIO-INFRA,False,False
+India,IND,1990,gini,40.00075,CLIO-INFRA,False,False
+India,IND,2000,gini,47.39511,CLIO-INFRA,False,False
+India,IND,1950,life_expectancy,36.185,CLIO-INFRA,False,False
+India,IND,1960,life_expectancy,43.213,CLIO-INFRA,False,False
+India,IND,1970,life_expectancy,50.566,CLIO-INFRA,False,False
+India,IND,1980,life_expectancy,56.261,CLIO-INFRA,False,False
+India,IND,1990,life_expectancy,59.252,CLIO-INFRA,False,False
+India,IND,2000,life_expectancy,63.095,CLIO-INFRA,False,False
+India,IND,1820,population,209000.0,Maddison,False,False
+India,IND,1830,population,217577.0,Maddison,False,False
+India,IND,1840,population,226505.0,Maddison,False,False
+India,IND,1850,population,235800.0,Maddison,False,False
+India,IND,1860,population,244249.0,Maddison,False,False
+India,IND,1870,population,253000.0,Maddison,False,False
+India,IND,1880,population,257200.0,Maddison,False,False
+India,IND,1890,population,279626.0,Maddison,False,False
+India,IND,1900,population,284500.0,Maddison,False,False
+India,IND,1910,population,302100.0,Maddison,False,False
+India,IND,1920,population,305600.0,Maddison,False,False
+India,IND,1930,population,336400.0,Maddison,False,False
+India,IND,1940,population,386800.0,Maddison,False,False
+India,IND,1950,population,359000.0,Maddison,False,False
+India,IND,1960,population,434000.0,Maddison,False,False
+India,IND,1970,population,541000.0,Maddison,False,False
+India,IND,1980,population,679000.0,Maddison,False,False
+India,IND,1990,population,839000.0,Maddison,False,False
+India,IND,2000,population,1018667.41,Maddison,False,False
+India,IND,1850,urbanization,0.047526714,CLIO-INFRA,True,False
+India,IND,1900,urbanization,0.0518383128,CLIO-INFRA,True,False
+India,IND,1950,urbanization,0.109168245,CLIO-INFRA,True,False
+India,IND,2000,urbanization,0.17011584,CLIO-INFRA,True,False
+Indonesia,IDN,1820,gdp_per_capita,827.0,Maddison,False,False
+Indonesia,IDN,1830,gdp_per_capita,822.0,Maddison,False,False
+Indonesia,IDN,1840,gdp_per_capita,883.0,Maddison,False,False
+Indonesia,IDN,1850,gdp_per_capita,724.0,Maddison,False,False
+Indonesia,IDN,1860,gdp_per_capita,819.0,Maddison,False,False
+Indonesia,IDN,1870,gdp_per_capita,810.0,Maddison,False,False
+Indonesia,IDN,1880,gdp_per_capita,1041.0,Maddison,False,False
+Indonesia,IDN,1890,gdp_per_capita,1030.0,Maddison,False,False
+Indonesia,IDN,1900,gdp_per_capita,1151.0,Maddison,False,False
+Indonesia,IDN,1910,gdp_per_capita,1264.0,Maddison,False,False
+Indonesia,IDN,1920,gdp_per_capita,1409.0,Maddison,False,False
+Indonesia,IDN,1930,gdp_per_capita,1704.0,Maddison,False,False
+Indonesia,IDN,1940,gdp_per_capita,1766.0,Maddison,False,False
+Indonesia,IDN,1950,gdp_per_capita,1280.0,Maddison,False,False
+Indonesia,IDN,1960,gdp_per_capita,1613.0,Maddison,False,False
+Indonesia,IDN,1970,gdp_per_capita,1882.0,Maddison,False,False
+Indonesia,IDN,1980,gdp_per_capita,2981.0,Maddison,False,False
+Indonesia,IDN,1990,gdp_per_capita,4007.0,Maddison,False,False
+Indonesia,IDN,2000,gdp_per_capita,5384.386660454885,Maddison,False,False
+Indonesia,IDN,1820,gini,51.69444,CLIO-INFRA,False,False
+Indonesia,IDN,1850,gini,41.9696,CLIO-INFRA,False,False
+Indonesia,IDN,1870,gini,39.0,CLIO-INFRA,False,False
+Indonesia,IDN,1890,gini,39.0,CLIO-INFRA,False,False
+Indonesia,IDN,1910,gini,42.2,CLIO-INFRA,False,False
+Indonesia,IDN,1950,gini,54.0,CLIO-INFRA,False,False
+Indonesia,IDN,1960,gini,39.98155,CLIO-INFRA,False,False
+Indonesia,IDN,1970,gini,44.0,CLIO-INFRA,False,False
+Indonesia,IDN,1980,gini,40.0,CLIO-INFRA,False,False
+Indonesia,IDN,1990,gini,39.0,CLIO-INFRA,False,False
+Indonesia,IDN,2000,gini,50.0,CLIO-INFRA,False,False
+Indonesia,IDN,1950,life_expectancy,38.252,CLIO-INFRA,False,False
+Indonesia,IDN,1960,life_expectancy,46.8,CLIO-INFRA,False,False
+Indonesia,IDN,1970,life_expectancy,54.065,CLIO-INFRA,False,False
+Indonesia,IDN,1980,life_expectancy,59.916,CLIO-INFRA,False,False
+Indonesia,IDN,1990,life_expectancy,64.503,CLIO-INFRA,False,False
+Indonesia,IDN,2000,life_expectancy,68.099,CLIO-INFRA,False,False
+Indonesia,IDN,1820,population,17927.0,Maddison,False,False
+Indonesia,IDN,1830,population,19473.0,Maddison,False,False
+Indonesia,IDN,1840,population,21153.0,Maddison,False,False
+Indonesia,IDN,1850,population,22977.0,Maddison,False,False
+Indonesia,IDN,1860,population,25779.0,Maddison,False,False
+Indonesia,IDN,1870,population,32743.0,Maddison,False,False
+Indonesia,IDN,1880,population,36203.0,Maddison,False,False
+Indonesia,IDN,1890,population,40532.0,Maddison,False,False
+Indonesia,IDN,1900,population,45100.0,Maddison,False,False
+Indonesia,IDN,1910,population,50034.0,Maddison,False,False
+Indonesia,IDN,1920,population,54993.0,Maddison,False,False
+Indonesia,IDN,1930,population,61805.0,Maddison,False,False
+Indonesia,IDN,1940,population,74376.0,Maddison,False,False
+Indonesia,IDN,1950,population,82611.5269347421,Maddison,False,False
+Indonesia,IDN,1960,population,95960.6889928225,Maddison,False,False
+Indonesia,IDN,1970,population,117338.24512731524,Maddison,False,False
+Indonesia,IDN,1980,population,147489.948,Maddison,False,False
+Indonesia,IDN,1990,population,179323.40999999997,Maddison,False,False
+Indonesia,IDN,2000,population,211407.57,Maddison,False,False
+Ireland,IRL,1870,education_years,2.65,CLIO-INFRA,False,False
+Ireland,IRL,1880,education_years,3.31,CLIO-INFRA,False,False
+Ireland,IRL,1890,education_years,3.89,CLIO-INFRA,False,False
+Ireland,IRL,1900,education_years,4.53,CLIO-INFRA,False,False
+Ireland,IRL,1910,education_years,5.08,CLIO-INFRA,False,False
+Ireland,IRL,1920,education_years,5.88,CLIO-INFRA,False,False
+Ireland,IRL,1930,education_years,6.59,CLIO-INFRA,False,False
+Ireland,IRL,1940,education_years,6.82,CLIO-INFRA,False,False
+Ireland,IRL,1950,education_years,7.13,CLIO-INFRA,False,False
+Ireland,IRL,1960,education_years,7.71,CLIO-INFRA,False,False
+Ireland,IRL,1970,education_years,8.389999,CLIO-INFRA,False,False
+Ireland,IRL,1980,education_years,8.79,CLIO-INFRA,False,False
+Ireland,IRL,1990,education_years,9.52,CLIO-INFRA,False,False
+Ireland,IRL,2000,education_years,10.15,CLIO-INFRA,False,False
+Ireland,IRL,1820,gdp_per_capita,1398.0,Maddison,False,False
+Ireland,IRL,1870,gdp_per_capita,2829.0,Maddison,False,False
+Ireland,IRL,1930,gdp_per_capita,4618.0,Maddison,False,False
+Ireland,IRL,1940,gdp_per_capita,4865.0,Maddison,False,False
+Ireland,IRL,1950,gdp_per_capita,5504.0,Maddison,False,False
+Ireland,IRL,1960,gdp_per_capita,6825.0,Maddison,False,False
+Ireland,IRL,1970,gdp_per_capita,9881.0,Maddison,False,False
+Ireland,IRL,1980,gdp_per_capita,13614.0,Maddison,False,False
+Ireland,IRL,1990,gdp_per_capita,18838.0,Maddison,False,False
+Ireland,IRL,2000,gdp_per_capita,38806.50135741528,Maddison,False,False
+Ireland,IRL,1820,gini,44.58137,CLIO-INFRA,False,False
+Ireland,IRL,1850,gini,29.63404,CLIO-INFRA,False,False
+Ireland,IRL,1870,gini,38.539,CLIO-INFRA,False,False
+Ireland,IRL,1890,gini,33.03146,CLIO-INFRA,False,False
+Ireland,IRL,1910,gini,37.23075,CLIO-INFRA,False,False
+Ireland,IRL,1950,gini,42.80956,CLIO-INFRA,False,False
+Ireland,IRL,1960,gini,52.76013,CLIO-INFRA,False,False
+Ireland,IRL,1970,gini,38.4657,CLIO-INFRA,False,False
+Ireland,IRL,1980,gini,42.76987,CLIO-INFRA,False,False
+Ireland,IRL,1990,gini,39.31427,CLIO-INFRA,False,False
+Ireland,IRL,2000,gini,45.21315,CLIO-INFRA,False,False
+Ireland,IRL,1950,life_expectancy,65.57,CLIO-INFRA,False,False
+Ireland,IRL,1960,life_expectancy,70.17,CLIO-INFRA,False,False
+Ireland,IRL,1970,life_expectancy,70.83,CLIO-INFRA,False,False
+Ireland,IRL,1980,life_expectancy,72.53,CLIO-INFRA,False,False
+Ireland,IRL,1990,life_expectancy,74.85,CLIO-INFRA,False,False
+Ireland,IRL,2000,life_expectancy,76.58,CLIO-INFRA,False,False
+Ireland,IRL,1820,population,7101.0,Maddison,False,False
+Ireland,IRL,1830,population,7827.0,Maddison,False,False
+Ireland,IRL,1840,population,8349.0,Maddison,False,False
+Ireland,IRL,1850,population,6878.0,Maddison,False,False
+Ireland,IRL,1860,population,5821.0,Maddison,False,False
+Ireland,IRL,1870,population,5419.0,Maddison,False,False
+Ireland,IRL,1880,population,5203.0,Maddison,False,False
+Ireland,IRL,1890,population,4718.0,Maddison,False,False
+Ireland,IRL,1900,population,4469.0,Maddison,False,False
+Ireland,IRL,1910,population,4385.0,Maddison,False,False
+Ireland,IRL,1920,population,4361.0,Maddison,False,False
+Ireland,IRL,1930,population,2927.0,Maddison,False,False
+Ireland,IRL,1940,population,2958.0,Maddison,False,False
+Ireland,IRL,1950,population,2963.018,Maddison,False,False
+Ireland,IRL,1960,population,2832.0,Maddison,False,False
+Ireland,IRL,1970,population,2950.1,Maddison,False,False
+Ireland,IRL,1980,population,3401.0,Maddison,False,False
+Ireland,IRL,1990,population,3508.2,Maddison,False,False
+Ireland,IRL,2000,population,3806.64,Maddison,False,False
+Ireland,IRL,1850,urbanization,0.1000290782,CLIO-INFRA,True,False
+Ireland,IRL,1900,urbanization,0.2293577982,CLIO-INFRA,True,False
+Ireland,IRL,1950,urbanization,0.398580096,CLIO-INFRA,True,False
+Ireland,IRL,2000,urbanization,0.37819547,CLIO-INFRA,True,False
+Italy,ITA,1870,education_years,0.84,CLIO-INFRA,False,False
+Italy,ITA,1880,education_years,1.33,CLIO-INFRA,False,False
+Italy,ITA,1890,education_years,1.86,CLIO-INFRA,False,False
+Italy,ITA,1900,education_years,2.38,CLIO-INFRA,False,False
+Italy,ITA,1910,education_years,2.84,CLIO-INFRA,False,False
+Italy,ITA,1920,education_years,3.36,CLIO-INFRA,False,False
+Italy,ITA,1930,education_years,3.94,CLIO-INFRA,False,False
+Italy,ITA,1940,education_years,4.38,CLIO-INFRA,False,False
+Italy,ITA,1950,education_years,4.97,CLIO-INFRA,False,False
+Italy,ITA,1960,education_years,5.52,CLIO-INFRA,False,False
+Italy,ITA,1970,education_years,6.6,CLIO-INFRA,False,False
+Italy,ITA,1980,education_years,7.84,CLIO-INFRA,False,False
+Italy,ITA,1990,education_years,9.09,CLIO-INFRA,False,False
+Italy,ITA,2000,education_years,10.28,CLIO-INFRA,False,False
+Italy,ITA,1820,gdp_per_capita,2522.5723369997195,Maddison,False,False
+Italy,ITA,1830,gdp_per_capita,2513.0331979102248,Maddison,False,False
+Italy,ITA,1840,gdp_per_capita,2513.0331979102257,Maddison,False,False
+Italy,ITA,1850,gdp_per_capita,2540.590710835433,Maddison,False,False
+Italy,ITA,1860,gdp_per_capita,2538.4709021488798,Maddison,False,False
+Italy,ITA,1870,gdp_per_capita,2826.3606557377047,Maddison,False,False
+Italy,ITA,1880,gdp_per_capita,2796.0,Maddison,False,False
+Italy,ITA,1890,gdp_per_capita,2974.0,Maddison,False,False
+Italy,ITA,1900,gdp_per_capita,3264.0,Maddison,False,False
+Italy,ITA,1910,gdp_per_capita,3829.0,Maddison,False,False
+Italy,ITA,1920,gdp_per_capita,3789.0,Maddison,False,False
+Italy,ITA,1930,gdp_per_capita,4631.0,Maddison,False,False
+Italy,ITA,1940,gdp_per_capita,5099.0,Maddison,False,False
+Italy,ITA,1950,gdp_per_capita,5582.0,Maddison,False,False
+Italy,ITA,1960,gdp_per_capita,9430.0,Maddison,False,False
+Italy,ITA,1970,gdp_per_capita,15492.0,Maddison,False,False
+Italy,ITA,1980,gdp_per_capita,20959.0,Maddison,False,False
+Italy,ITA,1990,gdp_per_capita,26003.0,Maddison,False,False
+Italy,ITA,2000,gdp_per_capita,32716.980050789483,Maddison,False,False
+Italy,ITA,1820,gini,53.86328,CLIO-INFRA,False,False
+Italy,ITA,1850,gini,50.53597,CLIO-INFRA,False,False
+Italy,ITA,1870,gini,51.08167,CLIO-INFRA,False,False
+Italy,ITA,1890,gini,45.9799,CLIO-INFRA,False,False
+Italy,ITA,1910,gini,49.18693,CLIO-INFRA,False,False
+Italy,ITA,1950,gini,42.89046,CLIO-INFRA,False,False
+Italy,ITA,1960,gini,44.35305,CLIO-INFRA,False,False
+Italy,ITA,1970,gini,39.04081,CLIO-INFRA,False,False
+Italy,ITA,1980,gini,39.04081,CLIO-INFRA,False,False
+Italy,ITA,1990,gini,32.73008,CLIO-INFRA,False,False
+Italy,ITA,2000,gini,36.72,CLIO-INFRA,False,False
+Italy,ITA,1880,life_expectancy,32.76,CLIO-INFRA,False,False
+Italy,ITA,1890,life_expectancy,38.53,CLIO-INFRA,False,False
+Italy,ITA,1900,life_expectancy,41.67,CLIO-INFRA,False,False
+Italy,ITA,1910,life_expectancy,46.71,CLIO-INFRA,False,False
+Italy,ITA,1920,life_expectancy,45.47,CLIO-INFRA,False,False
+Italy,ITA,1930,life_expectancy,55.16,CLIO-INFRA,False,False
+Italy,ITA,1940,life_expectancy,56.95,CLIO-INFRA,False,False
+Italy,ITA,1950,life_expectancy,65.76,CLIO-INFRA,False,False
+Italy,ITA,1960,life_expectancy,69.19,CLIO-INFRA,False,False
+Italy,ITA,1970,life_expectancy,71.63,CLIO-INFRA,False,False
+Italy,ITA,1980,life_expectancy,74.06,CLIO-INFRA,False,False
+Italy,ITA,1990,life_expectancy,76.98,CLIO-INFRA,False,False
+Italy,ITA,2000,life_expectancy,79.62,CLIO-INFRA,False,False
+Italy,ITA,1820,population,20176.0,Maddison,False,False
+Italy,ITA,1830,population,21513.0,Maddison,False,False
+Italy,ITA,1840,population,22939.0,Maddison,False,False
+Italy,ITA,1850,population,24460.0,Maddison,False,False
+Italy,ITA,1860,population,26081.0,Maddison,False,False
+Italy,ITA,1870,population,27888.0,Maddison,False,False
+Italy,ITA,1880,population,29534.0,Maddison,False,False
+Italy,ITA,1890,population,31702.0,Maddison,False,False
+Italy,ITA,1900,population,33672.0,Maddison,False,False
+Italy,ITA,1910,population,36572.0,Maddison,False,False
+Italy,ITA,1920,population,37398.0,Maddison,False,False
+Italy,ITA,1930,population,40791.0,Maddison,False,False
+Italy,ITA,1940,population,44341.0,Maddison,False,False
+Italy,ITA,1950,population,47105.0,Maddison,False,False
+Italy,ITA,1960,population,50197.6,Maddison,False,False
+Italy,ITA,1970,population,53661.1,Maddison,False,False
+Italy,ITA,1980,population,56451.247,Maddison,False,False
+Italy,ITA,1990,population,56742.886,Maddison,False,False
+Italy,ITA,2000,population,56965.88,Maddison,False,False
+Italy,ITA,1850,urbanization,0.2512264922,CLIO-INFRA,True,False
+Italy,ITA,1900,urbanization,0.3387681159,CLIO-INFRA,True,False
+Italy,ITA,1950,urbanization,0.409171001,CLIO-INFRA,True,False
+Italy,ITA,2000,urbanization,0.40814745,CLIO-INFRA,True,False
+Jamaica,JAM,1870,education_years,0.507,CLIO-INFRA,False,False
+Jamaica,JAM,1880,education_years,0.699,CLIO-INFRA,False,False
+Jamaica,JAM,1890,education_years,1.192,CLIO-INFRA,False,False
+Jamaica,JAM,1900,education_years,1.657,CLIO-INFRA,False,False
+Jamaica,JAM,1910,education_years,2.241,CLIO-INFRA,False,False
+Jamaica,JAM,1920,education_years,2.503,CLIO-INFRA,False,False
+Jamaica,JAM,1930,education_years,2.562,CLIO-INFRA,False,False
+Jamaica,JAM,1940,education_years,2.901,CLIO-INFRA,False,False
+Jamaica,JAM,1950,education_years,3.131,CLIO-INFRA,False,False
+Jamaica,JAM,1960,education_years,4.82,CLIO-INFRA,False,False
+Jamaica,JAM,1970,education_years,5.81,CLIO-INFRA,False,False
+Jamaica,JAM,1980,education_years,7.25,CLIO-INFRA,False,False
+Jamaica,JAM,1990,education_years,8.11,CLIO-INFRA,False,False
+Jamaica,JAM,2000,education_years,8.68,CLIO-INFRA,False,False
+Jamaica,JAM,1820,gdp_per_capita,1117.0,Maddison,False,False
+Jamaica,JAM,1850,gdp_per_capita,867.0,Maddison,False,False
+Jamaica,JAM,1860,gdp_per_capita,856.0,Maddison,False,False
+Jamaica,JAM,1870,gdp_per_capita,845.0,Maddison,False,False
+Jamaica,JAM,1880,gdp_per_capita,864.0,Maddison,False,False
+Jamaica,JAM,1890,gdp_per_capita,881.0,Maddison,False,False
+Jamaica,JAM,1900,gdp_per_capita,926.0,Maddison,False,False
+Jamaica,JAM,1950,gdp_per_capita,2115.0,Maddison,False,False
+Jamaica,JAM,1960,gdp_per_capita,4230.0,Maddison,False,False
+Jamaica,JAM,1970,gdp_per_capita,6135.0,Maddison,False,False
+Jamaica,JAM,1980,gdp_per_capita,4975.0,Maddison,False,False
+Jamaica,JAM,1990,gdp_per_capita,6035.0,Maddison,False,False
+Jamaica,JAM,2000,gdp_per_capita,6531.284758137969,Maddison,False,False
+Jamaica,JAM,1890,gini,39.10361,CLIO-INFRA,False,False
+Jamaica,JAM,1910,gini,38.41033,CLIO-INFRA,False,False
+Jamaica,JAM,1960,gini,41.45165,CLIO-INFRA,False,False
+Jamaica,JAM,1970,gini,33.02914,CLIO-INFRA,False,False
+Jamaica,JAM,1980,gini,33.09146,CLIO-INFRA,False,False
+Jamaica,JAM,1990,gini,42.75909,CLIO-INFRA,False,False
+Jamaica,JAM,2000,gini,43.24268,CLIO-INFRA,False,False
+Jamaica,JAM,1890,life_expectancy,34.3,CLIO-INFRA,False,False
+Jamaica,JAM,1900,life_expectancy,37.8,CLIO-INFRA,False,False
+Jamaica,JAM,1910,life_expectancy,36.7,CLIO-INFRA,False,False
+Jamaica,JAM,1920,life_expectancy,35.4,CLIO-INFRA,False,False
+Jamaica,JAM,1930,life_expectancy,45.3,CLIO-INFRA,False,False
+Jamaica,JAM,1940,life_expectancy,47.6,CLIO-INFRA,False,False
+Jamaica,JAM,1950,life_expectancy,58.512,CLIO-INFRA,False,False
+Jamaica,JAM,1960,life_expectancy,65.604,CLIO-INFRA,False,False
+Jamaica,JAM,1970,life_expectancy,68.884,CLIO-INFRA,False,False
+Jamaica,JAM,1980,life_expectancy,71.012,CLIO-INFRA,False,False
+Jamaica,JAM,1990,life_expectancy,70.444,CLIO-INFRA,False,False
+Jamaica,JAM,2000,life_expectancy,70.846,CLIO-INFRA,False,False
+Jamaica,JAM,1820,population,401.0,Maddison,False,False
+Jamaica,JAM,1840,population,377.0,CLIO-INFRA,False,False
+Jamaica,JAM,1850,population,399.0,Maddison,False,False
+Jamaica,JAM,1860,population,441.0,CLIO-INFRA,False,False
+Jamaica,JAM,1870,population,499.0,Maddison,False,False
+Jamaica,JAM,1880,population,581.0,CLIO-INFRA,False,False
+Jamaica,JAM,1890,population,639.0,CLIO-INFRA,False,False
+Jamaica,JAM,1900,population,720.0,Maddison,False,False
+Jamaica,JAM,1910,population,808.0,Maddison,False,False
+Jamaica,JAM,1920,population,855.0,Maddison,False,False
+Jamaica,JAM,1930,population,1009.0,Maddison,False,False
+Jamaica,JAM,1940,population,1212.0,Maddison,False,False
+Jamaica,JAM,1950,population,1384.55,Maddison,False,False
+Jamaica,JAM,1960,population,1631.784,Maddison,False,False
+Jamaica,JAM,1970,population,1943.787,Maddison,False,False
+Jamaica,JAM,1980,population,2228.803,Maddison,False,False
+Jamaica,JAM,1990,population,2347.922,Maddison,False,False
+Jamaica,JAM,2000,population,2670.45,Maddison,False,False
+Jamaica,JAM,1850,urbanization,0.0927318296,CLIO-INFRA,True,False
+Jamaica,JAM,1900,urbanization,0.0722222222,CLIO-INFRA,True,False
+Jamaica,JAM,1950,urbanization,0.21451013,CLIO-INFRA,True,False
+Jamaica,JAM,2000,urbanization,0.28560865,CLIO-INFRA,True,False
+Japan,JPN,1870,education_years,0.97,CLIO-INFRA,False,False
+Japan,JPN,1880,education_years,1.13,CLIO-INFRA,False,False
+Japan,JPN,1890,education_years,1.54,CLIO-INFRA,False,False
+Japan,JPN,1900,education_years,2.18,CLIO-INFRA,False,False
+Japan,JPN,1910,education_years,2.88,CLIO-INFRA,False,False
+Japan,JPN,1920,education_years,3.86,CLIO-INFRA,False,False
+Japan,JPN,1930,education_years,4.95,CLIO-INFRA,False,False
+Japan,JPN,1940,education_years,5.83,CLIO-INFRA,False,False
+Japan,JPN,1950,education_years,6.75,CLIO-INFRA,False,False
+Japan,JPN,1960,education_years,8.63,CLIO-INFRA,False,False
+Japan,JPN,1970,education_years,10.14,CLIO-INFRA,False,False
+Japan,JPN,1980,education_years,11.04,CLIO-INFRA,False,False
+Japan,JPN,1990,education_years,11.84,CLIO-INFRA,False,False
+Japan,JPN,2000,education_years,12.69,CLIO-INFRA,False,False
+Japan,JPN,1820,gdp_per_capita,1317.0,Maddison,False,False
+Japan,JPN,1850,gdp_per_capita,1436.0,Maddison,False,False
+Japan,JPN,1870,gdp_per_capita,1580.0,Maddison,False,False
+Japan,JPN,1890,gdp_per_capita,1853.57544798,Maddison,False,False
+Japan,JPN,1900,gdp_per_capita,2123.25060819,Maddison,False,False
+Japan,JPN,1910,gdp_per_capita,2316.97590609,Maddison,False,False
+Japan,JPN,1920,gdp_per_capita,2973.9622842900003,Maddison,False,False
+Japan,JPN,1930,gdp_per_capita,3334.10818374,Maddison,False,False
+Japan,JPN,1940,gdp_per_capita,4882.39852782,Maddison,False,False
+Japan,JPN,1950,gdp_per_capita,3062.0,Maddison,False,False
+Japan,JPN,1960,gdp_per_capita,6354.0,Maddison,False,False
+Japan,JPN,1970,gdp_per_capita,15484.0,Maddison,False,False
+Japan,JPN,1980,gdp_per_capita,21404.0,Maddison,False,False
+Japan,JPN,1990,gdp_per_capita,29949.0,Maddison,False,False
+Japan,JPN,2000,gdp_per_capita,33210.80781599041,Maddison,False,False
+Japan,JPN,1820,gini,53.15753,CLIO-INFRA,False,False
+Japan,JPN,1850,gini,45.76564,CLIO-INFRA,False,False
+Japan,JPN,1870,gini,45.96279,CLIO-INFRA,False,False
+Japan,JPN,1890,gini,47.35887,CLIO-INFRA,False,False
+Japan,JPN,1910,gini,52.30033,CLIO-INFRA,False,False
+Japan,JPN,1950,gini,35.8995,CLIO-INFRA,False,False
+Japan,JPN,1960,gini,38.14407,CLIO-INFRA,False,False
+Japan,JPN,1970,gini,34.87896,CLIO-INFRA,False,False
+Japan,JPN,1980,gini,37.23724,CLIO-INFRA,False,False
+Japan,JPN,1990,gini,35.9,CLIO-INFRA,False,False
+Japan,JPN,2000,gini,33.2732,CLIO-INFRA,False,False
+Japan,JPN,1870,life_expectancy,36.59264,CLIO-INFRA,False,False
+Japan,JPN,1880,life_expectancy,37.03648,CLIO-INFRA,False,False
+Japan,JPN,1890,life_expectancy,37.67568,CLIO-INFRA,False,False
+Japan,JPN,1900,life_expectancy,38.6,CLIO-INFRA,False,False
+Japan,JPN,1910,life_expectancy,39.9736,CLIO-INFRA,False,False
+Japan,JPN,1920,life_expectancy,42.04432,CLIO-INFRA,False,False
+Japan,JPN,1950,life_expectancy,59.24,CLIO-INFRA,False,False
+Japan,JPN,1960,life_expectancy,67.7,CLIO-INFRA,False,False
+Japan,JPN,1970,life_expectancy,71.98,CLIO-INFRA,False,False
+Japan,JPN,1980,life_expectancy,76.12,CLIO-INFRA,False,False
+Japan,JPN,1990,life_expectancy,78.98,CLIO-INFRA,False,False
+Japan,JPN,2000,life_expectancy,81.23,CLIO-INFRA,False,False
+Japan,JPN,1820,population,31000.0,Maddison,False,False
+Japan,JPN,1830,population,31330.0,Maddison,False,False
+Japan,JPN,1840,population,31663.0,Maddison,False,False
+Japan,JPN,1850,population,32000.0,Maddison,False,False
+Japan,JPN,1860,population,33196.0,Maddison,False,False
+Japan,JPN,1870,population,34437.0,Maddison,False,False
+Japan,JPN,1880,population,36807.0,Maddison,False,False
+Japan,JPN,1890,population,40077.0,Maddison,False,False
+Japan,JPN,1900,population,44103.0,Maddison,False,False
+Japan,JPN,1910,population,49518.0,Maddison,False,False
+Japan,JPN,1920,population,55818.0,Maddison,False,False
+Japan,JPN,1930,population,64203.0,Maddison,False,False
+Japan,JPN,1940,population,72967.0,Maddison,False,False
+Japan,JPN,1950,population,83805.0,Maddison,False,False
+Japan,JPN,1960,population,94091.638,Maddison,False,False
+Japan,JPN,1970,population,104344.973,Maddison,False,False
+Japan,JPN,1980,population,116807.309,Maddison,False,False
+Japan,JPN,1990,population,123537.399,Maddison,False,False
+Japan,JPN,2000,population,126755.48,Maddison,False,False
+Japan,JPN,1850,urbanization,0.176475,CLIO-INFRA,True,False
+Japan,JPN,1900,urbanization,0.1628596694,CLIO-INFRA,True,False
+Japan,JPN,1950,urbanization,0.366617744,CLIO-INFRA,True,False
+Japan,JPN,2000,urbanization,0.61540906,CLIO-INFRA,True,False
+Mexico,MEX,1870,education_years,0.56,CLIO-INFRA,False,False
+Mexico,MEX,1880,education_years,0.74,CLIO-INFRA,False,False
+Mexico,MEX,1890,education_years,0.91,CLIO-INFRA,False,False
+Mexico,MEX,1900,education_years,1.09,CLIO-INFRA,False,False
+Mexico,MEX,1910,education_years,1.26,CLIO-INFRA,False,False
+Mexico,MEX,1920,education_years,1.36,CLIO-INFRA,False,False
+Mexico,MEX,1930,education_years,1.52,CLIO-INFRA,False,False
+Mexico,MEX,1940,education_years,1.92,CLIO-INFRA,False,False
+Mexico,MEX,1950,education_years,2.54,CLIO-INFRA,False,False
+Mexico,MEX,1960,education_years,3.42,CLIO-INFRA,False,False
+Mexico,MEX,1970,education_years,4.39,CLIO-INFRA,False,False
+Mexico,MEX,1980,education_years,5.52,CLIO-INFRA,False,False
+Mexico,MEX,1990,education_years,6.92,CLIO-INFRA,False,False
+Mexico,MEX,2000,education_years,8.030001,CLIO-INFRA,False,False
+Mexico,MEX,1820,gdp_per_capita,1007.0,Maddison,False,False
+Mexico,MEX,1850,gdp_per_capita,1054.0,Maddison,False,False
+Mexico,MEX,1860,gdp_per_capita,921.0,Maddison,False,False
+Mexico,MEX,1870,gdp_per_capita,1046.0,Maddison,False,False
+Mexico,MEX,1890,gdp_per_capita,1568.0,Maddison,False,False
+Mexico,MEX,1900,gdp_per_capita,1822.0,Maddison,False,False
+Mexico,MEX,1910,gdp_per_capita,2240.0,Maddison,False,False
+Mexico,MEX,1920,gdp_per_capita,2552.0,Maddison,False,False
+Mexico,MEX,1930,gdp_per_capita,2233.0,Maddison,False,False
+Mexico,MEX,1940,gdp_per_capita,2560.0,Maddison,False,False
+Mexico,MEX,1950,gdp_per_capita,3510.0,Maddison,False,False
+Mexico,MEX,1960,gdp_per_capita,4723.0,Maddison,False,False
+Mexico,MEX,1970,gdp_per_capita,6873.0,Maddison,False,False
+Mexico,MEX,1980,gdp_per_capita,9929.0,Maddison,False,False
+Mexico,MEX,1990,gdp_per_capita,9699.0,Maddison,False,False
+Mexico,MEX,2000,gdp_per_capita,12613.396051909382,Maddison,False,False
+Mexico,MEX,1820,gini,40.11364,CLIO-INFRA,False,False
+Mexico,MEX,1850,gini,31.6158,CLIO-INFRA,False,False
+Mexico,MEX,1870,gini,51.09478,CLIO-INFRA,False,False
+Mexico,MEX,1890,gini,43.82773,CLIO-INFRA,False,False
+Mexico,MEX,1910,gini,51.40618,CLIO-INFRA,False,False
+Mexico,MEX,1950,gini,52.21711,CLIO-INFRA,False,False
+Mexico,MEX,1960,gini,52.58173,CLIO-INFRA,False,False
+Mexico,MEX,1970,gini,56.0522,CLIO-INFRA,False,False
+Mexico,MEX,1980,gini,51.22181,CLIO-INFRA,False,False
+Mexico,MEX,1990,gini,48.44877,CLIO-INFRA,False,False
+Mexico,MEX,2000,gini,46.76,CLIO-INFRA,False,False
+Mexico,MEX,1900,life_expectancy,25.0,CLIO-INFRA,False,False
+Mexico,MEX,1910,life_expectancy,28.0,CLIO-INFRA,False,False
+Mexico,MEX,1920,life_expectancy,34.0,CLIO-INFRA,False,False
+Mexico,MEX,1930,life_expectancy,34.0,CLIO-INFRA,False,False
+Mexico,MEX,1940,life_expectancy,39.0,CLIO-INFRA,False,False
+Mexico,MEX,1950,life_expectancy,50.694,CLIO-INFRA,False,False
+Mexico,MEX,1960,life_expectancy,57.5,CLIO-INFRA,False,False
+Mexico,MEX,1970,life_expectancy,60.9,CLIO-INFRA,False,False
+Mexico,MEX,1980,life_expectancy,67.2,CLIO-INFRA,False,False
+Mexico,MEX,1990,life_expectancy,70.5,CLIO-INFRA,False,False
+Mexico,MEX,2000,life_expectancy,73.3,CLIO-INFRA,False,False
+Mexico,MEX,1820,population,6587.0,Maddison,False,False
+Mexico,MEX,1830,population,6382.0,CLIO-INFRA,False,False
+Mexico,MEX,1840,population,7044.0,CLIO-INFRA,False,False
+Mexico,MEX,1850,population,7662.0,Maddison,False,False
+Mexico,MEX,1860,population,8816.0,CLIO-INFRA,False,False
+Mexico,MEX,1870,population,9219.0,Maddison,False,False
+Mexico,MEX,1880,population,10399.0,Maddison,False,False
+Mexico,MEX,1890,population,11729.0,Maddison,False,False
+Mexico,MEX,1900,population,13607.0,Maddison,False,False
+Mexico,MEX,1910,population,15000.0,Maddison,False,False
+Mexico,MEX,1920,population,14900.0,Maddison,False,False
+Mexico,MEX,1930,population,17175.0,Maddison,False,False
+Mexico,MEX,1940,population,20393.0,Maddison,False,False
+Mexico,MEX,1950,population,28485.18,Maddison,False,False
+Mexico,MEX,1960,population,38578.505,Maddison,False,False
+Mexico,MEX,1970,population,52775.158,Maddison,False,False
+Mexico,MEX,1980,population,68347.479,Maddison,False,False
+Mexico,MEX,1990,population,84913.652,Maddison,False,False
+Mexico,MEX,2000,population,98402.89,Maddison,False,False
+Mexico,MEX,1850,urbanization,0.1506395197,CLIO-INFRA,True,False
+Mexico,MEX,1900,urbanization,0.1662232674,CLIO-INFRA,True,False
+Mexico,MEX,1950,urbanization,0.358972631,CLIO-INFRA,True,False
+Mexico,MEX,2000,urbanization,0.54883273,CLIO-INFRA,True,False
+Netherlands,NLD,1820,education_years,2.0,CLIO-INFRA,False,False
+Netherlands,NLD,1830,education_years,2.0,CLIO-INFRA,False,False
+Netherlands,NLD,1840,education_years,2.5,CLIO-INFRA,False,False
+Netherlands,NLD,1850,education_years,3.0,CLIO-INFRA,False,False
+Netherlands,NLD,1860,education_years,4.0,CLIO-INFRA,False,False
+Netherlands,NLD,1870,education_years,5.09,CLIO-INFRA,False,False
+Netherlands,NLD,1880,education_years,5.25,CLIO-INFRA,False,False
+Netherlands,NLD,1890,education_years,5.42,CLIO-INFRA,False,False
+Netherlands,NLD,1900,education_years,5.6,CLIO-INFRA,False,False
+Netherlands,NLD,1910,education_years,5.82,CLIO-INFRA,False,False
+Netherlands,NLD,1920,education_years,6.09,CLIO-INFRA,False,False
+Netherlands,NLD,1930,education_years,6.37,CLIO-INFRA,False,False
+Netherlands,NLD,1940,education_years,6.76,CLIO-INFRA,False,False
+Netherlands,NLD,1950,education_years,7.1,CLIO-INFRA,False,False
+Netherlands,NLD,1960,education_years,8.0,CLIO-INFRA,False,False
+Netherlands,NLD,1970,education_years,9.02,CLIO-INFRA,False,False
+Netherlands,NLD,1980,education_years,10.01,CLIO-INFRA,False,False
+Netherlands,NLD,1990,education_years,10.66,CLIO-INFRA,False,False
+Netherlands,NLD,2000,education_years,11.28,CLIO-INFRA,False,False
+Netherlands,NLD,1820,gdp_per_capita,3006.0,Maddison,False,False
+Netherlands,NLD,1830,gdp_per_capita,3038.0,Maddison,False,False
+Netherlands,NLD,1840,gdp_per_capita,3623.0,Maddison,False,False
+Netherlands,NLD,1850,gdp_per_capita,3779.0,Maddison,False,False
+Netherlands,NLD,1860,gdp_per_capita,3840.0,Maddison,False,False
+Netherlands,NLD,1870,gdp_per_capita,4422.0,Maddison,False,False
+Netherlands,NLD,1880,gdp_per_capita,4666.0,Maddison,False,False
+Netherlands,NLD,1890,gdp_per_capita,5078.0,Maddison,False,False
+Netherlands,NLD,1900,gdp_per_capita,5306.0,Maddison,False,False
+Netherlands,NLD,1910,gdp_per_capita,6030.0,Maddison,False,False
+Netherlands,NLD,1920,gdp_per_capita,6727.0,Maddison,False,False
+Netherlands,NLD,1930,gdp_per_capita,8931.0,Maddison,False,False
+Netherlands,NLD,1940,gdp_per_capita,7701.0,Maddison,False,False
+Netherlands,NLD,1950,gdp_per_capita,9558.0,Maddison,False,False
+Netherlands,NLD,1960,gdp_per_capita,13209.0,Maddison,False,False
+Netherlands,NLD,1970,gdp_per_capita,19075.0,Maddison,False,False
+Netherlands,NLD,1980,gdp_per_capita,23438.0,Maddison,False,False
+Netherlands,NLD,1990,gdp_per_capita,27515.0,Maddison,False,False
+Netherlands,NLD,2000,gdp_per_capita,37899.95037765948,Maddison,False,False
+Netherlands,NLD,1820,gini,56.33,CLIO-INFRA,False,False
+Netherlands,NLD,1850,gini,48.49462,CLIO-INFRA,False,False
+Netherlands,NLD,1870,gini,56.5,CLIO-INFRA,False,False
+Netherlands,NLD,1890,gini,42.26006,CLIO-INFRA,False,False
+Netherlands,NLD,1910,gini,47.14907,CLIO-INFRA,False,False
+Netherlands,NLD,1950,gini,35.90169,CLIO-INFRA,False,False
+Netherlands,NLD,1960,gini,44.88617,CLIO-INFRA,False,False
+Netherlands,NLD,1970,gini,35.90169,CLIO-INFRA,False,False
+Netherlands,NLD,1980,gini,29.8,CLIO-INFRA,False,False
+Netherlands,NLD,1990,gini,32.2,CLIO-INFRA,False,False
+Netherlands,NLD,2000,gini,32.0505,CLIO-INFRA,False,False
+Netherlands,NLD,1850,life_expectancy,39.84,CLIO-INFRA,False,False
+Netherlands,NLD,1860,life_expectancy,36.92,CLIO-INFRA,False,False
+Netherlands,NLD,1870,life_expectancy,37.32,CLIO-INFRA,False,False
+Netherlands,NLD,1880,life_expectancy,40.34,CLIO-INFRA,False,False
+Netherlands,NLD,1890,life_expectancy,44.36,CLIO-INFRA,False,False
+Netherlands,NLD,1900,life_expectancy,48.38,CLIO-INFRA,False,False
+Netherlands,NLD,1910,life_expectancy,55.1,CLIO-INFRA,False,False
+Netherlands,NLD,1920,life_expectancy,57.79,CLIO-INFRA,False,False
+Netherlands,NLD,1930,life_expectancy,64.67,CLIO-INFRA,False,False
+Netherlands,NLD,1940,life_expectancy,65.4,CLIO-INFRA,False,False
+Netherlands,NLD,1950,life_expectancy,71.44,CLIO-INFRA,False,False
+Netherlands,NLD,1960,life_expectancy,73.36,CLIO-INFRA,False,False
+Netherlands,NLD,1970,life_expectancy,73.62,CLIO-INFRA,False,False
+Netherlands,NLD,1980,life_expectancy,75.77,CLIO-INFRA,False,False
+Netherlands,NLD,1990,life_expectancy,77.0,CLIO-INFRA,False,False
+Netherlands,NLD,2000,life_expectancy,78.12,CLIO-INFRA,False,False
+Netherlands,NLD,1820,population,2333.0,Maddison,False,False
+Netherlands,NLD,1830,population,2633.0,Maddison,False,False
+Netherlands,NLD,1840,population,2886.0,Maddison,False,False
+Netherlands,NLD,1850,population,3098.0,Maddison,False,False
+Netherlands,NLD,1860,population,3318.0,Maddison,False,False
+Netherlands,NLD,1870,population,3610.0,Maddison,False,False
+Netherlands,NLD,1880,population,4043.0,Maddison,False,False
+Netherlands,NLD,1890,population,4535.0,Maddison,False,False
+Netherlands,NLD,1900,population,5142.0,Maddison,False,False
+Netherlands,NLD,1910,population,5922.0,Maddison,False,False
+Netherlands,NLD,1920,population,6848.0,Maddison,False,False
+Netherlands,NLD,1930,population,7884.0,Maddison,False,False
+Netherlands,NLD,1940,population,8879.0,Maddison,False,False
+Netherlands,NLD,1950,population,10113.527,Maddison,False,False
+Netherlands,NLD,1960,population,11486.0,Maddison,False,False
+Netherlands,NLD,1970,population,13032.335,Maddison,False,False
+Netherlands,NLD,1980,population,14143.901,Maddison,False,False
+Netherlands,NLD,1990,population,14951.51,Maddison,False,False
+Netherlands,NLD,2000,population,15931.5,Maddison,False,False
+Netherlands,NLD,1850,urbanization,0.3398967076,CLIO-INFRA,True,False
+Netherlands,NLD,1900,urbanization,0.4529366005,CLIO-INFRA,True,False
+Netherlands,NLD,1950,urbanization,0.394165161,CLIO-INFRA,True,False
+Netherlands,NLD,2000,urbanization,0.41256353,CLIO-INFRA,True,False
+Norway,NOR,1850,education_years,5.6945325,CLIO-INFRA,False,False
+Norway,NOR,1860,education_years,5.5766652,CLIO-INFRA,False,False
+Norway,NOR,1870,education_years,5.68,CLIO-INFRA,False,False
+Norway,NOR,1880,education_years,5.66,CLIO-INFRA,False,False
+Norway,NOR,1890,education_years,5.71,CLIO-INFRA,False,False
+Norway,NOR,1900,education_years,5.77,CLIO-INFRA,False,False
+Norway,NOR,1910,education_years,5.98,CLIO-INFRA,False,False
+Norway,NOR,1920,education_years,6.26,CLIO-INFRA,False,False
+Norway,NOR,1930,education_years,6.48,CLIO-INFRA,False,False
+Norway,NOR,1940,education_years,6.95,CLIO-INFRA,False,False
+Norway,NOR,1950,education_years,7.55,CLIO-INFRA,False,False
+Norway,NOR,1960,education_years,8.83,CLIO-INFRA,False,False
+Norway,NOR,1970,education_years,10.04,CLIO-INFRA,False,False
+Norway,NOR,1980,education_years,11.3,CLIO-INFRA,False,False
+Norway,NOR,1990,education_years,12.1,CLIO-INFRA,False,False
+Norway,NOR,2000,education_years,12.41,CLIO-INFRA,False,False
+Norway,NOR,1820,gdp_per_capita,1384.0,Maddison,False,False
+Norway,NOR,1830,gdp_per_capita,1441.0,Maddison,False,False
+Norway,NOR,1840,gdp_per_capita,1607.0,Maddison,False,False
+Norway,NOR,1850,gdp_per_capita,1623.0,Maddison,False,False
+Norway,NOR,1860,gdp_per_capita,1887.0,Maddison,False,False
+Norway,NOR,1870,gdp_per_capita,2177.0,Maddison,False,False
+Norway,NOR,1880,gdp_per_capita,2503.0,Maddison,False,False
+Norway,NOR,1890,gdp_per_capita,2769.0,Maddison,False,False
+Norway,NOR,1900,gdp_per_capita,3249.0,Maddison,False,False
+Norway,NOR,1910,gdp_per_capita,3826.0,Maddison,False,False
+Norway,NOR,1920,gdp_per_capita,4739.0,Maddison,False,False
+Norway,NOR,1930,gdp_per_capita,5781.0,Maddison,False,False
+Norway,NOR,1940,gdp_per_capita,6437.0,Maddison,False,False
+Norway,NOR,1950,gdp_per_capita,8655.0,Maddison,False,False
+Norway,NOR,1960,gdp_per_capita,11483.0,Maddison,False,False
+Norway,NOR,1970,gdp_per_capita,15983.0,Maddison,False,False
+Norway,NOR,1980,gdp_per_capita,24031.0,Maddison,False,False
+Norway,NOR,1990,gdp_per_capita,29434.0,Maddison,False,False
+Norway,NOR,2000,gdp_per_capita,54039.960727798505,Maddison,False,False
+Norway,NOR,1820,gini,43.73409,CLIO-INFRA,False,False
+Norway,NOR,1850,gini,39.48906,CLIO-INFRA,False,False
+Norway,NOR,1870,gini,47.6508,CLIO-INFRA,False,False
+Norway,NOR,1890,gini,36.78618,CLIO-INFRA,False,False
+Norway,NOR,1910,gini,40.23464,CLIO-INFRA,False,False
+Norway,NOR,1950,gini,35.61075,CLIO-INFRA,False,False
+Norway,NOR,1960,gini,35.16342,CLIO-INFRA,False,False
+Norway,NOR,1970,gini,32.79832,CLIO-INFRA,False,False
+Norway,NOR,1980,gini,29.85474,CLIO-INFRA,False,False
+Norway,NOR,1990,gini,31.64663,CLIO-INFRA,False,False
+Norway,NOR,2000,gini,30.50294,CLIO-INFRA,False,False
+Norway,NOR,1850,life_expectancy,49.51,CLIO-INFRA,False,False
+Norway,NOR,1860,life_expectancy,49.98,CLIO-INFRA,False,False
+Norway,NOR,1870,life_expectancy,50.85,CLIO-INFRA,False,False
+Norway,NOR,1880,life_expectancy,51.89,CLIO-INFRA,False,False
+Norway,NOR,1890,life_expectancy,48.61,CLIO-INFRA,False,False
+Norway,NOR,1900,life_expectancy,53.47,CLIO-INFRA,False,False
+Norway,NOR,1910,life_expectancy,57.99,CLIO-INFRA,False,False
+Norway,NOR,1920,life_expectancy,58.86,CLIO-INFRA,False,False
+Norway,NOR,1930,life_expectancy,64.1,CLIO-INFRA,False,False
+Norway,NOR,1940,life_expectancy,65.88,CLIO-INFRA,False,False
+Norway,NOR,1950,life_expectancy,71.58,CLIO-INFRA,False,False
+Norway,NOR,1960,life_expectancy,73.57,CLIO-INFRA,False,False
+Norway,NOR,1970,life_expectancy,74.07,CLIO-INFRA,False,False
+Norway,NOR,1980,life_expectancy,75.62,CLIO-INFRA,False,False
+Norway,NOR,1990,life_expectancy,76.33,CLIO-INFRA,False,False
+Norway,NOR,2000,life_expectancy,78.69,CLIO-INFRA,False,False
+Norway,NOR,1820,population,970.0,Maddison,False,False
+Norway,NOR,1830,population,1124.0,Maddison,False,False
+Norway,NOR,1840,population,1241.0,Maddison,False,False
+Norway,NOR,1850,population,1392.0,Maddison,False,False
+Norway,NOR,1860,population,1596.0,Maddison,False,False
+Norway,NOR,1870,population,1735.0,Maddison,False,False
+Norway,NOR,1880,population,1919.0,Maddison,False,False
+Norway,NOR,1890,population,1997.0,Maddison,False,False
+Norway,NOR,1900,population,2230.0,Maddison,False,False
+Norway,NOR,1910,population,2384.0,Maddison,False,False
+Norway,NOR,1920,population,2635.0,Maddison,False,False
+Norway,NOR,1930,population,2807.0,Maddison,False,False
+Norway,NOR,1940,population,2973.0,Maddison,False,False
+Norway,NOR,1950,population,3265.126,Maddison,False,False
+Norway,NOR,1960,population,3581.239,Maddison,False,False
+Norway,NOR,1970,population,3877.386,Maddison,False,False
+Norway,NOR,1980,population,4085.62,Maddison,False,False
+Norway,NOR,1990,population,4242.006,Maddison,False,False
+Norway,NOR,2000,population,4492.07,Maddison,False,False
+Norway,NOR,1850,urbanization,0.0768678161,CLIO-INFRA,True,False
+Norway,NOR,1900,urbanization,0.1412556054,CLIO-INFRA,True,False
+Norway,NOR,1950,urbanization,0.256039124,CLIO-INFRA,True,False
+Norway,NOR,2000,urbanization,0.29026801,CLIO-INFRA,True,False
+Peru,PER,1870,education_years,0.28,CLIO-INFRA,False,False
+Peru,PER,1880,education_years,0.35,CLIO-INFRA,False,False
+Peru,PER,1890,education_years,0.42,CLIO-INFRA,False,False
+Peru,PER,1900,education_years,0.48,CLIO-INFRA,False,False
+Peru,PER,1910,education_years,0.63,CLIO-INFRA,False,False
+Peru,PER,1920,education_years,1.16,CLIO-INFRA,False,False
+Peru,PER,1930,education_years,1.7,CLIO-INFRA,False,False
+Peru,PER,1940,education_years,1.89,CLIO-INFRA,False,False
+Peru,PER,1950,education_years,2.58,CLIO-INFRA,False,False
+Peru,PER,1960,education_years,3.12,CLIO-INFRA,False,False
+Peru,PER,1970,education_years,4.32,CLIO-INFRA,False,False
+Peru,PER,1980,education_years,5.79,CLIO-INFRA,False,False
+Peru,PER,1990,education_years,7.22,CLIO-INFRA,False,False
+Peru,PER,2000,education_years,8.34,CLIO-INFRA,False,False
+Peru,PER,1820,gdp_per_capita,835.0,Maddison,False,False
+Peru,PER,1830,gdp_per_capita,669.0,Maddison,False,False
+Peru,PER,1840,gdp_per_capita,829.0,Maddison,False,False
+Peru,PER,1850,gdp_per_capita,945.0,Maddison,False,False
+Peru,PER,1860,gdp_per_capita,1313.0,Maddison,False,False
+Peru,PER,1870,gdp_per_capita,1675.0,Maddison,False,False
+Peru,PER,1880,gdp_per_capita,859.0,Maddison,False,False
+Peru,PER,1890,gdp_per_capita,846.0,Maddison,False,False
+Peru,PER,1900,gdp_per_capita,1084.0,Maddison,False,False
+Peru,PER,1910,gdp_per_capita,1564.0,Maddison,False,False
+Peru,PER,1920,gdp_per_capita,1954.0,Maddison,False,False
+Peru,PER,1930,gdp_per_capita,2651.0,Maddison,False,False
+Peru,PER,1940,gdp_per_capita,3046.0,Maddison,False,False
+Peru,PER,1950,gdp_per_capita,3679.0,Maddison,False,False
+Peru,PER,1960,gdp_per_capita,4733.0,Maddison,False,False
+Peru,PER,1970,gdp_per_capita,6143.0,Maddison,False,False
+Peru,PER,1980,gdp_per_capita,6795.0,Maddison,False,False
+Peru,PER,1990,gdp_per_capita,4795.0,Maddison,False,False
+Peru,PER,2000,gdp_per_capita,6038.244426976612,Maddison,False,False
+Peru,PER,1820,gini,57.39507,CLIO-INFRA,False,False
+Peru,PER,1850,gini,45.09157,CLIO-INFRA,False,False
+Peru,PER,1870,gini,53.40365,CLIO-INFRA,False,False
+Peru,PER,1890,gini,41.67236,CLIO-INFRA,False,False
+Peru,PER,1910,gini,39.20093,CLIO-INFRA,False,False
+Peru,PER,1950,gini,47.06943,CLIO-INFRA,False,False
+Peru,PER,1960,gini,63.95442,CLIO-INFRA,False,False
+Peru,PER,1970,gini,55.0,CLIO-INFRA,False,False
+Peru,PER,1980,gini,52.39062,CLIO-INFRA,False,False
+Peru,PER,1990,gini,46.43,CLIO-INFRA,False,False
+Peru,PER,2000,gini,50.55,CLIO-INFRA,False,False
+Peru,PER,1940,life_expectancy,37.0,CLIO-INFRA,False,False
+Peru,PER,1950,life_expectancy,43.903,CLIO-INFRA,False,False
+Peru,PER,1960,life_expectancy,49.116,CLIO-INFRA,False,False
+Peru,PER,1970,life_expectancy,55.517,CLIO-INFRA,False,False
+Peru,PER,1980,life_expectancy,61.544,CLIO-INFRA,False,False
+Peru,PER,1990,life_expectancy,66.747,CLIO-INFRA,False,False
+Peru,PER,2000,life_expectancy,71.596,CLIO-INFRA,False,False
+Peru,PER,1820,population,1317.0,Maddison,False,False
+Peru,PER,1830,population,1374.0,CLIO-INFRA,False,False
+Peru,PER,1850,population,2001.0,Maddison,False,False
+Peru,PER,1860,population,2488.0,CLIO-INFRA,False,False
+Peru,PER,1870,population,2606.0,Maddison,False,False
+Peru,PER,1890,population,3346.0,Maddison,False,False
+Peru,PER,1900,population,3648.0,Maddison,False,False
+Peru,PER,1910,population,4137.0,Maddison,False,False
+Peru,PER,1920,population,4690.0,Maddison,False,False
+Peru,PER,1930,population,5480.0,Maddison,False,False
+Peru,PER,1940,population,6440.0,Maddison,False,False
+Peru,PER,1950,population,7632.5,Maddison,False,False
+Peru,PER,1960,population,9931.0,Maddison,False,False
+Peru,PER,1970,population,13192.8,Maddison,False,False
+Peru,PER,1980,population,17295.298,Maddison,False,False
+Peru,PER,1990,population,21600.0,Maddison,False,False
+Peru,PER,2000,population,21291.22,Maddison,False,False
+Peru,PER,1850,urbanization,0.0710518519,CLIO-INFRA,True,False
+Peru,PER,1900,urbanization,0.1038925439,CLIO-INFRA,True,False
+Peru,PER,1950,urbanization,0.24133639,CLIO-INFRA,True,False
+Peru,PER,2000,urbanization,0.48733085,CLIO-INFRA,True,False
+Philippines,PHL,1870,education_years,0.14,CLIO-INFRA,False,False
+Philippines,PHL,1880,education_years,0.17,CLIO-INFRA,False,False
+Philippines,PHL,1890,education_years,0.19,CLIO-INFRA,False,False
+Philippines,PHL,1900,education_years,0.23,CLIO-INFRA,False,False
+Philippines,PHL,1910,education_years,0.29,CLIO-INFRA,False,False
+Philippines,PHL,1920,education_years,0.85,CLIO-INFRA,False,False
+Philippines,PHL,1930,education_years,1.36,CLIO-INFRA,False,False
+Philippines,PHL,1940,education_years,2.02,CLIO-INFRA,False,False
+Philippines,PHL,1950,education_years,2.74,CLIO-INFRA,False,False
+Philippines,PHL,1960,education_years,3.67,CLIO-INFRA,False,False
+Philippines,PHL,1970,education_years,4.55,CLIO-INFRA,False,False
+Philippines,PHL,1980,education_years,5.79,CLIO-INFRA,False,False
+Philippines,PHL,1990,education_years,6.98,CLIO-INFRA,False,False
+Philippines,PHL,2000,education_years,7.96,CLIO-INFRA,False,False
+Philippines,PHL,1820,gdp_per_capita,931.0,Maddison,False,False
+Philippines,PHL,1870,gdp_per_capita,995.0,Maddison,False,False
+Philippines,PHL,1910,gdp_per_capita,1393.0,Maddison,False,False
+Philippines,PHL,1920,gdp_per_capita,2055.0,Maddison,False,False
+Philippines,PHL,1930,gdp_per_capita,2203.0,Maddison,False,False
+Philippines,PHL,1940,gdp_per_capita,2402.0,Maddison,False,False
+Philippines,PHL,1950,gdp_per_capita,1706.0,Maddison,False,False
+Philippines,PHL,1960,gdp_per_capita,2353.0,Maddison,False,False
+Philippines,PHL,1970,gdp_per_capita,2812.0,Maddison,False,False
+Philippines,PHL,1980,gdp_per_capita,3787.0,Maddison,False,False
+Philippines,PHL,1990,gdp_per_capita,3502.0,Maddison,False,False
+Philippines,PHL,2000,gdp_per_capita,4033.5608918822336,Maddison,False,False
+Philippines,PHL,1850,gini,32.54966,CLIO-INFRA,False,False
+Philippines,PHL,1870,gini,52.65354,CLIO-INFRA,False,False
+Philippines,PHL,1890,gini,37.7503,CLIO-INFRA,False,False
+Philippines,PHL,1910,gini,39.96185,CLIO-INFRA,False,False
+Philippines,PHL,1950,gini,49.21,CLIO-INFRA,False,False
+Philippines,PHL,1960,gini,51.44608,CLIO-INFRA,False,False
+Philippines,PHL,1970,gini,49.65903,CLIO-INFRA,False,False
+Philippines,PHL,1980,gini,45.18,CLIO-INFRA,False,False
+Philippines,PHL,1990,gini,48.48896,CLIO-INFRA,False,False
+Philippines,PHL,2000,gini,49.6,CLIO-INFRA,False,False
+Philippines,PHL,1950,life_expectancy,55.43,CLIO-INFRA,False,False
+Philippines,PHL,1960,life_expectancy,58.619,CLIO-INFRA,False,False
+Philippines,PHL,1970,life_expectancy,61.408,CLIO-INFRA,False,False
+Philippines,PHL,1980,life_expectancy,62.874,CLIO-INFRA,False,False
+Philippines,PHL,1990,life_expectancy,65.589,CLIO-INFRA,False,False
+Philippines,PHL,2000,life_expectancy,67.131,CLIO-INFRA,False,False
+Philippines,PHL,1820,population,2176.0,Maddison,False,False
+Philippines,PHL,1840,population,3096.0,CLIO-INFRA,False,False
+Philippines,PHL,1850,population,3612.0,Maddison,False,False
+Philippines,PHL,1870,population,5063.0,Maddison,False,False
+Philippines,PHL,1880,population,5985.0,CLIO-INFRA,False,False
+Philippines,PHL,1890,population,6476.0,Maddison,False,False
+Philippines,PHL,1900,population,7324.0,Maddison,False,False
+Philippines,PHL,1910,population,8861.0,Maddison,False,False
+Philippines,PHL,1920,population,10725.0,Maddison,False,False
+Philippines,PHL,1930,population,13194.0,Maddison,False,False
+Philippines,PHL,1940,population,16585.0,Maddison,False,False
+Philippines,PHL,1950,population,21131.264,Maddison,False,False
+Philippines,PHL,1960,population,28528.939,Maddison,False,False
+Philippines,PHL,1970,population,38603.696,Maddison,False,False
+Philippines,PHL,1980,population,50940.182,Maddison,False,False
+Philippines,PHL,1990,population,65087.72,Maddison,False,False
+Philippines,PHL,2000,population,81131.21,Maddison,False,False
+Philippines,PHL,1850,urbanization,0.1024363234,CLIO-INFRA,True,False
+Philippines,PHL,1900,urbanization,0.1098306936,CLIO-INFRA,True,False
+Philippines,PHL,1950,urbanization,0.17454706,CLIO-INFRA,True,False
+Philippines,PHL,2000,urbanization,0.29388589,CLIO-INFRA,True,False
+Poland,POL,1920,education_years,2.3512857,CLIO-INFRA,False,False
+Poland,POL,1930,education_years,2.49567371,CLIO-INFRA,False,False
+Poland,POL,1940,education_years,3.00132417,CLIO-INFRA,False,False
+Poland,POL,1950,education_years,3.1618687,CLIO-INFRA,False,False
+Poland,POL,1960,education_years,4.2317401,CLIO-INFRA,False,False
+Poland,POL,1970,education_years,5.34203082,CLIO-INFRA,False,False
+Poland,POL,1980,education_years,6.7180392,CLIO-INFRA,False,False
+Poland,POL,1990,education_years,7.5622875,CLIO-INFRA,False,False
+Poland,POL,2000,education_years,8.8084393,CLIO-INFRA,False,False
+Poland,POL,1820,gdp_per_capita,818.0,Maddison,False,False
+Poland,POL,1830,gdp_per_capita,942.0,Maddison,False,False
+Poland,POL,1840,gdp_per_capita,907.0,Maddison,False,False
+Poland,POL,1850,gdp_per_capita,985.0,Maddison,False,False
+Poland,POL,1860,gdp_per_capita,1358.0,Maddison,False,False
+Poland,POL,1870,gdp_per_capita,1575.0,Maddison,False,False
+Poland,POL,1880,gdp_per_capita,1886.0,Maddison,False,False
+Poland,POL,1890,gdp_per_capita,2204.0,Maddison,False,False
+Poland,POL,1900,gdp_per_capita,2700.0,Maddison,False,False
+Poland,POL,1910,gdp_per_capita,2694.0,Maddison,False,False
+Poland,POL,1920,gdp_per_capita,3000.0,Maddison,False,False
+Poland,POL,1930,gdp_per_capita,3178.0,Maddison,False,False
+Poland,POL,1950,gdp_per_capita,3900.0,Maddison,False,False
+Poland,POL,1960,gdp_per_capita,5125.0,Maddison,False,False
+Poland,POL,1970,gdp_per_capita,7058.0,Maddison,False,False
+Poland,POL,1980,gdp_per_capita,9149.0,Maddison,False,False
+Poland,POL,1990,gdp_per_capita,8150.0,Maddison,False,False
+Poland,POL,2000,gdp_per_capita,12732.166764174506,Maddison,False,False
+Poland,POL,1820,gini,34.51052,CLIO-INFRA,False,False
+Poland,POL,1850,gini,36.1977,CLIO-INFRA,False,False
+Poland,POL,1870,gini,38.23717,CLIO-INFRA,False,False
+Poland,POL,1890,gini,29.95764,CLIO-INFRA,False,False
+Poland,POL,1910,gini,28.01872,CLIO-INFRA,False,False
+Poland,POL,1950,gini,23.35481,CLIO-INFRA,False,False
+Poland,POL,1960,gini,26.0,CLIO-INFRA,False,False
+Poland,POL,1970,gini,29.0755,CLIO-INFRA,False,False
+Poland,POL,1980,gini,30.0677,CLIO-INFRA,False,False
+Poland,POL,1990,gini,31.0,CLIO-INFRA,False,False
+Poland,POL,2000,gini,34.5,CLIO-INFRA,False,False
+Poland,POL,1950,life_expectancy,61.439,CLIO-INFRA,False,False
+Poland,POL,1960,life_expectancy,67.83,CLIO-INFRA,False,False
+Poland,POL,1970,life_expectancy,69.84,CLIO-INFRA,False,False
+Poland,POL,1980,life_expectancy,70.25,CLIO-INFRA,False,False
+Poland,POL,1990,life_expectancy,70.68,CLIO-INFRA,False,False
+Poland,POL,2000,life_expectancy,73.76,CLIO-INFRA,False,False
+Poland,POL,1820,population,10426.0,Maddison,False,False
+Poland,POL,1850,population,13000.0,Maddison,False,False
+Poland,POL,1870,population,16865.0,Maddison,False,False
+Poland,POL,1890,population,22854.0,Maddison,False,False
+Poland,POL,1900,population,24750.0,Maddison,False,False
+Poland,POL,1910,population,26644.0,Maddison,False,False
+Poland,POL,1920,population,23968.0,Maddison,False,False
+Poland,POL,1930,population,28204.0,Maddison,False,False
+Poland,POL,1940,population,30021.0,Maddison,False,False
+Poland,POL,1950,population,24824.0,Maddison,False,False
+Poland,POL,1960,population,29589.842,Maddison,False,False
+Poland,POL,1970,population,32526.0,Maddison,False,False
+Poland,POL,1980,population,35578.016,Maddison,False,False
+Poland,POL,1990,population,38119.408,Maddison,False,False
+Poland,POL,2000,population,38344.43,Maddison,False,False
+Poland,POL,1850,urbanization,0.0909230769,CLIO-INFRA,True,False
+Poland,POL,1900,urbanization,0.1381414141,CLIO-INFRA,True,False
+Poland,POL,1950,urbanization,0.195214309,CLIO-INFRA,True,False
+Poland,POL,2000,urbanization,0.31618844,CLIO-INFRA,True,False
+Portugal,PRT,1870,education_years,0.46,CLIO-INFRA,False,False
+Portugal,PRT,1880,education_years,0.72,CLIO-INFRA,False,False
+Portugal,PRT,1890,education_years,1.03,CLIO-INFRA,False,False
+Portugal,PRT,1900,education_years,1.38,CLIO-INFRA,False,False
+Portugal,PRT,1910,education_years,1.6,CLIO-INFRA,False,False
+Portugal,PRT,1920,education_years,1.8,CLIO-INFRA,False,False
+Portugal,PRT,1930,education_years,1.95,CLIO-INFRA,False,False
+Portugal,PRT,1940,education_years,2.13,CLIO-INFRA,False,False
+Portugal,PRT,1950,education_years,2.5,CLIO-INFRA,False,False
+Portugal,PRT,1960,education_years,3.22,CLIO-INFRA,False,False
+Portugal,PRT,1970,education_years,4.19,CLIO-INFRA,False,False
+Portugal,PRT,1980,education_years,5.67,CLIO-INFRA,False,False
+Portugal,PRT,1990,education_years,5.98,CLIO-INFRA,False,False
+Portugal,PRT,2000,education_years,7.34,CLIO-INFRA,False,False
+Portugal,PRT,1820,gdp_per_capita,1665.4261933399998,Maddison,False,False
+Portugal,PRT,1830,gdp_per_capita,1721.017262965,Maddison,False,False
+Portugal,PRT,1840,gdp_per_capita,1502.783535799,Maddison,False,False
+Portugal,PRT,1850,gdp_per_capita,1469.8775,Maddison,False,False
+Portugal,PRT,1870,gdp_per_capita,1554.0,Maddison,False,False
+Portugal,PRT,1880,gdp_per_capita,1510.0,Maddison,False,False
+Portugal,PRT,1890,gdp_per_capita,1798.0,Maddison,False,False
+Portugal,PRT,1900,gdp_per_capita,2075.0,Maddison,False,False
+Portugal,PRT,1910,gdp_per_capita,1957.0,Maddison,False,False
+Portugal,PRT,1920,gdp_per_capita,1959.0,Maddison,False,False
+Portugal,PRT,1930,gdp_per_capita,2504.0,Maddison,False,False
+Portugal,PRT,1940,gdp_per_capita,2574.0,Maddison,False,False
+Portugal,PRT,1950,gdp_per_capita,3325.0,Maddison,False,False
+Portugal,PRT,1960,gdp_per_capita,4712.0,Maddison,False,False
+Portugal,PRT,1970,gdp_per_capita,8724.0,Maddison,False,False
+Portugal,PRT,1980,gdp_per_capita,12822.0,Maddison,False,False
+Portugal,PRT,1990,gdp_per_capita,17256.0,Maddison,False,False
+Portugal,PRT,2000,gdp_per_capita,23372.040142230104,Maddison,False,False
+Portugal,PRT,1820,gini,55.06711,CLIO-INFRA,False,False
+Portugal,PRT,1850,gini,33.4622,CLIO-INFRA,False,False
+Portugal,PRT,1870,gini,51.58976,CLIO-INFRA,False,False
+Portugal,PRT,1890,gini,39.40931,CLIO-INFRA,False,False
+Portugal,PRT,1910,gini,45.98328,CLIO-INFRA,False,False
+Portugal,PRT,1950,gini,39.18056,CLIO-INFRA,False,False
+Portugal,PRT,1960,gini,49.13113,CLIO-INFRA,False,False
+Portugal,PRT,1970,gini,40.99584,CLIO-INFRA,False,False
+Portugal,PRT,1980,gini,38.14569,CLIO-INFRA,False,False
+Portugal,PRT,1990,gini,38.08859,CLIO-INFRA,False,False
+Portugal,PRT,1940,life_expectancy,51.39,CLIO-INFRA,False,False
+Portugal,PRT,1950,life_expectancy,58.48,CLIO-INFRA,False,False
+Portugal,PRT,1960,life_expectancy,64.17,CLIO-INFRA,False,False
+Portugal,PRT,1970,life_expectancy,67.06,CLIO-INFRA,False,False
+Portugal,PRT,1980,life_expectancy,71.66,CLIO-INFRA,False,False
+Portugal,PRT,1990,life_expectancy,74.18,CLIO-INFRA,False,False
+Portugal,PRT,2000,life_expectancy,76.82,CLIO-INFRA,False,False
+Portugal,PRT,1820,population,3297.0,Maddison,False,False
+Portugal,PRT,1830,population,3491.0,Maddison,False,False
+Portugal,PRT,1840,population,3704.0,Maddison,False,False
+Portugal,PRT,1850,population,3816.0,Maddison,False,False
+Portugal,PRT,1860,population,4000.0,Maddison,False,False
+Portugal,PRT,1870,population,4327.0,Maddison,False,False
+Portugal,PRT,1880,population,4610.0,Maddison,False,False
+Portugal,PRT,1890,population,5028.0,Maddison,False,False
+Portugal,PRT,1900,population,5404.0,Maddison,False,False
+Portugal,PRT,1910,population,5884.0,Maddison,False,False
+Portugal,PRT,1920,population,6029.0,Maddison,False,False
+Portugal,PRT,1930,population,6784.0,Maddison,False,False
+Portugal,PRT,1940,population,7675.0,Maddison,False,False
+Portugal,PRT,1950,population,8442.75,Maddison,False,False
+Portugal,PRT,1960,population,9036.7,Maddison,False,False
+Portugal,PRT,1970,population,9044.2,Maddison,False,False
+Portugal,PRT,1980,population,9777.8,Maddison,False,False
+Portugal,PRT,1990,population,9922.689,Maddison,False,False
+Portugal,PRT,2000,population,10215.47,Maddison,False,False
+Portugal,PRT,1850,urbanization,0.2898322851,CLIO-INFRA,True,False
+Portugal,PRT,1900,urbanization,0.3398223538,CLIO-INFRA,True,False
+Portugal,PRT,1950,urbanization,0.376299192,CLIO-INFRA,True,False
+Portugal,PRT,2000,urbanization,0.36079193,CLIO-INFRA,True,False
+Russia,RUS,1870,education_years,0.9,CLIO-INFRA,False,False
+Russia,RUS,1880,education_years,1.0,CLIO-INFRA,False,False
+Russia,RUS,1890,education_years,1.1,CLIO-INFRA,False,False
+Russia,RUS,1900,education_years,1.2,CLIO-INFRA,False,False
+Russia,RUS,1910,education_years,1.3,CLIO-INFRA,False,False
+Russia,RUS,1920,education_years,1.91,CLIO-INFRA,False,False
+Russia,RUS,1930,education_years,2.51,CLIO-INFRA,False,False
+Russia,RUS,1940,education_years,3.94,CLIO-INFRA,False,False
+Russia,RUS,1950,education_years,5.01,CLIO-INFRA,False,False
+Russia,RUS,1960,education_years,6.62,CLIO-INFRA,False,False
+Russia,RUS,1970,education_years,7.93,CLIO-INFRA,False,False
+Russia,RUS,1980,education_years,9.08,CLIO-INFRA,False,False
+Russia,RUS,1990,education_years,9.83,CLIO-INFRA,False,False
+Russia,RUS,2000,education_years,9.41,CLIO-INFRA,False,False
+Russia,RUS,1860,gdp_per_capita,1525.3003030714317,Maddison,False,False
+Russia,RUS,1870,gdp_per_capita,1595.939262517116,Maddison,False,False
+Russia,RUS,1880,gdp_per_capita,1342.789117829329,Maddison,False,False
+Russia,RUS,1890,gdp_per_capita,1380.0,Maddison,False,False
+Russia,RUS,1900,gdp_per_capita,1906.0,Maddison,False,False
+Russia,RUS,1910,gdp_per_capita,2149.0,Maddison,False,False
+Russia,RUS,1920,gdp_per_capita,917.0,Maddison,False,False
+Russia,RUS,1930,gdp_per_capita,2308.0,Maddison,False,False
+Russia,RUS,1940,gdp_per_capita,3417.0,Maddison,False,False
+Russia,RUS,1950,gdp_per_capita,4529.0,Maddison,False,False
+Russia,RUS,1960,gdp_per_capita,6288.0,Maddison,False,False
+Russia,RUS,1970,gdp_per_capita,8886.0,Maddison,False,False
+Russia,RUS,1980,gdp_per_capita,10245.0,Maddison,False,False
+Russia,RUS,1990,gdp_per_capita,10989.0,Maddison,False,False
+Russia,RUS,2000,gdp_per_capita,8193.515775879474,Maddison,False,False
+Russia,RUS,1900,life_expectancy,30.5,CLIO-INFRA,False,False
+Russia,RUS,1920,life_expectancy,20.5,CLIO-INFRA,False,False
+Russia,RUS,1930,life_expectancy,36.5,CLIO-INFRA,False,False
+Russia,RUS,1940,life_expectancy,41.2,CLIO-INFRA,False,False
+Russia,RUS,1950,life_expectancy,58.518,CLIO-INFRA,False,False
+Russia,RUS,1960,life_expectancy,68.69,CLIO-INFRA,False,False
+Russia,RUS,1970,life_expectancy,68.83,CLIO-INFRA,False,False
+Russia,RUS,1980,life_expectancy,67.48,CLIO-INFRA,False,False
+Russia,RUS,1990,life_expectancy,69.22,CLIO-INFRA,False,False
+Russia,RUS,2000,life_expectancy,65.3,CLIO-INFRA,False,False
+Russia,RUS,1820,population,54765.0,Maddison,False,False
+Russia,RUS,1850,population,73750.0,Maddison,False,False
+Russia,RUS,1870,population,88672.0,Maddison,False,False
+Russia,RUS,1890,population,110664.0,Maddison,False,False
+Russia,RUS,1900,population,124500.0,Maddison,False,False
+Russia,RUS,1920,population,154607.0,Maddison,False,False
+Russia,RUS,1930,population,174212.0,Maddison,False,False
+Russia,RUS,1940,population,195970.0,Maddison,False,False
+Russia,RUS,1950,population,179571.0,Maddison,False,False
+Russia,RUS,1960,population,213780.0,Maddison,False,False
+Russia,RUS,1970,population,242478.0,Maddison,False,False
+Russia,RUS,1980,population,265926.0,Maddison,False,False
+Russia,RUS,1990,population,288361.0,Maddison,False,False
+Russia,RUS,2000,population,288729.68,Maddison,False,False
+Russia,RUS,1950,urbanization,0.343736457,CLIO-INFRA,True,False
+Russia,RUS,2000,urbanization,0.48647672,CLIO-INFRA,True,False
+South Africa,ZAF,1870,education_years,1.1,CLIO-INFRA,False,False
+South Africa,ZAF,1880,education_years,1.1,CLIO-INFRA,False,False
+South Africa,ZAF,1890,education_years,1.1,CLIO-INFRA,False,False
+South Africa,ZAF,1900,education_years,1.1,CLIO-INFRA,False,False
+South Africa,ZAF,1910,education_years,1.12,CLIO-INFRA,False,False
+South Africa,ZAF,1920,education_years,1.44,CLIO-INFRA,False,False
+South Africa,ZAF,1930,education_years,1.88,CLIO-INFRA,False,False
+South Africa,ZAF,1940,education_years,2.36,CLIO-INFRA,False,False
+South Africa,ZAF,1950,education_years,3.13,CLIO-INFRA,False,False
+South Africa,ZAF,1960,education_years,3.95,CLIO-INFRA,False,False
+South Africa,ZAF,1970,education_years,4.86,CLIO-INFRA,False,False
+South Africa,ZAF,1980,education_years,5.2,CLIO-INFRA,False,False
+South Africa,ZAF,1990,education_years,5.83,CLIO-INFRA,False,False
+South Africa,ZAF,2000,education_years,7.44,CLIO-INFRA,False,False
+South Africa,ZAF,1820,gdp_per_capita,1188.0,Maddison,False,False
+South Africa,ZAF,1840,gdp_per_capita,1173.0,Maddison,False,False
+South Africa,ZAF,1850,gdp_per_capita,1042.0,Maddison,False,False
+South Africa,ZAF,1860,gdp_per_capita,1294.0,Maddison,False,False
+South Africa,ZAF,1870,gdp_per_capita,1286.0,Maddison,False,False
+South Africa,ZAF,1880,gdp_per_capita,2294.0,Maddison,False,False
+South Africa,ZAF,1890,gdp_per_capita,1830.0,Maddison,False,False
+South Africa,ZAF,1900,gdp_per_capita,1494.0,Maddison,False,False
+South Africa,ZAF,1910,gdp_per_capita,1835.0,Maddison,False,False
+South Africa,ZAF,1930,gdp_per_capita,2252.0,Maddison,False,False
+South Africa,ZAF,1940,gdp_per_capita,3419.0,Maddison,False,False
+South Africa,ZAF,1950,gdp_per_capita,4041.0,Maddison,False,False
+South Africa,ZAF,1960,gdp_per_capita,4847.0,Maddison,False,False
+South Africa,ZAF,1970,gdp_per_capita,6448.0,Maddison,False,False
+South Africa,ZAF,1980,gdp_per_capita,6998.0,Maddison,False,False
+South Africa,ZAF,1990,gdp_per_capita,6111.0,Maddison,False,False
+South Africa,ZAF,2000,gdp_per_capita,7582.778143416393,Maddison,False,False
+South Africa,ZAF,1890,gini,35.87093,CLIO-INFRA,False,False
+South Africa,ZAF,1910,gini,44.55119,CLIO-INFRA,False,False
+South Africa,ZAF,1950,gini,52.25651,CLIO-INFRA,False,False
+South Africa,ZAF,1960,gini,68.84947,CLIO-INFRA,False,False
+South Africa,ZAF,1970,gini,70.0992,CLIO-INFRA,False,False
+South Africa,ZAF,1980,gini,67.07624,CLIO-INFRA,False,False
+South Africa,ZAF,1990,gini,63.0,CLIO-INFRA,False,False
+South Africa,ZAF,2000,gini,54.52,CLIO-INFRA,False,False
+South Africa,ZAF,1950,life_expectancy,45.009,CLIO-INFRA,False,False
+South Africa,ZAF,1960,life_expectancy,49.951,CLIO-INFRA,False,False
+South Africa,ZAF,1970,life_expectancy,53.702,CLIO-INFRA,False,False
+South Africa,ZAF,1980,life_expectancy,58.425,CLIO-INFRA,False,False
+South Africa,ZAF,1990,life_expectancy,62.271,CLIO-INFRA,False,False
+South Africa,ZAF,2000,life_expectancy,52.833,CLIO-INFRA,False,False
+South Africa,ZAF,1820,population,1550.0,Maddison,False,False
+South Africa,ZAF,1850,population,3007.53619,CLIO-INFRA,False,False
+South Africa,ZAF,1860,population,3325.51504,CLIO-INFRA,False,False
+South Africa,ZAF,1870,population,2547.0,Maddison,False,False
+South Africa,ZAF,1880,population,4065.88438,CLIO-INFRA,False,False
+South Africa,ZAF,1890,population,4495.75958,CLIO-INFRA,False,False
+South Africa,ZAF,1900,population,4971.08435,CLIO-INFRA,False,False
+South Africa,ZAF,1910,population,5851.8753,CLIO-INFRA,False,False
+South Africa,ZAF,1920,population,6825.11417,CLIO-INFRA,False,False
+South Africa,ZAF,1930,population,8403.07599,CLIO-INFRA,False,False
+South Africa,ZAF,1940,population,10261.85325,CLIO-INFRA,False,False
+South Africa,ZAF,1950,population,13595.84,Maddison,False,False
+South Africa,ZAF,1960,population,17416.653,Maddison,False,False
+South Africa,ZAF,1970,population,22739.921,Maddison,False,False
+South Africa,ZAF,1980,population,29251.588,Maddison,False,False
+South Africa,ZAF,1990,population,38476.273,Maddison,False,False
+South Africa,ZAF,2000,population,46958.0,Maddison,False,False
+South Africa,ZAF,1850,urbanization,0.0162924058,CLIO-INFRA,True,False
+South Africa,ZAF,1900,urbanization,0.1139791562,CLIO-INFRA,True,False
+South Africa,ZAF,1950,urbanization,0.254790331,CLIO-INFRA,True,False
+South Africa,ZAF,2000,urbanization,0.2721019,CLIO-INFRA,True,False
+South Korea,KOR,1870,education_years,1.11,CLIO-INFRA,False,False
+South Korea,KOR,1880,education_years,1.16,CLIO-INFRA,False,False
+South Korea,KOR,1890,education_years,1.21,CLIO-INFRA,False,False
+South Korea,KOR,1900,education_years,1.26,CLIO-INFRA,False,False
+South Korea,KOR,1910,education_years,1.31,CLIO-INFRA,False,False
+South Korea,KOR,1920,education_years,1.46,CLIO-INFRA,False,False
+South Korea,KOR,1930,education_years,1.62,CLIO-INFRA,False,False
+South Korea,KOR,1940,education_years,2.31,CLIO-INFRA,False,False
+South Korea,KOR,1950,education_years,3.1,CLIO-INFRA,False,False
+South Korea,KOR,1960,education_years,4.3,CLIO-INFRA,False,False
+South Korea,KOR,1970,education_years,6.24,CLIO-INFRA,False,False
+South Korea,KOR,1980,education_years,8.66,CLIO-INFRA,False,False
+South Korea,KOR,1990,education_years,10.67,CLIO-INFRA,False,False
+South Korea,KOR,2000,education_years,12.12,CLIO-INFRA,False,False
+South Korea,KOR,1820,gdp_per_capita,815.7743010776173,Maddison,False,False
+South Korea,KOR,1870,gdp_per_capita,820.3573027690645,Maddison,False,False
+South Korea,KOR,1920,gdp_per_capita,1428.8164239337386,Maddison,False,False
+South Korea,KOR,1930,gdp_per_capita,1637.2097973846433,Maddison,False,False
+South Korea,KOR,1940,gdp_per_capita,1975.236134586235,Maddison,False,False
+South Korea,KOR,1950,gdp_per_capita,998.088764411796,Maddison,False,False
+South Korea,KOR,1960,gdp_per_capita,1547.6917726385554,Maddison,False,False
+South Korea,KOR,1970,gdp_per_capita,2974.8072732956584,Maddison,False,False
+South Korea,KOR,1980,gdp_per_capita,6064.040092821813,Maddison,False,False
+South Korea,KOR,1990,gdp_per_capita,13874.0,Maddison,False,False
+South Korea,KOR,2000,gdp_per_capita,23108.01753676168,Maddison,False,False
+South Korea,KOR,1950,gini,30.31483,CLIO-INFRA,False,False
+South Korea,KOR,1960,gini,31.68173,CLIO-INFRA,False,False
+South Korea,KOR,1970,gini,33.98494,CLIO-INFRA,False,False
+South Korea,KOR,1980,gini,39.8523,CLIO-INFRA,False,False
+South Korea,KOR,1990,gini,34.51399,CLIO-INFRA,False,False
+South Korea,KOR,2000,gini,31.57,CLIO-INFRA,False,False
+South Korea,KOR,1950,life_expectancy,47.924,CLIO-INFRA,False,False
+South Korea,KOR,1960,life_expectancy,52.4,CLIO-INFRA,False,False
+South Korea,KOR,1970,life_expectancy,62.1,CLIO-INFRA,False,False
+South Korea,KOR,1980,life_expectancy,65.9,CLIO-INFRA,False,False
+South Korea,KOR,1990,life_expectancy,71.4,CLIO-INFRA,False,False
+South Korea,KOR,2000,life_expectancy,75.9,CLIO-INFRA,False,False
+South Korea,KOR,1820,population,9395.0,Maddison,False,False
+South Korea,KOR,1850,population,9545.0,Maddison,False,False
+South Korea,KOR,1870,population,9753.0,Maddison,False,False
+South Korea,KOR,1890,population,9848.0,Maddison,False,False
+South Korea,KOR,1900,population,9896.0,Maddison,False,False
+South Korea,KOR,1910,population,10096.0,Maddison,False,False
+South Korea,KOR,1920,population,11804.0,Maddison,False,False
+South Korea,KOR,1930,population,13900.0,Maddison,False,False
+South Korea,KOR,1940,population,15627.0,Maddison,False,False
+South Korea,KOR,1950,population,20845.771,Maddison,False,False
+South Korea,KOR,1960,population,24784.14,Maddison,False,False
+South Korea,KOR,1970,population,32241.0,Maddison,False,False
+South Korea,KOR,1980,population,38124.0,Maddison,False,False
+South Korea,KOR,1990,population,42869.0,Maddison,False,False
+South Korea,KOR,2000,population,47008.0,Maddison,False,False
+South Korea,KOR,1850,urbanization,0.0880041907,CLIO-INFRA,True,False
+South Korea,KOR,1900,urbanization,0.1163500404,CLIO-INFRA,True,False
+South Korea,KOR,1950,urbanization,0.336471124,CLIO-INFRA,True,False
+South Korea,KOR,2000,urbanization,0.84702919,CLIO-INFRA,True,False
+Spain,ESP,1870,education_years,1.506,CLIO-INFRA,False,False
+Spain,ESP,1880,education_years,2.04,CLIO-INFRA,False,False
+Spain,ESP,1890,education_years,2.634,CLIO-INFRA,False,False
+Spain,ESP,1900,education_years,3.12,CLIO-INFRA,False,False
+Spain,ESP,1910,education_years,3.468,CLIO-INFRA,False,False
+Spain,ESP,1920,education_years,3.686,CLIO-INFRA,False,False
+Spain,ESP,1930,education_years,3.77,CLIO-INFRA,False,False
+Spain,ESP,1940,education_years,4.57,CLIO-INFRA,False,False
+Spain,ESP,1950,education_years,4.91,CLIO-INFRA,False,False
+Spain,ESP,1960,education_years,5.56,CLIO-INFRA,False,False
+Spain,ESP,1970,education_years,6.41,CLIO-INFRA,False,False
+Spain,ESP,1980,education_years,7.34,CLIO-INFRA,False,False
+Spain,ESP,1990,education_years,8.45,CLIO-INFRA,False,False
+Spain,ESP,2000,education_years,9.5,CLIO-INFRA,False,False
+Spain,ESP,1820,gdp_per_capita,1557.9081582883766,Maddison,False,False
+Spain,ESP,1830,gdp_per_capita,1662.3563829071156,Maddison,False,False
+Spain,ESP,1840,gdp_per_capita,1656.2968016065238,Maddison,False,False
+Spain,ESP,1850,gdp_per_capita,1702.9349264460188,Maddison,False,False
+Spain,ESP,1860,gdp_per_capita,1927.7724653597115,Maddison,False,False
+Spain,ESP,1870,gdp_per_capita,1806.456309295334,Maddison,False,False
+Spain,ESP,1880,gdp_per_capita,2517.07559103517,Maddison,False,False
+Spain,ESP,1890,gdp_per_capita,2459.6170115845034,Maddison,False,False
+Spain,ESP,1900,gdp_per_capita,2672.390528137885,Maddison,False,False
+Spain,ESP,1910,gdp_per_capita,2819.2628921578757,Maddison,False,False
+Spain,ESP,1920,gdp_per_capita,3239.318491284229,Maddison,False,False
+Spain,ESP,1930,gdp_per_capita,3918.263297152237,Maddison,False,False
+Spain,ESP,1940,gdp_per_capita,3166.965626655764,Maddison,False,False
+Spain,ESP,1950,gdp_per_capita,3459.4402519107957,Maddison,False,False
+Spain,ESP,1960,gdp_per_capita,5031.566581572437,Maddison,False,False
+Spain,ESP,1970,gdp_per_capita,9502.939890629284,Maddison,False,False
+Spain,ESP,1980,gdp_per_capita,14005.934595454468,Maddison,False,False
+Spain,ESP,1990,gdp_per_capita,19215.0,Maddison,False,False
+Spain,ESP,2000,gdp_per_capita,26994.86012029174,Maddison,False,False
+Spain,ESP,1820,gini,38.04,CLIO-INFRA,False,False
+Spain,ESP,1850,gini,31.60821,CLIO-INFRA,False,False
+Spain,ESP,1870,gini,33.5963,CLIO-INFRA,False,False
+Spain,ESP,1890,gini,31.41189,CLIO-INFRA,False,False
+Spain,ESP,1910,gini,35.07605,CLIO-INFRA,False,False
+Spain,ESP,1950,gini,35.32194,CLIO-INFRA,False,False
+Spain,ESP,1960,gini,27.77321,CLIO-INFRA,False,False
+Spain,ESP,1970,gini,34.57364,CLIO-INFRA,False,False
+Spain,ESP,1980,gini,40.81036,CLIO-INFRA,False,False
+Spain,ESP,1990,gini,33.99665,CLIO-INFRA,False,False
+Spain,ESP,2000,gini,32.72845,CLIO-INFRA,False,False
+Spain,ESP,1900,life_expectancy,34.8,CLIO-INFRA,False,False
+Spain,ESP,1910,life_expectancy,40.78,CLIO-INFRA,False,False
+Spain,ESP,1920,life_expectancy,39.22,CLIO-INFRA,False,False
+Spain,ESP,1930,life_expectancy,49.26,CLIO-INFRA,False,False
+Spain,ESP,1940,life_expectancy,48.44,CLIO-INFRA,False,False
+Spain,ESP,1950,life_expectancy,61.84,CLIO-INFRA,False,False
+Spain,ESP,1960,life_expectancy,69.22,CLIO-INFRA,False,False
+Spain,ESP,1970,life_expectancy,72.14,CLIO-INFRA,False,False
+Spain,ESP,1980,life_expectancy,75.47,CLIO-INFRA,False,False
+Spain,ESP,1990,life_expectancy,76.93,CLIO-INFRA,False,False
+Spain,ESP,2000,life_expectancy,79.25,CLIO-INFRA,False,False
+Spain,ESP,1820,population,12203.0,Maddison,False,False
+Spain,ESP,1830,population,13041.0,Maddison,False,False
+Spain,ESP,1840,population,13937.0,Maddison,False,False
+Spain,ESP,1850,population,14894.0,Maddison,False,False
+Spain,ESP,1860,population,15642.0,Maddison,False,False
+Spain,ESP,1870,population,16201.0,Maddison,False,False
+Spain,ESP,1880,population,16859.0,Maddison,False,False
+Spain,ESP,1890,population,17757.0,Maddison,False,False
+Spain,ESP,1900,population,18566.0,Maddison,False,False
+Spain,ESP,1910,population,19858.0,Maddison,False,False
+Spain,ESP,1920,population,21232.0,Maddison,False,False
+Spain,ESP,1930,population,23445.0,Maddison,False,False
+Spain,ESP,1940,population,25757.0,Maddison,False,False
+Spain,ESP,1950,population,28062.963,Maddison,False,False
+Spain,ESP,1960,population,30641.187,Maddison,False,False
+Spain,ESP,1970,population,33876.479,Maddison,False,False
+Spain,ESP,1980,population,37488.36,Maddison,False,False
+Spain,ESP,1990,population,39350.769,Maddison,False,False
+Spain,ESP,2000,population,40563.23,Maddison,False,False
+Spain,ESP,1850,urbanization,0.2563045522,CLIO-INFRA,True,False
+Spain,ESP,1900,urbanization,0.3127221803,CLIO-INFRA,True,False
+Spain,ESP,1950,urbanization,0.416563283,CLIO-INFRA,True,False
+Spain,ESP,2000,urbanization,0.53608448,CLIO-INFRA,True,False
+Sweden,SWE,1870,education_years,4.23,CLIO-INFRA,False,False
+Sweden,SWE,1880,education_years,4.61,CLIO-INFRA,False,False
+Sweden,SWE,1890,education_years,5.02,CLIO-INFRA,False,False
+Sweden,SWE,1900,education_years,5.49,CLIO-INFRA,False,False
+Sweden,SWE,1910,education_years,5.89,CLIO-INFRA,False,False
+Sweden,SWE,1920,education_years,6.24,CLIO-INFRA,False,False
+Sweden,SWE,1930,education_years,6.55,CLIO-INFRA,False,False
+Sweden,SWE,1940,education_years,6.85,CLIO-INFRA,False,False
+Sweden,SWE,1950,education_years,7.38,CLIO-INFRA,False,False
+Sweden,SWE,1960,education_years,8.49,CLIO-INFRA,False,False
+Sweden,SWE,1970,education_years,9.71,CLIO-INFRA,False,False
+Sweden,SWE,1980,education_years,10.98,CLIO-INFRA,False,False
+Sweden,SWE,1990,education_years,11.83,CLIO-INFRA,False,False
+Sweden,SWE,2000,education_years,11.53,CLIO-INFRA,False,False
+Sweden,SWE,1820,gdp_per_capita,1415.0,Maddison,False,False
+Sweden,SWE,1830,gdp_per_capita,1468.0,Maddison,False,False
+Sweden,SWE,1840,gdp_per_capita,1568.0,Maddison,False,False
+Sweden,SWE,1850,gdp_per_capita,1715.0,Maddison,False,False
+Sweden,SWE,1860,gdp_per_capita,1941.0,Maddison,False,False
+Sweden,SWE,1870,gdp_per_capita,2144.0,Maddison,False,False
+Sweden,SWE,1880,gdp_per_capita,2359.0,Maddison,False,False
+Sweden,SWE,1890,gdp_per_capita,2606.0,Maddison,False,False
+Sweden,SWE,1900,gdp_per_capita,3320.0,Maddison,False,False
+Sweden,SWE,1910,gdp_per_capita,4053.0,Maddison,False,False
+Sweden,SWE,1920,gdp_per_capita,4788.0,Maddison,False,False
+Sweden,SWE,1930,gdp_per_capita,6755.0,Maddison,False,False
+Sweden,SWE,1940,gdp_per_capita,7739.0,Maddison,False,False
+Sweden,SWE,1950,gdp_per_capita,10742.0,Maddison,False,False
+Sweden,SWE,1960,gdp_per_capita,13849.0,Maddison,False,False
+Sweden,SWE,1970,gdp_per_capita,20269.0,Maddison,False,False
+Sweden,SWE,1980,gdp_per_capita,23809.0,Maddison,False,False
+Sweden,SWE,1990,gdp_per_capita,28068.0,Maddison,False,False
+Sweden,SWE,2000,gdp_per_capita,34202.60423690123,Maddison,False,False
+Sweden,SWE,1820,gini,55.44166,CLIO-INFRA,False,False
+Sweden,SWE,1850,gini,46.11219,CLIO-INFRA,False,False
+Sweden,SWE,1870,gini,51.92186,CLIO-INFRA,False,False
+Sweden,SWE,1890,gini,59.49035,CLIO-INFRA,False,False
+Sweden,SWE,1910,gini,56.99142,CLIO-INFRA,False,False
+Sweden,SWE,1950,gini,40.47617,CLIO-INFRA,False,False
+Sweden,SWE,1960,gini,40.06197,CLIO-INFRA,False,False
+Sweden,SWE,1970,gini,36.95704,CLIO-INFRA,False,False
+Sweden,SWE,1980,gini,29.02869,CLIO-INFRA,False,False
+Sweden,SWE,1990,gini,30.66191,CLIO-INFRA,False,False
+Sweden,SWE,2000,gini,34.60449,CLIO-INFRA,False,False
+Sweden,SWE,1820,life_expectancy,40.21,CLIO-INFRA,False,False
+Sweden,SWE,1830,life_expectancy,40.94,CLIO-INFRA,False,False
+Sweden,SWE,1840,life_expectancy,43.94,CLIO-INFRA,False,False
+Sweden,SWE,1850,life_expectancy,44.66,CLIO-INFRA,False,False
+Sweden,SWE,1860,life_expectancy,48.44,CLIO-INFRA,False,False
+Sweden,SWE,1870,life_expectancy,44.97,CLIO-INFRA,False,False
+Sweden,SWE,1880,life_expectancy,47.58,CLIO-INFRA,False,False
+Sweden,SWE,1890,life_expectancy,50.44,CLIO-INFRA,False,False
+Sweden,SWE,1900,life_expectancy,52.21,CLIO-INFRA,False,False
+Sweden,SWE,1910,life_expectancy,57.76,CLIO-INFRA,False,False
+Sweden,SWE,1920,life_expectancy,58.78,CLIO-INFRA,False,False
+Sweden,SWE,1930,life_expectancy,63.18,CLIO-INFRA,False,False
+Sweden,SWE,1940,life_expectancy,66.72,CLIO-INFRA,False,False
+Sweden,SWE,1950,life_expectancy,71.13,CLIO-INFRA,False,False
+Sweden,SWE,1960,life_expectancy,73.03,CLIO-INFRA,False,False
+Sweden,SWE,1970,life_expectancy,74.68,CLIO-INFRA,False,False
+Sweden,SWE,1980,life_expectancy,75.74,CLIO-INFRA,False,False
+Sweden,SWE,1990,life_expectancy,77.59,CLIO-INFRA,False,False
+Sweden,SWE,2000,life_expectancy,79.74,CLIO-INFRA,False,False
+Sweden,SWE,1820,population,2573.0,Maddison,False,False
+Sweden,SWE,1830,population,2876.0,Maddison,False,False
+Sweden,SWE,1840,population,3123.0,Maddison,False,False
+Sweden,SWE,1850,population,3462.0,Maddison,False,False
+Sweden,SWE,1860,population,3824.0,Maddison,False,False
+Sweden,SWE,1870,population,4164.0,Maddison,False,False
+Sweden,SWE,1880,population,4572.0,Maddison,False,False
+Sweden,SWE,1890,population,4780.0,Maddison,False,False
+Sweden,SWE,1900,population,5117.0,Maddison,False,False
+Sweden,SWE,1910,population,5499.0,Maddison,False,False
+Sweden,SWE,1920,population,5876.0,Maddison,False,False
+Sweden,SWE,1930,population,6131.0,Maddison,False,False
+Sweden,SWE,1940,population,6356.0,Maddison,False,False
+Sweden,SWE,1950,population,7014.0,Maddison,False,False
+Sweden,SWE,1960,population,7480.0,Maddison,False,False
+Sweden,SWE,1970,population,8043.0,Maddison,False,False
+Sweden,SWE,1980,population,8310.0,Maddison,False,False
+Sweden,SWE,1990,population,8559.0,Maddison,False,False
+Sweden,SWE,2000,population,8872.2,Maddison,False,False
+Sweden,SWE,1850,urbanization,0.0629693819,CLIO-INFRA,True,False
+Sweden,SWE,1900,urbanization,0.1338675005,CLIO-INFRA,True,False
+Sweden,SWE,1950,urbanization,0.261334288,CLIO-INFRA,True,False
+Sweden,SWE,2000,urbanization,0.24808386,CLIO-INFRA,True,False
+Switzerland,CHE,1870,education_years,6.07,CLIO-INFRA,False,False
+Switzerland,CHE,1880,education_years,6.59,CLIO-INFRA,False,False
+Switzerland,CHE,1890,education_years,6.91,CLIO-INFRA,False,False
+Switzerland,CHE,1900,education_years,7.29,CLIO-INFRA,False,False
+Switzerland,CHE,1910,education_years,7.55,CLIO-INFRA,False,False
+Switzerland,CHE,1920,education_years,7.71,CLIO-INFRA,False,False
+Switzerland,CHE,1930,education_years,8.3,CLIO-INFRA,False,False
+Switzerland,CHE,1940,education_years,8.83,CLIO-INFRA,False,False
+Switzerland,CHE,1950,education_years,9.4,CLIO-INFRA,False,False
+Switzerland,CHE,1960,education_years,10.03,CLIO-INFRA,False,False
+Switzerland,CHE,1970,education_years,11.19,CLIO-INFRA,False,False
+Switzerland,CHE,1980,education_years,12.13,CLIO-INFRA,False,False
+Switzerland,CHE,1990,education_years,12.76,CLIO-INFRA,False,False
+Switzerland,CHE,2000,education_years,12.62,CLIO-INFRA,False,False
+Switzerland,CHE,1860,gdp_per_capita,2933.630571102557,Maddison,False,False
+Switzerland,CHE,1870,gdp_per_capita,2954.3764990073087,Maddison,False,False
+Switzerland,CHE,1880,gdp_per_capita,3869.366281481289,Maddison,False,False
+Switzerland,CHE,1890,gdp_per_capita,5309.32048505504,Maddison,False,False
+Switzerland,CHE,1900,gdp_per_capita,6611.778213563051,Maddison,False,False
+Switzerland,CHE,1910,gdp_per_capita,8048.35153312609,Maddison,False,False
+Switzerland,CHE,1920,gdp_per_capita,7363.959641238495,Maddison,False,False
+Switzerland,CHE,1930,gdp_per_capita,9969.3240645101,Maddison,False,False
+Switzerland,CHE,1940,gdp_per_capita,9802.373068779836,Maddison,False,False
+Switzerland,CHE,1950,gdp_per_capita,11541.037550542753,Maddison,False,False
+Switzerland,CHE,1960,gdp_per_capita,16358.359404684225,Maddison,False,False
+Switzerland,CHE,1970,gdp_per_capita,23478.991767022973,Maddison,False,False
+Switzerland,CHE,1980,gdp_per_capita,27405.730236248284,Maddison,False,False
+Switzerland,CHE,1990,gdp_per_capita,34250.0,Maddison,False,False
+Switzerland,CHE,2000,gdp_per_capita,43251.10375360272,Maddison,False,False
+Switzerland,CHE,1820,gini,41.73431,CLIO-INFRA,False,False
+Switzerland,CHE,1850,gini,49.54624,CLIO-INFRA,False,False
+Switzerland,CHE,1870,gini,50.72957,CLIO-INFRA,False,False
+Switzerland,CHE,1890,gini,34.8294,CLIO-INFRA,False,False
+Switzerland,CHE,1910,gini,37.51034,CLIO-INFRA,False,False
+Switzerland,CHE,1950,gini,40.63216,CLIO-INFRA,False,False
+Switzerland,CHE,1960,gini,39.61424,CLIO-INFRA,False,False
+Switzerland,CHE,1970,gini,41.13355,CLIO-INFRA,False,False
+Switzerland,CHE,1980,gini,37.4133,CLIO-INFRA,False,False
+Switzerland,CHE,1990,gini,38.7415,CLIO-INFRA,False,False
+Switzerland,CHE,2000,gini,36.8288,CLIO-INFRA,False,False
+Switzerland,CHE,1880,life_expectancy,42.38,CLIO-INFRA,False,False
+Switzerland,CHE,1890,life_expectancy,44.95,CLIO-INFRA,False,False
+Switzerland,CHE,1900,life_expectancy,47.48,CLIO-INFRA,False,False
+Switzerland,CHE,1910,life_expectancy,52.93,CLIO-INFRA,False,False
+Switzerland,CHE,1920,life_expectancy,54.33,CLIO-INFRA,False,False
+Switzerland,CHE,1930,life_expectancy,61.41,CLIO-INFRA,False,False
+Switzerland,CHE,1940,life_expectancy,63.54,CLIO-INFRA,False,False
+Switzerland,CHE,1950,life_expectancy,68.91,CLIO-INFRA,False,False
+Switzerland,CHE,1960,life_expectancy,71.41,CLIO-INFRA,False,False
+Switzerland,CHE,1970,life_expectancy,73.12,CLIO-INFRA,False,False
+Switzerland,CHE,1980,life_expectancy,75.58,CLIO-INFRA,False,False
+Switzerland,CHE,1990,life_expectancy,77.37,CLIO-INFRA,False,False
+Switzerland,CHE,2000,life_expectancy,79.83,CLIO-INFRA,False,False
+Switzerland,CHE,1820,population,1986.0,Maddison,False,False
+Switzerland,CHE,1830,population,2100.0,Maddison,False,False
+Switzerland,CHE,1840,population,2220.0,Maddison,False,False
+Switzerland,CHE,1850,population,2379.0,Maddison,False,False
+Switzerland,CHE,1860,population,2510.0,Maddison,False,False
+Switzerland,CHE,1870,population,2655.0,Maddison,False,False
+Switzerland,CHE,1880,population,2839.0,Maddison,False,False
+Switzerland,CHE,1890,population,2951.0,Maddison,False,False
+Switzerland,CHE,1900,population,3300.0,Maddison,False,False
+Switzerland,CHE,1910,population,3735.0,Maddison,False,False
+Switzerland,CHE,1920,population,3877.0,Maddison,False,False
+Switzerland,CHE,1930,population,4051.0,Maddison,False,False
+Switzerland,CHE,1940,population,4226.0,Maddison,False,False
+Switzerland,CHE,1950,population,4694.0,Maddison,False,False
+Switzerland,CHE,1960,population,5362.0,Maddison,False,False
+Switzerland,CHE,1970,population,6267.0,Maddison,False,False
+Switzerland,CHE,1980,population,6385.229,Maddison,False,False
+Switzerland,CHE,1990,population,6836.626,Maddison,False,False
+Switzerland,CHE,2000,population,7295.66,Maddison,False,False
+Switzerland,CHE,1850,urbanization,0.1374527112,CLIO-INFRA,True,False
+Switzerland,CHE,1900,urbanization,0.2127272727,CLIO-INFRA,True,False
+Switzerland,CHE,1950,urbanization,0.277162335,CLIO-INFRA,True,False
+Switzerland,CHE,2000,urbanization,0.20930463,CLIO-INFRA,True,False
+United Kingdom,GBR,1820,education_years,1.761306,CLIO-INFRA,False,False
+United Kingdom,GBR,1830,education_years,1.925571,CLIO-INFRA,False,False
+United Kingdom,GBR,1840,education_years,2.229292,CLIO-INFRA,False,False
+United Kingdom,GBR,1850,education_years,2.6413835,CLIO-INFRA,False,False
+United Kingdom,GBR,1860,education_years,3.1484756,CLIO-INFRA,False,False
+United Kingdom,GBR,1870,education_years,3.59,CLIO-INFRA,False,False
+United Kingdom,GBR,1880,education_years,4.37,CLIO-INFRA,False,False
+United Kingdom,GBR,1890,education_years,4.84,CLIO-INFRA,False,False
+United Kingdom,GBR,1900,education_years,5.33,CLIO-INFRA,False,False
+United Kingdom,GBR,1910,education_years,5.86,CLIO-INFRA,False,False
+United Kingdom,GBR,1920,education_years,6.31,CLIO-INFRA,False,False
+United Kingdom,GBR,1930,education_years,6.7,CLIO-INFRA,False,False
+United Kingdom,GBR,1940,education_years,7.2,CLIO-INFRA,False,False
+United Kingdom,GBR,1950,education_years,7.74,CLIO-INFRA,False,False
+United Kingdom,GBR,1960,education_years,8.92,CLIO-INFRA,False,False
+United Kingdom,GBR,1970,education_years,10.15,CLIO-INFRA,False,False
+United Kingdom,GBR,1980,education_years,11.44,CLIO-INFRA,False,False
+United Kingdom,GBR,1990,education_years,12.24,CLIO-INFRA,False,False
+United Kingdom,GBR,2000,education_years,13.07,CLIO-INFRA,False,False
+United Kingdom,GBR,1820,gdp_per_capita,3306.0,Maddison,False,False
+United Kingdom,GBR,1830,gdp_per_capita,3550.0,Maddison,False,False
+United Kingdom,GBR,1840,gdp_per_capita,4018.0,Maddison,False,False
+United Kingdom,GBR,1850,gdp_per_capita,4332.0,Maddison,False,False
+United Kingdom,GBR,1860,gdp_per_capita,5086.0,Maddison,False,False
+United Kingdom,GBR,1870,gdp_per_capita,5829.0,Maddison,False,False
+United Kingdom,GBR,1880,gdp_per_capita,5997.0,Maddison,False,False
+United Kingdom,GBR,1890,gdp_per_capita,6845.0,Maddison,False,False
+United Kingdom,GBR,1900,gdp_per_capita,7594.0,Maddison,False,False
+United Kingdom,GBR,1910,gdp_per_capita,7718.0,Maddison,False,False
+United Kingdom,GBR,1920,gdp_per_capita,7017.0,Maddison,False,False
+United Kingdom,GBR,1930,gdp_per_capita,8673.0,Maddison,False,False
+United Kingdom,GBR,1940,gdp_per_capita,10928.0,Maddison,False,False
+United Kingdom,GBR,1950,gdp_per_capita,11061.0,Maddison,False,False
+United Kingdom,GBR,1960,gdp_per_capita,13780.0,Maddison,False,False
+United Kingdom,GBR,1970,gdp_per_capita,17162.0,Maddison,False,False
+United Kingdom,GBR,1980,gdp_per_capita,20612.0,Maddison,False,False
+United Kingdom,GBR,1990,gdp_per_capita,26189.0,Maddison,False,False
+United Kingdom,GBR,2000,gdp_per_capita,31946.036339441373,Maddison,False,False
+United Kingdom,GBR,1820,gini,59.27,CLIO-INFRA,False,False
+United Kingdom,GBR,1850,gini,43.49139,CLIO-INFRA,False,False
+United Kingdom,GBR,1870,gini,48.97,CLIO-INFRA,False,False
+United Kingdom,GBR,1890,gini,37.36684,CLIO-INFRA,False,False
+United Kingdom,GBR,1910,gini,41.86165,CLIO-INFRA,False,False
+United Kingdom,GBR,1950,gini,30.49788,CLIO-INFRA,False,False
+United Kingdom,GBR,1960,gini,28.50191,CLIO-INFRA,False,False
+United Kingdom,GBR,1970,gini,28.9,CLIO-INFRA,False,False
+United Kingdom,GBR,1980,gini,33.99885,CLIO-INFRA,False,False
+United Kingdom,GBR,1990,gini,38.62479,CLIO-INFRA,False,False
+United Kingdom,GBR,2000,gini,40.46565,CLIO-INFRA,False,False
+United Kingdom,GBR,1850,life_expectancy,42.77,CLIO-INFRA,False,False
+United Kingdom,GBR,1860,life_expectancy,41.945,CLIO-INFRA,False,False
+United Kingdom,GBR,1870,life_expectancy,40.605,CLIO-INFRA,False,False
+United Kingdom,GBR,1880,life_expectancy,42.975,CLIO-INFRA,False,False
+United Kingdom,GBR,1890,life_expectancy,44.12,CLIO-INFRA,False,False
+United Kingdom,GBR,1900,life_expectancy,45.62,CLIO-INFRA,False,False
+United Kingdom,GBR,1910,life_expectancy,53.255,CLIO-INFRA,False,False
+United Kingdom,GBR,1920,life_expectancy,57.255,CLIO-INFRA,False,False
+United Kingdom,GBR,1930,life_expectancy,60.78,CLIO-INFRA,False,False
+United Kingdom,GBR,1940,life_expectancy,60.88,CLIO-INFRA,False,False
+United Kingdom,GBR,1950,life_expectancy,68.63,CLIO-INFRA,False,False
+United Kingdom,GBR,1960,life_expectancy,71.04,CLIO-INFRA,False,False
+United Kingdom,GBR,1970,life_expectancy,71.9,CLIO-INFRA,False,False
+United Kingdom,GBR,1980,life_expectancy,73.59,CLIO-INFRA,False,False
+United Kingdom,GBR,1990,life_expectancy,75.74,CLIO-INFRA,False,False
+United Kingdom,GBR,2000,life_expectancy,77.86,CLIO-INFRA,False,False
+United Kingdom,GBR,1820,population,21239.0,Maddison,False,False
+United Kingdom,GBR,1830,population,24139.0,Maddison,False,False
+United Kingdom,GBR,1840,population,26745.0,Maddison,False,False
+United Kingdom,GBR,1850,population,27181.0,Maddison,False,False
+United Kingdom,GBR,1860,population,28888.0,Maddison,False,False
+United Kingdom,GBR,1870,population,31400.0,Maddison,False,False
+United Kingdom,GBR,1880,population,34623.0,Maddison,False,False
+United Kingdom,GBR,1890,population,37485.0,Maddison,False,False
+United Kingdom,GBR,1900,population,41155.0,Maddison,False,False
+United Kingdom,GBR,1910,population,44916.0,Maddison,False,False
+United Kingdom,GBR,1920,population,46821.0,Maddison,False,False
+United Kingdom,GBR,1930,population,45866.0,Maddison,False,False
+United Kingdom,GBR,1940,population,48226.0,Maddison,False,False
+United Kingdom,GBR,1950,population,50127.0,Maddison,False,False
+United Kingdom,GBR,1960,population,52372.0,Maddison,False,False
+United Kingdom,GBR,1970,population,55632.0,Maddison,False,False
+United Kingdom,GBR,1980,population,56314.0,Maddison,False,False
+United Kingdom,GBR,1990,population,57493.307,Maddison,False,False
+United Kingdom,GBR,2000,population,59148.66,Maddison,False,False
+United Kingdom,GBR,1850,urbanization,0.3028218241,CLIO-INFRA,True,False
+United Kingdom,GBR,1900,urbanization,0.422135828,CLIO-INFRA,True,False
+United Kingdom,GBR,1950,urbanization,0.483188701,CLIO-INFRA,True,False
+United Kingdom,GBR,2000,urbanization,0.44922532,CLIO-INFRA,True,False
+United States,USA,1870,education_years,5.57,CLIO-INFRA,False,False
+United States,USA,1880,education_years,6.02,CLIO-INFRA,False,False
+United States,USA,1890,education_years,6.6,CLIO-INFRA,False,False
+United States,USA,1900,education_years,7.09,CLIO-INFRA,False,False
+United States,USA,1910,education_years,7.46,CLIO-INFRA,False,False
+United States,USA,1920,education_years,7.84,CLIO-INFRA,False,False
+United States,USA,1930,education_years,8.46,CLIO-INFRA,False,False
+United States,USA,1940,education_years,8.860001,CLIO-INFRA,False,False
+United States,USA,1950,education_years,9.61,CLIO-INFRA,False,False
+United States,USA,1960,education_years,10.3,CLIO-INFRA,False,False
+United States,USA,1970,education_years,11.06,CLIO-INFRA,False,False
+United States,USA,1980,education_years,11.93,CLIO-INFRA,False,False
+United States,USA,1990,education_years,12.73,CLIO-INFRA,False,False
+United States,USA,2000,education_years,13.01,CLIO-INFRA,False,False
+United States,USA,1820,gdp_per_capita,2674.048,Maddison,False,False
+United States,USA,1830,gdp_per_capita,3039.1584000000003,Maddison,False,False
+United States,USA,1840,gdp_per_capita,3319.4192000000003,Maddison,False,False
+United States,USA,1850,gdp_per_capita,3631.82,Maddison,False,False
+United States,USA,1860,gdp_per_capita,4401.8944,Maddison,False,False
+United States,USA,1870,gdp_per_capita,4803.0016000000005,Maddison,False,False
+United States,USA,1880,gdp_per_capita,6255.729600000001,Maddison,False,False
+United States,USA,1890,gdp_per_capita,6664.5504,Maddison,False,False
+United States,USA,1900,gdp_per_capita,8037.5712,Maddison,False,False
+United States,USA,1910,gdp_per_capita,9636.78272182369,Maddison,False,False
+United States,USA,1920,gdp_per_capita,10152.92710876304,Maddison,False,False
+United States,USA,1930,gdp_per_capita,10694.982075282736,Maddison,False,False
+United States,USA,1940,gdp_per_capita,12005.095163215066,Maddison,False,False
+United States,USA,1950,gdp_per_capita,15240.0,Maddison,False,False
+United States,USA,1960,gdp_per_capita,18057.0,Maddison,False,False
+United States,USA,1970,gdp_per_capita,23958.0,Maddison,False,False
+United States,USA,1980,gdp_per_capita,29611.0,Maddison,False,False
+United States,USA,1990,gdp_per_capita,36982.0,Maddison,False,False
+United States,USA,2000,gdp_per_capita,45886.47049828895,Maddison,False,False
+United States,USA,1820,gini,57.00726,CLIO-INFRA,False,False
+United States,USA,1850,gini,43.79735,CLIO-INFRA,False,False
+United States,USA,1870,gini,51.34074,CLIO-INFRA,False,False
+United States,USA,1890,gini,45.52317,CLIO-INFRA,False,False
+United States,USA,1910,gini,51.09048,CLIO-INFRA,False,False
+United States,USA,1950,gini,39.42499,CLIO-INFRA,False,False
+United States,USA,1960,gini,38.02372,CLIO-INFRA,False,False
+United States,USA,1970,gini,36.06461,CLIO-INFRA,False,False
+United States,USA,1980,gini,36.81429,CLIO-INFRA,False,False
+United States,USA,1990,gini,39.71988,CLIO-INFRA,False,False
+United States,USA,2000,gini,43.86282,CLIO-INFRA,False,False
+United States,USA,1880,life_expectancy,39.41,CLIO-INFRA,False,False
+United States,USA,1890,life_expectancy,45.21,CLIO-INFRA,False,False
+United States,USA,1910,life_expectancy,51.8,CLIO-INFRA,False,False
+United States,USA,1920,life_expectancy,55.4,CLIO-INFRA,False,False
+United States,USA,1930,life_expectancy,59.6,CLIO-INFRA,False,False
+United States,USA,1940,life_expectancy,63.23,CLIO-INFRA,False,False
+United States,USA,1950,life_expectancy,68.07,CLIO-INFRA,False,False
+United States,USA,1960,life_expectancy,69.83,CLIO-INFRA,False,False
+United States,USA,1970,life_expectancy,70.74,CLIO-INFRA,False,False
+United States,USA,1980,life_expectancy,73.74,CLIO-INFRA,False,False
+United States,USA,1990,life_expectancy,75.41,CLIO-INFRA,False,False
+United States,USA,2000,life_expectancy,76.87,CLIO-INFRA,False,False
+United States,USA,1820,population,9981.0,Maddison,False,False
+United States,USA,1830,population,13240.0,Maddison,False,False
+United States,USA,1840,population,17444.0,Maddison,False,False
+United States,USA,1850,population,23580.0,Maddison,False,False
+United States,USA,1860,population,31839.0,Maddison,False,False
+United States,USA,1870,population,40241.0,Maddison,False,False
+United States,USA,1880,population,50458.0,Maddison,False,False
+United States,USA,1890,population,63302.0,Maddison,False,False
+United States,USA,1900,population,76391.0,Maddison,False,False
+United States,USA,1910,population,92767.0,Maddison,False,False
+United States,USA,1920,population,106881.0,Maddison,False,False
+United States,USA,1930,population,123668.0,Maddison,False,False
+United States,USA,1940,population,132637.0,Maddison,False,False
+United States,USA,1950,population,152271.0,Maddison,False,False
+United States,USA,1960,population,180671.0,Maddison,False,False
+United States,USA,1970,population,205052.0,Maddison,False,False
+United States,USA,1980,population,227726.463,Maddison,False,False
+United States,USA,1990,population,250131.894,Maddison,False,False
+United States,USA,2000,population,282162.0,Maddison,False,False
+United States,USA,1850,urbanization,0.1091997797,CLIO-INFRA,True,False
+United States,USA,1900,urbanization,0.2286460447,CLIO-INFRA,True,False
+United States,USA,1950,urbanization,0.318733048,CLIO-INFRA,True,False
+United States,USA,2000,urbanization,0.27965891,CLIO-INFRA,True,False
+Uruguay,URY,1870,education_years,1.61,CLIO-INFRA,False,False
+Uruguay,URY,1880,education_years,1.77,CLIO-INFRA,False,False
+Uruguay,URY,1890,education_years,1.94,CLIO-INFRA,False,False
+Uruguay,URY,1900,education_years,2.23,CLIO-INFRA,False,False
+Uruguay,URY,1910,education_years,2.5,CLIO-INFRA,False,False
+Uruguay,URY,1920,education_years,2.9,CLIO-INFRA,False,False
+Uruguay,URY,1930,education_years,3.37,CLIO-INFRA,False,False
+Uruguay,URY,1940,education_years,3.864,CLIO-INFRA,False,False
+Uruguay,URY,1950,education_years,4.91,CLIO-INFRA,False,False
+Uruguay,URY,1960,education_years,5.5,CLIO-INFRA,False,False
+Uruguay,URY,1970,education_years,6.12,CLIO-INFRA,False,False
+Uruguay,URY,1980,education_years,6.92,CLIO-INFRA,False,False
+Uruguay,URY,1990,education_years,7.73,CLIO-INFRA,False,False
+Uruguay,URY,2000,education_years,8.37,CLIO-INFRA,False,False
+Uruguay,URY,1820,gdp_per_capita,1983.0,Maddison,False,False
+Uruguay,URY,1850,gdp_per_capita,2467.0,Maddison,False,False
+Uruguay,URY,1860,gdp_per_capita,3000.0,Maddison,False,False
+Uruguay,URY,1870,gdp_per_capita,3677.0,Maddison,False,False
+Uruguay,URY,1880,gdp_per_capita,3435.0,Maddison,False,False
+Uruguay,URY,1890,gdp_per_capita,3628.0,Maddison,False,False
+Uruguay,URY,1900,gdp_per_capita,3387.0,Maddison,False,False
+Uruguay,URY,1910,gdp_per_capita,4500.0,Maddison,False,False
+Uruguay,URY,1920,gdp_per_capita,3580.0,Maddison,False,False
+Uruguay,URY,1930,gdp_per_capita,5950.0,Maddison,False,False
+Uruguay,URY,1940,gdp_per_capita,4983.0,Maddison,False,False
+Uruguay,URY,1950,gdp_per_capita,7015.0,Maddison,False,False
+Uruguay,URY,1960,gdp_per_capita,7643.0,Maddison,False,False
+Uruguay,URY,1970,gdp_per_capita,8030.0,Maddison,False,False
+Uruguay,URY,1980,gdp_per_capita,10546.0,Maddison,False,False
+Uruguay,URY,1990,gdp_per_capita,10305.0,Maddison,False,False
+Uruguay,URY,2000,gdp_per_capita,13050.0639035873,Maddison,False,False
+Uruguay,URY,1870,gini,48.1,CLIO-INFRA,True,False
+Uruguay,URY,1970,gini,36.2,CLIO-INFRA,True,False
+Uruguay,URY,2000,gini,42.2,CLIO-INFRA,True,False
+Uruguay,URY,1900,life_expectancy,49.0,CLIO-INFRA,False,False
+Uruguay,URY,1910,life_expectancy,52.0,CLIO-INFRA,False,False
+Uruguay,URY,1920,life_expectancy,52.0,CLIO-INFRA,False,False
+Uruguay,URY,1930,life_expectancy,50.0,CLIO-INFRA,False,False
+Uruguay,URY,1940,life_expectancy,58.0,CLIO-INFRA,False,False
+Uruguay,URY,1950,life_expectancy,66.105,CLIO-INFRA,False,False
+Uruguay,URY,1960,life_expectancy,68.339,CLIO-INFRA,False,False
+Uruguay,URY,1970,life_expectancy,68.77,CLIO-INFRA,False,False
+Uruguay,URY,1980,life_expectancy,70.978,CLIO-INFRA,False,False
+Uruguay,URY,1990,life_expectancy,73.027,CLIO-INFRA,False,False
+Uruguay,URY,2000,life_expectancy,75.308,CLIO-INFRA,False,False
+Uruguay,URY,1820,population,55.0,Maddison,False,False
+Uruguay,URY,1850,population,132.0,Maddison,False,False
+Uruguay,URY,1860,population,223.0,CLIO-INFRA,False,False
+Uruguay,URY,1870,population,343.0,Maddison,False,False
+Uruguay,URY,1880,population,464.0,Maddison,False,False
+Uruguay,URY,1890,population,686.0,Maddison,False,False
+Uruguay,URY,1900,population,915.0,Maddison,False,False
+Uruguay,URY,1910,population,1081.0,Maddison,False,False
+Uruguay,URY,1920,population,1371.0,Maddison,False,False
+Uruguay,URY,1930,population,1713.0,Maddison,False,False
+Uruguay,URY,1940,population,1965.0,Maddison,False,False
+Uruguay,URY,1950,population,2194.275,Maddison,False,False
+Uruguay,URY,1960,population,2530.969,Maddison,False,False
+Uruguay,URY,1970,population,2823.659,Maddison,False,False
+Uruguay,URY,1980,population,2930.0,Maddison,False,False
+Uruguay,URY,1990,population,3110.0,Maddison,False,False
+Uruguay,URY,2000,population,3245.77,Maddison,False,False
+Uruguay,URY,1850,urbanization,0.1742424242,CLIO-INFRA,True,False
+Uruguay,URY,1900,urbanization,0.3403278689,CLIO-INFRA,True,False
+Uruguay,URY,1950,urbanization,0.576955942,CLIO-INFRA,True,False
+Uruguay,URY,2000,urbanization,0.44471154,CLIO-INFRA,True,False
+Venezuela,VEN,1870,education_years,1.1,CLIO-INFRA,False,False
+Venezuela,VEN,1880,education_years,1.17,CLIO-INFRA,False,False
+Venezuela,VEN,1890,education_years,1.25,CLIO-INFRA,False,False
+Venezuela,VEN,1900,education_years,1.38,CLIO-INFRA,False,False
+Venezuela,VEN,1910,education_years,1.51,CLIO-INFRA,False,False
+Venezuela,VEN,1920,education_years,1.58,CLIO-INFRA,False,False
+Venezuela,VEN,1930,education_years,1.66,CLIO-INFRA,False,False
+Venezuela,VEN,1940,education_years,1.81,CLIO-INFRA,False,False
+Venezuela,VEN,1950,education_years,2.53,CLIO-INFRA,False,False
+Venezuela,VEN,1960,education_years,3.57,CLIO-INFRA,False,False
+Venezuela,VEN,1970,education_years,4.77,CLIO-INFRA,False,False
+Venezuela,VEN,1980,education_years,5.59,CLIO-INFRA,False,False
+Venezuela,VEN,1990,education_years,5.45,CLIO-INFRA,False,False
+Venezuela,VEN,2000,education_years,6.43,CLIO-INFRA,False,False
+Venezuela,VEN,1820,gdp_per_capita,968.0,CLIO-INFRA,False,False
+Venezuela,VEN,1830,gdp_per_capita,1922.0,CLIO-INFRA,False,False
+Venezuela,VEN,1840,gdp_per_capita,1519.0,CLIO-INFRA,False,False
+Venezuela,VEN,1850,gdp_per_capita,1884.0,CLIO-INFRA,False,False
+Venezuela,VEN,1860,gdp_per_capita,1981.0,CLIO-INFRA,False,False
+Venezuela,VEN,1870,gdp_per_capita,1769.0,CLIO-INFRA,False,False
+Venezuela,VEN,1880,gdp_per_capita,2153.0,CLIO-INFRA,False,False
+Venezuela,VEN,1890,gdp_per_capita,2673.0,CLIO-INFRA,False,False
+Venezuela,VEN,1900,gdp_per_capita,1846.0,CLIO-INFRA,False,False
+Venezuela,VEN,1910,gdp_per_capita,1674.0,CLIO-INFRA,False,False
+Venezuela,VEN,1920,gdp_per_capita,1903.0,CLIO-INFRA,False,False
+Venezuela,VEN,1930,gdp_per_capita,2923.0,CLIO-INFRA,False,False
+Venezuela,VEN,1940,gdp_per_capita,4769.0,CLIO-INFRA,False,False
+Venezuela,VEN,1950,gdp_per_capita,8462.0,CLIO-INFRA,False,False
+Venezuela,VEN,1960,gdp_per_capita,12116.0,CLIO-INFRA,False,False
+Venezuela,VEN,1970,gdp_per_capita,15289.0,CLIO-INFRA,False,False
+Venezuela,VEN,1980,gdp_per_capita,16270.0,CLIO-INFRA,False,False
+Venezuela,VEN,1990,gdp_per_capita,13251.0,CLIO-INFRA,False,False
+Venezuela,VEN,2000,gdp_per_capita,13992.6088,CLIO-INFRA,False,False
+Venezuela,VEN,1960,gini,43.30489,CLIO-INFRA,True,False
+Venezuela,VEN,1970,gini,47.21964,CLIO-INFRA,True,False
+Venezuela,VEN,1980,gini,37.67893,CLIO-INFRA,True,False
+Venezuela,VEN,1990,gini,44.4,CLIO-INFRA,True,False
+Venezuela,VEN,2000,gini,49.63,CLIO-INFRA,True,False
+Venezuela,VEN,1900,life_expectancy,28.0,CLIO-INFRA,False,False
+Venezuela,VEN,1910,life_expectancy,29.0,CLIO-INFRA,False,False
+Venezuela,VEN,1920,life_expectancy,31.0,CLIO-INFRA,False,False
+Venezuela,VEN,1930,life_expectancy,32.0,CLIO-INFRA,False,False
+Venezuela,VEN,1940,life_expectancy,38.0,CLIO-INFRA,False,False
+Venezuela,VEN,1950,life_expectancy,55.184,CLIO-INFRA,False,False
+Venezuela,VEN,1960,life_expectancy,60.959,CLIO-INFRA,False,False
+Venezuela,VEN,1970,life_expectancy,66.008,CLIO-INFRA,False,False
+Venezuela,VEN,1980,life_expectancy,68.722,CLIO-INFRA,False,False
+Venezuela,VEN,1990,life_expectancy,71.496,CLIO-INFRA,False,False
+Venezuela,VEN,2000,life_expectancy,72.766,CLIO-INFRA,False,False
+Venezuela,VEN,1820,population,718.0,CLIO-INFRA,False,False
+Venezuela,VEN,1830,population,887.0,CLIO-INFRA,False,False
+Venezuela,VEN,1840,population,1219.0,CLIO-INFRA,False,False
+Venezuela,VEN,1850,population,1324.0,CLIO-INFRA,False,False
+Venezuela,VEN,1870,population,1653.0,CLIO-INFRA,False,False
+Venezuela,VEN,1880,population,1952.0,CLIO-INFRA,False,False
+Venezuela,VEN,1890,population,2224.0,CLIO-INFRA,False,False
+Venezuela,VEN,1900,population,2542.0,CLIO-INFRA,False,False
+Venezuela,VEN,1910,population,2805.0,CLIO-INFRA,False,False
+Venezuela,VEN,1920,population,2992.0,CLIO-INFRA,False,False
+Venezuela,VEN,1930,population,3300.0,CLIO-INFRA,False,False
+Venezuela,VEN,1940,population,3784.0,CLIO-INFRA,False,False
+Venezuela,VEN,1950,population,5009.006,CLIO-INFRA,False,False
+Venezuela,VEN,1960,population,7556.483,CLIO-INFRA,False,False
+Venezuela,VEN,1970,population,10758.017,CLIO-INFRA,False,False
+Venezuela,VEN,1980,population,14767.89,CLIO-INFRA,False,False
+Venezuela,VEN,1990,population,19325.222,CLIO-INFRA,False,False
+Venezuela,VEN,2000,population,23493.0,CLIO-INFRA,False,False
+Venezuela,VEN,1850,urbanization,0.1913897281,CLIO-INFRA,True,False
+Venezuela,VEN,1900,urbanization,0.1565696302,CLIO-INFRA,True,False
+Venezuela,VEN,1950,urbanization,0.472389133,CLIO-INFRA,True,False
+Venezuela,VEN,2000,urbanization,0.81002852,CLIO-INFRA,True,False

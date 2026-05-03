@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HistoryLens — Structural Strength 1820–2000</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #060c1a;
+    color: #d8e4ff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+  }
+  canvas { display: block; }
+
+  #ui {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 50;
+    background: rgba(10, 18, 38, 0.85);
+    border: 1px solid rgba(100, 120, 200, 0.3);
+    border-radius: 8px;
+    padding: 14px 18px;
+    backdrop-filter: blur(6px);
+    user-select: none;
+  }
+  #ui h1 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #e8eeff;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+  }
+  .row label {
+    width: 60px;
+    font-size: 12px;
+    color: #aab8d4;
+  }
+  .row input[type=range] {
+    width: 220px;
+    accent-color: #6a8cdc;
+  }
+  .row .value {
+    font-size: 12px;
+    color: #c8d4f0;
+    min-width: 36px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  #year-display {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    min-width: 60px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+  button#play {
+    background: #2a4080;
+    border: 1px solid #4a6acc;
+    color: white;
+    padding: 5px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  button#play:hover { background: #3a5095; }
+  button#play.playing { background: #804040; border-color: #cc6a6a; }
+
+  #popup {
+    position: absolute;
+    display: none;
+    background: rgba(10, 18, 38, 0.96);
+    border: 1px solid rgba(120, 150, 220, 0.4);
+    border-radius: 6px;
+    padding: 12px 14px;
+    color: #d8e4ff;
+    font-size: 13px;
+    pointer-events: none;
+    min-width: 230px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+  }
+  .popup-header {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .popup-score {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 4px 0;
+  }
+  .popup-meta {
+    font-size: 12px;
+    color: #aab8d4;
+    margin: 2px 0;
+  }
+  .popup-meta .up { color: #4ade80; font-weight: 600; }
+  .popup-meta .down { color: #f87171; font-weight: 600; }
+  .popup-story {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-style: italic;
+    color: #c8d4f0;
+    line-height: 1.4;
+  }
+
+  #hint {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-size: 11px;
+    color: #6878a0;
+    z-index: 50;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="ui">
+  <h1>HISTORYLENS — STRUCTURAL STRENGTH</h1>
+  <div class="row">
+    <label>Year</label>
+    <input type="range" id="year" min="0" max="18" value="0" step="1" />
+    <span id="year-display">1820</span>
+    <button id="play">Play</button>
+  </div>
+  <div class="row">
+    <label>Tilt</label>
+    <input type="range" id="tilt" min="20" max="70" value="40" step="1" />
+    <span class="value" id="tilt-val">40°</span>
+  </div>
+  <div class="row">
+    <label>Rotate</label>
+    <input type="range" id="rotate" min="0" max="360" value="20" step="1" />
+    <span class="value" id="rotate-val">20°</span>
+  </div>
+</div>
+
+<div id="popup"></div>
+<div id="hint">Drag to rotate · scroll to zoom · hover a peak for details</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
+// ─────────────────────────────────────────────────────────────
+// DATA
+// ─────────────────────────────────────────────────────────────
+const nations = [
+  {name:'UK', lon:-2, lat:52, color:[100,80,220],
+   scores:[45,52,60,68,74,80,84,87,91,89,82,80,76,79,83,86,88,89,90],
+   stories:['On the cusp of industrial transformation',
+    'Workshop of the world — no peer exists',
+    'The undisputed global industrial leader',
+    'Peak of empire — Britain stands alone',
+    'Post-WWI recovery, dominance fading',
+    'A peer among Western equals',
+    'A fully modern leading economy']},
+  {name:'USA', lon:-98, lat:38, color:[60,130,20],
+   scores:[38,42,46,51,54,58,65,72,78,82,80,76,82,88,91,92,91,93,95],
+   stories:['A young nation of enormous potential',
+    'Industrialization spreading west',
+    'Civil War spurs industrial acceleration',
+    'A rising giant closing the gap with Britain',
+    'The Great Depression — a structural setback',
+    'The postwar boom — undisputed global leader',
+    'The only true superpower']},
+  {name:'Germany', lon:10, lat:51, color:[30,100,180],
+   scores:[32,36,40,45,50,58,65,70,76,78,60,62,38,48,65,75,82,86,88],
+   stories:['Growing industrial potential, not yet unified',
+    'Rapid industrialization, unification approaching',
+    'The Reich at its industrial peak',
+    'A dominant European power',
+    'Post-WWI collapse — reparations cripple economy',
+    'WWII devastation — at its lowest point',
+    'The Wirtschaftswunder — remarkable reconstruction']},
+  {name:'Japan', lon:138, lat:37, color:[220,80,40],
+   scores:[22,22,23,24,25,26,32,38,46,54,52,55,42,44,60,72,81,88,90],
+   stories:['A feudal agrarian society, largely closed',
+    'The Meiji Restoration is imminent',
+    'The most dramatic 19th century structural rise',
+    'Japan shocks the world — agrarian to industrial',
+    'A major industrial power, peer to Europe',
+    'WWII devastation — Japan at structural floor',
+    'The postwar miracle — a global economic leader']},
+  {name:'China', lon:105, lat:35, color:[190,120,20],
+   scores:[30,29,28,27,26,25,24,22,21,20,19,18,16,17,22,28,35,48,65],
+   stories:["Once the world's largest economy, now declining",
+    'Colonial pressures — century of humiliation',
+    'Structural erosion deepens',
+    'The lowest point — decades of conflict',
+    'The People\'s Republic rebuilds from scratch',
+    'Reform and opening — the great rise begins',
+    'China rejoins the ranks of major powers']},
+  {name:'Russia', lon:55, lat:58, color:[140,138,130],
+   scores:[28,30,32,34,36,38,40,42,44,42,46,48,50,52,54,55,53,42,44],
+   stories:['A vast agrarian empire, weak in development',
+    'Slow industrialization, far behind the West',
+    'Tsarist industrialization begins',
+    'A major power, still behind Western peers',
+    'Soviet industrialization drives rapid gains',
+    'Cold War superpower masking structural limits',
+    'Post-Soviet collapse — a sharp structural fall']},
+  {name:'Argentina', lon:-64, lat:-34, color:[215,80,125],
+   scores:[28,31,35,38,42,46,52,58,64,68,65,60,58,55,52,48,44,40,38],
+   stories:['A young nation with enormous potential',
+    'Growth accelerating — wealth is coming',
+    'The golden age — beef, grain, immigration',
+    'Argentina peaks — structural peer to Australia',
+    'Post-WWI instability begins long erosion',
+    'Political instability deepens the decline',
+    'A century of squandered potential']},
+  {name:'India', lon:78, lat:20, color:[15,115,96],
+   scores:[25,24,24,23,22,21,21,20,20,19,18,18,17,18,21,24,28,35,44],
+   stories:['Colonial extraction suppresses development',
+    'British rule reorganizes India for extraction',
+    'Deindustrialization deepens under colonialism',
+    'Colonial suppression at its most intensive',
+    'Independence — India rebuilds on its own terms',
+    'The 1991 reforms transform the trajectory',
+    'Accelerating growth, a major force emerging']},
+];
+
+const years = [];
+for (let y = 1820; y <= 2000; y += 10) years.push(y);
+
+// ─────────────────────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────────────────────
+let currentIdx = 0;
+let tiltDeg = 40;
+let rotateDeg = 20;
+let distance = 15;
+let isDragging = false;
+let dragStartX = 0;
+let dragStartRotate = 0;
+let dragStartY = 0;
+let dragStartTilt = 0;
+let playInterval = null;
+
+const disposables = [];
+const hitSpheres = [];
+
+// gaussian terrain parameters
+const SIGMA = 0.6;
+const HEIGHT_SCALE = 3.5;
+const GAUSSIAN_POWER = 1.8;
+
+// ─────────────────────────────────────────────────────────────
+// SCENE
+// ─────────────────────────────────────────────────────────────
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x060c1a);
+
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+
+// Static lighting
+const ambient = new THREE.AmbientLight(0x223366, 0.5);
+scene.add(ambient);
+
+const dirLight = new THREE.DirectionalLight(0xfff5ee, 1.5);
+dirLight.position.set(4, 14, 2);
+dirLight.castShadow = true;
+dirLight.shadow.mapSize.set(1024, 1024);
+dirLight.shadow.camera.near = 0.5;
+dirLight.shadow.camera.far = 40;
+dirLight.shadow.camera.left = -10;
+dirLight.shadow.camera.right = 10;
+dirLight.shadow.camera.top = 10;
+dirLight.shadow.camera.bottom = -10;
+scene.add(dirLight);
+
+// ─────────────────────────────────────────────────────────────
+// COORDINATE MAPPING
+// ─────────────────────────────────────────────────────────────
+function lonLatToXZ(lon, lat) {
+  return {
+    x: (lon / 180) * 7,
+    z: -(lat / 90) * 4.5
+  };
+}
+
+// ─────────────────────────────────────────────────────────────
+// STATIC GRID LINES
+// ─────────────────────────────────────────────────────────────
+function buildGrid() {
+  const mat = new THREE.LineBasicMaterial({
+    color: 0x1a2a4a,
+    transparent: true,
+    opacity: 0.5
+  });
+  const group = new THREE.Group();
+  // longitude lines every 30°
+  for (let lon = -180; lon <= 180; lon += 30) {
+    const x = (lon / 180) * 7;
+    const pts = [
+      new THREE.Vector3(x, 0.005, -4.5),
+      new THREE.Vector3(x, 0.005, 4.5)
+    ];
+    group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), mat));
+  }
+  // latitude lines every 30°
+  for (let lat = -90; lat <= 90; lat += 30) {
+    const z = -(lat / 90) * 4.5;
+    const pts = [
+      new THREE.Vector3(-7, 0.005, z),
+      new THREE.Vector3(7, 0.005, z)
+    ];
+    group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), mat));
+  }
+  scene.add(group);
+}
+buildGrid();
+
+// ─────────────────────────────────────────────────────────────
+// TERRAIN HEIGHT FUNCTION
+// ─────────────────────────────────────────────────────────────
+function gaussianContribution(score, dx, dz) {
+  const d2 = dx * dx + dz * dz;
+  const g = Math.exp(-d2 / (2 * SIGMA * SIGMA));
+  return (score / 100) * HEIGHT_SCALE * Math.pow(g, GAUSSIAN_POWER);
+}
+
+function heightAt(x, z, idx) {
+  let h = 0;
+  for (const n of nations) {
+    const p = lonLatToXZ(n.lon, n.lat);
+    h += gaussianContribution(n.scores[idx], x - p.x, z - p.z);
+  }
+  return h;
+}
+
+// ─────────────────────────────────────────────────────────────
+// REBUILD (called whenever year changes)
+// ─────────────────────────────────────────────────────────────
+function disposeAll() {
+  for (const obj of disposables) {
+    if (obj.geometry) obj.geometry.dispose();
+    if (obj.material) {
+      if (obj.material.map) obj.material.map.dispose();
+      obj.material.dispose();
+    }
+    if (obj.parent) obj.parent.remove(obj);
+  }
+  disposables.length = 0;
+  hitSpheres.length = 0;
+}
+
+function buildLabelTexture(name, score, color) {
+  const canvas = document.createElement('canvas');
+  canvas.width = 256;
+  canvas.height = 96;
+  const ctx = canvas.getContext('2d');
+  // background rounded rect
+  ctx.fillStyle = 'rgba(8, 14, 30, 0.85)';
+  const r = 14;
+  ctx.beginPath();
+  ctx.moveTo(r, 2);
+  ctx.lineTo(256 - r, 2);
+  ctx.quadraticCurveTo(254, 2, 254, r);
+  ctx.lineTo(254, 94 - r);
+  ctx.quadraticCurveTo(254, 94, 256 - r, 94);
+  ctx.lineTo(r, 94);
+  ctx.quadraticCurveTo(2, 94, 2, 94 - r);
+  ctx.lineTo(2, r);
+  ctx.quadraticCurveTo(2, 2, r, 2);
+  ctx.fill();
+  // border in country color
+  ctx.strokeStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.8)`;
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  // name
+  ctx.fillStyle = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+  ctx.font = 'bold 30px -apple-system, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(name, 128, 32);
+  // score
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '600 28px -apple-system, sans-serif';
+  ctx.fillText(score.toString(), 128, 70);
+  return new THREE.CanvasTexture(canvas);
+}
+
+function rebuild() {
+  disposeAll();
+
+  // ── Terrain mesh ──
+  const geom = new THREE.PlaneGeometry(14, 9, 100, 100);
+  geom.rotateX(-Math.PI / 2);
+  const positions = geom.attributes.position;
+  const colorArr = new Float32Array(positions.count * 3);
+
+  const baseR = 0x06 / 255, baseG = 0x0c / 255, baseB = 0x1a / 255;
+
+  for (let i = 0; i < positions.count; i++) {
+    const x = positions.getX(i);
+    const z = positions.getZ(i);
+    let h = 0;
+    let bestNation = null;
+    let bestContrib = 0;
+
+    for (const n of nations) {
+      const p = lonLatToXZ(n.lon, n.lat);
+      const c = gaussianContribution(n.scores[currentIdx], x - p.x, z - p.z);
+      h += c;
+      if (c > bestContrib) {
+        bestContrib = c;
+        bestNation = n;
+      }
+    }
+
+    positions.setY(i, h);
+
+    if (bestNation && bestContrib > 0.04) {
+      const t = Math.min(1, bestContrib / 1.0);
+      const nr = bestNation.color[0] / 255;
+      const ng = bestNation.color[1] / 255;
+      const nb = bestNation.color[2] / 255;
+      colorArr[i * 3] = baseR + (nr - baseR) * t;
+      colorArr[i * 3 + 1] = baseG + (ng - baseG) * t;
+      colorArr[i * 3 + 2] = baseB + (nb - baseB) * t;
+    } else {
+      colorArr[i * 3] = baseR;
+      colorArr[i * 3 + 1] = baseG;
+      colorArr[i * 3 + 2] = baseB;
+    }
+  }
+
+  geom.setAttribute('color', new THREE.BufferAttribute(colorArr, 3));
+  geom.computeVertexNormals();
+
+  const terrainMat = new THREE.MeshStandardMaterial({
+    vertexColors: true,
+    metalness: 0.1,
+    roughness: 0.65,
+    flatShading: false
+  });
+  const terrain = new THREE.Mesh(geom, terrainMat);
+  terrain.receiveShadow = true;
+  scene.add(terrain);
+  disposables.push(terrain);
+
+  // ── Per-nation peak elements ──
+  for (const nation of nations) {
+    const score = nation.scores[currentIdx];
+    const p = lonLatToXZ(nation.lon, nation.lat);
+    const peakH = heightAt(p.x, p.z, currentIdx);
+
+    // Hit sphere (invisible)
+    const sphereGeom = new THREE.SphereGeometry(0.6, 16, 16);
+    const sphereMat = new THREE.MeshBasicMaterial({ visible: false });
+    const hitSphere = new THREE.Mesh(sphereGeom, sphereMat);
+    hitSphere.position.set(p.x, peakH, p.z);
+    hitSphere.userData.nation = nation;
+    scene.add(hitSphere);
+    disposables.push(hitSphere);
+    hitSpheres.push(hitSphere);
+
+    // Label sprite
+    const tex = buildLabelTexture(nation.name, score, nation.color);
+    const sprMat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthTest: false });
+    const sprite = new THREE.Sprite(sprMat);
+    sprite.position.set(p.x, peakH + 0.55, p.z);
+    sprite.scale.set(1.3, 0.5, 1);
+    sprite.renderOrder = 10;
+    scene.add(sprite);
+    disposables.push(sprite);
+
+    // Point light at peak
+    const pl = new THREE.PointLight(
+      new THREE.Color(nation.color[0] / 255, nation.color[1] / 255, nation.color[2] / 255),
+      (score / 100) * 2.0,
+      4
+    );
+    pl.position.set(p.x, peakH + 0.25, p.z);
+    scene.add(pl);
+    disposables.push(pl);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// CAMERA POSITIONING
+// ─────────────────────────────────────────────────────────────
+function updateCamera() {
+  const tilt = (tiltDeg * Math.PI) / 180;
+  const rot = (rotateDeg * Math.PI) / 180;
+  camera.position.x = distance * Math.cos(tilt) * Math.sin(rot);
+  camera.position.y = distance * Math.sin(tilt);
+  camera.position.z = distance * Math.cos(tilt) * Math.cos(rot);
+  camera.lookAt(0, 1.5, 0);
+}
+
+// ─────────────────────────────────────────────────────────────
+// HOVER POPUP
+// ─────────────────────────────────────────────────────────────
+const popup = document.getElementById('popup');
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+const ordinals = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th'];
+
+function showPopup(nation, clientX, clientY) {
+  // Read currentIdx at hover time, not build time
+  const idx = currentIdx;
+  const score = nation.scores[idx];
+
+  // Rank
+  const ranked = nations
+    .map(n => ({ n, s: n.scores[idx] }))
+    .sort((a, b) => b.s - a.s);
+  const rank = ranked.findIndex(o => o.n === nation) + 1;
+
+  // Change vs last decade
+  let changeStr = '';
+  if (idx > 0) {
+    const prev = nation.scores[idx - 1];
+    const delta = score - prev;
+    if (delta > 0) changeStr = `<span class="up">▲ +${delta}</span> vs last decade`;
+    else if (delta < 0) changeStr = `<span class="down">▼ ${delta}</span> vs last decade`;
+    else changeStr = `<span style="color:#aab8d4">— no change</span> vs last decade`;
+  } else {
+    changeStr = '<span style="color:#6878a0">starting decade</span>';
+  }
+
+  // Closest peer (most similar score)
+  let peer = null;
+  let bestDiff = Infinity;
+  for (const other of nations) {
+    if (other === nation) continue;
+    const diff = Math.abs(other.scores[idx] - score);
+    if (diff < bestDiff) {
+      bestDiff = diff;
+      peer = other;
+    }
+  }
+
+  // Story (map score idx → story idx)
+  const storyIdx = Math.min(
+    nation.stories.length - 1,
+    Math.floor((idx * nation.stories.length) / nation.scores.length)
+  );
+  const story = nation.stories[storyIdx];
+
+  const colorStr = `rgb(${nation.color[0]}, ${nation.color[1]}, ${nation.color[2]})`;
+  const peerColorStr = `rgb(${peer.color[0]}, ${peer.color[1]}, ${peer.color[2]})`;
+
+  popup.innerHTML = `
+    <div class="popup-header">
+      <span class="dot" style="background:${colorStr}"></span>
+      ${nation.name} · ${years[idx]}
+    </div>
+    <div class="popup-score" style="color:${colorStr}">${score}</div>
+    <div class="popup-meta">${ordinals[rank - 1]} of ${nations.length}</div>
+    <div class="popup-meta">${changeStr}</div>
+    <div class="popup-meta">closest peer: <span style="color:${peerColorStr};font-weight:600">${peer.name}</span> (${peer.scores[idx]})</div>
+    <div class="popup-story">${story}</div>
+  `;
+  popup.style.display = 'block';
+
+  // Position — keep on screen
+  const pad = 16;
+  const w = popup.offsetWidth;
+  const h = popup.offsetHeight;
+  let x = clientX + pad;
+  let y = clientY + pad;
+  if (x + w > window.innerWidth - 8) x = clientX - w - pad;
+  if (y + h > window.innerHeight - 8) y = clientY - h - pad;
+  popup.style.left = x + 'px';
+  popup.style.top = y + 'px';
+}
+
+function hidePopup() {
+  popup.style.display = 'none';
+}
+
+// ─────────────────────────────────────────────────────────────
+// INPUT
+// ─────────────────────────────────────────────────────────────
+const yearSlider = document.getElementById('year');
+const yearDisplay = document.getElementById('year-display');
+const tiltSlider = document.getElementById('tilt');
+const tiltVal = document.getElementById('tilt-val');
+const rotateSlider = document.getElementById('rotate');
+const rotateVal = document.getElementById('rotate-val');
+const playBtn = document.getElementById('play');
+
+function setYear(idx) {
+  currentIdx = Math.max(0, Math.min(years.length - 1, idx));
+  yearSlider.value = currentIdx;
+  yearDisplay.textContent = years[currentIdx];
+  rebuild();
+}
+
+yearSlider.addEventListener('input', e => {
+  stopPlay();
+  setYear(parseInt(e.target.value, 10));
+});
+
+tiltSlider.addEventListener('input', e => {
+  tiltDeg = parseInt(e.target.value, 10);
+  tiltVal.textContent = tiltDeg + '°';
+  updateCamera();
+});
+
+rotateSlider.addEventListener('input', e => {
+  rotateDeg = parseInt(e.target.value, 10);
+  rotateVal.textContent = rotateDeg + '°';
+  updateCamera();
+});
+
+function startPlay() {
+  if (playInterval) return;
+  playBtn.textContent = 'Stop';
+  playBtn.classList.add('playing');
+  playInterval = setInterval(() => {
+    let nxt = currentIdx + 1;
+    if (nxt >= years.length) nxt = 0;
+    setYear(nxt);
+  }, 800);
+}
+function stopPlay() {
+  if (!playInterval) return;
+  clearInterval(playInterval);
+  playInterval = null;
+  playBtn.textContent = 'Play';
+  playBtn.classList.remove('playing');
+}
+playBtn.addEventListener('click', () => {
+  if (playInterval) stopPlay(); else startPlay();
+});
+
+// Drag to rotate
+const canvas = renderer.domElement;
+canvas.addEventListener('mousedown', e => {
+  isDragging = true;
+  dragStartX = e.clientX;
+  dragStartY = e.clientY;
+  dragStartRotate = rotateDeg;
+  dragStartTilt = tiltDeg;
+  hidePopup();
+});
+window.addEventListener('mouseup', () => { isDragging = false; });
+window.addEventListener('mousemove', e => {
+  if (isDragging) {
+    const dx = e.clientX - dragStartX;
+    const dy = e.clientY - dragStartY;
+    rotateDeg = ((dragStartRotate - dx * 0.4) % 360 + 360) % 360;
+    tiltDeg = Math.max(20, Math.min(70, dragStartTilt + dy * 0.2));
+    rotateSlider.value = Math.round(rotateDeg);
+    rotateVal.textContent = Math.round(rotateDeg) + '°';
+    tiltSlider.value = Math.round(tiltDeg);
+    tiltVal.textContent = Math.round(tiltDeg) + '°';
+    updateCamera();
+    return;
+  }
+
+  // Hover detection
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(hitSpheres, false);
+  if (hits.length > 0) {
+    showPopup(hits[0].object.userData.nation, e.clientX, e.clientY);
+  } else {
+    hidePopup();
+  }
+});
+
+canvas.addEventListener('mouseleave', hidePopup);
+
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  distance += e.deltaY * 0.012;
+  distance = Math.max(8, Math.min(22, distance));
+  updateCamera();
+}, { passive: false });
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// ─────────────────────────────────────────────────────────────
+// INIT + RENDER LOOP
+// ─────────────────────────────────────────────────────────────
+setYear(0);
+updateCamera();
+
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>
