@@ -14,6 +14,38 @@ from _common import PROC, COUNTRY_MAP, DECADES
 
 WEIGHTED_VARS = ["gdp_per_capita", "life_expectancy", "education_years", "gini", "population"]
 
+# Documented data gaps surfaced during validation. Frontend can use these to
+# render explanatory tooltips instead of generic "missing data" warnings.
+KNOWN_GAPS = [
+    {
+        "country": "Russia",
+        "decades": [1820, 1830, 1840, 1850, 1860, 1880, 1910],
+        "note": "Pre-1860 GDP unavailable, 1880/1910 data missing",
+    },
+    {
+        "country": "South Africa",
+        "decades": [1820, 1830, 1840, 1850, 1860],
+        "note": "Data starts 1870",
+    },
+    {
+        "country": "South Korea",
+        "decades": [1820, 1830, 1840, 1850, 1860],
+        "note": "Sparse pre-1870 coverage",
+    },
+]
+
+
+def quality_label(year_vars, has_score):
+    """Classify decade-level data quality from per-variable null counts."""
+    if not has_score:
+        return "null"
+    n_present = sum(1 for v in year_vars.values() if v["raw"] is not None)
+    if n_present >= 4:
+        return "good"
+    if n_present >= 2:
+        return "partial"
+    return "sparse"
+
 # Per-user mapping. Hungary and Poland kept under "Western Europe" per the
 # explicit specification (treats it as a European-core region, not strict geography).
 REGION_MAP = {
@@ -100,6 +132,7 @@ def main():
             "variables":     WEIGHTED_VARS,
             "normalization": "per-year",
             "generated":     datetime.date.today().isoformat(),
+            "known_gaps":    KNOWN_GAPS,
         },
         "countries": [],
     }
@@ -107,9 +140,10 @@ def main():
     for canonical_name, iso3, tier in COUNTRY_MAP:
         region = REGION_MAP.get(canonical_name, "Other")
 
-        scores_dict    = {}
-        peers_dict     = {}
-        variables_dict = {}
+        scores_dict       = {}
+        peers_dict        = {}
+        variables_dict    = {}
+        data_quality_dict = {}
 
         for year in DECADES:
             ystr = str(year)
@@ -117,6 +151,7 @@ def main():
             # Score
             s = score_idx.get((canonical_name, year), None)
             scores_dict[ystr] = round_or_none(s, 1)
+            has_score = scores_dict[ystr] is not None
 
             # Peers (top 3)
             ppl = peers[
@@ -146,15 +181,17 @@ def main():
                 else:
                     year_vars[var] = {"raw": None, "normalized": None}
             variables_dict[ystr] = year_vars
+            data_quality_dict[ystr] = quality_label(year_vars, has_score)
 
         output["countries"].append({
-            "name":      canonical_name,
-            "iso3":      iso3,
-            "region":    region,
-            "tier":      tier,
-            "scores":    scores_dict,
-            "peers":     peers_dict,
-            "variables": variables_dict,
+            "name":         canonical_name,
+            "iso3":         iso3,
+            "region":       region,
+            "tier":         tier,
+            "scores":       scores_dict,
+            "peers":        peers_dict,
+            "variables":    variables_dict,
+            "data_quality": data_quality_dict,
         })
 
     out_path = PROC / "historylens_final.json"

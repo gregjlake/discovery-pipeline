@@ -30,7 +30,44 @@
       "population"
     ],
     "normalization": "per-year",
-    "generated": "2026-05-02"
+    "generated": "2026-05-05",
+    "known_gaps": [
+      {
+        "country": "Russia",
+        "decades": [
+          1820,
+          1830,
+          1840,
+          1850,
+          1860,
+          1880,
+          1910
+        ],
+        "note": "Pre-1860 GDP unavailable, 1880/1910 data missing"
+      },
+      {
+        "country": "South Africa",
+        "decades": [
+          1820,
+          1830,
+          1840,
+          1850,
+          1860
+        ],
+        "note": "Data starts 1870"
+      },
+      {
+        "country": "South Korea",
+        "decades": [
+          1820,
+          1830,
+          1840,
+          1850,
+          1860
+        ],
+        "note": "Sparse pre-1870 coverage"
+      }
+    ]
   },
   "countries": [
     {
@@ -746,6 +783,27 @@
             "normalized": 1.1
           }
         }
+      },
+      "data_quality": {
+        "1820": "good",
+        "1830": "partial",
+        "1840": "partial",
+        "1850": "good",
+        "1860": "good",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -1461,6 +1519,27 @@
             "normalized": 4.5
           }
         }
+      },
+      "data_quality": {
+        "1820": "good",
+        "1830": "partial",
+        "1840": "partial",
+        "1850": "good",
+        "1860": "good",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -2176,6 +2255,27 @@
             "normalized": 4.6
           }
         }
+      },
+      "data_quality": {
+        "1820": "good",
+        "1830": "partial",
+        "1840": "partial",
+        "1850": "good",
+        "1860": "partial",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -2891,6 +2991,27 @@
             "normalized": 0.5
           }
         }
+      },
+      "data_quality": {
+        "1820": "good",
+        "1830": "partial",
+        "1840": "partial",
+        "1850": "good",
+        "1860": "partial",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -3606,6 +3727,27 @@
             "normalized": 0.1
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "good",
+        "1860": "good",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -4321,6 +4463,27 @@
             "normalized": 0.2
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "partial",
+        "1850": "good",
+        "1860": "partial",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -5010,6 +5173,27 @@
             "normalized": 0.6
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "good",
+        "1860": "good",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -5725,6 +5909,27 @@
             "normalized": 4.3
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -6440,6 +6645,27 @@
             "normalized": 22.3
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -7155,6 +7381,27 @@
             "normalized": 1.0
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -7844,6 +8091,27 @@
             "normalized": 2.8
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -8559,6 +8827,27 @@
             "normalized": 3.0
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -9248,6 +9537,27 @@
             "normalized": 0.4
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -9924,6 +10234,27 @@
             "normalized": 9.9
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -10613,6 +10944,27 @@
             "normalized": 7.6
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "null",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -11289,6 +11641,27 @@
             "normalized": 13.9
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -12004,6 +12377,27 @@
             "normalized": 6.3
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "partial",
+        "1890": "partial",
+        "1900": "partial",
+        "1910": "partial",
+        "1920": "partial",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -12654,6 +13048,27 @@
             "normalized": 22.8
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "null",
+        "1890": "partial",
+        "1900": "good",
+        "1910": "null",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -13369,6 +13784,27 @@
             "normalized": 1.3
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "good",
+        "1860": "partial",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "good",
+        "1920": "partial",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -14084,6 +14520,27 @@
             "normalized": 2.2
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "good",
+        "1920": "partial",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -14773,6 +15230,27 @@
             "normalized": 0.2
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "good",
+        "1880": "good",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -15462,6 +15940,27 @@
             "normalized": 2.9
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "null",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -16164,6 +16663,27 @@
             "normalized": 1.5
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "null",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "good",
+        "1920": "partial",
+        "1930": "partial",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -16866,6 +17386,27 @@
             "normalized": 0.6
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "good",
+        "1920": "partial",
+        "1930": "partial",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -17568,6 +18109,27 @@
             "normalized": 1.7
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "partial",
+        "1890": "partial",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -18283,6 +18845,27 @@
             "normalized": 100.0
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "good",
+        "1860": "null",
+        "1870": "good",
+        "1880": "null",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "partial",
+        "1920": "null",
+        "1930": "good",
+        "1940": "null",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -18959,6 +19542,27 @@
             "normalized": 80.9
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "good",
+        "1880": "null",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "good",
+        "1920": "partial",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -19648,6 +20252,27 @@
             "normalized": 0.0
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "good",
+        "1910": "good",
+        "1920": "partial",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -20337,6 +20962,27 @@
             "normalized": 0.0
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "partial",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -21000,6 +21646,27 @@
             "normalized": 0.6
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "good",
+        "1880": "null",
+        "1890": "partial",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -21676,6 +22343,27 @@
             "normalized": 0.1
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "good",
+        "1880": "null",
+        "1890": "partial",
+        "1900": "null",
+        "1910": "partial",
+        "1920": "null",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -22352,6 +23040,27 @@
             "normalized": 6.2
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "good",
+        "1880": "null",
+        "1890": "partial",
+        "1900": "null",
+        "1910": "good",
+        "1920": "partial",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -22989,6 +23698,27 @@
             "normalized": 0.4
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "null",
+        "1880": "null",
+        "1890": "null",
+        "1900": "good",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -23652,6 +24382,27 @@
             "normalized": 0.7
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "null",
+        "1880": "null",
+        "1890": "null",
+        "1900": "partial",
+        "1910": "good",
+        "1920": "good",
+        "1930": "good",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -24367,6 +25118,27 @@
             "normalized": 16.6
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "null",
+        "1890": "partial",
+        "1900": "null",
+        "1910": "partial",
+        "1920": "null",
+        "1930": "null",
+        "1940": "null",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -25017,6 +25789,27 @@
             "normalized": 3.5
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "null",
+        "1890": "null",
+        "1900": "null",
+        "1910": "null",
+        "1920": "partial",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -25706,6 +26499,27 @@
             "normalized": 3.5
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "good",
+        "1920": "null",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -26382,6 +27196,27 @@
             "normalized": 5.2
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "good",
+        "1880": "null",
+        "1890": "partial",
+        "1900": "null",
+        "1910": "partial",
+        "1920": "null",
+        "1930": "partial",
+        "1940": "partial",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -27045,6 +27880,27 @@
             "normalized": 2.8
           }
         }
+      },
+      "data_quality": {
+        "1820": "partial",
+        "1830": "null",
+        "1840": "null",
+        "1850": "partial",
+        "1860": "null",
+        "1870": "partial",
+        "1880": "null",
+        "1890": "partial",
+        "1900": "null",
+        "1910": "partial",
+        "1920": "partial",
+        "1930": "partial",
+        "1940": "null",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     },
     {
@@ -27734,6 +28590,27 @@
             "normalized": 0.6
           }
         }
+      },
+      "data_quality": {
+        "1820": "null",
+        "1830": "null",
+        "1840": "null",
+        "1850": "null",
+        "1860": "null",
+        "1870": "good",
+        "1880": "partial",
+        "1890": "good",
+        "1900": "partial",
+        "1910": "partial",
+        "1920": "good",
+        "1930": "partial",
+        "1940": "good",
+        "1950": "good",
+        "1960": "good",
+        "1970": "good",
+        "1980": "good",
+        "1990": "good",
+        "2000": "good"
       }
     }
   ]

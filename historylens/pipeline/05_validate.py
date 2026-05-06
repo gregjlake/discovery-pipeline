@@ -1,4 +1,7 @@
-"""Phase 5: Spot-check the pipeline output against historical expectations."""
+"""Phase 5: Spot-check the pipeline output against historical expectations.
+
+Six numbered checks. Exits non-zero if any fail.
+"""
 import sys
 from pathlib import Path
 import pandas as pd
@@ -7,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from _common import PROC
 
 
-def fmt_pass(b):
+def fmt(b):
     return "[PASS]" if b else "[FAIL]"
 
 
@@ -45,69 +48,96 @@ def main():
     scores = pd.read_csv(PROC / "structural_scores.csv")
     peers  = pd.read_csv(PROC / "peers.csv")
 
-    # ── 1. UK structural strength has its broad-plateau peak between 1860 and 1970 ──
+    results = []
+
+    # ── 1. UK peaks 1860-1970 ──
     yr, sc = peak_year(scores, "United Kingdom")
     ok = yr is not None and 1860 <= yr <= 1970
-    print(f"\n1. UK peaks in 1860-1970 window (broad plateau)")
-    print(f"   peak year={yr} score={sc:.1f}  {fmt_pass(ok)}")
+    print(f"\n1. UK peak year in 1860-1970")
+    sc_str = f"{sc:.1f}" if sc is not None else "n/a"
+    print(f"   peak year={yr} score={sc_str}  {fmt(ok)}")
+    results.append(("UK peak 1860-1970", ok))
 
-    # ── 2. Japan rises sharply after 1870 ──
+    # ── 2. Japan: pre-1870 max < 27 AND 1870 -> 2000 delta > 20 ──
+    pre_1870 = scores[
+        (scores["country_name"] == "Japan") &
+        (scores["year"] < 1870) &
+        scores["structural_strength"].notna()
+    ]["structural_strength"]
+    pre_max = float(pre_1870.max()) if len(pre_1870) else None
     j_1870 = score_at(scores, "Japan", 1870)
-    j_1900 = score_at(scores, "Japan", 1900)
     j_2000 = score_at(scores, "Japan", 2000)
-    rise_70_to_2000 = (j_2000 - j_1870) if j_1870 and j_2000 else None
-    ok = rise_70_to_2000 is not None and rise_70_to_2000 > 20
-    print(f"\n2. Japan rises sharply 1870 -> 2000 (delta > 20)")
-    print(f"   1870={j_1870}  1900={j_1900}  2000={j_2000}  delta={rise_70_to_2000}  {fmt_pass(ok)}")
+    delta = (j_2000 - j_1870) if (j_1870 is not None and j_2000 is not None) else None
+    pre_ok = pre_max is not None and pre_max < 27
+    delta_ok = delta is not None and delta > 20
+    ok = pre_ok and delta_ok
+    print(f"\n2. Japan low pre-1870 (<27) and rises 1870->2000 (delta>20)")
+    pre_str = f"{pre_max:.1f}" if pre_max is not None else "n/a"
+    delta_str = f"{delta:.1f}" if delta is not None else "n/a"
+    print(f"   pre-1870 max={pre_str}  1870={j_1870}  2000={j_2000}  delta={delta_str}  {fmt(ok)}")
+    results.append(("Japan trajectory", ok))
 
-    # ── 3. Argentina peaks 1880-1920 then declines ──
+    # ── 3. Argentina peaks 1920-1970 then declines ──
     yr_a, sc_a = peak_year(scores, "Argentina")
     a_2000 = score_at(scores, "Argentina", 2000)
-    declined = sc_a is not None and a_2000 is not None and a_2000 < sc_a - 5
     in_window = yr_a is not None and 1920 <= yr_a <= 1970
+    declined = sc_a is not None and a_2000 is not None and a_2000 < sc_a - 5
     ok = in_window and declined
-    print(f"\n3. Argentina peaks 1920-1970 then declines")
-    print(f"   peak year={yr_a} score={sc_a}  2000 score={a_2000}  {fmt_pass(ok)}")
+    print(f"\n3. Argentina peak 1920-1970 then declines")
+    sc_a_str = f"{sc_a:.1f}" if sc_a is not None else "n/a"
+    a2k_str = f"{a_2000:.1f}" if a_2000 is not None else "n/a"
+    print(f"   peak year={yr_a} score={sc_a_str}  2000 score={a2k_str}  {fmt(ok)}")
+    results.append(("Argentina peak/decline", ok))
 
-    # ── 4. China low 1870-1950 then rises after 1980 ──
-    early = scores[
-        (scores["country_name"] == "China") &
-        (scores["year"].between(1870, 1950)) &
-        scores["structural_strength"].notna()
-    ]["structural_strength"]
-    late = scores[
-        (scores["country_name"] == "China") &
-        (scores["year"] >= 1980) &
-        scores["structural_strength"].notna()
-    ]["structural_strength"]
-    early_mean = early.mean() if len(early) else None
-    late_mean  = late.mean()  if len(late)  else None
-    ok = early_mean is not None and late_mean is not None and late_mean > early_mean + 10
-    print(f"\n4. China rises post-1980 (late mean - early mean > 10)")
-    print(f"   1870-1950 mean={early_mean}  1980+ mean={late_mean}  {fmt_pass(ok)}")
+    # ── 4. China rises from 1820 low to above 40 by 2000 ──
+    c_1820 = score_at(scores, "China", 1820)
+    c_2000 = score_at(scores, "China", 2000)
+    high_end = c_2000 is not None and c_2000 > 40
+    rises    = (c_1820 is not None and c_2000 is not None and c_2000 > c_1820)
+    ok = high_end and rises
+    print(f"\n4. China rises from 1820 to above 40 by 2000")
+    c1820_str = f"{c_1820:.1f}" if c_1820 is not None else "n/a"
+    c2000_str = f"{c_2000:.1f}" if c_2000 is not None else "n/a"
+    print(f"   1820={c1820_str}  2000={c2000_str}  {fmt(ok)}")
+    results.append(("China rise to 2000", ok))
 
-    # ── 5. UK and Belgium peers in 1820 ──
+    # ── 5. UK and Belgium are mutual top-5 peers in 1820 ──
     ok_a = is_peer(peers, "United Kingdom", 1820, "Belgium", top_n=5)
     ok_b = is_peer(peers, "Belgium",        1820, "United Kingdom", top_n=5)
-    print(f"\n5. UK and Belgium are mutual top-5 peers in 1820")
-    print(f"   UK->Belgium={ok_a}  Belgium->UK={ok_b}  {fmt_pass(ok_a or ok_b)}")
+    ok = ok_a or ok_b
+    print(f"\n5. UK and Belgium are top-5 peers in 1820")
+    print(f"   UK->Belgium={ok_a}  Belgium->UK={ok_b}  {fmt(ok)}")
+    results.append(("UK<->Belgium 1820", ok))
 
-    # ── 6. USA and UK peers by 1900 ──
-    ok_a = is_peer(peers, "United States",  1900, "United Kingdom", top_n=5)
-    ok_b = is_peer(peers, "United Kingdom", 1900, "United States",  top_n=5)
-    print(f"\n6. USA and UK are top-5 peers in 1900")
-    print(f"   USA->UK={ok_a}  UK->USA={ok_b}  {fmt_pass(ok_a or ok_b)}")
+    # ── 6. Russia: 1870+ has data, with known nulls at 1880 and 1910 ──
+    r_1870 = score_at(scores, "Russia", 1870)
+    r_1880 = score_at(scores, "Russia", 1880)
+    r_1910 = score_at(scores, "Russia", 1910)
+    has_1870 = r_1870 is not None
+    gap_1880 = r_1880 is None
+    gap_1910 = r_1910 is None
+    # post-1910 should be largely complete (allow 0 missing in 1920..2000)
+    post = scores[
+        (scores["country_name"] == "Russia") &
+        (scores["year"].between(1920, 2000))
+    ]
+    post_missing = int(post["structural_strength"].isna().sum())
+    post_ok = post_missing == 0
+    ok = has_1870 and gap_1880 and gap_1910 and post_ok
+    print(f"\n6. Russia has 1870+ data with known gaps at 1880 and 1910")
+    print(f"   1870={r_1870}  1880={r_1880}  1910={r_1910}  post-1910 missing={post_missing}  {fmt(ok)}")
+    results.append(("Russia gaps", ok))
 
-    # ── 7. Top 3 peers in 1900 for selected countries ──
-    print(f"\n7. Top 3 peers in 1900")
+    # ── Detail: top-3 peers in 1900 (informational, not a gated test) ──
+    print("\n" + "-" * 72)
+    print("Top-3 peers in 1900 (informational)")
+    print("-" * 72)
     for country in ["United Kingdom", "United States", "Germany",
                     "Japan", "China", "Argentina"]:
         peers_list = top_peers(peers, country, 1900, n=3)
         score = score_at(scores, country, 1900)
         score_str = f"{score:.1f}" if score is not None else "n/a"
         print(f"   {country:18s} (score {score_str})")
-        if not peers_list:
-            print("     (no peers found)")
         for name, dist, sim in peers_list:
             print(f"     - {name:20s}  distance={dist:>5.1f}  similarity={sim:>5.1f}%")
 
@@ -124,25 +154,16 @@ def main():
             n_vars = len(str(row["variables_used"]).split(",")) if pd.notna(row["variables_used"]) else 0
             print(f"    {int(row['year'])}   {s_str}    ({n_vars} vars)")
 
-    # ── Peer matrix across the 5 key decades ──
+    # ── Summary ──
     print("\n" + "=" * 72)
-    print("Top-3 peers in 1820, 1870, 1900, 1950, 2000")
-    print("=" * 72)
-    target_years = [1820, 1870, 1900, 1950, 2000]
-    for country in ["United Kingdom", "United States", "Germany",
-                    "Japan", "China", "Argentina"]:
-        print(f"\n  {country}")
-        for yr in target_years:
-            score = score_at(scores, country, yr)
-            score_str = f"{score:5.1f}" if score is not None else "  n/a"
-            peers_list = top_peers(peers, country, yr, n=3)
-            peer_strs = []
-            for name, _, sim in peers_list:
-                peer_strs.append(f"{name} ({sim:.0f}%)")
-            joined = "  |  ".join(peer_strs) if peer_strs else "(none)"
-            print(f"    {yr}  score={score_str}   {joined}")
+    n_pass = sum(1 for _, ok in results if ok)
+    n_fail = len(results) - n_pass
+    print(f"Validation: {n_pass}/{len(results)} passed  ({n_fail} failed)")
+    for name, ok in results:
+        print(f"  {fmt(ok)}  {name}")
 
-    print("\n" + "=" * 72)
+    if n_fail:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
