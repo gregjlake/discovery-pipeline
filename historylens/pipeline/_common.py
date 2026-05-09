@@ -28,20 +28,98 @@ SOURCE_PRIORITY = {
     "education_years":  ["CLIO-INFRA"],
 }
 
-# Weights for structural strength score. Urbanization is intentionally excluded.
-STRUCTURAL_WEIGHTS = {
-    "gdp_per_capita":  0.30,
-    "life_expectancy": 0.25,
-    "education_years": 0.20,
-    "gini":            0.15,   # inverted at normalize step (lower = better)
-    "population":      0.10,
+# Variables that enter the structural strength composite (population excluded
+# as of v2 — it is a scale variable, not a development indicator).
+SCORING_VARS = ["gdp_per_capita", "life_expectancy", "education_years", "gini"]
+
+# Variables collected and exported but NOT scored (display-only in the JSON).
+DISPLAY_ONLY_VARS = ["population"]
+
+# Three weight schemes. Each must sum to 1.0 over SCORING_VARS.
+# A = balanced (default); B = GDP-heavy classical; C = capability/Sen-HDI.
+WEIGHT_SCHEMES = {
+    "A": {
+        "label": "Balanced (default)",
+        "weights": {
+            "gdp_per_capita":  0.40,
+            "life_expectancy": 0.30,
+            "education_years": 0.20,
+            "gini":            0.10,
+        },
+    },
+    "B": {
+        "label": "GDP-heavy (classical economics)",
+        "weights": {
+            "gdp_per_capita":  0.55,
+            "life_expectancy": 0.20,
+            "education_years": 0.15,
+            "gini":            0.10,
+        },
+    },
+    "C": {
+        "label": "Capability approach (Sen / HDI)",
+        "weights": {
+            "gdp_per_capita":  0.25,
+            "life_expectancy": 0.35,
+            "education_years": 0.30,
+            "gini":            0.10,
+        },
+    },
 }
+
+# Default scheme for the canonical structural_strength field.
+DEFAULT_SCHEME = "A"
+STRUCTURAL_WEIGHTS = WEIGHT_SCHEMES[DEFAULT_SCHEME]["weights"]
 
 # Variables whose direction is "lower = better" — inverted at normalize step.
 INVERT_AT_NORMALIZE = {"gini"}
 
 SPARSE_MIN_DECADES = 6
 MIN_VARS_FOR_SCORE = 3
+
+# Region map used by 04_peers.py (regional peers) and 06_export.py.
+# Hungary and Poland kept under "Western Europe" per project convention.
+REGION_MAP = {
+    # Western Europe
+    "Netherlands":    "Western Europe", "United Kingdom": "Western Europe",
+    "France":         "Western Europe", "Sweden":         "Western Europe",
+    "Norway":         "Western Europe", "Denmark":        "Western Europe",
+    "Belgium":        "Western Europe", "Italy":          "Western Europe",
+    "Spain":          "Western Europe", "Switzerland":    "Western Europe",
+    "Germany":        "Western Europe", "Finland":        "Western Europe",
+    "Portugal":       "Western Europe", "Greece":         "Western Europe",
+    "Ireland":        "Western Europe", "Hungary":        "Western Europe",
+    "Poland":         "Western Europe",
+    # Anglo-Pacific
+    "Australia":      "Anglo-Pacific",  "Canada":         "Anglo-Pacific",
+    # North America
+    "United States":  "North America",  "Mexico":         "North America",
+    # Latin America
+    "Chile":     "Latin America", "Argentina":  "Latin America",
+    "Brazil":    "Latin America", "Colombia":   "Latin America",
+    "Peru":      "Latin America", "Venezuela":  "Latin America",
+    "Jamaica":   "Latin America", "Uruguay":    "Latin America",
+    "Bolivia":   "Latin America", "Cuba":       "Latin America",
+    # East Asia
+    "Japan":         "East Asia", "China":       "East Asia",
+    "South Korea":   "East Asia", "Indonesia":   "East Asia",
+    "Philippines":   "East Asia",
+    # South Asia
+    "India":         "South Asia",
+    # Eastern Europe
+    "Russia":        "Eastern Europe",
+    # Africa
+    "South Africa":  "Africa", "Egypt":         "Africa",
+}
+
+
+def redistribute_weights(scheme_weights, available_vars):
+    """Return weights renormalized over the subset of vars actually present."""
+    avail = {v: scheme_weights[v] for v in available_vars if v in scheme_weights}
+    total = sum(avail.values())
+    if total == 0:
+        return {}
+    return {v: w / total for v, w in avail.items()}
 
 # 40-country target list with canonical names + ISO3 codes + tier
 COUNTRY_MAP = [

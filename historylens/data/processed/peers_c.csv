@@ -1,0 +1,2922 @@
+country_name,iso3,year,scheme,peer_rank,peer_name,peer_iso3,distance,similarity_pct,shared_vars
+Argentina,ARG,1820,C,1,Canada,CAN,6.203,93.8,2
+Argentina,ARG,1820,C,2,Ireland,IRL,7.972,92.0,2
+Argentina,ARG,1820,C,3,Norway,NOR,9.286,90.7,2
+Argentina,ARG,1820,C,4,Japan,JPN,14.346,85.7,2
+Argentina,ARG,1820,C,5,Portugal,PRT,14.588,85.4,2
+Argentina,ARG,1850,C,1,Spain,ESP,7.454,92.5,2
+Argentina,ARG,1850,C,2,Canada,CAN,10.498,89.5,2
+Argentina,ARG,1850,C,3,Norway,NOR,12.094,87.9,2
+Argentina,ARG,1850,C,4,Portugal,PRT,12.282,87.7,2
+Argentina,ARG,1850,C,5,Sweden,SWE,19.161,80.8,2
+Argentina,ARG,1870,C,1,Greece,GRC,6.129,93.9,3
+Argentina,ARG,1870,C,2,Finland,FIN,6.935,93.1,3
+Argentina,ARG,1870,C,3,Venezuela,VEN,9.106,90.9,2
+Argentina,ARG,1870,C,4,Italy,ITA,9.731,90.3,3
+Argentina,ARG,1870,C,5,Russia,RUS,12.42,87.6,2
+Argentina,ARG,1880,C,1,Italy,ITA,3.661,96.3,3
+Argentina,ARG,1880,C,2,Spain,ESP,4.558,95.4,2
+Argentina,ARG,1880,C,3,Greece,GRC,6.123,93.9,2
+Argentina,ARG,1880,C,4,South Africa,ZAF,6.854,93.1,2
+Argentina,ARG,1880,C,5,Chile,CHL,6.983,93.0,2
+Argentina,ARG,1890,C,1,Uruguay,URY,2.932,97.1,2
+Argentina,ARG,1890,C,2,Venezuela,VEN,13.973,86.0,2
+Argentina,ARG,1890,C,3,Chile,CHL,16.969,83.0,3
+Argentina,ARG,1890,C,4,Italy,ITA,17.815,82.2,4
+Argentina,ARG,1890,C,5,Japan,JPN,21.029,79.0,4
+Argentina,ARG,1900,C,1,Italy,ITA,11.525,88.5,3
+Argentina,ARG,1900,C,2,Finland,FIN,15.706,84.3,3
+Argentina,ARG,1900,C,3,Japan,JPN,18.125,81.9,3
+Argentina,ARG,1900,C,4,Spain,ESP,18.677,81.3,3
+Argentina,ARG,1900,C,5,Cuba,CUB,20.021,80.0,2
+Argentina,ARG,1910,C,1,Italy,ITA,14.27,85.7,4
+Argentina,ARG,1910,C,2,Uruguay,URY,18.883,81.1,3
+Argentina,ARG,1910,C,3,Jamaica,JAM,23.107,76.9,3
+Argentina,ARG,1910,C,4,Japan,JPN,23.583,76.4,4
+Argentina,ARG,1910,C,5,Finland,FIN,24.01,76.0,4
+Argentina,ARG,1920,C,1,Italy,ITA,11.387,88.6,3
+Argentina,ARG,1920,C,2,Uruguay,URY,12.524,87.5,3
+Argentina,ARG,1920,C,3,Finland,FIN,15.224,84.8,3
+Argentina,ARG,1920,C,4,Japan,JPN,19.012,81.0,3
+Argentina,ARG,1920,C,5,Greece,GRC,19.665,80.3,3
+Argentina,ARG,1930,C,1,Uruguay,URY,6.205,93.8,3
+Argentina,ARG,1930,C,2,Italy,ITA,11.464,88.5,3
+Argentina,ARG,1930,C,3,Finland,FIN,12.79,87.2,3
+Argentina,ARG,1930,C,4,Spain,ESP,15.398,84.6,3
+Argentina,ARG,1930,C,5,Hungary,HUN,18.444,81.6,3
+Argentina,ARG,1940,C,1,Italy,ITA,7.515,92.5,3
+Argentina,ARG,1940,C,2,Uruguay,URY,9.643,90.4,3
+Argentina,ARG,1940,C,3,Belgium,BEL,12.466,87.5,3
+Argentina,ARG,1940,C,4,Greece,GRC,15.474,84.5,3
+Argentina,ARG,1940,C,5,Japan,JPN,16.418,83.6,2
+Argentina,ARG,1950,C,1,Uruguay,URY,7.892,92.1,3
+Argentina,ARG,1950,C,2,Finland,FIN,8.592,91.4,4
+Argentina,ARG,1950,C,3,Italy,ITA,10.31,89.7,4
+Argentina,ARG,1950,C,4,Belgium,BEL,10.64,89.4,4
+Argentina,ARG,1950,C,5,Russia,RUS,14.604,85.4,3
+Argentina,ARG,1960,C,1,Uruguay,URY,8.591,91.4,3
+Argentina,ARG,1960,C,2,Italy,ITA,8.985,91.0,4
+Argentina,ARG,1960,C,3,Finland,FIN,9.978,90.0,4
+Argentina,ARG,1960,C,4,Russia,RUS,11.015,89.0,3
+Argentina,ARG,1960,C,5,Belgium,BEL,13.142,86.9,4
+Argentina,ARG,1970,C,1,Russia,RUS,10.006,90.0,3
+Argentina,ARG,1970,C,2,Uruguay,URY,10.052,89.9,3
+Argentina,ARG,1970,C,3,Spain,ESP,11.665,88.3,4
+Argentina,ARG,1970,C,4,Finland,FIN,12.009,88.0,3
+Argentina,ARG,1970,C,5,Hungary,HUN,12.569,87.4,4
+Argentina,ARG,1980,C,1,Uruguay,URY,6.838,93.2,3
+Argentina,ARG,1980,C,2,Ireland,IRL,9.113,90.9,4
+Argentina,ARG,1980,C,3,Portugal,PRT,12.204,87.8,4
+Argentina,ARG,1980,C,4,Poland,POL,12.409,87.6,4
+Argentina,ARG,1980,C,5,Chile,CHL,12.447,87.6,4
+Argentina,ARG,1990,C,1,Uruguay,URY,2.799,97.2,3
+Argentina,ARG,1990,C,2,Jamaica,JAM,8.126,91.9,4
+Argentina,ARG,1990,C,3,Mexico,MEX,8.41,91.6,4
+Argentina,ARG,1990,C,4,Cuba,CUB,11.9,88.1,3
+Argentina,ARG,1990,C,5,Poland,POL,11.911,88.1,4
+Argentina,ARG,2000,C,1,Uruguay,URY,2.521,97.5,3
+Argentina,ARG,2000,C,2,Mexico,MEX,3.516,96.5,4
+Argentina,ARG,2000,C,3,Peru,PER,10.553,89.4,4
+Argentina,ARG,2000,C,4,Jamaica,JAM,11.185,88.8,4
+Argentina,ARG,2000,C,5,Poland,POL,11.658,88.3,4
+Australia,AUS,1850,C,1,United States,USA,11.894,88.1,2
+Australia,AUS,1850,C,2,Denmark,DNK,16.66,83.3,2
+Australia,AUS,1850,C,3,Italy,ITA,19.53,80.5,2
+Australia,AUS,1850,C,4,France,FRA,23.577,76.4,2
+Australia,AUS,1850,C,5,Argentina,ARG,29.202,70.8,2
+Australia,AUS,1860,C,1,United Kingdom,GBR,26.745,73.3,2
+Australia,AUS,1860,C,2,Netherlands,NLD,40.733,59.3,2
+Australia,AUS,1860,C,3,Belgium,BEL,42.619,57.4,2
+Australia,AUS,1860,C,4,Norway,NOR,76.531,23.5,2
+Australia,AUS,1870,C,1,United Kingdom,GBR,9.9,90.1,3
+Australia,AUS,1870,C,2,Belgium,BEL,19.576,80.4,3
+Australia,AUS,1870,C,3,Uruguay,URY,27.342,72.7,2
+Australia,AUS,1870,C,4,Netherlands,NLD,28.493,71.5,3
+Australia,AUS,1870,C,5,United States,USA,29.493,70.5,3
+Australia,AUS,1880,C,1,United Kingdom,GBR,9.734,90.3,2
+Australia,AUS,1880,C,2,United States,USA,22.278,77.7,2
+Australia,AUS,1880,C,3,Belgium,BEL,23.13,76.9,2
+Australia,AUS,1880,C,4,Netherlands,NLD,27.463,72.5,2
+Australia,AUS,1880,C,5,Denmark,DNK,38.926,61.1,2
+Australia,AUS,1890,C,1,United Kingdom,GBR,5.762,94.2,3
+Australia,AUS,1890,C,2,United States,USA,16.194,83.8,3
+Australia,AUS,1890,C,3,Netherlands,NLD,20.507,79.5,3
+Australia,AUS,1890,C,4,Belgium,BEL,20.736,79.3,3
+Australia,AUS,1890,C,5,Ireland,IRL,20.777,79.2,2
+Australia,AUS,1900,C,1,Switzerland,CHE,11.066,88.9,2
+Australia,AUS,1900,C,2,Belgium,BEL,12.066,87.9,2
+Australia,AUS,1900,C,3,Netherlands,NLD,12.315,87.7,2
+Australia,AUS,1900,C,4,United Kingdom,GBR,14.817,85.2,2
+Australia,AUS,1900,C,5,Germany,DEU,15.596,84.4,2
+Australia,AUS,1910,C,1,Switzerland,CHE,6.552,93.4,3
+Australia,AUS,1910,C,2,United Kingdom,GBR,11.977,88.0,3
+Australia,AUS,1910,C,3,Canada,CAN,14.106,85.9,3
+Australia,AUS,1910,C,4,United States,USA,17.372,82.6,3
+Australia,AUS,1910,C,5,Denmark,DNK,19.999,80.0,3
+Australia,AUS,1920,C,1,Switzerland,CHE,1.701,98.3,2
+Australia,AUS,1920,C,2,Canada,CAN,11.012,89.0,2
+Australia,AUS,1920,C,3,United Kingdom,GBR,14.266,85.7,2
+Australia,AUS,1920,C,4,Denmark,DNK,16.17,83.8,2
+Australia,AUS,1920,C,5,Netherlands,NLD,16.995,83.0,2
+Australia,AUS,1930,C,1,Germany,DEU,10.225,89.8,2
+Australia,AUS,1930,C,2,Canada,CAN,11.398,88.6,3
+Australia,AUS,1930,C,3,Sweden,SWE,14.545,85.5,3
+Australia,AUS,1930,C,4,Switzerland,CHE,14.965,85.0,3
+Australia,AUS,1930,C,5,Denmark,DNK,15.014,85.0,3
+Australia,AUS,1940,C,1,Switzerland,CHE,5.242,94.8,3
+Australia,AUS,1940,C,2,Canada,CAN,7.576,92.4,3
+Australia,AUS,1940,C,3,Germany,DEU,9.791,90.2,2
+Australia,AUS,1940,C,4,United States,USA,12.014,88.0,3
+Australia,AUS,1940,C,5,Denmark,DNK,16.542,83.5,3
+Australia,AUS,1950,C,1,Switzerland,CHE,2.672,97.3,4
+Australia,AUS,1950,C,2,Canada,CAN,2.885,97.1,4
+Australia,AUS,1950,C,3,United States,USA,12.087,87.9,4
+Australia,AUS,1950,C,4,Denmark,DNK,12.561,87.4,4
+Australia,AUS,1950,C,5,United Kingdom,GBR,13.282,86.7,4
+Australia,AUS,1960,C,1,Canada,CAN,3.126,96.9,4
+Australia,AUS,1960,C,2,Germany,DEU,6.896,93.1,3
+Australia,AUS,1960,C,3,Switzerland,CHE,7.696,92.3,4
+Australia,AUS,1960,C,4,Denmark,DNK,7.911,92.1,4
+Australia,AUS,1960,C,5,United Kingdom,GBR,8.359,91.6,4
+Australia,AUS,1970,C,1,Germany,DEU,5.025,95.0,3
+Australia,AUS,1970,C,2,Canada,CAN,6.146,93.9,4
+Australia,AUS,1970,C,3,United Kingdom,GBR,6.281,93.7,4
+Australia,AUS,1970,C,4,Denmark,DNK,7.95,92.0,4
+Australia,AUS,1970,C,5,Japan,JPN,9.377,90.6,4
+Australia,AUS,1980,C,1,Germany,DEU,5.169,94.8,3
+Australia,AUS,1980,C,2,France,FRA,6.365,93.6,4
+Australia,AUS,1980,C,3,United Kingdom,GBR,6.956,93.0,4
+Australia,AUS,1980,C,4,Denmark,DNK,7.09,92.9,4
+Australia,AUS,1980,C,5,Japan,JPN,7.457,92.5,4
+Australia,AUS,1990,C,1,United Kingdom,GBR,5.443,94.6,4
+Australia,AUS,1990,C,2,Germany,DEU,6.074,93.9,3
+Australia,AUS,1990,C,3,France,FRA,8.057,91.9,4
+Australia,AUS,1990,C,4,Canada,CAN,9.887,90.1,4
+Australia,AUS,1990,C,5,Norway,NOR,9.969,90.0,4
+Australia,AUS,2000,C,1,Canada,CAN,3.238,96.8,4
+Australia,AUS,2000,C,2,Germany,DEU,4.964,95.0,3
+Australia,AUS,2000,C,3,United Kingdom,GBR,6.978,93.0,4
+Australia,AUS,2000,C,4,Switzerland,CHE,9.667,90.3,4
+Australia,AUS,2000,C,5,Denmark,DNK,10.174,89.8,4
+Belgium,BEL,1820,C,1,United States,USA,14.524,85.5,2
+Belgium,BEL,1820,C,2,Italy,ITA,16.441,83.6,2
+Belgium,BEL,1820,C,3,Denmark,DNK,18.627,81.4,2
+Belgium,BEL,1820,C,4,France,FRA,19.633,80.4,2
+Belgium,BEL,1820,C,5,Netherlands,NLD,24.596,75.4,2
+Belgium,BEL,1850,C,1,Denmark,DNK,9.12,90.9,3
+Belgium,BEL,1850,C,2,Italy,ITA,9.988,90.0,2
+Belgium,BEL,1850,C,3,France,FRA,10.039,90.0,3
+Belgium,BEL,1850,C,4,Netherlands,NLD,20.527,79.5,4
+Belgium,BEL,1850,C,5,United States,USA,20.705,79.3,2
+Belgium,BEL,1860,C,1,Denmark,DNK,13.313,86.7,2
+Belgium,BEL,1860,C,2,France,FRA,14.078,85.9,2
+Belgium,BEL,1860,C,3,United Kingdom,GBR,25.644,74.4,3
+Belgium,BEL,1860,C,4,Sweden,SWE,32.569,67.4,2
+Belgium,BEL,1860,C,5,Norway,NOR,36.902,63.1,3
+Belgium,BEL,1870,C,1,United States,USA,16.198,83.8,3
+Belgium,BEL,1870,C,2,Netherlands,NLD,17.116,82.9,4
+Belgium,BEL,1870,C,3,United Kingdom,GBR,17.233,82.8,4
+Belgium,BEL,1870,C,4,Australia,AUS,19.576,80.4,3
+Belgium,BEL,1870,C,5,Germany,DEU,23.278,76.7,2
+Belgium,BEL,1880,C,1,Netherlands,NLD,8.212,91.8,3
+Belgium,BEL,1880,C,2,United Kingdom,GBR,10.64,89.4,3
+Belgium,BEL,1880,C,3,France,FRA,13.394,86.6,3
+Belgium,BEL,1880,C,4,Denmark,DNK,14.625,85.4,3
+Belgium,BEL,1880,C,5,Switzerland,CHE,18.378,81.6,3
+Belgium,BEL,1890,C,1,Netherlands,NLD,8.163,91.8,4
+Belgium,BEL,1890,C,2,France,FRA,14.622,85.4,4
+Belgium,BEL,1890,C,3,United States,USA,16.009,84.0,4
+Belgium,BEL,1890,C,4,United Kingdom,GBR,16.852,83.1,4
+Belgium,BEL,1890,C,5,Denmark,DNK,18.904,81.1,4
+Belgium,BEL,1900,C,1,Netherlands,NLD,7.156,92.8,3
+Belgium,BEL,1900,C,2,Australia,AUS,12.066,87.9,2
+Belgium,BEL,1900,C,3,United Kingdom,GBR,12.346,87.7,3
+Belgium,BEL,1900,C,4,France,FRA,14.086,85.9,3
+Belgium,BEL,1900,C,5,Denmark,DNK,14.845,85.2,3
+Belgium,BEL,1910,C,1,Netherlands,NLD,9.309,90.7,4
+Belgium,BEL,1910,C,2,United Kingdom,GBR,12.8,87.2,4
+Belgium,BEL,1910,C,3,France,FRA,16.781,83.2,4
+Belgium,BEL,1910,C,4,Denmark,DNK,17.495,82.5,4
+Belgium,BEL,1910,C,5,Germany,DEU,18.924,81.1,2
+Belgium,BEL,1920,C,1,Netherlands,NLD,8.234,91.8,3
+Belgium,BEL,1920,C,2,Denmark,DNK,8.657,91.3,3
+Belgium,BEL,1920,C,3,United Kingdom,GBR,9.123,90.9,3
+Belgium,BEL,1920,C,4,Sweden,SWE,13.156,86.8,3
+Belgium,BEL,1920,C,5,Norway,NOR,13.484,86.5,3
+Belgium,BEL,1930,C,1,United Kingdom,GBR,10.045,90.0,3
+Belgium,BEL,1930,C,2,Denmark,DNK,11.632,88.4,3
+Belgium,BEL,1930,C,3,Sweden,SWE,14.079,85.9,3
+Belgium,BEL,1930,C,4,France,FRA,14.132,85.9,3
+Belgium,BEL,1930,C,5,Netherlands,NLD,15.749,84.3,3
+Belgium,BEL,1940,C,1,Argentina,ARG,12.466,87.5,3
+Belgium,BEL,1940,C,2,Japan,JPN,15.075,84.9,2
+Belgium,BEL,1940,C,3,Ireland,IRL,16.071,83.9,2
+Belgium,BEL,1940,C,4,Italy,ITA,16.702,83.3,3
+Belgium,BEL,1940,C,5,France,FRA,18.557,81.4,3
+Belgium,BEL,1950,C,1,Finland,FIN,8.87,91.1,4
+Belgium,BEL,1950,C,2,Netherlands,NLD,9.855,90.1,4
+Belgium,BEL,1950,C,3,Argentina,ARG,10.64,89.4,4
+Belgium,BEL,1950,C,4,Norway,NOR,11.063,88.9,4
+Belgium,BEL,1950,C,5,Sweden,SWE,12.223,87.8,4
+Belgium,BEL,1960,C,1,Finland,FIN,4.088,95.9,4
+Belgium,BEL,1960,C,2,France,FRA,8.532,91.5,4
+Belgium,BEL,1960,C,3,Netherlands,NLD,10.747,89.3,4
+Belgium,BEL,1960,C,4,Italy,ITA,12.014,88.0,4
+Belgium,BEL,1960,C,5,Argentina,ARG,13.142,86.9,4
+Belgium,BEL,1970,C,1,Finland,FIN,4.418,95.6,3
+Belgium,BEL,1970,C,2,Italy,ITA,8.419,91.6,4
+Belgium,BEL,1970,C,3,Netherlands,NLD,9.907,90.1,4
+Belgium,BEL,1970,C,4,Canada,CAN,13.415,86.6,4
+Belgium,BEL,1970,C,5,Japan,JPN,13.667,86.3,4
+Belgium,BEL,1980,C,1,Finland,FIN,6.191,93.8,4
+Belgium,BEL,1980,C,2,Netherlands,NLD,8.997,91.0,4
+Belgium,BEL,1980,C,3,Italy,ITA,9.766,90.2,4
+Belgium,BEL,1980,C,4,France,FRA,12.362,87.6,4
+Belgium,BEL,1980,C,5,Denmark,DNK,13.258,86.7,4
+Belgium,BEL,1990,C,1,Finland,FIN,5.472,94.5,4
+Belgium,BEL,1990,C,2,Netherlands,NLD,6.85,93.2,4
+Belgium,BEL,1990,C,3,Italy,ITA,7.857,92.1,4
+Belgium,BEL,1990,C,4,Denmark,DNK,10.485,89.5,4
+Belgium,BEL,1990,C,5,Sweden,SWE,12.115,87.9,4
+Belgium,BEL,2000,C,1,Netherlands,NLD,5.445,94.6,4
+Belgium,BEL,2000,C,2,Italy,ITA,6.245,93.8,4
+Belgium,BEL,2000,C,3,Finland,FIN,6.719,93.3,4
+Belgium,BEL,2000,C,4,Sweden,SWE,6.847,93.2,4
+Belgium,BEL,2000,C,5,France,FRA,8.748,91.3,4
+Bolivia,BOL,1890,C,1,Mexico,MEX,2.846,97.2,2
+Bolivia,BOL,1890,C,2,Brazil,BRA,3.209,96.8,2
+Bolivia,BOL,1890,C,3,Colombia,COL,3.821,96.2,2
+Bolivia,BOL,1890,C,4,Russia,RUS,3.85,96.2,2
+Bolivia,BOL,1890,C,5,Portugal,PRT,5.625,94.4,2
+Bolivia,BOL,1900,C,1,South Africa,ZAF,1.573,98.4,2
+Bolivia,BOL,1900,C,2,Mexico,MEX,3.671,96.3,3
+Bolivia,BOL,1900,C,3,China,CHN,4.702,95.3,2
+Bolivia,BOL,1900,C,4,Venezuela,VEN,5.324,94.7,3
+Bolivia,BOL,1900,C,5,Portugal,PRT,5.933,94.1,2
+Bolivia,BOL,1910,C,1,Portugal,PRT,2.545,97.5,2
+Bolivia,BOL,1910,C,2,Venezuela,VEN,2.919,97.1,3
+Bolivia,BOL,1910,C,3,Mexico,MEX,5.129,94.9,3
+Bolivia,BOL,1910,C,4,Russia,RUS,5.811,94.2,2
+Bolivia,BOL,1910,C,5,South Africa,ZAF,6.597,93.4,2
+Bolivia,BOL,1920,C,1,Colombia,COL,2.21,97.8,3
+Bolivia,BOL,1920,C,2,Portugal,PRT,6.001,94.0,2
+Bolivia,BOL,1920,C,3,Venezuela,VEN,6.364,93.6,3
+Bolivia,BOL,1920,C,4,Poland,POL,7.822,92.2,2
+Bolivia,BOL,1920,C,5,Jamaica,JAM,8.453,91.5,2
+Bolivia,BOL,1930,C,1,Colombia,COL,1.988,98.0,3
+Bolivia,BOL,1930,C,2,Poland,POL,6.65,93.4,2
+Bolivia,BOL,1930,C,3,Russia,RUS,6.847,93.2,3
+Bolivia,BOL,1930,C,4,Portugal,PRT,7.623,92.4,2
+Bolivia,BOL,1930,C,5,South Africa,ZAF,8.13,91.9,2
+Bolivia,BOL,1940,C,1,Colombia,COL,4.74,95.3,3
+Bolivia,BOL,1940,C,2,South Africa,ZAF,6.703,93.3,2
+Bolivia,BOL,1940,C,3,South Korea,KOR,6.803,93.2,2
+Bolivia,BOL,1940,C,4,Peru,PER,7.646,92.4,3
+Bolivia,BOL,1940,C,5,Philippines,PHL,8.137,91.9,2
+Bolivia,BOL,1950,C,1,Egypt,EGY,13.718,86.3,4
+Bolivia,BOL,1950,C,2,Peru,PER,14.365,85.6,4
+Bolivia,BOL,1950,C,3,China,CHN,14.661,85.3,4
+Bolivia,BOL,1950,C,4,South Korea,KOR,14.746,85.3,4
+Bolivia,BOL,1950,C,5,India,IND,16.991,83.0,4
+Bolivia,BOL,1960,C,1,Indonesia,IDN,10.341,89.7,3
+Bolivia,BOL,1960,C,2,China,CHN,14.221,85.8,4
+Bolivia,BOL,1960,C,3,India,IND,15.284,84.7,4
+Bolivia,BOL,1960,C,4,Egypt,EGY,17.169,82.8,4
+Bolivia,BOL,1960,C,5,Peru,PER,17.746,82.3,4
+Bolivia,BOL,1970,C,1,Peru,PER,19.504,80.5,4
+Bolivia,BOL,1970,C,2,South Africa,ZAF,19.835,80.2,4
+Bolivia,BOL,1970,C,3,India,IND,19.985,80.0,4
+Bolivia,BOL,1970,C,4,Indonesia,IDN,21.26,78.7,3
+Bolivia,BOL,1970,C,5,Egypt,EGY,22.117,77.9,4
+Bolivia,BOL,1980,C,1,Indonesia,IDN,19.444,80.6,3
+Bolivia,BOL,1980,C,2,India,IND,19.954,80.0,4
+Bolivia,BOL,1980,C,3,Egypt,EGY,21.811,78.2,4
+Bolivia,BOL,1980,C,4,Peru,PER,22.082,77.9,4
+Bolivia,BOL,1980,C,5,South Africa,ZAF,22.497,77.5,4
+Bolivia,BOL,1990,C,1,Indonesia,IDN,16.419,83.6,3
+Bolivia,BOL,1990,C,2,Philippines,PHL,17.28,82.7,4
+Bolivia,BOL,1990,C,3,South Africa,ZAF,20.327,79.7,4
+Bolivia,BOL,1990,C,4,Peru,PER,20.385,79.6,4
+Bolivia,BOL,1990,C,5,India,IND,21.286,78.7,4
+Bolivia,BOL,2000,C,1,Russia,RUS,12.719,87.3,3
+Bolivia,BOL,2000,C,2,Philippines,PHL,13.279,86.7,4
+Bolivia,BOL,2000,C,3,Egypt,EGY,14.349,85.7,4
+Bolivia,BOL,2000,C,4,Brazil,BRA,15.914,84.1,4
+Bolivia,BOL,2000,C,5,Indonesia,IDN,16.814,83.2,3
+Brazil,BRA,1820,C,1,Chile,CHL,1.459,98.5,2
+Brazil,BRA,1820,C,2,China,CHN,4.084,95.9,2
+Brazil,BRA,1820,C,3,Indonesia,IDN,8.395,91.6,2
+Brazil,BRA,1820,C,4,Mexico,MEX,13.468,86.5,2
+Brazil,BRA,1820,C,5,Norway,NOR,18.567,81.4,2
+Brazil,BRA,1850,C,1,Poland,POL,2.94,97.1,2
+Brazil,BRA,1850,C,2,India,IND,3.26,96.7,2
+Brazil,BRA,1850,C,3,China,CHN,5.933,94.1,2
+Brazil,BRA,1850,C,4,Indonesia,IDN,8.091,91.9,2
+Brazil,BRA,1850,C,5,Mexico,MEX,8.81,91.2,2
+Brazil,BRA,1870,C,1,Jamaica,JAM,3.262,96.7,2
+Brazil,BRA,1870,C,2,Indonesia,IDN,4.632,95.4,2
+Brazil,BRA,1870,C,3,India,IND,5.282,94.7,3
+Brazil,BRA,1870,C,4,China,CHN,6.957,93.0,3
+Brazil,BRA,1870,C,5,South Africa,ZAF,8.345,91.7,2
+Brazil,BRA,1880,C,1,Jamaica,JAM,2.772,97.2,2
+Brazil,BRA,1880,C,2,Peru,PER,3.201,96.8,2
+Brazil,BRA,1880,C,3,Colombia,COL,4.057,95.9,2
+Brazil,BRA,1880,C,4,Portugal,PRT,5.459,94.5,2
+Brazil,BRA,1880,C,5,Russia,RUS,6.054,93.9,2
+Brazil,BRA,1890,C,1,Bolivia,BOL,3.209,96.8,2
+Brazil,BRA,1890,C,2,Russia,RUS,5.951,94.0,2
+Brazil,BRA,1890,C,3,Indonesia,IDN,6.223,93.8,2
+Brazil,BRA,1890,C,4,Egypt,EGY,6.635,93.4,2
+Brazil,BRA,1890,C,5,Philippines,PHL,6.831,93.2,2
+Brazil,BRA,1900,C,1,Peru,PER,3.379,96.6,2
+Brazil,BRA,1900,C,2,China,CHN,4.469,95.5,2
+Brazil,BRA,1900,C,3,Colombia,COL,4.763,95.2,3
+Brazil,BRA,1900,C,4,India,IND,4.789,95.2,2
+Brazil,BRA,1900,C,5,South Africa,ZAF,6.934,93.1,2
+Brazil,BRA,1910,C,1,China,CHN,4.211,95.8,2
+Brazil,BRA,1910,C,2,Peru,PER,4.877,95.1,3
+Brazil,BRA,1910,C,3,Philippines,PHL,6.552,93.4,3
+Brazil,BRA,1910,C,4,Venezuela,VEN,7.755,92.2,3
+Brazil,BRA,1910,C,5,Indonesia,IDN,7.92,92.1,2
+Brazil,BRA,1920,C,1,South Korea,KOR,4.308,95.7,2
+Brazil,BRA,1920,C,2,Peru,PER,5.327,94.7,2
+Brazil,BRA,1920,C,3,India,IND,5.424,94.6,2
+Brazil,BRA,1920,C,4,Venezuela,VEN,5.809,94.2,3
+Brazil,BRA,1920,C,5,Philippines,PHL,6.216,93.8,2
+Brazil,BRA,1930,C,1,South Korea,KOR,3.878,96.1,2
+Brazil,BRA,1930,C,2,China,CHN,4.225,95.8,3
+Brazil,BRA,1930,C,3,Mexico,MEX,5.152,94.8,3
+Brazil,BRA,1930,C,4,India,IND,5.575,94.4,2
+Brazil,BRA,1930,C,5,Egypt,EGY,5.583,94.4,2
+Brazil,BRA,1940,C,1,Philippines,PHL,5.978,94.0,2
+Brazil,BRA,1940,C,2,Mexico,MEX,6.309,93.7,3
+Brazil,BRA,1940,C,3,South Korea,KOR,6.515,93.5,2
+Brazil,BRA,1940,C,4,Peru,PER,7.152,92.8,3
+Brazil,BRA,1940,C,5,India,IND,7.358,92.6,2
+Brazil,BRA,1950,C,1,Mexico,MEX,5.304,94.7,4
+Brazil,BRA,1950,C,2,Philippines,PHL,8.017,92.0,4
+Brazil,BRA,1950,C,3,Colombia,COL,8.438,91.6,4
+Brazil,BRA,1950,C,4,South Africa,ZAF,13.116,86.9,4
+Brazil,BRA,1950,C,5,Peru,PER,13.132,86.9,4
+Brazil,BRA,1960,C,1,Mexico,MEX,5.796,94.2,4
+Brazil,BRA,1960,C,2,Philippines,PHL,7.69,92.3,4
+Brazil,BRA,1960,C,3,Colombia,COL,8.93,91.1,4
+Brazil,BRA,1960,C,4,Peru,PER,15.021,85.0,4
+Brazil,BRA,1960,C,5,South Africa,ZAF,16.45,83.6,4
+Brazil,BRA,1970,C,1,Mexico,MEX,6.673,93.3,4
+Brazil,BRA,1970,C,2,Colombia,COL,6.906,93.1,4
+Brazil,BRA,1970,C,3,Philippines,PHL,9.182,90.8,4
+Brazil,BRA,1970,C,4,Peru,PER,10.423,89.6,4
+Brazil,BRA,1970,C,5,South Africa,ZAF,17.462,82.5,4
+Brazil,BRA,1980,C,1,Peru,PER,9.306,90.7,4
+Brazil,BRA,1980,C,2,Colombia,COL,9.604,90.4,4
+Brazil,BRA,1980,C,3,Mexico,MEX,12.22,87.8,4
+Brazil,BRA,1980,C,4,Philippines,PHL,13.728,86.3,4
+Brazil,BRA,1980,C,5,South Africa,ZAF,15.928,84.1,4
+Brazil,BRA,1990,C,1,Colombia,COL,9.286,90.7,4
+Brazil,BRA,1990,C,2,Peru,PER,12.12,87.9,4
+Brazil,BRA,1990,C,3,Egypt,EGY,12.237,87.8,4
+Brazil,BRA,1990,C,4,Philippines,PHL,12.304,87.7,4
+Brazil,BRA,1990,C,5,Mexico,MEX,13.092,86.9,4
+Brazil,BRA,2000,C,1,Colombia,COL,5.441,94.6,4
+Brazil,BRA,2000,C,2,Venezuela,VEN,9.429,90.6,3
+Brazil,BRA,2000,C,3,Egypt,EGY,9.71,90.3,4
+Brazil,BRA,2000,C,4,Uruguay,URY,11.432,88.6,3
+Brazil,BRA,2000,C,5,Peru,PER,11.681,88.3,4
+Canada,CAN,1820,C,1,Ireland,IRL,1.769,98.2,2
+Canada,CAN,1820,C,2,Norway,NOR,3.184,96.8,2
+Canada,CAN,1820,C,3,Argentina,ARG,6.203,93.8,2
+Canada,CAN,1820,C,4,Spain,ESP,13.399,86.6,2
+Canada,CAN,1820,C,5,Japan,JPN,15.067,84.9,2
+Canada,CAN,1850,C,1,Argentina,ARG,10.498,89.5,2
+Canada,CAN,1850,C,2,Spain,ESP,12.054,87.9,2
+Canada,CAN,1850,C,3,Portugal,PRT,18.082,81.9,2
+Canada,CAN,1850,C,4,Norway,NOR,21.846,78.2,2
+Canada,CAN,1850,C,5,Mexico,MEX,25.953,74.0,2
+Canada,CAN,1870,C,1,Germany,DEU,4.533,95.5,2
+Canada,CAN,1870,C,2,Norway,NOR,8.752,91.2,3
+Canada,CAN,1870,C,3,Switzerland,CHE,11.73,88.3,3
+Canada,CAN,1870,C,4,Denmark,DNK,15.132,84.9,3
+Canada,CAN,1870,C,5,Sweden,SWE,21.955,78.0,3
+Canada,CAN,1880,C,1,Germany,DEU,6.511,93.5,2
+Canada,CAN,1880,C,2,Norway,NOR,7.581,92.4,2
+Canada,CAN,1880,C,3,Switzerland,CHE,11.866,88.1,2
+Canada,CAN,1880,C,4,France,FRA,15.365,84.6,2
+Canada,CAN,1880,C,5,Denmark,DNK,15.788,84.2,2
+Canada,CAN,1890,C,1,Germany,DEU,6.395,93.6,2
+Canada,CAN,1890,C,2,France,FRA,12.654,87.3,3
+Canada,CAN,1890,C,3,Denmark,DNK,14.667,85.3,3
+Canada,CAN,1890,C,4,Norway,NOR,15.237,84.8,3
+Canada,CAN,1890,C,5,Switzerland,CHE,17.44,82.6,3
+Canada,CAN,1900,C,1,Germany,DEU,6.683,93.3,2
+Canada,CAN,1900,C,2,France,FRA,8.281,91.7,2
+Canada,CAN,1900,C,3,Denmark,DNK,15.668,84.3,2
+Canada,CAN,1900,C,4,Netherlands,NLD,16.897,83.1,2
+Canada,CAN,1900,C,5,Switzerland,CHE,18.664,81.3,2
+Canada,CAN,1910,C,1,Germany,DEU,11.002,89.0,2
+Canada,CAN,1910,C,2,Switzerland,CHE,12.05,87.9,3
+Canada,CAN,1910,C,3,Australia,AUS,14.106,85.9,3
+Canada,CAN,1910,C,4,Denmark,DNK,16.009,84.0,3
+Canada,CAN,1910,C,5,United Kingdom,GBR,18.701,81.3,3
+Canada,CAN,1920,C,1,France,FRA,8.887,91.1,2
+Canada,CAN,1920,C,2,Switzerland,CHE,9.398,90.6,2
+Canada,CAN,1920,C,3,Australia,AUS,11.012,89.0,2
+Canada,CAN,1920,C,4,Germany,DEU,13.653,86.3,2
+Canada,CAN,1920,C,5,Denmark,DNK,16.709,83.3,2
+Canada,CAN,1930,C,1,France,FRA,7.296,92.7,3
+Canada,CAN,1930,C,2,Australia,AUS,11.398,88.6,3
+Canada,CAN,1930,C,3,Germany,DEU,11.714,88.3,2
+Canada,CAN,1930,C,4,Switzerland,CHE,13.454,86.5,3
+Canada,CAN,1930,C,5,United Kingdom,GBR,14.728,85.3,3
+Canada,CAN,1940,C,1,Germany,DEU,5.365,94.6,2
+Canada,CAN,1940,C,2,Switzerland,CHE,6.069,93.9,3
+Canada,CAN,1940,C,3,Australia,AUS,7.576,92.4,3
+Canada,CAN,1940,C,4,Denmark,DNK,14.537,85.5,3
+Canada,CAN,1940,C,5,Netherlands,NLD,15.748,84.3,3
+Canada,CAN,1950,C,1,Australia,AUS,2.885,97.1,4
+Canada,CAN,1950,C,2,Switzerland,CHE,4.466,95.5,4
+Canada,CAN,1950,C,3,Denmark,DNK,10.757,89.2,4
+Canada,CAN,1950,C,4,United Kingdom,GBR,10.757,89.2,4
+Canada,CAN,1950,C,5,United States,USA,13.198,86.8,4
+Canada,CAN,1960,C,1,Australia,AUS,3.126,96.9,4
+Canada,CAN,1960,C,2,Denmark,DNK,4.983,95.0,4
+Canada,CAN,1960,C,3,United Kingdom,GBR,5.778,94.2,4
+Canada,CAN,1960,C,4,Germany,DEU,6.524,93.5,3
+Canada,CAN,1960,C,5,Switzerland,CHE,8.525,91.5,4
+Canada,CAN,1970,C,1,Denmark,DNK,4.323,95.7,4
+Canada,CAN,1970,C,2,Sweden,SWE,5.605,94.4,4
+Canada,CAN,1970,C,3,Netherlands,NLD,5.763,94.2,4
+Canada,CAN,1970,C,4,United Kingdom,GBR,6.143,93.9,4
+Canada,CAN,1970,C,5,Australia,AUS,6.146,93.9,4
+Canada,CAN,1980,C,1,Norway,NOR,4.47,95.5,4
+Canada,CAN,1980,C,2,France,FRA,4.694,95.3,4
+Canada,CAN,1980,C,3,Sweden,SWE,5.385,94.6,4
+Canada,CAN,1980,C,4,Switzerland,CHE,6.802,93.2,4
+Canada,CAN,1980,C,5,Denmark,DNK,7.309,92.7,4
+Canada,CAN,1990,C,1,Norway,NOR,3.479,96.5,4
+Canada,CAN,1990,C,2,Sweden,SWE,3.746,96.3,4
+Canada,CAN,1990,C,3,Japan,JPN,6.168,93.8,4
+Canada,CAN,1990,C,4,France,FRA,7.142,92.9,4
+Canada,CAN,1990,C,5,Denmark,DNK,8.98,91.0,4
+Canada,CAN,2000,C,1,Australia,AUS,3.238,96.8,4
+Canada,CAN,2000,C,2,Germany,DEU,4.471,95.5,3
+Canada,CAN,2000,C,3,United Kingdom,GBR,5.911,94.1,4
+Canada,CAN,2000,C,4,Switzerland,CHE,7.493,92.5,4
+Canada,CAN,2000,C,5,Denmark,DNK,7.812,92.2,4
+Chile,CHL,1820,C,1,Brazil,BRA,1.459,98.5,2
+Chile,CHL,1820,C,2,China,CHN,4.505,95.5,2
+Chile,CHL,1820,C,3,Indonesia,IDN,8.285,91.7,2
+Chile,CHL,1820,C,4,Mexico,MEX,14.05,86.0,2
+Chile,CHL,1820,C,5,Peru,PER,18.57,81.4,2
+Chile,CHL,1850,C,1,Japan,JPN,25.942,74.1,2
+Chile,CHL,1850,C,2,Sweden,SWE,26.753,73.2,2
+Chile,CHL,1850,C,3,Peru,PER,28.488,71.5,2
+Chile,CHL,1850,C,4,France,FRA,31.015,69.0,2
+Chile,CHL,1850,C,5,Italy,ITA,33.681,66.3,2
+Chile,CHL,1870,C,1,Venezuela,VEN,2.379,97.6,2
+Chile,CHL,1870,C,2,Russia,RUS,3.688,96.3,2
+Chile,CHL,1870,C,3,South Africa,ZAF,8.063,91.9,2
+Chile,CHL,1870,C,4,Peru,PER,12.033,88.0,3
+Chile,CHL,1870,C,5,Colombia,COL,13.337,86.7,2
+Chile,CHL,1880,C,1,South Africa,ZAF,1.534,98.5,2
+Chile,CHL,1880,C,2,Venezuela,VEN,3.314,96.7,2
+Chile,CHL,1880,C,3,Italy,ITA,5.364,94.6,2
+Chile,CHL,1880,C,4,Argentina,ARG,6.983,93.0,2
+Chile,CHL,1880,C,5,Finland,FIN,8.544,91.5,2
+Chile,CHL,1890,C,1,Venezuela,VEN,4.31,95.7,2
+Chile,CHL,1890,C,2,Uruguay,URY,8.754,91.2,2
+Chile,CHL,1890,C,3,Italy,ITA,12.517,87.5,3
+Chile,CHL,1890,C,4,Japan,JPN,14.682,85.3,3
+Chile,CHL,1890,C,5,Argentina,ARG,16.969,83.0,3
+Chile,CHL,1900,C,1,Cuba,CUB,9.158,90.8,2
+Chile,CHL,1900,C,2,Venezuela,VEN,11.89,88.1,3
+Chile,CHL,1900,C,3,Russia,RUS,12.172,87.8,3
+Chile,CHL,1900,C,4,Portugal,PRT,12.87,87.1,2
+Chile,CHL,1900,C,5,Greece,GRC,14.897,85.1,2
+Chile,CHL,1910,C,1,Mexico,MEX,15.342,84.7,4
+Chile,CHL,1910,C,2,Greece,GRC,16.227,83.8,2
+Chile,CHL,1910,C,3,Bolivia,BOL,17.523,82.5,3
+Chile,CHL,1910,C,4,Venezuela,VEN,17.756,82.2,3
+Chile,CHL,1910,C,5,Colombia,COL,19.284,80.7,4
+Chile,CHL,1920,C,1,Jamaica,JAM,9.102,90.9,2
+Chile,CHL,1920,C,2,Poland,POL,10.511,89.5,2
+Chile,CHL,1920,C,3,Bolivia,BOL,13.698,86.3,3
+Chile,CHL,1920,C,4,Colombia,COL,15.232,84.8,3
+Chile,CHL,1920,C,5,Spain,ESP,15.76,84.2,3
+Chile,CHL,1930,C,1,Greece,GRC,8.892,91.1,2
+Chile,CHL,1930,C,2,Japan,JPN,14.714,85.3,2
+Chile,CHL,1930,C,3,Colombia,COL,16.069,83.9,3
+Chile,CHL,1930,C,4,Bolivia,BOL,16.947,83.1,3
+Chile,CHL,1930,C,5,Russia,RUS,17.56,82.4,3
+Chile,CHL,1940,C,1,Hungary,HUN,9.523,90.5,2
+Chile,CHL,1940,C,2,Japan,JPN,10.135,89.9,2
+Chile,CHL,1940,C,3,Russia,RUS,12.023,88.0,3
+Chile,CHL,1940,C,4,Colombia,COL,15.377,84.6,3
+Chile,CHL,1940,C,5,Finland,FIN,16.664,83.3,3
+Chile,CHL,1950,C,1,Russia,RUS,8.294,91.7,3
+Chile,CHL,1950,C,2,Spain,ESP,14.568,85.4,4
+Chile,CHL,1950,C,3,Argentina,ARG,15.648,84.4,4
+Chile,CHL,1950,C,4,Japan,JPN,15.846,84.2,4
+Chile,CHL,1950,C,5,Hungary,HUN,15.873,84.1,3
+Chile,CHL,1960,C,1,Colombia,COL,15.316,84.7,4
+Chile,CHL,1960,C,2,South Africa,ZAF,20.192,79.8,4
+Chile,CHL,1960,C,3,Mexico,MEX,20.288,79.7,4
+Chile,CHL,1960,C,4,Uruguay,URY,21.369,78.6,3
+Chile,CHL,1960,C,5,Brazil,BRA,22.543,77.5,4
+Chile,CHL,1970,C,1,Uruguay,URY,11.764,88.2,3
+Chile,CHL,1970,C,2,Argentina,ARG,14.225,85.8,4
+Chile,CHL,1970,C,3,Russia,RUS,14.9,85.1,3
+Chile,CHL,1970,C,4,Mexico,MEX,14.965,85.0,4
+Chile,CHL,1970,C,5,Colombia,COL,15.029,85.0,4
+Chile,CHL,1980,C,1,Uruguay,URY,6.015,94.0,3
+Chile,CHL,1980,C,2,Russia,RUS,12.192,87.8,3
+Chile,CHL,1980,C,3,Argentina,ARG,12.447,87.6,4
+Chile,CHL,1980,C,4,Ireland,IRL,14.252,85.7,4
+Chile,CHL,1980,C,5,Mexico,MEX,16.333,83.7,4
+Chile,CHL,1990,C,1,Uruguay,URY,7.319,92.7,3
+Chile,CHL,1990,C,2,Argentina,ARG,12.27,87.7,4
+Chile,CHL,1990,C,3,Russia,RUS,12.784,87.2,3
+Chile,CHL,1990,C,4,Cuba,CUB,13.176,86.8,3
+Chile,CHL,1990,C,5,Mexico,MEX,14.635,85.4,4
+Chile,CHL,2000,C,1,Greece,GRC,6.569,93.4,3
+Chile,CHL,2000,C,2,Uruguay,URY,11.381,88.6,3
+Chile,CHL,2000,C,3,Cuba,CUB,13.363,86.6,3
+Chile,CHL,2000,C,4,Argentina,ARG,13.796,86.2,4
+Chile,CHL,2000,C,5,Mexico,MEX,16.446,83.6,4
+China,CHN,1820,C,1,Brazil,BRA,4.084,95.9,2
+China,CHN,1820,C,2,Chile,CHL,4.505,95.5,2
+China,CHN,1820,C,3,Mexico,MEX,9.545,90.5,2
+China,CHN,1820,C,4,Indonesia,IDN,12.477,87.5,2
+China,CHN,1820,C,5,Norway,NOR,17.157,82.8,2
+China,CHN,1850,C,1,Mexico,MEX,4.901,95.1,2
+China,CHN,1850,C,2,Poland,POL,5.756,94.2,2
+China,CHN,1850,C,3,Brazil,BRA,5.933,94.1,2
+China,CHN,1850,C,4,India,IND,8.846,91.2,2
+China,CHN,1850,C,5,Indonesia,IDN,13.66,86.3,2
+China,CHN,1870,C,1,South Korea,KOR,2.079,97.9,2
+China,CHN,1870,C,2,Indonesia,IDN,4.514,95.5,2
+China,CHN,1870,C,3,South Africa,ZAF,4.713,95.3,2
+China,CHN,1870,C,4,Jamaica,JAM,6.346,93.7,2
+China,CHN,1870,C,5,Brazil,BRA,6.957,93.0,3
+China,CHN,1890,C,1,Russia,RUS,4.482,95.5,2
+China,CHN,1890,C,2,Bolivia,BOL,5.823,94.2,2
+China,CHN,1890,C,3,Brazil,BRA,8.261,91.7,3
+China,CHN,1890,C,4,India,IND,9.843,90.2,3
+China,CHN,1890,C,5,South Africa,ZAF,11.106,88.9,3
+China,CHN,1900,C,1,Colombia,COL,1.761,98.2,2
+China,CHN,1900,C,2,Brazil,BRA,4.469,95.5,2
+China,CHN,1900,C,3,Bolivia,BOL,4.702,95.3,2
+China,CHN,1900,C,4,South Africa,ZAF,4.953,95.0,2
+China,CHN,1900,C,5,Jamaica,JAM,5.217,94.8,2
+China,CHN,1910,C,1,Brazil,BRA,4.211,95.8,2
+China,CHN,1910,C,2,Peru,PER,6.869,93.1,2
+China,CHN,1910,C,3,Finland,FIN,9.354,90.6,2
+China,CHN,1910,C,4,South Africa,ZAF,9.882,90.1,2
+China,CHN,1910,C,5,Egypt,EGY,10.53,89.5,2
+China,CHN,1930,C,1,Brazil,BRA,4.225,95.8,3
+China,CHN,1930,C,2,South Korea,KOR,5.255,94.7,2
+China,CHN,1930,C,3,India,IND,5.878,94.1,2
+China,CHN,1930,C,4,Mexico,MEX,7.809,92.2,3
+China,CHN,1930,C,5,Philippines,PHL,8.306,91.7,2
+China,CHN,1950,C,1,Egypt,EGY,8.744,91.3,4
+China,CHN,1950,C,2,South Korea,KOR,10.88,89.1,4
+China,CHN,1950,C,3,Bolivia,BOL,14.661,85.3,4
+China,CHN,1950,C,4,India,IND,14.732,85.3,4
+China,CHN,1950,C,5,Peru,PER,17.843,82.2,4
+China,CHN,1960,C,1,India,IND,7.993,92.0,4
+China,CHN,1960,C,2,Indonesia,IDN,10.545,89.5,3
+China,CHN,1960,C,3,Bolivia,BOL,14.221,85.8,4
+China,CHN,1960,C,4,Egypt,EGY,14.678,85.3,4
+China,CHN,1960,C,5,South Korea,KOR,20.047,80.0,4
+China,CHN,1970,C,1,Cuba,CUB,15.616,84.4,3
+China,CHN,1970,C,2,South Korea,KOR,17.569,82.4,4
+China,CHN,1970,C,3,Philippines,PHL,18.596,81.4,4
+China,CHN,1970,C,4,Jamaica,JAM,19.593,80.4,4
+China,CHN,1970,C,5,Poland,POL,19.842,80.2,4
+China,CHN,1980,C,1,Jamaica,JAM,18.305,81.7,4
+China,CHN,1980,C,2,Poland,POL,18.739,81.3,4
+China,CHN,1980,C,3,Philippines,PHL,19.049,81.0,4
+China,CHN,1980,C,4,Cuba,CUB,19.859,80.1,3
+China,CHN,1980,C,5,Colombia,COL,21.099,78.9,4
+China,CHN,1990,C,1,Poland,POL,13.704,86.3,4
+China,CHN,1990,C,2,Colombia,COL,16.05,84.0,4
+China,CHN,1990,C,3,Venezuela,VEN,16.284,83.7,3
+China,CHN,1990,C,4,Jamaica,JAM,16.772,83.2,4
+China,CHN,1990,C,5,Peru,PER,17.394,82.6,4
+China,CHN,2000,C,1,Venezuela,VEN,10.095,89.9,3
+China,CHN,2000,C,2,Mexico,MEX,10.842,89.2,4
+China,CHN,2000,C,3,Peru,PER,11.585,88.4,4
+China,CHN,2000,C,4,Egypt,EGY,12.658,87.3,4
+China,CHN,2000,C,5,Jamaica,JAM,12.846,87.2,4
+Colombia,COL,1870,C,1,Philippines,PHL,13.104,86.9,2
+Colombia,COL,1870,C,2,Chile,CHL,13.337,86.7,2
+Colombia,COL,1870,C,3,Peru,PER,15.256,84.7,2
+Colombia,COL,1870,C,4,Mexico,MEX,16.267,83.7,2
+Colombia,COL,1870,C,5,Portugal,PRT,17.213,82.8,2
+Colombia,COL,1880,C,1,Russia,RUS,2.638,97.4,2
+Colombia,COL,1880,C,2,Jamaica,JAM,3.791,96.2,2
+Colombia,COL,1880,C,3,Brazil,BRA,4.057,95.9,2
+Colombia,COL,1880,C,4,Portugal,PRT,4.716,95.3,2
+Colombia,COL,1880,C,5,Peru,PER,6.971,93.0,2
+Colombia,COL,1890,C,1,Russia,RUS,2.671,97.3,2
+Colombia,COL,1890,C,2,Bolivia,BOL,3.821,96.2,2
+Colombia,COL,1890,C,3,Mexico,MEX,4.733,95.3,3
+Colombia,COL,1890,C,4,Jamaica,JAM,5.402,94.6,3
+Colombia,COL,1890,C,5,Indonesia,IDN,6.403,93.6,2
+Colombia,COL,1900,C,1,China,CHN,1.761,98.2,2
+Colombia,COL,1900,C,2,South Africa,ZAF,4.305,95.7,2
+Colombia,COL,1900,C,3,Brazil,BRA,4.763,95.2,3
+Colombia,COL,1900,C,4,Venezuela,VEN,6.028,94.0,3
+Colombia,COL,1900,C,5,Russia,RUS,6.891,93.1,3
+Colombia,COL,1910,C,1,Venezuela,VEN,4.986,95.0,3
+Colombia,COL,1910,C,2,Bolivia,BOL,6.968,93.0,3
+Colombia,COL,1910,C,3,Russia,RUS,7.749,92.3,2
+Colombia,COL,1910,C,4,Mexico,MEX,8.835,91.2,4
+Colombia,COL,1910,C,5,Portugal,PRT,10.727,89.3,3
+Colombia,COL,1920,C,1,Bolivia,BOL,2.21,97.8,3
+Colombia,COL,1920,C,2,Portugal,PRT,5.34,94.7,2
+Colombia,COL,1920,C,3,Venezuela,VEN,5.93,94.1,3
+Colombia,COL,1920,C,4,Jamaica,JAM,6.718,93.3,2
+Colombia,COL,1920,C,5,South Korea,KOR,8.565,91.4,2
+Colombia,COL,1930,C,1,Bolivia,BOL,1.988,98.0,3
+Colombia,COL,1930,C,2,Russia,RUS,5.207,94.8,3
+Colombia,COL,1930,C,3,Poland,POL,6.443,93.6,2
+Colombia,COL,1930,C,4,Portugal,PRT,8.128,91.9,2
+Colombia,COL,1930,C,5,South Africa,ZAF,8.748,91.3,2
+Colombia,COL,1940,C,1,Bolivia,BOL,4.74,95.3,3
+Colombia,COL,1940,C,2,South Africa,ZAF,7.98,92.0,2
+Colombia,COL,1940,C,3,Russia,RUS,8.466,91.5,3
+Colombia,COL,1940,C,4,Peru,PER,9.525,90.5,3
+Colombia,COL,1940,C,5,Mexico,MEX,9.575,90.4,3
+Colombia,COL,1950,C,1,Mexico,MEX,7.838,92.2,4
+Colombia,COL,1950,C,2,Brazil,BRA,8.438,91.6,4
+Colombia,COL,1950,C,3,Philippines,PHL,11.199,88.8,4
+Colombia,COL,1950,C,4,South Africa,ZAF,11.285,88.7,4
+Colombia,COL,1950,C,5,Peru,PER,12.486,87.5,4
+Colombia,COL,1960,C,1,Brazil,BRA,8.93,91.1,4
+Colombia,COL,1960,C,2,Mexico,MEX,9.052,90.9,4
+Colombia,COL,1960,C,3,Philippines,PHL,10.51,89.5,4
+Colombia,COL,1960,C,4,Chile,CHL,15.316,84.7,4
+Colombia,COL,1960,C,5,Cuba,CUB,15.524,84.5,3
+Colombia,COL,1970,C,1,Philippines,PHL,5.161,94.8,4
+Colombia,COL,1970,C,2,Mexico,MEX,5.56,94.4,4
+Colombia,COL,1970,C,3,Brazil,BRA,6.906,93.1,4
+Colombia,COL,1970,C,4,Peru,PER,13.664,86.3,4
+Colombia,COL,1970,C,5,Chile,CHL,15.029,85.0,4
+Colombia,COL,1980,C,1,Mexico,MEX,7.11,92.9,4
+Colombia,COL,1980,C,2,Brazil,BRA,9.604,90.4,4
+Colombia,COL,1980,C,3,Philippines,PHL,14.717,85.3,4
+Colombia,COL,1980,C,4,Peru,PER,15.095,84.9,4
+Colombia,COL,1980,C,5,Uruguay,URY,18.139,81.9,3
+Colombia,COL,1990,C,1,Mexico,MEX,8.237,91.8,4
+Colombia,COL,1990,C,2,Brazil,BRA,9.286,90.7,4
+Colombia,COL,1990,C,3,Peru,PER,10.346,89.7,4
+Colombia,COL,1990,C,4,Philippines,PHL,12.391,87.6,4
+Colombia,COL,1990,C,5,Egypt,EGY,12.549,87.5,4
+Colombia,COL,2000,C,1,Brazil,BRA,5.441,94.6,4
+Colombia,COL,2000,C,2,Egypt,EGY,6.767,93.2,4
+Colombia,COL,2000,C,3,Venezuela,VEN,7.085,92.9,3
+Colombia,COL,2000,C,4,Peru,PER,11.113,88.9,4
+Colombia,COL,2000,C,5,Indonesia,IDN,12.579,87.4,3
+Cuba,CUB,1900,C,1,Russia,RUS,3.871,96.1,2
+Cuba,CUB,1900,C,2,Colombia,COL,7.763,92.2,2
+Cuba,CUB,1900,C,3,Brazil,BRA,8.997,91.0,2
+Cuba,CUB,1900,C,4,Chile,CHL,9.158,90.8,2
+Cuba,CUB,1900,C,5,Venezuela,VEN,10.424,89.6,2
+Cuba,CUB,1910,C,1,Portugal,PRT,1.258,98.7,2
+Cuba,CUB,1910,C,2,Russia,RUS,2.203,97.8,2
+Cuba,CUB,1910,C,3,South Africa,ZAF,4.328,95.7,2
+Cuba,CUB,1910,C,4,Jamaica,JAM,6.979,93.0,2
+Cuba,CUB,1910,C,5,Peru,PER,9.691,90.3,2
+Cuba,CUB,1920,C,1,Portugal,PRT,4.096,95.9,2
+Cuba,CUB,1920,C,2,Poland,POL,5.252,94.7,2
+Cuba,CUB,1920,C,3,Jamaica,JAM,7.859,92.1,2
+Cuba,CUB,1920,C,4,South Korea,KOR,9.187,90.8,2
+Cuba,CUB,1920,C,5,Peru,PER,9.472,90.5,2
+Cuba,CUB,1930,C,1,Poland,POL,5.76,94.2,2
+Cuba,CUB,1930,C,2,Portugal,PRT,6.703,93.3,2
+Cuba,CUB,1930,C,3,South Africa,ZAF,7.362,92.6,2
+Cuba,CUB,1930,C,4,Jamaica,JAM,7.403,92.6,2
+Cuba,CUB,1930,C,5,Peru,PER,9.216,90.8,2
+Cuba,CUB,1940,C,1,Jamaica,JAM,6.361,93.6,2
+Cuba,CUB,1940,C,2,South Korea,KOR,8.053,91.9,2
+Cuba,CUB,1940,C,3,Philippines,PHL,10.905,89.1,2
+Cuba,CUB,1940,C,4,Russia,RUS,11.235,88.8,3
+Cuba,CUB,1940,C,5,South Africa,ZAF,11.264,88.7,2
+Cuba,CUB,1950,C,1,Jamaica,JAM,3.678,96.3,3
+Cuba,CUB,1950,C,2,Poland,POL,6.359,93.6,3
+Cuba,CUB,1950,C,3,Portugal,PRT,7.645,92.4,3
+Cuba,CUB,1950,C,4,Philippines,PHL,9.469,90.5,3
+Cuba,CUB,1950,C,5,Spain,ESP,10.787,89.2,3
+Cuba,CUB,1960,C,1,Jamaica,JAM,7.256,92.7,3
+Cuba,CUB,1960,C,2,Portugal,PRT,7.266,92.7,3
+Cuba,CUB,1960,C,3,Poland,POL,8.657,91.3,3
+Cuba,CUB,1960,C,4,Philippines,PHL,14.03,86.0,3
+Cuba,CUB,1960,C,5,Spain,ESP,14.953,85.0,3
+Cuba,CUB,1970,C,1,Poland,POL,11.55,88.4,3
+Cuba,CUB,1970,C,2,Jamaica,JAM,12.451,87.5,3
+Cuba,CUB,1970,C,3,China,CHN,15.616,84.4,3
+Cuba,CUB,1970,C,4,Portugal,PRT,16.05,84.0,3
+Cuba,CUB,1970,C,5,Uruguay,URY,16.721,83.3,3
+Cuba,CUB,1980,C,1,Jamaica,JAM,13.07,86.9,3
+Cuba,CUB,1980,C,2,Poland,POL,15.881,84.1,3
+Cuba,CUB,1980,C,3,Uruguay,URY,16.823,83.2,3
+Cuba,CUB,1980,C,4,Portugal,PRT,17.878,82.1,3
+Cuba,CUB,1980,C,5,Chile,CHL,18.393,81.6,3
+Cuba,CUB,1990,C,1,Uruguay,URY,10.169,89.8,3
+Cuba,CUB,1990,C,2,Argentina,ARG,11.9,88.1,3
+Cuba,CUB,1990,C,3,Chile,CHL,13.176,86.8,3
+Cuba,CUB,1990,C,4,Poland,POL,13.991,86.0,3
+Cuba,CUB,1990,C,5,Jamaica,JAM,14.261,85.7,3
+Cuba,CUB,2000,C,1,Uruguay,URY,10.869,89.1,3
+Cuba,CUB,2000,C,2,Poland,POL,11.704,88.3,3
+Cuba,CUB,2000,C,3,Argentina,ARG,12.921,87.1,3
+Cuba,CUB,2000,C,4,Peru,PER,13.058,86.9,3
+Cuba,CUB,2000,C,5,Chile,CHL,13.363,86.6,3
+Denmark,DNK,1820,C,1,France,FRA,11.553,88.4,2
+Denmark,DNK,1820,C,2,Portugal,PRT,12.519,87.5,2
+Denmark,DNK,1820,C,3,Italy,ITA,16.691,83.3,2
+Denmark,DNK,1820,C,4,Belgium,BEL,18.627,81.4,2
+Denmark,DNK,1820,C,5,Argentina,ARG,19.603,80.4,2
+Denmark,DNK,1840,C,1,France,FRA,14.374,85.6,2
+Denmark,DNK,1840,C,2,Sweden,SWE,63.637,36.4,2
+Denmark,DNK,1850,C,1,France,FRA,5.546,94.5,3
+Denmark,DNK,1850,C,2,Italy,ITA,6.618,93.4,2
+Denmark,DNK,1850,C,3,Belgium,BEL,9.12,90.9,3
+Denmark,DNK,1850,C,4,Australia,AUS,16.66,83.3,2
+Denmark,DNK,1850,C,5,Sweden,SWE,20.956,79.0,3
+Denmark,DNK,1860,C,1,France,FRA,10.754,89.2,2
+Denmark,DNK,1860,C,2,Belgium,BEL,13.313,86.7,2
+Denmark,DNK,1860,C,3,Sweden,SWE,23.499,76.5,2
+Denmark,DNK,1860,C,4,Norway,NOR,31.807,68.2,2
+Denmark,DNK,1860,C,5,United Kingdom,GBR,39.395,60.6,2
+Denmark,DNK,1870,C,1,Germany,DEU,9.894,90.1,2
+Denmark,DNK,1870,C,2,Sweden,SWE,12.575,87.4,4
+Denmark,DNK,1870,C,3,Canada,CAN,15.132,84.9,3
+Denmark,DNK,1870,C,4,Switzerland,CHE,16.19,83.8,3
+Denmark,DNK,1870,C,5,United States,USA,22.586,77.4,3
+Denmark,DNK,1880,C,1,France,FRA,6.802,93.2,3
+Denmark,DNK,1880,C,2,Germany,DEU,9.309,90.7,2
+Denmark,DNK,1880,C,3,Sweden,SWE,13.797,86.2,3
+Denmark,DNK,1880,C,4,Belgium,BEL,14.625,85.4,3
+Denmark,DNK,1880,C,5,Canada,CAN,15.788,84.2,2
+Denmark,DNK,1890,C,1,Germany,DEU,9.43,90.6,2
+Denmark,DNK,1890,C,2,Norway,NOR,12.214,87.8,4
+Denmark,DNK,1890,C,3,Netherlands,NLD,13.677,86.3,4
+Denmark,DNK,1890,C,4,Canada,CAN,14.667,85.3,3
+Denmark,DNK,1890,C,5,France,FRA,17.261,82.7,4
+Denmark,DNK,1900,C,1,Netherlands,NLD,8.474,91.5,3
+Denmark,DNK,1900,C,2,Germany,DEU,9.009,91.0,2
+Denmark,DNK,1900,C,3,Sweden,SWE,11.024,89.0,3
+Denmark,DNK,1900,C,4,Norway,NOR,12.072,87.9,3
+Denmark,DNK,1900,C,5,Belgium,BEL,14.845,85.2,3
+Denmark,DNK,1910,C,1,Netherlands,NLD,8.858,91.1,4
+Denmark,DNK,1910,C,2,Germany,DEU,11.274,88.7,2
+Denmark,DNK,1910,C,3,Norway,NOR,12.066,87.9,4
+Denmark,DNK,1910,C,4,Ireland,IRL,12.348,87.7,2
+Denmark,DNK,1910,C,5,United Kingdom,GBR,14.125,85.9,4
+Denmark,DNK,1920,C,1,Netherlands,NLD,2.793,97.2,3
+Denmark,DNK,1920,C,2,United Kingdom,GBR,3.766,96.2,3
+Denmark,DNK,1920,C,3,Belgium,BEL,8.657,91.3,3
+Denmark,DNK,1920,C,4,Sweden,SWE,9.233,90.8,3
+Denmark,DNK,1920,C,5,Norway,NOR,9.524,90.5,3
+Denmark,DNK,1930,C,1,United Kingdom,GBR,3.015,97.0,3
+Denmark,DNK,1930,C,2,Netherlands,NLD,5.415,94.6,3
+Denmark,DNK,1930,C,3,Sweden,SWE,9.737,90.3,3
+Denmark,DNK,1930,C,4,Belgium,BEL,11.632,88.4,3
+Denmark,DNK,1930,C,5,Switzerland,CHE,14.864,85.1,3
+Denmark,DNK,1940,C,1,Sweden,SWE,2.279,97.7,3
+Denmark,DNK,1940,C,2,Netherlands,NLD,3.001,97.0,3
+Denmark,DNK,1940,C,3,Norway,NOR,8.33,91.7,3
+Denmark,DNK,1940,C,4,Germany,DEU,12.509,87.5,2
+Denmark,DNK,1940,C,5,Canada,CAN,14.537,85.5,3
+Denmark,DNK,1950,C,1,Sweden,SWE,4.964,95.0,4
+Denmark,DNK,1950,C,2,United Kingdom,GBR,5.571,94.4,4
+Denmark,DNK,1950,C,3,Netherlands,NLD,6.473,93.5,4
+Denmark,DNK,1950,C,4,Norway,NOR,8.63,91.4,4
+Denmark,DNK,1950,C,5,Canada,CAN,10.757,89.2,4
+Denmark,DNK,1960,C,1,United Kingdom,GBR,4.16,95.8,4
+Denmark,DNK,1960,C,2,Canada,CAN,4.983,95.0,4
+Denmark,DNK,1960,C,3,Sweden,SWE,5.551,94.4,4
+Denmark,DNK,1960,C,4,Australia,AUS,7.911,92.1,4
+Denmark,DNK,1960,C,5,Norway,NOR,8.107,91.9,4
+Denmark,DNK,1970,C,1,Canada,CAN,4.323,95.7,4
+Denmark,DNK,1970,C,2,Sweden,SWE,6.332,93.7,4
+Denmark,DNK,1970,C,3,Netherlands,NLD,7.285,92.7,4
+Denmark,DNK,1970,C,4,United Kingdom,GBR,7.676,92.3,4
+Denmark,DNK,1970,C,5,Australia,AUS,7.95,92.0,4
+Denmark,DNK,1980,C,1,France,FRA,5.512,94.5,4
+Denmark,DNK,1980,C,2,Australia,AUS,7.09,92.9,4
+Denmark,DNK,1980,C,3,Canada,CAN,7.309,92.7,4
+Denmark,DNK,1980,C,4,Japan,JPN,8.08,91.9,4
+Denmark,DNK,1980,C,5,United Kingdom,GBR,9.375,90.6,4
+Denmark,DNK,1990,C,1,Norway,NOR,5.923,94.1,4
+Denmark,DNK,1990,C,2,Finland,FIN,6.276,93.7,4
+Denmark,DNK,1990,C,3,France,FRA,7.816,92.2,4
+Denmark,DNK,1990,C,4,Netherlands,NLD,8.124,91.9,4
+Denmark,DNK,1990,C,5,Sweden,SWE,8.828,91.2,4
+Denmark,DNK,2000,C,1,France,FRA,7.5,92.5,4
+Denmark,DNK,2000,C,2,Canada,CAN,7.812,92.2,4
+Denmark,DNK,2000,C,3,Netherlands,NLD,8.599,91.4,4
+Denmark,DNK,2000,C,4,Switzerland,CHE,8.72,91.3,4
+Denmark,DNK,2000,C,5,Germany,DEU,8.752,91.2,3
+Egypt,EGY,1820,C,1,Peru,PER,4.147,95.9,2
+Egypt,EGY,1820,C,2,Indonesia,IDN,11.707,88.3,2
+Egypt,EGY,1820,C,3,Japan,JPN,14.753,85.2,2
+Egypt,EGY,1820,C,4,Sweden,SWE,16.108,83.9,2
+Egypt,EGY,1820,C,5,Brazil,BRA,19.379,80.6,2
+Egypt,EGY,1870,C,1,Jamaica,JAM,6.44,93.6,2
+Egypt,EGY,1870,C,2,India,IND,8.638,91.4,3
+Egypt,EGY,1870,C,3,Brazil,BRA,9.258,90.7,3
+Egypt,EGY,1870,C,4,Japan,JPN,10.605,89.4,3
+Egypt,EGY,1870,C,5,Russia,RUS,10.701,89.3,2
+Egypt,EGY,1890,C,1,India,IND,2.247,97.8,2
+Egypt,EGY,1890,C,2,Brazil,BRA,6.635,93.4,2
+Egypt,EGY,1890,C,3,Philippines,PHL,7.736,92.3,2
+Egypt,EGY,1890,C,4,South Africa,ZAF,12.034,88.0,2
+Egypt,EGY,1890,C,5,China,CHN,12.121,87.9,2
+Egypt,EGY,1910,C,1,Philippines,PHL,3.364,96.6,2
+Egypt,EGY,1910,C,2,Peru,PER,4.969,95.0,2
+Egypt,EGY,1910,C,3,Brazil,BRA,8.074,91.9,2
+Egypt,EGY,1910,C,4,South Africa,ZAF,9.617,90.4,2
+Egypt,EGY,1910,C,5,China,CHN,10.53,89.5,2
+Egypt,EGY,1930,C,1,Brazil,BRA,5.583,94.4,2
+Egypt,EGY,1930,C,2,Mexico,MEX,7.493,92.5,2
+Egypt,EGY,1930,C,3,China,CHN,9.073,90.9,2
+Egypt,EGY,1930,C,4,Venezuela,VEN,11.049,89.0,2
+Egypt,EGY,1930,C,5,Russia,RUS,15.65,84.4,2
+Egypt,EGY,1940,C,1,Brazil,BRA,8.365,91.6,2
+Egypt,EGY,1940,C,2,Peru,PER,9.928,90.1,2
+Egypt,EGY,1940,C,3,Venezuela,VEN,10.961,89.0,2
+Egypt,EGY,1940,C,4,Mexico,MEX,13.301,86.7,2
+Egypt,EGY,1940,C,5,Bolivia,BOL,16.815,83.2,2
+Egypt,EGY,1950,C,1,China,CHN,8.744,91.3,4
+Egypt,EGY,1950,C,2,India,IND,9.271,90.7,4
+Egypt,EGY,1950,C,3,Bolivia,BOL,13.718,86.3,4
+Egypt,EGY,1950,C,4,Peru,PER,13.772,86.2,4
+Egypt,EGY,1950,C,5,South Korea,KOR,17.408,82.6,4
+Egypt,EGY,1960,C,1,Indonesia,IDN,6.356,93.6,3
+Egypt,EGY,1960,C,2,India,IND,12.624,87.4,4
+Egypt,EGY,1960,C,3,China,CHN,14.678,85.3,4
+Egypt,EGY,1960,C,4,Bolivia,BOL,17.169,82.8,4
+Egypt,EGY,1960,C,5,Brazil,BRA,18.807,81.2,4
+Egypt,EGY,1970,C,1,Indonesia,IDN,2.814,97.2,3
+Egypt,EGY,1970,C,2,India,IND,6.076,93.9,4
+Egypt,EGY,1970,C,3,Peru,PER,20.177,79.8,4
+Egypt,EGY,1970,C,4,Bolivia,BOL,22.117,77.9,4
+Egypt,EGY,1970,C,5,Brazil,BRA,22.201,77.8,4
+Egypt,EGY,1980,C,1,Indonesia,IDN,8.993,91.0,3
+Egypt,EGY,1980,C,2,Brazil,BRA,16.807,83.2,4
+Egypt,EGY,1980,C,3,Peru,PER,17.288,82.7,4
+Egypt,EGY,1980,C,4,India,IND,17.641,82.4,4
+Egypt,EGY,1980,C,5,Philippines,PHL,17.692,82.3,4
+Egypt,EGY,1990,C,1,Philippines,PHL,11.539,88.5,4
+Egypt,EGY,1990,C,2,Brazil,BRA,12.237,87.8,4
+Egypt,EGY,1990,C,3,Colombia,COL,12.549,87.5,4
+Egypt,EGY,1990,C,4,South Africa,ZAF,13.129,86.9,4
+Egypt,EGY,1990,C,5,Peru,PER,14.133,85.9,4
+Egypt,EGY,2000,C,1,Indonesia,IDN,4.935,95.1,3
+Egypt,EGY,2000,C,2,Colombia,COL,6.767,93.2,4
+Egypt,EGY,2000,C,3,Philippines,PHL,9.415,90.6,4
+Egypt,EGY,2000,C,4,Brazil,BRA,9.71,90.3,4
+Egypt,EGY,2000,C,5,Peru,PER,11.454,88.5,4
+Finland,FIN,1870,C,1,Greece,GRC,1.851,98.1,3
+Finland,FIN,1870,C,2,Venezuela,VEN,4.363,95.6,2
+Finland,FIN,1870,C,3,Argentina,ARG,6.935,93.1,3
+Finland,FIN,1870,C,4,Russia,RUS,7.403,92.6,2
+Finland,FIN,1870,C,5,South Africa,ZAF,8.337,91.7,2
+Finland,FIN,1880,C,1,Greece,GRC,3.366,96.6,2
+Finland,FIN,1880,C,2,Venezuela,VEN,5.408,94.6,2
+Finland,FIN,1880,C,3,South Africa,ZAF,7.084,92.9,2
+Finland,FIN,1880,C,4,Russia,RUS,8.254,91.7,2
+Finland,FIN,1880,C,5,Chile,CHL,8.544,91.5,2
+Finland,FIN,1890,C,1,Greece,GRC,5.372,94.6,3
+Finland,FIN,1890,C,2,South Africa,ZAF,6.389,93.6,3
+Finland,FIN,1890,C,3,Venezuela,VEN,6.495,93.5,2
+Finland,FIN,1890,C,4,Portugal,PRT,8.557,91.4,3
+Finland,FIN,1890,C,5,Russia,RUS,10.51,89.5,2
+Finland,FIN,1900,C,1,Portugal,PRT,6.604,93.4,2
+Finland,FIN,1900,C,2,Italy,ITA,6.935,93.1,3
+Finland,FIN,1900,C,3,Japan,JPN,8.74,91.3,3
+Finland,FIN,1900,C,4,Greece,GRC,9.307,90.7,2
+Finland,FIN,1900,C,5,South Africa,ZAF,12.793,87.2,2
+Finland,FIN,1910,C,1,Greece,GRC,7.945,92.1,2
+Finland,FIN,1910,C,2,China,CHN,9.354,90.6,2
+Finland,FIN,1910,C,3,Russia,RUS,9.882,90.1,2
+Finland,FIN,1910,C,4,Uruguay,URY,12.166,87.8,3
+Finland,FIN,1910,C,5,Portugal,PRT,13.382,86.6,3
+Finland,FIN,1920,C,1,Poland,POL,3.516,96.5,2
+Finland,FIN,1920,C,2,Greece,GRC,6.595,93.4,3
+Finland,FIN,1920,C,3,Italy,ITA,7.683,92.3,3
+Finland,FIN,1920,C,4,Uruguay,URY,8.255,91.7,3
+Finland,FIN,1920,C,5,Portugal,PRT,11.397,88.6,2
+Finland,FIN,1930,C,1,Italy,ITA,3.327,96.7,3
+Finland,FIN,1930,C,2,Greece,GRC,5.161,94.8,2
+Finland,FIN,1930,C,3,Spain,ESP,10.051,89.9,3
+Finland,FIN,1930,C,4,Uruguay,URY,12.682,87.3,3
+Finland,FIN,1930,C,5,Argentina,ARG,12.79,87.2,3
+Finland,FIN,1940,C,1,Hungary,HUN,7.931,92.1,2
+Finland,FIN,1940,C,2,Japan,JPN,8.18,91.8,2
+Finland,FIN,1940,C,3,Spain,ESP,10.521,89.5,3
+Finland,FIN,1940,C,4,Russia,RUS,15.213,84.8,3
+Finland,FIN,1940,C,5,Chile,CHL,16.664,83.3,3
+Finland,FIN,1950,C,1,Uruguay,URY,8.09,91.9,3
+Finland,FIN,1950,C,2,Argentina,ARG,8.592,91.4,4
+Finland,FIN,1950,C,3,Belgium,BEL,8.87,91.1,4
+Finland,FIN,1950,C,4,Hungary,HUN,11.011,89.0,3
+Finland,FIN,1950,C,5,Italy,ITA,11.11,88.9,4
+Finland,FIN,1960,C,1,Belgium,BEL,4.088,95.9,4
+Finland,FIN,1960,C,2,Italy,ITA,9.236,90.8,4
+Finland,FIN,1960,C,3,Argentina,ARG,9.978,90.0,4
+Finland,FIN,1960,C,4,Ireland,IRL,11.202,88.8,4
+Finland,FIN,1960,C,5,Russia,RUS,11.515,88.5,3
+Finland,FIN,1970,C,1,Belgium,BEL,4.418,95.6,3
+Finland,FIN,1970,C,2,Italy,ITA,7.027,93.0,3
+Finland,FIN,1970,C,3,Argentina,ARG,12.009,88.0,3
+Finland,FIN,1970,C,4,Ireland,IRL,13.433,86.6,3
+Finland,FIN,1970,C,5,Netherlands,NLD,14.309,85.7,3
+Finland,FIN,1980,C,1,Belgium,BEL,6.191,93.8,4
+Finland,FIN,1980,C,2,Netherlands,NLD,9.361,90.6,4
+Finland,FIN,1980,C,3,Italy,ITA,9.549,90.5,4
+Finland,FIN,1980,C,4,France,FRA,10.646,89.4,4
+Finland,FIN,1980,C,5,Denmark,DNK,10.98,89.0,4
+Finland,FIN,1990,C,1,Belgium,BEL,5.472,94.5,4
+Finland,FIN,1990,C,2,Denmark,DNK,6.276,93.7,4
+Finland,FIN,1990,C,3,Netherlands,NLD,6.586,93.4,4
+Finland,FIN,1990,C,4,Norway,NOR,10.329,89.7,4
+Finland,FIN,1990,C,5,France,FRA,10.353,89.6,4
+Finland,FIN,2000,C,1,Belgium,BEL,6.719,93.3,4
+Finland,FIN,2000,C,2,Netherlands,NLD,6.804,93.2,4
+Finland,FIN,2000,C,3,Sweden,SWE,8.029,92.0,4
+Finland,FIN,2000,C,4,Germany,DEU,9.656,90.3,3
+Finland,FIN,2000,C,5,France,FRA,9.776,90.2,4
+France,FRA,1820,C,1,Portugal,PRT,8.608,91.4,2
+France,FRA,1820,C,2,Denmark,DNK,11.553,88.4,2
+France,FRA,1820,C,3,Belgium,BEL,19.633,80.4,2
+France,FRA,1820,C,4,Japan,JPN,19.748,80.3,2
+France,FRA,1820,C,5,Argentina,ARG,22.702,77.3,2
+France,FRA,1830,C,1,Sweden,SWE,76.982,23.0,2
+France,FRA,1840,C,1,Denmark,DNK,14.374,85.6,2
+France,FRA,1840,C,2,Sweden,SWE,77.708,22.3,2
+France,FRA,1850,C,1,Italy,ITA,5.501,94.5,2
+France,FRA,1850,C,2,Denmark,DNK,5.546,94.5,3
+France,FRA,1850,C,3,Belgium,BEL,10.039,90.0,3
+France,FRA,1850,C,4,Sweden,SWE,19.021,81.0,3
+France,FRA,1850,C,5,Australia,AUS,23.577,76.4,2
+France,FRA,1860,C,1,Denmark,DNK,10.754,89.2,2
+France,FRA,1860,C,2,Belgium,BEL,14.078,85.9,2
+France,FRA,1860,C,3,United Kingdom,GBR,32.33,67.7,2
+France,FRA,1860,C,4,Sweden,SWE,34.073,65.9,2
+France,FRA,1860,C,5,Netherlands,NLD,39.449,60.6,2
+France,FRA,1870,C,1,Germany,DEU,16.307,83.7,2
+France,FRA,1870,C,2,Netherlands,NLD,17.326,82.7,4
+France,FRA,1870,C,3,Belgium,BEL,23.471,76.5,4
+France,FRA,1870,C,4,Switzerland,CHE,24.738,75.3,3
+France,FRA,1870,C,5,Canada,CAN,28.367,71.6,3
+France,FRA,1880,C,1,Denmark,DNK,6.802,93.2,3
+France,FRA,1880,C,2,Germany,DEU,8.966,91.0,2
+France,FRA,1880,C,3,Belgium,BEL,13.394,86.6,3
+France,FRA,1880,C,4,Netherlands,NLD,13.977,86.0,3
+France,FRA,1880,C,5,Switzerland,CHE,15.358,84.6,3
+France,FRA,1890,C,1,Germany,DEU,3.461,96.5,2
+France,FRA,1890,C,2,Canada,CAN,12.654,87.3,3
+France,FRA,1890,C,3,Netherlands,NLD,12.934,87.1,4
+France,FRA,1890,C,4,Belgium,BEL,14.622,85.4,4
+France,FRA,1890,C,5,Denmark,DNK,17.261,82.7,4
+France,FRA,1900,C,1,Germany,DEU,2.342,97.7,2
+France,FRA,1900,C,2,Canada,CAN,8.281,91.7,2
+France,FRA,1900,C,3,Netherlands,NLD,10.79,89.2,3
+France,FRA,1900,C,4,Belgium,BEL,14.086,85.9,3
+France,FRA,1900,C,5,Denmark,DNK,16.165,83.8,3
+France,FRA,1910,C,1,Germany,DEU,4.764,95.2,2
+France,FRA,1910,C,2,Sweden,SWE,15.772,84.2,4
+France,FRA,1910,C,3,Netherlands,NLD,16.057,83.9,4
+France,FRA,1910,C,4,Belgium,BEL,16.781,83.2,4
+France,FRA,1910,C,5,Denmark,DNK,22.429,77.6,4
+France,FRA,1920,C,1,Germany,DEU,5.075,94.9,2
+France,FRA,1920,C,2,Canada,CAN,8.887,91.1,2
+France,FRA,1920,C,3,Switzerland,CHE,13.531,86.5,3
+France,FRA,1920,C,4,Denmark,DNK,15.083,84.9,3
+France,FRA,1920,C,5,Sweden,SWE,15.47,84.5,3
+France,FRA,1930,C,1,Germany,DEU,6.205,93.8,2
+France,FRA,1930,C,2,Canada,CAN,7.296,92.7,3
+France,FRA,1930,C,3,United Kingdom,GBR,13.251,86.7,3
+France,FRA,1930,C,4,Belgium,BEL,14.132,85.9,3
+France,FRA,1930,C,5,Denmark,DNK,14.908,85.1,3
+France,FRA,1940,C,1,Germany,DEU,13.598,86.4,2
+France,FRA,1940,C,2,Ireland,IRL,14.619,85.4,2
+France,FRA,1940,C,3,Belgium,BEL,18.557,81.4,3
+France,FRA,1940,C,4,Japan,JPN,22.233,77.8,2
+France,FRA,1940,C,5,Finland,FIN,23.532,76.5,3
+France,FRA,1950,C,1,Germany,DEU,8.346,91.7,3
+France,FRA,1950,C,2,Ireland,IRL,18.037,82.0,4
+France,FRA,1950,C,3,Sweden,SWE,20.354,79.6,4
+France,FRA,1950,C,4,Belgium,BEL,21.148,78.9,4
+France,FRA,1950,C,5,Switzerland,CHE,21.573,78.4,4
+France,FRA,1960,C,1,Belgium,BEL,8.532,91.5,4
+France,FRA,1960,C,2,Germany,DEU,8.582,91.4,3
+France,FRA,1960,C,3,Netherlands,NLD,9.187,90.8,4
+France,FRA,1960,C,4,Finland,FIN,11.593,88.4,4
+France,FRA,1960,C,5,Sweden,SWE,11.606,88.4,4
+France,FRA,1970,C,1,Germany,DEU,7.553,92.4,3
+France,FRA,1970,C,2,Canada,CAN,8.397,91.6,4
+France,FRA,1970,C,3,Sweden,SWE,9.282,90.7,4
+France,FRA,1970,C,4,Japan,JPN,9.384,90.6,4
+France,FRA,1970,C,5,Netherlands,NLD,9.416,90.6,4
+France,FRA,1980,C,1,Canada,CAN,4.694,95.3,4
+France,FRA,1980,C,2,Norway,NOR,5.356,94.6,4
+France,FRA,1980,C,3,Denmark,DNK,5.512,94.5,4
+France,FRA,1980,C,4,Sweden,SWE,5.815,94.2,4
+France,FRA,1980,C,5,United Kingdom,GBR,5.903,94.1,4
+France,FRA,1990,C,1,United Kingdom,GBR,6.212,93.8,4
+France,FRA,1990,C,2,Netherlands,NLD,6.509,93.5,4
+France,FRA,1990,C,3,Norway,NOR,6.601,93.4,4
+France,FRA,1990,C,4,Sweden,SWE,6.608,93.4,4
+France,FRA,1990,C,5,Canada,CAN,7.142,92.9,4
+France,FRA,2000,C,1,Sweden,SWE,3.525,96.5,4
+France,FRA,2000,C,2,Germany,DEU,7.365,92.6,3
+France,FRA,2000,C,3,Denmark,DNK,7.5,92.5,4
+France,FRA,2000,C,4,Netherlands,NLD,7.638,92.4,4
+France,FRA,2000,C,5,Japan,JPN,7.965,92.0,4
+Germany,DEU,1870,C,1,Canada,CAN,4.533,95.5,2
+Germany,DEU,1870,C,2,Switzerland,CHE,7.774,92.2,2
+Germany,DEU,1870,C,3,Denmark,DNK,9.894,90.1,2
+Germany,DEU,1870,C,4,Norway,NOR,10.552,89.4,2
+Germany,DEU,1870,C,5,France,FRA,16.307,83.7,2
+Germany,DEU,1880,C,1,Canada,CAN,6.511,93.5,2
+Germany,DEU,1880,C,2,Norway,NOR,7.59,92.4,2
+Germany,DEU,1880,C,3,France,FRA,8.966,91.0,2
+Germany,DEU,1880,C,4,Denmark,DNK,9.309,90.7,2
+Germany,DEU,1880,C,5,Switzerland,CHE,12.827,87.2,2
+Germany,DEU,1890,C,1,France,FRA,3.461,96.5,2
+Germany,DEU,1890,C,2,Canada,CAN,6.395,93.6,2
+Germany,DEU,1890,C,3,Denmark,DNK,9.43,90.6,2
+Germany,DEU,1890,C,4,Norway,NOR,12.6,87.4,2
+Germany,DEU,1890,C,5,Netherlands,NLD,14.982,85.0,2
+Germany,DEU,1900,C,1,France,FRA,2.342,97.7,2
+Germany,DEU,1900,C,2,Canada,CAN,6.683,93.3,2
+Germany,DEU,1900,C,3,Denmark,DNK,9.009,91.0,2
+Germany,DEU,1900,C,4,Netherlands,NLD,10.461,89.5,2
+Germany,DEU,1900,C,5,Australia,AUS,15.596,84.4,2
+Germany,DEU,1910,C,1,France,FRA,4.764,95.2,2
+Germany,DEU,1910,C,2,Canada,CAN,11.002,89.0,2
+Germany,DEU,1910,C,3,Denmark,DNK,11.274,88.7,2
+Germany,DEU,1910,C,4,Netherlands,NLD,12.953,87.0,2
+Germany,DEU,1910,C,5,Sweden,SWE,14.924,85.1,2
+Germany,DEU,1920,C,1,France,FRA,5.075,94.9,2
+Germany,DEU,1920,C,2,Norway,NOR,11.761,88.2,2
+Germany,DEU,1920,C,3,Sweden,SWE,12.019,88.0,2
+Germany,DEU,1920,C,4,Canada,CAN,13.653,86.3,2
+Germany,DEU,1920,C,5,Denmark,DNK,17.673,82.3,2
+Germany,DEU,1930,C,1,France,FRA,6.205,93.8,2
+Germany,DEU,1930,C,2,Australia,AUS,10.225,89.8,2
+Germany,DEU,1930,C,3,Sweden,SWE,11.581,88.4,2
+Germany,DEU,1930,C,4,Canada,CAN,11.714,88.3,2
+Germany,DEU,1930,C,5,Norway,NOR,12.473,87.5,2
+Germany,DEU,1940,C,1,Canada,CAN,5.365,94.6,2
+Germany,DEU,1940,C,2,Switzerland,CHE,9.097,90.9,2
+Germany,DEU,1940,C,3,Australia,AUS,9.791,90.2,2
+Germany,DEU,1940,C,4,Denmark,DNK,12.509,87.5,2
+Germany,DEU,1940,C,5,France,FRA,13.598,86.4,2
+Germany,DEU,1950,C,1,France,FRA,8.346,91.7,3
+Germany,DEU,1950,C,2,Ireland,IRL,10.47,89.5,3
+Germany,DEU,1950,C,3,Norway,NOR,13.302,86.7,3
+Germany,DEU,1950,C,4,Belgium,BEL,16.443,83.6,3
+Germany,DEU,1950,C,5,Netherlands,NLD,17.157,82.8,3
+Germany,DEU,1960,C,1,Canada,CAN,6.524,93.5,3
+Germany,DEU,1960,C,2,Australia,AUS,6.896,93.1,3
+Germany,DEU,1960,C,3,United Kingdom,GBR,7.88,92.1,3
+Germany,DEU,1960,C,4,France,FRA,8.582,91.4,3
+Germany,DEU,1960,C,5,Denmark,DNK,9.992,90.0,3
+Germany,DEU,1970,C,1,Australia,AUS,5.025,95.0,3
+Germany,DEU,1970,C,2,United Kingdom,GBR,6.288,93.7,3
+Germany,DEU,1970,C,3,France,FRA,7.553,92.4,3
+Germany,DEU,1970,C,4,Japan,JPN,7.664,92.3,3
+Germany,DEU,1970,C,5,Canada,CAN,9.533,90.5,3
+Germany,DEU,1980,C,1,Australia,AUS,5.169,94.8,3
+Germany,DEU,1980,C,2,United Kingdom,GBR,6.769,93.2,3
+Germany,DEU,1980,C,3,France,FRA,8.799,91.2,3
+Germany,DEU,1980,C,4,Norway,NOR,10.298,89.7,3
+Germany,DEU,1980,C,5,Denmark,DNK,10.379,89.6,3
+Germany,DEU,1990,C,1,United Kingdom,GBR,5.103,94.9,3
+Germany,DEU,1990,C,2,Australia,AUS,6.074,93.9,3
+Germany,DEU,1990,C,3,Norway,NOR,8.862,91.1,3
+Germany,DEU,1990,C,4,Canada,CAN,10.886,89.1,3
+Germany,DEU,1990,C,5,Sweden,SWE,10.888,89.1,3
+Germany,DEU,2000,C,1,United Kingdom,GBR,1.99,98.0,3
+Germany,DEU,2000,C,2,Canada,CAN,4.471,95.5,3
+Germany,DEU,2000,C,3,Australia,AUS,4.964,95.0,3
+Germany,DEU,2000,C,4,Japan,JPN,6.942,93.1,3
+Germany,DEU,2000,C,5,France,FRA,7.365,92.6,3
+Greece,GRC,1870,C,1,Finland,FIN,1.851,98.1,3
+Greece,GRC,1870,C,2,Venezuela,VEN,4.446,95.6,2
+Greece,GRC,1870,C,3,Argentina,ARG,6.129,93.9,3
+Greece,GRC,1870,C,4,Russia,RUS,7.788,92.2,2
+Greece,GRC,1870,C,5,Japan,JPN,8.992,91.0,3
+Greece,GRC,1880,C,1,Finland,FIN,3.366,96.6,2
+Greece,GRC,1880,C,2,Argentina,ARG,6.123,93.9,2
+Greece,GRC,1880,C,3,Spain,ESP,6.378,93.6,2
+Greece,GRC,1880,C,4,Venezuela,VEN,6.871,93.1,2
+Greece,GRC,1880,C,5,South Africa,ZAF,8.1,91.9,2
+Greece,GRC,1890,C,1,Finland,FIN,5.372,94.6,3
+Greece,GRC,1890,C,2,Spain,ESP,6.753,93.2,3
+Greece,GRC,1890,C,3,Poland,POL,6.857,93.1,2
+Greece,GRC,1890,C,4,Venezuela,VEN,10.017,90.0,2
+Greece,GRC,1890,C,5,South Africa,ZAF,11.002,89.0,3
+Greece,GRC,1900,C,1,Japan,JPN,2.445,97.6,2
+Greece,GRC,1900,C,2,Finland,FIN,9.307,90.7,2
+Greece,GRC,1900,C,3,Spain,ESP,10.247,89.8,2
+Greece,GRC,1900,C,4,Portugal,PRT,10.402,89.6,2
+Greece,GRC,1900,C,5,Venezuela,VEN,10.424,89.6,2
+Greece,GRC,1910,C,1,Japan,JPN,2.743,97.3,2
+Greece,GRC,1910,C,2,Spain,ESP,7.83,92.2,2
+Greece,GRC,1910,C,3,Finland,FIN,7.945,92.1,2
+Greece,GRC,1910,C,4,Italy,ITA,9.733,90.3,2
+Greece,GRC,1910,C,5,Bolivia,BOL,11.685,88.3,2
+Greece,GRC,1920,C,1,Finland,FIN,6.595,93.4,3
+Greece,GRC,1920,C,2,Japan,JPN,8.342,91.7,3
+Greece,GRC,1920,C,3,Poland,POL,8.731,91.3,2
+Greece,GRC,1920,C,4,Italy,ITA,8.966,91.0,3
+Greece,GRC,1920,C,5,Spain,ESP,11.387,88.6,3
+Greece,GRC,1930,C,1,Spain,ESP,2.543,97.5,2
+Greece,GRC,1930,C,2,Finland,FIN,5.161,94.8,2
+Greece,GRC,1930,C,3,Italy,ITA,7.196,92.8,2
+Greece,GRC,1930,C,4,Chile,CHL,8.892,91.1,2
+Greece,GRC,1930,C,5,Japan,JPN,10.137,89.9,2
+Greece,GRC,1940,C,1,Italy,ITA,9.116,90.9,3
+Greece,GRC,1940,C,2,Hungary,HUN,10.135,89.9,2
+Greece,GRC,1940,C,3,Uruguay,URY,11.021,89.0,3
+Greece,GRC,1940,C,4,Spain,ESP,11.523,88.5,3
+Greece,GRC,1940,C,5,Japan,JPN,14.578,85.4,2
+Greece,GRC,1950,C,1,Spain,ESP,6.912,93.1,4
+Greece,GRC,1950,C,2,Hungary,HUN,9.928,90.1,3
+Greece,GRC,1950,C,3,Italy,ITA,11.937,88.1,4
+Greece,GRC,1950,C,4,Russia,RUS,13.852,86.1,3
+Greece,GRC,1950,C,5,Finland,FIN,14.303,85.7,4
+Greece,GRC,1960,C,1,Russia,RUS,6.193,93.8,3
+Greece,GRC,1960,C,2,Uruguay,URY,8.774,91.2,3
+Greece,GRC,1960,C,3,Jamaica,JAM,10.758,89.2,4
+Greece,GRC,1960,C,4,Ireland,IRL,13.166,86.8,4
+Greece,GRC,1960,C,5,Italy,ITA,13.327,86.7,4
+Greece,GRC,1970,C,1,Spain,ESP,6.651,93.3,4
+Greece,GRC,1970,C,2,Ireland,IRL,11.811,88.2,4
+Greece,GRC,1970,C,3,Uruguay,URY,12.595,87.4,3
+Greece,GRC,1970,C,4,Italy,ITA,13.379,86.6,4
+Greece,GRC,1970,C,5,Russia,RUS,13.549,86.5,3
+Greece,GRC,1980,C,1,Spain,ESP,3.729,96.3,4
+Greece,GRC,1980,C,2,Ireland,IRL,11.822,88.2,4
+Greece,GRC,1980,C,3,Italy,ITA,12.695,87.3,4
+Greece,GRC,1980,C,4,Portugal,PRT,14.332,85.7,4
+Greece,GRC,1980,C,5,Uruguay,URY,14.388,85.6,3
+Greece,GRC,1990,C,1,Spain,ESP,4.778,95.2,4
+Greece,GRC,1990,C,2,Ireland,IRL,10.363,89.6,4
+Greece,GRC,1990,C,3,Italy,ITA,14.728,85.3,4
+Greece,GRC,1990,C,4,Uruguay,URY,16.295,83.7,3
+Greece,GRC,1990,C,5,Portugal,PRT,17.555,82.4,4
+Greece,GRC,2000,C,1,Chile,CHL,6.569,93.4,3
+Greece,GRC,2000,C,2,Spain,ESP,7.141,92.9,3
+Greece,GRC,2000,C,3,Italy,ITA,12.831,87.2,3
+Greece,GRC,2000,C,4,Belgium,BEL,14.35,85.6,3
+Greece,GRC,2000,C,5,Uruguay,URY,14.357,85.6,3
+Hungary,HUN,1870,C,1,Poland,POL,14.506,85.5,2
+Hungary,HUN,1870,C,2,Finland,FIN,15.291,84.7,3
+Hungary,HUN,1870,C,3,Greece,GRC,15.334,84.7,3
+Hungary,HUN,1870,C,4,Ireland,IRL,16.767,83.2,3
+Hungary,HUN,1870,C,5,Argentina,ARG,17.917,82.1,3
+Hungary,HUN,1890,C,1,Spain,ESP,10.514,89.5,2
+Hungary,HUN,1890,C,2,Sweden,SWE,15.868,84.1,2
+Hungary,HUN,1890,C,3,Greece,GRC,16.635,83.4,2
+Hungary,HUN,1890,C,4,Italy,ITA,20.067,79.9,2
+Hungary,HUN,1890,C,5,Finland,FIN,21.581,78.4,2
+Hungary,HUN,1900,C,1,Spain,ESP,9.418,90.6,3
+Hungary,HUN,1900,C,2,Japan,JPN,16.074,83.9,3
+Hungary,HUN,1900,C,3,Italy,ITA,17.177,82.8,3
+Hungary,HUN,1900,C,4,Greece,GRC,18.799,81.2,2
+Hungary,HUN,1900,C,5,Finland,FIN,21.285,78.7,3
+Hungary,HUN,1910,C,1,Spain,ESP,9.351,90.6,3
+Hungary,HUN,1910,C,2,Japan,JPN,14.467,85.5,3
+Hungary,HUN,1910,C,3,Greece,GRC,19.479,80.5,2
+Hungary,HUN,1910,C,4,Italy,ITA,20.326,79.7,3
+Hungary,HUN,1910,C,5,Jamaica,JAM,22.99,77.0,2
+Hungary,HUN,1920,C,1,Japan,JPN,7.276,92.7,3
+Hungary,HUN,1920,C,2,Spain,ESP,10.072,89.9,3
+Hungary,HUN,1920,C,3,Italy,ITA,13.69,86.3,3
+Hungary,HUN,1920,C,4,Greece,GRC,14.032,86.0,3
+Hungary,HUN,1920,C,5,Finland,FIN,18.249,81.8,3
+Hungary,HUN,1930,C,1,Japan,JPN,3.785,96.2,2
+Hungary,HUN,1930,C,2,Spain,ESP,10.118,89.9,3
+Hungary,HUN,1930,C,3,Greece,GRC,11.6,88.4,2
+Hungary,HUN,1930,C,4,Italy,ITA,13.501,86.5,3
+Hungary,HUN,1930,C,5,Finland,FIN,13.738,86.3,3
+Hungary,HUN,1940,C,1,Japan,JPN,5.068,94.9,2
+Hungary,HUN,1940,C,2,Finland,FIN,7.931,92.1,2
+Hungary,HUN,1940,C,3,Chile,CHL,9.523,90.5,2
+Hungary,HUN,1940,C,4,Greece,GRC,10.135,89.9,2
+Hungary,HUN,1940,C,5,Spain,ESP,10.947,89.1,2
+Hungary,HUN,1950,C,1,Japan,JPN,7.386,92.6,3
+Hungary,HUN,1950,C,2,Spain,ESP,8.404,91.6,3
+Hungary,HUN,1950,C,3,Greece,GRC,9.928,90.1,3
+Hungary,HUN,1950,C,4,Russia,RUS,10.004,90.0,3
+Hungary,HUN,1950,C,5,Ireland,IRL,10.892,89.1,3
+Hungary,HUN,1960,C,1,Russia,RUS,2.748,97.3,3
+Hungary,HUN,1960,C,2,Spain,ESP,9.022,91.0,4
+Hungary,HUN,1960,C,3,Uruguay,URY,10.88,89.1,3
+Hungary,HUN,1960,C,4,Japan,JPN,12.792,87.2,4
+Hungary,HUN,1960,C,5,Greece,GRC,14.884,85.1,4
+Hungary,HUN,1970,C,1,Russia,RUS,2.211,97.8,3
+Hungary,HUN,1970,C,2,Ireland,IRL,10.36,89.6,4
+Hungary,HUN,1970,C,3,Uruguay,URY,10.942,89.1,3
+Hungary,HUN,1970,C,4,Spain,ESP,12.444,87.6,4
+Hungary,HUN,1970,C,5,Argentina,ARG,12.569,87.4,4
+Hungary,HUN,1980,C,1,Russia,RUS,4.557,95.4,3
+Hungary,HUN,1980,C,2,Uruguay,URY,13.603,86.4,3
+Hungary,HUN,1980,C,3,Poland,POL,13.886,86.1,4
+Hungary,HUN,1980,C,4,Jamaica,JAM,15.501,84.5,4
+Hungary,HUN,1980,C,5,South Korea,KOR,15.655,84.3,4
+Hungary,HUN,1990,C,1,Russia,RUS,1.187,98.8,3
+Hungary,HUN,1990,C,2,South Korea,KOR,11.287,88.7,4
+Hungary,HUN,1990,C,3,Poland,POL,14.372,85.6,4
+Hungary,HUN,1990,C,4,Uruguay,URY,17.16,82.8,3
+Hungary,HUN,1990,C,5,Jamaica,JAM,18.361,81.6,4
+Hungary,HUN,2000,C,1,Poland,POL,13.948,86.1,4
+Hungary,HUN,2000,C,2,South Korea,KOR,15.782,84.2,4
+Hungary,HUN,2000,C,3,Greece,GRC,17.073,82.9,3
+Hungary,HUN,2000,C,4,Russia,RUS,17.64,82.4,3
+Hungary,HUN,2000,C,5,Uruguay,URY,17.806,82.2,3
+India,IND,1850,C,1,Brazil,BRA,3.26,96.7,2
+India,IND,1850,C,2,Poland,POL,3.776,96.2,2
+India,IND,1850,C,3,Indonesia,IDN,7.025,93.0,2
+India,IND,1850,C,4,China,CHN,8.846,91.2,2
+India,IND,1850,C,5,Peru,PER,9.223,90.8,2
+India,IND,1870,C,1,Indonesia,IDN,1.878,98.1,2
+India,IND,1870,C,2,Jamaica,JAM,5.265,94.7,2
+India,IND,1870,C,3,Brazil,BRA,5.282,94.7,3
+India,IND,1870,C,4,Egypt,EGY,8.638,91.4,3
+India,IND,1870,C,5,China,CHN,10.729,89.3,3
+India,IND,1890,C,1,Egypt,EGY,2.247,97.8,2
+India,IND,1890,C,2,Brazil,BRA,7.007,93.0,3
+India,IND,1890,C,3,Bolivia,BOL,8.009,92.0,2
+India,IND,1890,C,4,Philippines,PHL,9.731,90.3,2
+India,IND,1890,C,5,China,CHN,9.843,90.2,3
+India,IND,1900,C,1,Peru,PER,2.329,97.7,2
+India,IND,1900,C,2,Brazil,BRA,4.789,95.2,2
+India,IND,1900,C,3,China,CHN,9.103,90.9,2
+India,IND,1900,C,4,South Africa,ZAF,9.876,90.1,2
+India,IND,1900,C,5,Colombia,COL,10.551,89.4,2
+India,IND,1910,C,1,Brazil,BRA,10.674,89.3,3
+India,IND,1910,C,2,Peru,PER,11.717,88.3,3
+India,IND,1910,C,3,Philippines,PHL,12.219,87.8,3
+India,IND,1910,C,4,Venezuela,VEN,12.282,87.7,2
+India,IND,1910,C,5,Russia,RUS,12.372,87.6,2
+India,IND,1920,C,1,Brazil,BRA,5.424,94.6,2
+India,IND,1920,C,2,Philippines,PHL,8.301,91.7,2
+India,IND,1920,C,3,Peru,PER,9.343,90.7,2
+India,IND,1920,C,4,South Korea,KOR,9.732,90.3,2
+India,IND,1920,C,5,Venezuela,VEN,12.276,87.7,2
+India,IND,1930,C,1,Brazil,BRA,5.575,94.4,2
+India,IND,1930,C,2,China,CHN,5.878,94.1,2
+India,IND,1930,C,3,South Korea,KOR,9.352,90.6,2
+India,IND,1930,C,4,Philippines,PHL,9.607,90.4,2
+India,IND,1930,C,5,Mexico,MEX,10.804,89.2,2
+India,IND,1940,C,1,Brazil,BRA,7.358,92.6,2
+India,IND,1940,C,2,Mexico,MEX,12.872,87.1,2
+India,IND,1940,C,3,Philippines,PHL,12.91,87.1,2
+India,IND,1940,C,4,South Korea,KOR,13.857,86.1,2
+India,IND,1940,C,5,Portugal,PRT,14.369,85.6,2
+India,IND,1950,C,1,Egypt,EGY,9.271,90.7,4
+India,IND,1950,C,2,China,CHN,14.732,85.3,4
+India,IND,1950,C,3,Bolivia,BOL,16.991,83.0,4
+India,IND,1950,C,4,Indonesia,IDN,20.961,79.0,3
+India,IND,1950,C,5,Peru,PER,21.333,78.7,4
+India,IND,1960,C,1,China,CHN,7.993,92.0,4
+India,IND,1960,C,2,Indonesia,IDN,8.785,91.2,3
+India,IND,1960,C,3,Egypt,EGY,12.624,87.4,4
+India,IND,1960,C,4,Bolivia,BOL,15.284,84.7,4
+India,IND,1960,C,5,South Korea,KOR,25.431,74.6,4
+India,IND,1970,C,1,Egypt,EGY,6.076,93.9,4
+India,IND,1970,C,2,Indonesia,IDN,9.675,90.3,3
+India,IND,1970,C,3,Bolivia,BOL,19.985,80.0,4
+India,IND,1970,C,4,Peru,PER,22.919,77.1,4
+India,IND,1970,C,5,Brazil,BRA,26.745,73.3,4
+India,IND,1980,C,1,Indonesia,IDN,14.461,85.5,3
+India,IND,1980,C,2,Egypt,EGY,17.641,82.4,4
+India,IND,1980,C,3,Bolivia,BOL,19.954,80.0,4
+India,IND,1980,C,4,Philippines,PHL,27.367,72.6,4
+India,IND,1980,C,5,Peru,PER,29.249,70.8,4
+India,IND,1990,C,1,Indonesia,IDN,19.135,80.9,3
+India,IND,1990,C,2,Bolivia,BOL,21.286,78.7,4
+India,IND,1990,C,3,Egypt,EGY,24.834,75.2,4
+India,IND,1990,C,4,South Africa,ZAF,26.759,73.2,4
+India,IND,1990,C,5,Philippines,PHL,29.036,71.0,4
+India,IND,2000,C,1,Indonesia,IDN,13.145,86.9,3
+India,IND,2000,C,2,Egypt,EGY,20.517,79.5,4
+India,IND,2000,C,3,Philippines,PHL,23.741,76.3,4
+India,IND,2000,C,4,Bolivia,BOL,24.394,75.6,4
+India,IND,2000,C,5,Colombia,COL,26.08,73.9,4
+Indonesia,IDN,1820,C,1,Chile,CHL,8.285,91.7,2
+Indonesia,IDN,1820,C,2,Brazil,BRA,8.395,91.6,2
+Indonesia,IDN,1820,C,3,Peru,PER,10.285,89.7,2
+Indonesia,IDN,1820,C,4,Egypt,EGY,11.707,88.3,2
+Indonesia,IDN,1820,C,5,China,CHN,12.477,87.5,2
+Indonesia,IDN,1850,C,1,Peru,PER,6.876,93.1,2
+Indonesia,IDN,1850,C,2,India,IND,7.025,93.0,2
+Indonesia,IDN,1850,C,3,Brazil,BRA,8.091,91.9,2
+Indonesia,IDN,1850,C,4,Poland,POL,10.363,89.6,2
+Indonesia,IDN,1850,C,5,China,CHN,13.66,86.3,2
+Indonesia,IDN,1870,C,1,India,IND,1.878,98.1,2
+Indonesia,IDN,1870,C,2,China,CHN,4.514,95.5,2
+Indonesia,IDN,1870,C,3,Brazil,BRA,4.632,95.4,2
+Indonesia,IDN,1870,C,4,Poland,POL,12.978,87.0,2
+Indonesia,IDN,1870,C,5,Egypt,EGY,13.582,86.4,2
+Indonesia,IDN,1890,C,1,Jamaica,JAM,2.02,98.0,2
+Indonesia,IDN,1890,C,2,Peru,PER,5.437,94.6,2
+Indonesia,IDN,1890,C,3,Brazil,BRA,6.223,93.8,2
+Indonesia,IDN,1890,C,4,Colombia,COL,6.403,93.6,2
+Indonesia,IDN,1890,C,5,Portugal,PRT,10.395,89.6,2
+Indonesia,IDN,1910,C,1,Philippines,PHL,4.317,95.7,2
+Indonesia,IDN,1910,C,2,Peru,PER,6.262,93.7,2
+Indonesia,IDN,1910,C,3,South Africa,ZAF,7.069,92.9,2
+Indonesia,IDN,1910,C,4,Brazil,BRA,7.92,92.1,2
+Indonesia,IDN,1910,C,5,Portugal,PRT,9.726,90.3,2
+Indonesia,IDN,1950,C,1,Peru,PER,16.837,83.2,3
+Indonesia,IDN,1950,C,2,Egypt,EGY,17.603,82.4,3
+Indonesia,IDN,1950,C,3,South Africa,ZAF,17.788,82.2,3
+Indonesia,IDN,1950,C,4,India,IND,20.961,79.0,3
+Indonesia,IDN,1950,C,5,Bolivia,BOL,23.603,76.4,3
+Indonesia,IDN,1960,C,1,Egypt,EGY,6.356,93.6,3
+Indonesia,IDN,1960,C,2,India,IND,8.785,91.2,3
+Indonesia,IDN,1960,C,3,Bolivia,BOL,10.341,89.7,3
+Indonesia,IDN,1960,C,4,China,CHN,10.545,89.5,3
+Indonesia,IDN,1960,C,5,South Korea,KOR,14.806,85.2,3
+Indonesia,IDN,1970,C,1,Egypt,EGY,2.814,97.2,3
+Indonesia,IDN,1970,C,2,India,IND,9.675,90.3,3
+Indonesia,IDN,1970,C,3,Peru,PER,15.297,84.7,3
+Indonesia,IDN,1970,C,4,Philippines,PHL,19.396,80.6,3
+Indonesia,IDN,1970,C,5,Brazil,BRA,20.317,79.7,3
+Indonesia,IDN,1980,C,1,Egypt,EGY,8.993,91.0,3
+Indonesia,IDN,1980,C,2,Philippines,PHL,10.676,89.3,3
+Indonesia,IDN,1980,C,3,India,IND,14.461,85.5,3
+Indonesia,IDN,1980,C,4,Peru,PER,14.827,85.2,3
+Indonesia,IDN,1980,C,5,Bolivia,BOL,19.444,80.6,3
+Indonesia,IDN,1990,C,1,Philippines,PHL,10.665,89.3,3
+Indonesia,IDN,1990,C,2,Peru,PER,11.247,88.8,3
+Indonesia,IDN,1990,C,3,Egypt,EGY,16.368,83.6,3
+Indonesia,IDN,1990,C,4,Bolivia,BOL,16.419,83.6,3
+Indonesia,IDN,1990,C,5,India,IND,19.135,80.9,3
+Indonesia,IDN,2000,C,1,Philippines,PHL,2.912,97.1,3
+Indonesia,IDN,2000,C,2,Egypt,EGY,4.935,95.1,3
+Indonesia,IDN,2000,C,3,Russia,RUS,8.317,91.7,2
+Indonesia,IDN,2000,C,4,Peru,PER,8.762,91.2,3
+Indonesia,IDN,2000,C,5,Jamaica,JAM,10.163,89.8,3
+Ireland,IRL,1820,C,1,Norway,NOR,1.6,98.4,2
+Ireland,IRL,1820,C,2,Canada,CAN,1.769,98.2,2
+Ireland,IRL,1820,C,3,Argentina,ARG,7.972,92.0,2
+Ireland,IRL,1820,C,4,Spain,ESP,12.986,87.0,2
+Ireland,IRL,1820,C,5,Mexico,MEX,15.525,84.5,2
+Ireland,IRL,1870,C,1,Hungary,HUN,16.767,83.2,3
+Ireland,IRL,1870,C,2,Uruguay,URY,17.152,82.8,2
+Ireland,IRL,1870,C,3,Spain,ESP,19.607,80.4,3
+Ireland,IRL,1870,C,4,Poland,POL,21.125,78.9,2
+Ireland,IRL,1870,C,5,Venezuela,VEN,23.832,76.2,2
+Ireland,IRL,1890,C,1,United Kingdom,GBR,14.213,85.8,2
+Ireland,IRL,1890,C,2,Spain,ESP,16.323,83.7,2
+Ireland,IRL,1890,C,3,Australia,AUS,20.777,79.2,2
+Ireland,IRL,1890,C,4,Denmark,DNK,20.909,79.1,2
+Ireland,IRL,1890,C,5,Greece,GRC,23.346,76.7,2
+Ireland,IRL,1910,C,1,Norway,NOR,11.817,88.2,2
+Ireland,IRL,1910,C,2,United Kingdom,GBR,12.189,87.8,2
+Ireland,IRL,1910,C,3,Denmark,DNK,12.348,87.7,2
+Ireland,IRL,1910,C,4,Netherlands,NLD,19.215,80.8,2
+Ireland,IRL,1910,C,5,Spain,ESP,19.38,80.6,2
+Ireland,IRL,1930,C,1,Norway,NOR,8.165,91.8,2
+Ireland,IRL,1930,C,2,Sweden,SWE,14.884,85.1,2
+Ireland,IRL,1930,C,3,Hungary,HUN,15.078,84.9,2
+Ireland,IRL,1930,C,4,Germany,DEU,16.115,83.9,2
+Ireland,IRL,1930,C,5,Japan,JPN,17.952,82.0,2
+Ireland,IRL,1940,C,1,Japan,JPN,9.14,90.9,2
+Ireland,IRL,1940,C,2,Norway,NOR,9.786,90.2,2
+Ireland,IRL,1940,C,3,Hungary,HUN,12.539,87.5,2
+Ireland,IRL,1940,C,4,France,FRA,14.619,85.4,2
+Ireland,IRL,1940,C,5,Belgium,BEL,16.071,83.9,2
+Ireland,IRL,1950,C,1,Germany,DEU,10.47,89.5,3
+Ireland,IRL,1950,C,2,Hungary,HUN,10.892,89.1,3
+Ireland,IRL,1950,C,3,Finland,FIN,11.652,88.3,4
+Ireland,IRL,1950,C,4,Belgium,BEL,12.654,87.3,4
+Ireland,IRL,1950,C,5,Italy,ITA,14.007,86.0,4
+Ireland,IRL,1960,C,1,Russia,RUS,7.918,92.1,3
+Ireland,IRL,1960,C,2,Finland,FIN,11.202,88.8,4
+Ireland,IRL,1960,C,3,Japan,JPN,12.807,87.2,4
+Ireland,IRL,1960,C,4,Greece,GRC,13.166,86.8,4
+Ireland,IRL,1960,C,5,Belgium,BEL,13.471,86.5,4
+Ireland,IRL,1970,C,1,Russia,RUS,5.767,94.2,3
+Ireland,IRL,1970,C,2,Hungary,HUN,10.36,89.6,4
+Ireland,IRL,1970,C,3,Greece,GRC,11.811,88.2,4
+Ireland,IRL,1970,C,4,Spain,ESP,12.2,87.8,4
+Ireland,IRL,1970,C,5,Argentina,ARG,12.711,87.3,4
+Ireland,IRL,1980,C,1,Argentina,ARG,9.113,90.9,4
+Ireland,IRL,1980,C,2,Spain,ESP,11.477,88.5,4
+Ireland,IRL,1980,C,3,Greece,GRC,11.822,88.2,4
+Ireland,IRL,1980,C,4,Uruguay,URY,13.304,86.7,3
+Ireland,IRL,1980,C,5,Chile,CHL,14.252,85.7,4
+Ireland,IRL,1990,C,1,Spain,ESP,9.852,90.1,4
+Ireland,IRL,1990,C,2,Greece,GRC,10.363,89.6,4
+Ireland,IRL,1990,C,3,Italy,ITA,13.603,86.4,4
+Ireland,IRL,1990,C,4,South Korea,KOR,14.736,85.3,4
+Ireland,IRL,1990,C,5,Finland,FIN,15.569,84.4,4
+Ireland,IRL,2000,C,1,Italy,ITA,11.686,88.3,4
+Ireland,IRL,2000,C,2,Denmark,DNK,13.182,86.8,4
+Ireland,IRL,2000,C,3,Belgium,BEL,13.438,86.6,4
+Ireland,IRL,2000,C,4,Netherlands,NLD,14.446,85.6,4
+Ireland,IRL,2000,C,5,France,FRA,14.981,85.0,4
+Italy,ITA,1820,C,1,United States,USA,7.654,92.3,2
+Italy,ITA,1820,C,2,Belgium,BEL,16.441,83.6,2
+Italy,ITA,1820,C,3,Denmark,DNK,16.691,83.3,2
+Italy,ITA,1820,C,4,Netherlands,NLD,16.999,83.0,2
+Italy,ITA,1820,C,5,France,FRA,25.926,74.1,2
+Italy,ITA,1850,C,1,France,FRA,5.501,94.5,2
+Italy,ITA,1850,C,2,Denmark,DNK,6.618,93.4,2
+Italy,ITA,1850,C,3,Belgium,BEL,9.988,90.0,2
+Italy,ITA,1850,C,4,Australia,AUS,19.53,80.5,2
+Italy,ITA,1850,C,5,Sweden,SWE,20.375,79.6,2
+Italy,ITA,1870,C,1,Argentina,ARG,9.731,90.3,3
+Italy,ITA,1870,C,2,Greece,GRC,12.859,87.1,3
+Italy,ITA,1870,C,3,Finland,FIN,14.283,85.7,3
+Italy,ITA,1870,C,4,Venezuela,VEN,14.561,85.4,2
+Italy,ITA,1870,C,5,Uruguay,URY,14.856,85.1,2
+Italy,ITA,1880,C,1,Argentina,ARG,3.661,96.3,3
+Italy,ITA,1880,C,2,Chile,CHL,5.364,94.6,2
+Italy,ITA,1880,C,3,South Africa,ZAF,6.245,93.8,2
+Italy,ITA,1880,C,4,Venezuela,VEN,7.486,92.5,2
+Italy,ITA,1880,C,5,Spain,ESP,8.683,91.3,2
+Italy,ITA,1890,C,1,Uruguay,URY,7.098,92.9,2
+Italy,ITA,1890,C,2,Venezuela,VEN,7.411,92.6,2
+Italy,ITA,1890,C,3,Japan,JPN,9.922,90.1,4
+Italy,ITA,1890,C,4,Chile,CHL,12.517,87.5,3
+Italy,ITA,1890,C,5,Portugal,PRT,16.777,83.2,3
+Italy,ITA,1900,C,1,Finland,FIN,6.935,93.1,3
+Italy,ITA,1900,C,2,Japan,JPN,10.878,89.1,3
+Italy,ITA,1900,C,3,Argentina,ARG,11.525,88.5,3
+Italy,ITA,1900,C,4,Greece,GRC,12.16,87.8,2
+Italy,ITA,1900,C,5,Portugal,PRT,15.318,84.7,2
+Italy,ITA,1910,C,1,Greece,GRC,9.733,90.3,2
+Italy,ITA,1910,C,2,Uruguay,URY,12.023,88.0,3
+Italy,ITA,1910,C,3,Argentina,ARG,14.27,85.7,4
+Italy,ITA,1910,C,4,Finland,FIN,14.526,85.5,4
+Italy,ITA,1910,C,5,Japan,JPN,16.254,83.7,4
+Italy,ITA,1920,C,1,Finland,FIN,7.683,92.3,3
+Italy,ITA,1920,C,2,Japan,JPN,8.192,91.8,3
+Italy,ITA,1920,C,3,Greece,GRC,8.966,91.0,3
+Italy,ITA,1920,C,4,Spain,ESP,10.919,89.1,3
+Italy,ITA,1920,C,5,Uruguay,URY,11.241,88.8,3
+Italy,ITA,1930,C,1,Finland,FIN,3.327,96.7,3
+Italy,ITA,1930,C,2,Greece,GRC,7.196,92.8,2
+Italy,ITA,1930,C,3,Argentina,ARG,11.464,88.5,3
+Italy,ITA,1930,C,4,Spain,ESP,11.907,88.1,3
+Italy,ITA,1930,C,5,Uruguay,URY,12.851,87.1,3
+Italy,ITA,1940,C,1,Uruguay,URY,4.276,95.7,3
+Italy,ITA,1940,C,2,Argentina,ARG,7.515,92.5,3
+Italy,ITA,1940,C,3,Greece,GRC,9.116,90.9,3
+Italy,ITA,1940,C,4,Hungary,HUN,12.104,87.9,2
+Italy,ITA,1940,C,5,Japan,JPN,13.453,86.5,2
+Italy,ITA,1950,C,1,Uruguay,URY,5.281,94.7,3
+Italy,ITA,1950,C,2,Argentina,ARG,10.31,89.7,4
+Italy,ITA,1950,C,3,Finland,FIN,11.11,88.9,4
+Italy,ITA,1950,C,4,Hungary,HUN,11.759,88.2,3
+Italy,ITA,1950,C,5,Greece,GRC,11.937,88.1,4
+Italy,ITA,1960,C,1,Uruguay,URY,5.811,94.2,3
+Italy,ITA,1960,C,2,Argentina,ARG,8.985,91.0,4
+Italy,ITA,1960,C,3,Finland,FIN,9.236,90.8,4
+Italy,ITA,1960,C,4,Belgium,BEL,12.014,88.0,4
+Italy,ITA,1960,C,5,Russia,RUS,12.147,87.9,3
+Italy,ITA,1970,C,1,Finland,FIN,7.027,93.0,3
+Italy,ITA,1970,C,2,Belgium,BEL,8.419,91.6,4
+Italy,ITA,1970,C,3,Argentina,ARG,12.98,87.0,4
+Italy,ITA,1970,C,4,Greece,GRC,13.379,86.6,4
+Italy,ITA,1970,C,5,Spain,ESP,13.752,86.2,4
+Italy,ITA,1980,C,1,Finland,FIN,9.549,90.5,4
+Italy,ITA,1980,C,2,Belgium,BEL,9.766,90.2,4
+Italy,ITA,1980,C,3,Greece,GRC,12.695,87.3,4
+Italy,ITA,1980,C,4,Spain,ESP,13.299,86.7,4
+Italy,ITA,1980,C,5,Ireland,IRL,14.978,85.0,4
+Italy,ITA,1990,C,1,Belgium,BEL,7.857,92.1,4
+Italy,ITA,1990,C,2,Netherlands,NLD,9.12,90.9,4
+Italy,ITA,1990,C,3,Spain,ESP,10.433,89.6,4
+Italy,ITA,1990,C,4,Finland,FIN,10.776,89.2,4
+Italy,ITA,1990,C,5,Ireland,IRL,13.603,86.4,4
+Italy,ITA,2000,C,1,Belgium,BEL,6.245,93.8,4
+Italy,ITA,2000,C,2,Sweden,SWE,8.36,91.6,4
+Italy,ITA,2000,C,3,Spain,ESP,8.366,91.6,4
+Italy,ITA,2000,C,4,Netherlands,NLD,9.723,90.3,4
+Italy,ITA,2000,C,5,France,FRA,10.086,89.9,4
+Jamaica,JAM,1870,C,1,Mexico,MEX,2.778,97.2,2
+Jamaica,JAM,1870,C,2,Brazil,BRA,3.262,96.7,2
+Jamaica,JAM,1870,C,3,Philippines,PHL,4.953,95.0,2
+Jamaica,JAM,1870,C,4,India,IND,5.265,94.7,2
+Jamaica,JAM,1870,C,5,China,CHN,6.346,93.7,2
+Jamaica,JAM,1880,C,1,Brazil,BRA,2.772,97.2,2
+Jamaica,JAM,1880,C,2,Colombia,COL,3.791,96.2,2
+Jamaica,JAM,1880,C,3,Peru,PER,3.978,96.0,2
+Jamaica,JAM,1880,C,4,Russia,RUS,6.403,93.6,2
+Jamaica,JAM,1880,C,5,Portugal,PRT,7.298,92.7,2
+Jamaica,JAM,1890,C,1,Indonesia,IDN,2.02,98.0,2
+Jamaica,JAM,1890,C,2,Colombia,COL,5.402,94.6,3
+Jamaica,JAM,1890,C,3,Russia,RUS,5.467,94.5,2
+Jamaica,JAM,1890,C,4,Bolivia,BOL,7.088,92.9,2
+Jamaica,JAM,1890,C,5,Brazil,BRA,7.527,92.5,3
+Jamaica,JAM,1900,C,1,China,CHN,5.217,94.8,2
+Jamaica,JAM,1900,C,2,South Africa,ZAF,7.907,92.1,2
+Jamaica,JAM,1900,C,3,Japan,JPN,9.948,90.1,3
+Jamaica,JAM,1900,C,4,Portugal,PRT,11.195,88.8,2
+Jamaica,JAM,1900,C,5,Greece,GRC,12.351,87.6,2
+Jamaica,JAM,1910,C,1,Cuba,CUB,6.979,93.0,2
+Jamaica,JAM,1910,C,2,China,CHN,12.189,87.8,2
+Jamaica,JAM,1910,C,3,Spain,ESP,14.683,85.3,3
+Jamaica,JAM,1910,C,4,Portugal,PRT,15.1,84.9,2
+Jamaica,JAM,1910,C,5,South Africa,ZAF,16.948,83.1,2
+Jamaica,JAM,1920,C,1,Colombia,COL,6.718,93.3,2
+Jamaica,JAM,1920,C,2,Cuba,CUB,7.859,92.1,2
+Jamaica,JAM,1920,C,3,Bolivia,BOL,8.453,91.5,2
+Jamaica,JAM,1920,C,4,Chile,CHL,9.102,90.9,2
+Jamaica,JAM,1920,C,5,Mexico,MEX,10.575,89.4,2
+Jamaica,JAM,1930,C,1,Cuba,CUB,7.403,92.6,2
+Jamaica,JAM,1930,C,2,Uruguay,URY,12.639,87.4,2
+Jamaica,JAM,1930,C,3,Spain,ESP,13.76,86.2,2
+Jamaica,JAM,1930,C,4,Argentina,ARG,18.993,81.0,2
+Jamaica,JAM,1930,C,5,Russia,RUS,19.639,80.4,2
+Jamaica,JAM,1940,C,1,Cuba,CUB,6.361,93.6,2
+Jamaica,JAM,1940,C,2,Portugal,PRT,10.813,89.2,2
+Jamaica,JAM,1940,C,3,Spain,ESP,14.301,85.7,2
+Jamaica,JAM,1940,C,4,Russia,RUS,17.0,83.0,2
+Jamaica,JAM,1940,C,5,Finland,FIN,17.632,82.4,2
+Jamaica,JAM,1950,C,1,Cuba,CUB,3.678,96.3,3
+Jamaica,JAM,1950,C,2,Portugal,PRT,6.172,93.8,3
+Jamaica,JAM,1950,C,3,Philippines,PHL,6.233,93.8,3
+Jamaica,JAM,1950,C,4,Poland,POL,8.311,91.7,3
+Jamaica,JAM,1950,C,5,Brazil,BRA,14.254,85.7,3
+Jamaica,JAM,1960,C,1,Cuba,CUB,7.256,92.7,3
+Jamaica,JAM,1960,C,2,Greece,GRC,10.758,89.2,4
+Jamaica,JAM,1960,C,3,Portugal,PRT,11.725,88.3,4
+Jamaica,JAM,1960,C,4,Poland,POL,12.569,87.4,4
+Jamaica,JAM,1960,C,5,Uruguay,URY,12.777,87.2,3
+Jamaica,JAM,1970,C,1,Uruguay,URY,4.821,95.2,3
+Jamaica,JAM,1970,C,2,Poland,POL,4.909,95.1,4
+Jamaica,JAM,1970,C,3,Spain,ESP,10.799,89.2,4
+Jamaica,JAM,1970,C,4,Cuba,CUB,12.451,87.5,3
+Jamaica,JAM,1970,C,5,Portugal,PRT,13.061,86.9,4
+Jamaica,JAM,1980,C,1,Poland,POL,8.581,91.4,4
+Jamaica,JAM,1980,C,2,Uruguay,URY,10.628,89.4,3
+Jamaica,JAM,1980,C,3,Cuba,CUB,13.07,86.9,3
+Jamaica,JAM,1980,C,4,Hungary,HUN,15.501,84.5,4
+Jamaica,JAM,1980,C,5,Argentina,ARG,16.122,83.9,4
+Jamaica,JAM,1990,C,1,Argentina,ARG,8.126,91.9,4
+Jamaica,JAM,1990,C,2,Mexico,MEX,9.858,90.1,4
+Jamaica,JAM,1990,C,3,Uruguay,URY,10.647,89.4,3
+Jamaica,JAM,1990,C,4,Poland,POL,11.153,88.8,4
+Jamaica,JAM,1990,C,5,Peru,PER,12.707,87.3,4
+Jamaica,JAM,2000,C,1,Peru,PER,7.225,92.8,4
+Jamaica,JAM,2000,C,2,Mexico,MEX,9.433,90.6,4
+Jamaica,JAM,2000,C,3,Indonesia,IDN,10.163,89.8,3
+Jamaica,JAM,2000,C,4,Philippines,PHL,10.998,89.0,4
+Jamaica,JAM,2000,C,5,Argentina,ARG,11.185,88.8,4
+Japan,JPN,1820,C,1,Sweden,SWE,5.295,94.7,2
+Japan,JPN,1820,C,2,Portugal,PRT,12.317,87.7,2
+Japan,JPN,1820,C,3,Argentina,ARG,14.346,85.7,2
+Japan,JPN,1820,C,4,Egypt,EGY,14.753,85.2,2
+Japan,JPN,1820,C,5,Canada,CAN,15.067,84.9,2
+Japan,JPN,1850,C,1,Sweden,SWE,6.555,93.4,2
+Japan,JPN,1850,C,2,Norway,NOR,10.098,89.9,2
+Japan,JPN,1850,C,3,Peru,PER,11.543,88.5,2
+Japan,JPN,1850,C,4,India,IND,15.338,84.7,2
+Japan,JPN,1850,C,5,Poland,POL,17.435,82.6,2
+Japan,JPN,1870,C,1,Russia,RUS,0.889,99.1,2
+Japan,JPN,1870,C,2,Venezuela,VEN,3.002,97.0,2
+Japan,JPN,1870,C,3,South Africa,ZAF,4.262,95.7,2
+Japan,JPN,1870,C,4,Greece,GRC,8.992,91.0,3
+Japan,JPN,1870,C,5,Finland,FIN,9.358,90.6,3
+Japan,JPN,1880,C,1,Finland,FIN,10.831,89.2,2
+Japan,JPN,1880,C,2,Argentina,ARG,16.026,84.0,2
+Japan,JPN,1880,C,3,Italy,ITA,16.537,83.5,2
+Japan,JPN,1880,C,4,United Kingdom,GBR,40.899,59.1,2
+Japan,JPN,1880,C,5,Belgium,BEL,43.612,56.4,2
+Japan,JPN,1890,C,1,Russia,RUS,7.009,93.0,2
+Japan,JPN,1890,C,2,Mexico,MEX,8.372,91.6,3
+Japan,JPN,1890,C,3,Venezuela,VEN,9.377,90.6,2
+Japan,JPN,1890,C,4,Italy,ITA,9.922,90.1,4
+Japan,JPN,1890,C,5,Bolivia,BOL,10.149,89.9,2
+Japan,JPN,1900,C,1,Greece,GRC,2.445,97.6,2
+Japan,JPN,1900,C,2,Portugal,PRT,8.381,91.6,2
+Japan,JPN,1900,C,3,Finland,FIN,8.74,91.3,3
+Japan,JPN,1900,C,4,Jamaica,JAM,9.948,90.1,3
+Japan,JPN,1900,C,5,Italy,ITA,10.878,89.1,3
+Japan,JPN,1910,C,1,Greece,GRC,2.743,97.3,2
+Japan,JPN,1910,C,2,Cuba,CUB,13.657,86.3,3
+Japan,JPN,1910,C,3,Hungary,HUN,14.467,85.5,3
+Japan,JPN,1910,C,4,Portugal,PRT,14.838,85.2,3
+Japan,JPN,1910,C,5,Russia,RUS,15.952,84.0,2
+Japan,JPN,1920,C,1,Spain,ESP,5.013,95.0,3
+Japan,JPN,1920,C,2,Hungary,HUN,7.276,92.7,3
+Japan,JPN,1920,C,3,Italy,ITA,8.192,91.8,3
+Japan,JPN,1920,C,4,Greece,GRC,8.342,91.7,3
+Japan,JPN,1920,C,5,Finland,FIN,12.493,87.5,3
+Japan,JPN,1930,C,1,Hungary,HUN,3.785,96.2,2
+Japan,JPN,1930,C,2,Greece,GRC,10.137,89.9,2
+Japan,JPN,1930,C,3,Spain,ESP,11.917,88.1,2
+Japan,JPN,1930,C,4,Italy,ITA,13.171,86.8,2
+Japan,JPN,1930,C,5,Finland,FIN,13.976,86.0,2
+Japan,JPN,1940,C,1,Hungary,HUN,5.068,94.9,2
+Japan,JPN,1940,C,2,Finland,FIN,8.18,91.8,2
+Japan,JPN,1940,C,3,Ireland,IRL,9.14,90.9,2
+Japan,JPN,1940,C,4,Chile,CHL,10.135,89.9,2
+Japan,JPN,1940,C,5,Italy,ITA,13.453,86.5,2
+Japan,JPN,1950,C,1,Hungary,HUN,7.386,92.6,3
+Japan,JPN,1950,C,2,Spain,ESP,12.779,87.2,4
+Japan,JPN,1950,C,3,Russia,RUS,13.101,86.9,3
+Japan,JPN,1950,C,4,Ireland,IRL,15.149,84.9,4
+Japan,JPN,1950,C,5,Greece,GRC,15.254,84.7,4
+Japan,JPN,1960,C,1,Hungary,HUN,12.792,87.2,4
+Japan,JPN,1960,C,2,Ireland,IRL,12.807,87.2,4
+Japan,JPN,1960,C,3,Russia,RUS,13.286,86.7,3
+Japan,JPN,1960,C,4,Finland,FIN,16.358,83.6,4
+Japan,JPN,1960,C,5,Argentina,ARG,17.74,82.3,4
+Japan,JPN,1970,C,1,Norway,NOR,4.846,95.2,4
+Japan,JPN,1970,C,2,United Kingdom,GBR,5.756,94.2,4
+Japan,JPN,1970,C,3,Germany,DEU,7.664,92.3,3
+Japan,JPN,1970,C,4,Canada,CAN,8.507,91.5,4
+Japan,JPN,1970,C,5,Australia,AUS,9.377,90.6,4
+Japan,JPN,1980,C,1,France,FRA,6.622,93.4,4
+Japan,JPN,1980,C,2,Australia,AUS,7.457,92.5,4
+Japan,JPN,1980,C,3,Norway,NOR,7.576,92.4,4
+Japan,JPN,1980,C,4,Sweden,SWE,7.65,92.4,4
+Japan,JPN,1980,C,5,United Kingdom,GBR,7.661,92.3,4
+Japan,JPN,1990,C,1,Canada,CAN,6.168,93.8,4
+Japan,JPN,1990,C,2,Sweden,SWE,6.746,93.3,4
+Japan,JPN,1990,C,3,France,FRA,7.351,92.6,4
+Japan,JPN,1990,C,4,Norway,NOR,8.922,91.1,4
+Japan,JPN,1990,C,5,Switzerland,CHE,9.711,90.3,4
+Japan,JPN,2000,C,1,Germany,DEU,6.942,93.1,3
+Japan,JPN,2000,C,2,France,FRA,7.965,92.0,4
+Japan,JPN,2000,C,3,Sweden,SWE,8.194,91.8,4
+Japan,JPN,2000,C,4,Canada,CAN,9.03,91.0,4
+Japan,JPN,2000,C,5,United Kingdom,GBR,10.006,90.0,4
+Mexico,MEX,1820,C,1,China,CHN,9.545,90.5,2
+Mexico,MEX,1820,C,2,Poland,POL,11.97,88.0,2
+Mexico,MEX,1820,C,3,Brazil,BRA,13.468,86.5,2
+Mexico,MEX,1820,C,4,Chile,CHL,14.05,86.0,2
+Mexico,MEX,1820,C,5,Norway,NOR,14.365,85.6,2
+Mexico,MEX,1850,C,1,China,CHN,4.901,95.1,2
+Mexico,MEX,1850,C,2,Poland,POL,6.836,93.2,2
+Mexico,MEX,1850,C,3,Brazil,BRA,8.81,91.2,2
+Mexico,MEX,1850,C,4,Portugal,PRT,10.103,89.9,2
+Mexico,MEX,1850,C,5,India,IND,10.612,89.4,2
+Mexico,MEX,1870,C,1,Jamaica,JAM,2.778,97.2,2
+Mexico,MEX,1870,C,2,Philippines,PHL,5.357,94.6,3
+Mexico,MEX,1870,C,3,Portugal,PRT,6.423,93.6,3
+Mexico,MEX,1870,C,4,South Africa,ZAF,7.398,92.6,2
+Mexico,MEX,1870,C,5,South Korea,KOR,7.428,92.6,2
+Mexico,MEX,1890,C,1,Bolivia,BOL,2.846,97.2,2
+Mexico,MEX,1890,C,2,Russia,RUS,2.9,97.1,2
+Mexico,MEX,1890,C,3,Colombia,COL,4.733,95.3,3
+Mexico,MEX,1890,C,4,Portugal,PRT,6.41,93.6,3
+Mexico,MEX,1890,C,5,Japan,JPN,8.372,91.6,3
+Mexico,MEX,1900,C,1,South Africa,ZAF,3.089,96.9,2
+Mexico,MEX,1900,C,2,Bolivia,BOL,3.671,96.3,3
+Mexico,MEX,1900,C,3,Portugal,PRT,3.857,96.1,2
+Mexico,MEX,1900,C,4,Venezuela,VEN,6.988,93.0,3
+Mexico,MEX,1900,C,5,China,CHN,8.033,92.0,2
+Mexico,MEX,1910,C,1,Russia,RUS,0.816,99.2,2
+Mexico,MEX,1910,C,2,Venezuela,VEN,4.481,95.5,3
+Mexico,MEX,1910,C,3,Bolivia,BOL,5.129,94.9,3
+Mexico,MEX,1910,C,4,Portugal,PRT,8.241,91.8,3
+Mexico,MEX,1910,C,5,Colombia,COL,8.835,91.2,4
+Mexico,MEX,1920,C,1,Peru,PER,4.779,95.2,2
+Mexico,MEX,1920,C,2,Portugal,PRT,6.088,93.9,2
+Mexico,MEX,1920,C,3,Philippines,PHL,6.147,93.9,2
+Mexico,MEX,1920,C,4,Venezuela,VEN,6.348,93.7,3
+Mexico,MEX,1920,C,5,South Korea,KOR,8.257,91.7,2
+Mexico,MEX,1930,C,1,Philippines,PHL,1.533,98.5,2
+Mexico,MEX,1930,C,2,Peru,PER,3.375,96.6,2
+Mexico,MEX,1930,C,3,South Africa,ZAF,3.42,96.6,2
+Mexico,MEX,1930,C,4,South Korea,KOR,4.256,95.7,2
+Mexico,MEX,1930,C,5,Portugal,PRT,4.497,95.5,2
+Mexico,MEX,1940,C,1,Philippines,PHL,1.344,98.7,2
+Mexico,MEX,1940,C,2,Peru,PER,4.522,95.5,3
+Mexico,MEX,1940,C,3,South Korea,KOR,5.101,94.9,2
+Mexico,MEX,1940,C,4,Brazil,BRA,6.309,93.7,3
+Mexico,MEX,1940,C,5,South Africa,ZAF,6.683,93.3,2
+Mexico,MEX,1950,C,1,Brazil,BRA,5.304,94.7,4
+Mexico,MEX,1950,C,2,Colombia,COL,7.838,92.2,4
+Mexico,MEX,1950,C,3,South Africa,ZAF,10.407,89.6,4
+Mexico,MEX,1950,C,4,Philippines,PHL,10.532,89.5,4
+Mexico,MEX,1950,C,5,Peru,PER,12.306,87.7,4
+Mexico,MEX,1960,C,1,Brazil,BRA,5.796,94.2,4
+Mexico,MEX,1960,C,2,Philippines,PHL,7.509,92.5,4
+Mexico,MEX,1960,C,3,Colombia,COL,9.052,90.9,4
+Mexico,MEX,1960,C,4,Portugal,PRT,13.283,86.7,4
+Mexico,MEX,1960,C,5,Cuba,CUB,17.251,82.7,3
+Mexico,MEX,1970,C,1,Colombia,COL,5.56,94.4,4
+Mexico,MEX,1970,C,2,Brazil,BRA,6.673,93.3,4
+Mexico,MEX,1970,C,3,Philippines,PHL,10.246,89.8,4
+Mexico,MEX,1970,C,4,Peru,PER,11.547,88.5,4
+Mexico,MEX,1970,C,5,Chile,CHL,14.965,85.0,4
+Mexico,MEX,1980,C,1,Colombia,COL,7.11,92.9,4
+Mexico,MEX,1980,C,2,Brazil,BRA,12.22,87.8,4
+Mexico,MEX,1980,C,3,Venezuela,VEN,12.639,87.4,3
+Mexico,MEX,1980,C,4,Uruguay,URY,13.566,86.4,3
+Mexico,MEX,1980,C,5,Peru,PER,16.171,83.8,4
+Mexico,MEX,1990,C,1,Colombia,COL,8.237,91.8,4
+Mexico,MEX,1990,C,2,Argentina,ARG,8.41,91.6,4
+Mexico,MEX,1990,C,3,Uruguay,URY,9.37,90.6,3
+Mexico,MEX,1990,C,4,Jamaica,JAM,9.858,90.1,4
+Mexico,MEX,1990,C,5,Venezuela,VEN,10.721,89.3,3
+Mexico,MEX,2000,C,1,Argentina,ARG,3.516,96.5,4
+Mexico,MEX,2000,C,2,Uruguay,URY,4.991,95.0,3
+Mexico,MEX,2000,C,3,Peru,PER,8.347,91.7,4
+Mexico,MEX,2000,C,4,Jamaica,JAM,9.433,90.6,4
+Mexico,MEX,2000,C,5,China,CHN,10.842,89.2,4
+Netherlands,NLD,1820,C,1,United States,USA,11.332,88.7,2
+Netherlands,NLD,1820,C,2,Italy,ITA,16.999,83.0,2
+Netherlands,NLD,1820,C,3,Belgium,BEL,24.596,75.4,2
+Netherlands,NLD,1820,C,4,Denmark,DNK,33.325,66.7,2
+Netherlands,NLD,1820,C,5,France,FRA,40.906,59.1,2
+Netherlands,NLD,1830,C,1,United Kingdom,GBR,74.82,25.2,2
+Netherlands,NLD,1840,C,1,United Kingdom,GBR,74.326,25.7,2
+Netherlands,NLD,1850,C,1,United States,USA,7.632,92.4,2
+Netherlands,NLD,1850,C,2,United Kingdom,GBR,20.361,79.6,4
+Netherlands,NLD,1850,C,3,Belgium,BEL,20.527,79.5,4
+Netherlands,NLD,1850,C,4,Italy,ITA,29.16,70.8,2
+Netherlands,NLD,1850,C,5,Australia,AUS,29.936,70.1,3
+Netherlands,NLD,1860,C,1,United Kingdom,GBR,30.31,69.7,3
+Netherlands,NLD,1860,C,2,Belgium,BEL,38.99,61.0,3
+Netherlands,NLD,1860,C,3,France,FRA,39.449,60.6,2
+Netherlands,NLD,1860,C,4,Australia,AUS,40.733,59.3,2
+Netherlands,NLD,1860,C,5,Denmark,DNK,50.201,49.8,2
+Netherlands,NLD,1870,C,1,United States,USA,10.644,89.4,3
+Netherlands,NLD,1870,C,2,Belgium,BEL,17.116,82.9,4
+Netherlands,NLD,1870,C,3,France,FRA,17.326,82.7,4
+Netherlands,NLD,1870,C,4,Germany,DEU,20.488,79.5,2
+Netherlands,NLD,1870,C,5,Switzerland,CHE,23.008,77.0,3
+Netherlands,NLD,1880,C,1,Belgium,BEL,8.212,91.8,3
+Netherlands,NLD,1880,C,2,France,FRA,13.977,86.0,3
+Netherlands,NLD,1880,C,3,Switzerland,CHE,15.369,84.6,3
+Netherlands,NLD,1880,C,4,United States,USA,15.911,84.1,3
+Netherlands,NLD,1880,C,5,United Kingdom,GBR,16.531,83.5,3
+Netherlands,NLD,1890,C,1,Belgium,BEL,8.163,91.8,4
+Netherlands,NLD,1890,C,2,France,FRA,12.934,87.1,4
+Netherlands,NLD,1890,C,3,Denmark,DNK,13.677,86.3,4
+Netherlands,NLD,1890,C,4,Switzerland,CHE,14.73,85.3,4
+Netherlands,NLD,1890,C,5,Germany,DEU,14.982,85.0,2
+Netherlands,NLD,1900,C,1,Belgium,BEL,7.156,92.8,3
+Netherlands,NLD,1900,C,2,Denmark,DNK,8.474,91.5,3
+Netherlands,NLD,1900,C,3,Germany,DEU,10.461,89.5,2
+Netherlands,NLD,1900,C,4,France,FRA,10.79,89.2,3
+Netherlands,NLD,1900,C,5,Australia,AUS,12.315,87.7,2
+Netherlands,NLD,1910,C,1,Denmark,DNK,8.858,91.1,4
+Netherlands,NLD,1910,C,2,Belgium,BEL,9.309,90.7,4
+Netherlands,NLD,1910,C,3,United Kingdom,GBR,11.911,88.1,4
+Netherlands,NLD,1910,C,4,Germany,DEU,12.953,87.0,2
+Netherlands,NLD,1910,C,5,Norway,NOR,15.913,84.1,4
+Netherlands,NLD,1920,C,1,United Kingdom,GBR,2.509,97.5,3
+Netherlands,NLD,1920,C,2,Denmark,DNK,2.793,97.2,3
+Netherlands,NLD,1920,C,3,Belgium,BEL,8.234,91.8,3
+Netherlands,NLD,1920,C,4,Sweden,SWE,11.239,88.8,3
+Netherlands,NLD,1920,C,5,Norway,NOR,11.55,88.5,3
+Netherlands,NLD,1930,C,1,Denmark,DNK,5.415,94.6,3
+Netherlands,NLD,1930,C,2,United Kingdom,GBR,7.897,92.1,3
+Netherlands,NLD,1930,C,3,Sweden,SWE,12.249,87.8,3
+Netherlands,NLD,1930,C,4,Belgium,BEL,15.749,84.3,3
+Netherlands,NLD,1930,C,5,Switzerland,CHE,16.592,83.4,3
+Netherlands,NLD,1940,C,1,Sweden,SWE,2.635,97.4,3
+Netherlands,NLD,1940,C,2,Denmark,DNK,3.001,97.0,3
+Netherlands,NLD,1940,C,3,Norway,NOR,6.325,93.7,3
+Netherlands,NLD,1940,C,4,Germany,DEU,14.863,85.1,2
+Netherlands,NLD,1940,C,5,Canada,CAN,15.748,84.3,3
+Netherlands,NLD,1950,C,1,Norway,NOR,4.291,95.7,4
+Netherlands,NLD,1950,C,2,Sweden,SWE,6.156,93.8,4
+Netherlands,NLD,1950,C,3,Denmark,DNK,6.473,93.5,4
+Netherlands,NLD,1950,C,4,United Kingdom,GBR,9.529,90.5,4
+Netherlands,NLD,1950,C,5,Belgium,BEL,9.855,90.1,4
+Netherlands,NLD,1960,C,1,Sweden,SWE,4.977,95.0,4
+Netherlands,NLD,1960,C,2,France,FRA,9.187,90.8,4
+Netherlands,NLD,1960,C,3,Norway,NOR,9.974,90.0,4
+Netherlands,NLD,1960,C,4,Denmark,DNK,10.294,89.7,4
+Netherlands,NLD,1960,C,5,Belgium,BEL,10.747,89.3,4
+Netherlands,NLD,1970,C,1,Sweden,SWE,5.357,94.6,4
+Netherlands,NLD,1970,C,2,Canada,CAN,5.763,94.2,4
+Netherlands,NLD,1970,C,3,Denmark,DNK,7.285,92.7,4
+Netherlands,NLD,1970,C,4,Norway,NOR,9.386,90.6,4
+Netherlands,NLD,1970,C,5,France,FRA,9.416,90.6,4
+Netherlands,NLD,1980,C,1,Sweden,SWE,5.571,94.4,4
+Netherlands,NLD,1980,C,2,Norway,NOR,7.401,92.6,4
+Netherlands,NLD,1980,C,3,France,FRA,8.058,91.9,4
+Netherlands,NLD,1980,C,4,Canada,CAN,8.677,91.3,4
+Netherlands,NLD,1980,C,5,Japan,JPN,8.953,91.0,4
+Netherlands,NLD,1990,C,1,France,FRA,6.509,93.5,4
+Netherlands,NLD,1990,C,2,Finland,FIN,6.586,93.4,4
+Netherlands,NLD,1990,C,3,Belgium,BEL,6.85,93.2,4
+Netherlands,NLD,1990,C,4,Sweden,SWE,7.002,93.0,4
+Netherlands,NLD,1990,C,5,Denmark,DNK,8.124,91.9,4
+Netherlands,NLD,2000,C,1,Belgium,BEL,5.445,94.6,4
+Netherlands,NLD,2000,C,2,Sweden,SWE,5.693,94.3,4
+Netherlands,NLD,2000,C,3,Finland,FIN,6.804,93.2,4
+Netherlands,NLD,2000,C,4,France,FRA,7.638,92.4,4
+Netherlands,NLD,2000,C,5,Denmark,DNK,8.599,91.4,4
+Norway,NOR,1820,C,1,Ireland,IRL,1.6,98.4,2
+Norway,NOR,1820,C,2,Canada,CAN,3.184,96.8,2
+Norway,NOR,1820,C,3,Argentina,ARG,9.286,90.7,2
+Norway,NOR,1820,C,4,Spain,ESP,11.845,88.2,2
+Norway,NOR,1820,C,5,Mexico,MEX,14.365,85.6,2
+Norway,NOR,1850,C,1,Portugal,PRT,9.444,90.6,2
+Norway,NOR,1850,C,2,Japan,JPN,10.098,89.9,2
+Norway,NOR,1850,C,3,Spain,ESP,11.577,88.4,2
+Norway,NOR,1850,C,4,Argentina,ARG,12.094,87.9,2
+Norway,NOR,1850,C,5,Poland,POL,15.688,84.3,2
+Norway,NOR,1860,C,1,Sweden,SWE,9.043,91.0,2
+Norway,NOR,1860,C,2,Denmark,DNK,31.807,68.2,2
+Norway,NOR,1860,C,3,Belgium,BEL,36.902,63.1,3
+Norway,NOR,1860,C,4,France,FRA,42.528,57.5,2
+Norway,NOR,1860,C,5,United Kingdom,GBR,62.421,37.6,3
+Norway,NOR,1870,C,1,Canada,CAN,8.752,91.2,3
+Norway,NOR,1870,C,2,Germany,DEU,10.552,89.4,2
+Norway,NOR,1870,C,3,Switzerland,CHE,11.564,88.4,3
+Norway,NOR,1870,C,4,Poland,POL,21.978,78.0,2
+Norway,NOR,1870,C,5,Denmark,DNK,24.188,75.8,4
+Norway,NOR,1880,C,1,Canada,CAN,7.581,92.4,2
+Norway,NOR,1880,C,2,Germany,DEU,7.59,92.4,2
+Norway,NOR,1880,C,3,Sweden,SWE,16.927,83.1,3
+Norway,NOR,1880,C,4,Denmark,DNK,25.596,74.4,3
+Norway,NOR,1880,C,5,France,FRA,31.629,68.4,3
+Norway,NOR,1890,C,1,Denmark,DNK,12.214,87.8,4
+Norway,NOR,1890,C,2,Germany,DEU,12.6,87.4,2
+Norway,NOR,1890,C,3,Poland,POL,14.524,85.5,2
+Norway,NOR,1890,C,4,Canada,CAN,15.237,84.8,3
+Norway,NOR,1890,C,5,Hungary,HUN,23.601,76.4,2
+Norway,NOR,1900,C,1,Sweden,SWE,3.624,96.4,3
+Norway,NOR,1900,C,2,Denmark,DNK,12.072,87.9,3
+Norway,NOR,1900,C,3,Germany,DEU,15.979,84.0,2
+Norway,NOR,1900,C,4,Netherlands,NLD,18.849,81.2,3
+Norway,NOR,1900,C,5,Canada,CAN,19.104,80.9,2
+Norway,NOR,1910,C,1,Ireland,IRL,11.817,88.2,2
+Norway,NOR,1910,C,2,Denmark,DNK,12.066,87.9,4
+Norway,NOR,1910,C,3,Germany,DEU,15.559,84.4,2
+Norway,NOR,1910,C,4,Netherlands,NLD,15.913,84.1,4
+Norway,NOR,1910,C,5,Sweden,SWE,18.354,81.6,4
+Norway,NOR,1920,C,1,Sweden,SWE,0.344,99.7,3
+Norway,NOR,1920,C,2,Denmark,DNK,9.524,90.5,3
+Norway,NOR,1920,C,3,Netherlands,NLD,11.55,88.5,3
+Norway,NOR,1920,C,4,Germany,DEU,11.761,88.2,2
+Norway,NOR,1920,C,5,United Kingdom,GBR,13.264,86.7,3
+Norway,NOR,1930,C,1,Sweden,SWE,5.605,94.4,3
+Norway,NOR,1930,C,2,Ireland,IRL,8.165,91.8,2
+Norway,NOR,1930,C,3,Germany,DEU,12.473,87.5,2
+Norway,NOR,1930,C,4,Denmark,DNK,15.305,84.7,3
+Norway,NOR,1930,C,5,Australia,AUS,17.0,83.0,3
+Norway,NOR,1940,C,1,Netherlands,NLD,6.325,93.7,3
+Norway,NOR,1940,C,2,Sweden,SWE,6.534,93.5,3
+Norway,NOR,1940,C,3,Denmark,DNK,8.33,91.7,3
+Norway,NOR,1940,C,4,Ireland,IRL,9.786,90.2,2
+Norway,NOR,1940,C,5,Japan,JPN,14.113,85.9,2
+Norway,NOR,1950,C,1,Netherlands,NLD,4.291,95.7,4
+Norway,NOR,1950,C,2,Sweden,SWE,8.592,91.4,4
+Norway,NOR,1950,C,3,Denmark,DNK,8.63,91.4,4
+Norway,NOR,1950,C,4,United Kingdom,GBR,10.822,89.2,4
+Norway,NOR,1950,C,5,Belgium,BEL,11.063,88.9,4
+Norway,NOR,1960,C,1,Denmark,DNK,8.107,91.9,4
+Norway,NOR,1960,C,2,Sweden,SWE,8.119,91.9,4
+Norway,NOR,1960,C,3,United Kingdom,GBR,9.611,90.4,4
+Norway,NOR,1960,C,4,Canada,CAN,9.886,90.1,4
+Norway,NOR,1960,C,5,Netherlands,NLD,9.974,90.0,4
+Norway,NOR,1970,C,1,Japan,JPN,4.846,95.2,4
+Norway,NOR,1970,C,2,United Kingdom,GBR,6.045,94.0,4
+Norway,NOR,1970,C,3,Canada,CAN,7.857,92.1,4
+Norway,NOR,1970,C,4,Netherlands,NLD,9.386,90.6,4
+Norway,NOR,1970,C,5,Denmark,DNK,9.917,90.1,4
+Norway,NOR,1980,C,1,Sweden,SWE,1.986,98.0,4
+Norway,NOR,1980,C,2,Canada,CAN,4.47,95.5,4
+Norway,NOR,1980,C,3,France,FRA,5.356,94.6,4
+Norway,NOR,1980,C,4,Netherlands,NLD,7.401,92.6,4
+Norway,NOR,1980,C,5,Japan,JPN,7.576,92.4,4
+Norway,NOR,1990,C,1,Canada,CAN,3.479,96.5,4
+Norway,NOR,1990,C,2,Sweden,SWE,4.6,95.4,4
+Norway,NOR,1990,C,3,Denmark,DNK,5.923,94.1,4
+Norway,NOR,1990,C,4,France,FRA,6.601,93.4,4
+Norway,NOR,1990,C,5,United Kingdom,GBR,7.9,92.1,4
+Norway,NOR,2000,C,1,Switzerland,CHE,12.314,87.7,4
+Norway,NOR,2000,C,2,United States,USA,15.557,84.4,4
+Norway,NOR,2000,C,3,Denmark,DNK,17.303,82.7,4
+Norway,NOR,2000,C,4,Netherlands,NLD,17.415,82.6,4
+Norway,NOR,2000,C,5,Canada,CAN,19.505,80.5,4
+Peru,PER,1820,C,1,Egypt,EGY,4.147,95.9,2
+Peru,PER,1820,C,2,Indonesia,IDN,10.285,89.7,2
+Peru,PER,1820,C,3,Japan,JPN,18.056,81.9,2
+Peru,PER,1820,C,4,Chile,CHL,18.57,81.4,2
+Peru,PER,1820,C,5,Brazil,BRA,18.598,81.4,2
+Peru,PER,1850,C,1,Indonesia,IDN,6.876,93.1,2
+Peru,PER,1850,C,2,India,IND,9.223,90.8,2
+Peru,PER,1850,C,3,Japan,JPN,11.543,88.5,2
+Peru,PER,1850,C,4,Brazil,BRA,12.031,88.0,2
+Peru,PER,1850,C,5,Poland,POL,12.927,87.1,2
+Peru,PER,1870,C,1,Portugal,PRT,3.742,96.3,3
+Peru,PER,1870,C,2,Russia,RUS,7.718,92.3,2
+Peru,PER,1870,C,3,Philippines,PHL,8.627,91.4,3
+Peru,PER,1870,C,4,Mexico,MEX,9.1,90.9,3
+Peru,PER,1870,C,5,Venezuela,VEN,10.189,89.8,2
+Peru,PER,1880,C,1,Brazil,BRA,3.201,96.8,2
+Peru,PER,1880,C,2,Jamaica,JAM,3.978,96.0,2
+Peru,PER,1880,C,3,Colombia,COL,6.971,93.0,2
+Peru,PER,1880,C,4,Portugal,PRT,8.474,91.5,2
+Peru,PER,1880,C,5,Russia,RUS,9.204,90.8,2
+Peru,PER,1890,C,1,Indonesia,IDN,5.437,94.6,2
+Peru,PER,1890,C,2,Bolivia,BOL,6.604,93.4,2
+Peru,PER,1890,C,3,Colombia,COL,6.832,93.2,3
+Peru,PER,1890,C,4,Philippines,PHL,7.265,92.7,2
+Peru,PER,1890,C,5,Jamaica,JAM,8.483,91.5,3
+Peru,PER,1900,C,1,India,IND,2.329,97.7,2
+Peru,PER,1900,C,2,Brazil,BRA,3.379,96.6,2
+Peru,PER,1900,C,3,China,CHN,7.191,92.8,2
+Peru,PER,1900,C,4,South Africa,ZAF,7.547,92.5,2
+Peru,PER,1900,C,5,Colombia,COL,8.488,91.5,2
+Peru,PER,1910,C,1,Philippines,PHL,3.531,96.5,3
+Peru,PER,1910,C,2,Brazil,BRA,4.877,95.1,3
+Peru,PER,1910,C,3,Egypt,EGY,4.969,95.0,2
+Peru,PER,1910,C,4,Indonesia,IDN,6.262,93.7,2
+Peru,PER,1910,C,5,China,CHN,6.869,93.1,2
+Peru,PER,1920,C,1,Philippines,PHL,3.105,96.9,2
+Peru,PER,1920,C,2,Venezuela,VEN,4.104,95.9,2
+Peru,PER,1920,C,3,Mexico,MEX,4.779,95.2,2
+Peru,PER,1920,C,4,South Korea,KOR,4.819,95.2,2
+Peru,PER,1920,C,5,Brazil,BRA,5.327,94.7,2
+Peru,PER,1930,C,1,Venezuela,VEN,1.932,98.1,2
+Peru,PER,1930,C,2,Portugal,PRT,2.585,97.4,2
+Peru,PER,1930,C,3,South Africa,ZAF,3.262,96.7,2
+Peru,PER,1930,C,4,Mexico,MEX,3.375,96.6,2
+Peru,PER,1930,C,5,Philippines,PHL,4.489,95.5,2
+Peru,PER,1940,C,1,Philippines,PHL,4.156,95.8,2
+Peru,PER,1940,C,2,Mexico,MEX,4.522,95.5,3
+Peru,PER,1940,C,3,South Africa,ZAF,4.913,95.1,2
+Peru,PER,1940,C,4,Brazil,BRA,7.152,92.8,3
+Peru,PER,1940,C,5,Bolivia,BOL,7.646,92.4,3
+Peru,PER,1950,C,1,South Africa,ZAF,6.343,93.7,4
+Peru,PER,1950,C,2,Mexico,MEX,12.306,87.7,4
+Peru,PER,1950,C,3,Colombia,COL,12.486,87.5,4
+Peru,PER,1950,C,4,Brazil,BRA,13.132,86.9,4
+Peru,PER,1950,C,5,Egypt,EGY,13.772,86.2,4
+Peru,PER,1960,C,1,South Africa,ZAF,6.414,93.6,4
+Peru,PER,1960,C,2,Brazil,BRA,15.021,85.0,4
+Peru,PER,1960,C,3,Bolivia,BOL,17.746,82.3,4
+Peru,PER,1960,C,4,Colombia,COL,17.843,82.2,4
+Peru,PER,1960,C,5,Mexico,MEX,18.299,81.7,4
+Peru,PER,1970,C,1,Brazil,BRA,10.423,89.6,4
+Peru,PER,1970,C,2,Mexico,MEX,11.547,88.5,4
+Peru,PER,1970,C,3,South Africa,ZAF,12.168,87.8,4
+Peru,PER,1970,C,4,Colombia,COL,13.664,86.3,4
+Peru,PER,1970,C,5,Philippines,PHL,15.075,84.9,4
+Peru,PER,1980,C,1,Philippines,PHL,8.447,91.6,4
+Peru,PER,1980,C,2,Brazil,BRA,9.306,90.7,4
+Peru,PER,1980,C,3,South Africa,ZAF,14.337,85.7,4
+Peru,PER,1980,C,4,Indonesia,IDN,14.827,85.2,3
+Peru,PER,1980,C,5,Colombia,COL,15.095,84.9,4
+Peru,PER,1990,C,1,Philippines,PHL,4.533,95.5,4
+Peru,PER,1990,C,2,Colombia,COL,10.346,89.7,4
+Peru,PER,1990,C,3,Indonesia,IDN,11.247,88.8,3
+Peru,PER,1990,C,4,Brazil,BRA,12.12,87.9,4
+Peru,PER,1990,C,5,Jamaica,JAM,12.707,87.3,4
+Peru,PER,2000,C,1,Jamaica,JAM,7.225,92.8,4
+Peru,PER,2000,C,2,Mexico,MEX,8.347,91.7,4
+Peru,PER,2000,C,3,Indonesia,IDN,8.762,91.2,3
+Peru,PER,2000,C,4,Philippines,PHL,9.85,90.2,4
+Peru,PER,2000,C,5,Argentina,ARG,10.553,89.4,4
+Philippines,PHL,1870,C,1,Jamaica,JAM,4.953,95.0,2
+Philippines,PHL,1870,C,2,Mexico,MEX,5.357,94.6,3
+Philippines,PHL,1870,C,3,Portugal,PRT,7.969,92.0,3
+Philippines,PHL,1870,C,4,Peru,PER,8.627,91.4,3
+Philippines,PHL,1870,C,5,South Korea,KOR,12.188,87.8,2
+Philippines,PHL,1890,C,1,Brazil,BRA,6.831,93.2,2
+Philippines,PHL,1890,C,2,Peru,PER,7.265,92.7,2
+Philippines,PHL,1890,C,3,Egypt,EGY,7.736,92.3,2
+Philippines,PHL,1890,C,4,India,IND,9.731,90.3,2
+Philippines,PHL,1890,C,5,Portugal,PRT,11.122,88.9,2
+Philippines,PHL,1910,C,1,Egypt,EGY,3.364,96.6,2
+Philippines,PHL,1910,C,2,Peru,PER,3.531,96.5,3
+Philippines,PHL,1910,C,3,Indonesia,IDN,4.317,95.7,2
+Philippines,PHL,1910,C,4,Brazil,BRA,6.552,93.4,3
+Philippines,PHL,1910,C,5,South Africa,ZAF,10.376,89.6,3
+Philippines,PHL,1920,C,1,Peru,PER,3.105,96.9,2
+Philippines,PHL,1920,C,2,Mexico,MEX,6.147,93.9,2
+Philippines,PHL,1920,C,3,Brazil,BRA,6.216,93.8,2
+Philippines,PHL,1920,C,4,Venezuela,VEN,7.189,92.8,2
+Philippines,PHL,1920,C,5,South Korea,KOR,7.492,92.5,2
+Philippines,PHL,1930,C,1,Mexico,MEX,1.533,98.5,2
+Philippines,PHL,1930,C,2,Peru,PER,4.489,95.5,2
+Philippines,PHL,1930,C,3,South Korea,KOR,4.649,95.4,2
+Philippines,PHL,1930,C,4,South Africa,ZAF,4.948,95.1,2
+Philippines,PHL,1930,C,5,Venezuela,VEN,5.766,94.2,2
+Philippines,PHL,1940,C,1,Mexico,MEX,1.344,98.7,2
+Philippines,PHL,1940,C,2,Portugal,PRT,1.47,98.5,2
+Philippines,PHL,1940,C,3,South Korea,KOR,3.758,96.2,2
+Philippines,PHL,1940,C,4,Peru,PER,4.156,95.8,2
+Philippines,PHL,1940,C,5,Brazil,BRA,5.978,94.0,2
+Philippines,PHL,1950,C,1,Jamaica,JAM,6.233,93.8,3
+Philippines,PHL,1950,C,2,Brazil,BRA,8.017,92.0,4
+Philippines,PHL,1950,C,3,Cuba,CUB,9.469,90.5,3
+Philippines,PHL,1950,C,4,Mexico,MEX,10.532,89.5,4
+Philippines,PHL,1950,C,5,Colombia,COL,11.199,88.8,4
+Philippines,PHL,1960,C,1,Mexico,MEX,7.509,92.5,4
+Philippines,PHL,1960,C,2,Brazil,BRA,7.69,92.3,4
+Philippines,PHL,1960,C,3,Colombia,COL,10.51,89.5,4
+Philippines,PHL,1960,C,4,Portugal,PRT,13.252,86.7,4
+Philippines,PHL,1960,C,5,Cuba,CUB,14.03,86.0,3
+Philippines,PHL,1970,C,1,Colombia,COL,5.161,94.8,4
+Philippines,PHL,1970,C,2,Brazil,BRA,9.182,90.8,4
+Philippines,PHL,1970,C,3,Mexico,MEX,10.246,89.8,4
+Philippines,PHL,1970,C,4,Peru,PER,15.075,84.9,4
+Philippines,PHL,1970,C,5,South Korea,KOR,15.204,84.8,4
+Philippines,PHL,1980,C,1,Peru,PER,8.447,91.6,4
+Philippines,PHL,1980,C,2,Indonesia,IDN,10.676,89.3,3
+Philippines,PHL,1980,C,3,Brazil,BRA,13.728,86.3,4
+Philippines,PHL,1980,C,4,Colombia,COL,14.717,85.3,4
+Philippines,PHL,1980,C,5,Mexico,MEX,16.607,83.4,4
+Philippines,PHL,1990,C,1,Peru,PER,4.533,95.5,4
+Philippines,PHL,1990,C,2,Indonesia,IDN,10.665,89.3,3
+Philippines,PHL,1990,C,3,Egypt,EGY,11.539,88.5,4
+Philippines,PHL,1990,C,4,Brazil,BRA,12.304,87.7,4
+Philippines,PHL,1990,C,5,Colombia,COL,12.391,87.6,4
+Philippines,PHL,2000,C,1,Indonesia,IDN,2.912,97.1,3
+Philippines,PHL,2000,C,2,Egypt,EGY,9.415,90.6,4
+Philippines,PHL,2000,C,3,Peru,PER,9.85,90.2,4
+Philippines,PHL,2000,C,4,Jamaica,JAM,10.998,89.0,4
+Philippines,PHL,2000,C,5,Russia,RUS,11.406,88.6,3
+Poland,POL,1820,C,1,Mexico,MEX,11.97,88.0,2
+Poland,POL,1820,C,2,China,CHN,18.782,81.2,2
+Poland,POL,1820,C,3,Chile,CHL,22.709,77.3,2
+Poland,POL,1820,C,4,Brazil,BRA,22.769,77.2,2
+Poland,POL,1820,C,5,Norway,NOR,25.411,74.6,2
+Poland,POL,1850,C,1,Brazil,BRA,2.94,97.1,2
+Poland,POL,1850,C,2,India,IND,3.776,96.2,2
+Poland,POL,1850,C,3,China,CHN,5.756,94.2,2
+Poland,POL,1850,C,4,Mexico,MEX,6.836,93.2,2
+Poland,POL,1850,C,5,Indonesia,IDN,10.363,89.6,2
+Poland,POL,1870,C,1,Brazil,BRA,8.505,91.5,2
+Poland,POL,1870,C,2,Spain,ESP,10.374,89.6,2
+Poland,POL,1870,C,3,China,CHN,11.94,88.1,2
+Poland,POL,1870,C,4,India,IND,12.655,87.3,2
+Poland,POL,1870,C,5,Indonesia,IDN,12.978,87.0,2
+Poland,POL,1890,C,1,Spain,ESP,4.34,95.7,2
+Poland,POL,1890,C,2,Greece,GRC,6.857,93.1,2
+Poland,POL,1890,C,3,Finland,FIN,10.697,89.3,2
+Poland,POL,1890,C,4,South Africa,ZAF,11.834,88.2,2
+Poland,POL,1890,C,5,Norway,NOR,14.524,85.5,2
+Poland,POL,1910,C,1,Spain,ESP,13.078,86.9,2
+Poland,POL,1910,C,2,India,IND,16.47,83.5,2
+Poland,POL,1910,C,3,Finland,FIN,19.454,80.5,2
+Poland,POL,1910,C,4,Peru,PER,23.401,76.6,2
+Poland,POL,1910,C,5,Brazil,BRA,25.049,75.0,2
+Poland,POL,1920,C,1,Finland,FIN,3.516,96.5,2
+Poland,POL,1920,C,2,Cuba,CUB,5.252,94.7,2
+Poland,POL,1920,C,3,Uruguay,URY,6.814,93.2,2
+Poland,POL,1920,C,4,Bolivia,BOL,7.822,92.2,2
+Poland,POL,1920,C,5,Greece,GRC,8.731,91.3,2
+Poland,POL,1930,C,1,Cuba,CUB,5.76,94.2,2
+Poland,POL,1930,C,2,Russia,RUS,6.059,93.9,2
+Poland,POL,1930,C,3,Colombia,COL,6.443,93.6,2
+Poland,POL,1930,C,4,Bolivia,BOL,6.65,93.4,2
+Poland,POL,1930,C,5,Portugal,PRT,6.99,93.0,2
+Poland,POL,1950,C,1,Cuba,CUB,6.359,93.6,3
+Poland,POL,1950,C,2,Jamaica,JAM,8.311,91.7,3
+Poland,POL,1950,C,3,Russia,RUS,13.828,86.2,3
+Poland,POL,1950,C,4,Spain,ESP,15.847,84.2,4
+Poland,POL,1950,C,5,Portugal,PRT,16.02,84.0,4
+Poland,POL,1960,C,1,Cuba,CUB,8.657,91.3,3
+Poland,POL,1960,C,2,Spain,ESP,8.758,91.2,4
+Poland,POL,1960,C,3,Uruguay,URY,11.43,88.6,3
+Poland,POL,1960,C,4,Jamaica,JAM,12.569,87.4,4
+Poland,POL,1960,C,5,Russia,RUS,16.106,83.9,3
+Poland,POL,1970,C,1,Jamaica,JAM,4.909,95.1,4
+Poland,POL,1970,C,2,Uruguay,URY,5.792,94.2,3
+Poland,POL,1970,C,3,Spain,ESP,10.384,89.6,4
+Poland,POL,1970,C,4,Cuba,CUB,11.55,88.4,3
+Poland,POL,1970,C,5,Portugal,PRT,13.027,87.0,4
+Poland,POL,1980,C,1,Uruguay,URY,3.535,96.5,3
+Poland,POL,1980,C,2,Jamaica,JAM,8.581,91.4,4
+Poland,POL,1980,C,3,Portugal,PRT,11.4,88.6,4
+Poland,POL,1980,C,4,Argentina,ARG,12.409,87.6,4
+Poland,POL,1980,C,5,Hungary,HUN,13.886,86.1,4
+Poland,POL,1990,C,1,Uruguay,URY,8.163,91.8,3
+Poland,POL,1990,C,2,Jamaica,JAM,11.153,88.8,4
+Poland,POL,1990,C,3,Argentina,ARG,11.911,88.1,4
+Poland,POL,1990,C,4,China,CHN,13.704,86.3,4
+Poland,POL,1990,C,5,Cuba,CUB,13.991,86.0,3
+Poland,POL,2000,C,1,Uruguay,URY,4.518,95.5,3
+Poland,POL,2000,C,2,Argentina,ARG,11.658,88.3,4
+Poland,POL,2000,C,3,Cuba,CUB,11.704,88.3,3
+Poland,POL,2000,C,4,Jamaica,JAM,11.755,88.2,4
+Poland,POL,2000,C,5,Mexico,MEX,12.321,87.7,4
+Portugal,PRT,1820,C,1,Sweden,SWE,8.526,91.5,2
+Portugal,PRT,1820,C,2,France,FRA,8.608,91.4,2
+Portugal,PRT,1820,C,3,Japan,JPN,12.317,87.7,2
+Portugal,PRT,1820,C,4,Denmark,DNK,12.519,87.5,2
+Portugal,PRT,1820,C,5,Argentina,ARG,14.588,85.4,2
+Portugal,PRT,1850,C,1,Spain,ESP,6.085,93.9,2
+Portugal,PRT,1850,C,2,Norway,NOR,9.444,90.6,2
+Portugal,PRT,1850,C,3,Mexico,MEX,10.103,89.9,2
+Portugal,PRT,1850,C,4,Poland,POL,12.03,88.0,2
+Portugal,PRT,1850,C,5,Argentina,ARG,12.282,87.7,2
+Portugal,PRT,1870,C,1,Peru,PER,3.742,96.3,3
+Portugal,PRT,1870,C,2,Russia,RUS,5.454,94.5,2
+Portugal,PRT,1870,C,3,Mexico,MEX,6.423,93.6,3
+Portugal,PRT,1870,C,4,Philippines,PHL,7.969,92.0,3
+Portugal,PRT,1870,C,5,Venezuela,VEN,8.403,91.6,2
+Portugal,PRT,1880,C,1,Russia,RUS,3.708,96.3,2
+Portugal,PRT,1880,C,2,Colombia,COL,4.716,95.3,2
+Portugal,PRT,1880,C,3,Brazil,BRA,5.459,94.5,2
+Portugal,PRT,1880,C,4,Jamaica,JAM,7.298,92.7,2
+Portugal,PRT,1880,C,5,Peru,PER,8.474,91.5,2
+Portugal,PRT,1890,C,1,Russia,RUS,4.566,95.4,2
+Portugal,PRT,1890,C,2,South Africa,ZAF,4.762,95.2,3
+Portugal,PRT,1890,C,3,Bolivia,BOL,5.625,94.4,2
+Portugal,PRT,1890,C,4,Mexico,MEX,6.41,93.6,3
+Portugal,PRT,1890,C,5,Colombia,COL,7.624,92.4,3
+Portugal,PRT,1900,C,1,Venezuela,VEN,2.155,97.8,2
+Portugal,PRT,1900,C,2,Russia,RUS,2.465,97.5,2
+Portugal,PRT,1900,C,3,Mexico,MEX,3.857,96.1,2
+Portugal,PRT,1900,C,4,Bolivia,BOL,5.933,94.1,2
+Portugal,PRT,1900,C,5,South Africa,ZAF,6.203,93.8,2
+Portugal,PRT,1910,C,1,Cuba,CUB,1.258,98.7,2
+Portugal,PRT,1910,C,2,Venezuela,VEN,2.385,97.6,2
+Portugal,PRT,1910,C,3,Bolivia,BOL,2.545,97.5,2
+Portugal,PRT,1910,C,4,Russia,RUS,3.369,96.6,2
+Portugal,PRT,1910,C,5,South Africa,ZAF,4.926,95.1,3
+Portugal,PRT,1920,C,1,Venezuela,VEN,2.179,97.8,2
+Portugal,PRT,1920,C,2,Cuba,CUB,4.096,95.9,2
+Portugal,PRT,1920,C,3,South Korea,KOR,5.092,94.9,2
+Portugal,PRT,1920,C,4,Colombia,COL,5.34,94.7,2
+Portugal,PRT,1920,C,5,Bolivia,BOL,6.001,94.0,2
+Portugal,PRT,1930,C,1,South Africa,ZAF,1.876,98.1,2
+Portugal,PRT,1930,C,2,Peru,PER,2.585,97.4,2
+Portugal,PRT,1930,C,3,Venezuela,VEN,4.011,96.0,2
+Portugal,PRT,1930,C,4,Mexico,MEX,4.497,95.5,2
+Portugal,PRT,1930,C,5,Russia,RUS,5.488,94.5,2
+Portugal,PRT,1940,C,1,Philippines,PHL,1.47,98.5,2
+Portugal,PRT,1940,C,2,South Korea,KOR,4.056,95.9,2
+Portugal,PRT,1940,C,3,South Africa,ZAF,5.636,94.4,2
+Portugal,PRT,1940,C,4,Jamaica,JAM,10.813,89.2,2
+Portugal,PRT,1940,C,5,India,IND,14.369,85.6,2
+Portugal,PRT,1950,C,1,Jamaica,JAM,6.172,93.8,3
+Portugal,PRT,1950,C,2,Cuba,CUB,7.645,92.4,3
+Portugal,PRT,1950,C,3,Philippines,PHL,12.004,88.0,4
+Portugal,PRT,1950,C,4,Colombia,COL,15.669,84.3,4
+Portugal,PRT,1950,C,5,Poland,POL,16.02,84.0,4
+Portugal,PRT,1960,C,1,Cuba,CUB,7.266,92.7,3
+Portugal,PRT,1960,C,2,Jamaica,JAM,11.725,88.3,4
+Portugal,PRT,1960,C,3,Philippines,PHL,13.252,86.7,4
+Portugal,PRT,1960,C,4,Mexico,MEX,13.283,86.7,4
+Portugal,PRT,1960,C,5,Colombia,COL,16.81,83.2,4
+Portugal,PRT,1970,C,1,Uruguay,URY,12.523,87.5,3
+Portugal,PRT,1970,C,2,Poland,POL,13.027,87.0,4
+Portugal,PRT,1970,C,3,Jamaica,JAM,13.061,86.9,4
+Portugal,PRT,1970,C,4,Chile,CHL,15.824,84.2,4
+Portugal,PRT,1970,C,5,Venezuela,VEN,15.908,84.1,3
+Portugal,PRT,1980,C,1,Uruguay,URY,8.814,91.2,3
+Portugal,PRT,1980,C,2,Venezuela,VEN,10.495,89.5,3
+Portugal,PRT,1980,C,3,Poland,POL,11.4,88.6,4
+Portugal,PRT,1980,C,4,Argentina,ARG,12.204,87.8,4
+Portugal,PRT,1980,C,5,Spain,ESP,14.19,85.8,4
+Portugal,PRT,1990,C,1,Venezuela,VEN,10.885,89.1,3
+Portugal,PRT,1990,C,2,Uruguay,URY,15.217,84.8,3
+Portugal,PRT,1990,C,3,Argentina,ARG,16.157,83.8,4
+Portugal,PRT,1990,C,4,Spain,ESP,16.803,83.2,4
+Portugal,PRT,1990,C,5,Greece,GRC,17.555,82.4,4
+Portugal,PRT,2000,C,1,Argentina,ARG,12.788,87.2,3
+Portugal,PRT,2000,C,2,Uruguay,URY,13.107,86.9,3
+Portugal,PRT,2000,C,3,Mexico,MEX,14.271,85.7,3
+Portugal,PRT,2000,C,4,Venezuela,VEN,14.486,85.5,3
+Portugal,PRT,2000,C,5,Spain,ESP,15.956,84.0,3
+Russia,RUS,1870,C,1,Japan,JPN,0.889,99.1,2
+Russia,RUS,1870,C,2,Venezuela,VEN,3.389,96.6,2
+Russia,RUS,1870,C,3,Chile,CHL,3.688,96.3,2
+Russia,RUS,1870,C,4,South Africa,ZAF,4.839,95.2,2
+Russia,RUS,1870,C,5,Portugal,PRT,5.454,94.5,2
+Russia,RUS,1880,C,1,Colombia,COL,2.638,97.4,2
+Russia,RUS,1880,C,2,Portugal,PRT,3.708,96.3,2
+Russia,RUS,1880,C,3,Brazil,BRA,6.054,93.9,2
+Russia,RUS,1880,C,4,Jamaica,JAM,6.403,93.6,2
+Russia,RUS,1880,C,5,Finland,FIN,8.254,91.7,2
+Russia,RUS,1890,C,1,Colombia,COL,2.671,97.3,2
+Russia,RUS,1890,C,2,Mexico,MEX,2.9,97.1,2
+Russia,RUS,1890,C,3,Bolivia,BOL,3.85,96.2,2
+Russia,RUS,1890,C,4,China,CHN,4.482,95.5,2
+Russia,RUS,1890,C,5,Portugal,PRT,4.566,95.4,2
+Russia,RUS,1900,C,1,Portugal,PRT,2.465,97.5,2
+Russia,RUS,1900,C,2,Cuba,CUB,3.871,96.1,2
+Russia,RUS,1900,C,3,South Africa,ZAF,4.016,96.0,2
+Russia,RUS,1900,C,4,Venezuela,VEN,5.688,94.3,3
+Russia,RUS,1900,C,5,Colombia,COL,6.891,93.1,3
+Russia,RUS,1910,C,1,Mexico,MEX,0.816,99.2,2
+Russia,RUS,1910,C,2,Cuba,CUB,2.203,97.8,2
+Russia,RUS,1910,C,3,South Africa,ZAF,3.045,97.0,2
+Russia,RUS,1910,C,4,Portugal,PRT,3.369,96.6,2
+Russia,RUS,1910,C,5,Venezuela,VEN,4.264,95.7,2
+Russia,RUS,1920,C,1,South Korea,KOR,5.756,94.2,2
+Russia,RUS,1920,C,2,Portugal,PRT,7.681,92.3,2
+Russia,RUS,1920,C,3,Peru,PER,10.515,89.5,2
+Russia,RUS,1920,C,4,Philippines,PHL,13.244,86.8,2
+Russia,RUS,1920,C,5,India,IND,13.64,86.4,2
+Russia,RUS,1930,C,1,Colombia,COL,5.207,94.8,3
+Russia,RUS,1930,C,2,Portugal,PRT,5.488,94.5,2
+Russia,RUS,1930,C,3,South Africa,ZAF,5.993,94.0,2
+Russia,RUS,1930,C,4,Poland,POL,6.059,93.9,2
+Russia,RUS,1930,C,5,Bolivia,BOL,6.847,93.2,3
+Russia,RUS,1940,C,1,Colombia,COL,8.466,91.5,3
+Russia,RUS,1940,C,2,Cuba,CUB,11.235,88.8,3
+Russia,RUS,1940,C,3,Chile,CHL,12.023,88.0,3
+Russia,RUS,1940,C,4,Bolivia,BOL,13.113,86.9,3
+Russia,RUS,1940,C,5,South Africa,ZAF,14.586,85.4,2
+Russia,RUS,1950,C,1,Spain,ESP,7.068,92.9,3
+Russia,RUS,1950,C,2,Chile,CHL,8.294,91.7,3
+Russia,RUS,1950,C,3,Hungary,HUN,10.004,90.0,3
+Russia,RUS,1950,C,4,Cuba,CUB,12.341,87.7,3
+Russia,RUS,1950,C,5,Japan,JPN,13.101,86.9,3
+Russia,RUS,1960,C,1,Hungary,HUN,2.748,97.3,3
+Russia,RUS,1960,C,2,Greece,GRC,6.193,93.8,3
+Russia,RUS,1960,C,3,Ireland,IRL,7.918,92.1,3
+Russia,RUS,1960,C,4,Spain,ESP,8.018,92.0,3
+Russia,RUS,1960,C,5,Uruguay,URY,8.466,91.5,3
+Russia,RUS,1970,C,1,Hungary,HUN,2.211,97.8,3
+Russia,RUS,1970,C,2,Ireland,IRL,5.767,94.2,3
+Russia,RUS,1970,C,3,Argentina,ARG,10.006,90.0,3
+Russia,RUS,1970,C,4,Uruguay,URY,11.261,88.7,3
+Russia,RUS,1970,C,5,Spain,ESP,11.97,88.0,3
+Russia,RUS,1980,C,1,Hungary,HUN,4.557,95.4,3
+Russia,RUS,1980,C,2,South Korea,KOR,9.351,90.6,3
+Russia,RUS,1980,C,3,Chile,CHL,12.192,87.8,3
+Russia,RUS,1980,C,4,Argentina,ARG,12.586,87.4,3
+Russia,RUS,1980,C,5,Ireland,IRL,15.627,84.4,3
+Russia,RUS,1990,C,1,Hungary,HUN,1.187,98.8,3
+Russia,RUS,1990,C,2,South Korea,KOR,9.559,90.4,3
+Russia,RUS,1990,C,3,Chile,CHL,12.784,87.2,3
+Russia,RUS,1990,C,4,Jamaica,JAM,13.241,86.8,3
+Russia,RUS,1990,C,5,Poland,POL,14.87,85.1,3
+Russia,RUS,2000,C,1,Indonesia,IDN,8.317,91.7,2
+Russia,RUS,2000,C,2,Philippines,PHL,11.406,88.6,3
+Russia,RUS,2000,C,3,Bolivia,BOL,12.719,87.3,3
+Russia,RUS,2000,C,4,Jamaica,JAM,13.247,86.8,3
+Russia,RUS,2000,C,5,Peru,PER,15.753,84.2,3
+South Africa,ZAF,1870,C,1,Japan,JPN,4.262,95.7,2
+South Africa,ZAF,1870,C,2,China,CHN,4.713,95.3,2
+South Africa,ZAF,1870,C,3,Russia,RUS,4.839,95.2,2
+South Africa,ZAF,1870,C,4,South Korea,KOR,6.256,93.7,2
+South Africa,ZAF,1870,C,5,Venezuela,VEN,6.488,93.5,2
+South Africa,ZAF,1880,C,1,Chile,CHL,1.534,98.5,2
+South Africa,ZAF,1880,C,2,Venezuela,VEN,1.781,98.2,2
+South Africa,ZAF,1880,C,3,Italy,ITA,6.245,93.8,2
+South Africa,ZAF,1880,C,4,Argentina,ARG,6.854,93.1,2
+South Africa,ZAF,1880,C,5,Finland,FIN,7.084,92.9,2
+South Africa,ZAF,1890,C,1,Portugal,PRT,4.762,95.2,3
+South Africa,ZAF,1890,C,2,Russia,RUS,4.846,95.2,2
+South Africa,ZAF,1890,C,3,Bolivia,BOL,6.348,93.7,2
+South Africa,ZAF,1890,C,4,Finland,FIN,6.389,93.6,3
+South Africa,ZAF,1890,C,5,Brazil,BRA,8.726,91.3,3
+South Africa,ZAF,1900,C,1,Bolivia,BOL,1.573,98.4,2
+South Africa,ZAF,1900,C,2,Mexico,MEX,3.089,96.9,2
+South Africa,ZAF,1900,C,3,Russia,RUS,4.016,96.0,2
+South Africa,ZAF,1900,C,4,Colombia,COL,4.305,95.7,2
+South Africa,ZAF,1900,C,5,Venezuela,VEN,4.422,95.6,2
+South Africa,ZAF,1910,C,1,Russia,RUS,3.045,97.0,2
+South Africa,ZAF,1910,C,2,Venezuela,VEN,4.12,95.9,2
+South Africa,ZAF,1910,C,3,Cuba,CUB,4.328,95.7,2
+South Africa,ZAF,1910,C,4,Portugal,PRT,4.926,95.1,3
+South Africa,ZAF,1910,C,5,Bolivia,BOL,6.597,93.4,2
+South Africa,ZAF,1930,C,1,Portugal,PRT,1.876,98.1,2
+South Africa,ZAF,1930,C,2,Peru,PER,3.262,96.7,2
+South Africa,ZAF,1930,C,3,Mexico,MEX,3.42,96.6,2
+South Africa,ZAF,1930,C,4,South Korea,KOR,4.941,95.1,2
+South Africa,ZAF,1930,C,5,Philippines,PHL,4.948,95.1,2
+South Africa,ZAF,1940,C,1,Peru,PER,4.913,95.1,2
+South Africa,ZAF,1940,C,2,Portugal,PRT,5.636,94.4,2
+South Africa,ZAF,1940,C,3,Mexico,MEX,6.683,93.3,2
+South Africa,ZAF,1940,C,4,Bolivia,BOL,6.703,93.3,2
+South Africa,ZAF,1940,C,5,Philippines,PHL,7.024,93.0,2
+South Africa,ZAF,1950,C,1,Peru,PER,6.343,93.7,4
+South Africa,ZAF,1950,C,2,Mexico,MEX,10.407,89.6,4
+South Africa,ZAF,1950,C,3,Colombia,COL,11.285,88.7,4
+South Africa,ZAF,1950,C,4,Brazil,BRA,13.116,86.9,4
+South Africa,ZAF,1950,C,5,Indonesia,IDN,17.788,82.2,3
+South Africa,ZAF,1960,C,1,Peru,PER,6.414,93.6,4
+South Africa,ZAF,1960,C,2,Colombia,COL,16.104,83.9,4
+South Africa,ZAF,1960,C,3,Brazil,BRA,16.45,83.6,4
+South Africa,ZAF,1960,C,4,Mexico,MEX,18.952,81.0,4
+South Africa,ZAF,1960,C,5,Chile,CHL,20.192,79.8,4
+South Africa,ZAF,1970,C,1,Peru,PER,12.168,87.8,4
+South Africa,ZAF,1970,C,2,Brazil,BRA,17.462,82.5,4
+South Africa,ZAF,1970,C,3,Mexico,MEX,18.632,81.4,4
+South Africa,ZAF,1970,C,4,Bolivia,BOL,19.835,80.2,4
+South Africa,ZAF,1970,C,5,Colombia,COL,22.1,77.9,4
+South Africa,ZAF,1980,C,1,Peru,PER,14.337,85.7,4
+South Africa,ZAF,1980,C,2,Brazil,BRA,15.928,84.1,4
+South Africa,ZAF,1980,C,3,Egypt,EGY,19.424,80.6,4
+South Africa,ZAF,1980,C,4,Philippines,PHL,21.507,78.5,4
+South Africa,ZAF,1980,C,5,Bolivia,BOL,22.497,77.5,4
+South Africa,ZAF,1990,C,1,Egypt,EGY,13.129,86.9,4
+South Africa,ZAF,1990,C,2,Brazil,BRA,16.831,83.2,4
+South Africa,ZAF,1990,C,3,Philippines,PHL,17.752,82.2,4
+South Africa,ZAF,1990,C,4,Bolivia,BOL,20.327,79.7,4
+South Africa,ZAF,1990,C,5,Peru,PER,21.306,78.7,4
+South Africa,ZAF,2000,C,1,Bolivia,BOL,24.281,75.7,4
+South Africa,ZAF,2000,C,2,India,IND,29.552,70.4,4
+South Africa,ZAF,2000,C,3,Russia,RUS,30.438,69.6,3
+South Africa,ZAF,2000,C,4,Philippines,PHL,30.507,69.5,4
+South Africa,ZAF,2000,C,5,Egypt,EGY,33.969,66.0,4
+South Korea,KOR,1870,C,1,China,CHN,2.079,97.9,2
+South Korea,KOR,1870,C,2,South Africa,ZAF,6.256,93.7,2
+South Korea,KOR,1870,C,3,Mexico,MEX,7.428,92.6,2
+South Korea,KOR,1870,C,4,Jamaica,JAM,7.442,92.6,2
+South Korea,KOR,1870,C,5,Brazil,BRA,8.762,91.2,2
+South Korea,KOR,1920,C,1,Venezuela,VEN,3.653,96.3,2
+South Korea,KOR,1920,C,2,Brazil,BRA,4.308,95.7,2
+South Korea,KOR,1920,C,3,Peru,PER,4.819,95.2,2
+South Korea,KOR,1920,C,4,Portugal,PRT,5.092,94.9,2
+South Korea,KOR,1920,C,5,Russia,RUS,5.756,94.2,2
+South Korea,KOR,1930,C,1,Brazil,BRA,3.878,96.1,2
+South Korea,KOR,1930,C,2,Mexico,MEX,4.256,95.7,2
+South Korea,KOR,1930,C,3,Philippines,PHL,4.649,95.4,2
+South Korea,KOR,1930,C,4,South Africa,ZAF,4.941,95.1,2
+South Korea,KOR,1930,C,5,China,CHN,5.255,94.7,2
+South Korea,KOR,1940,C,1,Philippines,PHL,3.758,96.2,2
+South Korea,KOR,1940,C,2,Portugal,PRT,4.056,95.9,2
+South Korea,KOR,1940,C,3,Mexico,MEX,5.101,94.9,2
+South Korea,KOR,1940,C,4,Brazil,BRA,6.515,93.5,2
+South Korea,KOR,1940,C,5,Bolivia,BOL,6.803,93.2,2
+South Korea,KOR,1950,C,1,China,CHN,10.88,89.1,4
+South Korea,KOR,1950,C,2,Bolivia,BOL,14.746,85.3,4
+South Korea,KOR,1950,C,3,Egypt,EGY,17.408,82.6,4
+South Korea,KOR,1950,C,4,Colombia,COL,17.458,82.5,4
+South Korea,KOR,1950,C,5,Jamaica,JAM,19.096,80.9,3
+South Korea,KOR,1960,C,1,Indonesia,IDN,14.806,85.2,3
+South Korea,KOR,1960,C,2,Philippines,PHL,19.035,81.0,4
+South Korea,KOR,1960,C,3,Egypt,EGY,19.407,80.6,4
+South Korea,KOR,1960,C,4,China,CHN,20.047,80.0,4
+South Korea,KOR,1960,C,5,Brazil,BRA,20.344,79.7,4
+South Korea,KOR,1970,C,1,Philippines,PHL,15.204,84.8,4
+South Korea,KOR,1970,C,2,Chile,CHL,15.579,84.4,4
+South Korea,KOR,1970,C,3,Jamaica,JAM,16.19,83.8,4
+South Korea,KOR,1970,C,4,China,CHN,17.569,82.4,4
+South Korea,KOR,1970,C,5,Colombia,COL,17.685,82.3,4
+South Korea,KOR,1980,C,1,Russia,RUS,9.351,90.6,3
+South Korea,KOR,1980,C,2,Hungary,HUN,15.655,84.3,4
+South Korea,KOR,1980,C,3,Jamaica,JAM,16.729,83.3,4
+South Korea,KOR,1980,C,4,Argentina,ARG,17.882,82.1,4
+South Korea,KOR,1980,C,5,Poland,POL,18.475,81.5,4
+South Korea,KOR,1990,C,1,Russia,RUS,9.559,90.4,3
+South Korea,KOR,1990,C,2,Hungary,HUN,11.287,88.7,4
+South Korea,KOR,1990,C,3,Ireland,IRL,14.736,85.3,4
+South Korea,KOR,1990,C,4,Argentina,ARG,18.753,81.2,4
+South Korea,KOR,1990,C,5,Uruguay,URY,18.986,81.0,3
+South Korea,KOR,2000,C,1,Finland,FIN,11.521,88.5,4
+South Korea,KOR,2000,C,2,Germany,DEU,12.732,87.3,3
+South Korea,KOR,2000,C,3,France,FRA,13.195,86.8,4
+South Korea,KOR,2000,C,4,United Kingdom,GBR,13.937,86.1,4
+South Korea,KOR,2000,C,5,Belgium,BEL,14.219,85.8,4
+Spain,ESP,1820,C,1,Norway,NOR,11.845,88.2,2
+Spain,ESP,1820,C,2,Ireland,IRL,12.986,87.0,2
+Spain,ESP,1820,C,3,Canada,CAN,13.399,86.6,2
+Spain,ESP,1820,C,4,Argentina,ARG,16.381,83.6,2
+Spain,ESP,1820,C,5,Mexico,MEX,19.068,80.9,2
+Spain,ESP,1850,C,1,Portugal,PRT,6.085,93.9,2
+Spain,ESP,1850,C,2,Argentina,ARG,7.454,92.5,2
+Spain,ESP,1850,C,3,Norway,NOR,11.577,88.4,2
+Spain,ESP,1850,C,4,Canada,CAN,12.054,87.9,2
+Spain,ESP,1850,C,5,Mexico,MEX,15.201,84.8,2
+Spain,ESP,1870,C,1,Venezuela,VEN,5.031,95.0,2
+Spain,ESP,1870,C,2,Russia,RUS,7.989,92.0,2
+Spain,ESP,1870,C,3,South Africa,ZAF,8.599,91.4,2
+Spain,ESP,1870,C,4,Poland,POL,10.374,89.6,2
+Spain,ESP,1870,C,5,South Korea,KOR,14.117,85.9,2
+Spain,ESP,1880,C,1,Argentina,ARG,4.558,95.4,2
+Spain,ESP,1880,C,2,Greece,GRC,6.378,93.6,2
+Spain,ESP,1880,C,3,Italy,ITA,8.683,91.3,2
+Spain,ESP,1880,C,4,Finland,FIN,9.595,90.4,2
+Spain,ESP,1880,C,5,Venezuela,VEN,10.734,89.3,2
+Spain,ESP,1890,C,1,Poland,POL,4.34,95.7,2
+Spain,ESP,1890,C,2,Greece,GRC,6.753,93.2,3
+Spain,ESP,1890,C,3,Hungary,HUN,10.514,89.5,2
+Spain,ESP,1890,C,4,Finland,FIN,12.06,87.9,3
+Spain,ESP,1890,C,5,Uruguay,URY,14.691,85.3,2
+Spain,ESP,1900,C,1,Hungary,HUN,9.418,90.6,3
+Spain,ESP,1900,C,2,Greece,GRC,10.247,89.8,2
+Spain,ESP,1900,C,3,Japan,JPN,12.029,88.0,3
+Spain,ESP,1900,C,4,Italy,ITA,16.793,83.2,3
+Spain,ESP,1900,C,5,Chile,CHL,17.838,82.2,3
+Spain,ESP,1910,C,1,Greece,GRC,7.83,92.2,2
+Spain,ESP,1910,C,2,Hungary,HUN,9.351,90.6,3
+Spain,ESP,1910,C,3,Poland,POL,13.078,86.9,2
+Spain,ESP,1910,C,4,Jamaica,JAM,14.683,85.3,3
+Spain,ESP,1910,C,5,Cuba,CUB,18.885,81.1,3
+Spain,ESP,1920,C,1,Japan,JPN,5.013,95.0,3
+Spain,ESP,1920,C,2,Hungary,HUN,10.072,89.9,3
+Spain,ESP,1920,C,3,Italy,ITA,10.919,89.1,3
+Spain,ESP,1920,C,4,Greece,GRC,11.387,88.6,3
+Spain,ESP,1920,C,5,Jamaica,JAM,12.865,87.1,2
+Spain,ESP,1930,C,1,Greece,GRC,2.543,97.5,2
+Spain,ESP,1930,C,2,Finland,FIN,10.051,89.9,3
+Spain,ESP,1930,C,3,Hungary,HUN,10.118,89.9,3
+Spain,ESP,1930,C,4,Uruguay,URY,11.536,88.5,3
+Spain,ESP,1930,C,5,Italy,ITA,11.907,88.1,3
+Spain,ESP,1940,C,1,Finland,FIN,10.521,89.5,3
+Spain,ESP,1940,C,2,Hungary,HUN,10.947,89.1,2
+Spain,ESP,1940,C,3,Greece,GRC,11.523,88.5,3
+Spain,ESP,1940,C,4,Cuba,CUB,13.146,86.9,3
+Spain,ESP,1940,C,5,Jamaica,JAM,14.301,85.7,2
+Spain,ESP,1950,C,1,Greece,GRC,6.912,93.1,4
+Spain,ESP,1950,C,2,Russia,RUS,7.068,92.9,3
+Spain,ESP,1950,C,3,Hungary,HUN,8.404,91.6,3
+Spain,ESP,1950,C,4,Cuba,CUB,10.787,89.2,3
+Spain,ESP,1950,C,5,Italy,ITA,12.045,88.0,4
+Spain,ESP,1960,C,1,Russia,RUS,8.018,92.0,3
+Spain,ESP,1960,C,2,Uruguay,URY,8.305,91.7,3
+Spain,ESP,1960,C,3,Poland,POL,8.758,91.2,4
+Spain,ESP,1960,C,4,Hungary,HUN,9.022,91.0,4
+Spain,ESP,1960,C,5,Jamaica,JAM,13.017,87.0,4
+Spain,ESP,1970,C,1,Greece,GRC,6.651,93.3,4
+Spain,ESP,1970,C,2,Uruguay,URY,8.46,91.5,3
+Spain,ESP,1970,C,3,Poland,POL,10.384,89.6,4
+Spain,ESP,1970,C,4,Jamaica,JAM,10.799,89.2,4
+Spain,ESP,1970,C,5,Argentina,ARG,11.665,88.3,4
+Spain,ESP,1980,C,1,Greece,GRC,3.729,96.3,4
+Spain,ESP,1980,C,2,Ireland,IRL,11.477,88.5,4
+Spain,ESP,1980,C,3,Italy,ITA,13.299,86.7,4
+Spain,ESP,1980,C,4,Portugal,PRT,14.19,85.8,4
+Spain,ESP,1980,C,5,Argentina,ARG,14.344,85.7,4
+Spain,ESP,1990,C,1,Greece,GRC,4.778,95.2,4
+Spain,ESP,1990,C,2,Ireland,IRL,9.852,90.1,4
+Spain,ESP,1990,C,3,Italy,ITA,10.433,89.6,4
+Spain,ESP,1990,C,4,Belgium,BEL,15.973,84.0,4
+Spain,ESP,1990,C,5,Portugal,PRT,16.803,83.2,4
+Spain,ESP,2000,C,1,Greece,GRC,7.141,92.9,3
+Spain,ESP,2000,C,2,Italy,ITA,8.366,91.6,4
+Spain,ESP,2000,C,3,Belgium,BEL,10.694,89.3,4
+Spain,ESP,2000,C,4,Sweden,SWE,14.903,85.1,4
+Spain,ESP,2000,C,5,Finland,FIN,14.979,85.0,4
+Sweden,SWE,1820,C,1,Japan,JPN,5.295,94.7,2
+Sweden,SWE,1820,C,2,Portugal,PRT,8.526,91.5,2
+Sweden,SWE,1820,C,3,Egypt,EGY,16.108,83.9,2
+Sweden,SWE,1820,C,4,Argentina,ARG,16.186,83.8,2
+Sweden,SWE,1820,C,5,Canada,CAN,18.608,81.4,2
+Sweden,SWE,1830,C,1,France,FRA,76.982,23.0,2
+Sweden,SWE,1840,C,1,Denmark,DNK,63.637,36.4,2
+Sweden,SWE,1840,C,2,France,FRA,77.708,22.3,2
+Sweden,SWE,1850,C,1,Japan,JPN,6.555,93.4,2
+Sweden,SWE,1850,C,2,Peru,PER,18.097,81.9,2
+Sweden,SWE,1850,C,3,France,FRA,19.021,81.0,3
+Sweden,SWE,1850,C,4,Argentina,ARG,19.161,80.8,2
+Sweden,SWE,1850,C,5,Portugal,PRT,19.216,80.8,2
+Sweden,SWE,1860,C,1,Norway,NOR,9.043,91.0,2
+Sweden,SWE,1860,C,2,Denmark,DNK,23.499,76.5,2
+Sweden,SWE,1860,C,3,Belgium,BEL,32.569,67.4,2
+Sweden,SWE,1860,C,4,France,FRA,34.073,65.9,2
+Sweden,SWE,1860,C,5,United Kingdom,GBR,60.879,39.1,2
+Sweden,SWE,1870,C,1,Denmark,DNK,12.575,87.4,4
+Sweden,SWE,1870,C,2,Germany,DEU,18.285,81.7,2
+Sweden,SWE,1870,C,3,Canada,CAN,21.955,78.0,3
+Sweden,SWE,1870,C,4,Hungary,HUN,21.98,78.0,3
+Sweden,SWE,1870,C,5,Colombia,COL,23.103,76.9,2
+Sweden,SWE,1880,C,1,Denmark,DNK,13.797,86.2,3
+Sweden,SWE,1880,C,2,Germany,DEU,15.46,84.5,2
+Sweden,SWE,1880,C,3,Norway,NOR,16.927,83.1,3
+Sweden,SWE,1880,C,4,France,FRA,18.542,81.5,3
+Sweden,SWE,1880,C,5,Canada,CAN,19.106,80.9,2
+Sweden,SWE,1890,C,1,Hungary,HUN,15.868,84.1,2
+Sweden,SWE,1890,C,2,Germany,DEU,18.015,82.0,2
+Sweden,SWE,1890,C,3,Norway,NOR,25.833,74.2,4
+Sweden,SWE,1890,C,4,Denmark,DNK,26.568,73.4,4
+Sweden,SWE,1890,C,5,France,FRA,30.597,69.4,4
+Sweden,SWE,1900,C,1,Norway,NOR,3.624,96.4,3
+Sweden,SWE,1900,C,2,Denmark,DNK,11.024,89.0,3
+Sweden,SWE,1900,C,3,Netherlands,NLD,16.873,83.1,3
+Sweden,SWE,1900,C,4,Germany,DEU,16.978,83.0,2
+Sweden,SWE,1900,C,5,France,FRA,19.498,80.5,3
+Sweden,SWE,1910,C,1,Germany,DEU,14.924,85.1,2
+Sweden,SWE,1910,C,2,France,FRA,15.772,84.2,4
+Sweden,SWE,1910,C,3,Netherlands,NLD,16.548,83.5,4
+Sweden,SWE,1910,C,4,Norway,NOR,18.354,81.6,4
+Sweden,SWE,1910,C,5,Denmark,DNK,20.398,79.6,4
+Sweden,SWE,1920,C,1,Norway,NOR,0.344,99.7,3
+Sweden,SWE,1920,C,2,Denmark,DNK,9.233,90.8,3
+Sweden,SWE,1920,C,3,Netherlands,NLD,11.239,88.8,3
+Sweden,SWE,1920,C,4,Germany,DEU,12.019,88.0,2
+Sweden,SWE,1920,C,5,United Kingdom,GBR,12.97,87.0,3
+Sweden,SWE,1930,C,1,Norway,NOR,5.605,94.4,3
+Sweden,SWE,1930,C,2,Denmark,DNK,9.737,90.3,3
+Sweden,SWE,1930,C,3,United Kingdom,GBR,11.443,88.6,3
+Sweden,SWE,1930,C,4,Germany,DEU,11.581,88.4,2
+Sweden,SWE,1930,C,5,Netherlands,NLD,12.249,87.8,3
+Sweden,SWE,1940,C,1,Denmark,DNK,2.279,97.7,3
+Sweden,SWE,1940,C,2,Netherlands,NLD,2.635,97.4,3
+Sweden,SWE,1940,C,3,Norway,NOR,6.534,93.5,3
+Sweden,SWE,1940,C,4,Germany,DEU,14.005,86.0,2
+Sweden,SWE,1940,C,5,Canada,CAN,15.753,84.2,3
+Sweden,SWE,1950,C,1,Denmark,DNK,4.964,95.0,4
+Sweden,SWE,1950,C,2,Netherlands,NLD,6.156,93.8,4
+Sweden,SWE,1950,C,3,Norway,NOR,8.592,91.4,4
+Sweden,SWE,1950,C,4,United Kingdom,GBR,10.37,89.6,4
+Sweden,SWE,1950,C,5,Belgium,BEL,12.223,87.8,4
+Sweden,SWE,1960,C,1,Netherlands,NLD,4.977,95.0,4
+Sweden,SWE,1960,C,2,Denmark,DNK,5.551,94.4,4
+Sweden,SWE,1960,C,3,Norway,NOR,8.119,91.9,4
+Sweden,SWE,1960,C,4,Canada,CAN,8.567,91.4,4
+Sweden,SWE,1960,C,5,United Kingdom,GBR,9.421,90.6,4
+Sweden,SWE,1970,C,1,Netherlands,NLD,5.357,94.6,4
+Sweden,SWE,1970,C,2,Canada,CAN,5.605,94.4,4
+Sweden,SWE,1970,C,3,Denmark,DNK,6.332,93.7,4
+Sweden,SWE,1970,C,4,France,FRA,9.282,90.7,4
+Sweden,SWE,1970,C,5,Norway,NOR,10.237,89.8,4
+Sweden,SWE,1980,C,1,Norway,NOR,1.986,98.0,4
+Sweden,SWE,1980,C,2,Canada,CAN,5.385,94.6,4
+Sweden,SWE,1980,C,3,Netherlands,NLD,5.571,94.4,4
+Sweden,SWE,1980,C,4,France,FRA,5.815,94.2,4
+Sweden,SWE,1980,C,5,Japan,JPN,7.65,92.4,4
+Sweden,SWE,1990,C,1,Canada,CAN,3.746,96.3,4
+Sweden,SWE,1990,C,2,Norway,NOR,4.6,95.4,4
+Sweden,SWE,1990,C,3,France,FRA,6.608,93.4,4
+Sweden,SWE,1990,C,4,Japan,JPN,6.746,93.3,4
+Sweden,SWE,1990,C,5,Netherlands,NLD,7.002,93.0,4
+Sweden,SWE,2000,C,1,France,FRA,3.525,96.5,4
+Sweden,SWE,2000,C,2,Netherlands,NLD,5.693,94.3,4
+Sweden,SWE,2000,C,3,Belgium,BEL,6.847,93.2,4
+Sweden,SWE,2000,C,4,Finland,FIN,8.029,92.0,4
+Sweden,SWE,2000,C,5,Japan,JPN,8.194,91.8,4
+Switzerland,CHE,1870,C,1,Germany,DEU,7.774,92.2,2
+Switzerland,CHE,1870,C,2,Norway,NOR,11.564,88.4,3
+Switzerland,CHE,1870,C,3,Canada,CAN,11.73,88.3,3
+Switzerland,CHE,1870,C,4,Denmark,DNK,16.19,83.8,3
+Switzerland,CHE,1870,C,5,Netherlands,NLD,23.008,77.0,3
+Switzerland,CHE,1880,C,1,Canada,CAN,11.866,88.1,2
+Switzerland,CHE,1880,C,2,Germany,DEU,12.827,87.2,2
+Switzerland,CHE,1880,C,3,France,FRA,15.358,84.6,3
+Switzerland,CHE,1880,C,4,Netherlands,NLD,15.369,84.6,3
+Switzerland,CHE,1880,C,5,Denmark,DNK,16.981,83.0,3
+Switzerland,CHE,1890,C,1,Netherlands,NLD,14.73,85.3,4
+Switzerland,CHE,1890,C,2,United States,USA,15.983,84.0,4
+Switzerland,CHE,1890,C,3,Canada,CAN,17.44,82.6,3
+Switzerland,CHE,1890,C,4,Germany,DEU,17.85,82.2,2
+Switzerland,CHE,1890,C,5,Denmark,DNK,19.584,80.4,4
+Switzerland,CHE,1900,C,1,Australia,AUS,11.066,88.9,2
+Switzerland,CHE,1900,C,2,United States,USA,13.581,86.4,2
+Switzerland,CHE,1900,C,3,Netherlands,NLD,16.947,83.1,3
+Switzerland,CHE,1900,C,4,France,FRA,17.779,82.2,3
+Switzerland,CHE,1900,C,5,United Kingdom,GBR,18.048,82.0,3
+Switzerland,CHE,1910,C,1,Australia,AUS,6.552,93.4,3
+Switzerland,CHE,1910,C,2,Canada,CAN,12.05,87.9,3
+Switzerland,CHE,1910,C,3,United Kingdom,GBR,13.625,86.4,4
+Switzerland,CHE,1910,C,4,United States,USA,17.592,82.4,4
+Switzerland,CHE,1910,C,5,Denmark,DNK,20.263,79.7,4
+Switzerland,CHE,1920,C,1,Australia,AUS,1.701,98.3,2
+Switzerland,CHE,1920,C,2,Canada,CAN,9.398,90.6,2
+Switzerland,CHE,1920,C,3,United Kingdom,GBR,11.83,88.2,3
+Switzerland,CHE,1920,C,4,Denmark,DNK,13.047,87.0,3
+Switzerland,CHE,1920,C,5,France,FRA,13.531,86.5,3
+Switzerland,CHE,1930,C,1,United States,USA,5.365,94.6,3
+Switzerland,CHE,1930,C,2,Canada,CAN,13.454,86.5,3
+Switzerland,CHE,1930,C,3,United Kingdom,GBR,13.863,86.1,3
+Switzerland,CHE,1930,C,4,Denmark,DNK,14.864,85.1,3
+Switzerland,CHE,1930,C,5,Australia,AUS,14.965,85.0,3
+Switzerland,CHE,1940,C,1,Australia,AUS,5.242,94.8,3
+Switzerland,CHE,1940,C,2,Canada,CAN,6.069,93.9,3
+Switzerland,CHE,1940,C,3,Germany,DEU,9.097,90.9,2
+Switzerland,CHE,1940,C,4,United States,USA,10.658,89.3,3
+Switzerland,CHE,1940,C,5,United Kingdom,GBR,13.938,86.1,3
+Switzerland,CHE,1950,C,1,Australia,AUS,2.672,97.3,4
+Switzerland,CHE,1950,C,2,Canada,CAN,4.466,95.5,4
+Switzerland,CHE,1950,C,3,Denmark,DNK,12.776,87.2,4
+Switzerland,CHE,1950,C,4,United States,USA,13.003,87.0,4
+Switzerland,CHE,1950,C,5,Sweden,SWE,13.888,86.1,4
+Switzerland,CHE,1960,C,1,United States,USA,6.205,93.8,4
+Switzerland,CHE,1960,C,2,Australia,AUS,7.696,92.3,4
+Switzerland,CHE,1960,C,3,Canada,CAN,8.525,91.5,4
+Switzerland,CHE,1960,C,4,Denmark,DNK,11.047,89.0,4
+Switzerland,CHE,1960,C,5,Sweden,SWE,12.473,87.5,4
+Switzerland,CHE,1970,C,1,United States,USA,6.4,93.6,4
+Switzerland,CHE,1970,C,2,Sweden,SWE,12.032,88.0,4
+Switzerland,CHE,1970,C,3,Australia,AUS,13.137,86.9,4
+Switzerland,CHE,1970,C,4,Canada,CAN,13.267,86.7,4
+Switzerland,CHE,1970,C,5,Denmark,DNK,13.772,86.2,4
+Switzerland,CHE,1980,C,1,United States,USA,6.398,93.6,4
+Switzerland,CHE,1980,C,2,Canada,CAN,6.802,93.2,4
+Switzerland,CHE,1980,C,3,Australia,AUS,8.582,91.4,4
+Switzerland,CHE,1980,C,4,Norway,NOR,9.556,90.4,4
+Switzerland,CHE,1980,C,5,France,FRA,10.09,89.9,4
+Switzerland,CHE,1990,C,1,United States,USA,7.115,92.9,4
+Switzerland,CHE,1990,C,2,Canada,CAN,9.026,91.0,4
+Switzerland,CHE,1990,C,3,Japan,JPN,9.711,90.3,4
+Switzerland,CHE,1990,C,4,Australia,AUS,10.249,89.8,4
+Switzerland,CHE,1990,C,5,Norway,NOR,10.463,89.5,4
+Switzerland,CHE,2000,C,1,Canada,CAN,7.493,92.5,4
+Switzerland,CHE,2000,C,2,Denmark,DNK,8.72,91.3,4
+Switzerland,CHE,2000,C,3,United States,USA,9.61,90.4,4
+Switzerland,CHE,2000,C,4,Australia,AUS,9.667,90.3,4
+Switzerland,CHE,2000,C,5,Japan,JPN,10.73,89.3,4
+United Kingdom,GBR,1820,C,1,United States,USA,21.833,78.2,2
+United Kingdom,GBR,1820,C,2,Italy,ITA,28.32,71.7,2
+United Kingdom,GBR,1820,C,3,Belgium,BEL,32.677,67.3,2
+United Kingdom,GBR,1820,C,4,Denmark,DNK,44.249,55.8,2
+United Kingdom,GBR,1820,C,5,France,FRA,50.805,49.2,2
+United Kingdom,GBR,1830,C,1,Netherlands,NLD,74.82,25.2,2
+United Kingdom,GBR,1840,C,1,Netherlands,NLD,74.326,25.7,2
+United Kingdom,GBR,1850,C,1,United States,USA,16.407,83.6,2
+United Kingdom,GBR,1850,C,2,Netherlands,NLD,20.361,79.6,4
+United Kingdom,GBR,1850,C,3,Belgium,BEL,23.878,76.1,4
+United Kingdom,GBR,1850,C,4,Denmark,DNK,26.888,73.1,3
+United Kingdom,GBR,1850,C,5,Australia,AUS,29.955,70.0,3
+United Kingdom,GBR,1860,C,1,Belgium,BEL,25.644,74.4,3
+United Kingdom,GBR,1860,C,2,Australia,AUS,26.745,73.3,2
+United Kingdom,GBR,1860,C,3,Netherlands,NLD,30.31,69.7,3
+United Kingdom,GBR,1860,C,4,France,FRA,32.33,67.7,2
+United Kingdom,GBR,1860,C,5,Denmark,DNK,39.395,60.6,2
+United Kingdom,GBR,1870,C,1,Australia,AUS,9.9,90.1,3
+United Kingdom,GBR,1870,C,2,Belgium,BEL,17.233,82.8,4
+United Kingdom,GBR,1870,C,3,Netherlands,NLD,25.503,74.5,4
+United Kingdom,GBR,1870,C,4,United States,USA,26.039,74.0,3
+United Kingdom,GBR,1870,C,5,France,FRA,35.258,64.7,4
+United Kingdom,GBR,1880,C,1,Australia,AUS,9.734,90.3,2
+United Kingdom,GBR,1880,C,2,Belgium,BEL,10.64,89.4,3
+United Kingdom,GBR,1880,C,3,Netherlands,NLD,16.531,83.5,3
+United Kingdom,GBR,1880,C,4,United States,USA,18.878,81.1,3
+United Kingdom,GBR,1880,C,5,Denmark,DNK,23.554,76.4,3
+United Kingdom,GBR,1890,C,1,Australia,AUS,5.762,94.2,3
+United Kingdom,GBR,1890,C,2,Ireland,IRL,14.213,85.8,2
+United Kingdom,GBR,1890,C,3,Netherlands,NLD,15.795,84.2,4
+United Kingdom,GBR,1890,C,4,Belgium,BEL,16.852,83.1,4
+United Kingdom,GBR,1890,C,5,United States,USA,17.236,82.8,4
+United Kingdom,GBR,1900,C,1,Belgium,BEL,12.346,87.7,3
+United Kingdom,GBR,1900,C,2,Australia,AUS,14.817,85.2,2
+United Kingdom,GBR,1900,C,3,Netherlands,NLD,18.022,82.0,3
+United Kingdom,GBR,1900,C,4,Switzerland,CHE,18.048,82.0,3
+United Kingdom,GBR,1900,C,5,United States,USA,18.879,81.1,2
+United Kingdom,GBR,1910,C,1,Netherlands,NLD,11.911,88.1,4
+United Kingdom,GBR,1910,C,2,Australia,AUS,11.977,88.0,3
+United Kingdom,GBR,1910,C,3,Ireland,IRL,12.189,87.8,2
+United Kingdom,GBR,1910,C,4,Belgium,BEL,12.8,87.2,4
+United Kingdom,GBR,1910,C,5,Switzerland,CHE,13.625,86.4,4
+United Kingdom,GBR,1920,C,1,Netherlands,NLD,2.509,97.5,3
+United Kingdom,GBR,1920,C,2,Denmark,DNK,3.766,96.2,3
+United Kingdom,GBR,1920,C,3,Belgium,BEL,9.123,90.9,3
+United Kingdom,GBR,1920,C,4,Switzerland,CHE,11.83,88.2,3
+United Kingdom,GBR,1920,C,5,Sweden,SWE,12.97,87.0,3
+United Kingdom,GBR,1930,C,1,Denmark,DNK,3.015,97.0,3
+United Kingdom,GBR,1930,C,2,Netherlands,NLD,7.897,92.1,3
+United Kingdom,GBR,1930,C,3,Belgium,BEL,10.045,90.0,3
+United Kingdom,GBR,1930,C,4,Sweden,SWE,11.443,88.6,3
+United Kingdom,GBR,1930,C,5,France,FRA,13.251,86.7,3
+United Kingdom,GBR,1940,C,1,United States,USA,13.826,86.2,3
+United Kingdom,GBR,1940,C,2,Switzerland,CHE,13.938,86.1,3
+United Kingdom,GBR,1940,C,3,Denmark,DNK,17.045,83.0,3
+United Kingdom,GBR,1940,C,4,Australia,AUS,17.049,83.0,3
+United Kingdom,GBR,1940,C,5,Germany,DEU,17.284,82.7,2
+United Kingdom,GBR,1950,C,1,Denmark,DNK,5.571,94.4,4
+United Kingdom,GBR,1950,C,2,Netherlands,NLD,9.529,90.5,4
+United Kingdom,GBR,1950,C,3,Sweden,SWE,10.37,89.6,4
+United Kingdom,GBR,1950,C,4,Canada,CAN,10.757,89.2,4
+United Kingdom,GBR,1950,C,5,Norway,NOR,10.822,89.2,4
+United Kingdom,GBR,1960,C,1,Denmark,DNK,4.16,95.8,4
+United Kingdom,GBR,1960,C,2,Canada,CAN,5.778,94.2,4
+United Kingdom,GBR,1960,C,3,Germany,DEU,7.88,92.1,3
+United Kingdom,GBR,1960,C,4,Australia,AUS,8.359,91.6,4
+United Kingdom,GBR,1960,C,5,Sweden,SWE,9.421,90.6,4
+United Kingdom,GBR,1970,C,1,Japan,JPN,5.756,94.2,4
+United Kingdom,GBR,1970,C,2,Norway,NOR,6.045,94.0,4
+United Kingdom,GBR,1970,C,3,Canada,CAN,6.143,93.9,4
+United Kingdom,GBR,1970,C,4,Australia,AUS,6.281,93.7,4
+United Kingdom,GBR,1970,C,5,Germany,DEU,6.288,93.7,3
+United Kingdom,GBR,1980,C,1,France,FRA,5.903,94.1,4
+United Kingdom,GBR,1980,C,2,Germany,DEU,6.769,93.2,3
+United Kingdom,GBR,1980,C,3,Australia,AUS,6.956,93.0,4
+United Kingdom,GBR,1980,C,4,Japan,JPN,7.661,92.3,4
+United Kingdom,GBR,1980,C,5,Norway,NOR,8.766,91.2,4
+United Kingdom,GBR,1990,C,1,Germany,DEU,5.103,94.9,3
+United Kingdom,GBR,1990,C,2,Australia,AUS,5.443,94.6,4
+United Kingdom,GBR,1990,C,3,France,FRA,6.212,93.8,4
+United Kingdom,GBR,1990,C,4,Norway,NOR,7.9,92.1,4
+United Kingdom,GBR,1990,C,5,Denmark,DNK,9.18,90.8,4
+United Kingdom,GBR,2000,C,1,Germany,DEU,1.99,98.0,3
+United Kingdom,GBR,2000,C,2,Canada,CAN,5.911,94.1,4
+United Kingdom,GBR,2000,C,3,Australia,AUS,6.978,93.0,4
+United Kingdom,GBR,2000,C,4,France,FRA,8.88,91.1,4
+United Kingdom,GBR,2000,C,5,Denmark,DNK,9.942,90.1,4
+United States,USA,1820,C,1,Italy,ITA,7.654,92.3,2
+United States,USA,1820,C,2,Netherlands,NLD,11.332,88.7,2
+United States,USA,1820,C,3,Belgium,BEL,14.524,85.5,2
+United States,USA,1820,C,4,United Kingdom,GBR,21.833,78.2,2
+United States,USA,1820,C,5,Denmark,DNK,22.428,77.6,2
+United States,USA,1850,C,1,Netherlands,NLD,7.632,92.4,2
+United States,USA,1850,C,2,Australia,AUS,11.894,88.1,2
+United States,USA,1850,C,3,United Kingdom,GBR,16.407,83.6,2
+United States,USA,1850,C,4,Belgium,BEL,20.705,79.3,2
+United States,USA,1850,C,5,Denmark,DNK,22.098,77.9,2
+United States,USA,1870,C,1,Netherlands,NLD,10.644,89.4,3
+United States,USA,1870,C,2,Belgium,BEL,16.198,83.8,3
+United States,USA,1870,C,3,Denmark,DNK,22.586,77.4,3
+United States,USA,1870,C,4,Switzerland,CHE,23.554,76.4,3
+United States,USA,1870,C,5,Germany,DEU,25.198,74.8,2
+United States,USA,1880,C,1,Netherlands,NLD,15.911,84.1,3
+United States,USA,1880,C,2,United Kingdom,GBR,18.878,81.1,3
+United States,USA,1880,C,3,Belgium,BEL,19.074,80.9,3
+United States,USA,1880,C,4,Australia,AUS,22.278,77.7,2
+United States,USA,1880,C,5,Switzerland,CHE,23.732,76.3,3
+United States,USA,1890,C,1,Switzerland,CHE,15.983,84.0,4
+United States,USA,1890,C,2,Belgium,BEL,16.009,84.0,4
+United States,USA,1890,C,3,Australia,AUS,16.194,83.8,3
+United States,USA,1890,C,4,Netherlands,NLD,16.54,83.5,4
+United States,USA,1890,C,5,United Kingdom,GBR,17.236,82.8,4
+United States,USA,1900,C,1,Switzerland,CHE,13.581,86.4,2
+United States,USA,1900,C,2,Australia,AUS,17.766,82.2,2
+United States,USA,1900,C,3,United Kingdom,GBR,18.879,81.1,2
+United States,USA,1900,C,4,Belgium,BEL,28.116,71.9,2
+United States,USA,1900,C,5,Netherlands,NLD,30.064,69.9,2
+United States,USA,1910,C,1,Australia,AUS,17.372,82.6,3
+United States,USA,1910,C,2,Switzerland,CHE,17.592,82.4,4
+United States,USA,1910,C,3,United Kingdom,GBR,19.374,80.6,4
+United States,USA,1910,C,4,Belgium,BEL,24.253,75.7,4
+United States,USA,1910,C,5,Netherlands,NLD,25.407,74.6,4
+United States,USA,1920,C,1,Switzerland,CHE,16.04,84.0,3
+United States,USA,1920,C,2,Australia,AUS,18.7,81.3,2
+United States,USA,1920,C,3,United Kingdom,GBR,21.559,78.4,3
+United States,USA,1920,C,4,Netherlands,NLD,23.969,76.0,3
+United States,USA,1920,C,5,Denmark,DNK,24.736,75.3,3
+United States,USA,1930,C,1,Switzerland,CHE,5.365,94.6,3
+United States,USA,1930,C,2,Canada,CAN,16.523,83.5,3
+United States,USA,1930,C,3,United Kingdom,GBR,17.225,82.8,3
+United States,USA,1930,C,4,Denmark,DNK,18.792,81.2,3
+United States,USA,1930,C,5,Australia,AUS,20.065,79.9,3
+United States,USA,1940,C,1,Switzerland,CHE,10.658,89.3,3
+United States,USA,1940,C,2,Australia,AUS,12.014,88.0,3
+United States,USA,1940,C,3,United Kingdom,GBR,13.826,86.2,3
+United States,USA,1940,C,4,Canada,CAN,16.715,83.3,3
+United States,USA,1940,C,5,Germany,DEU,21.707,78.3,2
+United States,USA,1950,C,1,Australia,AUS,12.087,87.9,4
+United States,USA,1950,C,2,Switzerland,CHE,13.003,87.0,4
+United States,USA,1950,C,3,Canada,CAN,13.198,86.8,4
+United States,USA,1950,C,4,Denmark,DNK,20.061,79.9,4
+United States,USA,1950,C,5,United Kingdom,GBR,20.589,79.4,4
+United States,USA,1960,C,1,Switzerland,CHE,6.205,93.8,4
+United States,USA,1960,C,2,Australia,AUS,12.356,87.6,4
+United States,USA,1960,C,3,Canada,CAN,13.376,86.6,4
+United States,USA,1960,C,4,Denmark,DNK,15.887,84.1,4
+United States,USA,1960,C,5,United Kingdom,GBR,16.795,83.2,4
+United States,USA,1970,C,1,Switzerland,CHE,6.4,93.6,4
+United States,USA,1970,C,2,Australia,AUS,11.292,88.7,4
+United States,USA,1970,C,3,Denmark,DNK,13.213,86.8,4
+United States,USA,1970,C,4,Canada,CAN,13.215,86.8,4
+United States,USA,1970,C,5,Sweden,SWE,14.082,85.9,4
+United States,USA,1980,C,1,Switzerland,CHE,6.398,93.6,4
+United States,USA,1980,C,2,Canada,CAN,9.038,91.0,4
+United States,USA,1980,C,3,Denmark,DNK,11.962,88.0,4
+United States,USA,1980,C,4,France,FRA,12.078,87.9,4
+United States,USA,1980,C,5,Australia,AUS,12.133,87.9,4
+United States,USA,1990,C,1,Switzerland,CHE,7.115,92.9,4
+United States,USA,1990,C,2,Norway,NOR,13.666,86.3,4
+United States,USA,1990,C,3,Canada,CAN,13.788,86.2,4
+United States,USA,1990,C,4,Australia,AUS,14.584,85.4,4
+United States,USA,1990,C,5,Denmark,DNK,14.903,85.1,4
+United States,USA,2000,C,1,Switzerland,CHE,9.61,90.4,4
+United States,USA,2000,C,2,Denmark,DNK,10.158,89.8,4
+United States,USA,2000,C,3,Canada,CAN,10.441,89.6,4
+United States,USA,2000,C,4,Australia,AUS,10.899,89.1,4
+United States,USA,2000,C,5,Germany,DEU,13.184,86.8,3
+Uruguay,URY,1870,C,1,Italy,ITA,14.856,85.1,2
+Uruguay,URY,1870,C,2,Ireland,IRL,17.152,82.8,2
+Uruguay,URY,1870,C,3,Argentina,ARG,18.013,82.0,2
+Uruguay,URY,1870,C,4,Greece,GRC,23.49,76.5,2
+Uruguay,URY,1870,C,5,Finland,FIN,25.063,74.9,2
+Uruguay,URY,1880,C,1,Italy,ITA,8.787,91.2,2
+Uruguay,URY,1880,C,2,Argentina,ARG,10.02,90.0,2
+Uruguay,URY,1880,C,3,Spain,ESP,10.812,89.2,2
+Uruguay,URY,1880,C,4,Chile,CHL,14.147,85.9,2
+Uruguay,URY,1880,C,5,South Africa,ZAF,14.976,85.0,2
+Uruguay,URY,1890,C,1,Argentina,ARG,2.932,97.1,2
+Uruguay,URY,1890,C,2,Italy,ITA,7.098,92.9,2
+Uruguay,URY,1890,C,3,Chile,CHL,8.754,91.2,2
+Uruguay,URY,1890,C,4,Venezuela,VEN,12.752,87.2,2
+Uruguay,URY,1890,C,5,Spain,ESP,14.691,85.3,2
+Uruguay,URY,1900,C,1,Greece,GRC,13.398,86.6,2
+Uruguay,URY,1900,C,2,Portugal,PRT,15.216,84.8,2
+Uruguay,URY,1900,C,3,Italy,ITA,16.128,83.9,3
+Uruguay,URY,1900,C,4,Finland,FIN,17.271,82.7,3
+Uruguay,URY,1900,C,5,South Africa,ZAF,21.381,78.6,2
+Uruguay,URY,1910,C,1,Italy,ITA,12.023,88.0,3
+Uruguay,URY,1910,C,2,Finland,FIN,12.166,87.8,3
+Uruguay,URY,1910,C,3,Greece,GRC,15.026,85.0,2
+Uruguay,URY,1910,C,4,Argentina,ARG,18.883,81.1,3
+Uruguay,URY,1910,C,5,Portugal,PRT,21.798,78.2,2
+Uruguay,URY,1920,C,1,Poland,POL,6.814,93.2,2
+Uruguay,URY,1920,C,2,Finland,FIN,8.255,91.7,3
+Uruguay,URY,1920,C,3,Italy,ITA,11.241,88.8,3
+Uruguay,URY,1920,C,4,Argentina,ARG,12.524,87.5,3
+Uruguay,URY,1920,C,5,Greece,GRC,14.109,85.9,3
+Uruguay,URY,1930,C,1,Argentina,ARG,6.205,93.8,3
+Uruguay,URY,1930,C,2,Spain,ESP,11.536,88.5,3
+Uruguay,URY,1930,C,3,Jamaica,JAM,12.639,87.4,2
+Uruguay,URY,1930,C,4,Finland,FIN,12.682,87.3,3
+Uruguay,URY,1930,C,5,Italy,ITA,12.851,87.1,3
+Uruguay,URY,1940,C,1,Italy,ITA,4.276,95.7,3
+Uruguay,URY,1940,C,2,Argentina,ARG,9.643,90.4,3
+Uruguay,URY,1940,C,3,Greece,GRC,11.021,89.0,3
+Uruguay,URY,1940,C,4,Hungary,HUN,16.237,83.8,2
+Uruguay,URY,1940,C,5,South Africa,ZAF,16.916,83.1,2
+Uruguay,URY,1950,C,1,Italy,ITA,5.281,94.7,3
+Uruguay,URY,1950,C,2,Argentina,ARG,7.892,92.1,3
+Uruguay,URY,1950,C,3,Finland,FIN,8.09,91.9,3
+Uruguay,URY,1950,C,4,Belgium,BEL,12.857,87.1,3
+Uruguay,URY,1950,C,5,Greece,GRC,14.548,85.5,3
+Uruguay,URY,1960,C,1,Italy,ITA,5.811,94.2,3
+Uruguay,URY,1960,C,2,Spain,ESP,8.305,91.7,3
+Uruguay,URY,1960,C,3,Russia,RUS,8.466,91.5,3
+Uruguay,URY,1960,C,4,Argentina,ARG,8.591,91.4,3
+Uruguay,URY,1960,C,5,Greece,GRC,8.774,91.2,3
+Uruguay,URY,1970,C,1,Jamaica,JAM,4.821,95.2,3
+Uruguay,URY,1970,C,2,Poland,POL,5.792,94.2,3
+Uruguay,URY,1970,C,3,Spain,ESP,8.46,91.5,3
+Uruguay,URY,1970,C,4,Argentina,ARG,10.052,89.9,3
+Uruguay,URY,1970,C,5,Hungary,HUN,10.942,89.1,3
+Uruguay,URY,1980,C,1,Poland,POL,3.535,96.5,3
+Uruguay,URY,1980,C,2,Chile,CHL,6.015,94.0,3
+Uruguay,URY,1980,C,3,Argentina,ARG,6.838,93.2,3
+Uruguay,URY,1980,C,4,Portugal,PRT,8.814,91.2,3
+Uruguay,URY,1980,C,5,Jamaica,JAM,10.628,89.4,3
+Uruguay,URY,1990,C,1,Argentina,ARG,2.799,97.2,3
+Uruguay,URY,1990,C,2,Chile,CHL,7.319,92.7,3
+Uruguay,URY,1990,C,3,Poland,POL,8.163,91.8,3
+Uruguay,URY,1990,C,4,Mexico,MEX,9.37,90.6,3
+Uruguay,URY,1990,C,5,Cuba,CUB,10.169,89.8,3
+Uruguay,URY,2000,C,1,Argentina,ARG,2.521,97.5,3
+Uruguay,URY,2000,C,2,Poland,POL,4.518,95.5,3
+Uruguay,URY,2000,C,3,Mexico,MEX,4.991,95.0,3
+Uruguay,URY,2000,C,4,Cuba,CUB,10.869,89.1,3
+Uruguay,URY,2000,C,5,Peru,PER,10.882,89.1,3
+Venezuela,VEN,1870,C,1,Chile,CHL,2.379,97.6,2
+Venezuela,VEN,1870,C,2,Japan,JPN,3.002,97.0,2
+Venezuela,VEN,1870,C,3,Russia,RUS,3.389,96.6,2
+Venezuela,VEN,1870,C,4,Finland,FIN,4.363,95.6,2
+Venezuela,VEN,1870,C,5,Greece,GRC,4.446,95.6,2
+Venezuela,VEN,1880,C,1,South Africa,ZAF,1.781,98.2,2
+Venezuela,VEN,1880,C,2,Chile,CHL,3.314,96.7,2
+Venezuela,VEN,1880,C,3,Finland,FIN,5.408,94.6,2
+Venezuela,VEN,1880,C,4,Greece,GRC,6.871,93.1,2
+Venezuela,VEN,1880,C,5,Argentina,ARG,7.053,92.9,2
+Venezuela,VEN,1890,C,1,Chile,CHL,4.31,95.7,2
+Venezuela,VEN,1890,C,2,Finland,FIN,6.495,93.5,2
+Venezuela,VEN,1890,C,3,Italy,ITA,7.411,92.6,2
+Venezuela,VEN,1890,C,4,South Africa,ZAF,9.226,90.8,2
+Venezuela,VEN,1890,C,5,Japan,JPN,9.377,90.6,2
+Venezuela,VEN,1900,C,1,Portugal,PRT,2.155,97.8,2
+Venezuela,VEN,1900,C,2,South Africa,ZAF,4.422,95.6,2
+Venezuela,VEN,1900,C,3,Bolivia,BOL,5.324,94.7,3
+Venezuela,VEN,1900,C,4,Russia,RUS,5.688,94.3,3
+Venezuela,VEN,1900,C,5,Colombia,COL,6.028,94.0,3
+Venezuela,VEN,1910,C,1,Portugal,PRT,2.385,97.6,2
+Venezuela,VEN,1910,C,2,Bolivia,BOL,2.919,97.1,3
+Venezuela,VEN,1910,C,3,South Africa,ZAF,4.12,95.9,2
+Venezuela,VEN,1910,C,4,Russia,RUS,4.264,95.7,2
+Venezuela,VEN,1910,C,5,Mexico,MEX,4.481,95.5,3
+Venezuela,VEN,1920,C,1,Portugal,PRT,2.179,97.8,2
+Venezuela,VEN,1920,C,2,South Korea,KOR,3.653,96.3,2
+Venezuela,VEN,1920,C,3,Peru,PER,4.104,95.9,2
+Venezuela,VEN,1920,C,4,Brazil,BRA,5.809,94.2,3
+Venezuela,VEN,1920,C,5,Colombia,COL,5.93,94.1,3
+Venezuela,VEN,1930,C,1,Peru,PER,1.932,98.1,2
+Venezuela,VEN,1930,C,2,Portugal,PRT,4.011,96.0,2
+Venezuela,VEN,1930,C,3,South Africa,ZAF,5.118,94.9,2
+Venezuela,VEN,1930,C,4,Mexico,MEX,5.437,94.6,3
+Venezuela,VEN,1930,C,5,Philippines,PHL,5.766,94.2,2
+Venezuela,VEN,1940,C,1,Peru,PER,8.562,91.4,3
+Venezuela,VEN,1940,C,2,South Africa,ZAF,9.765,90.2,2
+Venezuela,VEN,1940,C,3,Mexico,MEX,10.871,89.1,3
+Venezuela,VEN,1940,C,4,Egypt,EGY,10.961,89.0,2
+Venezuela,VEN,1940,C,5,Colombia,COL,13.014,87.0,3
+Venezuela,VEN,1950,C,1,Portugal,PRT,19.628,80.4,3
+Venezuela,VEN,1950,C,2,Mexico,MEX,19.729,80.3,3
+Venezuela,VEN,1950,C,3,Poland,POL,20.428,79.6,3
+Venezuela,VEN,1950,C,4,Chile,CHL,20.544,79.5,3
+Venezuela,VEN,1950,C,5,Colombia,COL,20.87,79.1,3
+Venezuela,VEN,1960,C,1,Argentina,ARG,21.696,78.3,3
+Venezuela,VEN,1960,C,2,Chile,CHL,22.628,77.4,3
+Venezuela,VEN,1960,C,3,Italy,ITA,22.747,77.3,3
+Venezuela,VEN,1960,C,4,Portugal,PRT,23.993,76.0,3
+Venezuela,VEN,1960,C,5,Mexico,MEX,24.016,76.0,3
+Venezuela,VEN,1970,C,1,Argentina,ARG,15.418,84.6,3
+Venezuela,VEN,1970,C,2,Portugal,PRT,15.908,84.1,3
+Venezuela,VEN,1970,C,3,Italy,ITA,16.83,83.2,3
+Venezuela,VEN,1970,C,4,Uruguay,URY,19.838,80.2,3
+Venezuela,VEN,1970,C,5,Finland,FIN,20.035,80.0,3
+Venezuela,VEN,1980,C,1,Portugal,PRT,10.495,89.5,3
+Venezuela,VEN,1980,C,2,Mexico,MEX,12.639,87.4,3
+Venezuela,VEN,1980,C,3,Argentina,ARG,14.279,85.7,3
+Venezuela,VEN,1980,C,4,Uruguay,URY,14.782,85.2,3
+Venezuela,VEN,1980,C,5,Poland,POL,15.559,84.4,3
+Venezuela,VEN,1990,C,1,Mexico,MEX,10.721,89.3,3
+Venezuela,VEN,1990,C,2,Portugal,PRT,10.885,89.1,3
+Venezuela,VEN,1990,C,3,Colombia,COL,12.687,87.3,3
+Venezuela,VEN,1990,C,4,Argentina,ARG,14.763,85.2,3
+Venezuela,VEN,1990,C,5,Poland,POL,14.948,85.1,3
+Venezuela,VEN,2000,C,1,Colombia,COL,7.085,92.9,3
+Venezuela,VEN,2000,C,2,Brazil,BRA,9.429,90.6,3
+Venezuela,VEN,2000,C,3,China,CHN,10.095,89.9,3
+Venezuela,VEN,2000,C,4,Mexico,MEX,10.947,89.1,3
+Venezuela,VEN,2000,C,5,Egypt,EGY,11.522,88.5,3
