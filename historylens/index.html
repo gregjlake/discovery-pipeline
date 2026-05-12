@@ -137,6 +137,74 @@
     z-index: 50;
     user-select: none;
   }
+
+  #loading {
+    position: absolute;
+    inset: 0;
+    background: #060c1a;
+    color: #d8e4ff;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  #loading .ring {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(120, 150, 220, 0.25);
+    border-top-color: #6a8cdc;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+  }
+  #loading .label {
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    color: #aab8d4;
+  }
+  #loading .sub {
+    font-size: 11px;
+    color: #6878a0;
+  }
+  #loading.error .ring { display: none; }
+  #loading.error .label { color: #f87171; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .popup-peer-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #c8d4f0;
+    margin: 2px 0;
+  }
+  .popup-peer-row .pdot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex: 0 0 8px;
+  }
+  .popup-peer-row .psim {
+    color: #6878a0;
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+  .quality-pill {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+    padding: 1px 6px;
+    border-radius: 8px;
+    margin-left: 6px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .quality-good    { background: rgba(74, 222, 128, 0.15); color: #4ade80; }
+  .quality-partial { background: rgba(234, 179, 8, 0.15);  color: #eab308; }
+  .quality-sparse  { background: rgba(248, 113, 113, 0.15); color: #f87171; }
+  .quality-null    { background: rgba(120, 120, 140, 0.18); color: #8a92a8; }
 </style>
 </head>
 <body>
@@ -164,6 +232,12 @@
 <div id="popup"></div>
 <div id="hint">Drag to rotate · scroll to zoom · hover a peak for details</div>
 
+<div id="loading">
+  <div class="ring"></div>
+  <div class="label">Loading HistoryLens</div>
+  <div class="sub">fetching 40 countries × 19 decades from pipeline</div>
+</div>
+
 <script type="importmap">
 {
   "imports": {
@@ -178,83 +252,84 @@ import * as THREE from 'three';
 // ─────────────────────────────────────────────────────────────
 // DATA
 // ─────────────────────────────────────────────────────────────
-const nations = [
-  {name:'UK', lon:-2, lat:52, color:[100,80,220],
-   scores:[45,52,60,68,74,80,84,87,91,89,82,80,76,79,83,86,88,89,90],
-   stories:['On the cusp of industrial transformation',
-    'Workshop of the world — no peer exists',
-    'The undisputed global industrial leader',
-    'Peak of empire — Britain stands alone',
-    'Post-WWI recovery, dominance fading',
-    'A peer among Western equals',
-    'A fully modern leading economy']},
-  {name:'USA', lon:-98, lat:38, color:[60,130,20],
-   scores:[38,42,46,51,54,58,65,72,78,82,80,76,82,88,91,92,91,93,95],
-   stories:['A young nation of enormous potential',
-    'Industrialization spreading west',
-    'Civil War spurs industrial acceleration',
-    'A rising giant closing the gap with Britain',
-    'The Great Depression — a structural setback',
-    'The postwar boom — undisputed global leader',
-    'The only true superpower']},
-  {name:'Germany', lon:10, lat:51, color:[30,100,180],
-   scores:[32,36,40,45,50,58,65,70,76,78,60,62,38,48,65,75,82,86,88],
-   stories:['Growing industrial potential, not yet unified',
-    'Rapid industrialization, unification approaching',
-    'The Reich at its industrial peak',
-    'A dominant European power',
-    'Post-WWI collapse — reparations cripple economy',
-    'WWII devastation — at its lowest point',
-    'The Wirtschaftswunder — remarkable reconstruction']},
-  {name:'Japan', lon:138, lat:37, color:[220,80,40],
-   scores:[22,22,23,24,25,26,32,38,46,54,52,55,42,44,60,72,81,88,90],
-   stories:['A feudal agrarian society, largely closed',
-    'The Meiji Restoration is imminent',
-    'The most dramatic 19th century structural rise',
-    'Japan shocks the world — agrarian to industrial',
-    'A major industrial power, peer to Europe',
-    'WWII devastation — Japan at structural floor',
-    'The postwar miracle — a global economic leader']},
-  {name:'China', lon:105, lat:35, color:[190,120,20],
-   scores:[30,29,28,27,26,25,24,22,21,20,19,18,16,17,22,28,35,48,65],
-   stories:["Once the world's largest economy, now declining",
-    'Colonial pressures — century of humiliation',
-    'Structural erosion deepens',
-    'The lowest point — decades of conflict',
-    'The People\'s Republic rebuilds from scratch',
-    'Reform and opening — the great rise begins',
-    'China rejoins the ranks of major powers']},
-  {name:'Russia', lon:55, lat:58, color:[140,138,130],
-   scores:[28,30,32,34,36,38,40,42,44,42,46,48,50,52,54,55,53,42,44],
-   stories:['A vast agrarian empire, weak in development',
-    'Slow industrialization, far behind the West',
-    'Tsarist industrialization begins',
-    'A major power, still behind Western peers',
-    'Soviet industrialization drives rapid gains',
-    'Cold War superpower masking structural limits',
-    'Post-Soviet collapse — a sharp structural fall']},
-  {name:'Argentina', lon:-64, lat:-34, color:[215,80,125],
-   scores:[28,31,35,38,42,46,52,58,64,68,65,60,58,55,52,48,44,40,38],
-   stories:['A young nation with enormous potential',
-    'Growth accelerating — wealth is coming',
-    'The golden age — beef, grain, immigration',
-    'Argentina peaks — structural peer to Australia',
-    'Post-WWI instability begins long erosion',
-    'Political instability deepens the decline',
-    'A century of squandered potential']},
-  {name:'India', lon:78, lat:20, color:[15,115,96],
-   scores:[25,24,24,23,22,21,21,20,20,19,18,18,17,18,21,24,28,35,44],
-   stories:['Colonial extraction suppresses development',
-    'British rule reorganizes India for extraction',
-    'Deindustrialization deepens under colonialism',
-    'Colonial suppression at its most intensive',
-    'Independence — India rebuilds on its own terms',
-    'The 1991 reforms transform the trajectory',
-    'Accelerating growth, a major force emerging']},
-];
+// Real pipeline data lives in historylens_final.json — fetched at startup
+// from the discovery-pipeline GitHub master branch. The `nations` array
+// is populated from that fetch (see initFromPipeline) before the first
+// render. Until then it is empty and the loading overlay is visible.
+const DATA_URL = 'https://raw.githubusercontent.com/gregjlake/discovery-pipeline/master/historylens/data/processed/historylens_final.json';
+
+const nations = [];
+const nationsByName = {};
+
+// Region → hex color (per Part 2 spec).
+const REGION_COLORS = {
+  'Western Europe': '#6450DC',
+  'Anglo-Pacific':  '#0F3460',
+  'North America':  '#3C8214',
+  'Latin America':  '#D7507D',
+  'East Asia':      '#DC5028',
+  'South Asia':     '#0F7360',
+  'Eastern Europe': '#8C8A82',
+  'Africa':         '#BE7814',
+};
+const DEFAULT_COLOR = '#7080A0';
+
+// Country centroid coordinates (degrees). All 40 in the pipeline panel.
+// Where the original prototype had a coord, that exact value is preserved.
+const COUNTRY_COORDS = {
+  'Netherlands':     { lon:   5, lat:  52 },
+  'United Kingdom':  { lon:  -2, lat:  52 },
+  'France':          { lon:   2, lat:  47 },
+  'Sweden':          { lon:  16, lat:  62 },
+  'Norway':          { lon:  10, lat:  61 },
+  'Denmark':         { lon:  10, lat:  56 },
+  'Belgium':         { lon:   4, lat:  50 },
+  'Italy':           { lon:  12, lat:  43 },
+  'United States':   { lon: -98, lat:  38 },
+  'Chile':           { lon: -71, lat: -35 },
+  'Argentina':       { lon: -64, lat: -34 },
+  'Spain':           { lon:  -4, lat:  40 },
+  'Switzerland':     { lon:   8, lat:  47 },
+  'Japan':           { lon: 138, lat:  37 },
+  'Mexico':          { lon:-102, lat:  23 },
+  'Brazil':          { lon: -52, lat: -10 },
+  'Germany':         { lon:  10, lat:  51 },
+  'Russia':          { lon:  55, lat:  58 },
+  'Australia':       { lon: 134, lat: -25 },
+  'Canada':          { lon: -96, lat:  56 },
+  'Finland':         { lon:  26, lat:  64 },
+  'Colombia':        { lon: -74, lat:   4 },
+  'Peru':            { lon: -76, lat: -10 },
+  'Portugal':        { lon:  -8, lat:  40 },
+  'Venezuela':       { lon: -66, lat:   8 },
+  'China':           { lon: 105, lat:  35 },
+  'India':           { lon:  78, lat:  20 },
+  'Jamaica':         { lon: -77, lat:  18 },
+  'Uruguay':         { lon: -55, lat: -33 },
+  'Hungary':         { lon:  19, lat:  47 },
+  'Ireland':         { lon:  -8, lat:  53 },
+  'Philippines':     { lon: 122, lat:  13 },
+  'Bolivia':         { lon: -65, lat: -17 },
+  'Cuba':            { lon: -78, lat:  22 },
+  'Indonesia':       { lon: 118, lat:  -2 },
+  'South Korea':     { lon: 128, lat:  36 },
+  'South Africa':    { lon:  25, lat: -29 },
+  'Egypt':           { lon:  30, lat:  27 },
+  'Poland':          { lon:  19, lat:  52 },
+  'Greece':          { lon:  22, lat:  39 },
+};
 
 const years = [];
 for (let y = 1820; y <= 2000; y += 10) years.push(y);
+
+function hexToRgb(hex) {
+  const h = hex.replace('#', '');
+  return [
+    parseInt(h.slice(0, 2), 16),
+    parseInt(h.slice(2, 4), 16),
+    parseInt(h.slice(4, 6), 16),
+  ];
+}
 
 // ─────────────────────────────────────────────────────────────
 // STATE
@@ -355,6 +430,7 @@ buildGrid();
 // TERRAIN HEIGHT FUNCTION
 // ─────────────────────────────────────────────────────────────
 function gaussianContribution(score, dx, dz) {
+  if (score == null || isNaN(score)) return 0;
   const d2 = dx * dx + dz * dz;
   const g = Math.exp(-d2 / (2 * SIGMA * SIGMA));
   return (score / 100) * HEIGHT_SCALE * Math.pow(g, GAUSSIAN_POWER);
@@ -410,14 +486,14 @@ function buildLabelTexture(name, score, color) {
   ctx.stroke();
   // name
   ctx.fillStyle = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
-  ctx.font = 'bold 30px -apple-system, sans-serif';
+  ctx.font = 'bold 26px -apple-system, sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText(name, 128, 32);
-  // score
+  // score (or em dash when null)
   ctx.fillStyle = '#ffffff';
   ctx.font = '600 28px -apple-system, sans-serif';
-  ctx.fillText(score.toString(), 128, 70);
+  ctx.fillText(score == null ? '—' : Math.round(score).toString(), 128, 70);
   return new THREE.CanvasTexture(canvas);
 }
 
@@ -481,8 +557,19 @@ function rebuild() {
   disposables.push(terrain);
 
   // ── Per-nation peak elements ──
+  // Only the top-N scoring countries get point lights this decade — keeps
+  // GPU light count manageable now that we have 40 nations (was 8).
+  const POINT_LIGHT_LIMIT = 12;
+  const lightCandidates = nations
+    .filter(n => n.scores[currentIdx] != null)
+    .map(n => ({ n, s: n.scores[currentIdx] }))
+    .sort((a, b) => b.s - a.s)
+    .slice(0, POINT_LIGHT_LIMIT);
+  const lightSet = new Set(lightCandidates.map(x => x.n));
+
   for (const nation of nations) {
     const score = nation.scores[currentIdx];
+    if (score == null) continue; // no peak when data is missing this decade
     const p = lonLatToXZ(nation.lon, nation.lat);
     const peakH = heightAt(p.x, p.z, currentIdx);
 
@@ -506,15 +593,17 @@ function rebuild() {
     scene.add(sprite);
     disposables.push(sprite);
 
-    // Point light at peak
-    const pl = new THREE.PointLight(
-      new THREE.Color(nation.color[0] / 255, nation.color[1] / 255, nation.color[2] / 255),
-      (score / 100) * 2.0,
-      4
-    );
-    pl.position.set(p.x, peakH + 0.25, p.z);
-    scene.add(pl);
-    disposables.push(pl);
+    // Point light at peak — only for the top-N this decade
+    if (lightSet.has(nation)) {
+      const pl = new THREE.PointLight(
+        new THREE.Color(nation.color[0] / 255, nation.color[1] / 255, nation.color[2] / 255),
+        (score / 100) * 2.0,
+        4
+      );
+      pl.position.set(p.x, peakH + 0.25, p.z);
+      scene.add(pl);
+      disposables.push(pl);
+    }
   }
 }
 
@@ -536,24 +625,36 @@ function updateCamera() {
 const popup = document.getElementById('popup');
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
-const ordinals = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th'];
+
+function ordinal(n) {
+  if (n == null) return '—';
+  const s = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
 
 function showPopup(nation, clientX, clientY) {
   // Read currentIdx at hover time, not build time
   const idx = currentIdx;
+  const ystr = String(years[idx]);
   const score = nation.scores[idx];
 
-  // Rank
+  // Rank — only over nations with a score this decade
   const ranked = nations
+    .filter(n => n.scores[idx] != null)
     .map(n => ({ n, s: n.scores[idx] }))
     .sort((a, b) => b.s - a.s);
-  const rank = ranked.findIndex(o => o.n === nation) + 1;
+  const rankIdx = ranked.findIndex(o => o.n === nation);
+  const rank = rankIdx >= 0 ? rankIdx + 1 : null;
+  const rankedTotal = ranked.length;
 
   // Change vs last decade
   let changeStr = '';
-  if (idx > 0) {
+  if (score == null) {
+    changeStr = '<span style="color:#6878a0">no data this decade</span>';
+  } else if (idx > 0 && nation.scores[idx - 1] != null) {
     const prev = nation.scores[idx - 1];
-    const delta = score - prev;
+    const delta = +(score - prev).toFixed(1);
     if (delta > 0) changeStr = `<span class="up">▲ +${delta}</span> vs last decade`;
     else if (delta < 0) changeStr = `<span class="down">▼ ${delta}</span> vs last decade`;
     else changeStr = `<span style="color:#aab8d4">— no change</span> vs last decade`;
@@ -561,38 +662,54 @@ function showPopup(nation, clientX, clientY) {
     changeStr = '<span style="color:#6878a0">starting decade</span>';
   }
 
-  // Closest peer (most similar score)
-  let peer = null;
-  let bestDiff = Infinity;
-  for (const other of nations) {
-    if (other === nation) continue;
-    const diff = Math.abs(other.scores[idx] - score);
-    if (diff < bestDiff) {
-      bestDiff = diff;
-      peer = other;
-    }
-  }
+  // Real top-3 peers from pipeline JSON
+  const peerEntries = (nation.peersByDecade && nation.peersByDecade[ystr]) || [];
+  const peerRowsHtml = peerEntries.length === 0
+    ? '<div class="popup-meta" style="color:#6878a0">no peers this decade</div>'
+    : peerEntries.map(p => {
+        if (!p || !p.name) return '';
+        const peerNat = nationsByName[p.name];
+        const peerCol = peerNat
+          ? `rgb(${peerNat.color[0]}, ${peerNat.color[1]}, ${peerNat.color[2]})`
+          : 'rgb(120,140,180)';
+        const sim = p.similarity != null ? p.similarity + '%' : '—';
+        return `
+          <div class="popup-peer-row">
+            <span class="pdot" style="background:${peerCol}"></span>
+            <span>${p.name}</span>
+            <span class="psim">${sim}</span>
+          </div>`;
+      }).join('');
 
-  // Story (map score idx → story idx)
-  const storyIdx = Math.min(
-    nation.stories.length - 1,
-    Math.floor((idx * nation.stories.length) / nation.scores.length)
-  );
-  const story = nation.stories[storyIdx];
+  // peer_stability (0–100, scheme-agreement metric)
+  const stab = nation.peerStabilityByDecade && nation.peerStabilityByDecade[ystr];
+  const stabStr = stab == null
+    ? '<span style="color:#6878a0">peer stability: n/a</span>'
+    : `peer stability: <span style="color:#c8d4f0;font-weight:600">${stab}%</span> agreement across schemes`;
+
+  // data_quality pill
+  const quality = (nation.dataQualityByDecade && nation.dataQualityByDecade[ystr]) || 'null';
+  const qualityClass = 'quality-' + String(quality).toLowerCase();
+  const qualityPill = `<span class="quality-pill ${qualityClass}">${quality}</span>`;
 
   const colorStr = `rgb(${nation.color[0]}, ${nation.color[1]}, ${nation.color[2]})`;
-  const peerColorStr = `rgb(${peer.color[0]}, ${peer.color[1]}, ${peer.color[2]})`;
+  const scoreDisplay = score == null ? '—' : Math.round(score * 10) / 10;
 
   popup.innerHTML = `
     <div class="popup-header">
       <span class="dot" style="background:${colorStr}"></span>
       ${nation.name} · ${years[idx]}
+      ${qualityPill}
     </div>
-    <div class="popup-score" style="color:${colorStr}">${score}</div>
-    <div class="popup-meta">${ordinals[rank - 1]} of ${nations.length}</div>
+    <div class="popup-score" style="color:${colorStr}">${scoreDisplay}</div>
+    <div class="popup-meta">
+      ${rank != null ? `${ordinal(rank)} of ${rankedTotal}` : `unranked (no score)`}
+      <span style="color:#6878a0"> · ${nation.region}</span>
+    </div>
     <div class="popup-meta">${changeStr}</div>
-    <div class="popup-meta">closest peer: <span style="color:${peerColorStr};font-weight:600">${peer.name}</span> (${peer.scores[idx]})</div>
-    <div class="popup-story">${story}</div>
+    <div class="popup-meta" style="margin-top:6px;color:#aab8d4;font-size:11px;letter-spacing:0.4px;text-transform:uppercase;">Top peers</div>
+    ${peerRowsHtml}
+    <div class="popup-meta" style="margin-top:6px">${stabStr}</div>
   `;
   popup.style.display = 'block';
 
@@ -724,14 +841,87 @@ window.addEventListener('resize', () => {
 // ─────────────────────────────────────────────────────────────
 // INIT + RENDER LOOP
 // ─────────────────────────────────────────────────────────────
-setYear(0);
 updateCamera();
-
 function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
 }
 animate();
+
+// ─────────────────────────────────────────────────────────────
+// FETCH PIPELINE JSON + BOOTSTRAP NATIONS
+// ─────────────────────────────────────────────────────────────
+function buildNationFromCountry(country) {
+  const coords = COUNTRY_COORDS[country.name];
+  if (!coords) {
+    console.warn(`[HistoryLens] No coordinates for "${country.name}" — skipping`);
+    return null;
+  }
+  const hex = REGION_COLORS[country.region] || DEFAULT_COLOR;
+  const color = hexToRgb(hex);
+
+  // Scores as an ordered array matching `years` (1820, 1830, …, 2000)
+  const scores = years.map(y => {
+    const v = country.scores ? country.scores[String(y)] : null;
+    return (v == null || Number.isNaN(v)) ? null : v;
+  });
+
+  return {
+    name: country.name,
+    iso3: country.iso3,
+    region: country.region,
+    lon: coords.lon,
+    lat: coords.lat,
+    color,
+    scores,
+    peersByDecade: country.peers || {},
+    peerStabilityByDecade: country.peer_stability || {},
+    dataQualityByDecade: country.data_quality || {},
+  };
+}
+
+function showLoadingError(msg) {
+  const el = document.getElementById('loading');
+  if (!el) return;
+  el.classList.add('error');
+  el.querySelector('.label').textContent = 'Failed to load data';
+  el.querySelector('.sub').textContent = msg;
+}
+
+function hideLoading() {
+  const el = document.getElementById('loading');
+  if (el) el.style.display = 'none';
+}
+
+async function initFromPipeline() {
+  try {
+    const res = await fetch(DATA_URL, { cache: 'no-cache' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (!data || !Array.isArray(data.countries)) {
+      throw new Error('Unexpected JSON shape — missing `countries` array');
+    }
+
+    nations.length = 0;
+    for (const c of data.countries) {
+      const n = buildNationFromCountry(c);
+      if (n) {
+        nations.push(n);
+        nationsByName[n.name] = n;
+      }
+    }
+
+    console.log(`Loaded ${nations.length} countries from pipeline JSON`);
+
+    setYear(0);
+    hideLoading();
+  } catch (err) {
+    console.error('[HistoryLens] Failed to load pipeline data:', err);
+    showLoadingError(err.message || String(err));
+  }
+}
+
+initFromPipeline();
 </script>
 </body>
 </html>
