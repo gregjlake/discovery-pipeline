@@ -347,9 +347,17 @@ let playInterval = null;
 
 const disposables = [];
 const hitSpheres = [];
+// Per-frame screen-space label visibility filter: a list of {sprite, nation}
+// repopulated by rebuild(); consulted by updateLabelVisibility() in animate().
+const labelEntries = [];
 
 // gaussian terrain parameters
-const SIGMA = 0.6;
+// SIGMA tightened from 0.6 to 0.25 (per brief: try 0.3 first, drop to 0.25 if
+// the European cluster still merges). At 0.3 a headless screenshot at 1820
+// still showed UK / Netherlands as a single peak, so we use 0.25 here. The
+// screen-space label-collision filter (updateLabelVisibility) keeps labels
+// readable even where peaks remain partially merged.
+const SIGMA = 0.25;
 const HEIGHT_SCALE = 3.5;
 const GAUSSIAN_POWER = 1.8;
 
@@ -459,6 +467,7 @@ function disposeAll() {
   }
   disposables.length = 0;
   hitSpheres.length = 0;
+  labelEntries.length = 0;
 }
 
 function buildLabelTexture(name, score, color) {
@@ -592,6 +601,7 @@ function rebuild() {
     sprite.renderOrder = 10;
     scene.add(sprite);
     disposables.push(sprite);
+    labelEntries.push({ sprite, nation });
 
     // Point light at peak — only for the top-N this decade
     if (lightSet.has(nation)) {
@@ -687,6 +697,24 @@ function showPopup(nation, clientX, clientY) {
     ? '<span style="color:#6878a0">peer stability: n/a</span>'
     : `peer stability: <span style="color:#c8d4f0;font-weight:600">${stab}%</span> agreement across schemes`;
 
+  // Urbanization (raw 0–1 ratio from pipeline). Always render the row so the
+  // user can tell "no data" apart from "row missing from this build".
+  // Suffix "(interp.)" for cells filled by linear interpolation between the
+  // CLIO-INFRA 1850/1900/1950/2000 benchmarks.
+  const urb = (nation.urbanizationByDecade && nation.urbanizationByDecade[ystr])
+              || { raw: null, isInterpolated: false };
+  let urbValueHtml;
+  if (urb.raw == null) {
+    urbValueHtml = '<span style="color:#6878a0">—</span>';
+  } else {
+    const pct = Math.round(urb.raw * 100);
+    const suffix = urb.isInterpolated
+      ? ' <span style="color:#6878a0;font-size:11px">(interp.)</span>'
+      : '';
+    urbValueHtml = `<span style="color:#c8d4f0;font-weight:600">${pct}%</span>${suffix}`;
+  }
+  const urbRowHtml = `<div class="popup-meta" style="margin-top:4px">urbanization: ${urbValueHtml}</div>`;
+
   // data_quality pill
   const quality = (nation.dataQualityByDecade && nation.dataQualityByDecade[ystr]) || 'null';
   const qualityClass = 'quality-' + String(quality).toLowerCase();
@@ -707,6 +735,7 @@ function showPopup(nation, clientX, clientY) {
       <span style="color:#6878a0"> · ${nation.region}</span>
     </div>
     <div class="popup-meta">${changeStr}</div>
+    ${urbRowHtml}
     <div class="popup-meta" style="margin-top:6px;color:#aab8d4;font-size:11px;letter-spacing:0.4px;text-transform:uppercase;">Top peers</div>
     ${peerRowsHtml}
     <div class="popup-meta" style="margin-top:6px">${stabStr}</div>
@@ -839,11 +868,58 @@ window.addEventListener('resize', () => {
 });
 
 // ─────────────────────────────────────────────────────────────
+// LABEL COLLISION FILTER (screen-space, greedy by score)
+// ─────────────────────────────────────────────────────────────
+// Each frame: project every label sprite into screen-space, sort by score,
+// then greedily place labels and hide any that fall within COLLISION_R pixels
+// of an already-placed higher-scoring label. Hit spheres are untouched so
+// hovering an unlabeled peak still works exactly as before.
+// Collision radius in pixels. Set so adjacent same-latitude European labels
+// (UK 52° / Netherlands 52° / France 47°) all fit visible at default zoom.
+// Tighter than the sprite width — labels can overlap edges slightly — but
+// stops same-pixel stacking like the original 1820 NL/UK/France pile-up.
+const COLLISION_R = 40;
+const _projV = new THREE.Vector3();
+function updateLabelVisibility() {
+  if (labelEntries.length === 0) return;
+  const w = renderer.domElement.clientWidth;
+  const h = renderer.domElement.clientHeight;
+  const items = labelEntries.map(({ sprite, nation }) => {
+    _projV.copy(sprite.position).project(camera);
+    const sc = nation.scores[currentIdx];
+    return {
+      sprite,
+      score: sc == null ? -Infinity : sc,
+      x: (_projV.x + 1) * 0.5 * w,
+      y: (1 - _projV.y) * 0.5 * h,
+      behindCamera: _projV.z > 1 || _projV.z < -1,
+    };
+  });
+  items.sort((a, b) => b.score - a.score);
+  const placed = [];
+  const r2 = COLLISION_R * COLLISION_R;
+  for (const it of items) {
+    if (it.behindCamera) {
+      it.sprite.visible = false;
+      continue;
+    }
+    let collides = false;
+    for (const p of placed) {
+      const dx = it.x - p.x, dy = it.y - p.y;
+      if (dx * dx + dy * dy < r2) { collides = true; break; }
+    }
+    it.sprite.visible = !collides;
+    if (!collides) placed.push(it);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
 // INIT + RENDER LOOP
 // ─────────────────────────────────────────────────────────────
 updateCamera();
 function animate() {
   requestAnimationFrame(animate);
+  updateLabelVisibility();
   renderer.render(scene, camera);
 }
 animate();
@@ -866,6 +942,19 @@ function buildNationFromCountry(country) {
     return (v == null || Number.isNaN(v)) ? null : v;
   });
 
+  // Per-decade urbanization (raw ratio + is_interpolated flag).
+  // Pipeline schema: country.variables[decade].urbanization = {raw, normalized,
+  // normalized_absolute, is_interpolated?}. Pre-1850 decades have raw=null.
+  const urbanizationByDecade = {};
+  const vars = country.variables || {};
+  for (const y of years) {
+    const ystr = String(y);
+    const cell = (vars[ystr] && vars[ystr].urbanization) || null;
+    urbanizationByDecade[ystr] = cell
+      ? { raw: cell.raw, isInterpolated: !!cell.is_interpolated }
+      : { raw: null, isInterpolated: false };
+  }
+
   return {
     name: country.name,
     iso3: country.iso3,
@@ -877,6 +966,7 @@ function buildNationFromCountry(country) {
     peersByDecade: country.peers || {},
     peerStabilityByDecade: country.peer_stability || {},
     dataQualityByDecade: country.data_quality || {},
+    urbanizationByDecade,
   };
 }
 
