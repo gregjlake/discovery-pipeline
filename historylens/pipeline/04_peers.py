@@ -27,6 +27,7 @@ NORM_COLS_BY_VAR = {
     "life_expectancy": "life_norm",
     "education_years": "edu_norm",
     "gini":            "gini_norm",
+    "urbanization":    "urb_norm",
 }
 NORM_COLS = [NORM_COLS_BY_VAR[v] for v in SCORING_VARS]
 TOP_N = 5

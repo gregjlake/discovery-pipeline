@@ -30,39 +30,49 @@ SOURCE_PRIORITY = {
 
 # Variables that enter the structural strength composite (population excluded
 # as of v2 — it is a scale variable, not a development indicator).
-SCORING_VARS = ["gdp_per_capita", "life_expectancy", "education_years", "gini"]
+# v2.1: urbanization added (interpolated between 1850/1900/1950/2000 benchmarks,
+# see 02_harmonize.py for the interpolation rule).
+SCORING_VARS = [
+    "gdp_per_capita", "life_expectancy", "education_years", "gini", "urbanization",
+]
 
 # Variables collected and exported but NOT scored (display-only in the JSON).
 DISPLAY_ONLY_VARS = ["population"]
 
 # Three weight schemes. Each must sum to 1.0 over SCORING_VARS.
 # A = balanced (default); B = GDP-heavy classical; C = capability/Sen-HDI.
+# v2.1: urbanization added at 8% in Scheme A (per project spec); schemes B and
+# C take 8% off their other weights proportionally so all three schemes share a
+# single five-variable basis.
 WEIGHT_SCHEMES = {
     "A": {
         "label": "Balanced (default)",
         "weights": {
-            "gdp_per_capita":  0.40,
-            "life_expectancy": 0.30,
-            "education_years": 0.20,
-            "gini":            0.10,
+            "gdp_per_capita":  0.37,
+            "life_expectancy": 0.28,
+            "education_years": 0.18,
+            "gini":            0.09,
+            "urbanization":    0.08,
         },
     },
     "B": {
         "label": "GDP-heavy (classical economics)",
         "weights": {
-            "gdp_per_capita":  0.55,
-            "life_expectancy": 0.20,
-            "education_years": 0.15,
+            "gdp_per_capita":  0.50,
+            "life_expectancy": 0.18,
+            "education_years": 0.14,
             "gini":            0.10,
+            "urbanization":    0.08,
         },
     },
     "C": {
         "label": "Capability approach (Sen / HDI)",
         "weights": {
-            "gdp_per_capita":  0.25,
-            "life_expectancy": 0.35,
-            "education_years": 0.30,
-            "gini":            0.10,
+            "gdp_per_capita":  0.23,
+            "life_expectancy": 0.33,
+            "education_years": 0.27,
+            "gini":            0.09,
+            "urbanization":    0.08,
         },
     },
 }

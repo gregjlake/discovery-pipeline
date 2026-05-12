@@ -110,9 +110,14 @@ def main():
         print(f"    {var:18s}  global raw range {lo:>10.2f} .. {hi:>10.2f}{direction}")
 
     # ── Write long-format normalized.csv ──
+    # is_interpolated is carried through from harmonize so the exporter (Phase 6)
+    # can flag interpolated urbanization cells in the final JSON.
+    if "is_interpolated" not in h.columns:
+        h["is_interpolated"] = False
     norm_out = h.rename(columns={"value": "raw_value"})[
         ["country_name", "iso3", "year", "variable", "raw_value",
-         "normalized_value", "normalized_value_abs", "source", "is_sparse"]
+         "normalized_value", "normalized_value_abs",
+         "source", "is_sparse", "is_interpolated"]
     ]
     norm_path = PROC / "normalized.csv"
     norm_out.to_csv(norm_path, index=False)
@@ -143,6 +148,7 @@ def main():
         "life_expectancy": "life_norm",
         "education_years": "edu_norm",
         "gini":            "gini_norm",
+        "urbanization":    "urb_norm",
         "population":      "pop_norm",
     }
     rename_map_abs = {k: v + "_abs" for k, v in rename_map.items()}
@@ -176,8 +182,9 @@ def main():
          "structural_strength", "structural_strength_absolute",
          "score_a", "score_b", "score_c",
          "variables_used",
-         "gdp_norm", "life_norm", "edu_norm", "gini_norm", "pop_norm",
-         "gdp_norm_abs", "life_norm_abs", "edu_norm_abs", "gini_norm_abs", "pop_norm_abs"]
+         "gdp_norm", "life_norm", "edu_norm", "gini_norm", "urb_norm", "pop_norm",
+         "gdp_norm_abs", "life_norm_abs", "edu_norm_abs", "gini_norm_abs",
+         "urb_norm_abs", "pop_norm_abs"]
     )
     out = wide[out_cols].sort_values(["country_name", "year"]).reset_index(drop=True)
     score_path = PROC / "structural_scores.csv"

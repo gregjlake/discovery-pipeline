@@ -6,6 +6,8 @@ v2 schema additions per (country, decade):
   scores_absolute, score_a, score_b, score_c, peer_stability, regional_peers
 v2 schema additions per variable cell:
   population entries carry "display_only": true (not used in scoring)
+  urbanization entries may carry "is_interpolated": true (linear fill between
+  CLIO-INFRA 1850/1900/1950/2000 benchmarks)
 v2 metadata additions:
   weight_schemes, peer_stability_summary, sample_composition
   normalization is now an object describing relative + absolute
@@ -95,8 +97,11 @@ def main():
 
     # Indexes
     score_idx = scores.set_index(["country_name", "year"])
+    # Carry is_interpolated through so urbanization cells can be flagged.
+    if "is_interpolated" not in normalized.columns:
+        normalized["is_interpolated"] = False
     norm_idx  = normalized.set_index(["country_name", "year", "variable"])[
-        ["raw_value", "normalized_value", "normalized_value_abs"]
+        ["raw_value", "normalized_value", "normalized_value_abs", "is_interpolated"]
     ]
     stab_idx = stability.set_index(["country_name", "year"])["stability"]
 
@@ -125,6 +130,7 @@ def main():
             "normalization": {
                 "relative": "Per-decade min-max scaling — each variable is normalized 0-100 across countries within each decade. Captures relative position within the decade.",
                 "absolute": "Cross-time min-max scaling — each variable is normalized 0-100 across the entire 1820-2000 panel. Allows meaningful cross-decade comparison.",
+                "urbanization_interpolation": "CLIO-INFRA urbanization is benchmarked at 1850/1900/1950/2000 only. Intervening decades are filled by linear interpolation within each country's observed [min_year, max_year] window; pre-benchmark decades remain null. Interpolated cells are flagged `is_interpolated: true`.",
             },
             "weight_schemes": {
                 k: {"label": v["label"], "weights": v["weights"]}
@@ -196,7 +202,7 @@ def main():
                                       "note": "insufficient regional coverage"})
             regional_peers_dict[ystr] = regional_list
 
-            # Variables (5 — gdp, life, edu, gini, population)
+            # Variables (6 — gdp, life, edu, gini, urbanization, population)
             year_vars = {}
             for var in EXPORT_VARS:
                 key = (canonical_name, year, var)
@@ -214,6 +220,12 @@ def main():
                         cell["raw"] = round_or_none(raw, 2)
                     cell["normalized"] = round_or_none(norm, 1)
                     cell["normalized_absolute"] = round_or_none(norm_abs, 1)
+                    # Urbanization values are linearly interpolated between
+                    # CLIO-INFRA 1850/1900/1950/2000 benchmarks. Flag so the
+                    # frontend can render them with reduced confidence.
+                    interp = row.get("is_interpolated", False)
+                    if bool(interp):
+                        cell["is_interpolated"] = True
                 year_vars[var] = cell
             variables_dict[ystr] = year_vars
             data_quality_dict[ystr] = quality_label(year_vars, has_score)

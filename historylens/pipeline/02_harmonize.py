@@ -18,6 +18,53 @@ from _common import (
 )
 
 
+def interpolate_urbanization(harmonized):
+    """Linear-interpolate urbanization within each country's observed window.
+
+    Returns a new DataFrame with interpolated rows appended. Each filled row
+    has source="interpolated" and is_interpolated=True; existing benchmark
+    rows are returned unchanged (is_interpolated=False).
+    """
+    urb = harmonized[harmonized["variable"] == "urbanization"]
+    if urb.empty:
+        return harmonized
+
+    fills = []
+    for country, sub in urb.groupby("country_name"):
+        years = sub.sort_values("year")[["year", "value", "iso3"]].reset_index(drop=True)
+        if len(years) < 2:
+            continue   # cannot interpolate from a single point
+        iso3 = years["iso3"].iloc[0]
+        y_min, y_max = int(years["year"].min()), int(years["year"].max())
+        for d in DECADES:
+            if d < y_min or d > y_max:
+                continue            # do not extrapolate
+            if (years["year"] == d).any():
+                continue            # already a benchmark
+            # linear interpolation between bracketing observed points
+            before = years[years["year"] < d].iloc[-1]
+            after  = years[years["year"] > d].iloc[0]
+            span = after["year"] - before["year"]
+            frac = (d - before["year"]) / span if span else 0.0
+            value = float(before["value"] + frac * (after["value"] - before["value"]))
+            fills.append({
+                "country_name":    country,
+                "iso3":            iso3,
+                "year":            d,
+                "variable":        "urbanization",
+                "value":           value,
+                "source":          "interpolated",
+                "is_sparse":       False,
+                "is_interpolated": True,
+            })
+
+    if not fills:
+        return harmonized
+    fill_df = pd.DataFrame(fills)
+    out = pd.concat([harmonized, fill_df], ignore_index=True)
+    return out
+
+
 def main():
     print("[Phase 2] Harmonize")
     raw = pd.read_csv(PROC / "raw_long.csv")
@@ -65,6 +112,14 @@ def main():
                 unmatched.setdefault(canonical, set()).add(variable)
 
     harmonized = pd.DataFrame(rows)
+
+    # ── Urbanization: linear interpolation between benchmark decades ──
+    # CLIO-INFRA urbanization is benchmarked at 1850/1900/1950/2000 only.
+    # We linearly interpolate within each country's [min_year, max_year]
+    # window to fill the intervening decades. We do NOT extrapolate beyond
+    # observed benchmarks (no pre-1850 fabrication, no post-2000 extension).
+    # Filled rows are flagged is_interpolated=True and use source="interpolated".
+    harmonized = interpolate_urbanization(harmonized)
 
     # Compute is_sparse: per (country, variable), if fewer than SPARSE_MIN_DECADES decade points -> sparse
     counts = (
