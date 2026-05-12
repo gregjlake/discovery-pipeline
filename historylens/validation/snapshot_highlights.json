@@ -1,0 +1,32 @@
+{
+  "highlights": [
+    {
+      "decade": 1870,
+      "type": "surprising_twins",
+      "countries": ["Japan", "Russia"],
+      "similarity": 99,
+      "note": "Japan and Russia were structural twins in 1870 — despite their later rivalry"
+    },
+    {
+      "decade": 1900,
+      "type": "surprising_twins",
+      "countries": ["Bolivia", "South Africa"],
+      "similarity": 99,
+      "note": "Bolivia and South Africa shared nearly identical structural profiles in 1900 despite being on opposite sides of the world"
+    },
+    {
+      "decade": 1900,
+      "type": "top_ranked",
+      "country": "Switzerland",
+      "rank": 1,
+      "note": "Switzerland, not UK or USA, ranked #1 in 1900 — often overlooked in standard histories"
+    },
+    {
+      "decade": 1950,
+      "type": "biggest_mover",
+      "country": "Venezuela",
+      "change": 24.0,
+      "note": "Venezuela gained 24 points in one decade — the oil boom story"
+    }
+  ]
+}

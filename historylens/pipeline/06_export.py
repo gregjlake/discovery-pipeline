@@ -41,6 +41,16 @@ KNOWN_GAPS = [
         "decades": [1820, 1830, 1840, 1850, 1860],
         "note": "Sparse pre-1870 coverage",
     },
+    {
+        "country": "United States",
+        "decades": [1820, 1830, 1840, 1850, 1860, 1900],
+        "note": "Absolute index null pre-1870 and at 1900 (Maddison gap)",
+    },
+    {
+        "country": "China",
+        "decades": [1820, 1830, 1840],
+        "note": "Data starts 1850; 1820-1840 all null",
+    },
 ]
 
 
