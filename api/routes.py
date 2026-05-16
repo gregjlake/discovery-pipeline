@@ -88,6 +88,14 @@ def _region_from_fips(fips: str) -> str:
     return _REGION_BY_STATE_FIPS.get(fips[:2], '')
 
 
+# Allowed state prefixes for peer discovery — matches the 50-states + DC
+# scope of the gravity model (3,135 nodes in data/gravity_map_cache.json).
+# Excludes US territories (PR=72, AS=60, GU=66, MP=69, VI=78) and synthetic
+# placeholder rows (e.g. FIPS "00000", "00059") which exist in the raw
+# input matrix but are not modeled as counties.
+ALLOWED_STATE_PREFIXES = frozenset(_REGION_BY_STATE_FIPS.keys())
+
+
 # Dataset registry: dataset_id -> (value_column, description)
 DATASET_REGISTRY = {
     'library':        ('library_spend_per_capita', 'Library spending per capita ($)'),
@@ -382,6 +390,11 @@ def county_detail(fips: str):
         for _, r in df[['fips', col]].dropna().iterrows():
             f = r['fips']
             if f == fips:
+                continue
+            # Restrict peer pool to the gravity-model scope (50 states + DC).
+            # Drops PR/territory municipios and synthetic placeholder rows
+            # that exist in the raw matrix but aren't modeled as counties.
+            if f[:2] not in ALLOWED_STATE_PREFIXES:
                 continue
             if f not in county_vectors:
                 county_vectors[f] = {}
