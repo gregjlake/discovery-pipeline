@@ -1,0 +1,718 @@
+{
+  "generated_at": "2026-05-16T22:33:55.710Z",
+  "methodology": "Per-sub-test verdict rule (mirrors checkDir() in tests/extended-replication.mjs\nand chk() in tests/research-domains-validation.mjs):\n  REPLICATES        : sign matches expected direction AND |r| > 0.3\n  REPLICATES (weak) : sign matches AND |r| in [0.05, 0.3]\n  INCONCLUSIVE      : sign mismatch BUT |r| < 0.05\n  CONTRADICTS       : sign mismatch AND |r| >= 0.05\nFor known-effects-validation.mjs (whose stdout lacks \"Verdict: X\" markers),\nPASS -> REPLICATES, FAIL -> CONTRADICTS, WARN -> REPLICATES (weak) if the\nlabel/detail contains \"partial\"/\"weak\", else INCONCLUSIVE.\n\nPer-finding rollup rule (combines sub-tests of one named test):\n  1. ANY sub-test = CONTRADICTS                            -> CONTRADICTS\n  2. ALL sub-tests = INCONCLUSIVE                          -> INCONCLUSIVE\n  3. Mix of REPLICATES (strong) with INCONCLUSIVE or weak  -> ADDS NUANCE\n  4. All directional sub-tests = REPLICATES (strong)       -> REPLICATES\n  5. All directional sub-tests = REPLICATES (weak) only    -> REPLICATES (weak)\n\nFinding-grouping: in known-effects-validation.mjs, sub-tests E1/E2/E3 are\ndistinct findings (different citations); H and H2 collapse to one finding H.\nIn extended-replication.mjs and research-domains-validation.mjs, sub-tests\nwithin one named test (e.g. J1, J2, J3) all roll up to that finding (J).",
+  "findings": [
+    {
+      "id": "E1",
+      "citation": "Barker et al. 2011",
+      "domain": "Diabetes Belt geography",
+      "expected_direction": "+",
+      "computed_r": null,
+      "n": null,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "E1",
+          "r": null,
+          "n": null,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "E2",
+      "citation": "Case & Deaton 2020",
+      "domain": "Deaths of Despair geography",
+      "expected_direction": "+",
+      "computed_r": null,
+      "n": null,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "E2",
+          "r": null,
+          "n": null,
+          "status": "WARN",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES (weak)"
+    },
+    {
+      "id": "E3",
+      "citation": "Chetty et al. (related)",
+      "domain": "EITC peer clustering",
+      "expected_direction": "+",
+      "computed_r": null,
+      "n": null,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "E3",
+          "r": null,
+          "n": null,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "F",
+      "citation": "Kline & Moretti 2014",
+      "domain": "TVA long-run infrastructure effect",
+      "expected_direction": "+",
+      "computed_r": null,
+      "n": null,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "F",
+          "r": null,
+          "n": null,
+          "status": "WARN",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES (weak)"
+    },
+    {
+      "id": "G",
+      "citation": "Markides & Coreil 1986; Ruiz 2013",
+      "domain": "Hispanic Paradox via positive deviance",
+      "expected_direction": "+",
+      "computed_r": null,
+      "n": null,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "G",
+          "r": null,
+          "n": null,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "H",
+      "citation": "ARC Distressed Counties (federal)",
+      "domain": "Peer alignment with ARC distressed-county list",
+      "expected_direction": "+",
+      "computed_r": null,
+      "n": null,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "REPLICATES (weak)",
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "H",
+          "r": null,
+          "n": null,
+          "status": "WARN",
+          "verdict": "REPLICATES (weak)"
+        },
+        {
+          "test_id": "H2",
+          "r": null,
+          "n": null,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "ADDS NUANCE"
+    },
+    {
+      "id": "I",
+      "citation": "RUPRI/HRSA",
+      "domain": "Rural health penalty (poverty-matched LE gap)",
+      "expected_direction": "+",
+      "computed_r": null,
+      "n": null,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "INCONCLUSIVE"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "I",
+          "r": null,
+          "n": null,
+          "status": "WARN",
+          "verdict": "INCONCLUSIVE"
+        }
+      ],
+      "rolled_up_verdict": "INCONCLUSIVE"
+    },
+    {
+      "id": "J",
+      "citation": "Cutler & Lleras-Muney 2006",
+      "domain": "Education–health gradient",
+      "expected_direction": "+",
+      "computed_r": 0.658,
+      "n": 3062,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "REPLICATES",
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "J1",
+          "r": 0.658,
+          "n": 3062,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "J2",
+          "r": -0.679,
+          "n": 2947,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "K",
+      "citation": "Sommers et al. 2012",
+      "domain": "Uninsurance–health link (EITC proxy)",
+      "expected_direction": "+",
+      "computed_r": 0.767,
+      "n": 2931,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "REPLICATES",
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "K1",
+          "r": 0.767,
+          "n": 2931,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "K2",
+          "r": -0.746,
+          "n": 3053,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "L",
+      "citation": "Leung et al. 2017",
+      "domain": "Food environment paradox (food access × diabetes)",
+      "expected_direction": "-",
+      "computed_r": -0.039,
+      "n": 2945,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "REPLICATES (weak)",
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "L1",
+          "r": -0.039,
+          "n": 2945,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        },
+        {
+          "test_id": "L2",
+          "r": -0.072,
+          "n": 2945,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES (weak)"
+    },
+    {
+      "id": "M",
+      "citation": "Putnam 2000; Blakely et al. 2001",
+      "domain": "Social capital × health (voter turnout, libraries)",
+      "expected_direction": "+",
+      "computed_r": 0.439,
+      "n": 3038,
+      "sub_test_count": 3,
+      "sub_test_verdicts": [
+        "REPLICATES",
+        "REPLICATES",
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "M1",
+          "r": 0.439,
+          "n": 3038,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "M2",
+          "r": 0.337,
+          "n": 2694,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "M3",
+          "r": -0.178,
+          "n": 2916,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "ADDS NUANCE"
+    },
+    {
+      "id": "N",
+      "citation": "Meltzer & Schwartz 2016",
+      "domain": "Housing cost × health tradeoff",
+      "expected_direction": "+",
+      "computed_r": null,
+      "n": null,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "N",
+          "r": null,
+          "n": null,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "O",
+      "citation": "Pierce & Schott 2016; Autor 2013",
+      "domain": "Manufacturing decline × mental health & diabetes",
+      "expected_direction": "+",
+      "computed_r": -0.199,
+      "n": 2947,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "CONTRADICTS",
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "O1",
+          "r": -0.199,
+          "n": 2947,
+          "status": "FAIL",
+          "verdict": "CONTRADICTS"
+        },
+        {
+          "test_id": "O2",
+          "r": 0.071,
+          "n": 2947,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "CONTRADICTS"
+    },
+    {
+      "id": "P",
+      "citation": "Whitacre et al. 2014",
+      "domain": "Broadband × economic opportunity",
+      "expected_direction": "+",
+      "computed_r": 0.618,
+      "n": 3134,
+      "sub_test_count": 3,
+      "sub_test_verdicts": [
+        "REPLICATES",
+        "REPLICATES (weak)",
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "P1",
+          "r": 0.618,
+          "n": 3134,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "P2",
+          "r": -0.242,
+          "n": 3135,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        },
+        {
+          "test_id": "P3",
+          "r": 0.015,
+          "n": 3135,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "ADDS NUANCE"
+    },
+    {
+      "id": "Q",
+      "citation": "Corak 2013",
+      "domain": "Great Gatsby Curve (housing burden × poverty/EITC)",
+      "expected_direction": "+",
+      "computed_r": -0.034,
+      "n": 3134,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "INCONCLUSIVE",
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "Q1",
+          "r": -0.034,
+          "n": 3134,
+          "status": "PASS",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "test_id": "Q2",
+          "r": 0.024,
+          "n": 3118,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES (weak)"
+    },
+    {
+      "id": "R",
+      "citation": "CDC/RWJF",
+      "domain": "Obesity Belt (obesity × diabetes co-geography)",
+      "expected_direction": "+",
+      "computed_r": 0.669,
+      "n": 2947,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "R2",
+          "r": 0.669,
+          "n": 2947,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "S",
+      "citation": "Acemoglu & Restrepo 2017",
+      "domain": "Aging × economic decline",
+      "expected_direction": "-",
+      "computed_r": -0.099,
+      "n": 3134,
+      "sub_test_count": 3,
+      "sub_test_verdicts": [
+        "REPLICATES (weak)",
+        "CONTRADICTS",
+        "CONTRADICTS"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "S1",
+          "r": -0.099,
+          "n": 3134,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        },
+        {
+          "test_id": "S2",
+          "r": -0.103,
+          "n": 3135,
+          "status": "WARN",
+          "verdict": "CONTRADICTS"
+        },
+        {
+          "test_id": "S3",
+          "r": 0.055,
+          "n": 3135,
+          "status": "WARN",
+          "verdict": "CONTRADICTS"
+        }
+      ],
+      "rolled_up_verdict": "CONTRADICTS"
+    },
+    {
+      "id": "T",
+      "citation": "Peri 2012; Card 2009",
+      "domain": "Immigrant economic contribution",
+      "expected_direction": "+",
+      "computed_r": 0.411,
+      "n": 3134,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "REPLICATES",
+        "INCONCLUSIVE"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "T1",
+          "r": 0.411,
+          "n": 3134,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "T2",
+          "r": 0.008,
+          "n": 3135,
+          "status": "PASS",
+          "verdict": "INCONCLUSIVE"
+        }
+      ],
+      "rolled_up_verdict": "ADDS NUANCE"
+    },
+    {
+      "id": "U",
+      "citation": "DiPasquale & Glaeser 1999",
+      "domain": "Homeownership × civic/social stability",
+      "expected_direction": "+",
+      "computed_r": 0.316,
+      "n": 3104,
+      "sub_test_count": 4,
+      "sub_test_verdicts": [
+        "REPLICATES",
+        "INCONCLUSIVE",
+        "REPLICATES (weak)",
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "U1",
+          "r": 0.316,
+          "n": 3104,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "U2",
+          "r": -0.049,
+          "n": 2743,
+          "status": "PASS",
+          "verdict": "INCONCLUSIVE"
+        },
+        {
+          "test_id": "U3",
+          "r": -0.222,
+          "n": 3135,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        },
+        {
+          "test_id": "U4",
+          "r": -0.24,
+          "n": 3135,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "ADDS NUANCE"
+    },
+    {
+      "id": "V",
+      "citation": "McLanahan & Sandefur 1994",
+      "domain": "Single-parent households × child poverty",
+      "expected_direction": "+",
+      "computed_r": 0.282,
+      "n": 3135,
+      "sub_test_count": 3,
+      "sub_test_verdicts": [
+        "REPLICATES (weak)",
+        "REPLICATES",
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "V1",
+          "r": 0.282,
+          "n": 3135,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        },
+        {
+          "test_id": "V2",
+          "r": 0.365,
+          "n": 3134,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "V3",
+          "r": -0.447,
+          "n": 3134,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "ADDS NUANCE"
+    },
+    {
+      "id": "W",
+      "citation": "Krueger 2017",
+      "domain": "Disability–opioid nexus (mental-health proxy)",
+      "expected_direction": "+",
+      "computed_r": 0.473,
+      "n": 2947,
+      "sub_test_count": 3,
+      "sub_test_verdicts": [
+        "REPLICATES",
+        "REPLICATES",
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "W1",
+          "r": 0.473,
+          "n": 2947,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "W2",
+          "r": 0.623,
+          "n": 2946,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "W3",
+          "r": -0.551,
+          "n": 2946,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "X",
+      "citation": "Glaeser & Mare 2001; Moretti 2004",
+      "domain": "Urban wage premium (pop density × income, broadband)",
+      "expected_direction": "+",
+      "computed_r": 0.158,
+      "n": 3134,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "REPLICATES (weak)",
+        "REPLICATES (weak)"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "X1",
+          "r": 0.158,
+          "n": 3134,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        },
+        {
+          "test_id": "X2",
+          "r": 0.155,
+          "n": 3135,
+          "status": "PASS",
+          "verdict": "REPLICATES (weak)"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES (weak)"
+    },
+    {
+      "id": "Y",
+      "citation": "Wilson 1987",
+      "domain": "Concentrated poverty (child poverty × health)",
+      "expected_direction": "+",
+      "computed_r": 0.563,
+      "n": 2947,
+      "sub_test_count": 2,
+      "sub_test_verdicts": [
+        "REPLICATES",
+        "REPLICATES"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "Y1",
+          "r": 0.563,
+          "n": 2947,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        },
+        {
+          "test_id": "Y2",
+          "r": 0.727,
+          "n": 2947,
+          "status": "PASS",
+          "verdict": "REPLICATES"
+        }
+      ],
+      "rolled_up_verdict": "REPLICATES"
+    },
+    {
+      "id": "Z",
+      "citation": "Novaco & Gonzalez 2009",
+      "domain": "Rural isolation × mental health",
+      "expected_direction": "+",
+      "computed_r": -0.01,
+      "n": 2947,
+      "sub_test_count": 1,
+      "sub_test_verdicts": [
+        "INCONCLUSIVE"
+      ],
+      "sub_test_details": [
+        {
+          "test_id": "Z1",
+          "r": -0.01,
+          "n": 2947,
+          "status": "PASS",
+          "verdict": "INCONCLUSIVE"
+        }
+      ],
+      "rolled_up_verdict": "INCONCLUSIVE"
+    }
+  ],
+  "summary": {
+    "n_findings": 24,
+    "n_replicates": 9,
+    "n_replicates_weak": 5,
+    "n_adds_nuance": 6,
+    "n_inconclusive": 2,
+    "n_contradicts": 2
+  }
+}

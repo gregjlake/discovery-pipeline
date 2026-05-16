@@ -1,8 +1,11 @@
 venv/
-data/
+data/*
 # Config files kept in git (not generated cache data)
 !data/beta_calibration.json
 !data/dataset_metadata.json
+# Replication aggregator artifacts (reproducible via scripts/aggregate_replication.mjs)
+!data/replication_results.json
+!data/replication_table.md
 # Cache files stored in Supabase Storage, not git:
 # gravity_map_cache.json, gravity_terrain.json,
 # validation_results.json, pca_results.json,
