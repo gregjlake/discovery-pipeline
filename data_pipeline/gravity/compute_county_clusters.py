@@ -16,6 +16,13 @@ if hasattr(sys.stdout, "reconfigure"):
 
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 
+CANONICAL_K = 4  # Paper cites k=4 (silhouette=0.218 at 30 variables).
+                 # Silhouette-optimal k can drift as datasets expand; pin
+                 # to keep paper claims valid. Re-evaluate when adding
+                 # variables. Silhouette scores for k=4..11 are still
+                 # computed and emitted in the silhouette_scores field
+                 # for exploratory comparison.
+
 LABELS = {
     "poverty": "Poverty", "eitc": "EITC", "median_income": "Median Income",
     "bea_income": "Per Capita Income", "unemployment": "Unemployment",
@@ -43,8 +50,12 @@ def main():
 
     print(f"Counties: {len(fips_list)}, Variables: {len(datasets)}")
 
-    # Find optimal k
-    print("\nSilhouette scores:")
+    # Compute silhouette scores for k=4..11 (exploratory).
+    # NOTE: We do NOT pick k by max silhouette anymore — it can drift as
+    # datasets expand and breaks the paper's k=4 / silhouette=0.218 claim.
+    # CANONICAL_K is pinned above; the silhouette table is emitted in the
+    # response for visibility.
+    print("\nSilhouette scores (exploratory):")
     sil = {}
     for k in range(4, 12):
         km = KMeans(n_clusters=k, random_state=42, n_init=10)
@@ -53,11 +64,15 @@ def main():
         sil[k] = round(float(s), 4)
         print(f"  k={k}: {s:.4f}")
 
-    optimal_k = max(sil, key=sil.get)
-    print(f"\nOptimal k: {optimal_k} (silhouette={sil[optimal_k]:.4f})")
+    silhouette_optimal_k = max(sil, key=sil.get)
+    print(f"\nSilhouette-optimal k would be: {silhouette_optimal_k} (silhouette={sil[silhouette_optimal_k]:.4f})")
+    print(f"Using CANONICAL_K = {CANONICAL_K} (silhouette={sil[CANONICAL_K]:.4f})")
+    if silhouette_optimal_k != CANONICAL_K:
+        print(f"  NOTE: silhouette-optimal k ({silhouette_optimal_k}) differs from CANONICAL_K ({CANONICAL_K}).")
+        print(f"  Re-evaluate CANONICAL_K if dataset coverage has materially changed.")
 
-    # Fit final model
-    km = KMeans(n_clusters=optimal_k, random_state=42, n_init=10)
+    # Fit final model with canonical k
+    km = KMeans(n_clusters=CANONICAL_K, random_state=42, n_init=10)
     labels = km.fit_predict(X)
     overall_mean = X.mean(axis=0)
 
@@ -66,7 +81,7 @@ def main():
     print("=" * 60)
 
     clusters = {}
-    for cid in range(optimal_k):
+    for cid in range(CANONICAL_K):
         mask = labels == cid
         cluster_fips = [fips_list[i] for i in range(len(fips_list)) if mask[i]]
         cluster_X = X[mask]
@@ -105,7 +120,13 @@ def main():
         print(f"  Examples: {ex_str}")
 
     results = {
-        "optimal_k": optimal_k,
+        # "optimal_k" historically meant "silhouette-max k", but is now the
+        # pinned canonical k. Kept under this key for downstream-consumer
+        # backward compat. Use silhouette_optimal_k to see what silhouette
+        # alone would have picked.
+        "optimal_k": CANONICAL_K,
+        "canonical_k": CANONICAL_K,
+        "silhouette_optimal_k": silhouette_optimal_k,
         "silhouette_scores": {str(k): v for k, v in sil.items()},
         "clusters": clusters,
         "county_assignments": {fips_list[i]: int(labels[i]) for i in range(len(fips_list))},

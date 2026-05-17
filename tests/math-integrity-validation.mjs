@@ -150,29 +150,16 @@ async function test35() {
   const overallR = pearsonR(allXs, allYs);
   log(Math.abs(overallR - 0.736) < 0.01 ? "PASS" : "WARN", "35a: Overall poverty×diabetes", `r=${overallR.toFixed(4)} (paper: 0.736)`);
 
-  // Within each cluster
-  let wcData;
-  try { wcData = await fetchJSON("/within-cluster-correlations"); } catch { wcData = null; }
-
+  // Within each cluster — compute directly from /county-clusters
+  // assignments. (The standalone /within-cluster-correlations endpoint
+  // has been removed; canonical clustering is /county-clusters only.)
   for (const cid of [0, 1, 2, 3]) {
     const fipsSet = new Set(Object.entries(assignments).filter(([_, c]) => c === cid).map(([f]) => f));
     const xs = [], ys = [];
     for (const n of nodes) { if (!fipsSet.has(n.fips)) continue; const p = n.datasets?.poverty, d = n.datasets?.diabetes; if (p != null && d != null) { xs.push(p); ys.push(d); } }
     const cr = pearsonR(xs, ys);
     if (cr == null) { log("WARN", `35b: ${LABELS[cid]}`, `n=${xs.length} — insufficient data`); continue; }
-
-    // Compare to API if available
-    let apiR = null;
-    if (wcData) {
-      const clusterEntry = wcData[cid] || wcData[String(cid)];
-      if (clusterEntry) {
-        const pair = clusterEntry.find?.(p => (p.var_a === "poverty" && p.var_b === "diabetes") || (p.var_a === "diabetes" && p.var_b === "poverty"));
-        if (pair) apiR = pair.r;
-      }
-    }
-
-    const apiMatch = apiR != null ? (Math.abs(cr - apiR) < 0.02 ? ` — matches API (${apiR.toFixed(4)})` : ` — DIFFERS from API (${apiR.toFixed(4)})`) : "";
-    log("PASS", `35b: ${LABELS[cid]}`, `r=${cr.toFixed(4)} (n=${xs.length})${apiMatch}`);
+    log("PASS", `35b: ${LABELS[cid]}`, `r=${cr.toFixed(4)} (n=${xs.length})`);
   }
 }
 

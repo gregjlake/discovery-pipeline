@@ -435,23 +435,18 @@ async function test19() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// TEST 20 — WITHIN-CLUSTER CORRELATION ENDPOINT
+// TEST 20 — WITHIN-CLUSTER CORRELATION (computed client-side)
 // ═══════════════════════════════════════════════════════════════
+// The standalone /within-cluster-correlations endpoint was removed
+// (it served stale k=5 data that contradicted the canonical k=4
+// clustering in /county-clusters). Within-cluster correlations are
+// now computed client-side from /county-clusters assignments — see
+// test 35b in tests/math-integrity-validation.mjs for the canonical
+// implementation. This test is intentionally a no-op stub kept to
+// preserve test numbering.
 async function test20() {
-  console.log("\n\x1b[1m═══ TEST 20: Within-Cluster Correlation Endpoint ═══\x1b[0m");
-
-  let wcData;
-  try { wcData = await fetchJSON("/within-cluster-correlations"); } catch (e) {
-    log("WARN", "20a. Endpoint", `Not available: ${e.message}. Within-cluster r must be computed client-side.`, "INFORMATIONAL");
-    return;
-  }
-
-  if (wcData) {
-    const clusters = Object.keys(wcData);
-    if (clusters.length >= 3) {
-      log("PASS", "20b. Clusters represented", `${clusters.length} clusters in response`);
-    }
-  }
+  console.log("\n\x1b[1m═══ TEST 20: Within-Cluster Correlations (moved client-side) ═══\x1b[0m");
+  log("PASS", "20: See math-integrity-validation.mjs test 35b for canonical within-cluster r");
 }
 
 // ═══════════════════════════════════════════════════════════════

@@ -1209,6 +1209,21 @@ def correlation_insights():
 # ── GET /county-clusters ──────────────────────────────────────
 @router.get('/county-clusters')
 def county_clusters_endpoint():
+    """Canonical county-archetype clustering.
+
+    Returns the pinned k=CANONICAL_K=4 solution from
+    `data_pipeline/gravity/compute_county_clusters.py`. Response payload
+    includes:
+      - optimal_k: always 4 (pinned; see CANONICAL_K in the generator)
+      - silhouette_scores: dict mapping k=4..11 → silhouette score
+        (exploratory; not used for the canonical assignment)
+      - clusters: per-cluster definitions (high/low variables, examples)
+      - county_assignments: fips → cluster_id (0..3)
+
+    This is the single source of truth for cluster archetypes consumed by
+    the UI's archetype badges, the paper.md `r=0.477--0.596` claim, and
+    all replication tests.
+    """
     from fastapi.responses import JSONResponse
     try:
         data = fetch_cache_file('county_clusters.json')
@@ -1225,28 +1240,6 @@ def knn_comparison():
         data = fetch_cache_file('knn_comparison.json')
     except Exception as e:
         return JSONResponse(status_code=503, content={"error": f"knn_comparison.json unavailable: {e}"})
-    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
-
-
-# ── GET /within-cluster-correlations ──────────────────────────
-@router.get('/within-cluster-correlations')
-def within_cluster_correlations():
-    from fastapi.responses import JSONResponse
-    try:
-        data = fetch_cache_file('within_cluster_correlations.json')
-    except Exception as e:
-        return JSONResponse(status_code=503, content={"error": f"within_cluster_correlations.json unavailable: {e}"})
-    return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
-
-
-# ── GET /cluster-silhouette-scores ───────────────────────────
-@router.get('/cluster-silhouette-scores')
-def cluster_silhouette_scores():
-    from fastapi.responses import JSONResponse
-    try:
-        data = fetch_cache_file('cluster_silhouette_scores.json')
-    except Exception as e:
-        return JSONResponse(status_code=503, content={"error": f"cluster_silhouette_scores.json unavailable: {e}"})
     return JSONResponse(content=data, headers={"Cache-Control": "max-age=86400"})
 
 
